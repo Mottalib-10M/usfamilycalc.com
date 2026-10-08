@@ -1,0 +1,169 @@
+{
+  "slug": "minnesota",
+  "name": "Minnesota",
+  "abbr": "MN",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined parental income for determining child support (PICS) schedule (Minn. Stat. § 518A.35)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Gross income includes any periodic payment: salaries, wages, commissions, self-employment income (§ 518A.30), workers' compensation, unemployment, annuities, pensions, disability, spousal maintenance received, Social Security or veterans benefits for a joint child, and potential income; measured before pretax plan deductions and with no deduction for retirement contributions; overtime beyond 40 hours may be excluded in limited cases (§ 518A.29). PICS = gross income minus the deduction for nonjoint children under § 518A.33 (§ 518A.26, subd. 15).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/minnesota.json",
+    "columns": "lower bound of the combined PICS bracket ($100 brackets: row 1400 covers 1,400-1,499; first row 0 covers $0-$1,399; last row 20000 = $20,000 and over), then basic support for 1 to 6 children",
+    "minIncome": 0,
+    "maxIncome": 20000,
+    "step": 100,
+    "lookup": "bracket",
+    "lookupRule": "The schedule is printed in $100 income brackets (e.g. 6,000-6,099); the amount of the bracket containing the combined PICS applies (§ 518A.35, subd. 2).",
+    "belowMin": {
+      "rule": "Combined PICS of $0-$1,399: $50, $60, $70, $80, $90, $100 for 1 to 6 children (§ 518A.35, subd. 2), equal to the minimum basic support amounts of § 518A.42, subd. 2.",
+      "amounts": [
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ]
+    },
+    "aboveMax": {
+      "method": "cap",
+      "pct": null,
+      "text": "For combined PICS above $20,000 a month, the presumptive basic support is the $20,000 amount; more may be ordered only for a child's disability or other substantial, demonstrated need under § 518A.43 (§ 518A.35, subd. 1(e) and subd. 3)."
+    },
+    "effective": "2023-01-01",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.35"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parenting expense adjustment, Minn. Stat. § 518A.36, subd. 2: each parent's annual overnights raised to the power of three.",
+    "params": {
+      "parentingExpenseExponent": 3,
+      "minimumBasicSupport": [
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "selfSupportReservePctOfPovertyGuideline": 120,
+      "selfSupportReserveMonthly": null
+    },
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.36"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Parenting expense adjustment (§ 518A.36, subd. 2): parent A = parent with fewer overnights, parent B = more. Compute (1) A's annual overnights cubed, (2) B's overnights cubed, (3) = (1) x B's share of the combined basic support, (4) = (2) x A's share, (5) = (3) - (4), (6) = (5) / ((1) + (2)). A negative result means parent A is the obligor and pays its absolute value; a positive result means parent B pays. Applies only when there is a court order awarding parenting time (§ 518A.36, subd. 1(b)); with equal parenting time and equal PICS no basic support is paid (subd. 3).",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.36"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "medical support computed separately under § 518A.41 and added",
+    "text": "Work- or education-related child care costs are divided by the parents' share of combined PICS, after the estimated federal and state child care credit (§ 518A.40, subd. 1). Medical support is set under § 518A.41. Total support = basic support + child care support + medical support (§ 518A.34(f)).",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.34"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "rule": "The obligor's income available for support = PICS minus a monthly self-support reserve of 120% of the federal poverty guidelines for one person; if that is below the guideline amount, medical, then child care, then basic support are reduced; if it is at or below the minimum, or gross income is below 120% of the poverty guideline, the minimum basic support applies: $50, $60, $70, $80, $90, $100 a month for 1 to 6+ children (§ 518A.42, subds. 1-2). The minimum does not apply to incarcerated obligors, recipients of general assistance, SSI, TANF or MFIP, or obligors with no income and no ability to earn (subd. 3).",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.42"
+  },
+  "statute": {
+    "cite": "Minn. Stat. §§ 518A.26-518A.43",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.35"
+  },
+  "guidelinesUrl": "https://www.revisor.mn.gov/statutes/cite/518A.35",
+  "officialCalculatorUrl": "https://childsupportcalculator.dhs.state.mn.us/",
+  "emancipation": {
+    "text": "A \"child\" for support purposes is an individual under 18, under 20 if still attending secondary school, or incapable of self-support because of a physical or mental condition (§ 518A.26, subd. 5).",
+    "url": "https://www.revisor.mn.gov/statutes/cite/518A.26"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 922.0,
+      "what": "paying parent's (A) monthly share of the basic support, no parenting-time order (no parenting expense adjustment)",
+      "source": "Computed by hand from § 518A.35 schedule: combined PICS $6,000 (bracket 6,000-6,099), 2 children = $1,383; A's share 4000/6000 x 1383 = 922.00 (§ 518A.34(b)). No official worked example in the statute."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 110
+      },
+      "expected": 819.23,
+      "what": "what the paying parent (A) owes monthly after the parenting expense adjustment (110 overnights A, 255 overnights B)",
+      "source": "Computed by hand with the § 518A.36, subd. 2 formula: (110^3 x 461 - 255^3 x 922) / (110^3 + 255^3) = -819.23, so parent A pays 819.23."
+    },
+    {
+      "inputs": {
+        "incomeA": 20000,
+        "incomeB": 5000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 1839,
+      "what": "basic support in the schedule above $20,000 combined PICS",
+      "source": "§ 518A.35, subd. 3: the $20,000 amount applies; 1 child = $1,839. Computed by hand."
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 5000,
+        "children": 2,
+        "overnightsA": 150
+      },
+      "expected": 120.1,
+      "what": "what the other parent (B) owes when the parenting expense adjustment reverses the flow",
+      "source": "Computed by hand with § 518A.36, subd. 2: basic $1,383; A share 230.50, B share 1,152.50; (150^3 x 1152.50 - 215^3 x 230.50) / (150^3 + 215^3) = +120.10, positive so parent B owes it."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The current schedule, extended to $20,000 of combined monthly PICS, took effect January 1, 2023 (Laws 2021, ch. 30, art. 10, secs. 64-65).",
+      "url": "https://www.revisor.mn.gov/laws/2021/0/Session+Law/Chapter/30/"
+    },
+    {
+      "text": "Minnesota uses a cubic parenting expense adjustment rather than an overnight threshold: every overnight counts, raised to the power of three (§ 518A.36, subd. 2).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518A.36"
+    },
+    {
+      "text": "Child support orders must provide for a biennial cost-of-living adjustment, effective May 1 of the adjustment year when paid through the public authority (§ 518A.75, subd. 1).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518A.75"
+    },
+    {
+      "text": "With more than six children the court may set support without strictly following the guidelines, but must apply their basic principles (§ 518A.35, subd. 4).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518A.35"
+    },
+    {
+      "text": "In split custody, each parent's basic support is computed and the higher obligation is offset against the lower (§ 518A.34(c)).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518A.34"
+    }
+  ],
+  "uncertain": [
+    "Revisor page is labelled '2025 Minnesota Statutes' and shows no 2026 amendment to § 518A.35; the 2026 session laws were not checked separately.",
+    "The last schedule row reads '20,000 and over or the amount in effect under subdivision 4', but subdivision 4 now concerns more than six children; the row is stored as 20000.",
+    "The self-support reserve is defined as 120% of the federal poverty guidelines for one person (§ 518A.42, subd. 1(b)); no dollar figure is printed, so selfSupportReserve is null.",
+    "The official calculator address (childsupportcalculator.dhs.state.mn.us) answered HTTP 200 on 2026-10-08; child support moved to the Department of Children, Youth, and Families (§ 518A.26, subd. 5a), so the address may change."
+  ]
+}

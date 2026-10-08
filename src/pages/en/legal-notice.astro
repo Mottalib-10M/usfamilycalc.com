@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Legal notice of ${SITE_NAMES[lang]}: publisher, host and terms of use`} description="Publisher and host of the state-by-state family law and workers' comp calculators, why a result is an estimate and not legal advice, intellectual property and governing law." lang={lang} noindex={true} breadcrumbs={[{ label: 'Legal notice' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Legal notice and terms of use</h1>
+    <p>Information given under Article 6 III-1 of French law no. 2004-575 of 21 June 2004, the publisher being established in France.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+    <p>Publication director: {AUTHOR_NAME}, responsible for the content of {SITE_URL}.</p>
+    <h2>Host</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>Not a law firm, not legal advice</h2>
+    <p>{SITE_NAMES[lang]} is published by a company that builds calculators, not by attorneys. Using the site creates no attorney-client relationship. The calculators apply the child support guidelines, spousal support formulas, court fee schedules, probate statutes and workers' compensation rates that each state publishes, to the numbers you enter. A judge may deviate from a guideline, an agency may count income differently, a county clerk may add local fees, and an insurer or a workers' compensation judge decides a claim. For a decision about your own case, speak with a licensed attorney in your state or with the agency concerned; many states run free self-help centers, which the state pages link to when they exist. Method and limits are on the <a href={route('method', lang)}>method page</a>.</p>
+    <h2>Liability</h2><p>Every figure is read on an official page and every engine is tested before each release, yet no error can be ruled out and rules change. The publisher is not liable for a decision taken on an estimate alone. Please report any error through the <a href={route('contact', lang)}>contact page</a>.</p>
+    <h2>Intellectual property</h2><p>Texts, design and code belong to the publisher; short quotations with a link back are welcome. Statutes, court rules and guideline tables are public records of the states that issued them.</p>
+    <h2>Embedding</h2><p>The child support and workers' comp calculators may be embedded for free with their credit link visible: see the <a href={route('widget', lang)}>embed page</a>.</p>
+    <h2>Personal data</h2><p>The site sets no cookie and the publisher keeps no personal data from the calculators. Details: <a href={route('privacy', lang)}>privacy policy</a> and <a href={route('cookies', lang)}>cookies page</a>.</p>
+    <h2>Reporting unlawful content</h2><p>Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the address of the page.</p>
+    <h2>Governing law</h2><p>French law applies; failing an amicable settlement, the courts of {LEGAL.jurisdiction} have jurisdiction. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

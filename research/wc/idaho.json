@@ -1,0 +1,22 @@
+{
+  "slug": "idaho", "name": "Idaho", "abbr": "ID", "verified": "2026-10-08",
+  "agency": { "name": "Idaho Industrial Commission (IIC)", "url": "https://iic.idaho.gov/" },
+  "ttd": {
+    "rate": null, "basis": null,
+    "rateText": null,
+    "max": null, "min": null,
+    "minText": null,
+    "effective": "2026-01-01", "periodLabel": "calendar year 2026 (IIC publishes '2026 Comp Rate Benefits'); values not read",
+    "url": "https://iic.idaho.gov/wp-content/uploads/2025/09/2026-Comp-Rate-Benefits.pdf", "asOf": null
+  },
+  "waiting": { "days": null, "retroactiveAfterDays": null, "text": null, "url": "https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch4/sect72-402/" },
+  "ttdDuration": { "maxWeeks": null, "text": null, "url": "https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch4/sect72-408/" },
+  "ppd": { "text": null, "url": "https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch4/sect72-428/" },
+  "statute": { "cite": "Idaho Code §§ 72-402, 72-408, 72-409, 72-428 (not read)", "url": "https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch4/" },
+  "facts": [],
+  "uncertain": [
+    "All Idaho official hosts (iic.idaho.gov, legislature.idaho.gov) refused connections from this environment on 2026-10-08 (curl, WebFetch and Chrome), and no Wayback copy of the IIC 2026 PDF exists. Nothing could be read; every field is null.",
+    "Official sources to read: https://iic.idaho.gov/wp-content/uploads/2025/09/2026-Comp-Rate-Benefits.pdf and https://iic.idaho.gov/wp-content/uploads/2025/09/2026-Benefit-Table-Only.pdf (found via search), and Idaho Code 72-402 (waiting period), 72-408 (TTD), 72-409 (max/min), 72-428 (PPI schedule).",
+    "Unofficial search snippets disagree (2026 max quoted as $820, $875.34, $892 or $1,021.50) — do not use any of them."
+  ]
+}

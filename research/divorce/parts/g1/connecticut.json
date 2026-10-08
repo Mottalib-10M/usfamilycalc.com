@@ -1,0 +1,19 @@
+{ "slug": "connecticut", "name": "Connecticut", "abbr": "CT",
+  "filingFee": 360, "responseFee": null, "feeScope": "statewide",
+  "feeText": "Superior Court entry fee for a civil cause (including paternity actions) except as otherwise listed: $360 (C.G.S. § 52-259). The Judicial Branch fee list has no separate line for dissolution of marriage, which is filed as a civil cause in the Superior Court.",
+  "feeUrl": "https://www.jud.ct.gov/external/super/courtfee.htm",
+  "otherFees": [
+    { "what": "Post-judgment motion to modify any judgment in a family relations matter (C.G.S. § 52-259c(a))", "amount": 180, "url": "https://www.jud.ct.gov/external/super/courtfee.htm" },
+    { "what": "Motion to open, set aside or modify any civil judgment, including family judgments (C.G.S. § 52-259c)", "amount": 130, "url": "https://www.jud.ct.gov/external/super/courtfee.htm" }
+  ],
+  "waiver": { "name": "Application for Waiver of Fees/Payment of Costs/Appointment of Counsel - Family (JD-FM-75)", "url": "https://www.jud.ct.gov/webforms/forms/fm075.pdf" },
+  "residency": { "text": "A complaint may be filed once either party has established residence in Connecticut, but a decree requires that one party has been a resident for the 12 months before the complaint or before the decree, or was domiciled in Connecticut at marriage and returned to stay, or that the cause arose after either party moved to the state (C.G.S. § 46b-44).", "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm" },
+  "waitingPeriod": { "days": null, "text": "C.G.S. § 46b-67(a): the court may proceed after the return date, or earlier if the parties reach a full agreement before the return date; a default judgment after personal or abode service cannot enter until at least 30 days after the return date, other default judgments need a hearing at least 60 days after the return date, and a contested trial cannot start until at least 90 days after the return date.", "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm" },
+  "simplified": { "text": "Nonadversarial dissolution by joint petition (C.G.S. § 46b-44a) when the marriage has broken down irretrievably, lasted no more than 9 years, there are no children and no pregnancy, neither spouse owns real property, combined net property is under $80,000, neither has a defined benefit pension, no bankruptcy petition or restraining/protective order is pending, and residency is met.", "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm" },
+  "parentingClass": { "required": true, "text": "The court shall order the parties to attend the Judicial Department's parenting education program whenever a minor child is involved, unless the parties agree (with court approval) not to, or the court finds participation not needed (C.G.S. § 46b-69b).", "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm" },
+  "uncertain": [
+    "Fee: the Judicial Branch fee list has no line specific to dissolution; $360 is the general civil cause entry fee (§ 52-259), the line that applies to dissolution complaints.",
+    "Response fee: an appearance has no listed fee; the JD-FM-75 form mentions a cross complaint fee whose amount was not found. Set to null.",
+    "Waiting period: no single number. The rule depends on agreement, default or contest, so days is null (see text).",
+    "Statute text from the Connecticut General Assembly's current chapter 815j page (copy downloaded on 2026-10-08)."
+  ] }

@@ -1,0 +1,144 @@
+{
+  "slug": "alabama",
+  "name": "Alabama",
+  "abbr": "AL",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly adjusted gross income schedule (Ala. R. Jud. Admin. 32)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income from any source (salaries, wages, commissions, bonuses, dividends, severance, pensions, interest, trust income, annuities, capital gains, Social Security, veterans' benefits, workers' compensation, unemployment, disability insurance, gifts, prizes and preexisting periodic alimony), excluding child support received for other children and means-tested assistance such as TANF, SSI and food stamps (Rule 32(B)(2)); self-employment income is gross receipts minus ordinary and necessary expenses without accelerated depreciation (Rule 32(B)(3)). Adjusted gross income is gross income less preexisting child-support obligations and preexisting periodic alimony actually paid to a former spouse (Rule 32(C)(1)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/alabama.json",
+    "columns": "combined monthly adjusted gross income, then basic child-support obligation for 1 to 6 children",
+    "minIncome": 250,
+    "maxIncome": 30000,
+    "step": 50,
+    "lookup": "nearest",
+    "lookupRule": "For incomes between two schedule amounts, use the lower value if the income falls less than halfway between them and the higher value if it falls halfway or more (Rule 32(C)(1)). The first row is printed '0-250'.",
+    "belowMin": {
+      "rule": "The 2022 schedule starts at $0: the first row '0-250' gives $52, $80, $96, $107, $118, $128 for 1 to 6 children (Appendix I); the SSR calculation and $50 presumptive minimum then apply (Rule 32(C)(5)).",
+      "amounts": [
+        52,
+        80,
+        96,
+        107,
+        118,
+        128
+      ]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The court may use its discretion when combined adjusted gross income exceeds the uppermost level of the schedule (Rule 32(C)(1)); the Committee Comments (2022) state that support should not be extrapolated from the schedule above $30,000 but left to the court's discretion."
+    },
+    "effective": "2022-05-01",
+    "url": "https://judicial.alabama.gov/docs/rules/Rule32AlaRJudAdminOrder.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of Rule 32(C)(3), (5), (7): percentages rounded to the nearest 1%, dollars to the nearest dollar; SSR $981 (lowIncome), income available for support = 85% of (adjusted gross income - SSR), $50 presumptive minimum; shared 50% physical custody: basic x 150%, each parent credited half of it. sharedConventionOvernights (182) is the calculator's convention for '50% (or approximately 50%)' and is not a figure of the rule.",
+    "params": {
+      "incomeAvailablePct": 85,
+      "minimumOrder": 50,
+      "sharedMultiplier": 1.5,
+      "sharedConventionOvernights": 182
+    },
+    "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Only court-ordered shared 50% physical custody (each parent about 50% of the time) triggers the Shared 50% Physical-Custody Adjustment: the basic obligation is multiplied by 150% on Form CS-42-S, each parent is credited for costs paid and for half of the shared obligation, and the parent owing the higher adjusted amount pays it to the other (Rule 32(C)(7)(a)-(b)). The SSR calculation, the $50 minimum and the zero-dollar order do not apply with Form CS-42-S (Rule 32(C)(7)(e)). Other shared or extended physical custody is a ground for deviation (Rule 32(A)(1)(a)).",
+    "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+  },
+  "addOns": {
+    "childcare": "work-related child care added to the basic obligation (capped at licensed-care cost per the DHR schedule) and shared by income",
+    "healthInsurance": "cost of health-care coverage for the children added to the basic obligation and shared by income",
+    "text": "The total child-support obligation is the basic obligation plus work-related child-care costs and health-care-coverage costs, divided in proportion to the parents' adjusted gross incomes; the custodial parent is presumed to spend his or her share directly (Rule 32(C)(2)). Child-care costs may not exceed the cost of licensed care under the DHR schedule (Rule 32(B)(8)).",
+    "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 981,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "SSR calculation (Rule 32(C)(5)): Income Available After SSR = obligor's monthly adjusted gross income - $981 (Line 11); Income Available for Support = 85% of Line 11 (Line 12); the recommended order is the lesser of the obligor's adjusted obligation (Line 10) and Line 12; if Line 12 is under $50 there is a rebuttable presumption of a $50 minimum. A zero-dollar order is presumed when the obligor has no gross income and only means-tested assistance, or is incarcerated or institutionalized for more than 180 consecutive days with no income (Rule 32(C)(6)).",
+    "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+  },
+  "statute": {
+    "cite": "Ala. R. Jud. Admin. 32 (as amended eff. May 1, 2022 and June 1, 2023)",
+    "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+  },
+  "guidelinesUrl": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": null,
+    "url": null
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 852.0,
+      "what": "parent A's recommended monthly child-support order (no add-ons)",
+      "source": "Computed by hand: Appendix I row $6,000, two children = $1,271; A's share 4,000/6,000 rounded to the nearest 1% = 67% (Rule 32(C)(3)); 1,271 x 0.67 = 851.57, rounded to $852. SSR check: (4,000 - 981) x 85% = 2,566.15 > 852, so not binding. https://judicial.alabama.gov/docs/rules/Rule32AlaRJudAdminOrder.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 1200,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 186.0,
+      "what": "obligor's recommended order limited by the self-support reserve",
+      "source": "Computed by hand under Rule 32(C)(5): combined $4,200 row, one child $703 x 29% = $204; income available for support = 85% x (1,200 - 981) = 186.15, rounded $186; the lesser, $186, is the recommended order. https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 324.0,
+      "what": "obligor's monthly order under the shared 50% physical-custody adjustment (Form CS-42-S)",
+      "source": "Computed by hand under Rule 32(C)(7)(b) with dollar rounding of 32(C)(3): 1,271 x 150% = 1,906.50 -> $1,907; obligor's 67% = $1,278; minus half of the shared obligation ($954) = $324. 182 overnights is the calculator's convention for 50% custody. https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The current schedule (Appendix I to the Supreme Court's order of January 14, 2022, effective May 1, 2022) runs from $0 to $30,000 of combined monthly income; the previous schedule stopped at $20,000.",
+      "url": "https://judicial.alabama.gov/docs/rules/Rule32AlaRJudAdminOrder.pdf"
+    },
+    {
+      "text": "Since 2022 the self-support reserve is no longer built into the schedule but computed on Form CS-42 with an 85% economic incentive, so the SSR amount can be updated without changing the table (Committee Comments, Appendix G).",
+      "url": "https://judicial.alabama.gov/docs/rules/Rule32AlaRJudAdminOrder.pdf"
+    },
+    {
+      "text": "A difference of more than 10% between the existing order and the guideline amount creates a rebuttable presumption that support should be modified (Rule 32(A)(3)(c)).",
+      "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+    },
+    {
+      "text": "The 50% shared-custody adjustment (Form CS-42-S, x150%) was added effective June 1, 2023; a parent who fails without sufficient cause to exercise custody for more than 14 days in 12 months may face modification and attorney fees (Rule 32(C)(7)(c)-(d)).",
+      "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+    },
+    {
+      "text": "The Advisory Committee on Child-Support Guidelines and Enforcement must review the guidelines and schedule at least once every four years (Rule 32(G)).",
+      "url": "https://judicial.alabama.gov/docs/library/rules/ja32.pdf"
+    }
+  ],
+  "uncertain": [
+    "judicial.alabama.gov did not answer from this network; ja32.pdf (Rule 32 as amended effective June 1, 2023; Wayback capture 2025-10-19) and the January 14, 2022 order with Appendix I schedule (Rule32AlaRJudAdminOrder.pdf; Wayback capture 2026-01-14) were read from Wayback copies.",
+    "The 'Appendix to Rule 32. Schedule of Basic Child Support Obligations' still linked from judicial.alabama.gov/library/RulesJudicialAdm (docs/library/rules/JA32_appx.pdf, PDF dated 2009, rows 0-800 to 20,000) is the superseded schedule; the schedule used here is Appendix I to the 2022 order. ja32.pdf's comment still mentions a $550-$10,000 range (older text).",
+    "Emancipation / age of majority (19 in Alabama) not read from an official source in this session: the Code of Alabama site (alison.legislature.state.al.us) is a JavaScript application that could not be read; emancipation set to null.",
+    "No official online calculator found (Form CS-42 Excel worksheet exists at eforms.alacourt.gov but was not opened)."
+  ]
+}

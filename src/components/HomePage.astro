@@ -1,0 +1,64 @@
+---
+/**
+ * Home (pillar page, RECETTE §5), in its own order for this subject: the child support calculator
+ * first (the most searched question), the folded answer block, the five subjects, the 51-jurisdiction
+ * matrix that links every state page, the long text in accordions, then the FAQ. Text: src/content/home.ts.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import { HOME } from '../content/home';
+import { route, ROUTES } from '../i18n/routes';
+import { helpers, SOURCES, ext } from '../lib/helpers';
+import { TOPICS, stateTopicId } from '../lib/topics';
+import { pageById } from '../lib/pages';
+import { STATE_LIST } from '../data/states';
+import { hasCs, cs, hasWc, wc, hasAl, al, dvAll, pbAll, usdx, day } from '../lib/kit';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { LAST_UPDATED } from '../data/site-config';
+const lang = 'en';
+const x = HOME;
+const path = route('home', lang);
+const h = helpers();
+const sources = x.sources.map((k) => ({ name: SOURCES[k].label, url: SOURCES[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
+const sections = x.sections(h);
+const has = (id: string) => ROUTES.some((r) => r.id === id);
+const cell = (topic: string, slug: string, text: string) => (has(`${topic}:${slug}`) ? `<a href="${route(`${topic}:${slug}`, lang)}">${text}</a>` : text);
+const DV = Object.fromEntries(dvAll().map((d) => [d.slug, d]));
+const PB = Object.fromEntries(pbAll().map((d) => [d.slug, d]));
+const csLabel: Record<string, string> = { 'income-shares': 'Income shares', 'percent-obligor': '% of payer income', 'percent-combined': '% of combined income', 'ca-formula': 'Statewide formula', melson: 'Melson formula', 'bands-combined': 'Income bands formula', other: 'State formula' };
+const rows = STATE_LIST.map((s) => [
+  `<strong>${s.name}</strong>`,
+  hasCs(s.slug) ? cell('child-support', s.slug, csLabel[cs(s.slug).model] ?? 'Guideline') : 'n/a',
+  hasAl(s.slug) ? cell('alimony', s.slug, 'Formula or cap') : 'Judge’s discretion',
+  DV[s.slug]?.filingFee != null ? cell('divorce-cost', s.slug, usdx(DV[s.slug].filingFee as number)) : cell('divorce-cost', s.slug, 'varies'),
+  PB[s.slug] && (PB[s.slug] as { smallEstate?: { limit?: number | null } }).smallEstate?.limit != null ? cell('probate', s.slug, usdx((PB[s.slug] as { smallEstate: { limit: number } }).smallEstate.limit)) : cell('probate', s.slug, 'see state'),
+  hasWc(s.slug) && wc(s.slug).ttd.max != null ? cell('workers-comp', s.slug, usdx(wc(s.slug).ttd.max as number)) : 'n/a',
+]);
+const pillars = TOPICS.map((t) => pageById(t.id)).filter(Boolean);
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
+  <header class="mb-4">
+    <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">{x.h1}</h1>
+    <p class="mt-3 text-lg text-navy-700">{x.intro}</p>
+    <p class="mt-2 text-sm text-navy-600">Guidelines, statutes and benefit rates of the 50 states and DC, read on official pages, updated <time datetime={LAST_UPDATED}>{day(LAST_UPDATED)}</time> · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">About this site</a></p>
+  </header>
+  <div data-outil><Tool kind="child-support" state="california" idPrefix="home" /></div>
+  <Clamp text={x.resume} lang={lang} id="clamp-home" sentences={2} class="my-8" />
+  <section class="mb-10" data-chrome>
+    <h2 class="font-serif text-2xl font-bold text-navy-900">{x.pillarsTitle}</h2>
+    <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {pillars.map((p) => <a href={route(p!.id, lang)} class="rounded-lg border border-navy-200 p-4 hover:border-accent-300 hover:bg-accent-50"><h3 class="font-semibold text-navy-900">{p!.nav}</h3><p class="mt-1 text-sm text-navy-600">{p!.card}</p></a>)}
+    </div>
+  </section>
+  <section class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h2>{x.tableTitle}</h2>
+    <Fragment set:html={x.tableIntro(h)} />
+    <Fragment set:html={h.table(['State', 'Child support', 'Alimony', 'Divorce filing fee', 'Small estate limit', 'Workers’ comp max / week'], rows, `Read on official state pages; every cell links to the state page when it exists. Workers’ comp maximum for 2026 injuries or the latest official figure.`, ['l', 'l', 'l', 'r', 'r', 'r'])} />
+  </section>
+  <section class="prose prose-slate mt-10 max-w-none prose-headings:font-serif">
+    <h2>{x.foldTitle}</h2>
+    {sections.map((s) => <details class="fold not-prose"><summary><h3 class="fold-h">{s.title}</h3></summary><div class="prose prose-slate max-w-none pb-4"><Fragment set:html={s.html} /></div></details>)}
+  </section>
+</PageLayout>

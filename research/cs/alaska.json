@@ -1,0 +1,164 @@
+{
+  "slug": "alaska",
+  "name": "Alaska",
+  "abbr": "AK",
+  "verified": "2026-10-08",
+  "model": "percent-obligor",
+  "modelName": "Percentage of the non-custodial parent's adjusted annual income (Alaska Civil Rule 90.3(a))",
+  "incomeBasis": "net",
+  "incomeDefinition": "Adjusted annual income = total income from all sources minus: federal, state and local income tax; Social Security (or equivalent public-employer plan) and self-employment tax; Medicare tax; mandatory union dues; mandatory retirement contributions; voluntary tax-deferred retirement contributions (mandatory + voluntary capped at 7.5% of total income); child or spousal support paid for prior children / former spouses under other orders; in-kind support for prior children in the parent's primary or shared custody; work-related child care for the children of the order; the parent's own health, dental and vision premiums (capped at 10% of total income); life insurance premiums for the children or obligee (capped at $1,200 a year) (Civil Rule 90.3(a)(1)(A)-(G)).",
+  "period": "annual",
+  "maxChildren": null,
+  "schedule": null,
+  "percent": {
+    "byChildren": [
+      20,
+      27,
+      33
+    ],
+    "eachAdditionalChild": 3,
+    "tiers": null,
+    "cap": {
+      "amount": 138000,
+      "period": "annual",
+      "appliesTo": "obligor's adjusted annual income",
+      "effective": null,
+      "text": "Paragraph (a) does not apply to the extent the parent's adjusted annual income exceeds $138,000; above that the court may make an additional award only if just and proper, considering the children's needs, standard of living and the parent's ability to pay (Civil Rule 90.3(c)(2)). The cap also applies at the first stage of the shared-custody calculation.",
+      "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+    },
+    "text": "Annual support = non-custodial parent's adjusted annual income (up to $138,000) x 20% for one child, 27% for two, 33% for three, plus 3% for each additional child (Civil Rule 90.3(a)(2), (c)(2)); minimum $50 per month ($600 per year) (90.3(c)(3)).",
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "formula": {
+    "text": "Primary custody: support = adjusted annual income (capped at $138,000) x percentage, paid in 12 monthly installments; minimum $600/year. Shared custody (each parent has the children 30% to 70% of the year): 1) compute what each parent would pay the other under 90.3(a) as if the other had primary custody (cap and minimum apply); 2) multiply each by the percentage of time the other parent has custody; 3) the parent with the larger figure is the obligor and pays (difference) x 1.5, but never more than the primary-custody amount (Civil Rule 90.3(b)(1)). Divided custody offsets the 90.3(a) amounts; hybrid custody combines both with pro rata percentages (90.3(b)(2)-(3)). Low-income adjustment: a parent with total annual income of $30,000 or less uses the lesser of the normal adjusted income or total income minus $7,500 (90.3(a)(5)).",
+    "params": {
+      "percentages": {
+        "1": 20,
+        "2": 27,
+        "3": 33,
+        "eachAdditional": 3
+      },
+      "incomeCapAnnual": 138000,
+      "minimumMonthly": 50,
+      "minimumAnnual": 600,
+      "lowIncomeThresholdAnnual": 30000,
+      "lowIncomeDeductionAnnual": 7500,
+      "sharedMinPercent": 30,
+      "sharedMaxPercent": 70,
+      "sharedMinOvernights": 110,
+      "sharedMultiplier": 1.5,
+      "retirementDeductionCapPctOfIncome": 7.5,
+      "healthPremiumDeductionCapPctOfIncome": 10,
+      "lifeInsuranceDeductionCapAnnual": 1200,
+      "extendedVisitationCredit": "Up to 75% reduction for any period of extended visitation over 27 consecutive days (90.3(a)(3)).",
+      "modificationThreshold": "A material change is presumed if recalculated support differs by more than 15% (90.3(h)(1)).",
+      "healthInsuranceSplit": {
+        "shareEach": 0.5,
+        "text": "The cost of the children's health insurance is allocated equally between the parties unless the court orders otherwise; the obligor's support decreases by the obligee's half when the obligor pays it, and increases by the obligor's half when the obligee pays it (90.3(d)(1)(B))."
+      }
+    },
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 110,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared physical custody = children reside with the parent at least 30% but no more than 70% of the year under the custody order (90.3(f)(1)); the commentary counts overnights: 30% of a year = 110 overnights. Reciprocal 90.3(a) amounts are weighted by the other parent's custody share, offset, and the difference is multiplied by 1.5, capped at the primary-custody amount (90.3(b)(1)).",
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "addOns": {
+    "childcare": "Work-related child care for the children of the order is deducted from the paying parent's income rather than added to support (90.3(a)(1)(E)).",
+    "healthInsurance": "The court requires health insurance if available at reasonable cost (presumed reasonable up to 5% of the purchasing parent's adjusted annual income); its cost is split equally unless ordered otherwise, by decreasing or increasing the support amount; uncovered health care expenses are split equally (90.3(d)(1)-(2)).",
+    "text": "Reasonable travel expenses for visitation are allocated after support is set (90.3(g)).",
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "annual",
+    "minimumOrder": 600,
+    "rule": "For a parent with total annual income of $30,000 or less, adjusted annual income is the lesser of the normal calculation or total income minus $7,500 (90.3(a)(5)). The minimum order is $50 per month ($600 per year), except for extended-visitation credits and shared custody (90.3(c)(3)).",
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "statute": {
+    "cite": "Alaska R. Civ. P. 90.3 (last amended by Supreme Court Order 2004, effective October 16, 2023)",
+    "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+  },
+  "guidelinesUrl": "https://courts.alaska.gov/rules/docs/civ.pdf",
+  "officialCalculatorUrl": "https://acsess.childsupport.alaska.gov/clientportal/",
+  "emancipation": {
+    "text": null,
+    "url": null
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 60000,
+        "incomeB": 0,
+        "children": 1
+      },
+      "expected": 12000.0,
+      "what": "annual support paid by the obligor (adjusted annual income); 1,000 per month",
+      "source": "Computed by hand from Civil Rule 90.3(a)(2): 20% x 60,000. No numeric official example found in the commentary."
+    },
+    {
+      "inputs": {
+        "incomeA": 150000,
+        "incomeB": 0,
+        "children": 1
+      },
+      "expected": 27600.0,
+      "what": "presumptive annual support paid by the obligor with income above the cap",
+      "source": "Computed by hand: 20% x 138,000 (90.3(c)(2))."
+    },
+    {
+      "inputs": {
+        "incomeA": 80000,
+        "incomeB": 40000,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 12960.0,
+      "what": "annual shared-custody support paid by A (A has 146 overnights, 40%; 1,080 per month)",
+      "source": "Computed by hand from 90.3(b)(1): A 27% x 80,000 = 21,600 x 60% (B's custody time) = 12,960; B 27% x 40,000 = 10,800 x 40% (A's custody time) = 4,320; (12,960 - 4,320) x 1.5 = 12,960, below A's primary-custody amount of 21,600. (Corrects an earlier draft that weighted each parent by his or her own time.)"
+    },
+    {
+      "inputs": {
+        "incomeA": 2000,
+        "incomeB": 0,
+        "children": 1
+      },
+      "expected": 600.0,
+      "what": "annual support paid by the obligor at the $50 a month minimum",
+      "source": "Computed by hand: 20% x 2,000 = 400, raised to the $600 a year minimum (90.3(c)(3))."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Alaska's guideline is a court rule adopted by the Supreme Court (Civil Rule 90.3), not a statute, and may be superseded by legislation.",
+      "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+    },
+    {
+      "text": "A parent may get up to a 75% reduction of support for any extended visitation of more than 27 consecutive days (90.3(a)(3)).",
+      "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+    },
+    {
+      "text": "A change of more than 15% in recalculated support is presumed to be a material change of circumstances allowing modification (90.3(h)(1)).",
+      "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+    },
+    {
+      "text": "Potential income may not be imputed to a parent caring for a child under two years old of the parties, or to a physically or mentally incapacitated parent (90.3(a)(4)(E)).",
+      "url": "https://courts.alaska.gov/rules/docs/civ.pdf"
+    },
+    {
+      "text": "The IV-D agency is the Child Support Enforcement Division (CSED) of the Department of Revenue; its ACSESS case system went live October 6, 2025, and its client portal includes a support estimator.",
+      "url": "https://childsupport.alaska.gov/docs/childsupportserviceslibraries/resources/csed-press-release_feb23_2026.pdf"
+    }
+  ],
+  "uncertain": [
+    "The date on which the $138,000 cap took effect is not stated in the rule text; the rule's last amendment is SCO 2004 effective October 16, 2023. The PDF read (official courts.alaska.gov file, also the Wayback copy of 2026-09-14) is current as of October 2026.",
+    "Emancipation: the governing statute (AS 25.24.170 / AS 25.27.060) could not be read (akleg.gov returns 403 to automated clients); left null.",
+    "Annual figures: the rule computes annual support paid in 12 monthly installments; testCases are annual amounts.",
+    "The CSED client-portal estimator URL was taken from the CSED FAQ ('Child Support Calculator on our Client Portal'); the estimator itself was not used for test cases."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "arkansas", "name": "Arkansas", "abbr": "AR", "verified": "2026-10-08",
+  "agency": { "name": "Arkansas Workers' Compensation Commission (AWCC), Arkansas Department of Labor and Licensing", "url": "https://labor.arkansas.gov/workers-comp/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66 2/3% of the individual average weekly wage, rounded to the nearest whole dollar, up to 85% of the state average weekly wage (Ark. Code Ann. § 11-9-501(b)).",
+    "max": 953.00, "min": 20.00,
+    "minText": "The minimum weekly TD and PPD rate is $20.00 (Ark. Code Ann. § 11-9-501(b), (d)).",
+    "effective": "2026-01-01", "periodLabel": "injury or death on and after January 1, 2026 through December 31, 2026 (state AWW $1,120.68)",
+    "url": "https://labor.arkansas.gov/wp-content/uploads/Advisory-2000-1-CY26_formatted.pdf", "asOf": "2025-10-01"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 14,
+    "text": "Disability benefits are not paid for the first seven days of disability, commencing the day after the injury, if the disability does not last 14 calendar days; if it does, benefits are payable from the day following the injury (Ark. Code Ann. § 11-9-501(a)).",
+    "url": "https://labor.arkansas.gov/wp-content/uploads/laqabrochure.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "TTD is paid during the healing period while the employee suffers a total incapacity to earn wages; disability benefits for mental injuries are limited to 26 weeks.",
+    "url": "https://labor.arkansas.gov/wp-content/uploads/laqabrochure.pdf"
+  },
+  "ppd": {
+    "text": "PPD is paid after release to work for permanent impairment; the PPD rate is 75% of the TD rate, rounded, up to $715.00 in 2026 (66 2/3% of AWW up to $154.00 if TD is under $205.35), and amputation or total loss of use of a member is paid at the TD rate (Ark. Code Ann. § 11-9-501(d)). Wage-loss benefits may be added if the impairment affected pre-injury wages.",
+    "url": "https://labor.arkansas.gov/wp-content/uploads/Advisory-2000-1-CY26_formatted.pdf"
+  },
+  "statute": { "cite": "Ark. Code Ann. § 11-9-501", "url": "https://labor.arkansas.gov/wp-content/uploads/Advisory-2000-1-CY26_formatted.pdf" },
+  "facts": [
+    { "text": "Arkansas has two separate weekly maximums: $953.00 for total disability and $715.00 for permanent partial disability for 2026 injuries.", "url": "https://labor.arkansas.gov/wp-content/uploads/Advisory-2000-1-CY26_formatted.pdf" },
+    { "text": "The weekly minimum of $20.00 has not changed since July 1, 1986, according to AWCC Advisory 2000-1's history table.", "url": "https://labor.arkansas.gov/wp-content/uploads/Advisory-2000-1-CY26_formatted.pdf" },
+    { "text": "Attorney fees must be approved by the Commission; in contested cases half is paid by the employer or carrier and half by the worker out of the award.", "url": "https://labor.arkansas.gov/wp-content/uploads/laqabrochure.pdf" },
+    { "text": "Arkansas' no-fault workers' compensation law was created by an initiated act in 1939.", "url": "https://labor.arkansas.gov/wp-content/uploads/laqabrochure.pdf" },
+    { "text": "For a compensable injury the work accident must be the major cause (more than 50%) of disability or need for treatment; mental injuries must generally result from a physical injury.", "url": "https://labor.arkansas.gov/wp-content/uploads/laqabrochure.pdf" }
+  ],
+  "uncertain": [
+    "Ark. Code text not read directly (published via LexisNexis portal); rules taken from AWCC Advisory 2000-1 (CY2026) and the AWCC Legal Advisor brochure. Any TTD week cap in the Code was not verified; maxWeeks null.",
+    "awcc.state.ar.us returns 403; AWCC documents now hosted on labor.arkansas.gov."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "new-jersey", "name": "New Jersey", "abbr": "NJ",
+  "filingFee": 300, "responseFee": 175,
+  "feeScope": "statewide",
+  "feeText": "Superior Court, Family Division: complaint for divorce $300 (plaintiff); defendant's filing fee $175; an additional $25 parenting workshop fee when there are minor children (NJ Courts self-help page 'Divorce').",
+  "feeUrl": "https://www.njcourts.gov/self-help/divorce",
+  "otherFees": [ { "what": "Parenting workshop fee (cases with minor children)", "amount": 25, "url": "https://www.njcourts.gov/self-help/divorce" } ],
+  "waiver": { "name": "Fee Waiver form (Court Rule 1:5-6; Directive #03-17, Fee Waivers Based on Indigence)", "url": "https://www.njcourts.gov/self-help/fee-waiver" },
+  "residency": { "text": "For a no-fault (irreconcilable differences) divorce, the plaintiff or the spouse must have lived in New Jersey for 12 consecutive months before filing (NJ Courts self-help page; N.J.S.A. 2A:34-10).", "url": "https://www.njcourts.gov/self-help/divorce" },
+  "waitingPeriod": { "days": 0, "text": "No statutory waiting period after filing. The irreconcilable-differences ground requires that the differences have existed for at least 6 months; the separation ground requires living apart for at least 18 months (N.J.S.A. 2A:34-2).", "url": "https://www.njcourts.gov/self-help/divorce" },
+  "separationRequiredDays": null,
+  "simplified": { "text": "No simplified or summary divorce procedure; uncontested divorces follow the regular Family Division process.", "url": "https://www.njcourts.gov/self-help/divorce/contested-uncontested" },
+  "parentingClass": { "required": true, "text": "Parties with minor children must pay the $25 fee and attend a parenting program, unless a temporary or final restraining order exists between them or a signed property settlement agreement is filed with the complaint, answer or other first filing.", "url": "https://www.njcourts.gov/self-help/divorce" },
+  "uncertain": [
+    "njcourts.gov returns 403 to automated clients (curl and WebFetch); all NJ Courts pages were read from Internet Archive copies of the official URLs (divorce page snapshot 2026-10-05).",
+    "The statutes (N.J.S.A. 2A:34-2, 2A:34-10, 22A:2-...) were not read on an official legislature site; residency and grounds are taken from the official NJ Courts self-help page.",
+    "Fee waiver form title is described on the page as the 'Fee Waiver form'; the exact form number was not read.",
+    "separationRequiredDays left null: an 18-month separation is only one of several grounds, not a requirement."
+  ]
+}

@@ -1,0 +1,29 @@
+---
+/**
+ * Renders the calculator of a subject with the data it needs (server side), as a hydrated island.
+ * `state` preselects (or, with `lock`, fixes) the state.
+ */
+import ChildSupportCalculator from './calc/ChildSupportCalculator';
+import WorkersCompCalculator from './calc/WorkersCompCalculator';
+import AlimonyCalculator from './calc/AlimonyCalculator';
+import DivorceCostCalculator from './calc/DivorceCostCalculator';
+import ProbateCalculator from './calc/ProbateCalculator';
+import { csAll, cs, wcAll, alAll, dvAll, pbAll, pbFeesOf } from '../lib/kit';
+import { route } from '../i18n/routes';
+import type { ToolKind } from '../lib/page-types';
+interface Props { kind: ToolKind; state?: string; lock?: boolean; idPrefix?: string; methodHref?: string }
+const { kind, state, lock = false, idPrefix, methodHref = route('method', 'en') } = Astro.props;
+const meta = (xs: Array<{ slug: string; name: string; abbr: string }>) => xs.map(({ slug, name, abbr }) => ({ slug, name, abbr }));
+const csStates = kind === 'child-support' ? meta(csAll()) : [];
+const csInitial = kind === 'child-support' ? cs(state ?? 'california') : null;
+const wcStates = kind === 'workers-comp' ? wcAll() : [];
+const alStates = kind === 'alimony' ? alAll() : [];
+const dvStates = kind === 'divorce-cost' ? dvAll() : [];
+const pbStates = kind === 'probate' ? pbAll().map((p) => ({ ...p, fees: pbFeesOf(p.slug) })) : [];
+const pre = idPrefix ?? `${kind.slice(0, 2)}${state ? state.slice(0, 3) : 'x'}`;
+---
+{kind === 'child-support' && csInitial && <ChildSupportCalculator client:load states={csStates} initial={csInitial} lockState={lock} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'workers-comp' && <WorkersCompCalculator client:load states={wcStates} state={state ?? 'california'} lockState={lock} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'alimony' && <AlimonyCalculator client:load states={alStates} state={state ?? 'california'} lockState={lock} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'divorce-cost' && <DivorceCostCalculator client:load states={dvStates} state={state ?? 'california'} lockState={lock} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'probate' && <ProbateCalculator client:load states={pbStates} state={state ?? 'california'} lockState={lock} methodHref={methodHref} idPrefix={pre} />}

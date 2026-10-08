@@ -1,0 +1,86 @@
+{
+  "slug": "south-dakota",
+  "name": "South Dakota",
+  "abbr": "SD",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly net income schedule (SDCL 25-7-6.2)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Monthly net income is gross income less allowable deductions (SDCL 25-7-6.3). Gross income includes wages, salary, commissions, bonuses, self-employment income, pensions, social security, disability, interest, dividends, rents, capital gains, unemployment and workers' compensation benefits and military allowances; non-recurring overtime, commissions and bonuses may be excluded. Deductions (SDCL 25-7-6.7): income taxes at the single-taxpayer rate on a monthly payroll period, social security and Medicare taxes, qualified retirement contributions up to 10% of gross income, unreimbursed employee business expenses, and payments on other support and maintenance orders.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/south-dakota.json",
+    "columns": "combined net monthly income bracket (from, to), then obligation for 1..6 children",
+    "minIncome": 0,
+    "maxIncome": 30000,
+    "step": 50,
+    "lookup": "bracket",
+    "lookupRule": "The schedule lists $50 income brackets (first bracket 0-950); the obligation for the bracket containing the parents' combined monthly net income is divided between the parents in proportion to their net incomes, and the noncustodial parent's share is the order (SDCL 25-7-6.2).",
+    "belowMin": {
+      "rule": "The schedule starts at $0: combined monthly net income of 0-950 gives $79 for 1 to 6 children. The emboldened areas include a self-support reserve of $871 per month; if the obligation using only the noncustodial parent's net income falls in an emboldened area, it is compared to the proportionate share and the lesser amount is ordered (SDCL 25-7-6.2).",
+      "amounts": [79, 79, 79, 79, 79, 79]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "For combined net income above the schedule ($30,000 per month), support is set at an appropriate level taking into account the actual needs and standard of living of the child (SDCL 25-7-6.9)."
+    },
+    "effective": "2022-07-01",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.2"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 180,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared parenting cross credit (SDCL 25-7-6.27): if a detailed shared parenting plan gives the child no less than 180 nights per calendar year in each home, the court may multiply the combined schedule obligation by 1.5, split it by income shares, prorate each share by the other parent's percentage of nights (365-day year), offset, and the parent with the larger amount pays the difference. Separately, SDCL 25-7-6.14 allows an abatement of 38% to 66% of the daily basic support for each night the child spends with the obligor when the child resides with the obligor six or more nights a month; no abatement may exceed the 25-7-6.27 cross credit.",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.27"
+  },
+  "addOns": {
+    "childcare": "The court may allocate reasonable work-, job-search- or training-related child care expenses; if the federal child care credit is available to the custodial parent it is calculated at 25% of the eligible expense (SDCL 25-7-6.18).",
+    "healthInsurance": "Medical insurance cost attributable to the child is apportioned between the parents by income; it is reasonable if it is no more than 8% of the parent's net income. The custodial parent pays the first $250 per year of uninsured health costs; the excess is apportioned in proportion to each parent's support obligation (SDCL 25-7-6.16).",
+    "text": "Child care (SDCL 25-7-6.18) and medical support (SDCL 25-7-6.16) are added to the basic schedule obligation.",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.16"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 871,
+    "period": "monthly",
+    "minimumOrder": 79,
+    "rule": "The emboldened areas of the schedule include a self-support reserve of $871 per month; the noncustodial parent pays the lesser of the obligation computed on his or her own income alone and the proportionate share of the combined obligation (SDCL 25-7-6.2). The lowest schedule amount is $79 (0-950 bracket). A parent is presumed able to earn at least 1,820 hours times the state minimum wage per year (SDCL 25-7-6.4).",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.2"
+  },
+  "statute": {
+    "cite": "SDCL 25-7-6.1 to 25-7-6.27",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.2"
+  },
+  "guidelinesUrl": "https://dss.sd.gov/childsupport/obligationsdetermined.aspx",
+  "officialCalculatorUrl": "https://dss.sd.gov/childsupport/services/obligationcalculator.aspx",
+  "emancipation": {
+    "text": "Parents must support a child until age 18, or until 19 if the child is a full-time secondary school student (SDCL 25-5-18.1).",
+    "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-5-18.1"
+  },
+  "testCases": [
+    {
+      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 0 },
+      "expected": 1062.0,
+      "what": "payer's (parent A) monthly basic obligation",
+      "source": "Computed by hand from the SDCL 25-7-6.2 schedule: bracket 5,951-6,000, two children = $1,593; parent A share 4000/6000 = 66.67%; 1593 x 2/3 = $1,062.00. https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.2"
+    }
+  ],
+  "facts": [
+    { "text": "The schedule was last amended by SL 2022, ch 80 (the 2026 session amended other sections but not the schedule); it runs to $30,000 of combined monthly net income and includes a self-support reserve of $871 per month (SDCL 25-7-6.2).", "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.2" },
+    { "text": "Income tax is deducted at the single-taxpayer rate for a monthly payroll period, not at the parent's actual rate (SDCL 25-7-6.7).", "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.7" },
+    { "text": "A total obligation (with health insurance and child care) above 50% of the obligor's monthly net income is presumed to impose a financial hardship, a ground for deviation (SDCL 25-7-6.10).", "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.10" },
+    { "text": "The Governor appoints a child support commission every four years to review the guidelines (SDCL 25-7-6.12).", "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.12" },
+    { "text": "Income imputed to an unemployed or underemployed parent may not be less than the state minimum wage times 1,820 hours; no income is imputed to a parent incarcerated for more than 180 days (SDCL 25-7-6.26).", "url": "https://sdlegislature.gov/Statutes/Codified_Laws/25-7-6.26" }
+  ],
+  "uncertain": [
+    "Effective date 2022-07-01 is inferred: the schedule's last amendment is SL 2022, ch 80, and SDCL 2-14-16 makes acts of a regular session effective on July 1 after passage; the session law itself was not read.",
+    "The HTML text of SDCL 25-7-6.2 does not mark which cells are emboldened (self-support reserve area), so the low-income comparison cannot be flagged per cell from the parsed table.",
+    "The brief cited § 25-7-6.14 for 180 nights; in the code 180 nights is the shared parenting cross credit of § 25-7-6.27, while § 25-7-6.14 is the 38%-66% abatement for 6+ nights a month.",
+    "Test case computed by hand from the table, not from the DSS calculator."
+  ]
+}

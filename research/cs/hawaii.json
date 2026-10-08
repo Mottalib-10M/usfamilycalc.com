@@ -1,0 +1,132 @@
+{
+  "slug": "hawaii",
+  "name": "Hawaii",
+  "abbr": "HI",
+  "verified": "2026-10-08",
+  "model": "melson",
+  "modelName": "Modified Melson formula: base primary support + child care + health insurance, plus a Standard of Living Adjustment (SOLA), shared by net income percentages",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Monthly gross income from all sources (wages, tips, commissions, bonuses, overtime and second jobs, spousal support received, investment and rental income, business income, pensions, Social Security except SSI, VA benefits, military pay and allowances, workers' compensation, unemployment, disability, gifts, winnings, fringe benefits); excludes spousal support paid, TANF, SSI, SNAP, Section 8, general assistance, Pell grants, WIC and adoption assistance (2024 Guidelines § V.J.1-2). Net income and SOLA income are read from the official Table of Incomes: net = gross minus 2022 state/federal income tax (single, one exemption) and FICA, minus the $1,693 self-support reserve; SOLA income = gross minus $1,303 (§ V.J.4-6, § V.U).",
+  "period": "monthly",
+  "maxChildren": null,
+  "schedule": null,
+  "percent": null,
+  "formula": {
+    "text": "CSG Worksheet (2024 Guidelines § II.A): (1) read each parent's Net Income and SOLA Income from the Table of Incomes (Appendix B, cs-schedules/hawaii.json); (2) income share = each parent's net / total net, rounded to the nearest whole percent; (3) Primary Child Support Need = $455 x number of children + child care actually paid + children's health insurance premium (or cash medical); (4) remaining SOLA income = (SOLA A + SOLA B) - Primary Need, not below 0; (5) SOLA amount = remaining SOLA income x 10% per child, maximum 30% (1 child 10%, 2 children 20%, 3+ children 30%); (6) Child Support Calculation = Primary Need + SOLA amount; (7) each parent's Total Support Obligation = calculation x income share, subject to the $91 per child minimum and to the maximum (generally not more than the parent's Net Income when it exceeds $91 per child); (8) each parent subtracts child care and health insurance he or she actually pays; the non-custodial parent pays the remainder, rounded to the nearest dollar.",
+    "params": {
+      "basePrimarySupportPerChild": 455,
+      "basePrimarySupportBasis": "Monthly difference between a two- and one-person household, 2022 Federal Poverty Guidelines (§ V.C)",
+      "selfSupportReserve": 1693,
+      "selfSupportReserveBasis": "2022 FPG single individual $1,302.50/month x 130% (§ V.U)",
+      "solaIncomeDeduction": 1303,
+      "solaPctPerChild": 10,
+      "solaPctMax": 30,
+      "minimumPerChild": 91,
+      "cashMedicalPctOfNet": 10,
+      "incomeSharesRounding": "nearest whole percent",
+      "tableOfIncomes": "cs-schedules/hawaii.json (gross $1 to $1,303 -> net 0, SOLA 0; then every dollar from $1,304 to $13,001)",
+      "automatedWorksheetMaxGross": 999999,
+      "soleCustodyMaxOvernights": 143,
+      "equalTimeOvernights": 183,
+      "extensiveAdjustmentDivisor": 40,
+      "equalTimeMonthsEach": 6
+    },
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 144,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Sole physical custody: the other parent has 143 or fewer overnights (§ V.H.5). Equal time-sharing (about 183 overnights each): each parent's Line 17 support (at least $91 per child) x 6 months, difference / 12 paid monthly by the parent owing more (Extensive Time-Sharing Worksheet lines 18-21). Extensive time-sharing (more than 143 but fewer than 183 overnights): adjustment rate = (regular support - equal time-sharing support) / 40; support = regular support - adjustment rate x (overnights - 143) (lines 22-29; if a different parent pays under equal time-sharing, the two amounts are added before dividing). Split custody: per-child support offset between households (lines 30-35).",
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Extensive_Time_Sharing_Worksheet.pdf"
+  },
+  "addOns": {
+    "childcare": "part of the Primary Child Support Need (Line 5), shared by net income percentage; the parent who pays it gets a credit (Line 15)",
+    "healthInsurance": "Children's premium (cost above single coverage) is part of the Primary Need (Line 6) with a credit to the paying parent (Line 16); if no reasonable insurance, cash medical support of 10% of the parent's net income (§ V.L).",
+    "text": "Private education expenses (PEX, K-12 tuition, books, required fees) are handled through the Exceptional Circumstances Form (§ II.B.2, § V.R).",
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1693,
+    "period": "monthly",
+    "minimumOrder": 91,
+    "rule": "Net income already deducts a $1,693 self-support reserve; gross income up to $1,303 gives zero net and zero SOLA income. Minimum child support is $91 per month per child unless exceptional circumstances apply (§ V.M). Support exceeding 70% of net income is listed as a possible exceptional circumstance (§ II.B.2.b.i); the Table of Incomes prints 70% of net income for that test.",
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+  },
+  "statute": {
+    "cite": "HRS §§ 571-52.5, 576D-7, 576E-15, 580-47; 2024 Hawai'i Child Support Guidelines",
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+  },
+  "guidelinesUrl": "https://www.courts.state.hi.us/self-help/courts/forms/oahu/child_support",
+  "officialCalculatorUrl": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_Excel_Worksheets.xlsx",
+  "emancipation": {
+    "text": "The Court may order support for an unmarried adult child enrolled full time in post-high school education or vocational training; support generally terminates before or at age 23, decided case by case; CSEA and OCSH can only establish orders before the age of majority (2024 Guidelines § III.A).",
+    "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0,
+        "incomeBasis": "gross"
+      },
+      "expected": 1087.0,
+      "what": "payer A's monthly support (Line 17A), no child care or insurance: net A $3,690.91, net B $545.83 -> A 87%; Primary Need $455; SOLA (6,697 + 1,697 - 455) x 10% = $793.90; (455 + 793.90) x 0.87 = $1,086.54 -> $1,087",
+      "source": "Computed by hand from the 2024 Guidelines § II.A and the official Table of Incomes rows $8,000 and $3,000; no official worked example located"
+    },
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 182
+      },
+      "expected": 463.0,
+      "what": "payer's monthly support with equal time-sharing: Line 17 $1,087 and $162; ($1,087 x 6 - $162 x 6) / 12 = $462.50, rounded",
+      "source": "Computed by hand from 2024 Guidelines § II.B.1.a (lines 18-21) and the Table of Incomes (rows $8,000 and $3,000)."
+    },
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 160
+      },
+      "expected": 822.0,
+      "what": "payer's monthly support with extensive time-sharing (160 overnights): ($1,087 - $463) / 40 = $15.60 per overnight x 17 = $265.20; $1,087 - $265.20",
+      "source": "Computed by hand from 2024 Guidelines § II.B.1.b (lines 22-29)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The 2024 Hawai'i Child Support Guidelines took effect April 1, 2024 (Family Court Memorandum dated March 20, 2024); the next review is scheduled for 2026.",
+      "url": "https://www.courts.state.hi.us/self-help/courts/forms/oahu/child_support"
+    },
+    {
+      "text": "Base Primary Support is $455 per child per month, the monthly difference between a two- and one-person household under the 2022 Federal Poverty Guidelines (§ V.C).",
+      "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+    },
+    {
+      "text": "The Standard of Living Adjustment gives the children 10% of the parents' remaining SOLA income per child, capped at 30%; the original guidelines used 12% / 6% / 4% (§ II.A.3 and note 5).",
+      "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+    },
+    {
+      "text": "Support for adult children in post-graduate programs is excluded under the 2024 Guidelines (not retroactive to earlier orders) (note 20).",
+      "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+    },
+    {
+      "text": "Child support is computed by the Family Court, the Child Support Enforcement Agency (Department of the Attorney General) or the Office of Child Support Hearings, which have concurrent jurisdiction (§ I and note 1).",
+      "url": "https://www.courts.state.hi.us/wp-content/uploads/2020/10/Child_Support_Guidelines_2024.pdf"
+    }
+  ],
+  "uncertain": [
+    "The Table of Incomes PDF lists gross incomes from $1,304 to $13,001 per dollar (11,698 rows) plus the band $1 to $1,303; above $13,001 the official Excel worksheet computes net and SOLA income (up to $999,999/month). The net-income tax formula (2022 taxes) is described in note 33 but not reproduced as parameters.",
+    "The 2024 Guidelines contain no worked numerical example; the test case is computed by hand and has not been checked against the official Excel worksheet.",
+    "Maximum child support (§ V.K) is worded as 'generally should not exceed' the parent's net income, so it is not encoded as a hard cap.",
+    "thresholdOvernights 144 = first count above 143 overnights (extensive time-sharing); equal time-sharing = about 183 overnights each.",
+    "maxChildren is null: the guidelines apply $455 per child for any number of children; SOLA is capped at 30% from 3 children."
+  ]
+}

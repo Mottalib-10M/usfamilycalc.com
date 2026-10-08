@@ -1,0 +1,113 @@
+{
+ "slug": "massachusetts",
+ "section": "Massachusetts Child Support Guidelines Worksheet CJD 304 (12/1/25), Tables A, B and C",
+ "period": "weekly",
+ "effective": "2025-12-01",
+ "source": "https://www.mass.gov/doc/2025-child-support-guidelines-worksheet/download",
+ "note": "Formula state: Table A gives the weekly support for one child by income band (first two bands on the payor's gross income, the rest on combined available income, capped at $8,654); multiply by Table B, reduce by Table C. All 1,105 one-child amounts of the official 2025 Guidelines Chart match Table A with half-up rounding.",
+ "tableA": [
+  {
+   "basis": "payor",
+   "min": 0,
+   "max": 301,
+   "base": 15,
+   "pct": 0,
+   "above": 0,
+   "note": "$15 unless the court deviates"
+  },
+  {
+   "basis": "payor",
+   "min": 302,
+   "max": 391,
+   "base": 15,
+   "pct": 20,
+   "above": 301
+  },
+  {
+   "basis": "combined",
+   "min": 392,
+   "max": 1000,
+   "base": 0,
+   "pct": 22,
+   "above": 0
+  },
+  {
+   "basis": "combined",
+   "min": 1001,
+   "max": 1600,
+   "base": 220,
+   "pct": 21,
+   "above": 1000
+  },
+  {
+   "basis": "combined",
+   "min": 1601,
+   "max": 2400,
+   "base": 346,
+   "pct": 18,
+   "above": 1600
+  },
+  {
+   "basis": "combined",
+   "min": 2401,
+   "max": 3500,
+   "base": 490,
+   "pct": 14,
+   "above": 2400
+  },
+  {
+   "basis": "combined",
+   "min": 3501,
+   "max": 5000,
+   "base": 644,
+   "pct": 11,
+   "above": 3500
+  },
+  {
+   "basis": "combined",
+   "min": 5001,
+   "max": 8654,
+   "base": 809,
+   "pct": 10,
+   "above": 5000
+  }
+ ],
+ "tableB_numberOfChildrenFactor": {
+  "1": 1.0,
+  "2": 1.4,
+  "3": 1.68,
+  "4": 1.85,
+  "5": 1.94
+ },
+ "tableC_age18PlusReductionPct": {
+  "rows": "children under 18 (0-4)",
+  "cols": "children 18 or older (1-5)",
+  "values": {
+   "0": [
+    25,
+    25,
+    25,
+    25,
+    25
+   ],
+   "1": [
+    7,
+    11,
+    13,
+    14
+   ],
+   "2": [
+    4,
+    6,
+    7
+   ],
+   "3": [
+    2,
+    3
+   ],
+   "4": [
+    1
+   ]
+  }
+ }
+}

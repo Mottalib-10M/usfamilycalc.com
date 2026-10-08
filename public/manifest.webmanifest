@@ -1,0 +1,21 @@
+{
+ "name": "Family Law Calc",
+ "short_name": "Family Law Calc",
+ "description": "Child support, alimony, divorce cost, probate and workers' comp calculators for each US state, built on the state's own guideline, statute and 2026 rates.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#B22234",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

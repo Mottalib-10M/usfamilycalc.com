@@ -1,0 +1,225 @@
+{
+ "slug": "kansas",
+ "name": "Kansas",
+ "abbr": "KS",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined gross monthly income schedules with per-child amounts by age group (Kansas Child Support Guidelines, Appendix II)",
+ "incomeBasis": "gross",
+ "incomeDefinition": "Child support income = domestic gross income (wages and income from all sources; self-employment net of reasonable business expenses) after adjustments for child support paid in other cases and spousal maintenance paid or received in the present or other cases (Guidelines II.A, II.C-D, III).",
+ "period": "monthly",
+ "maxChildren": 6,
+ "schedule": {
+  "file": "cs-schedules/kansas.json",
+  "columns": "one schedule per number of children (1..6); each row = combined gross monthly income, then per-child monthly amount for a child aged 0-5, 6-11, 12-18",
+  "minIncome": 50,
+  "maxIncome": 18000,
+  "step": 50,
+  "lookup": "nearest",
+  "lookupRule": "Rows are $50 apart up to $2,000 and $100 apart from $2,000 to $18,000. For income amounts not shown, income is rounded to the nearest amount on the schedule (Guidelines VI.J.2). Use the schedule for the total number of children; read each child's amount in its age column (age at nearest birthday) and add them (Guidelines IV.B, IV.D.2).",
+  "belowMin": {
+   "rule": "Schedules start at $50 combined income. Separately, the ability-to-pay calculation subtracts the federal poverty guideline for a household of one from the obligor's child support income; if that is less than the support, the court sets support in the child's best interest (Guidelines VI.G).",
+   "amounts": null
+  },
+  "aboveMax": {
+   "method": "formula",
+   "pct": null,
+   "text": "Above $18,000 the court exercises discretion; the extended formula printed under each schedule is: age 12-18 per-child amount = income ^ .6386 x 4.8982 / 3.5596 / 3.0359 / 2.6015 / 2.3175 / 2.1083 for 1-6 children; 6-11 = x 0.94; 0-5 = x 0.84 (Guidelines IV.G, Appendix II)."
+  },
+  "effective": "2025-07-01",
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Parenting time adjustment table (Guidelines IV.H.2: 35-39% -> 10%, 40-44% -> 20%, 45-49% -> 30% of line D.5); equal parenting time direct expense formula (VI.F.3: half the difference of the two D.5 shares plus 7% / 10.5% / 15% of D.4 by combined income <= $4,690 / < $8,125 / >= $8,125); age factors 0.84 and 0.94 and the extended formula exponent .6386 (Appendix II); percentages rounded to the nearest tenth (VI.J.2).",
+  "params": {
+   "timeAdjustment": [
+    [
+     35,
+     10
+    ],
+    [
+     40,
+     20
+    ],
+    [
+     45,
+     30
+    ]
+   ],
+   "equalTimePct": 50,
+   "directExpense": {
+    "pctLow": 7,
+    "pctMid": 10.5,
+    "pctHigh": 15,
+    "lowMax": 4690,
+    "highFrom": 8125
+   },
+   "ageFactor0to5": 0.84,
+   "ageFactor6to11": 0.94,
+   "extendedExponent": 0.6386,
+   "extendedMultiplierByChildren": [
+    4.8982,
+    3.5596,
+    3.0359,
+    2.6015,
+    2.3175,
+    2.1083
+   ],
+   "shareRoundPct": 0.1,
+   "defaultAgeColumn": "6-11"
+  },
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+ },
+ "shared": {
+  "method": "percent-reduction",
+  "thresholdOvernights": null,
+  "multiplier": null,
+  "reductionTable": [
+   {
+    "timePct": "35-39%",
+    "adjustment": 10
+   },
+   {
+    "timePct": "40-44%",
+    "adjustment": 20
+   },
+   {
+    "timePct": "45-49%",
+    "adjustment": 30
+   }
+  ],
+  "text": "Parenting time adjustment: if the child spends 35% or more of its time with the nonresidential parent the court decides whether to adjust; the table gives 10% (35-39%), 20% (40-44%), 30% (45-49%) of that parent's share (worksheet line E.1.a: % x Line D.5) (Guidelines IV.H.2). Extended parenting time of 14+ consecutive days may reduce support by up to 50% (IV.H.3). Equal parenting time (discretionary): shared expense formula or direct expense formula = (higher share - lower share) / 2 plus 7% (combined income <= $4,690), 10.5% (> $4,690 and < $8,125) or 15% (>= $8,125) of the gross child support obligation (Guidelines VI.B-F).",
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+ },
+ "addOns": {
+  "childcare": "Work-related child care costs are added and shared proportionately (worksheet line G; Guidelines IV.J).",
+  "healthInsurance": "Health, dental, vision and orthodontic premiums for the child are added and shared proportionately (worksheet line F; Guidelines IV.I).",
+  "text": "Each parent's proportionate obligation = gross support share + parenting time/shared residency adjustment + share of premiums + share of work-related child care (Guidelines IV.C).",
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": null,
+  "period": "monthly",
+  "minimumOrder": null,
+  "rule": "Ability to pay: subtract the current federal poverty guideline for a household of one from the parent's child support income; support owed is the lesser of that and the guideline amount, or a best-interest amount if the available income is lower (Guidelines VI.G). The schedules note the 2023 poverty guideline for one person as $1,250 per month (rounded up to $50).",
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+ },
+ "statute": {
+  "cite": "K.S.A. 23-3002; Kansas Supreme Court Administrative Order 2025-RL-121",
+  "url": "https://kscourts.gov/KSCourts/media/KsCourts/Orders/2025-RL-121.pdf"
+ },
+ "guidelinesUrl": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf",
+ "officialCalculatorUrl": null,
+ "emancipation": {
+  "text": "Support ends at 18 unless agreed otherwise; if the child is still in high school it continues to June 30 of the school year in which the child turned 18, and on motion may continue through the school year in which the child turns 19 (K.S.A. 23-3001(b)).",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch23/023_030_0001.html"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "childAges": [
+     8,
+     14
+    ],
+    "overnightsA": 0
+   },
+   "expected": 1098.55,
+   "what": "payer A's monthly share of the gross child support obligation (Line D.5, before adjustments)",
+   "source": "Computed by hand from Appendix II (two-child schedule, $6,000 row: 6-11 = $798, 12-18 = $849; total $1,647); A share 66.7% (percentages rounded to the nearest tenth, Guidelines VI.J.2); 0.667 x 1,647 = 1,098.55 (final order rounded to the nearest dollar = $1,099). skipEngine: children in two age groups; the calculator uses one age column for all children.",
+   "skipEngine": true
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "childAges": [
+     8,
+     14
+    ],
+    "timeWithAPct": 40
+   },
+   "expected": 878.84,
+   "what": "payer A's share after the parenting time adjustment for 40-44% of time",
+   "source": "Computed by hand: adjustment = 20% x Line D.5 (1,098.55) = 219.71; 1,098.55 - 219.71 = 878.84 (Guidelines IV.H.2 table; worksheet line E.1.a). skipEngine: same mixed-age family as case 1.",
+   "skipEngine": true
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "childAges": [
+     8,
+     10
+    ],
+    "overnightsA": 0
+   },
+   "expected": 1064.53,
+   "what": "payer A's monthly share of the gross child support obligation, two children aged 6-11",
+   "source": "Computed by hand from Appendix II (two-child schedule, $6,000 row, 6-11 column $798 per child): 2 x 798 = 1,596; A share 66.7% -> 1,064.53."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "childAges": [
+     8,
+     10
+    ],
+    "overnightsA": 146
+   },
+   "expected": 851.63,
+   "what": "payer A's share after the 20% parenting time adjustment (146 overnights = 40%)",
+   "source": "Computed by hand: 1,064.53 - 20% = 851.63 (Guidelines IV.H.2, 40-44% of the child's time)."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "childAges": [
+     8,
+     10
+    ],
+    "overnightsA": 182.5
+   },
+   "expected": 434.11,
+   "what": "payer A's amount under the equal parenting time direct expense formula",
+   "source": "Computed by hand under Guidelines VI.F.3: D.5 shares 1,064.53 and 531.47; half the difference 266.53; plus 10.5% of D.4 1,596 (combined $6,000, between $4,690 and $8,125) = 167.58; total 434.11, owed by the parent not paying direct expenses (taken to be A)."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Kansas schedules give a per-child amount that depends on each child's age group (0-5, 6-11, 12-18); the 0-5 and 6-11 amounts are 84% and 94% of the 12-18 amount (Appendix II).",
+   "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+  },
+  {
+   "text": "The current guidelines took effect July 1, 2025 under Kansas Supreme Court Administrative Order 2025-RL-121 (dated October 3, 2025), superseding the May 1, 2025 version.",
+   "url": "https://kscourts.gov/KSCourts/media/KsCourts/Orders/2025-RL-121.pdf"
+  },
+  {
+   "text": "A parenting time adjustment can start when the child spends 35% or more of its time with the nonresidential parent (Guidelines IV.H.2).",
+   "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+  },
+  {
+   "text": "Above $18,000 combined monthly income the schedules print a discretionary extended formula (income to the power .6386 times a multiplier) (Guidelines IV.G).",
+   "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+  },
+  {
+   "text": "The child's age is taken at the nearest birthday (Guidelines IV.D.2).",
+   "url": "https://kscourts.gov/KSCourts/media/KsCourts/Child%20Support%20Guidelines/2024-Child-Support-Guidlines-adopted-July-1-2025-clean.pdf"
+  }
+ ],
+ "uncertain": [
+  "Eleven of the twelve Appendix II schedule pages are images: values were read by OCR (tesseract) and every row validated against the guidelines' construction rule (0-5 and 6-11 = 0.84 and 0.94 x 12-18, within $1), income steps and monotonicity; 5 cells failing validation were read by eye from the page images (listed in scripts/cs_kansas.py FIXES), and 12 further rows were compared by eye. A one-digit OCR error that still satisfies all checks cannot be fully excluded at very low incomes.",
+  "The first schedule page is a text layer with OCR artefacts (e.g. 'Ill' for 111), normalised by the script and validated the same way.",
+  "Appendix II footnote cites the 2023 federal poverty guideline ($1,250/month for one person); the ability-to-pay rule refers to the current poverty guideline, which changes annually.",
+  "No official online calculator verified; officialCalculatorUrl = null."
+ ]
+}

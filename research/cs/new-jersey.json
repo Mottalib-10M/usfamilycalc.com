@@ -1,0 +1,152 @@
+{
+  "slug": "new-jersey",
+  "name": "New Jersey",
+  "abbr": "NJ",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined net weekly income schedule (Rule 5:6A, Appendix IX-F)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Net income is gross income minus income taxes, mandatory union dues, mandatory retirement, previously ordered child support and, when appropriate, a theoretical child support obligation for other dependents; Appendix IX-B gives the detailed definition (Appendix IX-A, para. 11).",
+  "period": "weekly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/new-jersey.json",
+    "columns": "combined net weekly income, then basic support award for 1..6 children",
+    "minIncome": 180,
+    "maxIncome": 3600,
+    "step": 10,
+    "lookup": "bracket",
+    "lookupRule": "The schedule lists awards every $10 of combined net weekly income from $180 to $3,600 (Appendix IX-F); the rule for amounts between two rows is in Appendix IX-B instructions, not read (see uncertain).",
+    "belowMin": {
+      "rule": "For combined net incomes under $180 a week the court sets the award from the obligor's net income, living expenses and the child's needs, between $5.00 a week and the $180 schedule amount (Appendix IX-F; IX-A).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "Above $3,600 combined net weekly income ($187,200 a year) the $3,600 award is the minimum basic award and the court adds a discretionary amount under N.J.S.A. 2A:34-23; the schedule must not be extrapolated (Appendix IX-F; IX-A)."
+    },
+    "effective": "2025-09-01",
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9f.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of the Appendix IX-A shared-parenting and PAR-time rules used by the calculator: expenses split 38% fixed, 37% variable, 25% controlled (para. 14(g)(1)); shared-parenting award requires at least 28% of overnights (two or more a week) (para. 14(c)(2)); PAR-time credit up to PAR% of overnights x 37% of the basic award (para. 13(b)(1)); awards for combined incomes under $180 a week between $5.00 and the $180 amount (para. 7 / Appendix IX-F).",
+    "params": {
+      "fixedPct": 38,
+      "variablePct": 37,
+      "controlledPct": 25,
+      "sharedMinPctOfOvernights": 28,
+      "minimumAwardWeekly": 5.0
+    },
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 104,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Shared-parenting award possible when the Parent of Alternate Residence (PAR) has the child the substantial equivalent of two or more overnights a week (at least 28% of the time) with separate living accommodations and a filed parenting plan; not presumptive. Expenses split 38% fixed, 37% variable, 25% controlled; PAR fixed = 2 x PAR% of overnights x 38% of the award; PAR variable = PAR% x 37% of the award; PAR's obligation = PAR income share x (basic award + PAR fixed) - PAR fixed - PAR variable. Not used if the primary household income plus the award is under 2 x the poverty guideline. Below 28%, a PAR time credit of up to PAR% x 37% of the award may apply (Appendix IX-A, paras. 13-14).",
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf"
+  },
+  "addOns": {
+    "childcare": "net work-related child care added to basic award and shared by income",
+    "healthInsurance": "children's health insurance premium added and shared by income; awards include $250 per child per year of unreimbursed health care",
+    "text": "Supplemental expenses (child care, health insurance, court-approved special needs) are added to the basic award and shared by income share (Appendix IX-A, paras. 8-9, 14(h)).",
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 451,
+    "period": "weekly",
+    "minimumOrder": 5,
+    "rule": "The self-support reserve is 150% of the U.S. poverty guideline for one person: $451 a week as of January 1, 2025. The award is adjusted only if paying it would bring the obligor's net income below the reserve and the custodial parent's net income minus his or her share exceeds 150% of the poverty guideline (Appendix IX-A, para. 7(h)). Awards for combined incomes under $180 a week are between $5.00 and the $180 schedule amount.",
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf"
+  },
+  "statute": {
+    "cite": "N.J. Court Rules R. 5:6A and Appendices IX-A to IX-F; N.J.S.A. 2A:34-23",
+    "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9f.pdf"
+  },
+  "guidelinesUrl": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf",
+  "officialCalculatorUrl": "https://quickcalc.njchildsupport.gov/",
+  "emancipation": {
+    "text": "A child support obligation terminates automatically when the child turns 19, marries, dies or enters military service; the custodial parent may request continuation past 19 for a child still in high school, in full-time post-secondary education or disabled, with an end date before age 23 (N.J. Child Support Program FAQ, N.J.S.A. 2A:17-56.67). The guidelines themselves are not used for a child over 18 who has finished secondary school (Appendix IX-A, para. 25).",
+    "url": "https://www.njchildsupport.gov/resources/faq"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 500,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 280.0,
+      "what": "payer A's weekly share of the basic award (sole parenting, no add-ons; net weekly incomes)",
+      "source": "Computed by hand from Appendix IX-F (eff. 2025-09-01): $1,500 row, 2 children = $420; 420 x 1,000/1,500 = 280.00."
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 500,
+        "children": 2,
+        "overnightsA": 110
+      },
+      "expected": 201.1,
+      "what": "weekly shared-parenting award paid by PAR A (110 overnights = 30.1%; no add-ons, primary-household income test assumed met)",
+      "source": "Computed by hand per Appendix IX-A para. 14(g)-(h): p = 110/365; fixed = 2p x 0.38 x 420 = 96.20; variable = p x 0.37 x 420 = 46.83; (420 + 96.20) x 2/3 - 96.20 - 46.83 = 201.10."
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 500,
+        "children": 2,
+        "overnightsA": 52
+      },
+      "expected": 257.86,
+      "what": "weekly award paid by A after the maximum PAR-time credit (52 overnights)",
+      "source": "Computed by hand per Appendix IX-A para. 13(b)(1): 420 x 2/3 = 280.00 - 420 x 0.37 x 52/365 = 22.14 -> 257.86."
+    },
+    {
+      "inputs": {
+        "incomeA": 500,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 49,
+      "what": "weekly award paid by A reduced by the self-support reserve",
+      "source": "Computed by hand: $2,500 row, 2 children = $538 x 20% = 107.60; 500 - 107.60 < $451 reserve and the other parent keeps more than $451 -> award = 500 - 451 = 49 (Appendix IX-A para. 7(h))."
+    }
+  ],
+  "facts": [
+    {
+      "text": "New Jersey's schedule uses combined net weekly income, not monthly gross income; the current Appendix IX-F was adopted July 31, 2025 and took effect September 1, 2025 (previous versions 2007 and 2013).",
+      "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9f.pdf"
+    },
+    {
+      "text": "The schedule stops at $3,600 combined net weekly income ($187,200 a year) and must not be extrapolated; above it the court adds a discretionary amount.",
+      "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9f.pdf"
+    },
+    {
+      "text": "Shared-parenting adjustments require the alternate-residence parent to have at least two overnights a week (about 28% of the time) and are discretionary, not presumptive (Appendix IX-A, para. 14).",
+      "url": "https://www.njcourts.gov/sites/default/files/attorneys/rules-of-court/app9a.pdf"
+    },
+    {
+      "text": "Orders established or modified after September 1, 1998 get an automatic cost-of-living adjustment every two years based on a 24-month regional CPI average.",
+      "url": "https://www.njchildsupport.gov/resources/faq"
+    },
+    {
+      "text": "Support terminates automatically at 19 unless continuation is requested for school or disability, and no later than age 23.",
+      "url": "https://www.njchildsupport.gov/resources/faq"
+    }
+  ],
+  "uncertain": [
+    "njcourts.gov returned HTTP 403 (Cloudflare) from this location. Appendix IX-F was read from the Internet Archive snapshot (2026-03-12) of the official njcourts.gov PDF; Appendix IX-A from the snapshot of 2025-10-11 (includes amendments effective September 1, 2025). A later IX-A amendment (e.g., a 2026 update of the self-support reserve or poverty thresholds) cannot be excluded.",
+    "Self-support reserve: latest figure read = $451/week 'as of January 1, 2025'; 2026 value not confirmed as of 2026-10-08.",
+    "In the 2025 schedule the one-child and two-children columns converge at the top (e.g., $3,600: $717 vs $719); copied as published.",
+    "Rule for incomes between $10 rows (Appendix IX-B worksheet instructions) not read; lookup recorded as 'bracket'.",
+    "thresholdOvernights 104 = 2 overnights x 52 weeks (the rule is stated as 'two or more overnights per week, at least 28%'); 28% of 365 = 102.2.",
+    "N.J.S.A. 2A:17-56.67 not read on the legislature site; the age-19/23 rule is taken from the official NJ Child Support Program FAQ.",
+    "Calculator: the PAR-time credit (para. 13(b)) is discretionary ('may reduce'); the calculator applies the maximum credit. The shared-parenting primary-household income test (2 x poverty guideline by household size) cannot be checked with the calculator inputs. Below $180 combined weekly income the calculator uses the $180 row (the upper bound of the $5.00-$180 range)."
+  ]
+}

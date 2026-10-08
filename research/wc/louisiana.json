@@ -1,0 +1,25 @@
+{
+  "slug": "louisiana", "name": "Louisiana", "abbr": "LA", "verified": "2026-10-08",
+  "agency": { "name": "Louisiana Workforce Commission, Office of Workers' Compensation Administration (OWCA)", "url": "https://www.laworks.net/Downloads/OWC/AvgWage_MinMaxRates.pdf" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Sixty-six and two-thirds percent of wages during the period of disability (La. R.S. 23:1221(1)(a)); maximum 75% and minimum 20% of the statewide average weekly wage, rounded to the nearest dollar (La. R.S. 23:1202(A)(2)).",
+    "max": 903.00, "min": 241.00, "minText": "or the employee's actual wages if lower (La. R.S. 23:1202(A)(2)); the minimum does not apply to supplemental earnings or permanent partial benefits.",
+    "effective": "2026-09-01", "periodLabel": "injuries from September 1, 2026 through August 31, 2027 (injuries September 1, 2025 - August 31, 2026: max $877.00, min $234.00)",
+    "url": "https://www.laworks.net/Downloads/OWC/AvgWage_MinMaxRates.pdf", "asOf": "2026-09-01"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 13, "text": "No compensation is paid for the first week after the injury; if disability continues for two weeks or longer, compensation for the first week is paid after the first two weeks have elapsed (La. R.S. 23:1224).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83450" },
+  "ttdDuration": { "maxWeeks": null, "text": "No fixed week cap: TTD ceases once the condition has resolved enough to determine the extent of disability and continued regular treatment by a physician is no longer required (La. R.S. 23:1221(1)(d)). Supplemental earnings benefits are limited to 520 weeks (La. R.S. 23:1221(3)).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83447" },
+  "ppd": { "text": "PPD is paid solely for anatomical loss of use or amputation, at 66-2/3% of wages for a scheduled number of weeks (e.g. thumb 50 weeks, hand 150 weeks, arm 200 weeks) (La. R.S. 23:1221(4)). Wage loss after return to work is paid as supplemental earnings benefits: 66-2/3% of the difference between pre-injury and post-injury monthly wages when earnings fall below 90% (La. R.S. 23:1221(3)).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83447" },
+  "statute": { "cite": "La. R.S. 23:1202, 23:1221, 23:1224", "url": "https://legis.la.gov/Legis/Law.aspx?d=83433" },
+  "facts": [
+    { "text": "The 2026-2027 limits are based on a statewide average weekly wage of $1,204.02; Louisiana resets its maximum and minimum every September 1 (La. R.S. 23:1202(B), OWCA notice).", "url": "https://www.laworks.net/Downloads/OWC/AvgWage_MinMaxRates.pdf" },
+    { "text": "Medical mileage reimbursement is $0.76 per mile effective July 1, 2026 (La. R.S. 23:1203(D), OWCA notice).", "url": "https://www.laworks.net/Downloads/OWC/AvgWage_MinMaxRates.pdf" },
+    { "text": "The injured employee may select one treating physician in any field or specialty and can obtain an expedited hearing if that choice is denied (La. R.S. 23:1121(B)(1)).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83367" },
+    { "text": "To receive TTD while not working, the employee must prove by clear and convincing evidence that he or she is physically unable to engage in any employment, including work in pain (La. R.S. 23:1221(1)(c)).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83447" },
+    { "text": "Monthly supplemental earnings benefits may never exceed 4.3 times the weekly TTD benefit (La. R.S. 23:1202(A)(2)).", "url": "https://legis.la.gov/Legis/Law.aspx?d=83433" }
+  ],
+  "uncertain": [
+    "laworks.net returned 403 (Cloudflare) to direct download; the OWCA PDF was read via https://web.archive.org/web/2026id_/ of the same official URL. The archived version already lists the September 1, 2026 - August 31, 2027 limits."
+  ]
+}

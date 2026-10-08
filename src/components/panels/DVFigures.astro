@@ -1,0 +1,13 @@
+---
+/** Key figures of a state's divorce costs and timing, from src/data/divorce.json. */
+import { dv, usdx, day } from '../../lib/kit';
+interface Props { slug: string }
+const d = dv(Astro.props.slug);
+const w = d.waitingPeriod?.days;
+---
+<dl data-chrome class="mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 text-sm sm:grid-cols-4">
+  <div class="bg-white p-3"><dt class="text-navy-600">Filing fee</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{d.filingFee != null ? usdx(d.filingFee) : 'By county'}</dd><dd class="text-xs text-navy-600">{d.feeScope}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Response fee</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{d.responseFee != null ? (d.responseFee > 0 ? usdx(d.responseFee) : 'None') : 'See rules'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Waiting period</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{w != null ? (w > 0 ? `${w} days` : 'None') : 'See rules'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Fees read on</dt><dd class="mt-0.5 font-semibold text-navy-900">{day(d.verified)}</dd></div>
+</dl>

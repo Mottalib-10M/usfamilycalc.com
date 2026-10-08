@@ -1,0 +1,46 @@
+{
+ "slug": "delaware",
+ "name": "Delaware",
+ "abbr": "DE",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 8,
+  "text": "Pre-death claims are barred unless presented within 8 months of the decedent's death, whether or not notice to creditors was given (12 Del. C. § 2102(a)); post-death claims within 6 months after they arise (§ 2102(b)).",
+  "url": "https://delcode.delaware.gov/title12/c021/index.html"
+ },
+ "earliestClose": {
+  "text": "The executor or administrator has 1 year from the date of letters to settle the estate and is not required to distribute before then (12 Del. C. § 2311); legacies are payable 1 year from first appointment if no time is set (§ 2312).",
+  "url": "https://delcode.delaware.gov/title12/c023/sc02/index.html"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Distribution without letters by affidavit 30 days after death if the personal estate (excluding jointly owned property and property in § 1901(b),(c)) does not exceed $50,000, debts are paid, the spouse's allowance is satisfied and the decedent owned no Delaware real estate (12 Del. C. § 2306). Not indexed.",
+  "url": "https://delcode.delaware.gov/title12/c023/sc01/index.html"
+ },
+ "simplified": {
+  "text": "Small estate affidavit filed with the Register of Wills for personal estates up to $50,000 with no Delaware real estate (12 Del. C. § 2306).",
+  "url": "https://delcode.delaware.gov/title12/c023/sc01/index.html"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: New Castle",
+  "text": "Register of Wills fees are set by the governing body of each county and posted at each office (12 Del. C. §§ 2510, 2511); the New Castle County fee list was not read.",
+  "url": "https://delcode.delaware.gov/title12/c025/index.html"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Commissions are allowed as provided by rule of the Court of Chancery and may be reduced for late accounts (12 Del. C. § 2305); no percentage schedule in the statute.",
+  "url": "https://delcode.delaware.gov/title12/c023/sc01/index.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Attorneys' fees are allowed as provided by rule of the Court of Chancery (12 Del. C. § 2305); no statutory schedule.",
+  "url": "https://delcode.delaware.gov/title12/c023/sc01/index.html"
+ },
+ "uncertain": [
+  "New Castle County Register of Wills fee schedule not read; filingFee.amount = null.",
+  "Court of Chancery rules on commissions (12 Del. C. § 2305) not read; type 'reasonable' reflects the absence of a statutory schedule.",
+  "Effective date of the $50,000 limit in 12 Del. C. § 2306 not shown; smallEstate.effective = null."
+ ]
+}

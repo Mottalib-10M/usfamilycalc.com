@@ -1,0 +1,43 @@
+{
+  "slug": "arizona", "name": "Arizona", "abbr": "AZ", "verified": "2026-10-08",
+  "agency": { "name": "Industrial Commission of Arizona (ICA), Claims Division", "url": "https://www.azica.gov/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross average monthly wage",
+    "rateText": "66 2/3% of the average monthly wage during the period of disability, plus a flat $100 per month if persons are dependent on the employee (A.R.S. § 23-1045(A)); wages above the ICA's maximum average monthly wage are excluded (A.R.S. § 23-1041(D)-(E)).",
+    "max": null,
+    "maxMonthly": 4087.33,
+    "maxAverageMonthlyWage": 6131.00,
+    "maxWeeklyDerived": 943.23,
+    "min": null,
+    "minText": "Arizona has no statutory minimum TTD rate in A.R.S. § 23-1045.",
+    "effective": "2026-01-01", "periodLabel": "injuries sustained January 1 - December 31, 2026 (maximum average monthly wage $6,131.00; $6,333.32 adopted for 2027)",
+    "url": "https://www.azica.gov/claims-amw-statutory-maximum-information-page", "asOf": "2026-01-01"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 14,
+    "text": "Compensation is not paid for the first seven days after the injury; if incapacity extends beyond seven days compensation begins on the eighth day, and if disability continues one week beyond those seven days it is computed from the date of injury (A.R.S. § 23-1062(D)).",
+    "url": "https://www.azleg.gov/ars/23/01062.htm"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "TTD is paid during the period of disability; no fixed week cap (A.R.S. § 23-1045(A)(1)).",
+    "url": "https://www.azleg.gov/ars/23/01045.htm"
+  },
+  "ppd": {
+    "text": "Scheduled injuries are paid at 55% of the average monthly wage for a fixed number of months (e.g. thumb 15, major hand 50, leg 50, major arm 60, hearing in both ears 60), in addition to TTD; partial loss of use is paid at 50% for the proportional months; unscheduled injuries pay 55% of the difference between pre-injury average monthly wage and reduced monthly earning capacity (A.R.S. § 23-1044(B)-(C)).",
+    "url": "https://www.azleg.gov/ars/23/01044.htm"
+  },
+  "statute": { "cite": "A.R.S. §§ 23-1041, 23-1044, 23-1045, 23-1062", "url": "https://www.azleg.gov/ars/23/01045.htm" },
+  "facts": [
+    { "text": "Arizona computes benefits on a monthly, not weekly, basis: the average monthly wage at the time of injury (A.R.S. § 23-1041(A)).", "url": "https://www.azleg.gov/ars/23/01041.htm" },
+    { "text": "The maximum average monthly wage is indexed each year to the BLS Employment Cost Index for Wages and Salaries, adopted by the ICA by August 1 for the next calendar year, and cannot fall or rise more than 5% per year (A.R.S. § 23-1041(E); A.A.C. R20-15-165).", "url": "https://www.azica.gov/claims-amw-statutory-maximum-information-page" },
+    { "text": "A TTD claimant with dependents receives exactly $100 more per month in total, regardless of the number of dependents (A.R.S. § 23-1045(A)(2)).", "url": "https://www.azleg.gov/ars/23/01045.htm" },
+    { "text": "The first installment is due no later than the 21st day after the ICA notifies the carrier of the claim; TTD is then paid at least every two weeks (A.R.S. § 23-1062(D)).", "url": "https://www.azleg.gov/ars/23/01062.htm" },
+    { "text": "Medical benefits include reimbursement of reasonable travel expenses when the employee must travel more than 25 miles from home for care (A.R.S. § 23-1062(C)).", "url": "https://www.azleg.gov/ars/23/01062.htm" }
+  ],
+  "uncertain": [
+    "Arizona publishes a maximum average monthly wage, not a weekly TTD maximum. maxMonthly = 66 2/3% x $6,131.00 (computed, excluding the $100 dependent allowance); maxWeeklyDerived = maxMonthly x 12 / 52 (computed, not published). max left null.",
+    "azica.gov blocks curl/WebFetch (403); the AMW page was read in the user's Chrome.",
+    "retroactiveAfterDays = 14 is the statute's 'seven days' plus 'one week beyond such seven days' (A.R.S. § 23-1062(D))."
+  ]
+}

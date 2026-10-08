@@ -1,0 +1,17 @@
+{ "slug": "florida", "name": "Florida", "abbr": "FL",
+  "filingFee": 409, "responseFee": null, "feeScope": "county (Miami-Dade County)",
+  "feeText": "Miami-Dade Clerk of the Court: Dissolution of marriage - $409. The statute lets each clerk charge a filing fee of up to $395 plus other authorized charges (Fla. Stat. § 28.241(1)(a)). No fee is listed for an answer; a cross claim/counterclaim is $295.",
+  "feeUrl": "https://www.miamidadeclerk.gov/clerk/family-court.page",
+  "otherFees": [
+    { "what": "Cross claim, counterclaim, third-party complaint (Miami-Dade)", "amount": 295, "url": "https://www.miamidadeclerk.gov/clerk/family-court.page" },
+    { "what": "Filing fee for reopening a case (Miami-Dade; § 28.241(1)(b) cap $50)", "amount": 50, "url": "https://www.miamidadeclerk.gov/clerk/family-court.page" }
+  ],
+  "waiver": { "name": "Application for Determination of Civil Indigent Status", "url": "https://flcourts-media.flcourts.gov/content/download/403010/file/indigent_application.pdf" },
+  "residency": { "text": "One of the parties must reside 6 months in Florida before the petition is filed (Fla. Stat. § 61.021).", "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.021" },
+  "waitingPeriod": { "days": 20, "text": "No final judgment of dissolution may be entered until at least 20 days after the petition is filed, unless the court finds injustice would result (Fla. Stat. § 61.19).", "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.19" },
+  "simplified": { "text": "Joint petition for simplified dissolution (Fla. Fam. L. R. P. Form 12.901(a)) when both spouses agree the marriage cannot be saved, have no minor or dependent children and the wife is not pregnant, have agreed on the division of assets and debts, seek no alimony, waive trial and appeal, and both attend the final hearing.", "url": "https://flcourts-media.flcourts.gov/content/download/685807/file_pdf/12.901a.pdf" },
+  "parentingClass": { "required": true, "text": "All parties to a dissolution with minor children must complete the Parent Education and Family Stabilization Course before final judgment; the court may excuse a party (Fla. Stat. § 61.21(4)).", "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.21" },
+  "uncertain": [
+    "No single statewide total: § 28.241 sets a cap (up to $395 plus authorized charges); $409 is the Miami-Dade Clerk's posted fee (most populous county).",
+    "Response fee: no answer fee listed by the Miami-Dade Clerk; set to null."
+  ] }

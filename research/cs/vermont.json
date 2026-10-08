@@ -1,0 +1,88 @@
+{
+  "slug": "vermont",
+  "name": "Vermont",
+  "abbr": "VT",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, Table of Intact Family Expenditures on Children by combined monthly available income (15 V.S.A. §§ 654-656)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Available income is gross income less spousal support and preexisting child support actually paid, the cost of health insurance (or cash medical contribution) for the children, FICA (7.65%, or 15.3% self-employed) and state and federal income taxes computed with the standard deduction: head of household with exemptions for the children for the custodial parent, single with one exemption for the noncustodial parent (15 V.S.A. § 653(1)). Gross income covers income from any source, including imputed income on non-income-producing assets of $10,000 or more and potential income of a voluntarily unemployed or underemployed parent; means-tested assistance is excluded (15 V.S.A. § 653(5)). The Office of Child Support publishes adjusted-gross-to-after-tax conversion tables for this step.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/vermont.json",
+    "columns": "combined monthly available income bracket (from, to), then guideline amount for 1..6 children",
+    "minIncome": 625,
+    "maxIncome": 30024.99,
+    "step": 50,
+    "lookup": "bracket",
+    "lookupRule": "Find the combined monthly available income in the Intact Family Expenditures Table and take the amount under the number of children (Shared Custody Instructions, Line 7; 15 V.S.A. § 654); the total support obligation is divided in proportion to available incomes and the noncustodial parent pays his or her share (15 V.S.A. § 656(a)).",
+    "belowMin": {
+      "rule": "If the noncustodial parent's available income is below the lowest income figure of the guideline ($625) or below the self-support reserve, the court determines support in its discretion under § 659 factors and must order a nominal support amount (15 V.S.A. § 656(b)).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The court may use its discretion when combined available income exceeds the uppermost level of the guideline (15 V.S.A. § 656(d)); the table ends at the $29,975.00-$30,024.99 bracket."
+    },
+    "effective": "2024-01-02",
+    "url": "https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 110,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "When each parent keeps the children overnight 30% or more of a calendar year, the total support obligation is increased by 50%, divided by income shares and by each parent's share of time, and the obligations are offset (15 V.S.A. § 657(a)). When one parent has 25% to less than 30% of overnights, shares are set by a shared costs table adopted by rule, also reflecting a 50% increase (15 V.S.A. § 657(b)). No parent pays more under (a) or (b) than under the regular guideline (15 V.S.A. § 657(c)). Split custody: theoretical payments for the children with the other parent are offset (15 V.S.A. § 657(e)).",
+    "url": "https://legislature.vermont.gov/statutes/section/15/011/00657"
+  },
+  "addOns": {
+    "childcare": "Work- or education-related child care costs (annualized, net of subsidies and tax credits) are added to the guideline amount to form the total support obligation shared by income (15 V.S.A. § 653(2), (9)).",
+    "healthInsurance": "The parent's actual cost of health insurance for the children is deducted from that parent's available income (15 V.S.A. § 653(1)(B)); coverage is reasonable in cost if the premium is 5% or less of the parent's gross income (15 V.S.A. § 658(f)). Extraordinary medical expenses (uninsured medical expenses over $200 a year) and extraordinary education expenses are added to the total support obligation (15 V.S.A. § 653(4), (9)).",
+    "text": "Total support obligation = table amount + child care costs + extraordinary expenses (15 V.S.A. § 653(9)).",
+    "url": "https://legislature.vermont.gov/statutes/section/15/011/00653"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1596,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "Self-support reserve = 120% of the HHS poverty guideline for one person (15 V.S.A. § 653(7)); OCS states it is $1,596 per month effective February 2, 2026. If paying the guideline amount would bring the noncustodial parent below the reserve, the share is presumed to be available income minus the reserve; below the reserve or below the lowest table income, a nominal amount is ordered (15 V.S.A. § 656(b)-(c)).",
+    "url": "https://dcf.vermont.gov/ocs/parents/calculator"
+  },
+  "statute": {
+    "cite": "15 V.S.A. §§ 653-661",
+    "url": "https://legislature.vermont.gov/statutes/section/15/011/00656"
+  },
+  "guidelinesUrl": "https://dcf.vermont.gov/ocs/parents/calculator",
+  "officialCalculatorUrl": "https://childsupportcalculator.ahs.state.vt.us/#/expert",
+  "emancipation": {
+    "text": "The court may order support until the child reaches the age of majority or finishes secondary education, whichever is later (15 V.S.A. § 658(c)).",
+    "url": "https://legislature.vermont.gov/statutes/section/15/011/00658"
+  },
+  "testCases": [
+    {
+      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 0 },
+      "expected": 1178.0,
+      "what": "payer's (parent A) monthly share of the guideline amount; incomes are monthly available (after-tax) incomes",
+      "source": "Computed by hand from the Intact Family Expenditures Table (R 1/2/2024): bracket 5,975.00-6,024.99, two children = $1,767; parent A share 4000/6000; $1,767 x 2/3 = $1,178.00; self-support check 4,000 - 1,178 = 2,822 > 1,596. https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf"
+    }
+  ],
+  "facts": [
+    { "text": "Vermont's guideline must reflect what parents living together in Vermont ordinarily spend on their children, so that children keep the same share of parental income after separation (15 V.S.A. § 654).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00654" },
+    { "text": "The guideline tables were updated on January 2, 2024; the next review is scheduled for completion by January 2, 2028 (Office of Child Support).", "url": "https://dcf.vermont.gov/ocs/parents/calculator" },
+    { "text": "The self-support reserve is indexed at 120% of the federal poverty guideline for one person: $1,596 per month from February 2, 2026 (15 V.S.A. § 653(7); OCS).", "url": "https://dcf.vermont.gov/ocs/parents/calculator" },
+    { "text": "Vermont computes taxes differently for each parent: head of household with the children's exemptions for the custodial parent, single with one exemption for the noncustodial parent (15 V.S.A. § 653(1)(D)).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00653" },
+    { "text": "Effective July 1, 2026, OCS sets the Presumed Income at $99,513.00 a year.", "url": "https://dcf.vermont.gov/ocs/parents/calculator" }
+  ],
+  "uncertain": [
+    "The official PDF server (outside.vermont.gov) returns HTTP 403 to scripts and to WebFetch; the table was read from the Wayback Machine copy of the official URL dated 2025-10-31 (https://web.archive.org/web/20251031191954id_/https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf). Its revision label (R 1/2/2024) matches the OCS page (read 2026-10-08) stating the tables were updated January 2, 2024 and next due by January 2, 2028.",
+    "The partial shared costs table for 25% to <30% of overnights (15 V.S.A. § 657(b)) is not in the published shared-custody PDF; not captured.",
+    "thresholdOvernights 110 = 30% of 365 (109.5) rounded up, as the brief states; the statute speaks of 30% of a calendar year.",
+    "Schedule incomes are available (after-tax) incomes; a calculator needs the OCS gross-to-after-tax conversion tables (Sole-Split.pdf, Shared.pdf, R 1/2/2024), which were downloaded to research/raw/ but not parsed.",
+    "The meaning of 'Presumed Income' ($99,513.00) is not defined on the OCS page; the statutory basis was not checked.",
+    "Test case computed by hand from the table, not from the OCS calculator."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+ "slug": "texas",
+ "base": "Amounts the executor or administrator actually receives or pays out in cash during administration, excluding cash on hand or in financial institution/brokerage accounts at death, life insurance proceeds and cash paid to heirs or legatees (Tex. Est. Code § 352.002).",
+ "schedules": [
+  {
+   "who": "Executor/administrator commission (Tex. Est. Code § 352.002)",
+   "tiers": [
+    {
+     "upTo": null,
+     "pct": 5
+    }
+   ],
+   "fixed": null,
+   "text": "5% commission on all amounts actually received or paid out in cash in administering the estate (Tex. Est. Code § 352.002(a)); the court may allow reasonable compensation instead in the cases of § 352.003.",
+   "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.352.htm#352.002",
+   "capNote": "Total commission may not exceed 5% of the gross fair market value of the estate subject to administration (§ 352.002(b)(1)); excluded receipts/payments listed in § 352.002(b)(2)."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 100000,
+   "expected": {
+    "Executor/administrator commission (Tex. Est. Code § 352.002)": 5000
+   },
+   "source": "computed by hand: 5% x 100,000 of eligible cash receipts and payments"
+  },
+  {
+   "estate": 250000,
+   "expected": {
+    "Executor/administrator commission (Tex. Est. Code § 352.002)": 12500
+   },
+   "source": "computed by hand"
+  }
+ ]
+}

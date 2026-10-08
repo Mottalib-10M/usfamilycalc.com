@@ -1,0 +1,37 @@
+{
+  "slug": "oklahoma", "name": "Oklahoma", "abbr": "OK", "verified": "2026-10-08",
+  "agency": { "name": "Oklahoma Workers' Compensation Commission (WCC)", "url": "https://www.wcc.ok.gov/" },
+  "ttd": {
+    "rate": 70, "basis": "gross AWW",
+    "rateText": "Seventy percent (70%) of the injured employee's average weekly wage, not to exceed the state average weekly wage (85A O.S. § 45(A)(1)), as amended by HB2367 effective May 29, 2019.",
+    "max": 1128.66, "min": null,
+    "minText": "The Administrative Workers' Compensation Act sets no minimum weekly TTD rate, and the WCC maximum-rate chart lists none.",
+    "effective": "2026-01-01", "periodLabel": "injuries from January 1, 2026 to December 31, 2026 (the SAWW takes effect January 1 of the year after its determination, 85A O.S. § 2(24))",
+    "url": "https://www.wcc.ok.gov/home/showpublisheddocument/2469/639035528438400000", "asOf": "2026-01-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": null,
+    "text": "There is no payment for the first three days of the initial period of temporary total disability (85A O.S. § 45(A)(1)); the Act provides no retroactive payment of these days.",
+    "url": "https://oksenate.gov/sites/default/files/2019-12/os85A.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": 156,
+    "text": "TTD is payable for up to 156 weeks; an administrative law judge may extend it by up to 52 more weeks for a consequential injury needing more time to reach maximum medical improvement, on clear and convincing medical evidence (85A O.S. § 45(A)(1)).",
+    "url": "https://oksenate.gov/sites/default/files/2019-12/os85A.pdf"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is 70% of the average weekly wage, capped at $375 per week for injuries on or after July 1, 2025 (WCC chart; $360 from July 1, 2021), for the proportion of 350 weeks that the disability bears (body as a whole up to 360 weeks), rated under the AMA Guides, Sixth Edition for non-scheduled parts (85A O.S. § 45(C)).",
+    "url": "https://www.wcc.ok.gov/home/showpublisheddocument/2469/639035528438400000"
+  },
+  "statute": { "cite": "85A O.S. §§ 2(24), 45 (Administrative Workers' Compensation Act)", "url": "https://oksenate.gov/sites/default/files/2019-12/os85A.pdf" },
+  "facts": [
+    { "text": "Oklahoma pays 70% of the average weekly wage, not two-thirds, for temporary total, permanent partial and permanent total disability.", "url": "https://www.wcc.ok.gov/home/showpublisheddocument/2469/639035528438400000" },
+    { "text": "The employer may terminate TTD if the worker misses three consecutive medical appointments without valid excuse or abandons care; benefits end permanently after 60 days of noncompliance (85A O.S. § 45(A)(2)).", "url": "https://oksenate.gov/sites/default/files/2019-12/os85A.pdf" },
+    { "text": "Temporary partial disability (70% of the wage difference for alternative work) is limited to 52 weeks, and refusing offered alternative work forfeits TTD and TPD (85A O.S. § 45(B)).", "url": "https://oksenate.gov/sites/default/files/2019-12/os85A.pdf" },
+    { "text": "Before HB2367 (May 29, 2019) the TTD maximum was 70% of the state average weekly wage ($607.40 in early 2019); it is now 100% ($867.71 from May 28, 2019).", "url": "https://www.wcc.ok.gov/home/showpublisheddocument/2469/639035528438400000" }
+  ],
+  "uncertain": [
+    "wcc.ok.gov blocks scripts (403); the WCC 'Weekly Compensation Rates' chart was read from a Wayback Machine copy (https://web.archive.org/web/2026/https://www.wcc.ok.gov/home/showpublisheddocument/2469/639035528438400000).",
+    "Statute read from the Oklahoma Senate's Title 85A compilation dated 2019-12; later amendments (e.g. the PPD cap increase to $375 effective July 1, 2025 shown in the WCC chart) are not in that compilation."
+  ]
+}

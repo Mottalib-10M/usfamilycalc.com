@@ -1,0 +1,15 @@
+---
+/** Key figures of a state's alimony rule, from src/data/alimony/<slug>.json and its model. */
+import { al, alCalc, usd, day } from '../../lib/kit';
+interface Props { slug: string }
+const d = al(Astro.props.slug);
+const ex = alCalc(d.slug, { payer: 8000, payee: 3000, years: 12, children: false });
+const dur = (m?: number | null) => (m == null ? 'Judge decides' : m % 12 === 0 ? `${m / 12} years` : `${m} months`);
+const range = ex.low != null && ex.high != null && ex.high > ex.low;
+---
+<dl data-chrome class="mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 text-sm sm:grid-cols-4">
+  <div class="bg-white p-3"><dt class="text-navy-600">Income counted</dt><dd class="mt-0.5 font-semibold text-navy-900">{d.incomeBasis === 'net' ? 'Net income' : 'Gross income'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">$8,000 vs $3,000 a month</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{range ? `${usd(ex.low!)}–${usd(ex.high!)}` : ex.monthly > 0 ? usd(ex.monthly) : 'No formula'}</dd><dd class="text-xs text-navy-600">a month under the rule</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">12-year marriage</dt><dd class="mt-0.5 font-semibold text-navy-900">{ex.durationMinMonths != null && ex.durationMinMonths !== ex.durationMonths ? `${dur(ex.durationMinMonths)} to ${dur(ex.durationMonths)}` : dur(ex.durationMonths)}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Rules read on</dt><dd class="mt-0.5 font-semibold text-navy-900">{day(d.verified)}</dd></div>
+</dl>

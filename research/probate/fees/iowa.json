@@ -1,0 +1,66 @@
+{
+ "slug": "iowa",
+ "base": "Gross assets of the estate listed in the probate inventory, excluding life insurance proceeds unless payable to the estate (Iowa Code § 633.197(2)).",
+ "schedules": [
+  {
+   "who": "Personal representative maximum fee (Iowa Code § 633.197)",
+   "tiers": [
+    {
+     "upTo": 1000,
+     "pct": 6
+    },
+    {
+     "upTo": 5000,
+     "pct": 4
+    },
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "Maximum: 6% of the first $1,000, 4% of the overplus between $1,000 and $5,000, 2% of all sums over $5,000; the court allows reasonable fees up to this cap (Iowa Code § 633.197).",
+   "url": "https://www.legis.iowa.gov/docs/code/633.197.pdf",
+   "capNote": "Ceiling, not entitlement; extraordinary services extra (§ 633.199)."
+  },
+  {
+   "who": "Attorney maximum fee (Iowa Code § 633.198)",
+   "tiers": [
+    {
+     "upTo": 1000,
+     "pct": 6
+    },
+    {
+     "upTo": 5000,
+     "pct": 4
+    },
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "Reasonable fee not in excess of the personal representative schedule (Iowa Code § 633.198).",
+   "url": "https://www.legis.iowa.gov/docs/code/633.198.pdf",
+   "capNote": "Ceiling, not entitlement; extraordinary services extra (§ 633.199)."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 500000,
+   "expected": {
+    "Personal representative maximum fee (Iowa Code § 633.197)": 10120,
+    "Attorney maximum fee (Iowa Code § 633.198)": 10120
+   },
+   "source": "computed by hand: 60 + 160 + 2% x 495,000"
+  },
+  {
+   "estate": 3000,
+   "expected": {
+    "Personal representative maximum fee (Iowa Code § 633.197)": 140,
+    "Attorney maximum fee (Iowa Code § 633.198)": 140
+   },
+   "source": "computed by hand: 60 + 4% x 2,000"
+  }
+ ]
+}

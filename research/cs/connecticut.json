@@ -1,0 +1,160 @@
+{
+ "slug": "connecticut",
+ "name": "Connecticut",
+ "abbr": "CT",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined net weekly income schedule (Regs. Conn. State Agencies § 46b-215a-2c)",
+ "incomeBasis": "net",
+ "incomeDefinition": "Gross income (wages, overtime and second jobs up to 45 paid hours per week, self-employment, benefits, etc.; § 46b-215a-1(11)) minus allowable deductions: federal, state and local income tax, Social Security or mandatory retirement, Medicare tax, CT FMLI contributions, health insurance premiums for the parent and dependents, court-ordered life and disability insurance, mandatory union dues, mandatory uniforms and tools, alimony and child support ordered for others, and the qualified child deduction (§ 46b-215a-2c(c)(2), § 46b-215a-2c(d)).",
+ "period": "weekly",
+ "maxChildren": 6,
+ "schedule": {
+  "file": "cs-schedules/connecticut.json",
+  "columns": "combined net weekly income, then obligation for 1..6 children, then the schedule percentage for 1..6 children",
+  "minIncome": 150,
+  "maxIncome": 6000,
+  "step": 10,
+  "lookup": "nearest",
+  "lookupRule": "Round the combined net weekly income (or, for a low-income obligor, the noncustodial parent's income) to the nearest ten dollars and read the block for the number of children (§ 46b-215a-2c(c)(3)(A)-(B)). Each parent's share = own net income / combined, rounded to the nearest whole percentage, x the obligation (§ 46b-215a-2c(c)(4)).",
+  "belowMin": {
+   "rule": "The schedule starts at $150 net weekly income (the minimum income triggering an obligation was raised from $50 to $150, preamble (b)(2)(B)). In the darker shaded area (noncustodial parent net weekly income up to $470 for 1 child, $550 for 2, $610 for 3, $680 for 4, $750 for 5, $830 for 6) the noncustodial parent is a low-income obligor and the block amount based on that parent's own income alone is the basic obligation (§ 46b-215a-1(16), § 46b-215a-2c(c)(3)(A)(i)).",
+   "amounts": null
+  },
+  "aboveMax": {
+   "method": "formula",
+   "pct": [
+    12.61,
+    18.27,
+    20.97,
+    23.42,
+    25.77,
+    28.01
+   ],
+   "text": "Above $6,000 combined net weekly income, awards are set case by case: the amount at $6,000 is the minimum presumptive obligation and the maximum is combined net weekly income x the percentage shown at $6,000 (12.61%, 18.27%, 20.97%, 23.42%, 25.77%, 28.01% for 1-6 children) (§ 46b-215a-2c(a)(2))."
+  },
+  "effective": "2026-08-01",
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Income rounded to the nearest ten dollars and percentage shares rounded to the nearest whole percentage (Regs. Conn. State Agencies § 46b-215a-2c(c)(3)-(4)); orders rounded to the nearest dollar (§ 46b-215a-2c(c)(6)(A)); above $6,000 the amount at $6,000 is the minimum and the percentage at $6,000 x income the maximum (§ 46b-215a-2c(a)(2)).",
+  "params": {
+   "incomeRoundTo": 10,
+   "shareRoundToPct": 1,
+   "columnsAmount": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "columnsPct": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "shared": {
+  "method": "other",
+  "thresholdOvernights": null,
+  "multiplier": null,
+  "reductionTable": null,
+  "text": "No time-based formula. In shared physical custody (substantially equal time; exact equality not required, § 46b-215a-1(24)) the presumptive order is the presumptive current support amount of the parent with the higher net weekly income, payable to the lower-income parent (§ 46b-215a-2c(c)(7)(B)); a deviation may apply if the arrangement substantially reduces/increases expenses or incomes are substantially equal (§ 46b-215a-5c(b)(6)(A)). Split custody: offset of the two theoretical amounts (§ 46b-215a-2c(c)(7)(A)).",
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "addOns": {
+  "childcare": "Qualifying child care costs (employment-related, licensed source) are shared by the noncustodial parent's percentage share of combined net disposable income; low-income obligors pay a reduced share (e.g. 20% of costs when the custodial parent's income is outside the shaded area) (§ 46b-215a-2c(g)).",
+  "healthInsurance": "Each award must include health care coverage: insurance at reasonable cost, application for HUSKY B, and/or cash medical support; no HUSKY contribution may be ordered from a low-income obligor (§ 46b-215a-2c(f)).",
+  "text": "Health care coverage and child care contribution are separate award components added to current support (§ 46b-215a-2c(a)(1), (f), (g)).",
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": 362,
+  "period": "weekly",
+  "minimumOrder": null,
+  "rule": "The schedule's darker shaded low-income area is based on a self-support reserve of $362 net per week (125% of the 2024 federal poverty guideline for one person, preamble (e)); in that area the obligation uses only the noncustodial parent's income and is 10% of net income for one child below $362, phased out up to $470 (§ 46b-215a-1(16), § 46b-215a-2c(c)(3)(A)). Arrearage payments for a low-income obligor are the greater of 10% of current support or $1 per week (§ 46b-215a-3a).",
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "statute": {
+  "cite": "Conn. Gen. Stat. § 46b-215a; Regs. Conn. State Agencies §§ 46b-215a-1 to 46b-215a-6",
+  "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+ },
+ "guidelinesUrl": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf",
+ "officialCalculatorUrl": null,
+ "emancipation": {
+  "text": "Support runs to 18; an unmarried child who is a full-time high school student is maintained until completing grade 12 or turning 19, whichever is first (Conn. Gen. Stat. § 46b-84(b)); support for a child with a disability may run to 21 (§ 46b-84(c)). Educational support orders for college are possible under § 46b-56c.",
+  "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 1000,
+    "incomeB": 500,
+    "children": 2,
+    "overnightsA": 0,
+    "period": "weekly net"
+   },
+   "expected": 312,
+   "what": "noncustodial parent A's presumptive weekly current support",
+   "source": "Computed by hand from the official schedule: combined $1,500 -> 2 children $465; A share 1000/1500 rounded to 67% (§ 46b-215a-2c(c)(4)(B)); 0.67 x 465 = 311.55, rounded to $312 (§ 46b-215a-2c(c)(6)(A))."
+  },
+  {
+   "inputs": {
+    "incomeA": 400,
+    "incomeB": 2000,
+    "children": 1,
+    "overnightsA": 0,
+    "period": "weekly net"
+   },
+   "expected": 61,
+   "what": "low-income noncustodial parent A's weekly current support",
+   "source": "Computed by hand: A's own $400 falls in the darker shaded area for 1 child (<= $470), so the block amount $61 is the obligation regardless of B's income (§ 46b-215a-2c(c)(3)(A)(i), (c)(4)(A))."
+  },
+  {
+   "inputs": {
+    "incomeA": 5000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0,
+    "period": "weekly net"
+   },
+   "expected": 778,
+   "what": "payer A's weekly current support above the schedule (minimum presumptive)",
+   "source": "Computed by hand: combined $7,000 > $6,000; minimum presumptive = amount at $6,000 for 2 children ($1,096) x A share 71% = 778.16 -> $778 (§ 46b-215a-2c(a)(2), (c)(4)); the maximum would use 18.27% of $7,000."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Connecticut's new guidelines took effect August 1, 2026, replacing the 2015 guidelines; the schedule now runs to $6,000 combined net weekly income (previously $4,000).",
+   "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+  },
+  {
+   "text": "Connecticut works in weekly amounts: incomes and orders are entered on the worksheet as weekly figures (§ 46b-215a-2c(b)).",
+   "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+  },
+  {
+   "text": "The low-income area is built on a self-support reserve of $362 net per week (125% of the 2024 federal poverty guideline), and the minimum income triggering an obligation rose from $50 to $150 per week (preamble).",
+   "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+  },
+  {
+   "text": "Income from hours worked beyond 45 paid hours per week is excluded from gross income (up to 52 hours it may justify a deviation) (§ 46b-215a-1(11), § 46b-215a-5c(b)(1)(E)).",
+   "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+  },
+  {
+   "text": "Connecticut rejects a time-sharing formula: shared physical custody is a deviation criterion, not a mathematical adjustment (preamble (j)(3)(D), § 46b-215a-5c(b)(6)(A)).",
+   "url": "https://www.jud.ct.gov/Publications/ChildSupport/CSguidelines.pdf"
+  }
+ ],
+ "uncertain": [
+  "The darker shaded (low-income) area is shown only by shading in the PDF; the per-column limits (470, 550, 610, 680, 750, 830) were detected from the PDF fill colour by script and match the preamble ($470 for one child) and the point where each column's percentage reaches its plateau.",
+  "The guidelines booklet was read from the Judicial Branch copy (jud.ct.gov); the eRegulations copy (eregulations.ct.gov) was not checked.",
+  "No official online calculator located on an official CT site from this environment; officialCalculatorUrl = null."
+ ]
+}

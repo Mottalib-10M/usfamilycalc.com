@@ -1,0 +1,16 @@
+---
+/** Every topic page (src/content/pages/) and every state page (src/content/states/<topic>/). */
+import ContentPage from '../../components/ContentPage.astro';
+import StateTopicPage from '../../components/StateTopicPage.astro';
+import { PAGES, STATE_PAGES } from '../../lib/pages';
+import { topicInfo } from '../../lib/topics';
+import type { PageDef, StateTopicDef } from '../../lib/page-types';
+export function getStaticPaths() {
+  return [
+    ...PAGES.map((page) => ({ params: { slug: page.slug }, props: { page, state: undefined } })),
+    ...STATE_PAGES.map((state) => ({ params: { slug: `${topicInfo(state.topic).base}/${state.slug}` }, props: { page: undefined, state } })),
+  ];
+}
+const { page, state } = Astro.props as { page?: PageDef; state?: StateTopicDef };
+---
+{page ? <ContentPage page={page} /> : <StateTopicPage def={state!} />}

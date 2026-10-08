@@ -1,0 +1,26 @@
+{
+  "slug": "nebraska", "name": "Nebraska", "abbr": "NE", "verified": "2026-10-08",
+  "agency": { "name": "Nebraska Workers' Compensation Court", "url": "https://www.newcc.gov/service-providers/attorneys/benefit-rates" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Sixty-six and two-thirds percent of the wages received at the time of injury, not more than the maximum and not less than the minimum weekly income benefit of § 48-121.01 (Neb. Rev. Stat. § 48-121(1)); the maximum is 100% of the state average weekly wage rounded to the next higher dollar (§ 48-121.01(1)(b)).",
+    "max": 1166.00, "min": 49.00, "minText": "Minimum weekly income benefit of $49 (§ 48-121.01(2)); a worker earning less than $49 a week receives his or her full wages (§ 48-121(1)).",
+    "effective": "2026-01-01", "periodLabel": "injuries on or after January 1, 2026",
+    "url": "https://www.newcc.gov/service-providers/attorneys/benefit-rates", "asOf": "2026-01-01"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 41, "text": "Indemnity benefits begin on the eighth calendar day of disability after a seven-day waiting period; if disability continues six weeks or longer, the waiting week is paid after six weeks elapse (Neb. Rev. Stat. § 48-119; Court FAQ).", "url": "https://www.newcc.gov/workers/worker-frequently-asked-questions" },
+  "ttdDuration": { "maxWeeks": null, "text": "Total disability compensation is paid during the disability, with no fixed week cap (§ 48-121(1)); temporary benefits usually end at maximum medical improvement or release from care (Court FAQ). Partial disability is limited to 300 weeks (§ 48-121(2)).", "url": "https://www.newcc.gov/workers/worker-frequently-asked-questions" },
+  "ppd": { "text": "Scheduled members are paid at 66-2/3% of wages for fixed periods in addition to temporary disability (e.g. thumb 60 weeks, index finger 35 weeks) (§ 48-121(3)); body-as-a-whole injuries are paid on loss of earning capacity at 66-2/3% of the wage difference for up to 300 weeks (§ 48-121(2); Court FAQ).", "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=48-121" },
+  "statute": { "cite": "Neb. Rev. Stat. §§ 48-119, 48-121, 48-121.01", "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=48-121" },
+  "facts": [
+    { "text": "Before each new year the Governor may hold a public hearing and suspend the automatic increase of the maximum weekly benefit (Neb. Rev. Stat. § 48-121.01(1)(b)).", "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=48-121.01" },
+    { "text": "Nebraska's minimum weekly benefit is a fixed $49 in statute, not indexed to wages; the section was last amended in 1993 (§ 48-121.01(2), source note Laws 1993, LB 757).", "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=48-121.01" },
+    { "text": "The employer must tell the worker of the right to choose as treating physician a doctor who has treated the worker or a family member; if the worker does not choose, the employer selects (Court FAQ).", "url": "https://www.newcc.gov/workers/worker-frequently-asked-questions" },
+    { "text": "From July 1, 2026 the burial benefit is $12,200.00 and medical mileage is reimbursed at 76.0 cents per mile (Court benefit rates page).", "url": "https://www.newcc.gov/service-providers/attorneys/benefit-rates" },
+    { "text": "Loss of two scheduled members in one accident is treated as permanent total disability (Court FAQ).", "url": "https://www.newcc.gov/workers/worker-frequently-asked-questions" }
+  ],
+  "uncertain": [
+    "nebraskalegislature.gov refused connections; §§ 48-121 and 48-121.01 were read from Wayback Machine copies of the official URLs. § 48-119 itself was not read; the waiting-period rule is quoted from the Court's FAQ, which cites it.",
+    "The Court's benefits table PDF (Google Drive embed on newcc.gov) is a scan; its OCR shows 2026 max $1,166.00 / min $49.00, consistent with the Court page and § 48-121.01(2)."
+  ]
+}

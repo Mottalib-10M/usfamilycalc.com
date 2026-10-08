@@ -1,0 +1,54 @@
+{
+  "slug": "district-of-columbia",
+  "name": "District of Columbia",
+  "abbr": "DC",
+  "filingFee": 80,
+  "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "D.C. Superior Court Family Court initial filing fees: filing complaint or petition $80.00; filing intervening petition $80.00; filing counterclaim $20.00. No fee is listed for an answer.",
+  "feeUrl": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/",
+  "otherFees": [
+    {
+      "what": "Counterclaim",
+      "amount": 20,
+      "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+    },
+    {
+      "what": "Motion (except motion under SCR-Dom. Rel. 41)",
+      "amount": 20,
+      "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+    },
+    {
+      "what": "Motion to reinstate under SCR-Dom. Rel. 41",
+      "amount": 35,
+      "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+    }
+  ],
+  "waiver": {
+    "name": "Fee Waiver Application - Application to Waive \"Prepayment of\" Costs",
+    "url": "https://www.dccourts.gov/court-resources/search-forms/fee-waiver-application-application-waive-prepayment-of-costs"
+  },
+  "residency": {
+    "text": "One spouse must have been a bona fide resident of D.C. for at least 6 months before filing; same-sex couples married in D.C. may divorce there without residency if their home jurisdiction will not hear the case (D.C. Code § 16-902(a), (b)).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-902"
+  },
+  "waitingPeriod": {
+    "days": 0,
+    "text": "No waiting period and no required period of separation: a divorce may be granted when one or both parties assert that they no longer wish to remain married (D.C. Code § 16-904(a), current text, last amended by D.C. Law 25-311 of March 21, 2025).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-904"
+  },
+  "simplified": {
+    "text": "The Family Court provides a Joint Request for Uncontested Divorce form and a Consent Answer to Complaint for Divorce; there is no separate summary dissolution statute.",
+    "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/divorce"
+  },
+  "parentingClass": {
+    "required": null,
+    "text": "No statutory parenting-class requirement found in D.C. Code ch. 16-9 or on the Family Court divorce page.",
+    "url": null
+  },
+  "uncertain": [
+    "Response fee: no answer fee listed (counterclaim $20); set to null.",
+    "Waiting period: the court's divorce page (updated 02/11/2026) states there is no required separation period; no statutory waiting period after filing was found.",
+    "Parenting class: not verified; set to null."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+ "slug": "arizona",
+ "name": "Arizona",
+ "abbr": "AZ",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "The personal representative publishes notice once a week for 3 weeks; claims must be presented within 4 months after first publication, or for known creditors given written notice within the later of that period or 60 days after mailing (A.R.S. § 14-3801). Pre-death claims are in any event barred 2 years after death plus any remaining notice period (A.R.S. § 14-3803).",
+  "url": "https://www.azleg.gov/ars/14/03801.htm"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, a personal representative may close the estate by sworn closing statement no earlier than 4 months after the original appointment of a general personal representative, after determining that the claims period has expired (A.R.S. § 14-3933).",
+  "url": "https://www.azleg.gov/ars/14/03933.htm"
+ },
+ "smallEstate": {
+  "limit": 200000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if no personal representative has been appointed and all personal property, less liens and encumbrances, does not exceed $200,000 (A.R.S. § 14-3971(B)); real property in Arizona up to $300,000 net of liens (assessed full cash value) can pass by affidavit of succession filed with the court no sooner than 6 months after death (A.R.S. § 14-3971(E)). Not indexed.",
+  "url": "https://www.azleg.gov/ars/14/03971.htm"
+ },
+ "simplified": {
+  "text": "Informal probate and appointment before the registrar (A.R.S. Title 14, ch. 3, art. 3) and closing by sworn statement 4 months after appointment (A.R.S. § 14-3933); affidavit collection for personal property up to $200,000 and affidavit of succession for real property up to $300,000 (A.R.S. § 14-3971).",
+  "url": "https://www.azleg.gov/ars/14/03971.htm"
+ },
+ "filingFee": {
+  "amount": 149,
+  "scope": "statewide",
+  "text": "Statutory clerk fee of $149.00 for an application for informal probate or appointment, or a petition in formal testacy or appointment proceedings (A.R.S. § 12-284(A), class C); statutory surcharges and local fees may be added by the clerk.",
+  "url": "https://www.azleg.gov/ars/12/00284.htm"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation (A.R.S. § 14-3719); the court may review its reasonableness on petition (A.R.S. § 14-3721).",
+  "url": "https://www.azleg.gov/ars/14/03719.htm"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule: the estate pays reasonable attorneys' fees (A.R.S. § 14-3720), which the court may review (A.R.S. § 14-3721); fiduciaries and their attorneys must manage costs prudently (A.R.S. § 14-1104).",
+  "url": "https://www.azleg.gov/ars/14/03721.htm"
+ },
+ "uncertain": [
+  "Maricopa County Clerk fee pages (clerkofcourt.maricopa.gov) return 403 and have no archive copy: filingFee is the base statutory fee of A.R.S. § 12-284; the total collected in Maricopa County (with surcharges) was not verified.",
+  "Effective date of the $200,000 / $300,000 affidavit limits not shown on azleg.gov (no history line); smallEstate.effective = null."
+ ]
+}

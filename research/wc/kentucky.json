@@ -1,0 +1,25 @@
+{
+  "slug": "kentucky", "name": "Kentucky", "abbr": "KY", "verified": "2026-10-08",
+  "agency": { "name": "Department of Workers' Claims (Education and Labor Cabinet)", "url": "https://elc.ky.gov/Workers-Compensation/Pages/Benefits.aspx" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66-2/3% of the employee's average weekly wage, not more than 110% and not less than 20% of the state average weekly wage (KRS 342.730(1)(a))",
+    "max": 1277.99, "min": 232.36, "minText": "Statutory floor of 20% of the state average weekly wage (KRS 342.730(1)(a)); the 2026 schedule lists $232.36 as the minimum for temporary and permanent total disability.",
+    "effective": "2026-01-01", "periodLabel": "injuries occurring January 1, 2026 through December 31, 2026",
+    "url": "https://elc.ky.gov/Workers-Compensation/Workers%20Compensation/2026%20Workers'%20Compensation%20Benefit%20Schedule.pdf", "asOf": "2025-09-02"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 14, "text": "No income benefits are payable for the first 7 days of disability unless disability continues for more than two weeks, in which case benefits are allowed from the first day (KRS 342.040(1)).", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47615" },
+  "ttdDuration": { "maxWeeks": null, "text": "No fixed week cap for TTD; all income benefits terminate when the employee reaches age 70 or four years after the injury or last exposure, whichever occurs last (KRS 342.730(4)).", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47625" },
+  "ppd": { "text": "PPD = 66-2/3% of AWW (capped at 82.5% of the state AWW; $958.49 for 2026 injuries) x AMA impairment rating x a statutory factor (0.65 for 0-5% up to 1.70 for 36%+); tripled if the worker cannot return to the same type of work (cap 110% of state AWW). Paid for 425 weeks if the rating is 50% or less, 520 weeks if above 50% (KRS 342.730(1)(b)-(d)). No minimum weekly PPD benefit.", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47625" },
+  "statute": { "cite": "KRS 342.730, KRS 342.040, KRS 342.143", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47625" },
+  "facts": [
+    { "text": "The 2026 maximum and minimum are based on Kentucky's 2024 state average weekly wage of $1,161.81, certified under KRS 342.143 (Department of Workers' Claims memo dated September 2, 2025).", "url": "https://elc.ky.gov/Workers-Compensation/Workers%20Compensation/2026%20Workers'%20Compensation%20Benefit%20Schedule.pdf" },
+    { "text": "Overdue income benefits carry 6% annual interest, raised to 12% if an ALJ finds the denial, delay or termination was without reasonable foundation (KRS 342.040(1)).", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47615" },
+    { "text": "Income benefits must start no later than the fifteenth day after the employer has knowledge of the disability, and be paid at least semimonthly (KRS 342.040(1)).", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47615" },
+    { "text": "Kentucky adds age and education factors to the PPD multiplier: +0.6 if 60 or older, +0.4 if 55 or older, +0.2 if 50 or older; +0.4 for under 8 years of schooling, +0.2 for under 12 years (KRS 342.730(1)(c)3).", "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47625" },
+    { "text": "The 2026 lump-sum death benefit is $114,120.35 (KRS 342.750(6), 2026 benefit schedule).", "url": "https://elc.ky.gov/Workers-Compensation/Workers%20Compensation/2026%20Workers'%20Compensation%20Benefit%20Schedule.pdf" }
+  ],
+  "uncertain": [
+    "The agency PDF returned 403 to direct download; the copy read was retrieved via https://web.archive.org/web/2026id_/ of the same official URL (memo dated September 2, 2025)."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "delaware", "name": "Delaware", "abbr": "DE", "verified": "2026-10-08",
+  "agency": { "name": "Office of Workers' Compensation, Division of Industrial Affairs, Delaware Department of Labor", "url": "https://labor.delaware.gov/divisions/industrial-affairs/workers-compensation/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66 2/3% of the injured employee's wages, not more than 66 2/3% of the state average weekly wage announced by the Secretary of Labor for the last calendar year (19 Del. C. § 2324).",
+    "max": 962.72, "min": 320.91,
+    "minText": "Minimum is 22 2/9% of the state average weekly wage; an employee earning less receives the full amount of his or her wages (19 Del. C. § 2324).",
+    "effective": "2026-07-01", "periodLabel": "effective July 1, 2026 (state AWW for calendar year 2025 = $1,444.07)",
+    "url": "https://industrialaffairs.delaware.gov/hubfs/Workers%20Compensation%20Rate%20Letter%202026.pdf", "asOf": "2026-05-13"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 7,
+    "text": "Compensation is paid beginning with the fourth day of incapacity; if incapacity extends to 7 days or more, including the day of injury, compensation is paid from the first day. Medical, hearing/vision loss and funeral benefits are paid from day one (19 Del. C. § 2321).",
+    "url": "https://delcode.delaware.gov/title19/c023/sc02/index.html"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Total disability compensation is paid during the continuance of total disability, with no fixed week cap (19 Del. C. § 2324); partial disability is limited to 300 weeks (19 Del. C. § 2325).",
+    "url": "https://delcode.delaware.gov/title19/c023/sc02/index.html"
+  },
+  "ppd": {
+    "text": "Permanent injuries are paid at 66 2/3% of wages for scheduled periods regardless of earning power, e.g. hand 220 weeks, arm 250, foot 160, leg 250, thumb 75, index finger 50 weeks; partial loss of use is paid proportionally (19 Del. C. § 2326).",
+    "url": "https://delcode.delaware.gov/title19/c023/sc02/index.html"
+  },
+  "statute": { "cite": "19 Del. C. §§ 2321, 2324, 2325, 2326", "url": "https://delcode.delaware.gov/title19/c023/sc02/index.html" },
+  "facts": [
+    { "text": "The maximum rate changes every July 1 and equals two-thirds of the prior calendar year's state average weekly wage, derived from employers in the state unemployment insurance system.", "url": "https://industrialaffairs.delaware.gov/hubfs/Workers%20Compensation%20Rate%20Letter%202026.pdf" },
+    { "text": "The Office of Workers' Compensation publishes daily rates for partial weeks: $137.54 for day 1 up to $962.72 for day 7 at the July 1, 2026 maximum.", "url": "https://industrialaffairs.delaware.gov/hubfs/Workers%20Compensation%20Rate%20Letter%202026.pdf" },
+    { "text": "If an employee's wages are below the minimum rate (22 2/9% of the state AWW), the employee receives his or her full wages as compensation (19 Del. C. § 2324).", "url": "https://delcode.delaware.gov/title19/c023/sc02/index.html" },
+    { "text": "Unless the employer has actual knowledge, notice of injury must be given within 90 days after the accident or no compensation is due until notice is given (19 Del. C. § 2341).", "url": "https://delcode.delaware.gov/title19/c023/sc03/index.html" }
+  ],
+  "uncertain": []
+}

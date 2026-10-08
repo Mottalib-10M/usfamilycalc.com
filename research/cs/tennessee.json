@@ -1,0 +1,182 @@
+{
+  "slug": "tennessee",
+  "name": "Tennessee",
+  "abbr": "TN",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted gross income schedule (Tenn. Comp. R. & Regs. 1240-02-04)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Adjusted gross income (AGI) is each parent's gross income minus any self-employment taxes paid and minus credits for the parent's other qualified children he or she is legally responsible for and actually supporting (Rule 1240-02-04-.02(1), 1240-02-04-.04). Credit for 'not-before-the-court' children in the home is 75% of a theoretical order (Rule 1240-02-04-.04).",
+  "period": "monthly",
+  "maxChildren": 5,
+  "schedule": {
+    "file": "cs-schedules/tennessee.json",
+    "columns": "combined monthly adjusted gross income, then basic child support obligation for 1, 2, 3, 4 and 5+ children",
+    "minIncome": 950,
+    "maxIncome": 28250,
+    "step": 50,
+    "lookup": "bracket",
+    "lookupRule": "When combined AGI falls between amounts shown in the schedule, round up to the next amount of combined AGI and use that row (Rule 1240-02-04-.04(6)(b)). The first row is printed '150-950.00'.",
+    "belowMin": {
+      "rule": "The schedule's first row covers combined AGI of $150 to $950 and shows $100 for every number of children; the minimum order is $100 per month (Rule 1240-02-04-.04(12)).",
+      "amounts": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "aboveMax": {
+      "method": "percent-of-excess",
+      "pct": [
+        6.81,
+        7.22,
+        7.77,
+        8.05,
+        8.66
+      ],
+      "text": "For combined AGI above $28,250: one child $2,231 plus 6.81% of income above $28,250; two children $2,803 plus 7.22%; three children $2,954 plus 7.77%; four children $3,294 plus 8.05%; five or more children $3,624 plus 8.66% (Rule 1240-02-04-.09, last page). Separately, under T.C.A. 36-5-101(e)(1)(B) a presumptive order above the amount from $10,000 of net income times 21%/32%/41%/46%/50% (1/2/3/4/5+ children) is capped unless the custodial parent proves a greater need (Rule 1240-02-04-.07(2)(g))."
+    },
+    "effective": "2021-10-01",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of Rule 1240-02-04-.04(7)(h)-(i) and .04(12): variable multiplier = ARP days x .0109589 (2/182.5) from 92 days; increase below 69 days = (69 - days)/365 x ARP's share of the BCSO (presumption, rebuttable); minimum order $100. The self-support reserve area is the shaded area of the schedule (cs-schedules/tennessee.json ssrShadedMaxIncome).",
+    "params": {
+      "perDiem": 0.0109589,
+      "creditFromDays": 92,
+      "increaseBelowDays": 69,
+      "daysPerYear": 365,
+      "minimumOrder": 100
+    },
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 92,
+    "multiplier": 0.0109589,
+    "reductionTable": null,
+    "text": "Variable multiplier (Rule 1240-02-04-.04(7)(h)): if the alternate residential parent (ARP) has 92 or more days a year, multiply the days by .0109589 (2/182.5); multiply the total BCSO by that factor; the excess over the BCSO is the ARP's additional child-rearing expense; the primary residential parent's income share of that excess is credited against the ARP's share of the BCSO. The guidelines assume 80 days of ARP time. Below 69 days the ARP's share may be increased by (69 - days)/365 times the ARP's share of the BCSO (Rule 1240-02-04-.08(2)(c)5(vi)). In a 50/50 case the father or Parent 2 is deemed the ARP (Rule 1240-02-04-.04(7)(b)2). A parent to whom the self-support reserve is applied does not receive the parenting time credit (Rule 1240-02-04-.03).",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "addOns": {
+    "childcare": "work-related child care added to the BCSO and shared by income percentage",
+    "healthInsurance": "child's portion of health insurance premium added to the BCSO and shared by income percentage; coverage is reasonable if it does not exceed 5% of the providing parent's gross income",
+    "text": "Health care insurance, work-related childcare and recurring uninsured medical expenses are added to the BCSO to obtain the Adjusted Support Obligation (Rule 1240-02-04-.02(2)-(3)); reasonable cost of insurance is up to 5% of gross income (Rule 1240-02-04-.02(24)).",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 957,
+    "period": "monthly",
+    "minimumOrder": 100,
+    "rule": "The schedule incorporates a self-support reserve of $957 gross per month (90% of the 2020 federal poverty level for one person). If the obligor's AGI falls in the shaded area of the schedule, the BCSO from the obligor's income alone is compared with the obligor's pro-rata share of the combined BCSO and the lesser applies; an obligor given the SSR gets no parenting time credit (Rule 1240-02-04-.03; definition 1240-02-04-.02(25)). Minimum order $100 per month, not applicable when the obligor's only income is SSI, when a child's federal benefit brings support below it, or when the parenting time adjustment does (Rule 1240-02-04-.04(12)).",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "statute": {
+    "cite": "T.C.A. § 36-5-101(e); Tenn. Comp. R. & Regs. 1240-02-04-.01 to .09",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "guidelinesUrl": "https://www.tn.gov/humanservices/for-families/child-support-services/child-support-guidelines.html",
+  "officialCalculatorUrl": "https://www.tn.gov/humanservices/for-families/child-support-services/child-support-guidelines/child-support-calculator-and-worksheet-1.html",
+  "emancipation": {
+    "text": "A 'child' is a person under 18, or a person who reaches 18 while in high school until he or she graduates or until the class of which the person is a member when reaching 18 graduates, whichever is last (Rule 1240-02-04-.02, definition of child).",
+    "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "bcso": 1000,
+        "incomeShareARP": 60,
+        "incomeSharePRP": 40,
+        "overnightsARP": 94
+      },
+      "expected": 587.94,
+      "what": "ARP's support obligation after the parenting time credit",
+      "source": "Official worked example, Rule 1240-02-04-.04(7)(h)4(i)-(iv): 94 x .0109589 = 1.0301366; $1000 x 1.0301366 = $1030.14; $30.14 x 40% = $12.06; $600 - $12.06 = $587.94. https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf Inputs are a BCSO and income shares, not incomes, so the engine cannot take them (skipEngine); the same rule is checked through incomes in the 100-day case.",
+      "skipEngine": true
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 80
+      },
+      "expected": 810.67,
+      "what": "parent A's (ARP) monthly share of the BCSO, no parenting time adjustment (80 days is between 69 and 91)",
+      "source": "Computed by hand from the 1240-02-04-.09 schedule: combined AGI $6,000 row, two children = $1,216; A's share 2/3 = $810.67 (unrounded)."
+    },
+    {
+      "inputs": {
+        "bcsoShareARP": 600,
+        "overnightsARP": 65
+      },
+      "expected": 6.58,
+      "what": "increase of the ARP's share for 65 days of parenting time",
+      "source": "Official example, Rule 1240-02-04-.08(2)(c)6(i)(II): (69 - 65)/365 = .010958904 x $600 = $6.58. Not an engine output on its own (the engine returns the total). https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf",
+      "skipEngine": true
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 100
+      },
+      "expected": 771.8,
+      "what": "parent A's (ARP) monthly obligation with 100 days of parenting time",
+      "source": "Computed by hand under Rule 1240-02-04-.04(7)(h): BCSO $1,216 (combined $6,000, two children); 100 x .0109589 = 1.09589; 1,216 x 1.09589 = 1,332.60; extra 116.60 x PRP share 1/3 = 38.87; 1,216 x 2/3 = 810.67 - 38.87 = 771.80. "
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 40
+      },
+      "expected": 875.08,
+      "what": "parent A's (ARP) monthly obligation with 40 days (increase for lack of parenting time)",
+      "source": "Computed by hand under Rule 1240-02-04-.04(7)(i): 810.67 x (69 - 40)/365 = 64.41; 810.67 + 64.41 = 875.08."
+    },
+    {
+      "inputs": {
+        "incomeA": 1200,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 80
+      },
+      "expected": 205.0,
+      "what": "obligor's monthly obligation in the self-support reserve (shaded) area",
+      "source": "Computed by hand: obligor AGI $1,200 is inside the shaded area for one child (up to $1,300). Combined $4,200 -> one child = $762 x 1200/4200 = $217.71; obligor alone, row 1,200 = $205; the lesser, $205, applies (Rule 1240-02-04-.03(4)(a)2(iii)). 80 days: no parenting time adjustment."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The guidelines are administrative rules of the Tennessee Department of Human Services (Child Support Services Division), last changed effective October 1, 2021 after a one-day stay of the September 30, 2021 date.",
+      "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+    },
+    {
+      "text": "An order can be modified only if the new presumptive amount differs from the current order (excluding deviations) by at least 15% (Rule 1240-02-04-.05(2)).",
+      "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+    },
+    {
+      "text": "The guidelines presume the alternate residential parent has 80 days a year (every other weekend, two weeks in summer and two weeks of holidays) (Rule 1240-02-04-.04(7)(a)).",
+      "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+    },
+    {
+      "text": "Within 15 business days of learning that an obligor will be incarcerated for more than 180 days, the IV-D agency may notify both parties of their right to request a review (Rule 1240-02-04-.05(3)).",
+      "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+    },
+    {
+      "text": "With a parenting time adjustment, support can flow from the primary residential parent to the alternate residential parent when the PRP earns more and the ARP has many days (Rule 1240-02-04-.04(7)(f)).",
+      "url": "https://publications.tnsosfiles.com/rules/1240/1240-02/1240-02-04.20211001.pdf"
+    }
+  ],
+  "uncertain": [
+    "publications.tnsosfiles.com and tn.gov answer 403 to scripted clients; the rule PDF and the DHS guidelines page were read from Wayback copies (rule PDF via web.archive.org/web/2026id_/..., DHS page captured 2026-09-24). The DHS page states the most recent changes were effective October 1, 2021, and the Secretary of State chapter index (captured 2025-09-02) lists 1240-02-04.20211001.pdf as current.",
+    "The shaded self-support-reserve area was recovered from the cell fill colour of the official PDF (light blue): highest shaded income $1,300 / $1,550 / $1,700 / $1,850 / $2,000 for 1 / 2 / 3 / 4 / 5+ children (cs-schedules/tennessee.json ssrShadedMaxIncome); the engine treats an obligor AGI at or below that income as inside the shaded area.",
+    "Schedule 'lookup' is 'bracket' meaning round UP to the next row (Rule 1240-02-04-.04(6)(b)); the first row '150-950.00' is stored as 950.0."
+  ]
+}

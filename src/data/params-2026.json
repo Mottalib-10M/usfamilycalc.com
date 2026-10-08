@@ -1,0 +1,41 @@
+{
+  "_readme": "General federal sources of the site. State figures live in src/data/<topic>/ with the official URL each was read on (built from research/ by scripts/build-data.py). Never type a figure in a page.",
+  "year": 2026,
+  "retrieved_at": "2026-10-08",
+  "valid_from": "2026-01-01",
+  "valid_to": "2026-12-31",
+  "sources": {
+    "usc667": {
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section667&num=0&edition=prelim",
+      "label": "42 U.S.C. § 667: every state must set child support guidelines and review them every four years"
+    },
+    "cfr30256": {
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-III/part-302/section-302.56",
+      "label": "45 CFR § 302.56: guidelines for setting child support orders (rebuttable presumption, low-income adjustment, review)"
+    },
+    "irs452": {
+      "url": "https://www.irs.gov/taxtopics/tc452",
+      "label": "IRS Topic no. 452, Alimony and separate maintenance (divorce or separation instruments executed after 2018)"
+    },
+    "irs504": {
+      "url": "https://www.irs.gov/publications/p504",
+      "label": "IRS Publication 504, Divorced or Separated Individuals"
+    },
+    "irs525": {
+      "url": "https://www.irs.gov/publications/p525",
+      "label": "IRS Publication 525, Taxable and Nontaxable Income (workers' compensation is not taxable)"
+    },
+    "ccpa1673": {
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1673&num=0&edition=prelim",
+      "label": "15 U.S.C. § 1673: limits on wage garnishment, including 50 to 65% of disposable earnings for support orders"
+    },
+    "acfCss": {
+      "url": "https://www.acf.hhs.gov/css",
+      "label": "Office of Child Support Services (Administration for Children and Families, HHS)"
+    },
+    "irs559": {
+      "url": "https://www.irs.gov/publications/p559",
+      "label": "IRS Publication 559, Survivors, Executors, and Administrators"
+    }
+  }
+}

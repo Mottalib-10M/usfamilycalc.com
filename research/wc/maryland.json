@@ -1,0 +1,26 @@
+{
+  "slug": "maryland", "name": "Maryland", "abbr": "MD", "verified": "2026-10-08",
+  "agency": { "name": "Maryland Workers' Compensation Commission", "url": "https://www.wcc.state.md.us/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds of the employee's average weekly wage, not more than the State average weekly wage and not less than $50 (Md. Code, Lab. & Empl. § 9-621(a)).",
+    "max": 1537.00, "min": 50.00, "minText": "If the employee's average weekly wage is below $50, compensation equals the actual average weekly wage (Lab. & Empl. § 9-621(a)(2)).",
+    "effective": "2026-01-01", "periodLabel": "injuries occurring in calendar year 2026",
+    "url": "https://www.wcc.state.md.us/adjud_claims/comp_rates.html", "asOf": "2026-01-01"
+  },
+  "waiting": { "days": 3, "retroactiveAfterDays": 14, "text": "If temporary total disability lasts 14 days or less, compensation is not allowed for the first 3 calendar days (medical, hospital and funeral payments excepted); longer disability is paid from the start (Lab. & Empl. § 9-620).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-620&enactments=false" },
+  "ttdDuration": { "maxWeeks": null, "text": "TTD is paid for the period that the covered employee is temporarily totally disabled; no fixed week cap (Lab. & Empl. § 9-621(b)).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-621&enactments=false" },
+  "ppd": { "text": "PPD is awarded in weeks (scheduled losses such as thumb 100 weeks, index finger 40 weeks under § 9-627) at a rate that rises with the size of the award: under 75 weeks, 1/3 of AWW capped at 16.7% of SAWW ($257.00 for 2026 events); 75 to under 250 weeks, 2/3 of AWW capped at 1/3 of SAWW (§ 9-629); 250 weeks or more, weeks increased by one-third and paid at 2/3 of AWW capped at 75% of SAWW (§ 9-630).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-627&enactments=false" },
+  "statute": { "cite": "Md. Code, Lab. & Empl. §§ 9-603, 9-620, 9-621, 9-627 to 9-630", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-621&enactments=false" },
+  "facts": [
+    { "text": "The 2026 maximum equals the State average weekly wage of $1,537.00 reported by the Maryland Department of Labor for the fiscal year ending June 30, 2025; the Commission rounds awards to the next highest dollar (§ 9-604).", "url": "https://www.wcc.state.md.us/adjud_claims/comp_rates.html" },
+    { "text": "Maryland's PPD rate depends on award length: minor awards under 75 weeks are paid at one-third of the worker's wage, but the minor category does not apply to certain public safety employees (§ 9-628).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-628&enactments=false" },
+    { "text": "Serious disability awards of 250 weeks or more are automatically increased by one-third of the number of weeks (§ 9-630(a)).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-630&enactments=false" },
+    { "text": "After 6 months of continuous TTD, the insurer must file vocational rehabilitation progress reports with the Commission, then every 120 days; late reports can draw a fine up to $500 (§ 9-675).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-675&enactments=false" },
+    { "text": "Temporary partial disability pays 50% of the difference between the pre-injury average weekly wage and the reduced wage-earning capacity (§ 9-615(a)).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=9-615&enactments=false" }
+  ],
+  "uncertain": [
+    "The Commission's 2026 rate notice says the maximums apply to 'injuries occurring on and after January 1, 2025' although it is titled 'calendar year 2026' and effective January 1, 2026; this appears to be a carry-over typo on the official page.",
+    "The 2027 maximum (based on the SAWW as of July 1, 2026) was not yet posted as of 2026-10-08; § 9-603 sets a December 15 deadline."
+  ]
+}

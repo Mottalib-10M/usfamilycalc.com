@@ -1,0 +1,37 @@
+{
+  "slug": "kansas", "name": "Kansas", "abbr": "KS", "verified": "2026-10-08",
+  "agency": { "name": "Division of Workers Compensation, Kansas Department of Labor (KDOL)", "url": "https://www.dol.ks.gov/workers-compensation" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66 2/3% of the average gross weekly wage (computed under K.S.A. 44-511), not less than $50 per week nor more than the dollar amount nearest to 75% of the state's average weekly wage (K.S.A. 44-510c(b)(1)).",
+    "max": null, "min": 50,
+    "minText": "Statutory minimum $50 per week (K.S.A. 44-510c(b)(1)).",
+    "effective": null, "periodLabel": "Kansas maximum changes each July 1 (75% of the state average weekly wage determined by KDOL); value for July 1, 2026 not read",
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010c.html", "asOf": null
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 21,
+    "text": "No compensation is paid for the first week of temporary total disability (except medical benefits) unless the disability lasts three consecutive weeks, in which case the first week is paid (K.S.A. 44-510c(b)(1)).",
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010c.html"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "No week cap for TTD, but total temporary total disability compensation (including prior partial or permanent payments) may not exceed $225,000 for an injury; these caps stay in effect until June 30, 2027 and are then indexed to the state average weekly wage (K.S.A. 44-510f(a)(2), (b)).",
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010f.html"
+  },
+  "ppd": {
+    "text": "Scheduled injuries are paid under the schedule of K.S.A. 44-510d. Whole-body (general) permanent partial disability is paid for up to 415 weeks based on functional impairment under the AMA Guides, 6th edition; 'work disability' above functional impairment is possible if impairment is at least 7.5% (10% with preexisting impairment) and post-injury wage loss is at least 10%, averaging task loss and wage loss (K.S.A. 44-510e(a)).",
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010e.html"
+  },
+  "statute": { "cite": "K.S.A. 44-510b, 44-510c, 44-510d, 44-510e, 44-510f, 44-511", "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010c.html" },
+  "facts": [
+    { "text": "Employer liability is capped per injury: $400,000 for permanent total disability, $225,000 for temporary total or partial disability, and $100,000 for functional-impairment-only permanent partial awards, indexed from July 1, 2027 (K.S.A. 44-510f).", "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010f.html" },
+    { "text": "Permanent total disability requires a functional impairment caused solely by the injury of at least 10% to the body as a whole (15% with preexisting impairment), and a worker may receive only one PTD award in a lifetime (K.S.A. 44-510c(a)).", "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010c.html" },
+    { "text": "Kansas rates impairment under the 6th edition of the AMA Guides to the Evaluation of Permanent Impairment (K.S.A. 44-510e(a)(2)(B)).", "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010e.html" },
+    { "text": "In death cases, the surviving spouse or wholly dependent children receive an initial lump-sum payment of $60,000, then weekly benefits with a minimum of 50% of the state average weekly wage (K.S.A. 44-510b(a)).", "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0010b.html" }
+  ],
+  "uncertain": [
+    "TTD weekly maximum for injuries on or after July 1, 2026 not obtained: dol.ks.gov returns 403 to curl and WebFetch, and web.archive.org was temporarily offline. max = null; needs the KDOL 'maximum weekly benefit' notice (75% of state AWW).",
+    "Agency URL https://www.dol.ks.gov/workers-compensation could not be loaded (403)."
+  ]
+}

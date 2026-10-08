@@ -1,0 +1,167 @@
+{
+ "slug": "oklahoma",
+ "name": "Oklahoma",
+ "abbr": "OK",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined gross monthly income schedule (43 O.S. § 119)",
+ "incomeBasis": "adjusted-gross",
+ "incomeDefinition": "Gross income = earned and passive income from any source (43 O.S. § 118B); self-employment income is net of ordinary and reasonable expenses with a 7.65% deduction. Adjusted gross income adds Social Security paid to the child on the parent's account and deducts support alimony actually paid in a prior case and the deduction for other qualified children (43 O.S. § 118A(1), § 118C). Imputed income may be minimum wage for not less than 25 hours per week (43 O.S. § 118B).",
+ "period": "monthly",
+ "maxChildren": 6,
+ "schedule": {
+  "file": "cs-schedules/oklahoma.json",
+  "columns": "combined gross monthly income (row applies if equal to or above), then obligation for 1..6+ children",
+  "minIncome": 50,
+  "maxIncome": 15000,
+  "step": 50,
+  "lookup": "floor",
+  "lookupRule": "The schedule heading reads 'If Combined Gross Monthly Income is equal to or above' each row amount (43 O.S. § 119(A)), so the row at or below the income applies. Rows run $650 to $15,000 in $50 steps, preceded by a $50 row.",
+  "belowMin": {
+   "rule": "Combined income below $650 falls in the first row ($50 for any number of children) (43 O.S. § 119(A)).",
+   "amounts": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ]
+  },
+  "aboveMax": {
+   "method": "discretion",
+   "pct": null,
+   "text": "Above $15,000 combined gross monthly income: the amount for $15,000 plus an additional amount determined by the court (43 O.S. § 119(B)). More than six children: amount for six plus an amount set by the court (43 O.S. § 119(C))."
+  },
+  "effective": "2000-06-06",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Parenting time adjustment parameters, 43 O.S. § 118E(A)(1), (D)(2), (D)(5).",
+  "params": {
+   "sharedBands": [
+    [
+     121,
+     2
+    ],
+    [
+     132,
+     1.75
+    ],
+    [
+     144,
+     1.5
+    ]
+   ],
+   "maxOvernightsOfPayingParent": 205
+  },
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "shared": {
+  "method": "cross-credit",
+  "thresholdOvernights": 121,
+  "multiplier": null,
+  "reductionTable": [
+   {
+    "overnights": "121-131",
+    "factor": 2
+   },
+   {
+    "overnights": "132-143",
+    "factor": 1.75
+   },
+   {
+    "overnights": "144+",
+    "factor": 1.5
+   }
+  ],
+  "text": "Parenting time adjustment when the noncustodial parent has at least 121 overnights a year (43 O.S. § 118E(A)(1)). The combined base obligation is multiplied by 2 (121-131 overnights), 1.75 (132-143) or 1.5 (144 or more), split by income shares, each share multiplied by the other parent's percentage of overnights (overnights/365) and offset; the higher owes the difference (§ 118E(D)(2)-(5)). No support is payable by a parent with more than 205 overnights, and the result may not exceed the unadjusted amount (§ 118E(D)(5)). The adjustment is presumptive, not mandatory (§ 118E(C)).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "addOns": {
+  "childcare": "Actual annualized child care costs for employment, job search or school are allocated in the same proportion as base support and added to the order (43 O.S. § 118G).",
+  "healthInsurance": "Health coverage is reasonable in cost if the child's pro rata premium does not exceed 5% of the responsible parent's gross income; cash medical support may not exceed the lesser of the pro rata share of actual medical expenses or 5% of the obligor's gross monthly income (43 O.S. § 118F(D) and the cash medical provision of § 118F).",
+  "text": "Child care and medical support are added to base support (43 O.S. §§ 118F, 118G); transportation costs between homes may be divided by income (43 O.S. § 118D(G)).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": null,
+  "period": "monthly",
+  "minimumOrder": 50,
+  "rule": "No separate self-support reserve in the statute; the schedule's first row sets $50 per month for any number of children below $650 combined income (43 O.S. § 119(A)). A deviation may not seriously impair the obligee's ability to provide basic necessities for the children (43 O.S. § 118H(A)).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "statute": {
+  "cite": "43 O.S. §§ 118A-118I, 119",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "guidelinesUrl": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf",
+ "officialCalculatorUrl": "https://oklahoma.gov/okdhs/services/child-support-services/computation.html",
+ "emancipation": {
+  "text": "Support runs until 18; a child regularly enrolled and attending high school full time is supported until graduation or age 20, whichever comes first, with no further order needed (43 O.S. § 112(E)). Support for an adult disabled child is possible under 43 O.S. § 112.1A.",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 702.67,
+   "what": "payer A's monthly base child support (before child care / medical)",
+   "source": "Computed by hand from 43 O.S. § 119: combined $6,000 -> $1,054 for 2 children; A share 4000/6000 x 1,054 = $702.67 (43 O.S. § 118D(B)-(C))."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 146
+   },
+   "expected": 421.6,
+   "what": "payer A's monthly base child support with 146 overnights",
+   "source": "Computed by hand under 43 O.S. § 118E(D): 1,054 x 1.5 = 1,581; A 2/3 = 1,054 x (219/365) = 632.40; B 1/3 = 527 x (146/365) = 210.80; difference 421.60 (below the unadjusted 702.67)."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 125
+   },
+   "expected": 683.42,
+   "what": "payer A's monthly base support with 125 overnights (factor 2)",
+   "source": "Computed by hand under 43 O.S. § 118E(D): 1,054 x 2 = 2,108; A 2/3 x 240/365 = 924.02; B 1/3 x 125/365 = 240.64; difference 683.42, below the unadjusted 702.67 (§ 118E(D)(5))."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Oklahoma's schedule is based on combined gross (not net) income and was last amended in 2000 (Laws 2000, c. 345, emerg. eff. June 6, 2000) (43 O.S. § 119).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  {
+   "text": "The Senate and House Judiciary Committees must review the guidelines and schedule at least every four years using data from the Title IV-D program in the Department of Human Services (43 O.S. § 119.1).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  {
+   "text": "The parenting time adjustment uses a sliding multiplier (2, 1.75 or 1.5) by overnight band starting at 121 overnights (43 O.S. § 118E(D)(2)).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  {
+   "text": "Child support is computed the same way whether custody is designated sole or joint (43 O.S. § 118D(E)); in split custody each parent's obligation is computed and the larger pays the difference (§ 118D(D)).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  {
+   "text": "Oklahoma Human Services Child Support Services publishes an official Excel child support computation calculator and form 03EN025E.",
+   "url": "https://oklahoma.gov/okdhs/services/child-support-services/computation.html"
+  }
+ ],
+ "uncertain": [
+  "OSCN (oscn.net) did not respond from this environment; the statute was read from the Oklahoma Legislature's official Title 43 file (oklegislature.gov), current as downloaded 2026-10-08.",
+  "The published schedule has two apparent typographical anomalies, copied as published: $11,300 / 3 children = 1,898 (the $11,250 row is 1,984; the OKDHS Excel calculator's schedule computes 1,988.62) and $14,250 / 3 children = 2,240 (OKDHS Excel: 2,241.25). All other 287 x 6 values match the OKDHS calculator (CSGuidelinesAccessible050125.xlsm) after rounding.",
+  "The first schedule row is printed as '50' (income) in the statute; the OKDHS Excel shows 0 and 600 rows with $50 amounts. Treat any income below $650 as the $50 row."
+ ]
+}

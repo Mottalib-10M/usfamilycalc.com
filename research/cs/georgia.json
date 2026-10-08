@@ -1,0 +1,156 @@
+{
+  "slug": "georgia",
+  "name": "Georgia",
+  "abbr": "GA",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly adjusted gross income table",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income is all income from any source before taxes (salaries, commissions, tips, self-employment income, bonuses, overtime, severance and other items listed in O.C.G.A. § 19-6-15(f)(1)). Adjusted income = monthly gross income minus one-half of self-employment taxes, preexisting child support orders being paid, and a theoretical child support order for other qualified children if allowed by the court (§ 19-6-15(a)(2), (b)(2), (f)(5)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/georgia.json",
+    "columns": "combined monthly adjusted gross income, then basic child support obligation for 1..6 children",
+    "minIncome": 800,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "nearest",
+    "lookupRule": "Locate the figure closest to the parents' combined adjusted gross income; if it falls between amounts shown, the obligation is based on the income bracket most closely matched to the combined adjusted gross income (§ 19-6-15(b)(4)).",
+    "belowMin": {
+      "rule": "The table starts at $800. A parent whose own adjusted income is below the top of the low-income adjustment table (subsection (p)) pays the lesser of the presumptive amount and the low-income table amount (§ 19-6-15(i.1)); at or below $1,500 that amount is 19%/24%/25%/26%/27%/28% of income for 1-6 children.",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "cap",
+      "pct": null,
+      "text": "High-income parents (combined adjusted gross income above $40,000 a month): the court sets the basic obligation at the highest table amount and may consider an upward deviation (§ 19-6-15(i)(2)(A))."
+    },
+    "effective": "2024-07-01",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parenting time adjustment (§ 19-6-15(g)(2)(B), effective 2026-01-01): (i) NCP days^2.5; (ii) CP days^2.5; (iii) (i) x CP's dollar share of the basic obligation; (iv) (ii) x NCP's dollar share; (v) (iii) - (iv); (vi) (v) / ((i) + (ii)); (vii) NCP's basic obligation share + (vi) = NCP's parenting time adjustment. Days = overnights per year averaged over two years, or daytime hours / 24 (§ 19-6-15(a)(17.1)). Low-income adjustment (§ 19-6-15(i.1), (p)): if a parent's adjusted income is below the highest income in the low-income table for the number of children, that parent's obligation is the lesser of the presumptive amount and the table amount.",
+    "params": {
+      "exponent": 2.5,
+      "lowIncomeAtOrBelow": 1500,
+      "lowIncomePctAtOrBelow1500": [
+        19,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "lowIncomeTableFile": "cs-schedules/georgia.json#lowIncomeAdjustmentTable"
+    },
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Since January 1, 2026 every court-ordered parenting time is reflected by a continuous parenting time adjustment raising each parent's days to the power 2.5 (§ 19-6-15(g)); there is no threshold. It applies only to court-ordered parenting time and may reduce the noncustodial parent's share to zero or shift the obligation to the custodial parent when the custodial parent earns more (§ 19-6-15(g)(1)(B)-(C)).",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "children's share of health insurance premiums added to basic obligation and shared by income",
+    "text": "Work-related child care costs and health insurance premiums for the child are added as additional expenses on Schedule D and prorated by each parent's share (§ 19-6-15(h)).",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "Low-income adjustment table (§ 19-6-15(p)), effective January 1, 2026: for a parent's individual monthly adjusted gross income at or below $1,500 the amount is 19% (1 child), 24%, 25%, 26%, 27%, 28% (6 children) of income; from $1,550 the table lists dollar amounts up to $2,450 (1 child), $2,950 (2), $3,350 (3), $3,550 (4), $3,750 (5) and $3,950 (6). The parent pays the lesser of the presumptive amount and the table amount (§ 19-6-15(i.1)).",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "statute": {
+    "cite": "O.C.G.A. § 19-6-15",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "guidelinesUrl": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf",
+  "officialCalculatorUrl": "https://csc.georgiacourts.gov/",
+  "emancipation": {
+    "text": "Support continues until the child reaches majority (18), dies, marries or is emancipated; the court may order support for a child who reached majority while enrolled in and attending secondary school, but not after age 20 (§ 19-6-15(e)).",
+    "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1015.33,
+      "what": "NCP A's pro rata share of the basic obligation before parenting time adjustment and add-ons",
+      "source": "Computed by hand from the § 19-6-15(o) table: $6,000 row, 2 children = $1,523; 1,523 x 4,000/6,000 = 1,015.33."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 80
+      },
+      "expected": 954.3,
+      "what": "monthly support paid by NCP A after the parenting time adjustment (80 days)",
+      "source": "Computed by hand per § 19-6-15(g)(2)(B): adjustment = 1,015.33 + (80^2.5 x 507.67 - 285^2.5 x 1,015.33)/(80^2.5 + 285^2.5) = 61.03; deducted from the NCP share: 1,015.33 - 61.03 = 954.30 (deduction reading, see uncertain)."
+    },
+    {
+      "inputs": {
+        "incomeA": 2000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 522,
+      "what": "monthly support paid by NCP A under the low-income adjustment table (lesser amount)",
+      "source": "Computed by hand: table (o) $4,000 row, 2 children = $1,116 x 50% = 558; low-income table (p) $2,000, 2 children = $522; lesser applies (§ 19-6-15(i.1))."
+    },
+    {
+      "inputs": {
+        "incomeA": 45000,
+        "incomeB": 5000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 2899.8,
+      "what": "NCP A's monthly share above the top of the table (combined $50,000, 1 child)",
+      "source": "Computed by hand per § 19-6-15(i)(2)(A): highest table amount ($40,000 row, 1 child) $3,222 x 45,000/50,000 = 2,899.80 (upward deviation not modeled)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The basic child support obligation table now in force took effect July 1, 2024 (Ga. L. 2024, p. 968, SB 454) and covers $800 to $40,000 of combined monthly adjusted gross income for 1 to 6 children.",
+      "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+    },
+    {
+      "text": "The parenting time adjustment and the low-income adjustment table took effect January 1, 2026 (SB 454, § 2(b)); until then the former low-income and parenting time deviations applied.",
+      "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+    },
+    {
+      "text": "Parents are high-income if combined adjusted gross income exceeds $40,000 a month; the table maximum applies and the court may deviate upward (§ 19-6-15(i)(2)(A)).",
+      "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+    },
+    {
+      "text": "A parent may not petition to modify within two years of a final order on his or her previous modification petition, except for parenting time not exercised or exceeded, or an involuntary loss of income (§ 19-6-15(k)(2)).",
+      "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+    },
+    {
+      "text": "An involuntary loss of income of 25% or more stops the corresponding support from accruing from service of a modification petition (§ 19-6-15(j)(1)).",
+      "url": "https://csc.georgiacourts.gov/wp-content/uploads/2026/01/O.C.G.A.-_-19-6-15_01.01.2026.pdf"
+    }
+  ],
+  "uncertain": [
+    "csc.georgiacourts.gov returned HTTP 403 from this location; the official Commission PDF of § 19-6-15 (version effective 2026-01-01, current through the 2025 Regular Session) was read from the Internet Archive snapshot of 2026-02-03 of that URL.",
+    "§ 19-6-15(g)(2)(B)(viii) calls the result of step (vii) the NCP's 'parenting time adjustment'; the statute does not say in (g) how it is then applied on Schedule C. Read consistently with (g)(1)(B) (adjustment can bring the NCP share to zero), the NCP's adjusted share = NCP share - adjustment; Schedule C itself was not read.",
+    "Combined income below the first table row ($800) is not covered by the table text; such cases fall under the low-income adjustment table.",
+    "Official online calculator lives on the Commission site, which could not be opened from this location.",
+    "Low-income adjustment table (p): the statute gives no rule for incomes between two $50 rows; the calculator uses the closest row, as § 19-6-15(b)(4) does for the basic table, and the percentage rule only at or below $1,500 (an income between $1,500 and $1,550 uses the $1,550 row)."
+  ]
+}

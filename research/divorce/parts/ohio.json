@@ -1,0 +1,23 @@
+{
+  "slug": "ohio", "name": "Ohio", "abbr": "OH",
+  "filingFee": 275, "responseFee": 43,
+  "feeScope": "county (Franklin County)",
+  "feeText": "Franklin County Court of Common Pleas, Division of Domestic Relations, Local Rule 2 (Security for costs), effective 10/27/2025: deposit of $275.00 to institute a divorce, $225.00 for a dissolution, $200.00 for legal separation or annulment; $43.00 deposit by a party instituting a counterclaim.",
+  "feeUrl": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs",
+  "otherFees": [
+    { "what": "Petition for dissolution, security for costs (Franklin County Local Rule 2)", "amount": 225, "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs" },
+    { "what": "Personal service within Franklin County (Local Rule 2)", "amount": 30, "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs" },
+    { "what": "Post-judgment motion to modify, vacate or enforce (Local Rule 2)", "amount": 175, "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs" }
+  ],
+  "waiver": { "name": "Affidavit of Indigency (Franklin County Domestic Relations form E5145-4800, 02-2025)", "url": "https://drj.fccourts.org/files/assets/courtofpleas/v/1/court-services/documents/forms/affidavit-of-indigency_e5145-4800_02-2025.pdf" },
+  "residency": { "text": "The plaintiff in an action for divorce or annulment must have been a resident of Ohio for at least six months immediately before filing the complaint (R.C. 3105.03).", "url": "https://codes.ohio.gov/ohio-revised-code/section-3105.03" },
+  "waitingPeriod": { "days": 42, "text": "No action for divorce may be heard and decided until 42 days after service of process, or 28 days after the last publication of notice (Ohio Civ.R. 75(K)). In a dissolution, both spouses must appear before the court not less than 30 nor more than 90 days after the petition is filed (R.C. 3105.64(A)).", "url": "https://www.supremecourt.ohio.gov/docs/LegalResources/Rules/civil/CivilProcedure.pdf" },
+  "simplified": { "text": "Dissolution of marriage: a joint petition with a signed separation agreement; both spouses appear and acknowledge the agreement under oath 30 to 90 days after filing (R.C. 3105.61 to 3105.64).", "url": "https://codes.ohio.gov/ohio-revised-code/section-3105.64" },
+  "parentingClass": { "required": true, "text": "Franklin County: all parents in divorce, legal separation or dissolution actions with minor children must attend the seminar for separating parents within 45 days before or after filing or service; completion is required before the final hearing unless waived for good cause (Franklin County Dom. Rel. Local Rule 26). Requirement is set by local rule and varies by county.", "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/26-Seminar-for-separating-parents" },
+  "uncertain": [
+    "Franklin County chosen as the most populous Ohio county (it overtook Cuyahoga in Census estimates); verify if the site prefers Cuyahoga.",
+    "Franklin County amounts are deposits (security for costs) under Local Rule 2, not final costs; final court costs may differ.",
+    "codes.ohio.gov and supremecourt.ohio.gov refused connections on 2026-10-08; R.C. 3105.03, 3105.64 and Civ.R. 75(K) were read from Internet Archive 2026 copies of the official URLs. The Franklin County rules were read with WebFetch on drj.fccourts.org.",
+    "responseFee 43 is the deposit for a counterclaim; a plain answer has no deposit listed in Local Rule 2."
+  ]
+}

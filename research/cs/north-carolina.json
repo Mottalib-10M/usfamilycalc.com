@@ -1,0 +1,148 @@
+{
+  "slug": "north-carolina",
+  "name": "North Carolina",
+  "abbr": "NC",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly adjusted gross income schedule",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income from any source (wages, self-employment net of ordinary and necessary expenses, rent, pensions, interest, capital gains, Social Security, workers' comp, unemployment, disability, gifts, prizes, alimony from third parties); excludes means-tested assistance (TANF, SSI, food benefits), adoption assistance and child support received for other children. Adjusted gross income = gross income minus child support actually paid for other children and minus the parent's basic obligation (schedule amount on own income) for other natural or adopted children living with the parent. Alimony paid is not deducted (NC Child Support Guidelines eff. 2023-01-01, 'Income' and 'Existing Support Obligations').",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/north-carolina.json",
+    "columns": "combined monthly adjusted gross income, then basic obligation for 1..6 children",
+    "minIncome": 1300,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "interpolate",
+    "lookupRule": "For combined monthly adjusted gross income amounts falling between amounts shown in the schedule, the basic child support obligation should be interpolated (Guidelines, 'Basic Child Support Obligation'). The first row is printed '0 - 1300' ($50 for 1-6 children).",
+    "belowMin": {
+      "rule": "Obligors with adjusted gross income below $1,150 a month get a minimum order of $50 absent deviation; the first schedule row (0-1,300) is $50 for any number of children. In the shaded (self-support) area of the schedule, Worksheet A uses the obligor's income alone and child care and health premiums are not added.",
+      "amounts": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "If combined adjusted gross income is more than $40,000 a month ($480,000 a year), support is set case by case under the first sentence of G.S. 50-13.4(c) to meet the child's reasonable needs; the schedule may help determine a minimum level."
+    },
+    "effective": "2023-01-01",
+    "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 123,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Worksheet B applies when the child lives with each parent at least 123 nights a year and each parent assumes financial responsibility during that time. The combined basic obligation is multiplied by 1.5, allocated by income share, and each parent's share is multiplied by the percentage of overnights the children spend with the other parent; the parent with the higher obligation pays the difference. The self-support reserve (shaded area) is not applied on Worksheet B (Guidelines, 'Child Support Worksheets').",
+    "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "premium attributable to the children added to basic obligation and shared by income",
+    "text": "Work-related or job-search child care and the children's health (medical, dental, vision) insurance premium are added and prorated by income; the schedule already includes $250 per child per year of uninsured medical/dental costs; other extraordinary expenses (special schooling, transportation between homes) may be added (Guidelines, 'Child Care Costs', 'Health Insurance and Health Care Costs', 'Other Extraordinary Expenses').",
+    "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1133,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "The self-support reserve is based on the 2022 federal poverty level for one person ($1,133 a month). Obligors with adjusted gross income under $1,150 get a $50 minimum order absent deviation; above $1,150 the shaded area of the schedule embeds the reserve and, on Worksheet A, the obligation is computed on the obligor's income only (Guidelines, 'Self-Support Reserve; Supporting Parents With Low Incomes').",
+    "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+  },
+  "statute": {
+    "cite": "N.C. Gen. Stat. § 50-13.4(c), (c1); North Carolina Child Support Guidelines (AOC-A-162, Rev. 1/23)",
+    "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-13.4.html"
+  },
+  "guidelinesUrl": "https://www.ncdhhs.gov/css2255a1/download?attachment",
+  "officialCalculatorUrl": "https://ncchildsupport.ncdhhs.gov/ecoa/cseGuideLines.htm",
+  "emancipation": {
+    "text": "Support ends at 18, or earlier emancipation; if the child is still in primary or secondary school at 18, support continues until graduation, stopping regular attendance or satisfactory progress, or age 20, whichever comes first (G.S. 50-13.4(c)).",
+    "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-13.4.html"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1016.0,
+      "what": "payer A's monthly share of the basic obligation, Worksheet A, no add-ons",
+      "source": "Computed by hand from the 2023 schedule: $6,000 row, 2 children = $1,524; 1,524 x 4,000/6,000 = 1,016.00. No official worked example in the guidelines."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 143,
+        "overnightsB": 222
+      },
+      "expected": 628.39,
+      "what": "net monthly support paid by A on Worksheet B, no add-ons",
+      "source": "Computed by hand per Worksheet B rule: 1,524 x 1.5 = 2,286; A share 1,524 x 222/365 = 926.93; B share 762 x 143/365 = 298.54; net 628.39 (rounding convention of the official worksheet not verified)."
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 50,
+      "what": "monthly support paid by A whose adjusted gross income is under $1,150 (minimum order)",
+      "source": "Guidelines eff. 2023-01-01, 'Self-Support Reserve': obligors under $1,150 -> $50 minimum order absent deviation."
+    },
+    {
+      "inputs": {
+        "incomeA": 2000,
+        "incomeB": 2700,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 522,
+      "what": "monthly support paid by A whose income falls in the shaded area (obligation on A's income alone, no add-ons)",
+      "source": "Computed by hand: A's $2,000 is in the shaded area for 2 children (shaded through $2,150 in the NC DHHS HTML schedule); schedule at $2,000, 2 children = $522 (Guidelines, 'Self-Support Reserve'). Combined-income Worksheet A would give 1,283 x 2,000/4,700 = 545.96."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The current guidelines took effect January 1, 2023 and apply to actions heard on or after that date; the next quadrennial review by the Conference of Chief District Judges is during 2026.",
+      "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+    },
+    {
+      "text": "Shared custody (Worksheet B) requires at least 123 overnights a year with each parent and multiplies the basic obligation by 1.5.",
+      "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+    },
+    {
+      "text": "Primary custody (Worksheet A) means the child lives with one parent 243 nights or more a year.",
+      "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+    },
+    {
+      "text": "For an order at least three years old, a 15% difference between the current order and the guideline amount is presumed a substantial change of circumstances.",
+      "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+    },
+    {
+      "text": "Health insurance is reasonable in cost if the child's coverage does not exceed 5% of the parent's gross income (G.S. 50-13.11(a1), cited in the guidelines).",
+      "url": "https://www.ncdhhs.gov/css2255a1/download?attachment"
+    }
+  ],
+  "uncertain": [
+    "The guidelines PDF was read from NC DHHS Child Support Services (ncdhhs.gov), which republishes AOC-A-162 Rev. 1/23; nccourts.gov and ncleg.gov returned HTTP 403 (Cloudflare block) from this location. G.S. 50-13.4(c) was read from the Internet Archive copy (2025-06-24) of the ncleg.gov page.",
+    "2026 guidelines not published as of 2026-10-08 (review under way in 2026); latest official = 2023-01-01.",
+    "The guidelines text says obligors under $1,150 get the $50 minimum, while the first schedule row covers 0-1,300 at $50; both are copied as published.",
+    "Shaded (self-support) cells are not in the PDF text layer; they were read from the official NC DHHS HTML schedule (https://ncchildsupport.ncdhhs.gov/ecoa/getGuideLinesTable.htm, bgcolor #CCCCCC), whose values were checked identical to the PDF. Shaded through combined income $1,750 / $2,150 / $2,500 / $2,800 / $3,100 / $3,450 for 1-6 children (cs-schedules/north-carolina.json shadedThroughIncome).",
+    "Calculator: in the shaded area the obligation is the schedule amount at the obligor's own income (Worksheet A only); child care and premiums are left out there, as the guidelines say."
+  ]
+}

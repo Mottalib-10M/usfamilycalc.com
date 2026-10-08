@@ -1,0 +1,161 @@
+{
+ "slug": "oregon",
+ "name": "Oregon",
+ "abbr": "OR",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined adjusted gross income scale (OAR 137-050-0725)",
+ "incomeBasis": "adjusted-gross",
+ "incomeDefinition": "Income is actual or potential gross income from any source (OAR 137-050-0715). Adjusted income = income minus mandatory union dues, the parent's own health insurance cost, spousal support paid, plus spousal support received, minus the non-joint child deduction (OAR 137-050-0720(1)).",
+ "period": "monthly",
+ "maxChildren": 10,
+ "schedule": {
+  "file": "cs-schedules/oregon.json",
+  "columns": "income bracket from, to, then basic support obligation for 1..10 children",
+  "minIncome": 0,
+  "maxIncome": 30000,
+  "step": 50,
+  "lookup": "bracket",
+  "lookupRule": "When the combined income falls between two income amounts on the scale, use the lower income amount on the scale (OAR 137-050-0725(5)); the scale is printed as $50 brackets (e.g. 1001 - 1050).",
+  "belowMin": {
+   "rule": "The first row covers combined adjusted income of $0 - $1,000 ($50 for any number of children); the low-income rows are shaded as adjusted for the self-support reserve built into the 2007 scale. Each parent's obligation is also capped at income available after the $1,729 self-support reserve (OAR 137-050-0745) and a $100 minimum order is presumed (OAR 137-050-0755).",
+   "amounts": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ]
+  },
+  "aboveMax": {
+   "method": "cap",
+   "pct": null,
+   "text": "If combined adjusted gross income is more than $30,000 per month, the basic obligation is the same as for $30,000 (OAR 137-050-0725(3)); the result may be rebutted under OAR 137-050-0760. More than ten children = same as ten (OAR 137-050-0725(4))."
+  },
+  "effective": "2013-07-01",
+  "url": "https://justice.oregon.gov/child-support/pdf/guidelines_scale.pdf"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Engine parameters read in OAR 137-050-0730(6) (parenting time credit formula), 137-050-0745 (self-support reserve) and 137-050-0755 (minimum order).",
+  "params": {
+   "ptcSlope": 7.14,
+   "ptcOffsetPct": 2.74,
+   "selfSupportReserve": 1729,
+   "minimumOrder": 100,
+   "minimumOrderExemptEqualOvernights": 182.5
+  },
+  "url": "https://justice.oregon.gov/child-support/pdf/137-050-0730.pdf"
+ },
+ "shared": {
+  "method": "other",
+  "thresholdOvernights": null,
+  "multiplier": null,
+  "reductionTable": null,
+  "creditFormula": "credit% = 1/(1+e^(-7.14*((overnights/365)-0.5))) - 2.74% + (2*2.74%*(overnights/365))",
+  "text": "Every parent with parenting time gets a parenting time credit from the first overnight: credit % = 1/(1+e^(-7.14*((overnights/365)-0.5))) - 2.74% + 2*2.74%*(overnights/365); the precise formula is preferred, a rounded table by overnights may be used (OAR 137-050-0730(6)). Credit = minor children's portion of the combined basic obligation x the parent's credit % (OAR 137-050-0730(7)); only the parent with the greater net obligation pays (OAR 137-050-0710(1)(i)). Overnights are averaged over two consecutive years; 12 continuous hours may count as one day (OAR 137-050-0730(2)).",
+  "url": "https://justice.oregon.gov/child-support/pdf/137-050-0730.pdf",
+  "creditTableFile": "cs-schedules/oregon.json#parentingTimeCredit"
+ },
+ "addOns": {
+  "childcare": "Allowed work-related child care costs for a child under 13 or disabled, capped by OAR 137-050-0735 Table 1 (e.g. $1,705 per child per month newborn to 3 in the Portland/Bend/Eugene... metro areas), shared by income percentage (OAR 137-050-0735(5)).",
+  "healthInsurance": "Health care coverage is reasonable in cost up to 4% of each parent's adjusted income (OAR 137-050-0750(5)); the cost ordered is shared by each parent's share of the combined reasonable-in-cost limit (OAR 137-050-0750(14)).",
+  "text": "Child care is added to each parent's obligation and the paying parent is credited (OAR 137-050-0710(1)(e),(h); 137-050-0735). Health coverage costs are added and credited the same way (OAR 137-050-0750).",
+  "url": "https://justice.oregon.gov/child-support/pdf/137-050-0735.pdf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": 1729,
+  "period": "monthly",
+  "minimumOrder": 100,
+  "rule": "Subtract a self-support reserve of $1,729 from each parent's adjusted income; total obligation may not exceed the available income (OAR 137-050-0745(2)-(3), effective July 1, 2026; reserve = federal poverty guideline for one person x 1.303, updated annually). A parent is presumed able to pay at least $100 per month (OAR 137-050-0755(1)), except e.g. exactly 182.5 overnights each, disability benefits as sole income, incarceration, public benefits (OAR 137-050-0755(2)).",
+  "url": "https://justice.oregon.gov/child-support/pdf/137-050-0745.pdf"
+ },
+ "statute": {
+  "cite": "ORS 25.270 to 25.290; OAR 137-050-0700 to 137-050-0765",
+  "url": "https://www.doj.state.or.us/child-support/calculators-laws/child-support-laws-and-rules/child-support-guideline-rules-137-050/"
+ },
+ "guidelinesUrl": "https://www.doj.state.or.us/child-support/calculators-laws/child-support-laws-and-rules/child-support-guideline-rules-137-050/",
+ "officialCalculatorUrl": "https://justice.oregon.gov/guidelines/",
+ "emancipation": {
+  "text": "Support runs to 18; a child at least 18 and under 21 attending school may continue to receive support under ORS 107.108 if the order contains child attending school language (Oregon DOJ Child Support Program, ORS 107.108, OAR 137-055-5110).",
+  "url": "https://www.doj.state.or.us/child-support/services/support-for-students-under-21/"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 823,
+   "what": "payer A's monthly cash child support (basic only, no child care / health costs)",
+   "source": "Computed by hand from the official scale: combined $6,000 -> row 5951-6000, 2 children = $1,234; A share 4000/6000 = 66.67% -> $822.67; A has no parenting time credit; A available income 4000-1729 = 2271 not binding; rounded to nearest dollar (OAR 137-050-0710(1)(L))."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 104
+   },
+   "expected": 619,
+   "what": "payer A's monthly cash child support with 104 overnights",
+   "source": "Computed by hand: $822.67 minus credit 1234 x 16.539% (formula of OAR 137-050-0730(6); table value 16.54%) = $204.09 -> $618.58, rounded $619. B's net obligation is negative so only A pays (OAR 137-050-0710(1)(i))."
+  },
+  {
+   "inputs": {
+    "incomeA": 2000,
+    "incomeB": 4000,
+    "children": 1,
+    "overnightsA": 0
+   },
+   "expected": 271,
+   "what": "payer A's monthly support capped by the self-support reserve",
+   "source": "Computed by hand: combined $6,000 -> bracket 5951-6000, 1 child $858; A share 1/3 = $286; A's income available above the $1,729 reserve = $271 (OAR 137-050-0745), so $271."
+  },
+  {
+   "inputs": {
+    "incomeA": 1800,
+    "incomeB": 5000,
+    "children": 1,
+    "overnightsA": 0
+   },
+   "expected": 100,
+   "what": "payer A's monthly support raised to the minimum order",
+   "source": "Computed by hand: combined $6,800 -> bracket 6751-6800, 1 child $891; A share 26.47% = $235.85, capped at $1,800 - $1,729 = $71; below $100, so the presumed $100 minimum applies (OAR 137-050-0755(1))."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Oregon's scale is based on gross (not net) income: it was built from net-income data converted to gross, assuming the obligated parent claims two exemptions (OAR 137-050-0725 commentary).",
+   "url": "https://justice.oregon.gov/child-support/pdf/137-050-0725.pdf"
+  },
+  {
+   "text": "The scale goes up to ten children: it adds 5.6% for the seventh child, 4.2% for the eighth, 2.8% for the ninth and 1.4% for the tenth, and nothing beyond (OAR 137-050-0725 commentary).",
+   "url": "https://justice.oregon.gov/child-support/pdf/137-050-0725.pdf"
+  },
+  {
+   "text": "The parenting time credit is a continuous logistic formula, so even one overnight a year reduces support (0.07% credit), with no threshold (OAR 137-050-0730(6)).",
+   "url": "https://justice.oregon.gov/child-support/pdf/137-050-0730.pdf"
+  },
+  {
+   "text": "The self-support reserve is tied to the federal poverty guideline x 1.303 and was set at $1,729 per month effective July 1, 2026 (OAR 137-050-0745(2),(5)).",
+   "url": "https://justice.oregon.gov/child-support/pdf/137-050-0745.pdf"
+  },
+  {
+   "text": "The Child Support Program must review the guidelines every four years (ORS 25.270, 45 CFR 302.56, per OAR 137-050-0725 commentary).",
+   "url": "https://justice.oregon.gov/child-support/pdf/137-050-0725.pdf"
+  }
+ ],
+ "uncertain": [
+  "The scale PDF (form CSF 02 0809F Rev. 02/09/07) and OAR 137-050-0725 (effective July 1, 2013) are the current versions linked from the Oregon DOJ 137-050 rules page as of 2026-10-08; the Secretary of State OARD copy was not readable by script, so the DOJ (agency) copies were used.",
+  "Shaded low-income rows of the 2007 scale embed an older self-support adjustment; the current rules additionally apply the $1,729 reserve per parent (OAR 137-050-0745).",
+  "ORS 107.108 text itself could not be fetched (oregonlegislature.gov refused connections); emancipation text is from the DOJ Child Support Program page citing ORS 107.108."
+ ]
+}

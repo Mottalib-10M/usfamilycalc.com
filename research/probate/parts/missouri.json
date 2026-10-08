@@ -1,0 +1,44 @@
+{
+ "slug": "missouri",
+ "name": "Missouri",
+ "abbr": "MO",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Claims are barred unless filed within 6 months after the first published notice of letters, or 2 months after notice mailed or served on the creditor if later (RSMo § 473.360); all claims are barred 1 year after death whether or not administration is opened (RSMo § 473.444).",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.360"
+ },
+ "earliestClose": {
+  "text": "An independent personal representative may complete administration and be discharged after 6 months and 10 days from the first published notice of letters, by statement of account (RSMo § 473.840); supervised estates close by final settlement after 29 days' published notice (RSMo § 473.587).",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.840"
+ },
+ "smallEstate": {
+  "limit": 40000,
+  "effective": "2002-08-28",
+  "text": "Small estate affidavit 30 days after death when the entire estate, less liens, debts and encumbrances, does not exceed $40,000 and no letters are pending; a bond is required unless dispensed with, and the court fee and notice to creditors costs are paid (RSMo § 473.097, as amended by 2002 H.B. 1537). Not indexed.",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.097"
+ },
+ "simplified": {
+  "text": "Small estate affidavit procedure for estates up to $40,000 net (RSMo § 473.097); independent administration without court supervision with discharge by statement of account (RSMo § 473.840).",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.097"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate court costs are charged in amounts determined under RSMo §§ 488.010 to 488.020 (RSMo § 483.580); the dollar amounts are in the Missouri courts' court cost tables, not read.",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=483.580"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Minimum compensation of a sole personal representative on personal property administered and proceeds of real property sold under court order: 5% of the first $5,000, 4% of the next $20,000, 3% of the next $75,000, 2.75% of the next $300,000, 2.5% of the next $600,000, 2% above $1,000,000; the court allows more if reasonable (RSMo § 473.153(1)).",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.153"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "Attorneys for the estate receive as a minimum the same percentages as the personal representative schedule, with additional reasonable compensation allowed by the court (RSMo § 473.153(3)).",
+  "url": "https://revisor.mo.gov/main/OneSection.aspx?section=473.153"
+ },
+ "uncertain": [
+  "Missouri probate filing fee amount not verified (set by court cost tables under RSMo §§ 488.010-488.020)."
+ ]
+}

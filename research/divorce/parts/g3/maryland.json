@@ -1,0 +1,19 @@
+{
+  "slug": "maryland", "name": "Maryland", "abbr": "MD",
+  "filingFee": 165, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Circuit court fee for a complaint for limited or absolute divorce, $165 (Summary of Charges, Costs, and Fees of the Clerks of the Circuit Court, effective September 2, 2026; Schedule II A 1 (A); Cts. & Jud. Proc. § 7-202(e)).",
+  "feeUrl": "https://mdcourts.gov/sites/default/files/import/circuit/feesummaryschedule.pdf",
+  "otherFees": [],
+  "waiver": { "name": "Request for Waiver of Costs (CC-DC-089), filed with a Notice Regarding Restricted Information (MDJ-008)", "url": "https://mdcourts.gov/legalhelp/filingfeewaivers" },
+  "residency": { "text": "If the grounds for divorce occurred outside Maryland, one of the parties must have resided in Maryland for at least 6 months before filing; no minimum period is set when the grounds occurred in Maryland (Fam. Law § 7-101).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-101&enactments=false" },
+  "waitingPeriod": { "days": 0, "text": "No waiting period after filing. Grounds for absolute divorce are a 6-month separation before filing, irreconcilable differences, or mutual consent with a signed settlement agreement (Fam. Law § 7-103(a)).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false" },
+  "separationRequiredDays": null,
+  "simplified": { "text": "Mutual consent divorce: available when the parties sign and submit a written settlement agreement resolving alimony, property and all child issues (with a child support guidelines worksheet if support is paid), neither party moves to set it aside before the hearing, and the court finds the child terms are in the children's best interests (Fam. Law § 7-103(a)(3)).", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false" },
+  "parentingClass": { "required": null, "text": "Not verified: Maryland Rule 9-204 (educational seminars in custody cases) could not be read on an official site.", "url": null },
+  "uncertain": [
+    "Response fee: the circuit court fee summary sends appearance fees to 'contact county or see CJ § 7-204'; no statewide answer fee for a self-represented defendant was confirmed, so responseFee is null.",
+    "Parenting class: Md. Rule 9-204 not read (the official Maryland Rules are hosted on Westlaw's government site and were not retrieved).",
+    "separationRequiredDays left null: the 6-month separation is only one of three grounds (§ 7-103(a)(1))."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "slug": "alabama",
+ "name": "Alabama",
+ "abbr": "AL",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Claims must be filed in the probate office within 6 months after the grant of letters or 5 months after the first publication of notice, whichever is later; creditors entitled to actual notice have 30 days after notice; unfiled claims are forever barred (Ala. Code § 43-2-350).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-350"
+ },
+ "earliestClose": {
+  "text": "No specific minimum is stated; distribution and final settlement follow the 6-month claims period of Ala. Code § 43-2-350, and executors must make annual settlements meanwhile (Ala. Code § 43-2-500).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-350"
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": "Summary distribution without a personal representative by verified petition to the probate judge for a 'small estate' (personal property only, decedent owning no real property) whose value does not exceed the small estate amount, defined as the sum of the homestead allowance, exempt property and family allowance as adjusted every 3 years for inflation by the State Treasurer (Ala. Code §§ 43-2-691, 43-2-692, 43-8-116; Revised Alabama Small Estates Act, Act 2025-431).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-691"
+ },
+ "simplified": {
+  "text": "Summary distribution of a small estate by petition to the judge of probate, with one published notice and notice to the Alabama Medicaid Agency (Ala. Code § 43-2-692, as revised by Act 2025-431).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-692"
+ },
+ "filingFee": {
+  "amount": 45,
+  "scope": "statewide",
+  "text": "Judge of probate statutory fee of $45.00 for probate of a will (up to 5 pages, with 3 certified copies of letters and final settlement up to 10 pages) or grant of letters of administration (Ala. Code § 12-19-90(a)(1),(2)); counties may add other fees.",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-90"
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Reasonable compensation fixed by the court considering listed factors, not exceeding 2.5% of the value of all property received and under the personal representative's control plus 2.5% of all disbursements; extra for extraordinary services (Ala. Code § 43-2-848).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-848"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule: the court fixes and allows the attorney's fee or compensation paid from the estate at each annual, partial or final settlement (Ala. Code § 43-2-682).",
+  "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-682"
+ },
+ "uncertain": [
+  "Alabama sections were read through the official ALISON GraphQL endpoint behind alison.legislature.state.al.us (script research/scripts/probate_alabama.py).",
+  "The current small estate dollar amount (CPI-adjusted by the State Treasurer under Ala. Code § 43-8-116) was not found on an official page; smallEstate.limit = null.",
+  "Alabama's 2.5% + 2.5% is a cap on reasonable compensation, not a fixed schedule, so no fee file was written."
+ ]
+}

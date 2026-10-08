@@ -1,0 +1,22 @@
+{
+  "slug": "west-virginia", "name": "West Virginia", "abbr": "WV",
+  "filingFee": 135, "responseFee": 0,
+  "feeScope": "statewide",
+  "feeText": "Clerk of the circuit court fee for instituting an action for divorce, separate maintenance or annulment: $135 (W. Va. Code § 59-1-11(a)(3)).",
+  "feeUrl": "https://code.wvlegislature.gov/59-1-11/",
+  "otherFees": [
+    { "what": "Petition to modify an order on custody, visitation, child support or spousal support (§ 59-1-11(a)(4))", "amount": 85, "url": "https://code.wvlegislature.gov/59-1-11/" },
+    { "what": "Expedited modification of a child support order (§ 59-1-11(a)(5))", "amount": 35, "url": "https://code.wvlegislature.gov/59-1-11/" },
+    { "what": "Parent education class fee, waived if indigent (§ 48-9-104(c)), maximum", "amount": 25, "url": "https://code.wvlegislature.gov/48-9-104/" }
+  ],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "If married in West Virginia, one party must be a bona fide resident when the action is filed (no minimum duration); if married elsewhere, one party must have been a resident for the one year before filing (W. Va. Code § 48-5-105(a)).", "url": "https://code.wvlegislature.gov/48-5-105/" },
+  "waitingPeriod": { "days": null, "text": null, "url": null },
+  "simplified": { "text": "Irreconcilable differences: divorce may be ordered when the complaint alleges irreconcilable differences and an answer admits it, without corroboration (W. Va. Code § 48-5-201). Alternatively, one year of living separate and apart is a ground (§ 48-5-202).", "url": "https://code.wvlegislature.gov/48-5-201/" },
+  "parentingClass": { "required": true, "text": "In a divorce involving a minor child the family court shall order the parties to attend parent education classes unless it finds attendance not appropriate or necessary; fee up to $25, waived for indigent parties (W. Va. Code § 48-9-104(b)-(c)).", "url": "https://code.wvlegislature.gov/48-9-104/" },
+  "uncertain": [
+    "responseFee 0: § 59-1-11(a)(6) imposes a $200 fee on pleadings with a counterclaim but states it does not apply in family court cases; no answer fee is listed.",
+    "Waiting period not found in W. Va. Code ch. 48 art. 5 sections read (48-5-104 to 106, 201 to 203, 301); any minimum time is set by the Rules of Practice and Procedure for Family Court, not verified. days = null.",
+    "Fee waiver form (courtswv.gov) not verified."
+  ]
+}

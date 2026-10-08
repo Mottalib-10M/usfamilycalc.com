@@ -1,0 +1,46 @@
+{
+ "slug": "california",
+ "name": "California",
+ "abbr": "CA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "A creditor must file a claim before the later of 4 months after letters are first issued to a general personal representative or 60 days after notice of administration is mailed or delivered to the creditor (Prob. Code § 9100); this does not extend the 1-year limit of Code Civ. Proc. § 366.2.",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=9100"
+ },
+ "earliestClose": {
+  "text": "No final distribution before the 4-month creditor claim period of Prob. Code § 9100 has run; the inventory and appraisal is due within 4 months after letters (Prob. Code § 8800).",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=8800"
+ },
+ "smallEstate": {
+  "limit": 208850,
+  "effective": "2025-04-01",
+  "text": "Affidavit collection of personal property without probate if the gross value of the decedent's California real and personal property (excluding property described in § 13050, such as joint tenancy, trust and spousal property, and property in a § 13151 petition) does not exceed $208,850 for deaths on or after April 1, 2025 ($184,500 for deaths April 1, 2022 to March 31, 2025), and 40 days have elapsed since death (Prob. Code §§ 13100, 13101). The amount is adjusted every 3 years by the Judicial Council (Prob. Code § 890); next adjustment April 1, 2028 (form DE-300).",
+  "url": "https://www.courts.ca.gov/documents/de300.pdf"
+ },
+ "simplified": {
+  "text": "For deaths on or after April 1, 2025: court order determining succession to a primary residence worth up to $750,000 (Prob. Code § 13151); affidavit for real property of small value up to $69,625 (Prob. Code § 13200); small estate set-aside for spouse and minor children up to $107,900 net (Prob. Code §§ 6602, 6609); otherwise full probate, often with independent administration (Prob. Code § 10400 et seq.). Amounts from Judicial Council form DE-300 (rev. April 28, 2025).",
+  "url": "https://www.courts.ca.gov/documents/de300.pdf"
+ },
+ "filingFee": {
+  "amount": 435,
+  "scope": "statewide",
+  "text": "First-filed petition for letters of administration or letters testamentary: $435 (Gov. Code § 70650(a)), Statewide Civil Fee Schedule effective January 1, 2026, row 124; some counties add local surcharges (asterisk in schedule).",
+  "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Statutory compensation for ordinary services based on the estate accounted for (inventory value plus gains on sales plus receipts, less losses, without deducting encumbrances): 4% of the first $100,000, 3% of the next $100,000, 2% of the next $800,000, 1% of the next $9,000,000, 0.5% of the next $15,000,000, and a reasonable amount set by the court above $25,000,000 (Prob. Code § 10800).",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=10800"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "The attorney for the personal representative receives the same statutory percentages as the personal representative for ordinary services: 4% / 3% / 2% / 1% / 0.5%, court-set above $25,000,000 (Prob. Code § 10810).",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=10810"
+ },
+ "uncertain": [
+  "leginfo.legislature.ca.gov returns 403 to automated clients: Prob. Code §§ 890, 8800, 9100, 10800, 10810, 13050, 13100, 13151 were read from the Internet Archive copy of the official leginfo URL (web.archive.org/web/2026/...).",
+  "Filing fee read from the Judicial Council Statewide Civil Fee Schedule effective January 1, 2026 as hosted by the Superior Court of Ventura County (courts.ca.gov copy blocked 403); Gov. Code § 70650 itself not readable (403, no archive copy).",
+  "earliestClose: the 1-year deadline to petition for final distribution or report status (Prob. Code § 12200) could not be read (403, no archive copy), so it is not stated."
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "utah",
+  "name": "Utah",
+  "abbr": "UT",
+  "verified": "2026-10-08",
+  "scope": "Alimony under Utah Code Title 81, Chapter 4, Part 5 (recodified from former § 30-3-5, effective 9/1/2024). No amount formula.",
+  "formula": {
+    "text": "No amount formula; Utah Code § 81-4-502 lists factors (payee's financial condition and needs, earning capacity, payor's ability to pay, tax consequences, length of marriage, custody of minor children, work in the payor's business, contributions to the payor's skills).",
+    "params": {},
+    "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+  },
+  "duration": {
+    "text": "Utah Code § 81-4-502(7): except for extenuating circumstances or good cause found before alimony ends, the court may not order alimony for longer than the length of the marriage; temporary alimony paid during the case counts toward that period. § 81-4-502(8): for parties who remarry each other, the two marriages are aggregated if the later divorce petition is filed on or after January 1, 2026.",
+    "table": [
+      {
+        "rule": "max duration = length of the marriage",
+        "maxPctOfMarriageLength": 100
+      }
+    ],
+    "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+  },
+  "eligibility": {
+    "text": "Factors of Utah Code § 81-4-502; alimony terminates on the payee's remarriage or death and the court may not order (and shall terminate) alimony if the payee cohabits (§ 81-4-505).",
+    "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+  },
+  "taxNote": {
+    "text": "Federal: for divorce or separation agreements executed after 2018 (or older ones modified to adopt the new rule), the payer cannot deduct alimony and the recipient does not include it in gross income (IRS Topic No. 452).",
+    "url": "https://www.irs.gov/taxtopics/tc452"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "payer": 6000,
+        "payee": 2000,
+        "years": 7,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 0,
+        "durationMonths": 84
+      },
+      "what": "no amount formula; 7-year marriage: alimony at most 84 months",
+      "source": "computed by hand from Utah Code § 81-4-502(7)(a)"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Months of temporary alimony paid during the divorce count toward the length-of-marriage limit (Utah Code § 81-4-502(7)(b)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+    },
+    {
+      "text": "A payor must seek termination for cohabitation within one year of when he or she knew or should have known of it (§ 81-4-505(2)(b)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+    },
+    {
+      "text": "Retirement of a party is a substantial material change allowing a petition to modify alimony unless the decree says otherwise (§ 81-4-504(2)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/81-4-P5.html"
+    }
+  ],
+  "uncertain": [
+    "Text read from the Part 5 PDF download (C81-4-P5_2024090120240501.pdf) which already includes 2026 General Session amendments (ch. 249); subsection numbering should be re-checked on the section pages before publishing."
+  ],
+  "incomeBasis": "gross"
+}

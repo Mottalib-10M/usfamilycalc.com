@@ -1,0 +1,232 @@
+{
+ "slug": "wyoming",
+ "source": "https://wyoleg.gov/statutes/compress/title20.pdf",
+ "edition": "Wyoming Statutes Title 20 compiled PDF (file dated 2026-05-08), W.S. 20-2-304(a)",
+ "period": "monthly",
+ "model": "bands-combined",
+ "columns": "for each number of children (5 = five or more): band start (combined net monthly income), percentage of income allocated at the band start, base support, marginal percentage applied to income over the band start",
+ "rule": "total obligation = base + marginalPct% x (combined net monthly income - from), using the highest band whose 'from' does not exceed the income; the last band (from 15,000) applies to anything over $15,000",
+ "belowFirstBand": "The statute's first line starts at $1,000.00 with base $230.00 (1 child) = 23.0% of $1,000; it gives no line below $1,000.",
+ "bands": {
+  "1": [
+   {
+    "from": 1000.0,
+    "pctOfIncomeAtFrom": 23.0,
+    "base": 230.0,
+    "marginalPct": 23.0
+   },
+   {
+    "from": 2000.0,
+    "pctOfIncomeAtFrom": 23.0,
+    "base": 461.0,
+    "marginalPct": 23.0
+   },
+   {
+    "from": 3200.0,
+    "pctOfIncomeAtFrom": 23.0,
+    "base": 737.0,
+    "marginalPct": 20.1
+   },
+   {
+    "from": 4000.0,
+    "pctOfIncomeAtFrom": 22.5,
+    "base": 898.0,
+    "marginalPct": 13.4
+   },
+   {
+    "from": 4500.0,
+    "pctOfIncomeAtFrom": 21.4,
+    "base": 965.0,
+    "marginalPct": 11.8
+   },
+   {
+    "from": 8000.0,
+    "pctOfIncomeAtFrom": 17.2,
+    "base": 1379.0,
+    "marginalPct": 11.1
+   },
+   {
+    "from": 15000.0,
+    "pctOfIncomeAtFrom": 14.4,
+    "base": 2157.0,
+    "marginalPct": 10.3
+   }
+  ],
+  "2": [
+   {
+    "from": 1000.0,
+    "pctOfIncomeAtFrom": 35.1,
+    "base": 351.0,
+    "marginalPct": 35.1
+   },
+   {
+    "from": 2000.0,
+    "pctOfIncomeAtFrom": 35.1,
+    "base": 702.0,
+    "marginalPct": 33.9
+   },
+   {
+    "from": 3200.0,
+    "pctOfIncomeAtFrom": 34.6,
+    "base": 1108.0,
+    "marginalPct": 31.0
+   },
+   {
+    "from": 4000.0,
+    "pctOfIncomeAtFrom": 33.9,
+    "base": 1356.0,
+    "marginalPct": 19.6
+   },
+   {
+    "from": 4500.0,
+    "pctOfIncomeAtFrom": 32.3,
+    "base": 1454.0,
+    "marginalPct": 17.0
+   },
+   {
+    "from": 8000.0,
+    "pctOfIncomeAtFrom": 25.6,
+    "base": 2048.0,
+    "marginalPct": 16.0
+   },
+   {
+    "from": 15000.0,
+    "pctOfIncomeAtFrom": 21.1,
+    "base": 3171.0,
+    "marginalPct": 15.3
+   }
+  ],
+  "3": [
+   {
+    "from": 1000.0,
+    "pctOfIncomeAtFrom": 42.4,
+    "base": 424.0,
+    "marginalPct": 42.4
+   },
+   {
+    "from": 2000.0,
+    "pctOfIncomeAtFrom": 42.4,
+    "base": 848.0,
+    "marginalPct": 40.4
+   },
+   {
+    "from": 3200.0,
+    "pctOfIncomeAtFrom": 41.7,
+    "base": 1334.0,
+    "marginalPct": 36.5
+   },
+   {
+    "from": 4000.0,
+    "pctOfIncomeAtFrom": 40.6,
+    "base": 1626.0,
+    "marginalPct": 22.8
+   },
+   {
+    "from": 4500.0,
+    "pctOfIncomeAtFrom": 38.7,
+    "base": 1740.0,
+    "marginalPct": 19.2
+   },
+   {
+    "from": 8000.0,
+    "pctOfIncomeAtFrom": 30.2,
+    "base": 2412.0,
+    "marginalPct": 18.4
+   },
+   {
+    "from": 15000.0,
+    "pctOfIncomeAtFrom": 24.7,
+    "base": 3698.0,
+    "marginalPct": 18.1
+   }
+  ],
+  "4": [
+   {
+    "from": 1000.0,
+    "pctOfIncomeAtFrom": 47.4,
+    "base": 474.0,
+    "marginalPct": 47.4
+   },
+   {
+    "from": 2000.0,
+    "pctOfIncomeAtFrom": 47.4,
+    "base": 948.0,
+    "marginalPct": 45.2
+   },
+   {
+    "from": 3200.0,
+    "pctOfIncomeAtFrom": 46.6,
+    "base": 1490.0,
+    "marginalPct": 40.8
+   },
+   {
+    "from": 4000.0,
+    "pctOfIncomeAtFrom": 45.4,
+    "base": 1816.0,
+    "marginalPct": 25.5
+   },
+   {
+    "from": 4500.0,
+    "pctOfIncomeAtFrom": 43.2,
+    "base": 1943.0,
+    "marginalPct": 21.5
+   },
+   {
+    "from": 8000.0,
+    "pctOfIncomeAtFrom": 33.7,
+    "base": 2694.0,
+    "marginalPct": 20.5
+   },
+   {
+    "from": 15000.0,
+    "pctOfIncomeAtFrom": 27.5,
+    "base": 4130.0,
+    "marginalPct": 20.2
+   }
+  ],
+  "5": [
+   {
+    "from": 1000.0,
+    "pctOfIncomeAtFrom": 52.1,
+    "base": 521.0,
+    "marginalPct": 52.1
+   },
+   {
+    "from": 2000.0,
+    "pctOfIncomeAtFrom": 52.1,
+    "base": 1042.0,
+    "marginalPct": 49.7
+   },
+   {
+    "from": 3200.0,
+    "pctOfIncomeAtFrom": 51.2,
+    "base": 1639.0,
+    "marginalPct": 44.8
+   },
+   {
+    "from": 4000.0,
+    "pctOfIncomeAtFrom": 49.9,
+    "base": 1997.0,
+    "marginalPct": 28.0
+   },
+   {
+    "from": 4500.0,
+    "pctOfIncomeAtFrom": 47.5,
+    "base": 2137.0,
+    "marginalPct": 23.6
+   },
+   {
+    "from": 8000.0,
+    "pctOfIncomeAtFrom": 37.0,
+    "base": 2964.0,
+    "marginalPct": 22.6
+   },
+   {
+    "from": 15000.0,
+    "pctOfIncomeAtFrom": 30.3,
+    "base": 4543.0,
+    "marginalPct": 22.2
+   }
+  ]
+ }
+}

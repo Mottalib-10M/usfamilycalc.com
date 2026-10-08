@@ -1,0 +1,232 @@
+[
+ {
+  "slug": "washington",
+  "name": "Washington",
+  "abbr": "WA",
+  "filingFee": 364,
+  "responseFee": null,
+  "feeScope": "county (King County)",
+  "feeText": "King County Superior Court Clerk: Dissolution of Marriage $364.00 (RCW 36.18.020(2),(5),(6); RCW 36.18.016(2)(b); RCW 36.18.016(15)). The statewide statutory part is $200 (RCW 36.18.020(2)(a)) + $40 surcharge (36.18.020(5)(c)) + $50 surcharge (36.18.020(6)) + $54 dissolution fee (36.18.016(2)(b)) = $344; counties may add up to $20 for a courthouse facilitator program (RCW 26.12.240).",
+  "feeUrl": "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-financial/fees-payments",
+  "otherFees": [
+   {
+    "what": "Counter Petition in a Domestic Relations Action (King County)",
+    "amount": 310,
+    "url": "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-financial/fees-payments"
+   },
+   {
+    "what": "Statewide statutory base for a dissolution petition before county surcharges (RCW 36.18.020 + 36.18.016(2)(b))",
+    "amount": 344,
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=36.18.016"
+   }
+  ],
+  "waiver": {
+   "name": "Motion and Declaration for Waiver of Civil Fees and Surcharges (WPF GR 34.0100) with Order Re Waiver (WPF GR 34.0500)",
+   "url": "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=87"
+  },
+  "residency": {
+   "text": "No minimum residence period: the petitioner must be a resident of Washington, a member of the armed forces stationed in Washington, or married to such a person (RCW 26.09.030).",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.09.030"
+  },
+  "waitingPeriod": {
+   "days": 90,
+   "text": "The court may enter a decree only when ninety days have elapsed since the petition was filed and since service of the summons (or its first publication) on the respondent (RCW 26.09.030).",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.09.030"
+  },
+  "simplified": {
+   "text": "No separate summary dissolution procedure in chapter 26.09 RCW; agreed cases use the standard statewide divorce forms and the same 90-day wait.",
+   "url": "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=13"
+  },
+  "parentingClass": {
+   "required": null,
+   "text": "No statewide statute requires a parenting class; some superior courts require a parenting seminar by local family law rule.",
+   "url": null
+  },
+  "uncertain": [
+   "Response fee: King County lists a $310 fee for a counter petition but no fee for a simple response; RCW 36.18.020(2)(a) charges only the first filer and parties filing a counterclaim, so responseFee is left null.",
+   "Parenting seminar: King County local family law rules (LFLR) were not read; requirement left null.",
+   "King County fee page carries no effective date; read on 2026-10-08."
+  ]
+ },
+ {
+  "slug": "arizona",
+  "name": "Arizona",
+  "abbr": "AZ",
+  "filingFee": 376,
+  "responseFee": 287,
+  "feeScope": "county (Maricopa County)",
+  "feeText": "Maricopa County Clerk of Superior Court: Petition for Dissolution of Marriage with or without children $376.00; Response/Answer to Dissolution $287.00.",
+  "feeUrl": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees",
+  "otherFees": [
+   {
+    "what": "Summary Consent Decree (with or without children), Maricopa County",
+    "amount": 331.5,
+    "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+   },
+   {
+    "what": "Petition for Legal Separation, Maricopa County",
+    "amount": 376,
+    "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+   }
+  ],
+  "waiver": {
+   "name": "Application for deferral or waiver of court fees and costs (A.R.S. 12-302; forms adopted by the Supreme Court)",
+   "url": "https://www.clerkofcourt.maricopa.gov/services/deferral-and-waiver-of-court-fees"
+  },
+  "residency": {
+   "text": "One spouse must have been domiciled in Arizona, or stationed there as a member of the armed services, for 90 days before filing (A.R.S. 25-312(A)(1)).",
+   "url": "https://www.azleg.gov/ars/25/00312.htm"
+  },
+  "waitingPeriod": {
+   "days": 60,
+   "text": "No trial, hearing or affidavit-based decree on a petition for dissolution or legal separation until 60 days after service or acceptance of process (A.R.S. 25-329).",
+   "url": "https://www.azleg.gov/ars/25/00329.htm"
+  },
+  "simplified": {
+   "text": "Summary consent decree: spouses who agree on all issues can file jointly; Maricopa County charges $331.50 for a Summary Consent Decree (fee schedule). The 60-day wait of A.R.S. 25-329 still applies.",
+   "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+  },
+  "parentingClass": {
+   "required": true,
+   "text": "In a dissolution, legal separation or annulment involving a common minor child, the court shall order the parties to complete a domestic relations education program, unless the court finds it not in the best interests of the parties or child or a comparable program is completed (A.R.S. 25-352(A); programs under 25-351).",
+   "url": "https://www.azleg.gov/ars/25/00352.htm"
+  },
+  "uncertain": [
+   "Maricopa fee page was read from the Internet Archive copy (2026-08-13) of the official URL; the clerk's site returns 403 to automated clients.",
+   "Eligibility conditions for a summary consent decree (Ariz. R. Fam. Law P.) were not read from the official rule text; only the fee and its existence are verified.",
+   "Exact title of the Supreme Court's fee deferral/waiver form not read (Maricopa waiver page blocked and not reachable in the archive at the time)."
+  ]
+ },
+ {
+  "slug": "massachusetts",
+  "name": "Massachusetts",
+  "abbr": "MA",
+  "filingFee": 215,
+  "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Probate and Family Court: Divorce complaint (or joint petition) filing fee $200 plus $15 surcharge = $215.",
+  "feeUrl": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees",
+  "otherFees": [
+   {
+    "what": "Motion in divorce actions during the nisi period",
+    "amount": 100,
+    "url": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees"
+   },
+   {
+    "what": "Complaint for modification of child support, custody or parenting time",
+    "amount": 50,
+    "url": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees"
+   }
+  ],
+  "waiver": {
+   "name": "Affidavit of Indigency (G.L. c. 261, §§ 27A-27G)",
+   "url": null
+  },
+  "residency": {
+   "text": "If the cause occurred outside Massachusetts, the plaintiff must have lived in the Commonwealth for one year before filing; if the cause occurred in Massachusetts, the plaintiff need only be domiciled there at filing, unless the plaintiff moved there to obtain a divorce (G.L. c. 208, § 5; see also § 4).",
+   "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section5"
+  },
+  "waitingPeriod": {
+   "days": 120,
+   "text": "Joint petition (§ 1A): judgment nisi enters 30 days after the court approves the agreement, and becomes absolute 90 days later (§ 21), i.e. 120 days after approval. Contested no-fault complaint (§ 1B): no hearing earlier than six months after filing, then the 90-day nisi period.",
+   "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section21"
+  },
+  "simplified": {
+   "text": "Joint petition for divorce on irretrievable breakdown with a notarized separation agreement, no summons or answer required (G.L. c. 208, § 1A).",
+   "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section1A"
+  },
+  "parentingClass": {
+   "required": null,
+   "text": "Not verified on an official page (Probate and Family Court parent education requirement).",
+   "url": null
+  },
+  "uncertain": [
+   "malegislature.gov refused connections on 2026-10-08; G.L. c. 208 §§ 1A, 1B, 4, 5 and 21 were read from Internet Archive copies (May-July 2026, § 4 Sept. 2025) of the official URLs.",
+   "mass.gov fee page read from the Internet Archive 2026 copy of the official URL (mass.gov returns 403/refuses automated clients). Fee for an answer not listed; responseFee null.",
+   "waitingPeriod.days = 120 counts from court approval of a § 1A agreement, not from filing; § 1B cases take at least 6 months + 90 days.",
+   "Affidavit of Indigency official page URL and the Probate and Family Court parent education requirement could not be read (mass.gov blocked, archive unavailable at the time)."
+  ]
+ },
+ {
+  "slug": "tennessee",
+  "name": "Tennessee",
+  "abbr": "TN",
+  "filingFee": null,
+  "responseFee": null,
+  "feeScope": "county (Shelby County)",
+  "feeText": "Shelby County Circuit/Chancery Court clerk divorce filing fee not verified.",
+  "feeUrl": null,
+  "otherFees": [],
+  "waiver": {
+   "name": "Request to Postpone Filing Fees and Order (Uniform Civil Affidavit of Indigency), Form 3 of the Supreme Court-approved divorce forms (Tenn. Sup. Ct. R. 29)",
+   "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+  },
+  "residency": {
+   "text": "The Supreme Court-approved agreed-divorce packet requires that one or both spouses lived in Tennessee for at least the past 6 months, or both lived in Tennessee when they decided to divorce (Tenn. Code Ann. § 36-4-104).",
+   "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+  },
+  "waitingPeriod": {
+   "days": 90,
+   "text": "With minor children the soonest an irreconcilable-differences divorce can be granted is 90 days after filing (Supreme Court-approved forms instructions; Tenn. Code Ann. § 36-4-101). Without minor children the period is 60 days.",
+   "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+  },
+  "simplified": {
+   "text": "Supreme Court-approved agreed divorce forms for spouses who agree on everything and own no real property (with or without children).",
+   "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+  },
+  "parentingClass": {
+   "required": true,
+   "text": "All divorcing spouses with minor children must attend a parent education class unless the court excuses them (Supreme Court-approved forms instructions; Tenn. Code Ann. § 36-6-408).",
+   "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+  },
+  "uncertain": [
+   "Shelby County filing fee not verified: shelbycountytn.gov court clerk sites return 403 and the Internet Archive was unavailable when tried.",
+   "Tennessee Code Annotated is published only through LexisNexis; statute sections are cited from the Supreme Court-approved forms instructions (read from the Internet Archive copy of tncourts.gov dated 2026-04-20, since tncourts.gov serves a browser-validation page to automated clients). The 60-day period without children was not read on an official page (the no-children packet PDF could not be downloaded).",
+   "waitingPeriod.days = 90 applies to cases with minor children."
+  ]
+ },
+ {
+  "slug": "nebraska",
+  "name": "Nebraska",
+  "abbr": "NE",
+  "filingFee": 200,
+  "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "District court Dissolution fee total $200.00 (mediation fee $50 and child abuse prevention fee $25 under § 33-106.03, docket fee § 33-106, plus the statutory add-on fees), schedule effective 07-01-2026.",
+  "feeUrl": "https://nebraskajudicial.gov/rules/administrative-policies-schedules/filing-fees-and-court-costs",
+  "otherFees": [
+   {
+    "what": "Proceeding to modify a decree of dissolution (legal services + mediation fees)",
+    "amount": 65,
+    "url": "https://nebraskajudicial.gov/rules/administrative-policies-schedules/filing-fees-and-court-costs"
+   }
+  ],
+  "waiver": {
+   "name": "Affidavit and Application to Proceed Without Payment of Fees (In Forma Pauperis) DC 6:7.1, and Order to Proceed In Forma Pauperis DC 6:7.2",
+   "url": "https://nebraskajudicial.gov/forms?title=&field_form_number_value=dc+6:7.&field_form_type_target_id=All&field_language_target_id=155&field_form_category_target_id[]=106"
+  },
+  "residency": {
+   "text": "At least one spouse must have actually resided in Nebraska with intent to make it a permanent home for at least one year before filing, unless the marriage was solemnized in Nebraska and a spouse has lived there since (Neb. Rev. Stat. § 42-349).",
+   "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=42-349"
+  },
+  "waitingPeriod": {
+   "days": 60,
+   "text": "No divorce suit may be heard or tried until sixty days after perfection of service of process (Neb. Rev. Stat. § 42-363).",
+   "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=42-363"
+  },
+  "simplified": {
+   "text": "No summary procedure in statute; the Supreme Court publishes self-help divorce packets (no children; children without disputes).",
+   "url": "https://supremecourt.nebraska.gov/administration/self-represented-litigant-resources/divorce-no-children"
+  },
+  "parentingClass": {
+   "required": true,
+   "text": "The court shall order all parties to a proceeding under the Parenting Act to attend a basic level parenting education course, which may be delayed or waived for good cause (Neb. Rev. Stat. § 43-2928(1)).",
+   "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=43-2928"
+  },
+  "uncertain": [
+   "nebraskalegislature.gov statutes (42-349, 42-363, 43-2928) were read from Internet Archive copies (Nov. 2025) of the official URLs.",
+   "No answer/response fee appears in the district court schedule; responseFee null.",
+   "The Supreme Court's no-children self-help guide still says to bring $163, older than the 07-01-2026 schedule total of $200."
+  ]
+ }
+]

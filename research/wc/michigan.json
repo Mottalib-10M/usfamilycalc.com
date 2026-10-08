@@ -1,0 +1,26 @@
+{
+  "slug": "michigan", "name": "Michigan", "abbr": "MI", "verified": "2026-10-08",
+  "agency": { "name": "Workers' Disability Compensation Agency (Department of Labor and Economic Opportunity)", "url": "https://www.michigan.gov/leo/bureaus-agencies/wdca" },
+  "ttd": {
+    "rate": 80, "basis": "after-tax AWW",
+    "rateText": "80% of the employee's after-tax average weekly wage, not more than the maximum weekly rate under section 355 (MCL 418.351(1)); after-tax wage is read from the Agency's annual tables by gross wage, federal filing status and number of dependents (MCL 418.313(2)).",
+    "max": 1201.00, "min": null, "minText": "No general minimum weekly rate for total disability; minimums exist only for death benefits (50% of SAWW) and a possible adjustment for low-rate long-term cases (MCL 418.356).",
+    "effective": "2026-01-01", "periodLabel": "injuries occurring in calendar year 2026",
+    "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WDCA-Calculation-Program/wca_2026_Rate_Book.pdf?rev=c3d649d9c1344183b1313781d72e22be&hash=75027BFEED59187235F19BCDDD4065CB", "asOf": "2025-12-18"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 13, "text": "No compensation for an injury that does not incapacitate the employee for at least 1 week; compensation begins on the eighth day, and if incapacity continues for 2 weeks or longer it is computed from the date of injury (MCL 418.311).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-311" },
+  "ttdDuration": { "maxWeeks": null, "text": "Compensation is paid for the duration of the disability; no fixed week cap (MCL 418.351(1)).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-351" },
+  "ppd": { "text": "Michigan pays wage-loss benefits rather than impairment-rated PPD; specific losses are paid at 80% of after-tax AWW for scheduled periods (e.g. thumb 65 weeks, hand 215 weeks, arm 269 weeks, leg 215 weeks) (MCL 418.361(2)). Partial wage loss is paid at 80% of the difference between pre- and post-injury after-tax wages (MCL 418.301).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-361" },
+  "statute": { "cite": "MCL 418.311, 418.351, 418.355, 418.361 (Worker's Disability Compensation Act of 1969)", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-351" },
+  "facts": [
+    { "text": "The 2026 maximum of $1,201.00 is 90% of the state average weekly wage of $1,333.88, adjusted to the next higher dollar (MCL 418.355(2); 2026 Weekly Benefit Tables).", "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WDCA-Calculation-Program/wca_2026_Rate_Book.pdf?rev=c3d649d9c1344183b1313781d72e22be&hash=75027BFEED59187235F19BCDDD4065CB" },
+    { "text": "The weekly rate depends on tax filing status (single, married filing jointly, head of household, married filing separately) and number of dependents; the Agency publishes conclusive tables each year (MCL 418.313(2)).", "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WDCA-Calculation-Program/wca_2026_Rate_Book.pdf?rev=c3d649d9c1344183b1313781d72e22be&hash=75027BFEED59187235F19BCDDD4065CB" },
+    { "text": "A worker whose rate is below 50% of the SAWW may petition after 2 years of continuous disability for a one-time increase up to 50% of the SAWW, reimbursed from the second injury fund (MCL 418.356(1)).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-356" },
+    { "text": "Total and permanent disability is conclusively presumed for no more than 800 weeks from the date of injury (MCL 418.351(1)).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-351" },
+    { "text": "No compensation is owed for periods the employee cannot work because of imprisonment or commission of a crime (MCL 418.361(1)).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-418-361" }
+  ],
+  "uncertain": [
+    "legislature.mi.gov blocked automated access (WAF 403); MCL sections were read from Wayback Machine copies of the same official URLs (snapshots dated 2025-07 to 2026-01).",
+    "Description of partial wage-loss benefits cites MCL 418.301 generally; the rate book instructions point to sections 301(9)(c) and 401(7)(c) for partial benefits, which were not separately read."
+  ]
+}

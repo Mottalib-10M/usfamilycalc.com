@@ -1,0 +1,50 @@
+{
+  "slug": "alaska",
+  "name": "Alaska",
+  "abbr": "AK",
+  "filingFee": 250,
+  "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Filing fee for divorce, dissolution, custody or paternity: $250, effective 5/1/2023 under Administrative Rule 9 (statewide). After the case is open there are no additional fees except a $75 fee for a contested motion to modify custody, visitation, support, spousal maintenance or property division; joint or stipulated motions to modify are free. No answer fee is listed.",
+  "feeUrl": "https://courts.alaska.gov/shc/courtfees.htm",
+  "otherFees": [
+    {
+      "what": "Motion to modify a final order on custody, support or property when parties do not agree",
+      "amount": 75,
+      "url": "https://courts.alaska.gov/shc/courtfees.htm"
+    },
+    {
+      "what": "Joint or stipulated motion to modify",
+      "amount": 0,
+      "url": "https://courts.alaska.gov/shc/courtfees.htm"
+    }
+  ],
+  "waiver": {
+    "name": "Exemption from the Payment of Fees (TF-920)",
+    "url": "https://public.courts.alaska.gov/web/forms/docs/TF-920.pdf"
+  },
+  "residency": {
+    "text": "Chapter AS 25.24 sets no minimum duration of residence for divorce: the plaintiff (or the other spouse, AS 25.24.090) must qualify as a resident when the action is commenced; a service member stationed in Alaska for at least 30 days is a resident for this chapter (AS 25.24.900). Legal separation requires one party to be a resident at commencement (AS 25.24.420).",
+    "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+  },
+  "waitingPeriod": {
+    "days": 0,
+    "text": "No statutory waiting period appears in AS 25.24; for a dissolution petition a hearing is scheduled under the Civil Rules (AS 25.24.220(a)). A divorce may be stayed up to 30 days if a party requests settlement mediation (AS 25.24.060(e)).",
+    "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+  },
+  "simplified": {
+    "text": "Dissolution of marriage (AS 25.24.200-25.24.260): spouses may petition together, or one spouse may file and serve, when incompatibility has caused an irremediable breakdown and they have agreed on custody, visitation and child support, spousal maintenance and the division of property and debts (AS 25.24.200(a)).",
+    "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.080&secEnd=25.24.230"
+  },
+  "parentingClass": {
+    "required": null,
+    "text": "No general statutory requirement found in AS 25.24; a parenting education program is a condition of unsupervised visitation for a parent with a history of domestic violence (AS 25.24.150).",
+    "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+  },
+  "uncertain": [
+    "courts.alaska.gov refused connections on 2026-10-08/09; the fee page was read from the Internet Archive copy captured 2026-08-01 (https://web.archive.org/web/20260801172406/https://courts.alaska.gov/shc/courtfees.htm). TF-920 PDF itself not opened. Response fee: none listed, set to null.",
+    "Residency: no minimum-duration statute was found in AS 25.24; the residence rule for divorce could not be located in the text read.",
+    "Waiting period: 0 means no waiting period found in AS 25.24; court rules were not read.",
+    "Parenting class: court rules / local practice not verified; set to null."
+  ]
+}

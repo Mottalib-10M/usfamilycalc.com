@@ -1,0 +1,21 @@
+{ "slug": "arkansas", "name": "Arkansas", "abbr": "AR",
+  "filingFee": 165, "responseFee": null, "feeScope": "statewide",
+  "feeText": "Uniform fee for initiating any cause of action in circuit court, including domestic cases: $165.00 (Ark. Code §§ 21-6-402, 21-6-403, as listed on the Pulaski County Circuit Clerk's court filings fee schedule). Reopening a cause of action: $50.00.",
+  "feeUrl": "https://media.ark.org/pulaskiclerk/061019_Fee_Schedule_-_Central.pdf",
+  "otherFees": [
+    { "what": "Reopening a cause of action in circuit court (Pulaski County schedule)", "amount": 50, "url": "https://media.ark.org/pulaskiclerk/061019_Fee_Schedule_-_Central.pdf" }
+  ],
+  "waiver": { "name": "In Forma Pauperis Affidavit (Ark. R. Civ. P. 72)", "url": "https://www.arcourts.gov/sites/default/files/formatted-files/In-Forma-Pauperis-Affidavitsee-Rule-72_0.pdf" },
+  "residency": { "text": "The Pulaski County Circuit Clerk states that a person must have lived in Arkansas for 60 days before filing for divorce (residence rule of Ark. Code § 9-12-307).", "url": "https://pulaskiclerkar.gov/departments/central-receiving/" },
+  "waitingPeriod": { "days": null, "text": null, "url": null },
+  "simplified": { "text": "No summary dissolution procedure identified.", "url": null },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "The Arkansas Code is published officially only through LexisNexis (linked from arkleg.state.ar.us), which could not be read by an automated client; §§ 9-12-307, 21-6-403 and the waiting-period rule were not read in statute form.",
+    "Fee: $165 read on the Pulaski County Circuit Clerk schedule (file name dated 06/10/19, PDF undated); response/counterclaim fee not listed, set to null.",
+    "Residency: 60 days before filing per the Pulaski County Circuit Clerk page; the additional residence period before the decree (if any) in § 9-12-307 was not verified.",
+    "Waiting period: not verified from an official source; null.",
+    "Waiver form: arcourts.gov PDF returned no content to the automated client; name and URL from the official site's index.",
+    "Parenting class: not verified; null.",
+    "Simplified procedure: none found, but not confirmed against the Code."
+  ] }

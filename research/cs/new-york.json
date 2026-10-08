@@ -1,0 +1,105 @@
+{
+  "slug": "new-york",
+  "name": "New York",
+  "abbr": "NY",
+  "verified": "2026-10-08",
+  "model": "percent-combined",
+  "modelName": "Child Support Standards Act: percentage of combined parental income, prorated by each parent's share (FCA § 413(1); DRL § 240(1-b))",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross total income as should have been reported on the most recent federal tax return, plus investment income, voluntarily deferred income and non-taxable sources (workers' compensation, disability, unemployment, Social Security, veterans benefits, pensions, fellowships, annuities) (FCA § 413(1)(b)(5)). Deducted: unreimbursed employee business expenses (except to the extent they reduce personal expenditures), alimony or maintenance paid to a non-party spouse, maintenance paid or to be paid to the other party, child support actually paid for other children, public assistance, supplemental security income, New York City or Yonkers income or earnings taxes actually paid, and FICA taxes actually paid (FCA § 413(1)(b)(5)(vii)(A)-(H)). Federal and New York State income taxes are not deducted.",
+  "period": "annual",
+  "maxChildren": 5,
+  "schedule": null,
+  "percent": {
+    "byChildren": [17, 25, 29, 31, 35],
+    "fivePlus": "no less than 35% for five or more children (FCA § 413(1)(b)(3)).",
+    "tiers": null,
+    "cap": {
+      "amount": 193000,
+      "period": "annual",
+      "appliesTo": "combined parental income",
+      "effective": "2026-03-01",
+      "text": "The percentages are applied to combined parental income up to the combined parental income amount, $193,000 as of March 1, 2026 (LDSS-4515 Rev. 03/26). On income above it, the court may apply the percentages or not, based on the factors of § 413(1)(f) (FCA § 413(1)(c)(2)-(3)). The amount is set by Soc. Serv. Law § 111-i(2)(b): $141,000 base, increased every two years from March 1, 2016 by the CPI-U change of the prior two years, rounded to the nearest $1,000. Previous amount: $183,000 (chart released March 1, 2025).",
+      "url": "https://www.childsupport.ny.gov/pdfs/CSSA.pdf"
+    },
+    "text": "Basic obligation = combined parental income (up to $193,000) x 17% (1 child), 25% (2), 29% (3), 31% (4), no less than 35% (5+); each parent's share is prorated by his or her share of combined income, and the noncustodial parent pays his or her pro rata share (FCA § 413(1)(b)(3), (c)(1)-(2)).",
+    "url": "https://www.nysenate.gov/legislation/laws/FCT/413"
+  },
+  "formula": {
+    "text": "1) Compute each parent's income per § 413(1)(b)(5) minus the (vii) deductions. 2) Combined income = sum. 3) Multiply combined income up to the cap ($193,000) by the child support percentage. 4) Noncustodial parent's share = result x (NCP income / combined income). 5) Above the cap, the court decides using § 413(1)(f) factors and/or the percentages. 6) Low-income check (§ 413(1)(d)): if NCP income minus the obligation is below the poverty guideline ($15,960), the obligation is $25/month ($300/year); if it is below the self-support reserve ($21,546) but not below the poverty guideline, the obligation is the greater of $50/month ($600/year) or NCP income minus the self-support reserve. 7) Add pro-rated child care, health (cash medical support) and, at discretion, educational expenses (§ 413(1)(c)(4)-(7)).",
+    "params": {
+      "percentages": { "1": 17, "2": 25, "3": 29, "4": 31, "5+": 35 },
+      "combinedIncomeCap": 193000,
+      "combinedIncomeCapEffective": "2026-03-01",
+      "previousCap": { "amount": 183000, "chartReleased": "2025-03-01" },
+      "povertyGuidelineSingle2026": 15960,
+      "selfSupportReserve2026": 21546,
+      "selfSupportReserveRule": "135% of the federal poverty income guideline for a single person (FCA § 413(1)(b)(6)); 1.35 x 15,960 = 21,546.",
+      "minimumBelowPoverty": { "monthly": 25, "annual": 300 },
+      "minimumBelowSSR": { "monthly": 50, "annual": 600, "rule": "greater of $50/month or NCP income minus the self-support reserve" },
+      "chartLookup": "The OTDA chart is in $100 intervals and is computed on the lower bound of each interval; use the percentages for a precise amount (LDSS-4515 p. 1).",
+      "deductionsNotAllowed": "Federal and state income taxes are not deducted; only FICA and NYC/Yonkers taxes are."
+    },
+    "url": "https://www.nysenate.gov/legislation/laws/FCT/413"
+  },
+  "shared": {
+    "method": "none",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "The CSSA has no parenting-time adjustment formula; the noncustodial parent pays the pro rata share of the basic obligation, and the court may deviate under the § 413(1)(f) factors.",
+    "url": "https://www.nysenate.gov/legislation/laws/FCT/413"
+  },
+  "addOns": {
+    "childcare": "Reasonable child care expenses incurred because the custodial parent works or attends school/training are prorated in the same proportion as each parent's income is to combined parental income (FCA § 413(1)(c)(4)).",
+    "healthInsurance": "Health insurance and reasonable unreimbursed health care costs are prorated between the parents in proportion to income (FCA § 413(1)(c)(5)).",
+    "text": "Educational expenses may be ordered at the court's discretion (FCA § 413(1)(c)(7)).",
+    "url": "https://www.nysenate.gov/legislation/laws/FCT/413"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 21546,
+    "period": "annual",
+    "minimumOrder": 300,
+    "rule": "If the obligation would bring the NCP's income below the 2026 poverty guideline ($15,960), the basic obligation is $25 per month; if below the self-support reserve ($21,546) but not below the poverty guideline, it is the greater of $50 per month or the difference between NCP income and the reserve (FCA § 413(1)(d); LDSS-4515 worksheet, 03/01/2026).",
+    "url": "https://www.childsupport.ny.gov/pdfs/CSSA.pdf"
+  },
+  "statute": { "cite": "N.Y. Fam. Ct. Act § 413(1); Dom. Rel. Law § 240(1-b); Soc. Serv. Law § 111-i(2)", "url": "https://www.nysenate.gov/legislation/laws/FCT/413" },
+  "guidelinesUrl": "https://www.childsupport.ny.gov/pdfs/CSSA.pdf",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Child support is owed for an unemancipated child under the age of 21 (FCA § 413(1)(b)(2)).",
+    "url": "https://www.nysenate.gov/legislation/laws/FCT/413"
+  },
+  "testCases": [
+    {
+      "inputs": { "incomeA": 50000, "incomeB": 0, "children": 1 },
+      "expected": 8500,
+      "what": "noncustodial parent's annual basic obligation (custodial income 0)",
+      "source": "Official Child Support Standards Chart LDSS-4515 (03/01/2026), row 50,000-50,099, 1 child: 8,500. https://www.childsupport.ny.gov/pdfs/CSSA.pdf"
+    },
+    {
+      "inputs": { "incomeA": 30000, "incomeB": 0, "children": 3 },
+      "expected": 8454,
+      "what": "annual obligation limited by the self-support reserve",
+      "source": "LDSS-4515 (03/01/2026), row 30,000-30,099, 3 children: 8,454 (= 30,000 - 21,546)."
+    },
+    {
+      "inputs": { "incomeA": 60000, "incomeB": 40000, "children": 2 },
+      "expected": 15000,
+      "what": "noncustodial parent A's annual basic obligation",
+      "source": "Computed by hand: 100,000 x 25% = 25,000; A's share 60% = 15,000 (FCA § 413(1)(c))."
+    }
+  ],
+  "facts": [
+    { "text": "The OTDA Division of Child Support Services publishes the Child Support Standards Chart every year by April 1; the 2026 chart was released March 1, 2026 (Soc. Serv. Law § 111-i(2)(c)).", "url": "https://www.nysenate.gov/legislation/laws/SOS/111-I" },
+    { "text": "The combined parental income cap started at $141,000 and is adjusted every two years on March 1 by CPI-U, rounded to the nearest $1,000 (Soc. Serv. Law § 111-i(2)(b)); it rose from $183,000 to $193,000 on March 1, 2026.", "url": "https://www.childsupport.ny.gov/pdfs/CSSA.pdf" },
+    { "text": "Income for the CSSA is gross income: federal and state income taxes are not deducted, only FICA and New York City or Yonkers income taxes (FCA § 413(1)(b)(5)(vii)).", "url": "https://www.nysenate.gov/legislation/laws/FCT/413" },
+    { "text": "Support runs to age 21 in New York, later than in most states (FCA § 413(1)(b)(2)).", "url": "https://www.nysenate.gov/legislation/laws/FCT/413" },
+    { "text": "The self-support reserve equals 135% of the federal poverty guideline for one person: $21,546 in 2026 (FCA § 413(1)(b)(6)).", "url": "https://www.childsupport.ny.gov/pdfs/CSSA.pdf" }
+  ],
+  "uncertain": [
+    "www.childsupport.ny.gov resets automated connections and the Wayback Machine was offline; the 2026 chart (LDSS-4515 Rev. 03/26, released 03/01/2026) was downloaded from the official OTDA language mirror https://es.childsupport.ny.gov/pdfs/CSSA.pdf (the PDF is the English original). The 2025 chart was read from the Wayback copy (snapshot 2026-01-29).",
+    "FCA § 413 and SSL § 111-i were read on nysenate.gov via WebFetch (a summarising fetch tool); the percentages, deductions, minimum amounts and the § 111-i adjustment rule were requested verbatim but a manual check of the full text is advisable. DRL § 240(1-b) (identical wording) was not read separately.",
+    "No official state calculator URL was confirmed (nycourts.gov returns 403 to automated clients)."
+  ]
+}

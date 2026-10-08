@@ -1,0 +1,24 @@
+---
+/** The official divorce fees and timing rules of a state, generated from its data (data-chrome, RECETTE §6.4). */
+import { dv, usdx, day } from '../../lib/kit';
+import { table } from '../../lib/helpers';
+interface Props { slug: string }
+const d = dv(Astro.props.slug);
+const rows: Array<Array<string>> = [
+  ['Petition for divorce', d.filingFee != null ? usdx(d.filingFee) : 'set by each county'],
+  ...(d.responseFee != null ? [['Response or answer', d.responseFee > 0 ? usdx(d.responseFee) : 'no fee']] : []),
+  ...d.otherFees.filter((f) => f.amount != null).map((f) => [f.what, usdx(f.amount as number)]),
+];
+---
+<section data-chrome class="mt-10">
+  <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} fees and rules this calculator applies</h2>
+  <Fragment set:html={table(['Court fee', d.name], rows, `${d.feeScope}; read on ${day(d.verified)}`, ['l', 'r'])} />
+  <div class="prose prose-slate mt-4 max-w-none text-sm">
+    <p><strong>Filing fee.</strong> {d.feeText} <a href={d.feeUrl} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
+    {d.waiver && <p><strong>Fee waiver.</strong> {d.waiver.name}. <a href={d.waiver.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>}
+    {d.residency && <p><strong>Residency.</strong> {d.residency.text} <a href={d.residency.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>}
+    {d.waitingPeriod && <p><strong>Waiting period.</strong> {d.waitingPeriod.text} {d.waitingPeriod.url && <a href={d.waitingPeriod.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+    {d.simplified?.text && <p><strong>Simplified procedure.</strong> {d.simplified.text} {d.simplified.url && <a href={d.simplified.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+    {d.parentingClass?.text && <p><strong>Parenting class.</strong> {d.parentingClass.text} {d.parentingClass.url && <a href={d.parentingClass.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+  </div>
+</section>

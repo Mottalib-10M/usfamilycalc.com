@@ -1,0 +1,924 @@
+[
+  {
+    "slug": "alabama",
+    "name": "Alabama",
+    "abbr": "AL",
+    "filingFee": 145,
+    "responseFee": null,
+    "feeScope": "statewide (state docket fee only; county local-act fees are added by each circuit clerk)",
+    "feeText": "State docket fee of $145 for cases filed on the domestic relations docket of the circuit court, whether the clerk finds them uncontested or contested at filing (Ala. Code § 12-19-71(a)(5), (6)). Counties add local fees, so the amount paid at the clerk's window is higher.",
+    "feeUrl": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71",
+    "otherFees": [
+      {
+        "what": "Case on the domestic relations docket to modify or enforce an existing domestic relations order (§ 12-19-71(a)(7)a.)",
+        "amount": 248,
+        "url": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71"
+      },
+      {
+        "what": "Jefferson County Domestic Relations Division posted filing fee for a complaint (page headed 'filing fees effective 6/21/2012', archived copy)",
+        "amount": 199,
+        "url": "https://jefferson.alacourt.gov/filing-fees/filing-fees-domestic-relations/"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit of Substantial Hardship (Form C-10)",
+      "url": "https://dhr.alabama.gov/wp-content/uploads/2019/07/379031ALAUJS-C-10-Affidavit-of-Substantial-Hardship-0295.pdf"
+    },
+    "residency": {
+      "text": "When the defendant is a nonresident, the plaintiff must have been a bona fide resident of Alabama for six months before filing, alleged in the complaint and proved (Ala. Code § 30-2-5).",
+      "url": "https://alison.legislature.state.al.us/code-of-alabama?section=30-2-5"
+    },
+    "waitingPeriod": {
+      "days": 30,
+      "text": "A court shall not enter a final judgment of divorce until 30 days after the filing of the summons and complaint; temporary orders remain possible (Ala. Code § 30-2-8.1).",
+      "url": "https://alison.legislature.state.al.us/code-of-alabama?section=30-2-8.1"
+    },
+    "simplified": {
+      "text": "No summary dissolution statute. A case is treated as uncontested for fee purposes when a complaint, an answer and an agreement of the parties are filed (Ala. Code § 12-19-71(a)(5)).",
+      "url": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statute located; some circuits require a parenting course by local rule.",
+      "url": null
+    },
+    "uncertain": [
+      "Jefferson County (most populous) was unreachable live; the Internet Archive copy of its Domestic Relations fee page lists 'Complaint $199.00' under a heading 'effective 6/21/2012', so it may be outdated. Filing fee recorded as the statutory state docket fee ($145) instead; the clerk's total may differ.",
+      "Ala. Code read in a browser on alison.legislature.state.al.us (JavaScript app; not retrievable by plain HTTP client).",
+      "Waiver form: copy of UJS Form C-10A (Rev. 2/95) hosted on dhr.alabama.gov; the court's eforms site was unreachable.",
+      "Ala. Code § 30-2-5 sets the 6-month rule only where the defendant is a nonresident.",
+      "Parenting class: not verified; set to null."
+    ]
+  },
+  {
+    "slug": "alaska",
+    "name": "Alaska",
+    "abbr": "AK",
+    "filingFee": 250,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Filing fee for divorce, dissolution, custody or paternity: $250, effective 5/1/2023 under Administrative Rule 9 (statewide). After the case is open there are no additional fees except a $75 fee for a contested motion to modify custody, visitation, support, spousal maintenance or property division; joint or stipulated motions to modify are free. No answer fee is listed.",
+    "feeUrl": "https://courts.alaska.gov/shc/courtfees.htm",
+    "otherFees": [
+      {
+        "what": "Motion to modify a final order on custody, support or property when parties do not agree",
+        "amount": 75,
+        "url": "https://courts.alaska.gov/shc/courtfees.htm"
+      },
+      {
+        "what": "Joint or stipulated motion to modify",
+        "amount": 0,
+        "url": "https://courts.alaska.gov/shc/courtfees.htm"
+      }
+    ],
+    "waiver": {
+      "name": "Exemption from the Payment of Fees (TF-920)",
+      "url": "https://public.courts.alaska.gov/web/forms/docs/TF-920.pdf"
+    },
+    "residency": {
+      "text": "Chapter AS 25.24 sets no minimum duration of residence for divorce: the plaintiff (or the other spouse, AS 25.24.090) must qualify as a resident when the action is commenced; a service member stationed in Alaska for at least 30 days is a resident for this chapter (AS 25.24.900). Legal separation requires one party to be a resident at commencement (AS 25.24.420).",
+      "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period appears in AS 25.24; for a dissolution petition a hearing is scheduled under the Civil Rules (AS 25.24.220(a)). A divorce may be stayed up to 30 days if a party requests settlement mediation (AS 25.24.060(e)).",
+      "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+    },
+    "simplified": {
+      "text": "Dissolution of marriage (AS 25.24.200-25.24.260): spouses may petition together, or one spouse may file and serve, when incompatibility has caused an irremediable breakdown and they have agreed on custody, visitation and child support, spousal maintenance and the division of property and debts (AS 25.24.200(a)).",
+      "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.080&secEnd=25.24.230"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No general statutory requirement found in AS 25.24; a parenting education program is a condition of unsupervised visitation for a parent with a history of domestic violence (AS 25.24.150).",
+      "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=25.24.010&secEnd=25.24.990"
+    },
+    "uncertain": [
+      "courts.alaska.gov refused connections on 2026-10-08/09; the fee page was read from the Internet Archive copy captured 2026-08-01 (https://web.archive.org/web/20260801172406/https://courts.alaska.gov/shc/courtfees.htm). TF-920 PDF itself not opened. Response fee: none listed, set to null.",
+      "Residency: no minimum-duration statute was found in AS 25.24; the residence rule for divorce could not be located in the text read.",
+      "Waiting period: 0 means no waiting period found in AS 25.24; court rules were not read.",
+      "Parenting class: court rules / local practice not verified; set to null."
+    ]
+  },
+  {
+    "slug": "arkansas",
+    "name": "Arkansas",
+    "abbr": "AR",
+    "filingFee": 165,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Uniform fee for initiating any cause of action in circuit court, including domestic cases: $165.00 (Ark. Code §§ 21-6-402, 21-6-403, as listed on the Pulaski County Circuit Clerk's court filings fee schedule). Reopening a cause of action: $50.00.",
+    "feeUrl": "https://media.ark.org/pulaskiclerk/061019_Fee_Schedule_-_Central.pdf",
+    "otherFees": [
+      {
+        "what": "Reopening a cause of action in circuit court (Pulaski County schedule)",
+        "amount": 50,
+        "url": "https://media.ark.org/pulaskiclerk/061019_Fee_Schedule_-_Central.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "In Forma Pauperis Affidavit (Ark. R. Civ. P. 72)",
+      "url": "https://www.arcourts.gov/sites/default/files/formatted-files/In-Forma-Pauperis-Affidavitsee-Rule-72_0.pdf"
+    },
+    "residency": {
+      "text": "The Pulaski County Circuit Clerk states that a person must have lived in Arkansas for 60 days before filing for divorce (residence rule of Ark. Code § 9-12-307).",
+      "url": "https://pulaskiclerkar.gov/departments/central-receiving/"
+    },
+    "waitingPeriod": {
+      "days": null,
+      "text": null,
+      "url": null
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure identified.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "The Arkansas Code is published officially only through LexisNexis (linked from arkleg.state.ar.us), which could not be read by an automated client; §§ 9-12-307, 21-6-403 and the waiting-period rule were not read in statute form.",
+      "Fee: $165 read on the Pulaski County Circuit Clerk schedule (file name dated 06/10/19, PDF undated); response/counterclaim fee not listed, set to null.",
+      "Residency: 60 days before filing per the Pulaski County Circuit Clerk page; the additional residence period before the decree (if any) in § 9-12-307 was not verified.",
+      "Waiting period: not verified from an official source; null.",
+      "Waiver form: arcourts.gov PDF returned no content to the automated client; name and URL from the official site's index.",
+      "Parenting class: not verified; null.",
+      "Simplified procedure: none found, but not confirmed against the Code."
+    ]
+  },
+  {
+    "slug": "california",
+    "name": "California",
+    "abbr": "CA",
+    "filingFee": 435,
+    "responseFee": 435,
+    "feeScope": "statewide",
+    "feeText": "Petition or other first paper for dissolution of marriage or domestic partnership, legal separation, or nullity: $435 (Statewide Civil Fee Schedule row 97: Gov. Code § 70670(b), 70602.5, 70602.6); response: $435 (row 98: Gov. Code § 70670(d), 70602.5, 70602.6). Schedule effective January 1, 2026.",
+    "feeUrl": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf",
+    "otherFees": [
+      {
+        "what": "Joint petition for dissolution or legal separation, covers both petitioners (Fam. Code § 2342.5(h))",
+        "amount": 870,
+        "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf"
+      },
+      {
+        "what": "Joint petition for summary dissolution (Gov. Code § 70670(b))",
+        "amount": 435,
+        "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf"
+      },
+      {
+        "what": "Motion or order to show cause in family law matter (Gov. Code § 70677(a))",
+        "amount": 60,
+        "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf"
+      },
+      {
+        "what": "Additional charge on motion to modify or enforce custody or visitation (Gov. Code § 70678)",
+        "amount": 25,
+        "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Request to Waive Court Fees (FW-001)",
+      "url": "https://selfhelp.courts.ca.gov/jcc-form/FW-001"
+    },
+    "residency": {
+      "text": "One spouse must have been a resident of California for 6 months and of the filing county for 3 months before the petition is filed (Fam. Code § 2320(a)); same-sex marriages entered in California may be dissolved without residency under § 2320(b).",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2320"
+    },
+    "waitingPeriod": {
+      "days": 182,
+      "text": "A judgment of dissolution is not final until six months have expired from the date of service of the summons and petition or the respondent's appearance, whichever occurs first (Fam. Code § 2339(a)). 182 days is the brief's day count for 6 months.",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2339"
+    },
+    "simplified": {
+      "text": "Summary dissolution is available when, among other conditions, there are no children, the marriage lasted not more than 5 years, neither party owns real property (except a qualifying lease), unpaid obligations do not exceed $4,000 (excluding car loans), community property is under $25,000 and each spouse's separate property is not over $25,000 (Fam. Code § 2400).",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2400"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide parenting-class requirement was verified. Contested custody is sent to court mediation/child custody recommending counseling under Fam. Code § 3170, which could not be read (archive unavailable).",
+      "url": null
+    },
+    "uncertain": [
+      "courts.ca.gov (Cloudflare) blocks automated clients; the Statewide Civil Fee Schedule effective January 1, 2026 was read from the copy hosted on the Superior Court of Ventura County's official site (ventura.courts.ca.gov).",
+      "Fam. Code §§ 2320, 2339, 2400 read from the Internet Archive copy of leginfo.legislature.ca.gov (leginfo blocks automated clients).",
+      "Fam. Code § 2339 states six months; 182 days is a day approximation of 6 months.",
+      "Parenting class: Fam. Code § 3170 (mandatory custody mediation) not read; required set to null."
+    ]
+  },
+  {
+    "slug": "connecticut",
+    "name": "Connecticut",
+    "abbr": "CT",
+    "filingFee": 360,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Superior Court entry fee for a civil cause (including paternity actions) except as otherwise listed: $360 (C.G.S. § 52-259). The Judicial Branch fee list has no separate line for dissolution of marriage, which is filed as a civil cause in the Superior Court.",
+    "feeUrl": "https://www.jud.ct.gov/external/super/courtfee.htm",
+    "otherFees": [
+      {
+        "what": "Post-judgment motion to modify any judgment in a family relations matter (C.G.S. § 52-259c(a))",
+        "amount": 180,
+        "url": "https://www.jud.ct.gov/external/super/courtfee.htm"
+      },
+      {
+        "what": "Motion to open, set aside or modify any civil judgment, including family judgments (C.G.S. § 52-259c)",
+        "amount": 130,
+        "url": "https://www.jud.ct.gov/external/super/courtfee.htm"
+      }
+    ],
+    "waiver": {
+      "name": "Application for Waiver of Fees/Payment of Costs/Appointment of Counsel - Family (JD-FM-75)",
+      "url": "https://www.jud.ct.gov/webforms/forms/fm075.pdf"
+    },
+    "residency": {
+      "text": "A complaint may be filed once either party has established residence in Connecticut, but a decree requires that one party has been a resident for the 12 months before the complaint or before the decree, or was domiciled in Connecticut at marriage and returned to stay, or that the cause arose after either party moved to the state (C.G.S. § 46b-44).",
+      "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm"
+    },
+    "waitingPeriod": {
+      "days": null,
+      "text": "C.G.S. § 46b-67(a): the court may proceed after the return date, or earlier if the parties reach a full agreement before the return date; a default judgment after personal or abode service cannot enter until at least 30 days after the return date, other default judgments need a hearing at least 60 days after the return date, and a contested trial cannot start until at least 90 days after the return date.",
+      "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm"
+    },
+    "simplified": {
+      "text": "Nonadversarial dissolution by joint petition (C.G.S. § 46b-44a) when the marriage has broken down irretrievably, lasted no more than 9 years, there are no children and no pregnancy, neither spouse owns real property, combined net property is under $80,000, neither has a defined benefit pension, no bankruptcy petition or restraining/protective order is pending, and residency is met.",
+      "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "The court shall order the parties to attend the Judicial Department's parenting education program whenever a minor child is involved, unless the parties agree (with court approval) not to, or the court finds participation not needed (C.G.S. § 46b-69b).",
+      "url": "https://www.cga.ct.gov/current/pub/chap_815j.htm"
+    },
+    "uncertain": [
+      "Fee: the Judicial Branch fee list has no line specific to dissolution; $360 is the general civil cause entry fee (§ 52-259), the line that applies to dissolution complaints.",
+      "Response fee: an appearance has no listed fee; the JD-FM-75 form mentions a cross complaint fee whose amount was not found. Set to null.",
+      "Waiting period: no single number. The rule depends on agreement, default or contest, so days is null (see text).",
+      "Statute text from the Connecticut General Assembly's current chapter 815j page (copy downloaded on 2026-10-08)."
+    ]
+  },
+  {
+    "slug": "delaware",
+    "name": "Delaware",
+    "abbr": "DE",
+    "filingFee": 165,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Family Court Schedule of Assessed Costs effective 7/20/26: Civil Filing - Divorce $165.00, subject to the $10 Court Security Fee. Each ancillary matter (property division, alimony, separation agreement) costs $90.00; no cost for ancillary matters raised in an answer or counterclaim if the petitioner already paid for them.",
+    "feeUrl": "https://www.courts.delaware.gov/forms/download.aspx?id=116568",
+    "otherFees": [
+      {
+        "what": "Court security assessment on civil filings",
+        "amount": 10,
+        "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568"
+      },
+      {
+        "what": "Ancillary matter (property division, alimony, separation agreement), per matter",
+        "amount": 90,
+        "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568"
+      },
+      {
+        "what": "Civil filing (other Family Court petitions)",
+        "amount": 90,
+        "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568"
+      }
+    ],
+    "waiver": {
+      "name": "Application to Proceed In Forma Pauperis (Family Court)",
+      "url": null
+    },
+    "residency": {
+      "text": "Either spouse must have actually resided (been domiciled) in Delaware, or been stationed there in the armed forces, continuously for 6 or more months immediately before filing (13 Del. C. § 1504(a); § 1503(1)).",
+      "url": "https://delcode.delaware.gov/title13/c015/"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period after filing, but the no-fault grounds of voluntary separation, mental illness or incompatibility require living separate and apart for 6 or more months before the court rules on the petition (13 Del. C. § 1503(8), § 1505(b)); no separation period for misconduct.",
+      "url": "https://delcode.delaware.gov/title13/c015/"
+    },
+    "simplified": {
+      "text": "No summary dissolution statute.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Where there are living children of the marriage up to age 17, the court shall order the parties to pay for and attend a certified Parenting Education Course unless the court finds it unnecessary (13 Del. C. § 1507(h)).",
+      "url": "https://delcode.delaware.gov/title13/c015/"
+    },
+    "uncertain": [
+      "Waiver: the Family Court in forma pauperis form could not be located on courts.delaware.gov (forms found were for the Court of Chancery and JP Court); URL null.",
+      "Response fee: no answer fee listed; set to null.",
+      "Waiting period recorded as 0: Delaware's 6-month separation is part of the ground, not a waiting period after filing.",
+      "Simplified procedure: none found in 13 Del. C. ch. 15."
+    ]
+  },
+  {
+    "slug": "district-of-columbia",
+    "name": "District of Columbia",
+    "abbr": "DC",
+    "filingFee": 80,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "D.C. Superior Court Family Court initial filing fees: filing complaint or petition $80.00; filing intervening petition $80.00; filing counterclaim $20.00. No fee is listed for an answer.",
+    "feeUrl": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/",
+    "otherFees": [
+      {
+        "what": "Counterclaim",
+        "amount": 20,
+        "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+      },
+      {
+        "what": "Motion (except motion under SCR-Dom. Rel. 41)",
+        "amount": 20,
+        "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+      },
+      {
+        "what": "Motion to reinstate under SCR-Dom. Rel. 41",
+        "amount": 35,
+        "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/additional-family-court-resources/family-filing-fees/"
+      }
+    ],
+    "waiver": {
+      "name": "Fee Waiver Application - Application to Waive \"Prepayment of\" Costs",
+      "url": "https://www.dccourts.gov/court-resources/search-forms/fee-waiver-application-application-waive-prepayment-of-costs"
+    },
+    "residency": {
+      "text": "One spouse must have been a bona fide resident of D.C. for at least 6 months before filing; same-sex couples married in D.C. may divorce there without residency if their home jurisdiction will not hear the case (D.C. Code § 16-902(a), (b)).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-902"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period and no required period of separation: a divorce may be granted when one or both parties assert that they no longer wish to remain married (D.C. Code § 16-904(a), current text, last amended by D.C. Law 25-311 of March 21, 2025).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-904"
+    },
+    "simplified": {
+      "text": "The Family Court provides a Joint Request for Uncontested Divorce form and a Consent Answer to Complaint for Divorce; there is no separate summary dissolution statute.",
+      "url": "https://www.dccourts.gov/superior-court/superior-court-divisions/family-court-operations-division/divorce"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statutory parenting-class requirement found in D.C. Code ch. 16-9 or on the Family Court divorce page.",
+      "url": null
+    },
+    "uncertain": [
+      "Response fee: no answer fee listed (counterclaim $20); set to null.",
+      "Waiting period: the court's divorce page (updated 02/11/2026) states there is no required separation period; no statutory waiting period after filing was found.",
+      "Parenting class: not verified; set to null."
+    ]
+  },
+  {
+    "slug": "florida",
+    "name": "Florida",
+    "abbr": "FL",
+    "filingFee": 409,
+    "responseFee": null,
+    "feeScope": "county (Miami-Dade County)",
+    "feeText": "Miami-Dade Clerk of the Court: Dissolution of marriage - $409. The statute lets each clerk charge a filing fee of up to $395 plus other authorized charges (Fla. Stat. § 28.241(1)(a)). No fee is listed for an answer; a cross claim/counterclaim is $295.",
+    "feeUrl": "https://www.miamidadeclerk.gov/clerk/family-court.page",
+    "otherFees": [
+      {
+        "what": "Cross claim, counterclaim, third-party complaint (Miami-Dade)",
+        "amount": 295,
+        "url": "https://www.miamidadeclerk.gov/clerk/family-court.page"
+      },
+      {
+        "what": "Filing fee for reopening a case (Miami-Dade; § 28.241(1)(b) cap $50)",
+        "amount": 50,
+        "url": "https://www.miamidadeclerk.gov/clerk/family-court.page"
+      }
+    ],
+    "waiver": {
+      "name": "Application for Determination of Civil Indigent Status",
+      "url": "https://flcourts-media.flcourts.gov/content/download/403010/file/indigent_application.pdf"
+    },
+    "residency": {
+      "text": "One of the parties must reside 6 months in Florida before the petition is filed (Fla. Stat. § 61.021).",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.021"
+    },
+    "waitingPeriod": {
+      "days": 20,
+      "text": "No final judgment of dissolution may be entered until at least 20 days after the petition is filed, unless the court finds injustice would result (Fla. Stat. § 61.19).",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.19"
+    },
+    "simplified": {
+      "text": "Joint petition for simplified dissolution (Fla. Fam. L. R. P. Form 12.901(a)) when both spouses agree the marriage cannot be saved, have no minor or dependent children and the wife is not pregnant, have agreed on the division of assets and debts, seek no alimony, waive trial and appeal, and both attend the final hearing.",
+      "url": "https://flcourts-media.flcourts.gov/content/download/685807/file_pdf/12.901a.pdf"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "All parties to a dissolution with minor children must complete the Parent Education and Family Stabilization Course before final judgment; the court may excuse a party (Fla. Stat. § 61.21(4)).",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/61.21"
+    },
+    "uncertain": [
+      "No single statewide total: § 28.241 sets a cap (up to $395 plus authorized charges); $409 is the Miami-Dade Clerk's posted fee (most populous county).",
+      "Response fee: no answer fee listed by the Miami-Dade Clerk; set to null."
+    ]
+  },
+  {
+    "slug": "georgia",
+    "name": "Georgia",
+    "abbr": "GA",
+    "filingFee": 223,
+    "responseFee": null,
+    "feeScope": "county (Fulton County)",
+    "feeText": "Fulton County Superior Court Clerk fee table (fees as of July 1, 2024): Court Costs, Divorce $223.00. Sheriff's service is charged separately ($50.00 per copy served).",
+    "feeUrl": "https://www.fultonclerk.org/400/Fee-Schedule",
+    "otherFees": [
+      {
+        "what": "Sheriff's service fee, per copy served (Fulton County)",
+        "amount": 50,
+        "url": "https://www.fultonclerk.org/400/Fee-Schedule"
+      },
+      {
+        "what": "Post-judgment filing (Fulton County)",
+        "amount": 58,
+        "url": "https://www.fultonclerk.org/400/Fee-Schedule"
+      }
+    ],
+    "waiver": {
+      "name": "Pauper's affidavit (filed with the complaint in lieu of the filing and sheriff fees, Uniform Superior Court Rule 36.10)",
+      "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf"
+    },
+    "residency": {
+      "text": "The plaintiff, or if the plaintiff is a nonresident the defendant, must have been a Georgia resident for at least six months immediately before filing (statewide self-help Complaint for Divorce form, paragraph 1; O.C.G.A. § 19-5-2).",
+      "url": "https://assets.georgiacourts.gov/2/wp-content/uploads/2024/05/19110928/Complaint-for-Divorce-Without-Minor-Children-Form.pdf"
+    },
+    "waitingPeriod": {
+      "days": 31,
+      "text": "With written consent of both parties, an uncontested divorce may be granted any time 31 days after service or acknowledgment of service; an unanswered action any time 46 days after service; service by publication 61 days or more after first publication (Uniform Superior Court Rule 24.6).",
+      "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf"
+    },
+    "simplified": {
+      "text": "No separate summary procedure; uncontested divorces follow the timetable of Uniform Superior Court Rule 24.6, and the judicial branch publishes self-help divorce forms with and without minor children.",
+      "url": "https://georgiacourts.gov/a2j/self-help-resources/family-law/divorce-forms/"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Each superior court circuit may establish a seminar of no more than four hours on the effects of divorce on children and may order parties in domestic relations actions to attend (Uniform Superior Court Rule 24.8); whether it is required depends on the circuit.",
+      "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf"
+    },
+    "uncertain": [
+      "O.C.G.A. text is published officially only through LexisNexis and could not be read; the 6-month residency is taken from the Judicial Council's statewide self-help complaint form (assets.georgiacourts.gov, revised 10/2019), not from the statute itself.",
+      "georgiasuperiorcourts.org and georgiacourts.gov return 403 to automated clients; the Uniform Superior Court Rules (version dated 2025-01-01) and the A2J divorce-forms page were read from Internet Archive copies.",
+      "Fulton County fee table does not list an answer/response fee for divorce; responseFee left null.",
+      "Parenting seminar: circuit-dependent (USCR 24.8); Fulton County's own requirement was not verified."
+    ]
+  },
+  {
+    "slug": "illinois",
+    "name": "Illinois",
+    "abbr": "IL",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "county (Cook County)",
+    "feeText": "Circuit clerk civil filing fees are set by county board ordinance within statutory caps; for a county of 3,000,000 or more (Cook) Schedule 1 is capped at $366 and Schedule 2 at $357 (705 ILCS 105/27.1b(a)). The Cook County ordinance amount for a dissolution petition was not found on an official page.",
+    "feeUrl": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=070501050K27.1b",
+    "otherFees": [],
+    "waiver": {
+      "name": "Application for Waiver of Court Fees (statewide approved form, approved 08/2025)",
+      "url": "https://www.illinoiscourts.gov/forms/approved-forms/forms-approved-forms-circuit-court/fee-waiver-civil"
+    },
+    "residency": {
+      "text": "One spouse must have resided (or been stationed as a member of the armed services) in Illinois for 90 days before filing or before the findings (750 ILCS 5/401(a)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K401"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period; the only ground is irreconcilable differences. Living separate and apart for a continuous 6 months before judgment creates an irrebuttable presumption that the irreconcilable-differences requirement is met (750 ILCS 5/401(a), (a-5)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K401"
+    },
+    "simplified": {
+      "text": "Joint simplified dissolution (750 ILCS 5/452): no children of the marriage, marriage of 8 years or less, no real property, retirement only in IRAs under $10,000 combined, maintenance waived, net marital property under $50,000, combined gross income under $60,000 and neither spouse over $30,000, written agreement dividing assets over $100 and debts.",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K452"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In cases involving allocation of parental responsibilities, all parties must complete an approved parenting education program of at least four hours, no later than 60 days after the initial case management conference, unless excused for good cause (Ill. S. Ct. Rule 924).",
+      "url": "https://ilcourtsaudio.blob.core.windows.net/antilles-resources/resources/7ae8a196-2a43-4484-9666-43098da60282/S_Ct_Rules_full.pdf"
+    },
+    "uncertain": [
+      "Cook County dissolution filing fee and appearance (response) fee not verified: the Clerk of the Circuit Court of Cook County site (cookcountyclerkofcourt.org) publishes no current fee schedule that could be found; only the statutory caps of 705 ILCS 105/27.1b are cited.",
+      "ilga.gov refused connections (ECONNREFUSED) on 2026-10-08; 750 ILCS 5/401, 5/452 and 705 ILCS 105/27.1b were read from the Internet Archive 2026 copy of the official ilga.gov URLs."
+    ]
+  },
+  {
+    "slug": "michigan",
+    "name": "Michigan",
+    "abbr": "MI",
+    "filingFee": 175,
+    "responseFee": 0,
+    "feeScope": "statewide",
+    "feeText": "Circuit court civil filing fee of $150 (MCL 600.2529(1)(a)) plus the $25 electronic filing system fee for civil actions (MCL 600.1986(1)(a)) = $175. When custody or parenting time of a minor child is to be determined, an extra $80 is due at filing (MCL 600.2529(1)(d)(i)), or $40 if only child support is to be determined (MCL 600.2529(1)(d)(ii)). SCAO Circuit Court Fee and Assessments Table, February 2025.",
+    "feeUrl": "https://www.courts.michigan.gov/496345/siteassets/court-administration/resources/cfee.pdf",
+    "feeWithChildren": 255,
+    "otherFees": [
+      {
+        "what": "Custody or parenting-time fee when custody of a minor child is to be determined (MCL 600.2529(1)(d)(i))",
+        "amount": 80,
+        "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-2529"
+      },
+      {
+        "what": "Child support fee when only support of a minor child is to be determined (MCL 600.2529(1)(d)(ii))",
+        "amount": 40,
+        "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-2529"
+      },
+      {
+        "what": "Motion fee (MCL 600.2529(1)(e))",
+        "amount": 20,
+        "url": "https://www.courts.michigan.gov/496345/siteassets/court-administration/resources/cfee.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Fee Waiver Request (MC 20)",
+      "url": "https://www.courts.michigan.gov/4a2a5e/siteassets/forms/scao-approved/mc20.pdf"
+    },
+    "residency": {
+      "text": "The plaintiff or defendant must have resided in Michigan for 180 days immediately before filing and, with exceptions in subsection (2), in the county of filing for 10 days (MCL 552.9(1)).",
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-552-9"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "daysWithChildren": 182,
+      "text": "No proofs or testimony may be taken until 60 days after the complaint is filed; when there are dependent minor children under 18, not until 6 months after filing, which the court may shorten to no less than 60 days for unusual hardship or compelling necessity (MCL 552.9f).",
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-552-9f"
+    },
+    "simplified": {
+      "text": "No summary or simplified divorce procedure in the Michigan statutes.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statutory parenting class requirement was found; some circuit courts require one by local practice.",
+      "url": null
+    },
+    "uncertain": [
+      "legislature.mi.gov returned 403 to automated clients; MCL 552.9, 552.9f and 600.2529 were read from the Internet Archive 2026 copies of the official URLs.",
+      "responseFee 0: the SCAO circuit court fee table lists no fee for an answer or appearance in a civil action; not stated explicitly for divorce.",
+      "daysWithChildren 182 approximates the statutory '6 months' from filing (MCL 552.9f).",
+      "Parenting class: county-dependent; no statewide rule verified."
+    ]
+  },
+  {
+    "slug": "new-jersey",
+    "name": "New Jersey",
+    "abbr": "NJ",
+    "filingFee": 300,
+    "responseFee": 175,
+    "feeScope": "statewide",
+    "feeText": "Superior Court, Family Division: complaint for divorce $300 (plaintiff); defendant's filing fee $175; an additional $25 parenting workshop fee when there are minor children (NJ Courts self-help page 'Divorce').",
+    "feeUrl": "https://www.njcourts.gov/self-help/divorce",
+    "otherFees": [
+      {
+        "what": "Parenting workshop fee (cases with minor children)",
+        "amount": 25,
+        "url": "https://www.njcourts.gov/self-help/divorce"
+      }
+    ],
+    "waiver": {
+      "name": "Fee Waiver form (Court Rule 1:5-6; Directive #03-17, Fee Waivers Based on Indigence)",
+      "url": "https://www.njcourts.gov/self-help/fee-waiver"
+    },
+    "residency": {
+      "text": "For a no-fault (irreconcilable differences) divorce, the plaintiff or the spouse must have lived in New Jersey for 12 consecutive months before filing (NJ Courts self-help page; N.J.S.A. 2A:34-10).",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period after filing. The irreconcilable-differences ground requires that the differences have existed for at least 6 months; the separation ground requires living apart for at least 18 months (N.J.S.A. 2A:34-2).",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "separationRequiredDays": null,
+    "simplified": {
+      "text": "No simplified or summary divorce procedure; uncontested divorces follow the regular Family Division process.",
+      "url": "https://www.njcourts.gov/self-help/divorce/contested-uncontested"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Parties with minor children must pay the $25 fee and attend a parenting program, unless a temporary or final restraining order exists between them or a signed property settlement agreement is filed with the complaint, answer or other first filing.",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "uncertain": [
+      "njcourts.gov returns 403 to automated clients (curl and WebFetch); all NJ Courts pages were read from Internet Archive copies of the official URLs (divorce page snapshot 2026-10-05).",
+      "The statutes (N.J.S.A. 2A:34-2, 2A:34-10, 22A:2-...) were not read on an official legislature site; residency and grounds are taken from the official NJ Courts self-help page.",
+      "Fee waiver form title is described on the page as the 'Fee Waiver form'; the exact form number was not read.",
+      "separationRequiredDays left null: an 18-month separation is only one of several grounds, not a requirement."
+    ]
+  },
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "abbr": "NY",
+    "filingFee": 210,
+    "responseFee": 0,
+    "feeScope": "statewide",
+    "feeText": "Supreme Court index number: $210 (CPLR § 8018(a)(1)(i), (3)). The court system states that an uncontested divorce costs at least $335 in court filing fees (index number $210 + request for judicial intervention $95 + note of issue $30, CPLR § 8020(a)). A party who did not start the case pays no filing fee.",
+    "feeUrl": "https://www.nycourts.gov/statewide-forms/filing-fees",
+    "otherFees": [
+      {
+        "what": "Request for judicial intervention (CPLR § 8020(a))",
+        "amount": 95,
+        "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+      },
+      {
+        "what": "Note of issue (CPLR § 8020(a)); $125 where no RJI is required",
+        "amount": 30,
+        "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+      },
+      {
+        "what": "Motion or cross-motion (CPLR § 8020(a))",
+        "amount": 45,
+        "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+      },
+      {
+        "what": "Stipulation of settlement (CPLR § 8020(d))",
+        "amount": 35,
+        "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+      },
+      {
+        "what": "Minimum total court fees for an uncontested divorce (court system statement)",
+        "amount": 335,
+        "url": "https://www.nycourts.gov/help/family-issues-divorce/filing-uncontested-divorce"
+      }
+    ],
+    "waiver": {
+      "name": "Poor person's relief (CPLR 1101): notice of motion with sworn affidavit; no official statewide form (sample Supreme Court form provided)",
+      "url": "https://www.nycourts.gov/help/representing-yourself-court/fee-waivers-poor-persons-relief"
+    },
+    "residency": {
+      "text": "Residency of 2 continuous years before filing for either spouse, or 1 year if the couple married in New York, lived in New York as spouses, or the grounds arose in New York; or both residents when the grounds arose in New York (Dom. Rel. Law § 230).",
+      "url": "https://www.nysenate.gov/legislation/laws/DOM/230"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period after filing. The no-fault ground requires that the relationship has broken down irretrievably for at least six months, stated under oath (Dom. Rel. Law § 170(7)).",
+      "url": "https://www.nysenate.gov/legislation/laws/DOM/170"
+    },
+    "simplified": {
+      "text": "No summary dissolution statute; the court system publishes an uncontested divorce forms packet for agreed cases.",
+      "url": "https://www.nycourts.gov/forms/uncontested-divorce-forms-packet"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide mandatory parenting class was found in the statutes read.",
+      "url": null
+    },
+    "uncertain": [
+      "nycourts.gov and nysenate.gov block automated clients; pages were read in a browser session on the official sites.",
+      "Waiver: the court system states there is no official form for the fee waiver request; sample forms only.",
+      "Parenting class: not verified (no statute located); set to null."
+    ]
+  },
+  {
+    "slug": "north-carolina",
+    "name": "North Carolina",
+    "abbr": "NC",
+    "filingFee": 225,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District court civil costs of $150 ($16 facilities fee under G.S. 7A-305(a)(1), $4 court information technology fee under (a)(1a), $130 General Court of Justice fee under (a)(2)) plus the $75 absolute-divorce cost under G.S. 7A-305(a2), for $225 in total.",
+    "feeUrl": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_7A/GS_7A-305.html",
+    "otherFees": [],
+    "waiver": {
+      "name": "Petition to Proceed as an Indigent (AOC-G-106)",
+      "url": "https://www.nccourts.gov/assets/documents/forms/g106.pdf"
+    },
+    "residency": {
+      "text": "The plaintiff or the defendant must have resided in North Carolina for at least six months before the complaint is filed (G.S. 50-8; also G.S. 50-6).",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-8.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "There is no waiting period after filing, but an absolute divorce requires that the spouses have lived separate and apart for one year before filing (G.S. 50-6).",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-6.html"
+    },
+    "separationRequiredDays": 365,
+    "simplified": {
+      "text": "No separate simplified or summary divorce procedure was found in Chapter 50; the one-year-separation divorce under G.S. 50-6 is the standard no-fault route.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statute requiring a parenting class in divorce was found; some judicial districts may require one by local rule.",
+      "url": null
+    },
+    "uncertain": [
+      "ncleg.gov returned 403 to automated clients on 2026-10-08/09; G.S. 50-6, 50-8 and 7A-305 were read from the Internet Archive 2026 copies of the official ncleg.gov URLs.",
+      "Answer fee: G.S. 7A-305 sets no fee for filing an answer; whether a counterclaim incurs costs was not checked, so responseFee is null.",
+      "Fee waiver form AOC-G-106: the URL is the official nccourts.gov form URL listed in the Internet Archive index; the PDF itself could not be downloaded (nccourts.gov blocks bots and the archive copy failed), so the form title is from the court's form number and was not read on the form.",
+      "Parenting class: no statewide requirement verified; local rules not checked."
+    ]
+  },
+  {
+    "slug": "ohio",
+    "name": "Ohio",
+    "abbr": "OH",
+    "filingFee": 275,
+    "responseFee": 43,
+    "feeScope": "county (Franklin County)",
+    "feeText": "Franklin County Court of Common Pleas, Division of Domestic Relations, Local Rule 2 (Security for costs), effective 10/27/2025: deposit of $275.00 to institute a divorce, $225.00 for a dissolution, $200.00 for legal separation or annulment; $43.00 deposit by a party instituting a counterclaim.",
+    "feeUrl": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs",
+    "otherFees": [
+      {
+        "what": "Petition for dissolution, security for costs (Franklin County Local Rule 2)",
+        "amount": 225,
+        "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs"
+      },
+      {
+        "what": "Personal service within Franklin County (Local Rule 2)",
+        "amount": 30,
+        "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs"
+      },
+      {
+        "what": "Post-judgment motion to modify, vacate or enforce (Local Rule 2)",
+        "amount": 175,
+        "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/2-Security-for-costs"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit of Indigency (Franklin County Domestic Relations form E5145-4800, 02-2025)",
+      "url": "https://drj.fccourts.org/files/assets/courtofpleas/v/1/court-services/documents/forms/affidavit-of-indigency_e5145-4800_02-2025.pdf"
+    },
+    "residency": {
+      "text": "The plaintiff in an action for divorce or annulment must have been a resident of Ohio for at least six months immediately before filing the complaint (R.C. 3105.03).",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3105.03"
+    },
+    "waitingPeriod": {
+      "days": 42,
+      "text": "No action for divorce may be heard and decided until 42 days after service of process, or 28 days after the last publication of notice (Ohio Civ.R. 75(K)). In a dissolution, both spouses must appear before the court not less than 30 nor more than 90 days after the petition is filed (R.C. 3105.64(A)).",
+      "url": "https://www.supremecourt.ohio.gov/docs/LegalResources/Rules/civil/CivilProcedure.pdf"
+    },
+    "simplified": {
+      "text": "Dissolution of marriage: a joint petition with a signed separation agreement; both spouses appear and acknowledge the agreement under oath 30 to 90 days after filing (R.C. 3105.61 to 3105.64).",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3105.64"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Franklin County: all parents in divorce, legal separation or dissolution actions with minor children must attend the seminar for separating parents within 45 days before or after filing or service; completion is required before the final hearing unless waived for good cause (Franklin County Dom. Rel. Local Rule 26). Requirement is set by local rule and varies by county.",
+      "url": "https://drj.fccourts.org/Administration/Local-Rules/Domestic-Court-Rules/26-Seminar-for-separating-parents"
+    },
+    "uncertain": [
+      "Franklin County chosen as the most populous Ohio county (it overtook Cuyahoga in Census estimates); verify if the site prefers Cuyahoga.",
+      "Franklin County amounts are deposits (security for costs) under Local Rule 2, not final costs; final court costs may differ.",
+      "codes.ohio.gov and supremecourt.ohio.gov refused connections on 2026-10-08; R.C. 3105.03, 3105.64 and Civ.R. 75(K) were read from Internet Archive 2026 copies of the official URLs. The Franklin County rules were read with WebFetch on drj.fccourts.org.",
+      "responseFee 43 is the deposit for a counterclaim; a plain answer has no deposit listed in Local Rule 2."
+    ]
+  },
+  {
+    "slug": "pennsylvania",
+    "name": "Pennsylvania",
+    "abbr": "PA",
+    "filingFee": 334.73,
+    "responseFee": 144.54,
+    "feeScope": "county (Philadelphia County)",
+    "feeText": "Philadelphia Office of Judicial Records, Family Court, Divorce, Commencement of Action: $334.73 (base fee $189.20 under 42 Pa.C.S. § 1725(c)(2)(iii) plus statutory add-ons); Defendant First Filing: $144.54. Fee schedule effective November 12, 2025.",
+    "feeUrl": "https://www.courts.phila.gov/pdf/prothyfees.pdf",
+    "otherFees": [
+      {
+        "what": "First filing for custody, partial custody or visitation (Philadelphia)",
+        "amount": 108.13,
+        "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf"
+      },
+      {
+        "what": "Motion for appointment of permanent master (Philadelphia)",
+        "amount": 496.98,
+        "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf"
+      },
+      {
+        "what": "Praecipe to transmit record (Philadelphia)",
+        "amount": 66.22,
+        "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Application to Waive Fees and Costs (Pa.R.Civ.P. 240 / Pa.R.J.A. 1990)",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter200/s240.html"
+    },
+    "residency": {
+      "text": "At least one party must have been a bona fide resident of Pennsylvania for at least six months immediately before the action is commenced (23 Pa.C.S. § 3104(b)).",
+      "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.031.004.000..HTM"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "Mutual consent divorce: the court may grant the divorce once 90 days have elapsed from commencement of the action and each party has filed an affidavit of consent (23 Pa.C.S. § 3301(c)). Without consent, irretrievable breakdown requires the parties to have lived separate and apart for at least one year (§ 3301(d)).",
+      "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.033.001.000..HTM"
+    },
+    "separationRequiredDays": 365,
+    "simplified": {
+      "text": "No separate summary procedure; the mutual-consent divorce (23 Pa.C.S. § 3301(c)) is the fastest no-fault route.",
+      "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.033.001.000..HTM"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statutory parenting class for divorce was verified; Pennsylvania courts may order parenting education in custody cases by local rule.",
+      "url": null
+    },
+    "uncertain": [
+      "23 Pa.C.S. §§ 3104 and 3301 were read from the Internet Archive 2026 copies of the official legis.state.pa.us URLs (palegis.us refused connections).",
+      "Each additional count in a divorce complaint (e.g. custody) carries additional per-count statutory fees in Philadelphia (Notice to the Bar, https://www.courts.phila.gov/pdf/notices/2017/Notice-to-Bar-Divorce-Fees.pdf); the $334.73 is the base commencement fee only.",
+      "separationRequiredDays (365) applies only to the no-consent route under § 3301(d).",
+      "Parenting class: not verified."
+    ]
+  },
+  {
+    "slug": "texas",
+    "name": "Texas",
+    "abbr": "TX",
+    "filingFee": 350,
+    "responseFee": null,
+    "feeScope": "county (Harris County)",
+    "feeText": "Harris County District Clerk, fees due at filing of a new divorce suit, effective January 1, 2026: Divorce no children $350.00; Divorce with children $365.00 (includes the $15 domestic relations fee added to all cases involving children). Service fees not included. No separate fee for an answer is listed; a cross-action/counterclaim is $80.00.",
+    "feeUrl": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf",
+    "otherFees": [
+      {
+        "what": "Divorce with children (Harris County)",
+        "amount": 365,
+        "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf"
+      },
+      {
+        "what": "Cross-action/counterclaim (Harris County)",
+        "amount": 80,
+        "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf"
+      },
+      {
+        "what": "Motion for contempt (Harris County)",
+        "amount": 80,
+        "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Statement of Inability to Afford Payment of Court Costs or an Appeal Bond (Tex. R. Civ. P. 145)",
+      "url": "https://www.txcourts.gov/media/1456942/statement-of-inability-to-afford-payment-of-court-costs-or-an-appeal-bond-bilingual.pdf"
+    },
+    "residency": {
+      "text": "Either spouse must have been a domiciliary of Texas for the preceding 6 months and a resident of the filing county for the preceding 90 days (Fam. Code § 6.301).",
+      "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.6.htm#6.301"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "The court may not grant a divorce before the 60th day after the suit was filed, except in certain family-violence cases (Fam. Code § 6.702).",
+      "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.6.htm#6.702"
+    },
+    "simplified": {
+      "text": "No summary or simplified divorce procedure in the Family Code; agreed divorces follow the ordinary procedure.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "Not required statewide: in a suit affecting the parent-child relationship the court may order a parent education and family stabilization course of 4 to 12 hours (Fam. Code § 105.009); some counties require it by local rule.",
+      "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.105.htm#105.009"
+    },
+    "uncertain": [
+      "No statewide divorce filing fee: amount is the Harris County District Clerk's (most populous county); other counties differ.",
+      "statutes.capitol.texas.gov is a JavaScript app; text of Fam. Code ch. 6 and ch. 105 read from the legislature's static copy at tcss.legis.texas.gov/resources/FA/htm/.",
+      "txcourts.gov blocked the automated download of the waiver form; the form name and URL come from the official site's index, not from the PDF text.",
+      "Response fee: no answer fee appears in the Harris County schedule; set to null.",
+      "Local-rule parenting class requirements in individual counties not verified."
+    ]
+  },
+  {
+    "slug": "virginia",
+    "name": "Virginia",
+    "abbr": "VA",
+    "filingFee": 60,
+    "responseFee": 0,
+    "feeScope": "statewide (base clerk's fee; local add-on fees vary by circuit court)",
+    "feeText": "In all divorce and separate maintenance proceedings the circuit court clerk's fee chargeable to the plaintiff is $60, $10 of which goes to the Courts Technology Fund; no fee is charged for a counterclaim or any other responsive pleading in a divorce (Va. Code § 17.1-275(A)(26)). Other statutory and local add-on fees (e.g. law library, courthouse, service) are not included.",
+    "feeUrl": "https://law.lis.virginia.gov/vacode/title17.1/chapter2/section17.1-275/",
+    "otherFees": [
+      {
+        "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)",
+        "amount": 12,
+        "url": "https://www.vacourts.gov/caseinfo/cccivilfeeshelp.html"
+      }
+    ],
+    "waiver": {
+      "name": "Petition for Proceeding in Civil Case Without Payment of Fees or Costs (Form CC-1414)",
+      "url": "https://www.vacourts.gov/forms/circuit/cc1414.pdf"
+    },
+    "residency": {
+      "text": "One of the parties must have been an actual bona fide resident and domiciliary of Virginia for at least six months before filing (Va. Code § 20-97).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-97/"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period after filing, but a no-fault divorce requires living separate and apart without cohabitation for one year, or six months if there is a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/"
+    },
+    "separationRequiredDays": 365,
+    "simplified": {
+      "text": "No summary procedure; the shortened route is the six-month separation divorce for spouses with a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Where custody, visitation or support of a child is contested, the parties must show they attended within the prior 12 months, or will attend within 45 days, an educational seminar approved by the Office of the Executive Secretary of the Supreme Court of Virginia; in uncontested cases the court may require it only for good cause (Va. Code § 20-103; § 16.1-278.15).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-103/"
+    },
+    "uncertain": [
+      "The total amount collected in Fairfax County (most populous) including local add-ons was not verified: the vacourts.gov per-court fee PDFs and fee calculator could not be retrieved; filingFee is the statewide base clerk's fee only.",
+      "separationRequiredDays = 365 is the general rule; it is 180 days with a separation agreement and no minor children (§ 20-91(A)(9)(a)).",
+      "vacourts.gov circuit civil fee help page read from the Internet Archive 2026 copy."
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+{
+ "slug": "iowa",
+ "name": "Iowa",
+ "abbr": "IA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Claims are barred unless filed with the clerk within the later of 4 months after the second publication of the notice to creditors or, for reasonably ascertainable creditors, 1 month after notice is mailed (Iowa Code § 633.410).",
+  "url": "https://www.legis.iowa.gov/docs/code/633.410.pdf"
+ },
+ "earliestClose": {
+  "text": "Final settlement must be made within 3 years after the second publication of the notice to creditors unless the court orders otherwise (Iowa Code § 633.473); no earlier date is fixed beyond the 4-month claims bar of § 633.410.",
+  "url": "https://www.legis.iowa.gov/docs/code/633.473.pdf"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Distribution by affidavit 40 days after death when the gross value of the decedent's personal property passing by will or intestacy is $50,000 or less and there is no real property, and no administration is pending (Iowa Code § 633.356). Not indexed.",
+  "url": "https://www.legis.iowa.gov/docs/code/633.356.pdf"
+ },
+ "simplified": {
+  "text": "Administration of small estates under Iowa Code chapter 635 when gross probate assets in Iowa do not exceed $200,000: letters are issued by the clerk on petition (Iowa Code § 635.1).",
+  "url": "https://www.legis.iowa.gov/docs/code/635.1.pdf"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Clerk court costs equal to 0.2% of the value of the probate assets listed in the report and inventory (Iowa Code § 633.31(3)); non-probate assets such as joint tenancy property and beneficiary-designated accounts are excluded.",
+  "url": "https://www.legis.iowa.gov/docs/code/633.31.pdf"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Reasonable fees set by the court, not exceeding 6% of the first $1,000, 4% from $1,000 to $5,000 and 2% above $5,000 of the gross assets listed in the probate inventory (life insurance excluded unless payable to the estate) (Iowa Code § 633.197); extra allowances for extraordinary services (Iowa Code § 633.199).",
+  "url": "https://www.legis.iowa.gov/docs/code/633.197.pdf"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "Reasonable fee set by the court, not exceeding the personal representative schedule of § 633.197 (Iowa Code § 633.198), plus extraordinary services (Iowa Code § 633.199).",
+  "url": "https://www.legis.iowa.gov/docs/code/633.198.pdf"
+ },
+ "uncertain": [
+  "Date the $50,000 affidavit limit took effect is not shown in the 2026 Iowa Code text; smallEstate.effective = null (section last amended by 2025 Acts ch 148, retroactive to January 1, 2025)."
+ ]
+}

@@ -1,0 +1,138 @@
+{
+  "slug": "washington",
+  "name": "Washington",
+  "abbr": "WA",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, economic table of per-child amounts by combined monthly net income (RCW 26.19.020)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Gross monthly income from all sources (salaries, wages, commissions, deferred compensation, overtime, bonuses, dividends, interest, capital gains, pensions, Social Security, workers' compensation, unemployment, maintenance received, self-employment...) excluding new spouse/partner income, child support received, gifts and prizes, TANF, SSI, food stamps, etc. (RCW 26.19.071(3)-(4)). Net income = gross minus federal and state income taxes, FICA, mandatory pension and union dues, mandatory state insurance premiums (incl. paid family leave and long-term care trust), industrial insurance premiums, maintenance paid, up to $5,000 a year of voluntary retirement contributions, and normal business expenses and self-employment taxes (RCW 26.19.071(5)).",
+  "period": "monthly",
+  "maxChildren": 5,
+  "schedule": {
+    "file": "cs-schedules/washington.json",
+    "columns": "combined monthly net income, then the PER-CHILD monthly amount for a family of 1, 2, 3, 4 and 5 children (multiply by the number of children for the total basic obligation). The table effective January 1, 2026 has no age columns: the former 0-11 / 12-18 split no longer exists.",
+    "minIncome": 2200,
+    "maxIncome": 50000,
+    "step": 100,
+    "lookup": "bracket",
+    "lookupRule": "The statute prints rows every $100 of combined monthly net income and gives no interpolation or rounding rule; RCW 26.19.020 is silent on amounts between rows.",
+    "belowMin": {
+      "rule": "For combined monthly net income below $2,200 the obligation is based on the resources and living expenses of each household; minimum support may not be less than $50 per child per month except when allowed by RCW 26.19.065(2) (RCW 26.19.020).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The table is presumptive up to and including $50,000 of combined monthly net income; above $50,000 the court may exceed the $50,000 amount on written findings of fact (RCW 26.19.020; RCW 26.19.065(3))."
+    },
+    "effective": "2026-01-01",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.020"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Limits of RCW 26.19.065: total support for all children not above 45% of the parent's net income except for good cause; presumptive minimum $50 per child per month; self-support reserve 180% of the federal poverty level for one person (no dollar value printed).",
+    "params": {
+      "maxPctOfNetIncome": 45,
+      "minimumPerChildMonthly": 50,
+      "selfSupportReservePctOfPovertyLevel": 180,
+      "selfSupportReserveMonthly": null
+    },
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.065"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "No formula: the court may deviate from the standard calculation when the child spends a significant amount of time with the obligor, considering the obligor's increased and the recipient's decreased expenses, but not if it leaves the receiving household unable to meet the child's basic needs or the child receives TANF (RCW 26.19.075(1)(d)).",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.075"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "health care costs shared in proportion to income, outside the table",
+    "text": "The basic obligation is allocated by each parent's share of combined net income (RCW 26.19.080(1)). Health care costs, day care and special child-rearing expenses (tuition, long-distance visitation transport) are not in the table and are shared in the same proportion; a day-care overpayment of at least 20% of annual cost must be reimbursed (RCW 26.19.080(2)-(3)).",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.080"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "Presumptive minimum of $50 per child per month when the parent's net income is below 180% of the federal poverty guideline for a one-person family, unless unjust. The basic support obligation may not reduce the paying parent's net income below a self-support reserve of 180% of the federal poverty level for one person, except for the $50-per-child minimum. No parent's total support for all children may exceed 45% of net income except for good cause (RCW 26.19.065(1)-(2)).",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.065"
+  },
+  "statute": {
+    "cite": "RCW 26.19.020, .065, .071, .075, .080",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.020"
+  },
+  "guidelinesUrl": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.020",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Postsecondary educational support is discretionary; the schedule is only advisory for it, and the child must be enrolled, actively pursuing studies and in good academic standing (RCW 26.19.090).",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.090"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1060.0,
+      "what": "paying parent's (A) monthly share of the basic obligation (net incomes)",
+      "source": "Computed by hand from the RCW 26.19.020 table effective 2026-01-01: combined net $6,000, two-children family = $795 per child x 2 = $1,590; A's share 4000/6000 x 1590 = 1,060.00 (RCW 26.19.080(1)). No official worked example in the statute."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 0,
+        "children": 5,
+        "overnightsA": 0
+      },
+      "expected": 1350,
+      "what": "paying parent's support limited to 45% of his or her net income",
+      "source": "Computed by hand: $3,000 row, five-children family = $298 per child x 5 = $1,490, all owed by A; limit 45% x 3,000 = $1,350 (RCW 26.19.065(1))."
+    },
+    {
+      "inputs": {
+        "incomeA": 200,
+        "incomeB": 2000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 50,
+      "what": "paying parent's support raised to the $50 per child presumptive minimum",
+      "source": "Computed by hand: $2,200 row, one child $477; A share 200/2200 = $43.36, below $50 per child (RCW 26.19.065(2); RCW 26.19.020)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "A new economic table took effect January 1, 2026 (Laws of 2025, ch. 272, secs. 14 and 16): it runs to $50,000 of combined monthly net income and drops the old age-based columns.",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.065"
+    },
+    {
+      "text": "The table gives a per-child amount that falls as family size grows: at $6,000 combined net income it is $1,048 for one child but $795 per child in a two-child family (RCW 26.19.020).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.020"
+    },
+    {
+      "text": "Neither parent's total child support for all children may exceed 45% of net income except for good cause, such as substantial wealth or larger families (RCW 26.19.065(1)).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.065"
+    },
+    {
+      "text": "Up to $5,000 a year of voluntary retirement contributions can be deducted from gross income if there is a one-year pattern of contributions (RCW 26.19.071(5)(h)).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.071"
+    },
+    {
+      "text": "Agreement of the parties alone is not an adequate reason to deviate from the standard calculation (RCW 26.19.075(5)).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.19.075"
+    }
+  ],
+  "uncertain": [
+    "The brief asked for two age columns (0-11 and 12-18). The table in force since January 1, 2026 (RCW 26.19.020 as amended by 2025 c 272 s 14) has a single per-child column for each family size of 1 to 5 children, so cs-schedules/washington.json has columns [income, perChild_1childFamily, perChild_2, perChild_3, perChild_4, perChild_5].",
+    "The self-support reserve is defined as 180% of the federal poverty level for one person (RCW 26.19.065(2)(b)); no dollar figure is printed in the statute, so selfSupportReserve is null.",
+    "Families with more than 5 children are not covered by the table; the rule for them was not found in RCW 26.19.020.",
+    "The general age at which support ends (18 / high school, RCW 26.09.170) was not read; only the postsecondary rule (RCW 26.19.090) was.",
+    "Official DCS/AOC worksheet calculator not checked; officialCalculatorUrl left null."
+  ]
+}

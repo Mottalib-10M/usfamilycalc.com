@@ -1,0 +1,26 @@
+{
+  "slug": "maine", "name": "Maine", "abbr": "ME", "verified": "2026-10-08",
+  "agency": { "name": "Maine Workers' Compensation Board", "url": "https://www.maine.gov/wcb/Departments/claims/state_aww.html" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "2/3 of the employee's gross average weekly wages for injuries on or after January 1, 2013 (39-A M.R.S. § 212(1-A)); injuries before 2013 are paid 80% of after-tax average weekly wage (§ 212(1)). Maximum is $441 or 125% of the state average weekly wage, whichever is higher, for injuries on or after January 1, 2020 (§ 211).",
+    "max": 1561.40, "min": null, "minText": "Maine has no minimum weekly benefit for total incapacity in 39-A M.R.S. § 211-212.",
+    "effective": "2026-07-01", "periodLabel": "payment period July 1, 2026 - June 30, 2027, injuries on or after January 1, 2020 (July 1, 2025 - June 30, 2026: $1,498.55)",
+    "url": "https://www.maine.gov/wcb/Departments/claims/saww/2026_SAWW_Notice_rev_8-14-26.pdf", "asOf": "2026-07-01"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 14, "text": "Compensation is not payable for the first 7 days of incapacity (firefighters are paid from the date of incapacity); if incapacity continues for more than 14 days, compensation is allowed from the date of incapacity (39-A M.R.S. § 204).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec204.html" },
+  "ttdDuration": { "maxWeeks": null, "text": "Total incapacity benefits are paid for the duration of the incapacity (39-A M.R.S. § 212(1-A)). Partial incapacity benefits for injuries on or after January 1, 2020 stop after 624 combined weeks of total and partial benefits, extendable by the Board for extreme financial hardship (§ 213(1)(C)).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec212.html" },
+  "ppd": { "text": "Partial incapacity for injuries on or after January 1, 2020 is paid at 2/3 of the difference between gross pre-injury weekly wages and what the employee is able to earn after the injury, up to the § 211 maximum, for up to 624 weeks (39-A M.R.S. § 213(1)(C)). Specific-loss benefits for listed body parts are paid under § 212 schedules administered by the Board (Specific Loss Benefits, § 212).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec213.html" },
+  "statute": { "cite": "39-A M.R.S. §§ 204, 211, 212, 213", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec211.html" },
+  "facts": [
+    { "text": "Maine's state average weekly wage as of July 1, 2026 is $1,249.12 and the annual cost-of-living adjustment multiplier is 1.04194054 (Workers' Compensation Board SAWW notice, revised 8/14/26).", "url": "https://www.maine.gov/wcb/Departments/claims/saww/2026_SAWW_Notice_rev_8-14-26.pdf" },
+    { "text": "The maximum depends on the injury date: 125% of SAWW for injuries since January 1, 2020, 100% for 2013-2019 injuries and 90% before 2013 (39-A M.R.S. § 211).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec211.html" },
+    { "text": "Loss of both eyes, both legs or feet, or both arms or hands is conclusively presumed to be permanent total incapacity for 800 weeks from the date of injury (39-A M.R.S. § 212(2)).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec212.html" },
+    { "text": "The employer initially selects the health care provider, but after 10 days of care the employee may switch to a provider of his or her choice (39-A M.R.S. § 206(1)-(2)).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec206.html" },
+    { "text": "Firefighters are exempt from the 7-day waiting period and are paid from the first day of incapacity (39-A M.R.S. § 204).", "url": "https://legislature.maine.gov/statutes/39-A/title39-Asec204.html" }
+  ],
+  "uncertain": [
+    "The brief lists Maine among after-tax states, but 39-A M.R.S. § 212(1-A) sets 2/3 of gross AWW for injuries on or after January 1, 2013; 80% of after-tax AWW applies only to pre-2013 injuries.",
+    "The SAWW notice gives the maximum by payment period (July 1, 2026 - June 30, 2027) because Maine adjusts benefits annually; the $1,561.40 figure is the maximum for injuries on or after January 1, 2020 during that period."
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "slug": "illinois",
+  "name": "Illinois",
+  "abbr": "IL",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly net income schedule (HFS Schedule of Basic Obligations)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Gross income is all income from all sources except means-tested benefits (TANF, SSI, SNAP) and benefits or income received for other children in the household; social security disability/retirement benefits paid for the subject child count in the disabled or retired parent's income (750 ILCS 5/505(a)(3)(A)). Net income is gross income minus the standardized tax amount (federal and state income tax for a single person with standard deduction, plus Social Security and Medicare; the parent with the majority of parenting time is deemed to claim the child), read from the HFS Gross to Net Income Conversion Table, or minus an individualized tax amount by stipulation or court determination (505(a)(3)(B)-(E)). Net income is then reduced by multi-family adjustments and spousal maintenance (505(a)(3)(F)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/illinois.json",
+    "columns": "combined monthly net income bracket (low end; bracket = low to low + 49.99), then basic child support obligation for 1..6 children",
+    "minIncome": 25,
+    "maxIncome": 27374.99,
+    "step": 50,
+    "rows": 547,
+    "lookup": "bracket",
+    "lookupRule": "The HFS schedule is published as $50 income brackets (e.g. 5,975.00 - 6,024.99); 750 ILCS 5/505(a)(1.5)(C) says to select the corresponding amount for the parties' combined monthly net income, so the amount of the bracket containing the income applies.",
+    "belowMin": {
+      "rule": "750 ILCS 5/505(a)(3.3a): rebuttable presumption of a minimum order of $40 per month per child, maximum $120 per month in total, for an obligor whose actual or imputed gross income is at or below 75% of the HHS poverty guideline for one person; (3.3b): zero-dollar order presumed for a parent with no gross income, only means-tested assistance, a proven disability, incarceration or institutionalization. The 2026 Addendum states 75% of the 2026 guideline for one person is $998 gross per month (about $884 net).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "750 ILCS 5/505(a)(3.5): if combined adjusted net income exceeds the highest level of the schedule, the court may use its discretion, but the basic obligation may not be less than the amount at the highest level of the schedule (bracket 27,325.00-27,374.99 in the 2026 schedule)."
+    },
+    "effective": "2026-03-20",
+    "edition": "2026 Illinois Schedule of Basic Obligations (HFS), based on the 2026 Addendum by Jane Venohr (Mar. 13, 2026)",
+    "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/childsupport/parents/2026ilschedofbobligations.pdf",
+    "netIncomeConversionTable": {
+      "text": "Net income is normally read from the HFS 2026 Gross to Net Income Conversion Table Using Standardized Tax Amounts, which has separate columns for the parent with and without the majority of parenting time and by number of children; it is updated every year (2026 edition uses 2026 IRS and Illinois withholding formulas).",
+      "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/childsupport/parents/2026grosstonetincome.pdf",
+      "addendumUrl": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/childsupport/parents/2026addendumbosnit.pdf"
+    },
+    "checkedRows": [
+      12175,
+      6675,
+      18925,
+      24275,
+      3375,
+      675,
+      24025,
+      13275,
+      25,
+      27325
+    ]
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 146,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "750 ILCS 5/505(a)(3.8): if each parent exercises 146 or more overnights per year, the basic obligation is multiplied by 1.5; each parent's share (by percentage of combined net income) is multiplied by the percentage of time the child spends with the other parent, and the two amounts are offset, the parent owing more paying the difference. HFS publishes a Shared Physical Care Support Obligation Worksheet.",
+    "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/sitecollectiondocuments/standalonesharedphysicalcaresupportobligationworksheet.pdf"
+  },
+  "addOns": {
+    "childcare": "court may order; prorated by share of combined net income and may be added to the basic obligation",
+    "healthInsurance": "premium attributable to the child added to the basic obligation and allocated by net income",
+    "text": "750 ILCS 5/505(a)(3.7): reasonable child care for work, education or job search is prorated by each parent's share of combined net income, minus the federal child care tax credit if allowed. (a)(4)(D)-(E): the health insurance premium attributable to the child (or premium divided by persons covered, times children covered) is added and allocated by net income; if the obligor pays it, the obligee's share is deducted from the obligor's support, if the obligee pays it, the obligor's share is added. (a)(3.6): extracurricular and school expenses may be ordered in addition.",
+    "url": "https://hfs.illinois.gov/childsupport/parents/incomeshares.html"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 40,
+    "minimumOrderText": "$40 per month per child, $120 per month maximum in total, for obligors at or below 75% of the federal poverty guideline for one person (505(a)(3.3a)); 2026 guideline for one person $15,960 per year or $1,330 per month per the 2026 Addendum.",
+    "rule": "Low-income adjustment is built into the schedule: the 2026 Addendum says the first tier aligns with after-tax income at 75% of the 2026 FPG for one person. Below that threshold the $40-per-child minimum order applies (505(a)(3.3a)).",
+    "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/childsupport/parents/2026addendumbosnit.pdf"
+  },
+  "multiFamily": {
+    "text": "750 ILCS 5/505(a)(3)(F)(I): a parent supporting a child not shared with the other parent gets a net-income deduction: with a court order, the support actually paid; without an order, the lesser of the support actually paid or 75% of the guideline support computed on that parent's income alone, unless this would cause economic hardship to the child.",
+    "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/sitecollectiondocuments/standalonesupportobligationworksheet.pdf"
+  },
+  "statute": {
+    "cite": "750 ILCS 5/505",
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K505"
+  },
+  "guidelinesUrl": "https://hfs.illinois.gov/childsupport/parents/incomeshares.html",
+  "officialCalculatorUrl": "https://hfs.illinois.gov/childsupport/parents/childsupportestimator.html",
+  "emancipation": {
+    "text": "For 750 ILCS 5/505, 'child' includes any child under 18 and any child aged 19 or younger who is still attending high school.",
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K505"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1205.33,
+      "what": "parent A's monthly share of the basic child support obligation (net incomes)",
+      "source": "Computed by hand from the 2026 HFS schedule: combined net $6,000 falls in bracket 5,975.00-6,024.99, two children = $1,808; A's share 4000/6000; 1808 x 2/3 = 1205.33. No official worked example on the HFS schedule."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 146,
+        "overnightsB": 219
+      },
+      "expected": 723.2,
+      "what": "monthly transfer from parent A under shared physical care (505(a)(3.8)), no add-ons",
+      "source": "Computed by hand following the HFS Shared Physical Care worksheet: 1808 x 1.5 = 2712; A 2712 x 2/3 x 219/365 = 1084.80; B 2712 x 1/3 x 146/365 = 361.60; difference 723.20."
+    },
+    {
+      "inputs": {
+        "incomeA": 800,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 80,
+      "what": "payer's monthly minimum order ($40 per child) when the payer's income is at or below 75% of the poverty guideline",
+      "source": "Computed by hand from 750 ILCS 5/505(a)(3.3a): 2 x $40 = $80. The calculator treats a payer net income at or below about $884 a month (2026 Addendum: 75% of the 2026 FPG = $998 gross, about $884 net) as within the rule."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Illinois switched from a percentage-of-obligor-net-income guideline to income shares effective July 1, 2017 (Public Act 99-0764).",
+      "url": "https://hfs.illinois.gov/childsupport/parents/incomeshares.html"
+    },
+    {
+      "text": "Since 2024 HFS updates both the Gross to Net Income Conversion Table and the Schedule of Basic Obligations every year; the current versions took effect March 20, 2026.",
+      "url": "https://hfs.illinois.gov/childsupport/parents/incomeshares.html"
+    },
+    {
+      "text": "The 2026 schedule was extended to combined net income up to $27,374.99 per month (previously $26,724.99).",
+      "url": "https://hfs.illinois.gov/content/dam/soi/en/web/hfs/childsupport/parents/2026addendumbosnit.pdf"
+    },
+    {
+      "text": "If a parent has insufficient work history, potential income is presumed to be 75% of the HHS poverty guideline for a family of one (505(a)(3.2a)); incarceration is not voluntary unemployment.",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K505"
+    },
+    {
+      "text": "In split physical care, two worksheets are computed as if each parent's child were the only child, and the smaller obligation is subtracted from the larger (505(a)(3.9)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K505"
+    }
+  ],
+  "uncertain": [
+    "750 ILCS 5/505 text was read from the Wayback Machine copy of the official ilga.gov page captured 2025-06-28 (https://web.archive.org/web/20250628223602/https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K505) because ilga.gov refused connections from our network on 2026-10-08; its source note ends with P.A. 103-967, eff. 1-1-25. Amendments after June 2025 are not checked.",
+    "The brief cites shared physical care as (3.7); in the statute text read it is 505(a)(3.8) (3.7 is child care).",
+    "The 2026 Addendum says the first tier was changed from $875.00-$924.99 to $25.00-$74.99 and 'still applies to parents with a net income between $875.00 to $924.99'; the meaning of that low-income tier mechanics is not spelled out further and is not modelled here.",
+    "schedule.maxIncome holds the top of the last bracket (27374.99); the last row's low end is 27325.",
+    "Test cases are hand computations from the HFS table; neither the statute nor the HFS schedule includes a worked example.",
+    "Rows checked by eye against the HFS PDF text: 12175, 6675, 18925, 24275, 3375, 675, 24025, 13275 (random), plus first (25) and last (27325) rows; all matched."
+  ]
+}

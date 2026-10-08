@@ -1,0 +1,15 @@
+---
+/** Key figures of a state's child support guideline, from src/data/cs/<slug>.json. */
+import { cs, csCalc, usd, day } from '../../lib/kit';
+interface Props { slug: string }
+const d = cs(Astro.props.slug);
+const basis: Record<string, string> = { net: 'Net income', gross: 'Gross income', 'adjusted-gross': 'Adjusted gross', 'net-resources': 'Net resources' };
+const sh = d.shared;
+const ex = csCalc(d.slug, 5000, 3000, 1);
+---
+<dl data-chrome class="mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 text-sm sm:grid-cols-4">
+  <div class="bg-white p-3"><dt class="text-navy-600">Model</dt><dd class="mt-0.5 font-semibold text-navy-900">{d.model === 'income-shares' ? 'Income shares' : d.model === 'percent-obligor' ? 'Percentage of payer income' : d.model === 'percent-combined' ? 'Percentage of combined income' : d.model === 'melson' ? 'Melson formula' : 'State formula'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Income counted</dt><dd class="mt-0.5 font-semibold text-navy-900">{basis[d.incomeBasis] ?? 'As defined by the state'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Shared parenting</dt><dd class="mt-0.5 font-semibold text-navy-900">{sh?.method === 'cross-credit' && sh.thresholdOvernights != null ? `From ${sh.thresholdOvernights} overnights` : sh?.method === 'percent-reduction' && sh.reductionTable?.length ? `From ${sh.reductionTable[0][0]} overnights` : 'No fixed formula'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">1 child, $5,000 / $3,000</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{usd(ex.monthly)}</dd><dd class="text-xs text-navy-600">a month{d.effective ? `, rules of ${day(d.effective)}` : ''}</dd></div>
+</dl>

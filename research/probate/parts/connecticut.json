@@ -1,0 +1,46 @@
+{
+ "slug": "connecticut",
+ "name": "Connecticut",
+ "abbr": "CT",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Connecticut has no general claims bar date: a fiduciary who pays or distributes in good faith is not chargeable for claims presented more than 150 days after appointment of the first fiduciary (C.G.S. § 45a-356); the fiduciary may give optional notice barring a claim not presented by a date at least 90 days after the notice (C.G.S. § 45a-357); all claims are limited to 2 years after death (C.G.S. § 45a-375(c)).",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802b.htm"
+ },
+ "earliestClose": {
+  "text": "No statutory minimum; distribution is protected after the 150-day period following appointment of the first fiduciary (C.G.S. § 45a-356).",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802b.htm"
+ },
+ "smallEstate": {
+  "limit": 40000,
+  "effective": null,
+  "text": "Small estate affidavit filed in the Probate Court instead of probate when the decedent's solely owned personal property (excluding property passing outside probate) does not exceed $40,000 and the decedent owned no solely owned Connecticut real property; the court issues a decree no earlier than 30 days after sending the affidavit to the Department of Administrative Services (C.G.S. § 45a-273). Not indexed.",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802b.htm"
+ },
+ "simplified": {
+  "text": "Settlement of small estates by affidavit and Probate Court decree for personal property up to $40,000 with no solely owned real property (C.G.S. § 45a-273).",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802b.htm"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "For deaths on or after July 1, 2016 the Probate Court fee depends on the basis (greatest of inventory, succession/estate tax gross estate or Connecticut taxable estate; property passing to a surviving spouse counted at 50%): $25 up to $500; $50 up to $1,000; $50 + 1% of excess over $1,000 up to $10,000; $150 + 0.35% over $10,000 up to $500,000; $1,865 + 0.25% over $500,000 up to $2,000,000; $5,615 + 0.5% over $2,000,000 up to $8,877,000; $40,000 cap above; minimum $150 if a full estate is opened with a basis under $10,000 (C.G.S. § 45a-107(b)).",
+  "url": "https://www.cga.ct.gov/current/pub/chap_801b.htm"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "No statutory percentage schedule for executors and administrators in the Connecticut General Statutes chapters read (chap. 802, 802b); compensation is reviewed by the Probate Court as reasonable.",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802.htm"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney fees paid from the estate are reviewed by the Probate Court for reasonableness.",
+  "url": "https://www.cga.ct.gov/current/pub/chap_802.htm"
+ },
+ "uncertain": [
+  "personalRepFee/attorneyFee: no Connecticut section expressly stating 'reasonable compensation' for executors was located in the chapters read; type 'reasonable' reflects the absence of a statutory schedule.",
+  "creditorClaims.months = null: Connecticut uses a 150-day good-faith distribution period (C.G.S. § 45a-356), not a month-based bar date.",
+  "Effective date of the $40,000 small estate limit not shown in the current text; smallEstate.effective = null."
+ ]
+}

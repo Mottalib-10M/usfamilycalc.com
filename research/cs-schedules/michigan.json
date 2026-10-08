@@ -1,0 +1,204 @@
+{
+ "slug": "michigan",
+ "source": "https://www.courts.michigan.gov/4a9e90/siteassets/court-administration/standardsguidelines/foc/2025mcsfsupp.pdf",
+ "retrieved": "2026-10-08",
+ "document": "2025 Michigan Child Support Formula Supplement (2025 MCSF-S), effective January 1, 2025",
+ "period": "monthly",
+ "incomeBasis": "monthly net family income (2025 MCSF 3.02(B))",
+ "lowIncomeThreshold": 1255.0,
+ "columns": "bands per number of children (1..5, 5 = five or more): incomeAmount D, basePercentage, baseSupport A, marginalPercentage B",
+ "equation": "{ A + [ B x ( C - D ) ] } x E = G, using the band with the highest incomeAmount not exceeding C (2025 MCSF 3.02(B)(2))",
+ "belowFirstBand": "The supplement lists no band below the first incomeAmount; base support for a family income below it is not stated in the tables (see uncertain).",
+ "generalCareTables": {
+  "1": [
+   {
+    "incomeAmount": 2013.94,
+    "basePercentage": 25.0,
+    "baseSupport": 503.49,
+    "marginalPercentage": 24.92
+   },
+   {
+    "incomeAmount": 3272.65,
+    "basePercentage": 24.97,
+    "baseSupport": 817.18,
+    "marginalPercentage": 17.63
+   },
+   {
+    "incomeAmount": 4531.37,
+    "basePercentage": 22.93,
+    "baseSupport": 1039.04,
+    "marginalPercentage": 14.05
+   },
+   {
+    "incomeAmount": 7198.27,
+    "basePercentage": 19.64,
+    "baseSupport": 1413.74,
+    "marginalPercentage": 13.98
+   },
+   {
+    "incomeAmount": 9432.22,
+    "basePercentage": 18.3,
+    "baseSupport": 1726.1,
+    "marginalPercentage": 12.01
+   },
+   {
+    "incomeAmount": 17871.57,
+    "basePercentage": 15.33,
+    "baseSupport": 2739.71,
+    "marginalPercentage": 11.29
+   }
+  ],
+  "2": [
+   {
+    "incomeAmount": 2013.94,
+    "basePercentage": 38.1,
+    "baseSupport": 767.31,
+    "marginalPercentage": 37.92
+   },
+   {
+    "incomeAmount": 3272.65,
+    "basePercentage": 38.03,
+    "baseSupport": 1244.59,
+    "marginalPercentage": 24.31
+   },
+   {
+    "incomeAmount": 4531.37,
+    "basePercentage": 34.22,
+    "baseSupport": 1550.63,
+    "marginalPercentage": 20.43
+   },
+   {
+    "incomeAmount": 7198.27,
+    "basePercentage": 29.11,
+    "baseSupport": 2095.42,
+    "marginalPercentage": 20.2
+   },
+   {
+    "incomeAmount": 9432.22,
+    "basePercentage": 27.0,
+    "baseSupport": 2546.7,
+    "marginalPercentage": 17.87
+   },
+   {
+    "incomeAmount": 17871.57,
+    "basePercentage": 22.69,
+    "baseSupport": 4055.06,
+    "marginalPercentage": 16.16
+   }
+  ],
+  "3": [
+   {
+    "incomeAmount": 2013.94,
+    "basePercentage": 46.0,
+    "baseSupport": 926.41,
+    "marginalPercentage": 45.71
+   },
+   {
+    "incomeAmount": 3272.65,
+    "basePercentage": 45.89,
+    "baseSupport": 1501.82,
+    "marginalPercentage": 25.48
+   },
+   {
+    "incomeAmount": 4531.37,
+    "basePercentage": 40.22,
+    "baseSupport": 1822.52,
+    "marginalPercentage": 24.11
+   },
+   {
+    "incomeAmount": 7198.27,
+    "basePercentage": 34.25,
+    "baseSupport": 2465.41,
+    "marginalPercentage": 23.91
+   },
+   {
+    "incomeAmount": 9432.22,
+    "basePercentage": 31.8,
+    "baseSupport": 2999.45,
+    "marginalPercentage": 20.98
+   },
+   {
+    "incomeAmount": 17871.57,
+    "basePercentage": 26.69,
+    "baseSupport": 4769.92,
+    "marginalPercentage": 18.19
+   }
+  ],
+  "4": [
+   {
+    "incomeAmount": 2013.94,
+    "basePercentage": 51.3,
+    "baseSupport": 1033.15,
+    "marginalPercentage": 50.99
+   },
+   {
+    "incomeAmount": 3272.65,
+    "basePercentage": 51.18,
+    "baseSupport": 1674.94,
+    "marginalPercentage": 28.14
+   },
+   {
+    "incomeAmount": 4531.37,
+    "basePercentage": 44.78,
+    "baseSupport": 2029.15,
+    "marginalPercentage": 27.02
+   },
+   {
+    "incomeAmount": 7198.27,
+    "basePercentage": 38.2,
+    "baseSupport": 2749.74,
+    "marginalPercentage": 26.8
+   },
+   {
+    "incomeAmount": 9432.22,
+    "basePercentage": 35.5,
+    "baseSupport": 3348.44,
+    "marginalPercentage": 23.28
+   },
+   {
+    "incomeAmount": 17871.57,
+    "basePercentage": 29.73,
+    "baseSupport": 5313.22,
+    "marginalPercentage": 20.44
+   }
+  ],
+  "5": [
+   {
+    "incomeAmount": 2013.94,
+    "basePercentage": 56.5,
+    "baseSupport": 1137.88,
+    "marginalPercentage": 56.14
+   },
+   {
+    "incomeAmount": 3272.65,
+    "basePercentage": 56.36,
+    "baseSupport": 1844.47,
+    "marginalPercentage": 31.45
+   },
+   {
+    "incomeAmount": 4531.37,
+    "basePercentage": 49.44,
+    "baseSupport": 2240.31,
+    "marginalPercentage": 29.47
+   },
+   {
+    "incomeAmount": 7198.27,
+    "basePercentage": 42.04,
+    "baseSupport": 3026.15,
+    "marginalPercentage": 29.2
+   },
+   {
+    "incomeAmount": 9432.22,
+    "basePercentage": 39.0,
+    "baseSupport": 3678.57,
+    "marginalPercentage": 25.83
+   },
+   {
+    "incomeAmount": 17871.57,
+    "basePercentage": 32.78,
+    "baseSupport": 5858.3,
+    "marginalPercentage": 22.34
+   }
+  ]
+ }
+}

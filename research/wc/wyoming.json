@@ -1,0 +1,41 @@
+{
+  "slug": "wyoming", "name": "Wyoming", "abbr": "WY", "verified": "2026-10-08",
+  "agency": { "name": "Wyoming Department of Workforce Services, Workers' Compensation Division", "url": "https://dws.wyo.gov/dws-division/workers-compensation/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross actual monthly earnings (benefit paid monthly)",
+    "rateText": "TTD is paid monthly at 30% of the statewide average monthly wage or two-thirds of the employee's actual monthly earnings at the time of injury, whichever is greater, but not more than the lesser of 100% of the employee's actual monthly earnings or the statewide average monthly wage for the 12 months preceding the quarter of injury; half is paid around the 15th and half around the 30th of the month (Wyo. Stat. § 27-14-403(c)).",
+    "max": null, "min": null,
+    "maxMonthly": 5620.33, "minMonthly": 1686.10,
+    "minText": "Minimum = 30% of the statewide average monthly wage ($1,686.10 for injuries in 2026 Q4), but never more than 100% of the worker's actual monthly earnings (§ 27-14-403(c)).",
+    "effective": "2026-10-01", "periodLabel": "injuries in the fourth quarter of 2026 (October-December 2026); the rate changes every quarter (2026 Q3: max $5,204.33, min $1,561.30)",
+    "url": "https://dws.wyo.gov/dws-division/workers-compensation/employers/wage-reporting-and-coverage/", "asOf": "2026-10-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 8,
+    "text": "Disability payments are not allowed for the first three days of disability unless the incapacity extends beyond eight days; the day of injury counts unless full wages were paid for it, and no employee can be forced to use sick leave first (Wyo. Stat. § 27-14-404(d)).",
+    "url": "https://wyoleg.gov/statutes/compress/title27.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": null, "maxMonths": 24,
+    "text": "TTD for any one incident may not exceed a cumulative 24 months, unless the Division awards more in extraordinary circumstances (Wyo. Stat. § 27-14-404(a)). The statute counts months, not weeks.",
+    "url": "https://wyoleg.gov/statutes/compress/title27.pdf"
+  },
+  "ppd": {
+    "text": "Permanent partial impairment is rated under the most recent AMA Guides and paid monthly at two-thirds of the statewide average monthly wage for (impairment % x 60) months (Wyo. Stat. §§ 27-14-403(c), 27-14-405(g)). A worker who cannot return to work at 95% of pre-injury earnings and has actively sought work may then claim a permanent partial disability award based on age, education and work history (§ 27-14-405(h)-(j)).",
+    "url": "https://wyoleg.gov/statutes/compress/title27.pdf"
+  },
+  "statute": { "cite": "Wyo. Stat. §§ 27-14-403, 27-14-404, 27-14-405, 27-14-802", "url": "https://wyoleg.gov/statutes/compress/title27.pdf" },
+  "facts": [
+    { "text": "Wyoming's benefit caps change every quarter, because they are tied to the statewide average monthly wage for the 12 months before the quarter of injury (§ 27-14-403(c)).", "url": "https://dws.wyo.gov/dws-division/workers-compensation/employers/wage-reporting-and-coverage/" },
+    { "text": "Wyoming workers' compensation claims are handled by the state Department of Workforce Services, which assigns a nine-digit claim number; the injury must be reported to the employer within 72 hours and to the Division within 10 days.", "url": "https://dws.wyo.gov/dws-division/workers-compensation/injured-workers/faq/" },
+    { "text": "In permanent total disability or death cases each child receives $250.00 a month (payments after July 1, 2009), adjusted annually for inflation by the lesser of CPI or 3%, until age 21 (25 if in post-secondary education) (§ 27-14-403(b)).", "url": "https://wyoleg.gov/statutes/compress/title27.pdf" },
+    { "text": "Temporary light duty is paid at 80% of the difference between the light-duty wage and pre-injury monthly earnings (§ 27-14-403(c)).", "url": "https://wyoleg.gov/statutes/compress/title27.pdf" },
+    { "text": "A worker cannot receive TTD while receiving unemployment compensation (§ 27-14-404(d)(iii)).", "url": "https://wyoleg.gov/statutes/compress/title27.pdf" }
+  ],
+  "uncertain": [
+    "Wyoming pays monthly; weekly max/min are not published, so max/min are null and maxMonthly/minMonthly are the published 2026/QTR 4 statewide average monthly wage ($5,620.33) and 30% figure ($1,686.10) from the DWS wage table.",
+    "The DWS table is published on the employer 'Wage Reporting & Coverage' page (statewide average wage table); it is the same statewide average monthly wage referenced by § 27-14-403(c), but the page does not itself label it as the TTD maximum.",
+    "The Title 27 PDF on wyoleg.gov carries no edition date; recent amendments, if any, not checked.",
+    "Wyoming is often described as a monopolistic state fund; no DWS page stating this was read, so it is not listed as a fact."
+  ]
+}

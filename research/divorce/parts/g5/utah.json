@@ -1,0 +1,23 @@
+{
+  "slug": "utah", "name": "Utah", "abbr": "UT",
+  "filingFee": 350, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "$350 for a petition for an action under Title 81, Chapter 4, Dissolution of Marriage (Utah Code § 78A-2-301(1)(b)(iv), version effective 2026-05-06).",
+  "feeUrl": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html",
+  "otherFees": [
+    { "what": "Counterclaim when the original petition is a dissolution of marriage action (§ 78A-2-301(1)(d)(iv))", "amount": 130, "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html" },
+    { "what": "Petition for temporary separation, credited toward the divorce fee (§ 78A-2-301(1)(b)(v))", "amount": 35, "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html" },
+    { "what": "Petition or counter-petition to modify a domestic relations order (§ 78A-2-301(1)(q))", "amount": 100, "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html" }
+  ],
+  "waiver": { "name": "Waiver of fees for indigent litigants on affidavit (Utah Code § 78A-2-302)", "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S302_2024100120240501.html" },
+  "residency": { "text": "The petitioner or the petitioner's spouse must have been an actual and bona fide resident of the county of filing for at least 90 days before filing, or the petitioner stationed in Utah under military orders for at least 90 days (Utah Code § 81-4-402(1)).", "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf" },
+  "waitingPeriod": { "days": 30, "text": "The court may not enter a decree of divorce until 30 days after the petition is filed, unless it finds extraordinary circumstances (Utah Code § 81-4-402(3)(a)).", "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf" },
+  "simplified": { "text": "No summary dissolution procedure found in Utah Code Title 81, Chapter 4.", "url": null },
+  "parentingClass": { "required": true, "text": "Parties with a minor child must attend the mandatory divorce orientation course (§ 81-4-105, at least one hour) and the mandatory parenting course (§ 81-9-103): the petitioner within 60 days of filing and the respondent within 30 days of service; no decree until certificates are filed, unless waived by the court (§ 81-4-402(4)).", "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf" },
+  "uncertain": [
+    "Utah recodified its domestic relations law into Title 81 (effective 2024-09-01); former Title 30 sections are empty. Title 81 Chapter 4 was read from the chapter PDF version C81-4_2024090120240501, which includes amendments through the 2026 General Session.",
+    "Answer/response fee: § 78A-2-301 lists no fee for an answer as such; only a counterclaim fee ($130 when the original petition is a dissolution). responseFee left null.",
+    "§ 78A-2-301 has a version superseding it on 2027-01-01; the 2026-05-06 version was used.",
+    "Exact title of the Utah court fee-waiver form not verified (utcourts.gov pages returned 404/406); only the statute is cited."
+  ]
+}

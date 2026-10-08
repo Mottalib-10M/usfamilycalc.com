@@ -1,0 +1,45 @@
+{
+ "slug": "wyoming",
+ "name": "Wyoming",
+ "abbr": "WY",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 3,
+  "text": "Claims must be filed with the clerk within the time in the notice to creditors; a claimant mailed a notice must file within 3 months after first publication or 30 days after mailing, whichever is later, or the claim is barred forever (W.S. 2-7-703(a)).",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "earliestClose": {
+  "text": "The estate closes by final decree of distribution after court approval of the final report and accounting (W.S. 2-7-813), which follows the 3-month claims period of W.S. 2-7-703; no other minimum period is stated.",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "smallEstate": {
+  "limit": 400000,
+  "effective": null,
+  "text": "Not earlier than 30 days after death, distributees may collect personal property by affidavit (filed with the clerk) if the entire Wyoming estate subject to administration, less liens and encumbrances, does not exceed $400,000 and no personal representative application is pending (W.S. 2-1-201(a)). Not indexed.",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "simplified": {
+  "text": "Decree of summary distribution of personal or real property (including minerals) on application filed at least 30 days after death when the entire estate, less liens, does not exceed $400,000, with 2 weeks' published notice (W.S. 2-1-205).",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "The district court clerk charges an original filing fee of $160.00 for civil matters (W.S. 5-3-206(a)(i)); whether and how this applies to probate petitions was not confirmed.",
+  "url": "https://wyoleg.gov/statutes/compress/title05.pdf"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Fees for ordinary services computed on the probate estate accounted for: 10% of the first $1,000, 5% from $1,000 to $5,000, 3% from $5,000 to $20,000, 2% above $20,000; the court may allow more for unusual circumstances and extraordinary services (W.S. 2-7-803).",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "Attorney for the estate: same schedule as the personal representative (10% / 5% / 3% / 2%) on the probate estate accounted for, plus extraordinary services; lower fees may be negotiated (W.S. 2-7-804).",
+  "url": "https://wyoleg.gov/statutes/compress/title02.pdf"
+ },
+ "uncertain": [
+  "Wyoming statutes read from the official compiled Title 2 PDF (wyoleg.gov, last modified 2026-05-08); the effective date of the $400,000 limit in W.S. 2-1-201/2-1-205 is not shown there (smallEstate.effective = null).",
+  "Probate filing fee not confirmed: W.S. 5-3-206(a)(i) sets $160.00 for civil matters; filingFee.amount = null."
+ ]
+}

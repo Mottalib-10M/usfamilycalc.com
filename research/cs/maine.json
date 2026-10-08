@@ -1,0 +1,139 @@
+{
+  "slug": "maine",
+  "name": "Maine",
+  "abbr": "ME",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined annual gross income table giving a weekly amount per child",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Gross income from any ongoing source (salaries, wages, commissions, bonuses, dividends, pensions, Social Security, disability, workers' compensation, spousal support received from a non-parent, etc.); self-employment = gross receipts minus ordinary and necessary expenses; income may be imputed for voluntary unemployment; preexisting spousal and child support obligations are excluded from the obligor's gross income; means-tested public assistance (TANF, SSI, SNAP, general assistance) is excluded (19-A M.R.S. § 2001(5)).",
+  "period": "weekly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/maine.json",
+    "columns": "combined annual gross income, then the WEEKLY basic support entitlement PER CHILD for 1..6 children (multiply the cell by the number of children)",
+    "minIncome": 16800,
+    "maxIncome": 400000,
+    "step": 600,
+    "stepNote": "Step is $600 from $16,800 to $360,000, then $400 from $360,000 to $400,000 (673 rows).",
+    "lookup": "nearest",
+    "lookupRule": "The court or hearing officer locates the figure in the left-hand column that is closest to the parents' combined annual gross income, takes the dollar figure for the total number of children and multiplies it by the number of children (19-A M.R.S. § 2006(1)).",
+    "belowMin": {
+      "rule": "The table header states 'Self-Support Reserve (shaded area) 10% when below $16,800'. A nonprimary care provider whose annual gross income is below the federal poverty guideline for one person pays no more than 10% of his or her weekly gross income for all children (19-A M.R.S. § 2006(5)(C); 10-144 C.M.R. ch. 351, Ch. 7 § 2).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "When combined annual gross income exceeds $400,000 the table is not applicable, but the basic weekly entitlement of a child is presumed to be not less than the table amount for $400,000 (19-A M.R.S. § 2006(5)(B))."
+    },
+    "effective": "2023-02-13",
+    "url": "https://www.maine.gov/dhhs/sites/maine.gov.dhhs/files/inline-files/Maine%20Child%20Support%20Table.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of the Maine guideline used by the calculator (19-A M.R.S. §§ 2001(3-A), 2006(1), 2006(5)(D)-(D-1)).",
+    "params": {
+      "tableAmountsArePerChild": true,
+      "enhancedMultiplier": 1.5,
+      "substantiallyEqualCareMinOvernights": 182,
+      "maxCombinedAnnualIncome": 400000
+    },
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2006.html"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "For substantially equal care (both parents participate substantially equally in the child's total care, § 2001(8-A)): with equal incomes neither parent pays (§ 2006(5)(D)); with unequal incomes, the enhanced support entitlement (basic entitlement x 1.5, § 2001(3-A)) is divided in proportion to gross incomes and the higher earner pays the lower of (a) the difference between the two parental obligations and (b) the obligation computed as if the other parent had primary residential care; child care, health insurance and uninsured medical costs are shared in proportion to income (§ 2006(5)(D-1)). There is no overnight threshold in the statute. Split custody: each parent's obligation is computed for the children living with the other parent and offset (§ 2006(5)(E)).",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2006.html"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income (child care costs for each child under 12, § 2006(3)(A))",
+    "healthInsurance": "Cost of adding the child to existing coverage (or difference between self-only and family coverage) is added to the basic entitlement and shared by income (§ 2006(3)(C)).",
+    "text": "Total basic support obligation = basic support entitlement + child care costs + health insurance premiums + extraordinary medical expenses (recurring uninsured expenses over $250 per child or group of children per calendar year), divided in proportion to gross incomes (19-A M.R.S. §§ 2001(4), 2001(10), 2006(3)-(4)).",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2006.html"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "weekly",
+    "minimumOrder": null,
+    "rule": "If the nonprimary care provider's annual gross income is below the federal poverty guideline for one person, the weekly support obligation may not exceed 10% of weekly gross income. The statute says the table includes a self-support reserve (shaded area) for obligors earning $22,800 or less per year; within that area the per-child figure times the number of children is the obligor's obligation regardless of combined income, unless that gives a higher amount (19-A M.R.S. § 2006(5)(C); 10-144 C.M.R. ch. 351, Ch. 7 §§ 2-3).",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2006.html"
+  },
+  "statute": {
+    "cite": "19-A M.R.S. §§ 2001-2011 (chapter 63); 10-144 C.M.R. ch. 351, Chapter 6",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2006.html"
+  },
+  "guidelinesUrl": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c351.docx",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "A support order remains in force until the child attains 18; if the child turns 18 while attending secondary school, until the child graduates, withdraws or is expelled, or attains 19, whichever occurs first; also ends on marriage or military service (19-A M.R.S. § 1653(12)).",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec1653.html"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 769.23,
+        "incomeB": 384.62,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 198.67,
+      "what": "payer A's weekly basic support (before add-ons): table row $60,000, 2 children = $149 per child x 2 = $298 per week; A's share 40,000/60,000 = 66.67% -> $198.67 per week",
+      "source": "Computed by hand from the official table (row 60000: 199 149 119 100 88 80) and 19-A M.R.S. § 2006(1),(4). Inputs restated as WEEKLY incomes ($40,000 and $20,000 a year / 52) because the test harness reads incomes in the period of the table (weekly); expected weekly $198.67."
+    },
+    {
+      "inputs": {
+        "incomeA": 769.23,
+        "incomeB": 384.62,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 149.0,
+      "what": "payer's weekly support with substantially equal care: enhanced $298 x 1.5 = $447; obligations $298 and $149, difference $149, lower than the sole-care $198.67",
+      "source": "Computed by hand from 19-A M.R.S. §§ 2001(3-A), 2006(5)(D-1) and the official table (row $60,000: $149 per child, 2 children); 182 overnights stands for substantially equal care (calculator convention, see uncertain)."
+    },
+    {
+      "inputs": {
+        "incomeA": 7692.31,
+        "incomeB": 1923.08,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 496.0,
+      "what": "payer's weekly support above the table: combined $500,000 a year, not less than the $400,000 row ($620 per child) x 80%",
+      "source": "Computed by hand from 19-A M.R.S. § 2006(5)(B) and the official table (row $400,000). Weekly inputs = annual / 52."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Maine's table gives a weekly amount per child, which is multiplied by the number of children; the age categories (0-11 / 12-17) were repealed by PL 2017, c. 30 (19-A M.R.S. §§ 2001(11), 2006(1)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2001.html"
+    },
+    {
+      "text": "The current Child Support Table was adopted by DHHS in 10-144 C.M.R. ch. 351, Chapter 6, filing 2023-019, effective February 13, 2023, following the 2022 quadrennial review.",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/144c351.docx"
+    },
+    {
+      "text": "A parent personally providing primary care for a child under 24 months is deemed not available for employment, so income is not imputed in the absence of contrary evidence (19-A M.R.S. § 2001(5)(D)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2001.html"
+    },
+    {
+      "text": "More than 6 children is itself a listed ground for deviating from the guidelines (19-A M.R.S. § 2007(3)(B)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2007.html"
+    },
+    {
+      "text": "Uninsured medical expenses above $250 per child or group of children per calendar year are divided in proportion to the parents' incomes (19-A M.R.S. § 2001(4)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec2001.html"
+    }
+  ],
+  "uncertain": [
+    "The brief expected two age columns (0-11 / 12-17); the current official table has a single column per number of children because PL 2017, c. 30 repealed the age categories.",
+    "The PDF text layer does not show which cells are shaded (self-support reserve area); the statute says the shaded area covers obligors earning $22,800 or less per year, while the table header reads '10% when below $16,800'. Shaded cells are not identified in the JSON.",
+    "The official DHHS table PDF and the rule .docx were both parsed and match row for row (673 rows). No newer table than the February 13, 2023 filing was found on maine.gov as of 2026-10-08.",
+    "No official online calculator or official worked example was located; the test case is computed by hand.",
+    "substantiallyEqualCareMinOvernights = 182 is a calculator convention (both parents at 182-183 nights), not a statutory number: Maine defines substantially equal care by participation in the child's total care, with no overnight count (19-A M.R.S. § 2001(8-A))."
+  ]
+}

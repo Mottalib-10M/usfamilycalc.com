@@ -1,0 +1,45 @@
+{
+ "slug": "texas",
+ "name": "Texas",
+ "abbr": "TX",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "No general bar date: a claim may be presented at any time before the estate is closed unless barred by the general statutes of limitation (Tex. Est. Code § 355.001). The personal representative must publish notice to creditors within one month after letters (§ 308.051) and may send an unsecured creditor a notice; that creditor's claim is barred if not presented before the 121st day after receipt (§§ 308.054, 355.060).",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.355.htm#355.001"
+ },
+ "earliestClose": {
+  "text": "The Estates Code sets no minimum waiting period before closing; claims can be presented until the estate is closed (Tex. Est. Code § 355.001), so representatives commonly wait for the 120-day permissive-notice bar (§ 355.060).",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.355.htm#355.060"
+ },
+ "smallEstate": {
+  "limit": 75000,
+  "effective": "2017-09-01",
+  "text": "Intestate distributees may collect the estate by a small estate affidavit approved by the judge if 30 days have passed since death, no administration is pending, and the estate assets, excluding homestead and exempt property, do not exceed $75,000 (Tex. Est. Code § 205.001, as amended effective September 1, 2017). The amount is not indexed; the affidavit is for intestate estates only.",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.205.htm#205.001"
+ },
+ "simplified": {
+  "text": "A will may be probated as a muniment of title, without administration, if the estate owes no unpaid debt other than debt secured by real estate liens or administration is otherwise unnecessary (Tex. Est. Code § 257.001); a testator may also provide for independent administration free of court supervision (Tex. Est. Code § 401.001).",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.257.htm#257.001"
+ },
+ "filingFee": {
+  "amount": 360,
+  "scope": "county: Harris",
+  "text": "Harris County Clerk (probate courts): associated court filing fee of $360.00 for a new estate (probate of a will, administration, heirship, muniment, small estate).",
+  "url": "https://www.cclerk.hctx.net/Probate.aspx"
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Executors and administrators who manage the estate properly receive a 5% commission on amounts actually received or paid out in cash, capped in aggregate at 5% of the gross fair market value of the estate; no commission on cash on hand or in financial accounts at death, life insurance proceeds, or payments to heirs or legatees (Tex. Est. Code § 352.002). The court may allow reasonable compensation instead if the commission is unreasonably low or a business is managed (§ 352.003).",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.352.htm#352.002"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "The personal representative is entitled to reasonable attorney's fees necessarily incurred in connection with the proceedings and management of the estate, on proof satisfactory to the court (Tex. Est. Code § 352.051).",
+  "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.352.htm#352.051"
+ },
+ "uncertain": [
+  "statutes.capitol.texas.gov is a JavaScript application: Estates Code chapters 205, 257, 308, 352, 355 and 401 were read from the official Texas Legislative Council file server behind it (https://tcss.legis.texas.gov/resources/ES/htm/ES.<chapter>.htm); no 2025 (89th Legislature) amendment appears in these sections.",
+  "Filing fee is the Harris County Clerk's published 'associated court filing fee' as read on 2026-10-08 (no effective date shown on the page)."
+ ]
+}

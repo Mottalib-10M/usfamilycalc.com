@@ -1,0 +1,222 @@
+{
+  "slug": "idaho",
+  "name": "Idaho",
+  "abbr": "ID",
+  "verified": "2026-10-08",
+  "model": "bands-combined",
+  "modelName": "Income shares computed with marginal percentage brackets of combined annual Guidelines Income",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Guidelines Income = each parent's gross income before taxes from any source (wages, commissions, bonuses, dividends, pensions, interest, Social Security, workers' compensation, unemployment, disability, alimony/maintenance received, veteran's benefits, education grants, etc.), plus significant employment benefits and potential income if voluntarily unemployed/underemployed; overtime or a voluntary second job may be excluded under stated conditions; business income = gross receipts minus ordinary and necessary expenses (straight-line depreciation, half of self-employment tax). Minus: other court-ordered child support or maintenance, maintenance ordered in the current case, regular support paid without order, and the Guidelines amount for other children living in the home (I.R.F.L.P. 120(e)-(f)).",
+  "period": "annual",
+  "maxChildren": 5,
+  "schedule": null,
+  "percent": null,
+  "formula": {
+    "text": "Basic child support = sum over brackets of (percentage x part of combined annual Guidelines Income in that bracket), for the number of children; the brackets are the first $10,000, then four further $10,000 bands, then five $20,000 bands, then the next $290,000 (up to $440,000). Monthly amount = annual / 12 (the rule prints each bracket's monthly amount rounded to the nearest dollar). Each parent owes the total in proportion to his or her share of combined Guidelines Income; with 25% or less of overnights the non-custodial parent pays his or her share (I.R.F.L.P. 120(i)(1), (i)(3)). Above $440,000 the court considers listed factors for additional support (120(i)(7)). The schedules do not limit support for more than five children (120(i)(2)).",
+    "params": {
+      "bracketWidths": [
+        10000,
+        10000,
+        10000,
+        10000,
+        10000,
+        20000,
+        20000,
+        20000,
+        20000,
+        20000,
+        290000
+      ],
+      "pctByChildren": {
+        "1": [
+          18,
+          17,
+          15,
+          14,
+          13,
+          12,
+          9,
+          6,
+          5,
+          5,
+          5
+        ],
+        "2": [
+          26,
+          25,
+          23,
+          22,
+          20,
+          17,
+          13,
+          9,
+          8,
+          8,
+          8
+        ],
+        "3": [
+          30,
+          29,
+          27,
+          26,
+          24,
+          20,
+          16,
+          12,
+          11,
+          11,
+          11
+        ],
+        "4": [
+          33,
+          32,
+          30,
+          29,
+          27,
+          22,
+          18,
+          14,
+          13,
+          13,
+          13
+        ],
+        "5": [
+          36,
+          35,
+          33,
+          32,
+          30,
+          24,
+          20,
+          16,
+          15,
+          15,
+          15
+        ]
+      },
+      "annualTotalAt150000": {
+        "1": 15100,
+        "2": 22600,
+        "3": 27600,
+        "4": 31100,
+        "5": 34600
+      },
+      "maxCombinedAnnualIncome": 440000,
+      "minimumPerChildMonthly": 50,
+      "lowIncomeReviewMonthly": 800,
+      "sharedThresholdPctOvernights": 25,
+      "sharedMultiplier": 1.5,
+      "file": "cs-schedules/idaho.json",
+      "sharedNoMoreThanSole": true
+    },
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 92,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "If the child spends more than 25% of the overnights in a year with each parent, the basic obligation is multiplied by 1.5, then by each parent's income percentage, then by the percentage of time the child spends with the other parent; the obligations are offset and the parent owing more pays the difference; no parent pays more than if all children lived with the other parent (I.R.F.L.P. 120(i)(4)). With 25% or less of overnights, the court may reduce support (reasonable reduction 50%) during visits of 14 consecutive days or more (120(i)(5)). Split custody uses the 1.5 multiplier per 120(i)(6).",
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "addOns": {
+    "childcare": "Not in the basic amount; the court may order reasonable work-related child care shared in proportion to Guidelines Income, normally paid directly between parents (I.R.F.L.P. 120(g)(1)).",
+    "healthInsurance": "Children's health insurance premiums and uncovered health care expenses are shared pro rata to Guidelines Income, paid directly or as a credit/addition to support; an expense over $500 per course of treatment must be approved in advance (120(g)(4)).",
+    "text": "The court also considers transportation costs (120(g)(2)), the allocation of the federal/Idaho child tax benefit using the official tax-benefit tables (120(g)(3)) and dependency benefits paid because of the payer's disability or retirement (120(g)(5)).",
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "Rarely should support be zero. If the paying parent's monthly income is below $800.00, the court reviews incomes and living expenses to set the maximum support that does not deny the parent a minimum subsistence; there is a rebuttable presumption that minimum support is at least $50.00 per month per child (I.R.F.L.P. 120(c)(4)).",
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "statute": {
+    "cite": "Idaho Rules of Family Law Procedure, Rule 120 (Idaho Child Support Guidelines)",
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "guidelinesUrl": "https://isc.idaho.gov/irflp120",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "The Guidelines apply to children under 18, or children pursuing high school education up to age 19; support for post-high-school education is not available under the Guidelines (I.R.F.L.P. 120(a)).",
+    "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 25000,
+        "incomeB": 10000,
+        "children": 2,
+        "overnightsA": 0,
+        "incomePeriod": "annual"
+      },
+      "expected": 6072.0,
+      "what": "payer A's support for a year (official example: $506 a month x 12): 71% of a $709 monthly total ($217 + $208 + $192 + $92)",
+      "source": "Official worked example, I.R.F.L.P. 120(i)(3)(B): $506 per month. Expressed per year ($6,072) because the test harness compares in the period of the data (annual); the exact annual figure is $8,500 x 25/35 = $6,071.43."
+    },
+    {
+      "inputs": {
+        "incomeA": 25000,
+        "incomeB": 10000,
+        "children": 2,
+        "overnightsA": 120
+      },
+      "expected": 4915.37,
+      "what": "payer's support for a year, shared physical custody (120 overnights > 25%): $8,500 x 1.5 = $12,750; payer $9,107.14 x 245/365 = $6,113.03 minus other $3,642.86 x 120/365 = $1,197.66 (lower than the sole amount $6,071.43)",
+      "source": "Computed by hand from I.R.F.L.P. 120(i)(1), (i)(4)."
+    },
+    {
+      "inputs": {
+        "incomeA": 400000,
+        "incomeB": 100000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 23680.0,
+      "what": "payer's support for a year above the $440,000 ceiling: schedule on $440,000 = $15,100 (first $150,000) + 5% x $290,000 = $29,600, x 80%",
+      "source": "Computed by hand from I.R.F.L.P. 120(i)(1), (i)(7); additional support above $440,000 is discretionary and not computed."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 0,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1200.0,
+      "what": "payer's support for a year at the rebuttable minimum: 26% x $3,000 = $780 a year ($65 a month) is below $50 per child per month, so $100 a month",
+      "source": "Computed by hand from I.R.F.L.P. 120(c)(4) and 120(i)(1)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Idaho does not use a lookup table: support is the sum of marginal percentages applied to annual combined Guidelines Income, falling from 18% (one child) / 26% (two) on the first $10,000 to 5% / 8% above $150,000 (I.R.F.L.P. 120(i)(1)).",
+      "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+    },
+    {
+      "text": "A parent is not deemed underemployed if working full time in the same or similar occupation for more than six months before filing or separation, and ordinarily not while caring for a child under 6 months (I.R.F.L.P. 120(e)(3)(A)).",
+      "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+    },
+    {
+      "text": "Shared custody starts when each parent has more than 25% of the overnights; the obligation is then multiplied by 1.5 and cross-credited (I.R.F.L.P. 120(i)(4)).",
+      "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+    },
+    {
+      "text": "The parent not receiving the child tax benefit is entitled to a pro rata share of it, computed from official tax-benefit tables, as a credit against or addition to support (I.R.F.L.P. 120(g)(3)).",
+      "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+    },
+    {
+      "text": "Rule 120 was adopted July 1, 2021 and last amended June 3, 2025, effective July 1, 2025.",
+      "url": "https://isc.idaho.gov/rules-procedure/print/irfl/120"
+    }
+  ],
+  "uncertain": [
+    "In the official text, the 'Per Month' / 'Per Year' figures on the last line of each table (e.g. one child: 1,258 / 15,100) are the cumulative totals for the first $150,000, not 5% of $290,000; they are stored as annualTotalAt150000. The percentages are the operative figures.",
+    "The last bracket for four children is printed as 'the next $20,000' instead of '$290,000' (all other columns say $290,000 and Rule 120(i)(7) sets the ceiling at $440,000); treated as $290,000.",
+    "The rule rounds each bracket's monthly amount to the nearest dollar ('the amounts are rounded off to the nearest dollar'); the official example sums rounded monthly amounts ($709) while the exact annual/12 is $708.33.",
+    "The brief mentioned Rule 126; no child support Rule 126 exists in the current I.R.F.L.P. — all guidelines are in Rule 120.",
+    "thresholdOvernights 92 = first whole number of overnights above 25% of 365 (91.25); the rule states the test as 'more than 25% of the overnights'.",
+    "The Idaho Code was not read; emancipation text taken from I.R.F.L.P. 120(a). No official online calculator URL verified (courtselfhelp.idaho.gov returned 403)."
+  ]
+}

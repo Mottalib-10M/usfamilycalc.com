@@ -1,0 +1,176 @@
+{
+  "slug": "colorado",
+  "name": "Colorado",
+  "abbr": "CO",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted gross monthly income schedule with an overnight-by-overnight parenting time credit table (C.R.S. § 14-10-115, as reenacted by HB 25-1159, effective March 1, 2026)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income from any source (salaries, wages including declared or imputed tips, commissions, contractor payments, bonuses, dividends, severance, pensions, etc., § 14-10-115(5)(a)(I)); excludes child support received, means-tested public assistance, income from additional jobs beyond 40 hours or full time, and Social Security benefits received by the children (§ 14-10-115(5)(a)(II)). Adjusted gross income = gross income minus preexisting child support obligations and alimony or maintenance actually paid (§ 14-10-115(3)(a)); non-deductible maintenance paid to a different party is deducted at 1.25 times the amount paid (§ 14-10-115(5)(a)(IV), as amended by HB 25-1159).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/colorado.json",
+    "columns": "combined adjusted gross monthly income, then basic obligation for 1, 2, 3, 4, 5, 6 or more children; the same file also holds parentingTimeTable [overnights, credit %] from § 14-10-115(8)(h)",
+    "minIncome": 50,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "interpolate",
+    "lookupRule": "For a combined gross income that falls between amounts shown in the schedule, basic child support amounts must be interpolated (§ 14-10-115(7)(a)(II)).",
+    "belowMin": {
+      "rule": "The schedule starts at $50. Separately, an obligor with monthly adjusted gross income of $650 or less pays a $10 minimum order regardless of the number of children (§ 14-10-115(7)(a)(III)(A)).",
+      "amounts": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "Above the top of the schedule ($40,000 combined), the judge has discretion, but the presumptive basic obligation may not be less than the amount at the highest income in the schedule (§ 14-10-115(7)(a)(VII))."
+    },
+    "effective": "2026-03-01",
+    "url": "https://leg.colorado.gov/laws/session-laws/HB25-1159/334/download"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of the low-income rules of C.R.S. § 14-10-115(3)(g.5) and (7)(a)(III)-(V) as reenacted by HB 25-1159 (effective March 1, 2026). The self-support reserve itself (minimum wage x 29 h x 50 weeks / 12) has no dollar value in the statute.",
+    "params": {
+      "minimumOrderIncomeMax": 650,
+      "minimumOrder": 10,
+      "reducedLowIncomeOrders": [
+        50,
+        70,
+        90,
+        110,
+        130,
+        150
+      ],
+      "reducedOrderCapPctOfAGI": 10,
+      "ssrHoursPerWeek": 29,
+      "ssrWeeksPerYear": 50,
+      "aboveSsrPctOfDifference": [
+        80,
+        85,
+        89,
+        92,
+        94,
+        95
+      ],
+      "minimumWageBandCapPctOfAGI": 20,
+      "selfSupportReserveMonthly": null
+    },
+    "url": "https://leg.colorado.gov/laws/session-laws/HB25-1159/334/download"
+  },
+  "shared": {
+    "method": "table",
+    "thresholdOvernights": 1,
+    "multiplier": null,
+    "reductionTable": "cs-schedules/colorado.json -> parentingTimeTable (credit % for every number of overnights from 0 to 365, plus 182.5 = 50.00%)",
+    "text": "Since March 1, 2026, shared parenting time is credited from the first overnight: each parent's parenting time credit = total basic child support obligation x that parent's credit percentage from the § 14-10-115(8)(h) table (e.g. 92 overnights = 13.19%, 146 = 32.32%, 182.5 = 50.00%). The credit is deducted from that parent's income share of the basic obligation; add-ons are then shared by income; the parent owing the greater amount owes the difference. Support may never exceed what the same parent would owe with no overnights. With several children on different schedules, average the overnights (§ 14-10-115(8)(b)). The former 1.5 multiplier and 92-overnight threshold were deleted by HB 25-1159.",
+    "url": "https://leg.colorado.gov/laws/session-laws/HB26-1217/113/download"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "added to basic obligation and shared by income",
+    "text": "Education- and work-related net child care costs, health insurance, extraordinary medical expenses and extraordinary adjustments (special schooling, transportation between homes) are added and shared in proportion to adjusted gross income (§ 14-10-115(8)(a), (9), (10), (11)(a)-(b)).",
+    "url": "https://leg.colorado.gov/laws/session-laws/HB26-1217/113/download"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 10,
+    "rule": "Self-support reserve (SSR) = state hourly minimum wage x 29 hours x 50 weeks / 12 (§ 14-10-115(3)(g.5)). Obligor AGI <= $650: $10 minimum order, unless shared parenting time already makes the total obligation lower (§ (7)(a)(III)(A)). Obligor AGI above $650 and up to the SSR: basic obligation reduced to $50, $70, $90, $110, $130, $150 for 1 to 6+ children, and the total with add-ons is capped at 10% of the obligor's AGI (§ (7)(a)(III)(B)-(C)). Obligor AGI above the SSR: basic obligation = 80%, 85%, 89%, 92%, 94%, 95% (1 to 6+ children) of (AGI - SSR), but not less than the reduced low-income amount and not more than the schedule amount (§ (7)(a)(V)). Obligor AGI above the SSR and up to full-time minimum wage (x 40 x 52 / 12): final obligation capped at 20% of AGI (§ (7)(a)(IV)).",
+    "url": "https://leg.colorado.gov/laws/session-laws/HB25-1159/334/download"
+  },
+  "statute": {
+    "cite": "C.R.S. § 14-10-115",
+    "url": "https://leg.colorado.gov/laws/session-laws/HB25-1159/334/download"
+  },
+  "guidelinesUrl": "https://leg.colorado.gov/bills/hb25-1159",
+  "officialCalculatorUrl": "https://www.coloradojudicial.gov/self-help/calculate-support-payments",
+  "emancipation": {
+    "text": "For orders entered on or after July 1, 1997, support ends automatically when the last child turns 19, unless the parties agree otherwise in writing, the child is disabled, or the child is still in high school (support continues to the end of the month after graduation, but not beyond 21); marriage or active military duty emancipates the child (§ 14-10-115(13)(a)).",
+    "url": "https://web.archive.org/web/20260924173641/https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1066.0,
+      "what": "parent A's monthly share of the basic obligation, no overnights, before add-ons",
+      "source": "Computed by hand from the § 14-10-115(7)(b) schedule effective 2026-03-01: combined $6,000, 2 children = $1,599 (exact row, no interpolation); A's share 4000/6000 x 1599 = 1,066.00. No official worked example in the session law."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 110
+      },
+      "expected": 771.62,
+      "what": "parent A's share of the basic obligation after A's own parenting time credit (110 overnights = 18.41%)",
+      "source": "Computed by hand under § 14-10-115(8)(b) and (8)(h): credit = 1599 x 18.41% = 294.38; 1066.00 - 294.38 = 771.62 (below the no-overnight amount of 1066.00). See uncertain about how the two parents' amounts are netted."
+    },
+    {
+      "inputs": {
+        "incomeA": 600,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 10,
+      "what": "paying parent's order when his or her adjusted gross income is $650 or less",
+      "source": "C.R.S. § 14-10-115(7)(a)(III)(A) as reenacted by HB 25-1159: $10 minimum monthly order. Computed by hand."
+    },
+    {
+      "inputs": {
+        "incomeA": 40000,
+        "incomeB": 5000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 4992,
+      "what": "basic obligation in the schedule above the top row ($45,000 combined)",
+      "source": "§ 14-10-115(7)(a)(VII): not less than the amount at the highest income of the schedule; $40,000 row, 2 children = $4,992. Computed by hand."
+    }
+  ],
+  "facts": [
+    {
+      "text": "HB 25-1159 (signed May 31, 2025) replaced the schedule, raised its top from $30,000 to $40,000 of combined monthly income and replaced the 92-overnight shared-care threshold with a credit for every overnight; these parts took effect March 1, 2026.",
+      "url": "https://leg.colorado.gov/bills/hb25-1159"
+    },
+    {
+      "text": "Colorado's self-support reserve is tied to the state minimum wage: minimum wage x 29 hours x 50 weeks / 12 months (§ 14-10-115(3)(g.5)).",
+      "url": "https://leg.colorado.gov/laws/session-laws/HB25-1159/334/download"
+    },
+    {
+      "text": "Child support normally ends when the youngest child turns 19, later than the age 18 used in most states (§ 14-10-115(13)).",
+      "url": "https://web.archive.org/web/20260924173641/https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    {
+      "text": "A child support commission must review the guidelines and schedule at least every four years and report to the governor and General Assembly (§ 14-10-115(16)).",
+      "url": "https://web.archive.org/web/20260924173641/https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    {
+      "text": "Interest on arrears and support debt owed on or after July 1, 2021 is the statutory rate plus 2% a year, compounded annually (C.R.S. § 14-14-106, HB 21-1220).",
+      "url": "https://leg.colorado.gov/laws/session-laws/HB21-1220/212/download"
+    }
+  ],
+  "uncertain": [
+    "The brief describes the pre-2026 rules (schedule effective 2020/2021, 92-overnight shared care with 1.5 multiplier). Those were replaced on March 1, 2026 by HB 25-1159; this file records the current law. The previous schedule (HB 19-1215 as amended by HB 21-1220) is not stored.",
+    "The CRS on content.leg.colorado.gov answers HTTP 403 to scripts; the 2025 CRS printout was not reachable and the web.archive.org copy of the 2024 printout predates HB 25-1159. Schedule and parenting time table were parsed from the official session law (HB 25-1159, ch. 334) and checked against HB 26-1217 (ch. 113, cross-reference corrections only).",
+    "Struck-through vs. new text in the session law was checked visually by rendering pages 1733-1734 and 1755-1756 of the PDF.",
+    "Netting rule for shared parenting time: § 14-10-115(8)(b) deducts each parent's credit from his or her own share and says 'the parent owing the greater amount owes the difference'. Because the two credits always total 100% of the obligation, the official worksheet (JDF 1820/1821, not read) should be checked for how the final transfer is computed. The second test case stops at A's adjusted share.",
+    "The 2026 dollar value of the self-support reserve depends on the 2026 Colorado minimum wage, which was not read from an official source; selfSupportReserve is null.",
+    "Income definition and emancipation were read in the CRS 2024 printout (web.archive.org copy of the official PDF); HB 25-1159 amended (5)(a)(III)(B), (5)(a)(IV) and (13)(a)(III) without changing the age-19 rule as far as read."
+  ]
+}

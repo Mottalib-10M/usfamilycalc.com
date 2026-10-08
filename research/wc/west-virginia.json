@@ -1,0 +1,37 @@
+{
+  "slug": "west-virginia", "name": "West Virginia", "abbr": "WV", "verified": "2026-10-08",
+  "agency": { "name": "West Virginia Offices of the Insurance Commissioner (OIC), Workers' Compensation", "url": "https://www.wvinsurance.gov/Workers-Compensation" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66 and two-thirds percent of the average weekly wage earnings, wherever earned, at the date of injury, not to exceed 100% of the average weekly wage in West Virginia (W. Va. Code § 23-4-6(b)). Awards are not adjusted annually after they are made.",
+    "max": 1150.91, "min": 193.33,
+    "minText": "Minimum is 33 1/3% of the state average weekly wage but may not exceed the benefit computed from the federal minimum hourly wage (§ 23-4-6(b)): OIC computes $7.25 x 8 hours x 5 days / 7 x 66 2/3% = $27.62 a day, i.e. $193.33 a week (spreadsheet value 193.33333...).",
+    "effective": "2026-07-01", "periodLabel": "West Virginia fiscal year 2027: dates of injury / last exposure July 1, 2026 to June 30, 2027 (SAWW $1,150.91)",
+    "url": "https://www.wvinsurance.gov/LinkClick.aspx?fileticket=Sn8WgOE_vBg%3d&tabid=73&portalid=0&mid=1756", "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 7,
+    "text": "No award if disability does not last longer than three days from the day the employee leaves work; if it lasts longer than seven days, the first three days are paid (W. Va. Code § 23-4-5).",
+    "url": "https://code.wvlegislature.gov/23-4-5/"
+  },
+  "ttdDuration": {
+    "maxWeeks": 104,
+    "text": "The aggregate TTD award for a single injury may not exceed 104 weeks for awards made since the 2003 amendment (W. Va. Code § 23-4-6(c)).",
+    "url": "https://code.wvlegislature.gov/23-4-6/"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is paid at four weeks of compensation for each percent of disability, at 66 2/3% of the AWW, not to exceed 70% of the state average weekly wage (W. Va. Code § 23-4-6(e)(1)): FY2027 PPD weekly maximum as stored in the OIC spreadsheet: 805.637 (70% of $1,150.91).",
+    "url": "https://code.wvlegislature.gov/23-4-6/"
+  },
+  "statute": { "cite": "W. Va. Code §§ 23-4-5, 23-4-6, 23-4-14", "url": "https://code.wvlegislature.gov/23-4-6/" },
+  "facts": [
+    { "text": "A worker's benefit rate is fixed for the entire span of all benefits, whether at the maximum, the minimum or an odd rate; TTD, PTD and fatal awards made on or after July 1, 2003 receive no annual escalation (OIC; § 23-4-6(b)).", "url": "https://www.wvinsurance.gov/LinkClick.aspx?fileticket=Sn8WgOE_vBg%3d&tabid=73&portalid=0&mid=1756" },
+    { "text": "The minimum weekly benefit is tied to the federal minimum wage ($193.33 a week) rather than to 33 1/3% of the state average weekly wage (383.6328303 in the OIC FY2027 spreadsheet), because the statute caps the minimum at the federal-minimum-wage level.", "url": "https://www.wvinsurance.gov/LinkClick.aspx?fileticket=Sn8WgOE_vBg%3d&tabid=73&portalid=0&mid=1756" },
+    { "text": "A permanent disability of 85% or more creates a rebuttable presumption of permanent total disability if the claimant is also at least 50% medically impaired on a whole-body basis or has a 35% statutory disability (§ 23-4-6(d)).", "url": "https://code.wvlegislature.gov/23-4-6/" },
+    { "text": "Permanent total disability benefits are payable until the claimant reaches the age for Social Security old-age retirement benefits (§ 23-4-6(d)).", "url": "https://code.wvlegislature.gov/23-4-6/" }
+  ],
+  "uncertain": [
+    "OIC 'Benefit Rates FY2027' is an .xlsx file (LinkClick fileticket Sn8WgOE_vBg); values are stored unrounded (min 193.333..., PPD max 805.637). min recorded as 193.33 per OIC's own computation note ($27.62/day).",
+    "Sections 23-4-5 and 23-4-6 list a 2026 amendment (HB5515); the text read on code.wvlegislature.gov on 2026-10-08 is assumed current."
+  ]
+}

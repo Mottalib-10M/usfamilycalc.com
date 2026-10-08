@@ -1,0 +1,33 @@
+{
+  "slug": "missouri", "name": "Missouri", "abbr": "MO", "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, Form 14 schedule of basic child support obligations (Mo. Sup. Ct. Rule 88.01)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": null,
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": null,
+  "percent": null,
+  "formula": null,
+  "shared": null,
+  "addOns": null,
+  "lowIncome": null,
+  "statute": { "cite": "RSMo § 452.340 (guidelines by Supreme Court rule, § 452.340.8); Mo. Sup. Ct. Rule 88.01; Form 14", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.340" },
+  "guidelinesUrl": "https://www.courts.mo.gov/page.jsp?id=525",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support terminates when the child dies, marries, enters active military duty, becomes self-supporting with the custodial parent's consent, reaches 18 (unless subsections 4 or 5 apply) or reaches 21; it continues past 18 while the child attends secondary school (to completion or 21) or, from October 1 after graduation, while enrolled in at least 12 credit hours per semester at a vocational or higher-education institution, and may be extended for an incapacitated child (RSMo § 452.340.3-5).",
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.340"
+  },
+  "testCases": [],
+  "facts": [
+    { "text": "The legislature delegates the guidelines to the Supreme Court of Missouri, which must keep in effect a rule with specific numeric criteria for computing support (RSMo § 452.340.8); the rule is Rule 88.01 with Form 14.", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.340" },
+    { "text": "A change of 20% or more from the existing guideline-based amount is a prima facie showing of a substantial and continuing change of circumstances for modification (RSMo § 452.370.1).", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.370" },
+    { "text": "Support continues past 18 for a child enrolled in college or vocational school by October 1 after high school who completes at least 12 credit hours each semester, up to age 21 (RSMo § 452.340.5).", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.340" }
+  ],
+  "uncertain": [
+    "schedule: null. The current Form 14 schedule could not be read from an official source. courts.mo.gov (Missouri Judiciary) returns HTTP 403 to every client used here (curl, WebFetch, the user's browser and a reader proxy), and dss.mo.gov does not answer either. The Wayback Machine has no 2026 capture of the official files: the last captures of courts.mo.gov/file.jsp?id=114615 (schedule), 114614 (Directions) and 114613 (Form 14), dated 2025-05-25, are the superseded versions (schedule '2020 Child Support Guideline Review Updated Schedule' dated November 4, 2021; Directions effective April 5, 2022). Those superseded official PDFs are kept in research/raw/mo-file-114613.pdf, mo-file-114614.pdf, mo-file-114615.pdf but were not used.",
+    "A new Form 14 and a '2024 Child Support Guideline Review Updated Schedule' were adopted by a Supreme Court of Missouri order dated March 4, 2025, effective January 1, 2026 (order page https://www.courts.mo.gov/page.jsp?id=218073, blocked). This was read only on The Missouri Bar's news site (news.mobar.org), which also hosts copies of the order and schedule at images.magnetmail.net/images/clients/MOBAR/attach/Orders/3093.pdf, 3093a.pdf (Form 14) and 3093b.pdf (schedule); per the brief these non-court copies were not used as the source.",
+    "Overnight visitation credit (Form 14 line 11), income definition, add-ons, self-support reserve and minimum amount under the 2026 Form 14 are left null because the 2026 Directions could not be read officially. To complete: download https://www.courts.mo.gov/file.jsp?id=114615 (and 114614) from a US connection that courts.mo.gov accepts, then run a parser like research/scripts/cs_parse_kentucky.py on it."
+  ]
+}

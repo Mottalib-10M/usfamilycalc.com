@@ -1,0 +1,25 @@
+{
+  "slug": "new-york", "name": "New York", "abbr": "NY", "verified": "2026-10-08",
+  "agency": { "name": "New York State Workers' Compensation Board (WCB)", "url": "https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "2/3 x average weekly wage x percentage of disability based on medical evidence (WCB, Lost Wage Benefits); maximum is two-thirds of the NYS average weekly wage for the previous calendar year, adjusted each July 1 (Workers' Compensation Law §§ 2(16), 15(6)).",
+    "max": 1281.50, "min": 384.45, "minText": "1/5 of the NYS average weekly wage, or actual wages if less (WCB schedule; indexed from July 1, 2026).",
+    "effective": "2026-07-01", "periodLabel": "accidents July 1, 2026 - June 30, 2027 (July 1, 2025 - June 30, 2026: max $1,222.42; minimum $325.00 for January 1, 2025 - June 30, 2026)",
+    "url": "https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp", "asOf": "2026-07-01"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 14, "text": "Lost wage benefits are not paid for the first seven days of disability unless it extends beyond fourteen days; then they are paid from the first day the worker was unable to work (WCB, Lost Wage Benefits; WCL § 12).", "url": "https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp" },
+  "ttdDuration": { "maxWeeks": null, "text": "No fixed week cap stated for temporary disability; benefit level follows the degree of disability in the medical reports (WCB, Lost Wage Benefits). Non-schedule permanent partial benefits for accidents on or after March 13, 2007 are capped at 225 to 525 weeks by loss of wage-earning capacity.", "url": "https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp" },
+  "ppd": { "text": "Permanent loss of use of an arm, hand, leg, foot, eye, hearing, etc. is paid as a Schedule Loss of Use (SLU) award for a number of weeks set by law, less temporary benefits already paid. Non-schedule permanent partial disability (spine, pelvis, heart, lungs, brain) is paid on loss of earning capacity for a maximum of 225 weeks (15% or less) up to 525 weeks (over 95%) for accidents on or after March 13, 2007 (WCL § 15(3)).", "url": "https://www.wcb.ny.gov/content/main/Workers/AwardLossUsePermDisability.jsp" },
+  "statute": { "cite": "N.Y. Workers' Compensation Law §§ 2(16), 12, 15", "url": "https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp" },
+  "facts": [
+    { "text": "From July 1, 2026 New York's minimum weekly benefit is indexed to one-fifth of the state average weekly wage ($384.45); it was $150 for 2013-2023 injuries, $275 in 2024 and $325 in 2025 (WCB, Lost Wage Benefits).", "url": "https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp" },
+    { "text": "The benefit rate is fixed by the date of injury and does not rise when new maximums or minimums are adopted (WCB schedule).", "url": "https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp" },
+    { "text": "Payments on an accepted claim should begin within 18 days of the injury or within 10 days after the employer learned of it, whichever is later (WCB, Lost Wage Benefits).", "url": "https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp" },
+    { "text": "Permanent disfigurement of the face, head or neck can bring an award of up to $20,000 depending on the date and extent of injury (WCB).", "url": "https://www.wcb.ny.gov/content/main/Workers/AwardLossUsePermDisability.jsp" },
+    { "text": "Compensation combined with reduced earnings can never exceed the wages the employee was receiving at the time of injury (WCB schedule).", "url": "https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp" }
+  ],
+  "uncertain": [
+    "WCL §§ 12 and 15(3) are cited from the standard structure of the Workers' Compensation Law; the WCB pages read cite only §§ 2(16) and 15(6) by number."
+  ]
+}

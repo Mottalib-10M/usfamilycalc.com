@@ -1,0 +1,88 @@
+{
+  "slug": "maine",
+  "name": "Maine",
+  "abbr": "ME",
+  "verified": "2026-10-08",
+  "scope": "Spousal support under 19-A M.R.S. § 951-A (general, transitional, reimbursement, nominal and interim support). No amount formula.",
+  "formula": {
+    "text": "No amount formula; the court considers the factors in § 951-A(5).",
+    "params": {},
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec951-A.html"
+  },
+  "duration": {
+    "text": "19-A M.R.S. § 951-A(2)(A)(1): rebuttable presumption that general support may not be awarded if married less than 10 years at filing, and may not exceed one-half the length of the marriage if married at least 10 but not more than 20 years. A finding that the presumed result is inequitable or unjust rebuts the presumption.",
+    "table": [
+      {
+        "marriageYearsMin": 0,
+        "marriageYearsMax": 10,
+        "rule": "presumption: no general support"
+      },
+      {
+        "marriageYearsMin": 10,
+        "marriageYearsMax": 20,
+        "maxPctOfMarriageLength": 50,
+        "rule": "presumption: general support term <= 1/2 the marriage"
+      },
+      {
+        "marriageYearsMin": 20,
+        "marriageYearsMax": null,
+        "rule": "no presumption"
+      }
+    ],
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec951-A.html"
+  },
+  "eligibility": {
+    "text": "General support helps a spouse with substantially less income potential so both can keep a reasonable standard of living; transitional support covers short-term needs or work-force reentry; reimbursement support answers exceptional circumstances (economic misconduct or abuse, contributions to the other's education or career); interim support covers the pendency of the case (§ 951-A(2)).",
+    "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec951-A.html"
+  },
+  "taxNote": {
+    "text": "Federal: for divorce or separation agreements executed after 2018 (or older ones modified to adopt the new rule), the payer cannot deduct alimony and the recipient does not include it in gross income (IRS Topic No. 452).",
+    "url": "https://www.irs.gov/taxtopics/tc452"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "payer": 6000,
+        "payee": 2000,
+        "years": 16,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 0,
+        "durationMonths": 96
+      },
+      "what": "no amount formula; 16-year marriage: general support presumed at most 96 months",
+      "source": "computed by hand from 19-A M.R.S. § 951-A(2)(A)(1)"
+    },
+    {
+      "inputs": {
+        "payer": 6000,
+        "payee": 2000,
+        "years": 8,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 0,
+        "durationMonths": 0
+      },
+      "what": "no amount formula; 8-year marriage: presumption of no general support",
+      "source": "computed by hand from 19-A M.R.S. § 951-A(2)(A)(1)"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Economic abuse by a spouse is listed as an exceptional circumstance justifying reimbursement support (19-A M.R.S. § 951-A(2)(C), PL 2023, c. 646).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec951-A.html"
+    },
+    {
+      "text": "Awards issued on or after October 1, 2013 can be modified on a substantial change in circumstances (§ 951-A(4)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec951-A.html"
+    }
+  ],
+  "uncertain": [
+    "Effective date of PL 2023, c. 646 (economic abuse amendment) not checked."
+  ],
+  "incomeBasis": "gross"
+}

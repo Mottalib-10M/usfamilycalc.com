@@ -1,0 +1,36 @@
+{
+  "slug": "utah", "name": "Utah", "abbr": "UT", "verified": "2026-10-08",
+  "agency": { "name": "Utah Labor Commission, Division of Industrial Accidents", "url": "https://laborcommission.utah.gov/divisions/industrial-accidents/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66-2/3% of the employee's average weekly wages at the time of injury, plus $20.00 for a dependent spouse and $20.00 for each dependent child under 18 (up to four children), not to exceed the employee's average weekly wage nor 100% of the state average weekly wage (Utah Code § 34A-2-410).",
+    "max": 1376.00, "min": 45.00,
+    "minText": "Minimum $45.00 per week plus the dependent allowances, but never more than the employee's own average weekly wage (§ 34A-2-410).",
+    "effective": "2026-07-01", "periodLabel": "injuries from July 1, 2026 to June 30, 2027 (state average weekly wage for fiscal year 2027: $1376.00)",
+    "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf", "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 14,
+    "text": "No compensation is payable for the first three calendar days after the day of injury; if temporary total disability extends beyond 14 calendar days, those three days are also paid. The waiting period is established once, the days need not be consecutive, and it does not apply to temporary partial payments (§ 34A-2-408).",
+    "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": 312,
+    "text": "Temporary total disability may not exceed 312 weeks over a period of 12 years from the date of injury (§ 34A-2-410). It ends earlier on return to regular work, an offer of suitable light-duty work, or medical stability.",
+    "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is paid at 66-2/3% of the average weekly wage, maximum 66-2/3% of the state average weekly wage ($917.00 for injuries from July 1, 2026), minimum $45.00 plus dependent allowances, for the number of weeks set by the statutory schedule or impairment rating after medical stability (§ 34A-2-412).",
+    "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf"
+  },
+  "statute": { "cite": "Utah Code §§ 34A-2-408, 34A-2-410, 34A-2-411, 34A-2-412, 34A-2-413", "url": "https://le.utah.gov/xcode/Title34A/Chapter2/34A-2.html" },
+  "facts": [
+    { "text": "Utah adds $20.00 a week for a dependent spouse and $20.00 for each dependent child under 18 (up to four) to temporary and permanent disability benefits; before July 1, 2018 the allowance was $5.00.", "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf" },
+    { "text": "Medical care for a compensable injury is for life, as long as bills are submitted within one year of the date of treatment (§ 34A-2-417, -418).", "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf" },
+    { "text": "Permanent total disability is paid for life for injuries on or after July 1, 1994; after the first 312 weeks the minimum becomes 36% of the current state average weekly wage, and the 2026-27 maximum is $1169.00 (85% of SAWW) (§ 34A-2-413).", "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf" },
+    { "text": "Burial expenses are paid up to $12,500 in ordinary cases (Rule R612-200-6).", "url": "https://laborcommission.utah.gov/wp-content/uploads/2026-Quick-Reference-Guide.pdf" }
+  ],
+  "uncertain": [
+    "Figures and rules read in the Labor Commission's 2026 Quick Reference Guide and 2026 Payment Grid (https://laborcommission.utah.gov/wp-content/uploads/2026-Payment-Grid.pdf); the Utah Code text itself (le.utah.gov) was not fetched."
+  ]
+}

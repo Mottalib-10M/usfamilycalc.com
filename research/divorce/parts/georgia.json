@@ -1,0 +1,22 @@
+{
+  "slug": "georgia", "name": "Georgia", "abbr": "GA",
+  "filingFee": 223, "responseFee": null,
+  "feeScope": "county (Fulton County)",
+  "feeText": "Fulton County Superior Court Clerk fee table (fees as of July 1, 2024): Court Costs, Divorce $223.00. Sheriff's service is charged separately ($50.00 per copy served).",
+  "feeUrl": "https://www.fultonclerk.org/400/Fee-Schedule",
+  "otherFees": [
+    { "what": "Sheriff's service fee, per copy served (Fulton County)", "amount": 50, "url": "https://www.fultonclerk.org/400/Fee-Schedule" },
+    { "what": "Post-judgment filing (Fulton County)", "amount": 58, "url": "https://www.fultonclerk.org/400/Fee-Schedule" }
+  ],
+  "waiver": { "name": "Pauper's affidavit (filed with the complaint in lieu of the filing and sheriff fees, Uniform Superior Court Rule 36.10)", "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf" },
+  "residency": { "text": "The plaintiff, or if the plaintiff is a nonresident the defendant, must have been a Georgia resident for at least six months immediately before filing (statewide self-help Complaint for Divorce form, paragraph 1; O.C.G.A. § 19-5-2).", "url": "https://assets.georgiacourts.gov/2/wp-content/uploads/2024/05/19110928/Complaint-for-Divorce-Without-Minor-Children-Form.pdf" },
+  "waitingPeriod": { "days": 31, "text": "With written consent of both parties, an uncontested divorce may be granted any time 31 days after service or acknowledgment of service; an unanswered action any time 46 days after service; service by publication 61 days or more after first publication (Uniform Superior Court Rule 24.6).", "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf" },
+  "simplified": { "text": "No separate summary procedure; uncontested divorces follow the timetable of Uniform Superior Court Rule 24.6, and the judicial branch publishes self-help divorce forms with and without minor children.", "url": "https://georgiacourts.gov/a2j/self-help-resources/family-law/divorce-forms/" },
+  "parentingClass": { "required": null, "text": "Each superior court circuit may establish a seminar of no more than four hours on the effects of divorce on children and may order parties in domestic relations actions to attend (Uniform Superior Court Rule 24.8); whether it is required depends on the circuit.", "url": "https://georgiasuperiorcourts.org/wp-content/uploads/2025/02/UNIFORM-SUPERIOR-COURT-RULES-2025_01_01.pdf" },
+  "uncertain": [
+    "O.C.G.A. text is published officially only through LexisNexis and could not be read; the 6-month residency is taken from the Judicial Council's statewide self-help complaint form (assets.georgiacourts.gov, revised 10/2019), not from the statute itself.",
+    "georgiasuperiorcourts.org and georgiacourts.gov return 403 to automated clients; the Uniform Superior Court Rules (version dated 2025-01-01) and the A2J divorce-forms page were read from Internet Archive copies.",
+    "Fulton County fee table does not list an answer/response fee for divorce; responseFee left null.",
+    "Parenting seminar: circuit-dependent (USCR 24.8); Fulton County's own requirement was not verified."
+  ]
+}

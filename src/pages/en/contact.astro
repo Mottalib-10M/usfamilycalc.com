@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const description = 'Write to us when a state updates its child support schedule or workers comp rates, when an estimate looks wrong, or to embed one of the calculators on your own site.';
+---
+<PageLayout title={`Contact ${SITE_NAMES[lang]}: rule changes, errors, embedding`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Contact</h1>
+    <p>One address, read on working days: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>A state changed its rules</h2>
+    <p>States revise their child support schedules every few years, workers' compensation boards publish new weekly maximums each January or July, and legislatures move small-estate limits and filing fees. Send the official notice (court order adopting a schedule, agency bulletin, enacted bill) and the page here that needs updating. We read the source, change the data file, rerun the tests and date the page.</p>
+    <h2>An estimate does not match your order or your check</h2>
+    <p>Send the share link of your calculation and tell us what the official worksheet, the agency or the insurer shows. Most gaps come from how income was counted (gross, net, imputed, other children), from overnights, or from a county fee the state table does not list; we will say which, and fix the site if the fault is ours.</p>
+    <h2>Embedding a calculator</h2>
+    <p>Mediators, legal aid offices, HR departments and local newsrooms can embed the child support or the workers' comp calculator for free: the code is on the <a href={route('widget', lang)}>embed page</a>.</p>
+    <h2>What we cannot do</h2>
+    <p>We cannot review your case, draft or file court forms, negotiate with an insurer, or tell you what a judge will order. Your state's court self-help center, its child support agency, its workers' compensation board or a licensed attorney can.</p>
+    <h2>Response time</h2><p>Usually within five working days, corrections first. Every state's rules are re-read at least every {REVIEW_CYCLE_MONTHS} months, and when a new schedule or benefit year takes effect.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+    <p>Content owner: {AUTHOR_NAME}. See the <a href={route('terms', lang)}>legal notice</a>. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

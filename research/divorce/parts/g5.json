@@ -1,0 +1,240 @@
+[
+  {
+    "slug": "oregon",
+    "name": "Oregon",
+    "abbr": "OR",
+    "filingFee": 301,
+    "responseFee": 301,
+    "feeScope": "statewide",
+    "feeText": "Dissolution of marriage, annulment or separation: $301 for the first appearance by petitioner, respondent or other party (ORS 21.155(1)), Oregon circuit court fee schedule effective 2026-01-01.",
+    "feeUrl": "https://www.courts.oregon.gov/Documents/2026_CircuitFeeSchedule_public_eff-2026-01-01.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Fee Deferral and Waiver packet (Oregon Judicial Department Forms Center)",
+      "url": "https://www.courts.oregon.gov/forms/Pages/fee-waiver.aspx"
+    },
+    "residency": {
+      "text": "If the marriage was solemnized in Oregon and the ground is irreconcilable differences, either party must be a resident or domiciliary when the suit is filed; otherwise at least one party must have been a resident or domiciliary for six months before filing (ORS 107.075).",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period found in ORS chapter 107; the marriage is terminated when the court signs the judgment of dissolution (ORS 107.115(2)).",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "simplified": {
+      "text": "Summary dissolution (ORS 107.485): no children of the marriage and no pregnancy, marriage of 10 years or less, no real property, unpaid debts since marriage of $15,000 or less, personal property under $30,000 net, petitioner waives spousal support and pendente lite orders, no other pending domestic relations suit.",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "ORS chapters 107 and 21 were read from the Internet Archive 2026 copy of oregonlegislature.gov (direct fetch failed on 2026-10-08).",
+      "Parenting education: ORS 3.425 (county parent education programs) could not be fetched (oregonlegislature.gov ors003.html unavailable directly and in the archive); required = null.",
+      "Exact title of the Oregon fee deferral/waiver application form not readable (forms list loads by script); the fees page refers to the 'fee deferral or waiver packet'.",
+      "Waiting period 0 inferred from the absence of any waiting-period provision in ORS chapter 107 text searched; no explicit statement 'no waiting period' exists in statute."
+    ]
+  },
+  {
+    "slug": "utah",
+    "name": "Utah",
+    "abbr": "UT",
+    "filingFee": 350,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "$350 for a petition for an action under Title 81, Chapter 4, Dissolution of Marriage (Utah Code § 78A-2-301(1)(b)(iv), version effective 2026-05-06).",
+    "feeUrl": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html",
+    "otherFees": [
+      {
+        "what": "Counterclaim when the original petition is a dissolution of marriage action (§ 78A-2-301(1)(d)(iv))",
+        "amount": 130,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      },
+      {
+        "what": "Petition for temporary separation, credited toward the divorce fee (§ 78A-2-301(1)(b)(v))",
+        "amount": 35,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      },
+      {
+        "what": "Petition or counter-petition to modify a domestic relations order (§ 78A-2-301(1)(q))",
+        "amount": 100,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      }
+    ],
+    "waiver": {
+      "name": "Waiver of fees for indigent litigants on affidavit (Utah Code § 78A-2-302)",
+      "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S302_2024100120240501.html"
+    },
+    "residency": {
+      "text": "The petitioner or the petitioner's spouse must have been an actual and bona fide resident of the county of filing for at least 90 days before filing, or the petitioner stationed in Utah under military orders for at least 90 days (Utah Code § 81-4-402(1)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "waitingPeriod": {
+      "days": 30,
+      "text": "The court may not enter a decree of divorce until 30 days after the petition is filed, unless it finds extraordinary circumstances (Utah Code § 81-4-402(3)(a)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure found in Utah Code Title 81, Chapter 4.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Parties with a minor child must attend the mandatory divorce orientation course (§ 81-4-105, at least one hour) and the mandatory parenting course (§ 81-9-103): the petitioner within 60 days of filing and the respondent within 30 days of service; no decree until certificates are filed, unless waived by the court (§ 81-4-402(4)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "uncertain": [
+      "Utah recodified its domestic relations law into Title 81 (effective 2024-09-01); former Title 30 sections are empty. Title 81 Chapter 4 was read from the chapter PDF version C81-4_2024090120240501, which includes amendments through the 2026 General Session.",
+      "Answer/response fee: § 78A-2-301 lists no fee for an answer as such; only a counterclaim fee ($130 when the original petition is a dissolution). responseFee left null.",
+      "§ 78A-2-301 has a version superseding it on 2027-01-01; the 2026-05-06 version was used.",
+      "Exact title of the Utah court fee-waiver form not verified (utcourts.gov pages returned 404/406); only the statute is cited."
+    ]
+  },
+  {
+    "slug": "vermont",
+    "name": "Vermont",
+    "abbr": "VT",
+    "filingFee": 295,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "$295 before the entry of any divorce or annulment proceeding in the Superior Court; $90 if filed with a stipulation for a final order and one or both parties are residents ($180 if neither is a resident) (32 V.S.A. § 1431(b)(2)).",
+    "feeUrl": "https://legislature.vermont.gov/statutes/section/32/017/01431",
+    "otherFees": [
+      {
+        "what": "Divorce complaint filed with a stipulation for a final order, at least one party resident (32 V.S.A. § 1431(b)(2))",
+        "amount": 90,
+        "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+      },
+      {
+        "what": "Motion or petition to vacate or modify a child support order (32 V.S.A. § 1431(b)(5))",
+        "amount": 45,
+        "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "A complaint may be brought if either party has resided in Vermont for six months or more, but no divorce may be decreed unless the plaintiff or defendant has resided in the State one year before the final hearing (15 V.S.A. § 592(a)).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00592"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "A divorce decree is first a decree nisi and becomes absolute 90 days after entry, unless the court fixes an earlier date (15 V.S.A. § 554(a)).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00554"
+    },
+    "separationRequiredDays": 182,
+    "separationText": "No-fault ground: the spouses have lived apart for six consecutive months and resumption of marital relations is not reasonably probable (15 V.S.A. § 551(7)); fault grounds need no separation.",
+    "simplified": {
+      "text": "No separate summary procedure in statute; an uncontested complaint filed with a stipulation for a final order pays a reduced $90 fee (32 V.S.A. § 1431(b)(2)).",
+      "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Fee waiver form name/URL not verified: vermontjudiciary.org returned HTTP 403 to automated clients on 2026-10-08.",
+      "Parenting class requirement not verified (court rule / vermontjudiciary.org not readable).",
+      "No answer fee appears in 32 V.S.A. § 1431(b)(2); responseFee left null rather than 0 because the Vermont Judiciary fee schedule could not be read.",
+      "separationRequiredDays 182 is the day equivalent of 'six consecutive months' in § 551(7) and applies only to the no-fault ground."
+    ]
+  },
+  {
+    "slug": "west-virginia",
+    "name": "West Virginia",
+    "abbr": "WV",
+    "filingFee": 135,
+    "responseFee": 0,
+    "feeScope": "statewide",
+    "feeText": "Clerk of the circuit court fee for instituting an action for divorce, separate maintenance or annulment: $135 (W. Va. Code § 59-1-11(a)(3)).",
+    "feeUrl": "https://code.wvlegislature.gov/59-1-11/",
+    "otherFees": [
+      {
+        "what": "Petition to modify an order on custody, visitation, child support or spousal support (§ 59-1-11(a)(4))",
+        "amount": 85,
+        "url": "https://code.wvlegislature.gov/59-1-11/"
+      },
+      {
+        "what": "Expedited modification of a child support order (§ 59-1-11(a)(5))",
+        "amount": 35,
+        "url": "https://code.wvlegislature.gov/59-1-11/"
+      },
+      {
+        "what": "Parent education class fee, waived if indigent (§ 48-9-104(c)), maximum",
+        "amount": 25,
+        "url": "https://code.wvlegislature.gov/48-9-104/"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "If married in West Virginia, one party must be a bona fide resident when the action is filed (no minimum duration); if married elsewhere, one party must have been a resident for the one year before filing (W. Va. Code § 48-5-105(a)).",
+      "url": "https://code.wvlegislature.gov/48-5-105/"
+    },
+    "waitingPeriod": {
+      "days": null,
+      "text": null,
+      "url": null
+    },
+    "simplified": {
+      "text": "Irreconcilable differences: divorce may be ordered when the complaint alleges irreconcilable differences and an answer admits it, without corroboration (W. Va. Code § 48-5-201). Alternatively, one year of living separate and apart is a ground (§ 48-5-202).",
+      "url": "https://code.wvlegislature.gov/48-5-201/"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In a divorce involving a minor child the family court shall order the parties to attend parent education classes unless it finds attendance not appropriate or necessary; fee up to $25, waived for indigent parties (W. Va. Code § 48-9-104(b)-(c)).",
+      "url": "https://code.wvlegislature.gov/48-9-104/"
+    },
+    "uncertain": [
+      "responseFee 0: § 59-1-11(a)(6) imposes a $200 fee on pleadings with a counterclaim but states it does not apply in family court cases; no answer fee is listed.",
+      "Waiting period not found in W. Va. Code ch. 48 art. 5 sections read (48-5-104 to 106, 201 to 203, 301); any minimum time is set by the Rules of Practice and Procedure for Family Court, not verified. days = null.",
+      "Fee waiver form (courtswv.gov) not verified."
+    ]
+  },
+  {
+    "slug": "wyoming",
+    "name": "Wyoming",
+    "abbr": "WY",
+    "filingFee": 160,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District court clerk original filing fee for each civil action, paid by the plaintiff: $160, of which $40 is for court automation and $10 for indigent civil legal services (W.S. 5-3-206(a)(i)).",
+    "feeUrl": "https://wyoleg.gov/statutes/compress/title05.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "One party must have resided in Wyoming for 60 days immediately before filing, or the marriage was solemnized in Wyoming and one party has resided there since the marriage (W.S. 20-2-107(a)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "waitingPeriod": {
+      "days": 20,
+      "text": "A divorce decree shall not be entered less than 20 days from the date the complaint is filed (W.S. 20-2-108).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure found in Wyoming Title 20; the only ground besides insanity is irreconcilable differences (W.S. 20-2-104).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "No statewide mandate in statute: the court may at any time require parents to attend parenting classes, including classes to lessen the effects of divorce on children (W.S. 20-2-201(f)); individual judicial districts may require them by local rule.",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "uncertain": [
+      "No answer/response fee appears in W.S. 5-3-206(a) (the original filing fee is paid by the plaintiff); responseFee left null.",
+      "Local district court rules on mandatory parenting classes not checked.",
+      "Fee waiver (in forma pauperis) form not verified on wyocourts.gov."
+    ]
+  }
+]

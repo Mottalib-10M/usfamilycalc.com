@@ -1,0 +1,20 @@
+{ "slug": "delaware", "name": "Delaware", "abbr": "DE",
+  "filingFee": 165, "responseFee": null, "feeScope": "statewide",
+  "feeText": "Family Court Schedule of Assessed Costs effective 7/20/26: Civil Filing - Divorce $165.00, subject to the $10 Court Security Fee. Each ancillary matter (property division, alimony, separation agreement) costs $90.00; no cost for ancillary matters raised in an answer or counterclaim if the petitioner already paid for them.",
+  "feeUrl": "https://www.courts.delaware.gov/forms/download.aspx?id=116568",
+  "otherFees": [
+    { "what": "Court security assessment on civil filings", "amount": 10, "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568" },
+    { "what": "Ancillary matter (property division, alimony, separation agreement), per matter", "amount": 90, "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568" },
+    { "what": "Civil filing (other Family Court petitions)", "amount": 90, "url": "https://www.courts.delaware.gov/forms/download.aspx?id=116568" }
+  ],
+  "waiver": { "name": "Application to Proceed In Forma Pauperis (Family Court)", "url": null },
+  "residency": { "text": "Either spouse must have actually resided (been domiciled) in Delaware, or been stationed there in the armed forces, continuously for 6 or more months immediately before filing (13 Del. C. § 1504(a); § 1503(1)).", "url": "https://delcode.delaware.gov/title13/c015/" },
+  "waitingPeriod": { "days": 0, "text": "No waiting period after filing, but the no-fault grounds of voluntary separation, mental illness or incompatibility require living separate and apart for 6 or more months before the court rules on the petition (13 Del. C. § 1503(8), § 1505(b)); no separation period for misconduct.", "url": "https://delcode.delaware.gov/title13/c015/" },
+  "simplified": { "text": "No summary dissolution statute.", "url": null },
+  "parentingClass": { "required": true, "text": "Where there are living children of the marriage up to age 17, the court shall order the parties to pay for and attend a certified Parenting Education Course unless the court finds it unnecessary (13 Del. C. § 1507(h)).", "url": "https://delcode.delaware.gov/title13/c015/" },
+  "uncertain": [
+    "Waiver: the Family Court in forma pauperis form could not be located on courts.delaware.gov (forms found were for the Court of Chancery and JP Court); URL null.",
+    "Response fee: no answer fee listed; set to null.",
+    "Waiting period recorded as 0: Delaware's 6-month separation is part of the ground, not a waiting period after filing.",
+    "Simplified procedure: none found in 13 Del. C. ch. 15."
+  ] }

@@ -1,0 +1,45 @@
+{
+ "slug": "montana",
+ "name": "Montana",
+ "abbr": "MT",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Published notice requires claims within 4 months after first publication; creditors given written notice have the later of that period or 30 days after mailing (MCA 72-3-801). Pre-death claims are barred at the latest 1 year after death (MCA 72-3-803).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0080/section_0010/0720-0030-0080-0010.html"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, the personal representative may close the estate by verified statement no earlier than 6 months after original appointment, after the claims period has expired (MCA 72-3-1004).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0100/section_0040/0720-0030-0100-0040.html"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if the probate estate, less liens and encumbrances, does not exceed $100,000 and no personal representative has been appointed (MCA 72-3-1101, last amended by Ch. 453, L. 2023). Not indexed.",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0110/section_0010/0720-0030-0110-0010.html"
+ },
+ "simplified": {
+  "text": "Summary administration: if the estate, less liens, does not exceed the family allowances, exempt property, administration costs, funeral and last-illness expenses, the personal representative may distribute immediately without notice to creditors and file a closing statement (MCA 72-3-1103).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0110/section_0030/0720-0030-0110-0030.html"
+ },
+ "filingFee": {
+  "amount": 70,
+  "scope": "statewide",
+  "text": "Clerk of district court fee of $70 on filing an application for informal, formal or supervised probate or for appointment of a personal representative, including filing the will (MCA 25-1-201(1)(m)).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0250/chapter_0010/part_0020/section_0010/0250-0010-0020-0010.html"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (MCA 72-3-631, as amended by Ch. 313, L. 2019, which removed the former percentage cap); the court sets fees in a dispute (MCA 72-3-634).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0060/section_0310/0720-0030-0060-0310.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule (former MCA 72-3-633 repealed by Ch. 313, L. 2019): the court reviews the reasonableness of compensation of any attorney employed by the personal representative and sets the fee in a dispute (MCA 72-3-634).",
+  "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0030/part_0060/section_0340/0720-0030-0060-0340.html"
+ },
+ "uncertain": [
+  "Effective date of the $100,000 affidavit limit (Ch. 453, L. 2023) not shown on the MCA page; smallEstate.effective = null.",
+  "Montana no longer has a statutory percentage fee schedule (MCA 72-3-631 now 'reasonable compensation'), so no fee file was written."
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "slug": "district-of-columbia",
+ "name": "District of Columbia",
+ "abbr": "DC",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Claims are barred unless presented within 6 months after the date of first publication of notice of the appointment of a personal representative (D.C. Code § 20-903(a)(1)).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-903"
+ },
+ "earliestClose": {
+  "text": "In unsupervised administration the personal representative closes the estate with a Certificate of Completion, which may not be filed before the time for filing creditors' claims has expired and after a 60-day objection period on the account sent to interested persons (D.C. Code § 20-735).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-735"
+ },
+ "smallEstate": {
+  "limit": 40000,
+  "effective": null,
+  "text": "A small asset may be paid or delivered by affidavit of all known successors if the entire probate estate, less liens, does not exceed $40,000, includes no real property, and at least 60 days have passed since death (D.C. Code § 20-361; the online text includes temporary amendments expiring March 27, 2027).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-361"
+ },
+ "simplified": {
+  "text": "Small estate administration in the Probate Division when the property subject to administration in D.C. is $80,000 or less (D.C. Code § 20-351, as amended by D.C. Law 25-302, effective March 21, 2025).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-351"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Register of Wills fees are set by the Superior Court (D.C. Code § 15-707(a)); no fee for estates up to $500 and not more than $15 for estates up to $2,500 (§ 15-707(b)). The court's current fee schedule was not read.",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/15-707"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (D.C. Code § 20-751), reviewable by the court using listed factors (D.C. Code § 20-753).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-751"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule: the court may review the reasonableness of compensation of an attorney employed by the personal representative, considering the work performed, estimates given, time spent and complexity (D.C. Code § 20-753).",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/20-753"
+ },
+ "uncertain": [
+  "D.C. Superior Court Register of Wills fee schedule not read; filingFee.amount = null.",
+  "D.C. Code § 20-361 online text includes temporary legislation expiring March 27, 2027; effective date of the $40,000 affidavit limit not stated (smallEstate.effective = null)."
+ ]
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "south-carolina",
+  "name": "South Carolina",
+  "abbr": "SC",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly gross income schedule (S.C. Code Regs. 114-4710 to 114-4750)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Actual gross income if employed to full capacity, or potential income if unemployed or underemployed; includes salaries, wages, commissions, royalties, bonuses, rents less allowable expenses, dividends, severance, pensions, interest, trust income, annuities, capital gains, Social Security (not SSI), workers' compensation, unemployment, veterans' benefits and alimony; excludes means-tested assistance (TANF, SSI, food stamps), other household members' income and most in-kind income (Regs. 114-4720(A)(1)-(3)). Alimony paid in this action and court-ordered alimony or child support paid for other families are deducted; a credit of 0.75 x the schedule amount for other natural or adopted children in the home is subtracted (114-4720(A)(7)-(9)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/south-carolina.json",
+    "columns": "combined monthly gross income, then basic child support obligation for 1 to 6 children",
+    "minIncome": 750,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "interpolate",
+    "lookupRule": "Where combined gross income falls between amounts in the Schedule, the court is encouraged to extrapolate upwardly to set the basic award (Regs. 114-4720(A)(10)).",
+    "belowMin": {
+      "rule": "Below $750 combined monthly gross income support is determined case by case and should ordinarily be no less than $100 per month, without jeopardizing the payer's minimum subsistence (Regs. 114-4710(A)(2)).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The guidelines cover combined gross income up to $40,000 per month ($480,000 per year); above that, awards are set case by case (Regs. 114-4710(A)(3))."
+    },
+    "effective": "2024-01-01",
+    "url": "https://dss.sc.gov/media/lmdj4cnh/dss-booklet-2819-nov-24.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of Regs. 114-4730(A): shared physical custody above 109 overnights (more than 30%); basic obligation x 1.5 (shared.multiplier); between 110 and 127 overnights a graduated amount = Worksheet A - (Worksheet A - Worksheet C) x (overnights - 109) / (128 - 110). Self-support reserve area = shaded cells of the schedule (cs-schedules/south-carolina.json ssrShadedMaxIncome).",
+    "params": {
+      "sharedMoreThanOvernights": 109,
+      "graduatedBelowOvernights": 128,
+      "graduatedDivisorFrom": 110,
+      "daysPerYear": 365
+    },
+    "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 109,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared physical custody means each parent has court-ordered overnight visitation of more than 109 overnights a year (30%) and both contribute to expenses (Regs. 114-4730(A)). The basic obligation is multiplied by 1.5, apportioned by income, each share is multiplied by the percentage of time the children spend with the other parent, and the amounts are offset (Worksheet C, 114-4730(A)(2)). Between 110 and 127 overnights a graduated obligation applies: Worksheet A amount minus (Worksheet A - Worksheet C) x (overnights over 109) / (128 - 110) (114-4730(A)(3)). The adjustment is annual only and may be reversed if the time is not exercised.",
+    "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+  },
+  "addOns": {
+    "childcare": "work-related child care net of the simulated tax credit is added to the basic obligation and shared by income",
+    "healthInsurance": "the children's portion of health coverage is added and the payer receives a credit; the schedule already includes $250 per child per year of uninsured medical expenses",
+    "text": "Child care for employment or job search, net of federal and state credits, is added: above the income thresholds ($3,200/4,600/6,000/6,785/7,650/8,400 for 1-6 children) the cost is reduced by the lesser of 27% of the cost and $68 (one child) or $135 (two or more) (Regs. 114-4720(A)(14)). Health insurance for the children is added (114-4720(A)(12)). Unreimbursed medical expenses above $250 per child per year are divided pro rata (114-4720(A)(12)).",
+    "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1010.5,
+    "period": "monthly",
+    "minimumOrder": 100,
+    "rule": "Self-support reserve of $1,010.50 per month. When the obligor's income and number of children fall within the shaded area of the Schedule, support is calculated on the obligor's income only, without adding the other parent's income or adjustments (Regs. 114-4720(A)(11)). Below $750 combined income, support should ordinarily be at least $100 (114-4710(A)(2)).",
+    "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+  },
+  "statute": {
+    "cite": "S.C. Code Ann. § 63-17-470; S.C. Code Regs. 114-4710 to 114-4750",
+    "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+  },
+  "guidelinesUrl": "https://dss.sc.gov/media/lmdj4cnh/dss-booklet-2819-nov-24.pdf",
+  "officialCalculatorUrl": "https://dss.sc.gov/child-support/calculator/",
+  "emancipation": {
+    "text": "Child support runs until the child turns 18, marries or becomes self-supporting, or past 18 while the child is enrolled and attending high school, not beyond high school graduation or the end of the school year after the child turns 19, whichever is later; the court may extend it for disability or exceptional circumstances (S.C. Code § 63-3-530(A)(17)).",
+    "url": "https://www.scstatehouse.gov/code/t63c003.php"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 877.33,
+      "what": "parent A's monthly share of the basic obligation (no add-ons)",
+      "source": "Computed by hand from the 2024 Schedule (DSS Booklet 2819): combined $6,000 row, two children = $1,316; A's share 2/3 = $877.33 (unrounded). https://dss.sc.gov/media/lmdj4cnh/dss-booklet-2819-nov-24.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 526.4,
+      "what": "parent A's monthly obligation with 146 overnights (Worksheet C)",
+      "source": "Computed by hand under Regs. 114-4730(A)(2): 1,316 x 1.5 = 1,974; A owes 1,974 x 2/3 x 219/365 = 789.60; B owes 1,974 x 1/3 x 146/365 = 263.20; net 526.40."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 118
+      },
+      "expected": 777.57,
+      "what": "parent A's monthly obligation with 118 overnights (graduated)",
+      "source": "Computed by hand under Regs. 114-4730(A)(3): Worksheet A 877.33; Worksheet C at 118 nights: 1,974 x 2/3 x 247/365 = 890.53 - 1,974 x 1/3 x 118/365 = 212.72 -> 677.81; graduated 877.33 - (877.33 - 677.81) x 9/18 = 777.57."
+    },
+    {
+      "inputs": {
+        "incomeA": 1200,
+        "incomeB": 1000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 239.0,
+      "what": "obligor's monthly obligation in the self-support reserve (shaded) area",
+      "source": "Computed by hand: obligor income $1,200 is inside the shaded area for one child (up to $1,300), so support is calculated on the obligor's income only (Regs. 114-4720(A)(11)): row 1,200, one child = $239, lower than the pro rata share of the $2,200 row. https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The guidelines are regulations of the S.C. Department of Social Services; the 2024 revision (State Register 48-2, Doc. No. 5145, effective February 23, 2024) sets an implementation date of January 1, 2024 and raised the top of the schedule from $360,000 to $480,000 a year.",
+      "url": "https://www.scstatehouse.gov/state_register.php?first=FILE&pdf=1&file=Sr48-2.pdf"
+    },
+    {
+      "text": "The schedule itself is incorporated into Regulation 114-4750 by reference, not printed in the Code of Regulations; it is published by DSS (Booklet 2819) and on file with the Legislative Council.",
+      "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+    },
+    {
+      "text": "Families with more than six children are a listed reason to deviate from the guidelines (Regs. 114-4710(B)(4)).",
+      "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+    },
+    {
+      "text": "In IV-A cases, and on request in IV-D cases, DSS reviews orders every three years and adjusts them if they differ from the guidelines (Regs. 114-4740).",
+      "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+    },
+    {
+      "text": "Service members not receiving a housing allotment are imputed the BAH-II amount for dependents (Regs. 114-4720(A)(3)(C)).",
+      "url": "https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf"
+    }
+  ],
+  "uncertain": [
+    "dss.sc.gov did not answer from this network; the DSS Booklet 2819 (NOV 24, '2024 Edition') PDF was read from its Wayback copy (captured 2026-05-10). Its schedule is identical, row for row (786 rows), to the 'Proposed Schedule of Basic Support Obligations 2022' still posted on dss.sc.gov (Wayback capture 2026-04-21).",
+    "In the booklet's text layer the income label of row 31,350 reads '+*1350'; the row was repaired to 31350 (amounts match the DSS proposed-schedule PDF).",
+    "The shaded self-support-reserve area was recovered from the cell fill colour of DSS's own schedule PDF (identical rows): highest shaded income $1,300 / 1,500 / 1,700 / 1,800 / 1,950 / 2,050 for 1-6 children (cs-schedules/south-carolina.json ssrShadedMaxIncome).",
+    "Regs. 114-4720(A)(10) 'extrapolate upwardly' is stored as lookup 'interpolate'; whether courts round up to the next row or interpolate should be checked against the DSS calculator.",
+    "Regs. 114-4720(A)(11) says support in the shaded area 'must be calculated using the obligor's income only'. When that figure is higher than the obligor's pro rata share of the combined amount (possible when the other parent earns much more), the calculator keeps the lower pro rata figure, reading the rule by its stated purpose of protecting the obligor's reserve. This is a convention of the calculator."
+  ]
+}

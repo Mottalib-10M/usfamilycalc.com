@@ -1,0 +1,162 @@
+{
+  "slug": "new-mexico",
+  "name": "New Mexico",
+  "abbr": "NM",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined gross monthly income schedule (with self-support reserve)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Actual gross income of each parent (or potential income if willfully unemployed/underemployed), from any source: salaries, wages, tips, commissions, bonuses, dividends, severance, pensions, interest, trust income, annuities, capital gains, Social Security, workers' compensation, unemployment, disability, significant in-kind benefits, prizes and alimony received. Excluded: means-tested public assistance (TANF, SSI, general assistance), the child's own earnings or benefits, child support received for other children, alimony actually paid, court-ordered support actually paid for prior children and a reasonable amount for prior children in the parent's custody; self-employment = gross receipts minus ordinary and necessary expenses (NMSA 1978, § 40-4-11.1(C)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/new-mexico.json",
+    "columns": "upper bound of the combined adjusted gross monthly income band, then basic obligation for 1..6 children (band lower bounds in rowsFromTo)",
+    "minIncome": 1450,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "bracket",
+    "lookupRule": "Round combined income to the nearest fifty dollars ($50.00), find the rounded figure in the far left-hand column of the schedule and read across to the column for the number of children (Worksheet A and B instructions, Lines 3 and 4, NMSA 1978 § 40-4-11.1). The 2024 schedule lists $50 bands (e.g. 1,451 - 1,500); the first band is 0 - 1,450.",
+    "belowMin": {
+      "rule": "The first band (0 - 1,450) gives $60 / $75 / $90 / $105 / $120 / $135 for 1 to 6 children. Low-income rows are a self-support reserve (shaded area): if the payer's income and number of children fall in the shaded area, only the payer's income is used and the payer owes 100% of the SSR-adjusted amount, using Worksheet A only and without child care, medical or other add-ons (8.50.108.10(B) NMAC). Over six children within the SSR: add $15 per extra child.",
+      "amounts": [
+        60,
+        75,
+        90,
+        105,
+        120,
+        135
+      ]
+    },
+    "aboveMax": {
+      "method": "formula",
+      "pct": [
+        5.4,
+        7.7,
+        8.7,
+        9.7,
+        10.7,
+        11.6
+      ],
+      "text": "Combined income over $40,000 per month: $2,956 + 5.4% (1 child), $4,341 + 7.7% (2), $5,058 + 8.7% (3), $5,650 + 9.7% (4), $6,214 + 10.7% (5), $6,755 + 11.6% (6) of income over $40,000 (8.50.108 NMAC Appendix 1)."
+    },
+    "effective": "2024-01-01",
+    "url": "https://www.srca.nm.gov/nmac/nmregister/pdf/xxxiv24.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Lookup parameters of the New Mexico schedule (Worksheet A/B instructions, Lines 3-4, NMSA 1978 § 40-4-11.1; 8.50.108 NMAC Appendix 1).",
+    "params": {
+      "roundCombinedIncomeTo": 50,
+      "ssrExtraPerChildOverSix": 15
+    },
+    "url": "https://www.srca.nm.gov/nmac/nmregister/pdf/xxxiv24.pdf"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 128,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared responsibility = each parent provides a suitable home and the children spend at least 35% of the year in each home while the parents significantly share parenting duties and expenses (§ 40-4-11.1(F)(4)). Worksheet B: basic support x 1.5, split by income share; each parent retains the percentage equal to the number of 24-hour days with that parent divided by 365; the smaller remaining obligation is subtracted from the larger; additional payments (insurance, child care, extraordinary expenses) are shared by income and netted (§ 40-4-11.1(H)(2), (I), Worksheet B). Worksheet B is not subject to the SSR method (8.50.108.10(C) NMAC).",
+    "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income (net reasonable child-care costs due to employment or job search, § 40-4-11.1(J))",
+    "healthInsurance": "Cost of medical and dental insurance for the children is paid by each parent in proportion to income, in addition to the basic obligation (§ 40-4-11.1(J)).",
+    "text": "Support may also include uninsured extraordinary medical, dental and counseling expenses over $100 per child per year, extraordinary educational expenses, and long-distance visitation transportation and communication costs (§ 40-4-11.1(K)).",
+    "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 60,
+    "rule": "Since January 1, 2024 the schedule embeds a self-support reserve (shaded area): when the payer's own income and number of children fall in the shaded area, only the payer's income is used and the payer owes 100% of the schedule amount, with no add-ons (8.50.108.10(B) NMAC). Lowest schedule amounts: $60 (1 child) to $135 (6 children) for income 0 - 1,450. A payment above 40% of the payer's gross income for a single obligation is presumed a substantial hardship justifying deviation (§ 40-4-11.1(L)).",
+    "url": "https://www.srca.nm.gov/parts/title08/08.050.0108.html"
+  },
+  "statute": {
+    "cite": "NMSA 1978, § 40-4-11.1; 8.50.108 NMAC (Appendix 1)",
+    "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+  },
+  "guidelinesUrl": "https://www.srca.nm.gov/parts/title08/08.050.0108.html",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "The court may provide support for unemancipated minor children, and for children emancipated only by age who are under nineteen and attending high school, until high school graduation (NMSA 1978, § 40-4-7(B)(3)).",
+    "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 6000,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1104.0,
+      "what": "payer A's monthly basic obligation (Worksheet A, before add-ons): band 8,951 - 9,000, 2 children = $1,656; A's share 66.67% -> $1,104.00",
+      "source": "Computed by hand from 8.50.108 NMAC Appendix 1 (row 8,951 - 9,000: 1111 1656 1957 2186 2405 2614), NM Register XXXIV-24; no official worked example located"
+    },
+    {
+      "inputs": {
+        "incomeA": 6000,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 140
+      },
+      "expected": 703.23,
+      "what": "payer's monthly support, shared responsibility (Worksheet B): $1,656 x 1.5 = $2,484; payer $1,656 x 225/365 = $1,020.82 minus other $828 x 140/365 = $317.59",
+      "source": "Computed by hand from NMSA 1978 § 40-4-11.1(F)(4), (I), Worksheet B, and 8.50.108 NMAC Appendix 1 (band 8,951 - 9,000)."
+    },
+    {
+      "inputs": {
+        "incomeA": 40000,
+        "incomeB": 10000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 2796.8,
+      "what": "payer's monthly support above the schedule: $2,956 + 5.4% x $10,000 = $3,496 x 80%",
+      "source": "Computed by hand from 8.50.108 NMAC Appendix 1, 'Income over $40,000'."
+    },
+    {
+      "inputs": {
+        "incomeA": 5980,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1102.75,
+      "what": "payer's monthly support: combined $8,980 rounded to the nearest $50 = $9,000, band 8,951 - 9,000 = $1,656 x 5,980/8,980",
+      "source": "Computed by hand from Worksheet A instructions (round to the nearest $50), NMSA 1978 § 40-4-11.1, and 8.50.108 NMAC Appendix 1."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Laws 2023, ch. 106 (effective January 1, 2024) removed the schedule from the statute; the Health Care Authority (formerly Human Services Department) now sets it by rule, 8.50.108 NMAC Appendix 1, effective January 1, 2024.",
+      "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+    },
+    {
+      "text": "The 2024 schedule incorporates a self-support reserve shown as a shaded area; in that area only the payer's income counts (8.50.108.10(B) NMAC).",
+      "url": "https://www.srca.nm.gov/parts/title08/08.050.0108.html"
+    },
+    {
+      "text": "A support obligation exceeding 40% of the payer's gross income for a single obligation is presumed to be a substantial hardship (NMSA 1978, § 40-4-11.1(L)).",
+      "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+    },
+    {
+      "text": "Income may not be imputed to a parent incarcerated for 180 days or longer; incarceration is not voluntary unemployment (NMSA 1978, § 40-4-11.1(E)).",
+      "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+    },
+    {
+      "text": "Shared responsibility time is counted in 24-hour days divided by 365, not overnights (§ 40-4-11.1(I), Worksheet B line 7).",
+      "url": "https://nmonesource.com/nmos/nmsa/en/item/4375/index.do"
+    }
+  ],
+  "uncertain": [
+    "The brief mentioned a 2021/2022 schedule in § 40-4-11.1; Laws 2023, ch. 106 removed it from the statute effective January 1, 2024. The current schedule is 8.50.108 NMAC Appendix 1, read in the New Mexico Register PDF (Vol. XXXIV, Issue 24, Dec. 19, 2023); the HTML of 8.50.108 NMAC on srca.nm.gov shows only the 1/1/2024 version and does not reproduce the appendix.",
+    "hca.nm.gov returned HTTP 403 to automated requests, so the Health Care Authority's own copy of the schedule could not be cross-checked.",
+    "The PDF text layer does not show which cells are shaded (SSR area); the shaded region is not encoded in the JSON.",
+    "Statute says 'at least thirty-five percent of the year' (24-hour days): 35% x 365 = 127.75, stored as thresholdOvernights 128.",
+    "Statute text read from the official NMOneSource compilation PDF of Chapter 40 (https://nmonesource.com/nmos/nmsa/en/4375/1/document.do).",
+    "No official online calculator URL was verified; test case computed by hand."
+  ]
+}

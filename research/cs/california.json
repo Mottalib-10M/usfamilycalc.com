@@ -1,0 +1,105 @@
+{
+  "slug": "california",
+  "name": "California",
+  "abbr": "CA",
+  "verified": "2026-10-08",
+  "model": "ca-formula",
+  "modelName": "Statewide uniform guideline formula CS = K[HN - (H%)(TN)] (Fam. Code § 4055, as amended by SB 343)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Net monthly disposable income: annual gross income minus state and federal income taxes actually payable, FICA (or equivalent retirement/disability contributions), mandatory union dues and mandatory retirement contributions, health insurance premiums for the parent and children and state disability insurance, child or spousal support actually paid for others under court order, court-allowed job-related expenses, and hardship deductions (Fam. Code § 4059).",
+  "period": "monthly",
+  "maxChildren": 10,
+  "schedule": null,
+  "percent": null,
+  "formula": {
+    "text": "CS = K[HN - (H%)(TN)] (Fam. Code § 4055(a)). HN = high earner's net monthly disposable income; TN = total net monthly disposable income of both parents; H% = approximate percentage of time the high earner has primary physical responsibility for the children (average across children if time-shares differ). K = (1 + H%) if H% <= 50%, or (2 - H%) if H% > 50%, times the income fraction from the table in § 4055(b)(3). The result is for one child; multiply by the children multiplier in § 4055(b)(4). A positive CS is paid by the higher earner to the lower earner; a negative CS means the lower earner pays the absolute value (§ 4055(b)(5)). If the obligor's net disposable income is below the monthly gross income of full-time minimum wage (Lab. Code § 1182.12, 40 h x 52 weeks / 12), the low-income adjustment may reduce CS by at most CS x (MW_monthly - obligor net) / MW_monthly (§ 4055(b)(7)).",
+    "params": {
+      "kTable": [
+        { "tnMin": 0, "tnMax": 2900, "fraction": "0.165 + TN/82,857", "constant": 0.165, "divisor": 82857, "fixedOverTN": null },
+        { "tnMin": 2901, "tnMax": 5000, "fraction": "0.131 + TN/42,149", "constant": 0.131, "divisor": 42149, "fixedOverTN": null },
+        { "tnMin": 5001, "tnMax": 10000, "fraction": "0.250", "constant": 0.25, "divisor": null, "fixedOverTN": null },
+        { "tnMin": 10001, "tnMax": 15000, "fraction": "0.10 + 1,499/TN", "constant": 0.10, "divisor": null, "fixedOverTN": 1499 },
+        { "tnMin": 15001, "tnMax": null, "fraction": "0.12 + 1,200/TN", "constant": 0.12, "divisor": null, "fixedOverTN": 1200 }
+      ],
+      "kTableNote": "Brackets as printed in § 4055(b)(3): '$0–2,900', '$2,901–5,000', '$5,001–10,000', '$10,001–15,000', 'Over $15,000'. The statute does not say how to treat cents between two brackets (e.g. TN = 2,900.50).",
+      "hPercentRule": { "ifHPercentAtMost50": "K = (1 + H%) x fraction", "ifHPercentAbove50": "K = (2 - H%) x fraction" },
+      "statutoryKExample": { "hPercent": 0.20, "tn": 1000, "k": 0.21, "text": "If H% = 20% and TN = $1,000, K = (1 + 0.20) x (0.165 + 1,000/82,857), or 0.21 (§ 4055(b)(3)); the same K results with H% = 80%." },
+      "childrenMultiplier": { "1": 1, "2": 1.6, "3": 2, "4": 2.3, "5": 2.5, "6": 2.625, "7": 2.75, "8": 2.813, "9": 2.844, "10": 2.86 },
+      "lowIncomeAdjustment": {
+        "threshold": "monthly gross income from full-time minimum wage (Lab. Code § 1182.12) at 40 hours/week, 52 weeks/year",
+        "minimumWageHourly2026": 16.90,
+        "minimumWageSource": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+        "thresholdMonthly2026Computed": 2929.33,
+        "thresholdComputation": "16.90 x 40 x 52 / 12 = 2,929.333... (computed by us from the DIR rate; not a figure published as such by the court or DCSS)",
+        "maxReduction": "CS x (threshold - obligor net disposable income) / threshold",
+        "rebuttable": true,
+        "computerRangeRequired": "A computer program must show the range of the adjustment (§ 4055(c)).",
+        "fiftyPercentRebuttal": "If the obligor qualifies for the LIA and guideline support exceeds 50% of the obligor's net disposable income after the LIA, the court may reduce support by the excess over 50% (§ 4057(b)(5))."
+      },
+      "defaultHPercent": "In default or non-appearance cases without time-share evidence, H% = 0 if the noncustodial parent is the higher earner, 100 if the custodial parent is the higher earner (§ 4055(b)(6)).",
+      "allocationAmongChildren": "Unless ordered otherwise, the youngest child gets the one-child amount, the next youngest the difference between the two-child and one-child amounts, and so on (§ 4055(b)(8)).",
+      "operative": "2024-09-01"
+    },
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Parenting time is built into the formula through H%, the high earner's approximate percentage of physical responsibility time, which enters both K (1 + H% or 2 - H%) and the term (H%)(TN) (§ 4055(b)(1)(D), (b)(3)). There is no overnight threshold.",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055"
+  },
+  "addOns": {
+    "childcare": "Mandatory add-on: employment- or education-related childcare costs actually incurred (§ 4062(a)(1)), shared in proportion to the parents' net incomes as adjusted under § 4061(c)-(d), unless the court orders otherwise (§ 4061(a)).",
+    "healthInsurance": "Health insurance premiums are deducted from income (§ 4059(d)); reasonable uninsured health care costs are a mandatory add-on (§ 4062(a)(2)) shared in proportion to adjusted net incomes (§ 4061).",
+    "text": "Since September 1, 2024, add-ons are split in proportion to net disposable incomes; for this allocation the payer's net income is reduced by the basic child support and spousal support is moved from payer to recipient (§ 4061(c)-(d)). Educational/special needs and visitation travel are discretionary add-ons (§ 4062(b)).",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4061"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "Rebuttable presumption of a low-income adjustment when the obligor's net disposable income is below full-time minimum wage monthly gross income (40 h x 52 weeks); maximum reduction = CS x (threshold - obligor net) / threshold (§ 4055(b)(7)). With the 2026 state minimum wage of $16.90/hour the threshold computes to $2,929.33 per month.",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055"
+  },
+  "statute": { "cite": "Cal. Fam. Code §§ 4050-4076 (formula § 4055; net income § 4059; add-ons §§ 4061-4062)", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055" },
+  "guidelinesUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055",
+  "officialCalculatorUrl": "https://childsupport.ca.gov/guideline-calculator/",
+  "emancipation": {
+    "text": "The duty of support continues for an unmarried child who is 18, a full-time high school student and not self-supporting, until the child completes 12th grade or turns 19, whichever comes first (Fam. Code § 3901(a)).",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=3901"
+  },
+  "testCases": [
+    {
+      "inputs": { "tn": 1000, "hPercent": 0.20 },
+      "expected": 0.21,
+      "what": "K factor (rounded to 2 decimals as in the statute)",
+      "source": "Statutory example in Fam. Code § 4055(b)(3), https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055 (exact value 1.2 x (0.165 + 1000/82857) = 0.212483...)"
+    },
+    {
+      "inputs": { "incomeA": 6000, "incomeB": 4000, "children": 1, "hPercent": 0.20, "highEarner": "A" },
+      "expected": 1200.0,
+      "what": "monthly guideline support paid by the high earner (net disposable incomes)",
+      "source": "Computed by hand from § 4055: TN = 10,000 -> fraction 0.250; K = 1.20 x 0.250 = 0.30; CS = 0.30 x (6,000 - 0.20 x 10,000) = 1,200. No official numeric worked example was found."
+    },
+    {
+      "inputs": { "incomeA": 6000, "incomeB": 4000, "children": 2, "hPercent": 0.20, "highEarner": "A" },
+      "expected": 1920.0,
+      "what": "monthly guideline support for 2 children",
+      "source": "Computed by hand: 1,200 x 1.6 (§ 4055(b)(4))."
+    }
+  ],
+  "facts": [
+    { "text": "The current K-factor table and low-income adjustment were enacted by SB 343 (Stats. 2023, ch. 213) and became operative September 1, 2024 (§ 4055(d)).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4055" },
+    { "text": "Guideline support is presumed correct; deviations are limited to listed factors such as stipulation, extraordinarily high income exceeding the children's needs, or special circumstances (§ 4057).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4057" },
+    { "text": "The income of a parent's new spouse or nonmarital partner is not considered except in extraordinary cases of extreme and severe hardship to a child (§ 4057.5).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4057.5" },
+    { "text": "Federal and state taxes are those actually payable after filing status, exclusions, deductions and credits, not current withholding (§ 4059(a)).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=4059" },
+    { "text": "The California Department of Child Support Services publishes the statewide Guideline Calculator; its user guide was last updated July 21, 2026.", "url": "https://childsupport.ca.gov/wp-content/uploads/sites/252/2026/07/GuidelineCalculatorUserGuide_07212026.pdf" }
+  ],
+  "uncertain": [
+    "leginfo.legislature.ca.gov returns HTTP 403 / a Cloudflare challenge to automated clients; the text of §§ 4055, 4057, 4057.5, 4059, 4061, 4062 and 3901 was read from the Wayback Machine copy of the official page (snapshot 2026-03-17, https://web.archive.org/web/20260317053301/https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4055&lawCode=FAM).",
+    "The low-income threshold ($2,929.33/month) is our computation from the DIR 2026 minimum wage ($16.90/hour); neither DCSS nor the Judicial Council publication with that exact figure was read. Local minimum wages higher than the state rate are not addressed by § 4055(b)(7), which refers to Lab. Code § 1182.12.",
+    "No official numeric worked example of the full formula was found (the DCSS user guide July 2026 has none); test cases 2-3 are hand computations."
+  ]
+}

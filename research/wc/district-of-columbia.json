@@ -1,0 +1,63 @@
+{
+  "slug": "district-of-columbia",
+  "name": "District of Columbia",
+  "abbr": "DC",
+  "verified": "2026-10-08",
+  "agency": {
+    "name": "Office of Workers' Compensation, Department of Employment Services (DOES)",
+    "url": "https://does.dc.gov/publication/maximum-minimum-compensation-ratesupplemental-allowance"
+  },
+  "ttd": {
+    "rate": 66.67,
+    "basis": "gross AWW",
+    "rateText": "66 2/3% of the employee's average weekly wages during the continuance of temporary total disability (D.C. Code § 32-1508(2)).",
+    "max": 1852.07,
+    "min": 463.02,
+    "minText": "DOES minimum compensation rate for 2026 (D.C. Code § 32-1505).",
+    "effective": "2026-01-01",
+    "periodLabel": "calendar year 2026 (from January 1, 2026; +2.40% over 2025)",
+    "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/Supplemental%20Allowance%20Min-Max%202026.pdf",
+    "asOf": "2026-01-21"
+  },
+  "waiting": {
+    "days": 3,
+    "retroactiveAfterDays": 14,
+    "text": "No compensation is allowed for the first 3 days of disability, except medical benefits under § 32-1507; if the injury results in disability of more than 14 days, compensation is allowed from the date of disability (D.C. Code § 32-1505).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-1505"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "TTD is paid during the continuance of total disability, with no fixed week cap; temporary partial disability is limited to 5 years (D.C. Code § 32-1508(2), (5)).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-1508"
+  },
+  "ppd": {
+    "text": "Scheduled permanent partial disability pays 66 2/3% of average weekly wages for a fixed number of weeks (e.g. arm 312 weeks, leg 288, hand 244), proportionally for partial loss of use (D.C. Code § 32-1508(3)).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-1508"
+  },
+  "statute": {
+    "cite": "D.C. Code §§ 32-1505, 32-1508 (District of Columbia Workers' Compensation Act of 1979)",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-1508"
+  },
+  "facts": [
+    {
+      "text": "DC's 2026 weekly maximum is $1,852.07, up 2.40% from $1,808.66 in 2025; the DOES table goes back to $396.78 in 1982.",
+      "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/Supplemental%20Allowance%20Min-Max%202026.pdf"
+    },
+    {
+      "text": "The DOES minimum rate is set at one-quarter of the maximum ($463.02 vs. $1,852.07 in 2026), as in every year of its table since 1982.",
+      "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/Supplemental%20Allowance%20Min-Max%202026.pdf"
+    },
+    {
+      "text": "Annual supplemental allowances (cost-of-living increases) for long-term disability recipients are capped at 5% (D.C. Code § 32-1506(d)).",
+      "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/Supplemental%20Allowance%20Min-Max%202026.pdf"
+    },
+    {
+      "text": "Temporary partial disability benefits (66 2/3% of wage loss) cannot be paid for more than 5 years (D.C. Code § 32-1508(5)).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-1508"
+    }
+  ],
+  "uncertain": [
+    "The exact statutory minimum rule (and whether workers earning less than the minimum receive their actual wage) was not read; minText cites only the DOES table.",
+    "D.C. Code text read through WebFetch (summarized quotes), code.dccouncil.gov not parsable by curl."
+  ]
+}

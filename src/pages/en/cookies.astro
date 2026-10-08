@@ -1,0 +1,18 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES, CLARITY_ID } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Cookies on ${SITE_NAMES[lang]}: the site sets none at all`} description="The child support, alimony, divorce cost, probate and workers' comp calculators set no cookie and store nothing on your device, which is why there is nothing to accept here." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Cookies</h1>
+    <p>No page of this site sets a cookie, and none of the calculators writes anything to your device. The incomes, wages and estate values you type live in the open tab and vanish when you close it.</p>
+    <h2>Nothing to accept</h2><p>You will not see a cookie banner, because there is nothing to accept: no advertising, no analytics cookie, no social media button, no account.</p>
+    {CLARITY_ID
+      ? <><h2>Anonymous stability monitoring</h2><p>The site loads Microsoft Clarity in its cookie-free mode to catch script errors, slow pages and dead buttons. In that mode Clarity sets no cookie (no <code>_clck</code>, <code>_clsk</code>, <code>MUID</code> or <code>CLID</code>), gives each page view a one-off identifier and masks the page content and your inputs. Blocking clarity.ms stops it; the calculators keep working.</p></>
+      : <><h2>No measurement tool</h2><p>No analytics or monitoring script runs on the site today. If one is added, this page and the <a href={route('privacy', lang)}>privacy policy</a> will say so first.</p></>}
+    <h2>Links you share</h2><p>The share link of a calculation carries your inputs in the page address, not in a cookie. Whoever receives the link sees them.</p>
+    <p>Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,26 @@
+{
+  "slug": "massachusetts", "name": "Massachusetts", "abbr": "MA", "verified": "2026-10-08",
+  "agency": { "name": "Department of Industrial Accidents (DIA)", "url": "https://www.mass.gov/info-details/types-of-workers-compensation-benefits" },
+  "ttd": {
+    "rate": 60, "basis": "gross AWW",
+    "rateText": "60% of gross average weekly wage, up to the state average weekly wage at the time of injury (DIA, Temporary Total Incapacity benefits, M.G.L. c. 152, § 34); maximum = 100% and minimum = 20% of the SAWW (M.G.L. c. 152, § 1(10)-(11)).",
+    "max": 2007.20, "min": 401.44, "minText": "Minimum weekly compensation rate is 20% of the SAWW (M.G.L. c. 152, § 1(11)).",
+    "effective": "2026-10-01", "periodLabel": "injuries on or after October 1, 2026 (injuries October 1, 2025 - September 30, 2026: max $1,922.48, min $384.50)",
+    "url": "https://www.mass.gov/info-details/minimum-and-maximum-compensation-rates", "asOf": "2026-10-01"
+  },
+  "waiting": { "days": 5, "retroactiveAfterDays": 20, "text": "Compensation begins on the sixth day of incapacity; the first five days are not compensated unless the worker is disabled for 21 calendar days or more (DIA, Temporary Total Incapacity benefits; M.G.L. c. 152, § 29).", "url": "https://www.mass.gov/info-details/types-of-workers-compensation-benefits" },
+  "ttdDuration": { "maxWeeks": 156, "text": "Since 12/24/91, § 34 temporary total benefits run for up to 156 weeks (DIA minimum and maximum compensation rates page).", "url": "https://www.mass.gov/info-details/minimum-and-maximum-compensation-rates" },
+  "ppd": { "text": "Partial incapacity (§ 35) is paid when the worker can still work but loses earning capacity; it is limited to 75% of what the worker's temporary total benefit would be and lasts up to 260 weeks. Permanent loss of function and disfigurement of the face, neck or hands (§ 36) is paid as a one-time payment in addition to other benefits (DIA, Types of benefits).", "url": "https://www.mass.gov/info-details/types-of-workers-compensation-benefits" },
+  "statute": { "cite": "M.G.L. c. 152, §§ 1(10)-(11), 29, 34, 34A, 35, 36", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter152/Section34" },
+  "facts": [
+    { "text": "Massachusetts resets its maximum and minimum every October 1; the rates are set by the Commissioner of the Division of Unemployment Assistance as 100% and 20% of the state average weekly wage (M.G.L. c. 152, § 1).", "url": "https://www.mass.gov/info-details/minimum-and-maximum-compensation-rates" },
+    { "text": "Massachusetts pays TTD at 60% of the average weekly wage, below the two-thirds used by most states, but its maximum ($2,007.20 from October 1, 2026) is among the highest in the country.", "url": "https://www.mass.gov/info-details/minimum-and-maximum-compensation-rates" },
+    { "text": "Permanent and total incapacity benefits are two-thirds of the average weekly wage (minimum 20% of SAWW, maximum the SAWW) and carry annual cost-of-living adjustments (DIA).", "url": "https://www.mass.gov/info-details/types-of-workers-compensation-benefits" },
+    { "text": "Before December 24, 1991, § 34 temporary total benefits ran for up to 260 weeks instead of 156 (DIA).", "url": "https://www.mass.gov/info-details/minimum-and-maximum-compensation-rates" },
+    { "text": "If a surviving spouse remarries, each eligible child receives $60 a week (DIA, survivors' benefits).", "url": "https://www.mass.gov/info-details/types-of-workers-compensation-benefits" }
+  ],
+  "uncertain": [
+    "malegislature.gov did not respond (connection refused/timeouts) and its Wayback copy timed out on 2026-10-08; statutory section numbers (§§ 29, 34, 35, 36) are given from the DIA pages' references and standard chapter structure, not read from the statute text itself. The § 1(10)-(11) wording was read as quoted on the DIA rates page.",
+    "The October 1, 2026 rate row ($2,007.20 / $401.44) was read on the live DIA page on 2026-10-08; the corresponding circular letter was not located."
+  ]
+}

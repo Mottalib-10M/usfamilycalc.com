@@ -1,0 +1,67 @@
+{
+  "slug": "iowa",
+  "name": "Iowa",
+  "abbr": "IA",
+  "verified": "2026-10-08",
+  "agency": {
+    "name": "Workers' Compensation Division, Iowa Department of Inspections, Appeals, and Licensing (DIAL)",
+    "url": "https://dial.iowa.gov/hearings/workers-comp"
+  },
+  "ttd": {
+    "rate": 80,
+    "basis": "spendable earnings",
+    "rateText": "80% of the employee's weekly spendable earnings (gross weekly earnings less payroll taxes based on exemptions for actual dependency), not exceeding the maximum weekly rate at the time of injury (Iowa Code § 85.37, § 85.61).",
+    "max": 2431.0,
+    "min": 425.0,
+    "minText": "TTD and healing period minimum is the lower of $425.00 (35% of the SAWW) or the injured employee's spendable earnings.",
+    "effective": "2026-07-01",
+    "periodLabel": "injuries July 1, 2026 through June 30, 2027 (SAWW $1,215.65)",
+    "url": "https://dial.iowa.gov/hearings/workers-comp/rates",
+    "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 3,
+    "retroactiveAfterDays": 14,
+    "text": "TTD begins on the fourth day the injured worker is off work; if the worker misses more than 14 days, the first three days are also paid (Iowa Code § 85.32).",
+    "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "TTD continues until the worker returns to work or has recovered enough medically to return to similar work; when the injury causes permanent impairment, healing period benefits are paid instead (Iowa Code §§ 85.33, 85.34(1)).",
+    "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+  },
+  "ppd": {
+    "text": "PPD starts at maximum medical recovery. Scheduled members are paid at the PPD rate for the impairment percentage of the statutory weeks (for injuries on or after July 1, 2017: thumb 60, hand 190, arm 250, foot 150, leg 220, eye 140, shoulder 400 weeks); body-as-a-whole injuries depend on loss of earning capacity (industrial disability). The 2026-2027 PPD maximum is $2,237.00 per week (Iowa Code § 85.34(2)).",
+    "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+  },
+  "statute": {
+    "cite": "Iowa Code §§ 85.32, 85.33, 85.34, 85.37, 85.61",
+    "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+  },
+  "facts": [
+    {
+      "text": "Iowa's weekly benefit is 80% of spendable (after-tax) earnings; the TTD maximum rose from $2,350.00 (2025-2026) to $2,431.00 for injuries from July 1, 2026.",
+      "url": "https://dial.iowa.gov/hearings/workers-comp/rates"
+    },
+    {
+      "text": "Iowa has separate maximums by benefit type: $2,431.00 for TTD, healing period, PTD and death, and $2,237.00 for PPD (injuries July 1, 2026 - June 30, 2027).",
+      "url": "https://dial.iowa.gov/hearings/workers-comp/rates"
+    },
+    {
+      "text": "Since July 1, 2017 the shoulder is a scheduled member worth 400 weeks.",
+      "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+    },
+    {
+      "text": "In most circumstances the employer chooses the medical care; the worker may choose only in an emergency when the employer cannot be reached.",
+      "url": "https://dial.iowa.gov/hearings/workers-comp/benefits"
+    },
+    {
+      "text": "DIAL publishes a ratebook spreadsheet each year giving the weekly rate by gross earnings, marital status and exemptions for injuries from July 1 to June 30.",
+      "url": "https://dial.iowa.gov/hearings/workers-comp/rates"
+    }
+  ],
+  "uncertain": [
+    "The DIAL rates page also shows an unlabeled 'Lower of $398.00' minimum line (apparently an older figure) before the dated 2026-2027 ($425.00) and 2025-2026 ($411.00) figures; $425.00 used.",
+    "Iowa Code section numbers are those cited for these rules but the Code text (legis.iowa.gov) was not read in this pass."
+  ]
+}

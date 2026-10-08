@@ -1,0 +1,24 @@
+{
+  "slug": "vermont", "name": "Vermont", "abbr": "VT",
+  "filingFee": 295, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "$295 before the entry of any divorce or annulment proceeding in the Superior Court; $90 if filed with a stipulation for a final order and one or both parties are residents ($180 if neither is a resident) (32 V.S.A. § 1431(b)(2)).",
+  "feeUrl": "https://legislature.vermont.gov/statutes/section/32/017/01431",
+  "otherFees": [
+    { "what": "Divorce complaint filed with a stipulation for a final order, at least one party resident (32 V.S.A. § 1431(b)(2))", "amount": 90, "url": "https://legislature.vermont.gov/statutes/section/32/017/01431" },
+    { "what": "Motion or petition to vacate or modify a child support order (32 V.S.A. § 1431(b)(5))", "amount": 45, "url": "https://legislature.vermont.gov/statutes/section/32/017/01431" }
+  ],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "A complaint may be brought if either party has resided in Vermont for six months or more, but no divorce may be decreed unless the plaintiff or defendant has resided in the State one year before the final hearing (15 V.S.A. § 592(a)).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00592" },
+  "waitingPeriod": { "days": 90, "text": "A divorce decree is first a decree nisi and becomes absolute 90 days after entry, unless the court fixes an earlier date (15 V.S.A. § 554(a)).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00554" },
+  "separationRequiredDays": 182,
+  "separationText": "No-fault ground: the spouses have lived apart for six consecutive months and resumption of marital relations is not reasonably probable (15 V.S.A. § 551(7)); fault grounds need no separation.",
+  "simplified": { "text": "No separate summary procedure in statute; an uncontested complaint filed with a stipulation for a final order pays a reduced $90 fee (32 V.S.A. § 1431(b)(2)).", "url": "https://legislature.vermont.gov/statutes/section/32/017/01431" },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "Fee waiver form name/URL not verified: vermontjudiciary.org returned HTTP 403 to automated clients on 2026-10-08.",
+    "Parenting class requirement not verified (court rule / vermontjudiciary.org not readable).",
+    "No answer fee appears in 32 V.S.A. § 1431(b)(2); responseFee left null rather than 0 because the Vermont Judiciary fee schedule could not be read.",
+    "separationRequiredDays 182 is the day equivalent of 'six consecutive months' in § 551(7) and applies only to the no-fault ground."
+  ]
+}

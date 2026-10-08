@@ -1,0 +1,38 @@
+{
+  "slug": "connecticut", "name": "Connecticut", "abbr": "CT", "verified": "2026-10-08",
+  "agency": { "name": "Connecticut Workers' Compensation Commission (WCC)", "url": "https://portal.ct.gov/wcc" },
+  "ttd": {
+    "rate": 75, "basis": "after-tax AWW",
+    "rateText": "75% of average weekly earnings after deduction of federal and state income taxes and FICA (C.G.S. § 31-307(a)), not more than the maximum set under § 31-309 for the year of injury.",
+    "max": 1776.00, "min": 355.20,
+    "minText": "Minimum is 20% of the maximum weekly rate, but the minimum may not exceed 75% of the employee's average weekly wage (C.G.S. § 31-307(a)).",
+    "effective": "2026-10-01", "periodLabel": "injuries on or after October 1, 2026 (Connecticut benefit year October 1, 2026 - September 30, 2027)",
+    "url": "https://portal.ct.gov/wcc/knowledge-base/articles/news-and-memos/2026/memo-2026-05", "asOf": "2026-09-04"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 7,
+    "text": "No compensation unless incapacity lasts more than three days; if it lasts more than three but less than seven days, compensation begins after the first three days; if it continues for seven days, compensation is paid from the date of injury. The day of injury is paid at full wages (C.G.S. § 31-295(a)-(b)).",
+    "url": "https://www.cga.ct.gov/current/pub/chap_568.htm#sec_31-295"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Total incapacity benefits continue for the period of total incapacity, with no fixed week cap (C.G.S. § 31-307(a)); partial incapacity benefits are limited to 520 weeks (C.G.S. § 31-308(a)).",
+    "url": "https://www.cga.ct.gov/current/pub/chap_568.htm#sec_31-307"
+  },
+  "ppd": {
+    "text": "Permanent partial disability ('specific') awards are paid at 75% of after-tax average weekly earnings for the number of weeks set in the § 31-308(b) schedule for each member, in addition to total incapacity benefits; payment must begin within 30 days of maximum medical improvement or 10% annual interest is added (C.G.S. §§ 31-308(b), 31-295(c)).",
+    "url": "https://www.cga.ct.gov/current/pub/chap_568.htm#sec_31-308"
+  },
+  "statute": { "cite": "Conn. Gen. Stat. §§ 31-295, 31-307, 31-308, 31-309, 31-310", "url": "https://www.cga.ct.gov/current/pub/chap_568.htm" },
+  "facts": [
+    { "text": "Connecticut pays 75% of after-tax (net of federal and state income tax and FICA) average weekly earnings rather than a share of gross wages (C.G.S. § 31-307(a)).", "url": "https://www.cga.ct.gov/current/pub/chap_568.htm#sec_31-307" },
+    { "text": "The maximum total disability rate equals the average weekly earnings of all Connecticut employees, $1,776.00 from October 1, 2026; partial disability is capped at production-worker manufacturing earnings, $1,175.00 (C.G.S. § 31-309).", "url": "https://portal.ct.gov/wcc/knowledge-base/articles/news-and-memos/2026/memo-2026-05" },
+    { "text": "A worker hurt by an employer's cited and unabated OSHA safety violation receives 100% of average weekly earnings (C.G.S. § 31-307(b)).", "url": "https://www.cga.ct.gov/current/pub/chap_568.htm#sec_31-307" },
+    { "text": "The WCC publishes benefit rate tables each year; the tables for October 1, 2026 to September 30, 2027 are in memo 2026-07.", "url": "https://portal.ct.gov/wcc/knowledge-base/articles/news-and-memos/2026/memo-2026-07" },
+    { "text": "Total disability and survivor benefits receive annual cost-of-living adjustments tied to the change in the maximum rate (C.G.S. § 31-307a).", "url": "https://portal.ct.gov/wcc/knowledge-base/articles/news-and-memos/2026/memo-2026-05" }
+  ],
+  "uncertain": [
+    "min $355.20 is computed as 20% x $1,776.00 under C.G.S. § 31-307(a); not printed as a figure in memo 2026-05.",
+    "Injuries January 1 - September 30, 2026 use the October 1, 2025 maximum (not read here)."
+  ]
+}

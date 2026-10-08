@@ -1,0 +1,90 @@
+{
+  "slug": "north-dakota",
+  "name": "North Dakota",
+  "abbr": "ND",
+  "verified": "2026-10-08",
+  "model": "percent-obligor",
+  "modelName": "Obligor-only model: schedule by obligor's monthly net income and number of children (N.D. Admin. Code 75-02-04.1-10)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Gross income is income from any source in any form, excluding means-tested public assistance, child support received, atypical overtime or nonrecurring bonuses beyond the employee's control, nonrecurring capital gains and early retirement withdrawals (75-02-04.1-01(4)). Net income is annual gross income less a hypothetical federal income tax (single filing status, standard deduction, latest IRS single tables), a hypothetical state income tax equal to 11% of that federal amount, FICA/Medicare/self-employment taxes, the children's share of health insurance premiums, ongoing medical expenses of the children, required union dues and license fees, required employee retirement contributions and certain documented unreimbursed employee expenses (75-02-04.1-01(6)); the annual total is divided by 12 (75-02-04.1-02(6)). The obligee's income is not used.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/north-dakota.json",
+    "columns": "obligor's monthly net income, then support for 1..5 children and 6 or more children",
+    "minIncome": 800,
+    "maxIncome": 25000,
+    "step": 100,
+    "lookup": "nearest",
+    "lookupRule": "The obligor's monthly net income is rounded to the nearest $100 ($50 or more rounds up) before applying the schedule (75-02-04.1-02(5)); any computed dollar amount ending in 50 cents or more is rounded up to the next whole dollar, otherwise down (75-02-04.1-02(4)).",
+    "belowMin": {
+      "rule": "The first row reads '800 or less' with support of $0 for any number of children (75-02-04.1-10). The former minimum support level section 75-02-04.1-04 was repealed effective January 1, 2018.",
+      "amounts": [0, 0, 0, 0, 0, 0]
+    },
+    "aboveMax": {
+      "method": "cap",
+      "pct": null,
+      "text": "The last row reads '25000 or more': $3,500 / $4,250 / $5,000 / $5,500 / $6,000 / $6,500 for 1 to 6+ children (75-02-04.1-10). The presumption may be rebutted for an obligor with monthly net income above $25,000 based on the demonstrated needs of the child (75-02-04.1-09(2)(b))."
+    },
+    "effective": "2019-01-01",
+    "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 101,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Extended parenting time (more than 100 court-ordered overnights a year): divide the schedule amount by the number of children; for each child multiply the overnights by 0.32, subtract from 365 and divide by 365; multiply the per-child amount by that fraction and total (75-02-04.1-08.1). Equal residential responsibility (equal time ordered by the court): a support obligation is calculated for each parent as if the other had primary residential responsibility, and the lesser is subtracted from the greater (75-02-04.1-08.2); the extended parenting time adjustment does not apply in that case.",
+    "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+  },
+  "addOns": {
+    "childcare": "Not added to the schedule: child care costs purchased by the obligee are a ground for upward deviation and child care paid by the obligor a ground for downward deviation (75-02-04.1-09(2)(f), (o)); in equal residential responsibility cases the court may apportion child care and school activity fees in addition (75-02-04.1-02(1)).",
+    "healthInsurance": "The share of health, dental and vision premiums paid by the obligor for the children is deducted from the obligor's gross income in computing net income (75-02-04.1-01(6)(d)).",
+    "text": "North Dakota has no add-on lines: health premiums for the children reduce the obligor's net income, child care is a deviation factor (75-02-04.1-01(6)(d), 75-02-04.1-09(2)).",
+    "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "The schedule gives $0 at $800 or less of obligor monthly net income and phases in from $900 (75-02-04.1-10); there is no separate minimum support level since the repeal of 75-02-04.1-04 effective January 1, 2018. Income may be imputed based on earning capacity (75-02-04.1-07).",
+    "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+  },
+  "statute": {
+    "cite": "N.D.C.C. § 14-09-09.7; N.D. Admin. Code ch. 75-02-04.1",
+    "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+  },
+  "guidelinesUrl": "https://www.hhs.nd.gov/childsupport/partners/lawyers/child-support-guidelines/current-child-support-guidelines",
+  "officialCalculatorUrl": "https://www.hhs.nd.gov/childsupport/services/review-and-adjustment-orders/estimate-support-amount",
+  "emancipation": {
+    "text": "Support continues past 18 until the end of the month the child graduates from high school or turns 19, whichever comes first, if the child is enrolled in high school and lives with the person owed support (N.D.C.C. § 14-09-08.2).",
+    "url": "https://www.ndlegis.gov/cencode/t14c09.pdf"
+  },
+  "testCases": [
+    {
+      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 0 },
+      "expected": 1131.0,
+      "what": "obligor's (parent A) monthly support; parent B's income is not used",
+      "source": "Computed by hand from the 75-02-04.1-10 schedule: obligor net $4,000, two children = $1,131. https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf"
+    },
+    {
+      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 120 },
+      "expected": 1012.0,
+      "what": "obligor's monthly support with 120 overnights per child (extended parenting time)",
+      "source": "Computed by hand under 75-02-04.1-08.1(2): $1,131 / 2 = $565.50; (365 - 120 x 0.32) / 365 = 0.894795; $565.50 x 0.894795 x 2 = $1,012.01, rounded to $1,012 (75-02-04.1-02(4))."
+    }
+  ],
+  "facts": [
+    { "text": "North Dakota uses only the obligor's income: the obligee's income is not considered except to deviate downward when the obligee's net income is at least three times the obligor's (75-02-04.1-09(2)(p), N.D.C.C. § 14-09-09.7(1)(f)).", "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf" },
+    { "text": "Net income uses a hypothetical federal tax at single filing status and a hypothetical state income tax fixed at 11% of that federal amount (75-02-04.1-01(6)(a)-(b)).", "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf" },
+    { "text": "The schedule tops out at $25,000 of obligor monthly net income ($3,500 for one child, $6,500 for six or more) and was last amended effective January 1, 2019 (75-02-04.1-10).", "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf" },
+    { "text": "Increased needs of children age twelve and older are a listed ground for deviating upward from the schedule (75-02-04.1-09(2)(e)).", "url": "https://www.ndlegis.gov/information/acdata/pdf/75-02-04.1.pdf" },
+    { "text": "The guidelines are established by the Department of Health and Human Services by administrative rule rather than by the legislature (N.D.C.C. § 14-09-09.7).", "url": "https://www.ndlegis.gov/cencode/t14c09.pdf" }
+  ],
+  "uncertain": [
+    "Shared rule: the brief mentioned only equal residential responsibility; the chapter also has the extended parenting time adjustment (more than 100 overnights, factor 0.32), recorded above. thresholdOvernights 101 means 'exceeds 100'.",
+    "Test cases computed by hand from the rule text; the HHS online estimator was not run."
+  ]
+}

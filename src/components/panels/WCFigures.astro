@@ -1,0 +1,13 @@
+---
+/** Key figures of a state's workers' comp benefit, from src/data/wc/<slug>.json. */
+import { wc, usdx, pct, day } from '../../lib/kit';
+interface Props { slug: string }
+const d = wc(Astro.props.slug);
+const T = d.ttd;
+---
+<dl data-chrome class="mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 text-sm sm:grid-cols-4">
+  <div class="bg-white p-3"><dt class="text-navy-600">Benefit rate</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{pct(T.rate)}</dd><dd class="text-xs text-navy-600">{T.basisLabel}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Weekly maximum</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{T.max != null ? usdx(T.max) : 'none'}</dd><dd class="text-xs text-navy-600">from {day(T.effective)}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Weekly minimum</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{T.min != null ? usdx(T.min) : 'none'}</dd><dd class="text-xs text-navy-600">{T.minRule === 'actual-wage-if-lower' ? 'or the wage, if lower' : T.min != null ? 'floor' : 'no statutory floor'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Waiting period</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{d.waiting.days != null ? `${d.waiting.days} days` : 'see rules'}</dd><dd class="text-xs text-navy-600">{d.waiting.retroactiveAfterDays != null ? `paid back past ${d.waiting.retroactiveAfterDays} days` : 'unpaid'}</dd></div>
+</dl>

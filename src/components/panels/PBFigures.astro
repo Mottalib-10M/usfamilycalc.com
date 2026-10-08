@@ -1,0 +1,14 @@
+---
+/** Key figures of a state's probate rules, from src/data/probate.json. */
+import { pb, pbFeesOf, pbCalc, usd, usdx } from '../../lib/kit';
+interface Props { slug: string }
+const d = pb(Astro.props.slug);
+const statutory = !!pbFeesOf(d.slug);
+const ex = pbCalc(d.slug, 500000);
+---
+<dl data-chrome class="mb-6 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 text-sm sm:grid-cols-4">
+  <div class="bg-white p-3"><dt class="text-navy-600">Creditor claim period</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{d.creditorClaims.months != null ? `${d.creditorClaims.months} months` : 'See rules'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Small-estate limit</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{d.smallEstate.limit != null ? usdx(d.smallEstate.limit) : 'No fixed limit'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">Executor and attorney fees</dt><dd class="mt-0.5 font-semibold text-navy-900">{statutory ? 'Set by statute' : '“Reasonable”, court-approved'}</dd></div>
+  <div class="bg-white p-3"><dt class="text-navy-600">{statutory ? 'Statutory fees, $500,000 estate' : 'Court filing fee'}</dt><dd class="tabular-nums mt-0.5 text-xl font-bold text-navy-900">{statutory ? usd(ex.total) : d.filingFee?.amount != null ? usdx(d.filingFee.amount) : 'By county'}</dd></div>
+</dl>

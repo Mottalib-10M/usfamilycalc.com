@@ -1,0 +1,331 @@
+{
+ "slug": "texas",
+ "name": "Texas",
+ "abbr": "TX",
+ "verified": "2026-10-08",
+ "model": "percent-obligor",
+ "modelName": "Percentage of the obligor's monthly net resources (Fam. Code § 154.125)",
+ "incomeBasis": "net-resources",
+ "incomeDefinition": "Resources include 100% of wages and salary (commissions, overtime, tips, bonuses), interest, dividends, royalties, self-employment income, net rental income, and other income actually received (severance, pensions, trust income, capital gains, Social Security other than SSI, VA disability other than non-service-connected pension, unemployment, disability and workers' compensation, gifts and prizes, spousal maintenance, alimony). Excluded: return of principal, accounts receivable, TANF/federal public assistance, foster care payments. Deducted: Social Security taxes; federal income tax computed for a single person claiming one personal exemption and the standard deduction; state income tax; union dues; the cost of health insurance, dental insurance or cash medical support for the child ordered under §§ 154.182 and 154.1825; nondiscretionary retirement contributions if the obligor does not pay Social Security tax (Fam. Code § 154.062).",
+ "period": "monthly",
+ "maxChildren": 5,
+ "schedule": null,
+ "percent": {
+  "byChildren": [
+   20,
+   25,
+   30,
+   35,
+   40
+  ],
+  "sixPlus": "Not less than the amount for 5 children (§ 154.125(b)).",
+  "tiers": null,
+  "lowIncome": {
+   "threshold": 1000,
+   "rule": "If the obligor's monthly net resources are less than $1,000 the low-income schedule applies (§ 154.125(c)).",
+   "byChildren": [
+    15,
+    20,
+    25,
+    30,
+    35
+   ],
+   "sixPlus": "Not less than the amount for 5 children."
+  },
+  "cap": {
+   "amount": 11700,
+   "period": "monthly",
+   "appliesTo": "obligor's monthly net resources",
+   "effective": "2025-09-01",
+   "text": "Percentages apply presumptively only to the portion of the obligor's monthly net resources not exceeding the maximum published by the Title IV-D agency in the Texas Register (§ 154.125(a)); the amount is adjusted every six years for inflation, takes effect September 1 of the adjustment year and is rounded to the nearest $50 (§ 154.125(a-1)). The OAG calculator states the guidelines apply to monthly net resources not greater than $11,700. Above the cap the court may add support based on the child's proven needs, never more than the greater of the presumptive amount or 100% of proven needs (§ 154.126).",
+   "url": "https://csapps.oag.texas.gov/monthly-child-support-calculator"
+  },
+  "text": "Monthly support = percentage x obligor's monthly net resources (capped at $11,700): 20% for 1 child, 25% for 2, 30% for 3, 35% for 4, 40% for 5, not less than the 5-child amount for 6+ (§ 154.125(b)). Low-income obligors (< $1,000 net) use 15/20/25/30/35% (§ 154.125(c)).",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.125"
+ },
+ "formula": {
+  "text": "Percentages of § 154.125 apply to net resources (§ 154.062) up to the cap. For an obligor with children in more than one household the court either (a) computes a credit under § 154.128 (support for all children in one household / total children x children not before the court, subtracted from net resources, then the one-household percentage for the children before the court), or (b) applies the § 154.129 multiple-family percentage table directly.",
+  "params": {
+   "multipleFamily": {
+    "section": "§ 154.129(a)",
+    "rows": "number of other children the obligor has a duty to support (0-7)",
+    "columns": "number of children before the court (1-7)",
+    "table": [
+     [
+      0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      40.0,
+      40.0
+     ],
+     [
+      1,
+      17.5,
+      22.5,
+      27.38,
+      32.2,
+      37.33,
+      37.71,
+      38.0
+     ],
+     [
+      2,
+      16.0,
+      20.63,
+      25.2,
+      30.33,
+      35.43,
+      36.0,
+      36.44
+     ],
+     [
+      3,
+      14.75,
+      19.0,
+      24.0,
+      29.0,
+      34.0,
+      34.67,
+      35.2
+     ],
+     [
+      4,
+      13.6,
+      18.33,
+      23.14,
+      28.0,
+      32.89,
+      33.6,
+      34.18
+     ],
+     [
+      5,
+      13.33,
+      17.86,
+      22.5,
+      27.22,
+      32.0,
+      32.73,
+      33.33
+     ],
+     [
+      6,
+      13.14,
+      17.5,
+      22.0,
+      26.6,
+      31.27,
+      32.0,
+      32.62
+     ],
+     [
+      7,
+      13.0,
+      17.22,
+      21.6,
+      26.09,
+      30.67,
+      31.38,
+      32.0
+     ]
+    ]
+   },
+   "multipleFamilyLowIncome": {
+    "section": "§ 154.129(b) (obligor net resources < $1,000)",
+    "table": [
+     [
+      0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      35.0,
+      35.0
+     ],
+     [
+      1,
+      13.5,
+      18.33,
+      23.13,
+      27.9,
+      32.96,
+      33.25,
+      33.47
+     ],
+     [
+      2,
+      12.5,
+      17.0,
+      21.5,
+      26.5,
+      31.5,
+      31.94,
+      32.28
+     ],
+     [
+      3,
+      11.63,
+      15.8,
+      20.63,
+      25.5,
+      30.41,
+      30.92,
+      31.33
+     ],
+     [
+      4,
+      10.8,
+      15.33,
+      20.0,
+      24.75,
+      29.56,
+      30.1,
+      30.55
+     ],
+     [
+      5,
+      10.63,
+      15.0,
+      19.53,
+      24.17,
+      28.88,
+      29.43,
+      29.9
+     ],
+     [
+      6,
+      10.5,
+      14.75,
+      19.17,
+      23.7,
+      28.32,
+      28.88,
+      29.35
+     ],
+     [
+      7,
+      10.41,
+      14.56,
+      18.88,
+      23.32,
+      27.85,
+      28.4,
+      28.88
+     ]
+    ]
+   },
+   "netResourcesCap": 11700,
+   "lowIncomeThreshold": 1000,
+   "oagTaxCharts": {
+    "url": null,
+    "note": "The OAG publishes yearly tax charts to convert gross to net resources. The 2026 chart PDF URL could not be located (the former texasattorneygeneral.gov tax-charts page returns 404). The official OAG Monthly Child Support Calculator (https://csapps.oag.texas.gov/monthly-child-support-calculator) embeds 2026 federal parameters in its configuration: standard deduction $16,100, personal exemption $0, OASDI wage base $184,500, OASDI 6.2% / Medicare 1.45% for employees (12.4% / 2.9% self-employed), single-filer brackets 10% to $12,400, 12% to $50,400, 22% to $105,700, 24% to $201,775, 32% to $256,225, 35% to $640,600, 37% above."
+   }
+  },
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.129"
+ },
+ "shared": {
+  "method": "none",
+  "thresholdOvernights": null,
+  "multiplier": null,
+  "reductionTable": null,
+  "text": "The Texas guidelines have no parenting-time formula; the percentage schedule applies regardless of possession, and the amount of time with each parent is a deviation factor the court may consider (§ 154.123).",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.123"
+ },
+ "addOns": {
+  "childcare": "Not a separate add-on; childcare expenses incurred due to employment are a deviation factor (§ 154.123).",
+  "healthInsurance": "The cost of health and dental insurance or cash medical support for the child is deducted from the obligor's resources (§ 154.062(d)(5)). If the obligee provides the insurance, the obligor pays its actual cost as additional support up to a reasonable cost (§ 154.182(b-1), § 154.1825(d)). If no insurance is available, cash medical support of up to 9% of the obligor's annual resources is ordered in addition to guideline support (§ 154.182(b)(3)).",
+  "text": "Medical and dental support are ordered in addition to the percentage guideline (§§ 154.181-154.1825).",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.182"
+ },
+ "lowIncome": {
+  "selfSupportReserve": null,
+  "period": "monthly",
+  "minimumOrder": null,
+  "rule": "Obligors with monthly net resources below $1,000 are presumptively ordered under the low-income schedule: 15%, 20%, 25%, 30%, 35% for 1 to 5 children (§ 154.125(c)); this schedule applies in actions filed on or after September 1, 2021 (per the OAG calculator).",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.125"
+ },
+ "statute": {
+  "cite": "Tex. Fam. Code §§ 154.061-154.130 (net resources § 154.062; guidelines § 154.125; multiple families §§ 154.128-154.129)",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm"
+ },
+ "guidelinesUrl": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.125",
+ "officialCalculatorUrl": "https://csapps.oag.texas.gov/monthly-child-support-calculator",
+ "emancipation": {
+  "text": "Support may be ordered until the child is 18 or graduates from high school, whichever is later, or indefinitely for a disabled child (§ 154.001(a)); support past 18 requires enrollment and attendance in a high school program (§ 154.002).",
+  "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.001"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 5000,
+    "children": 2,
+    "otherChildren": 0
+   },
+   "expected": 1250.0,
+   "what": "obligor's monthly guideline support (net resources)",
+   "source": "Computed by hand from § 154.125(b): 25% x 5,000."
+  },
+  {
+   "inputs": {
+    "incomeA": 15000,
+    "children": 1,
+    "otherChildren": 0
+   },
+   "expected": 2340.0,
+   "what": "presumptive monthly support when net resources exceed the cap",
+   "source": "Computed by hand: 20% x 11,700 cap (§ 154.125(a), § 154.126; cap from the OAG calculator)."
+  },
+  {
+   "inputs": {
+    "incomeA": 800,
+    "children": 1,
+    "otherChildren": 0
+   },
+   "expected": 120.0,
+   "what": "low-income monthly support",
+   "source": "Computed by hand: 15% x 800 (§ 154.125(c))."
+  },
+  {
+   "inputs": {
+    "incomeA": 5000,
+    "children": 1,
+    "otherChildren": 1
+   },
+   "expected": 875.0,
+   "what": "monthly support with one other child (multiple-family table)",
+   "source": "Computed by hand: 17.50% x 5,000 (§ 154.129(a)). Not run by the engine: the calculator has no input for children of another household (§ 154.129 is explained on the page).",
+   "skipEngine": true
+  }
+ ],
+ "facts": [
+  {
+   "text": "The Office of the Attorney General is the Title IV-D child support agency in Texas and conducts the periodic guidelines review.",
+   "url": "https://www.texasattorneygeneral.gov/child-support/child-support-guidelines-review"
+  },
+  {
+   "text": "The net-resources cap is adjusted every six years for CPI inflation, rounded to the nearest $50, effective September 1 of the adjustment year (§ 154.125(a-1)).",
+   "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.125"
+  },
+  {
+   "text": "Federal income tax is computed as if the parent were single with one personal exemption and the standard deduction, regardless of actual filing status (§ 154.062(d)(2)).",
+   "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.062"
+  },
+  {
+   "text": "Delinquent child support accrues 6% simple interest per year (§ 157.265).",
+   "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.157.htm#157.265"
+  },
+  {
+   "text": "When the order deviates from the guideline percentages, the order must state the net resources of each parent, the percentage applied and the reasons for the variance (§ 154.130).",
+   "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.154.htm#154.130"
+  }
+ ],
+ "uncertain": [
+  "statutes.capitol.texas.gov is now a JavaScript app; the chapter text was downloaded from its official file server https://tcss.legis.texas.gov/resources/FA/htm/FA.154.htm (file dated 2026-05-12). Public URLs keep the statutes.capitol.texas.gov form.",
+  "The $11,700 cap was read on the OAG Monthly Child Support Calculator (page text and its configuration 'income_cap'). The Texas Register notice publishing it was not read; the effective date 2025-09-01 is inferred from § 154.125(a-1) (six-year cycle, September 1 of the adjustment year) and should be confirmed in the Texas Register.",
+  "The 2026 OAG tax charts PDF URL was not found; the 2026 federal parameters listed come from the official OAG calculator's configuration."
+ ]
+}

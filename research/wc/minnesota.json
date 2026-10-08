@@ -1,0 +1,25 @@
+{
+  "slug": "minnesota", "name": "Minnesota", "abbr": "MN", "verified": "2026-10-08",
+  "agency": { "name": "Minnesota Department of Labor and Industry (DLI), Workers' Compensation Division", "url": "https://www.dli.mn.gov/business/workers-compensation/work-comp-rate-information-statewide-average-weekly-wage-saww" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66-2/3 percent of the weekly wage at the time of injury; maximum is 108 percent of the statewide average weekly wage, minimum is 20 percent of the maximum or the actual weekly wage if less (Minn. Stat. § 176.101, subd. 1(a)-(c)).",
+    "max": 1594.08, "min": 318.82, "minText": "or the employee's actual weekly wage, whichever is less (Minn. Stat. § 176.101, subd. 1(c)).",
+    "effective": "2026-10-01", "periodLabel": "injuries on or after October 1, 2026 (injuries October 1, 2025 - September 30, 2026: max $1,536.84, min $307.37)",
+    "url": "https://www.dli.mn.gov/sites/default/files/pdf/comprates.pdf", "asOf": "2026-10-01"
+  },
+  "waiting": { "days": 3, "retroactiveAfterDays": 9, "text": "No compensation for the first three calendar days of disability; if disability continues for ten calendar days or longer, compensation is computed from the start of the disability (Minn. Stat. § 176.121).", "url": "https://www.revisor.mn.gov/statutes/cite/176.121" },
+  "ttdDuration": { "maxWeeks": 130, "text": "TTD ceases entirely once 130 weeks have been paid, initial and recommenced combined, except during an approved retraining plan (Minn. Stat. § 176.101, subd. 1(k)). It also ceases on return to work, release without restrictions, or 90 days after maximum medical improvement, among other events (subd. 1(e)-(j)).", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" },
+  "ppd": { "text": "PPD is rated as a percentage of the whole body under DLI rules and multiplied by a dollar amount from a statutory table (from $114,260 for ratings under 5.5% to $567,840 for 95.5-100%); it is payable when TTD ceases, in a lump sum within 30 days on request (Minn. Stat. § 176.101, subd. 2a).", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" },
+  "statute": { "cite": "Minn. Stat. §§ 176.101, 176.121, 176.645", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" },
+  "facts": [
+    { "text": "The 2026 statewide average weekly wage used for October 1, 2026 rates is $1,476.00, and the annual § 176.645 benefit adjustment is 3.72% (DLI compensation rates as of October 1, 2026).", "url": "https://www.dli.mn.gov/sites/default/files/pdf/comprates.pdf" },
+    { "text": "Since October 1, 2024 the maximum is 108% of the statewide average weekly wage, up from 102% for injuries 2013-2023 (Minn. Stat. § 176.101, subd. 1(b); DLI rate history).", "url": "https://www.dli.mn.gov/sites/default/files/pdf/comprates.pdf" },
+    { "text": "After 52 weeks of TTD the employer or insurer must notify the employee in writing of the 130-week limit (Minn. Stat. § 176.101, subd. 1(m)).", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" },
+    { "text": "Minnesota's PPD is a dollar schedule, not weeks of wages: the impairment percentage is multiplied by a fixed amount that rises with severity (Minn. Stat. § 176.101, subd. 2a(b)).", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" },
+    { "text": "The Workers' Compensation Advisory Council must review the PPD schedule in every even-year legislative session starting in 2026 (Minn. Stat. § 176.101, subd. 2a(a)).", "url": "https://www.revisor.mn.gov/statutes/cite/176.101" }
+  ],
+  "uncertain": [
+    "The PPD dollar table read on revisor.mn.gov is the current statute text; whether it applies only to injuries on or after a particular effective date was not checked against the session law."
+  ]
+}

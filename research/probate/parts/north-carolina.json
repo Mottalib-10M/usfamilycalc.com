@@ -1,0 +1,45 @@
+{
+ "slug": "north-carolina",
+ "name": "North Carolina",
+ "abbr": "NC",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 3,
+  "text": "The personal representative publishes notice once a week for 4 weeks naming a deadline at least 3 months after first publication (G.S. 28A-14-1(a)); claims not presented by that date, or within 90 days after notice is mailed or delivered to a known creditor if later, are forever barred (G.S. 28A-19-3(a)).",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-19-3.html"
+ },
+ "earliestClose": {
+  "text": "The final account is due within 1 year after qualifying (or 6 months after a State tax release, or at the annual account date, whichever is later) and may be filed voluntarily earlier with the clerk's approval (G.S. 28A-21-2(a),(a2)); it presupposes the 3-month creditor period of G.S. 28A-14-1.",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-21-2.html"
+ },
+ "smallEstate": {
+  "limit": 20000,
+  "effective": null,
+  "text": "Collection of personal property by affidavit filed with the clerk 30 days after death when personal property, less liens, does not exceed $20,000; up to $30,000 when the affiant is the surviving spouse and sole heir (intestate) or sole devisee (testate) (G.S. 28A-25-1, 28A-25-1.1). Not indexed.",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-25-1.html"
+ },
+ "simplified": {
+  "text": "Small estate affidavit procedure (G.S. 28A-25-1, 28A-25-1.1); payment of debts up to $5,000 owed to the decedent to the clerk of superior court (G.S. 28A-25-6); summary administration for a surviving spouse (G.S. Chapter 28A, Article 28).",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-25-6.html"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Costs in estate administration: $10.00 facilities fee, $4.00 technology fee and $106.00 General Court of Justice fee plus 40 cents per $100 of gross estate (personalty and sale proceeds of realty, not realty itself), the value-based part capped at $6,000, minimum $15.00 per filing (G.S. 7A-307(a)(1),(1a),(2)).",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_7A/GS_7A-307.html"
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Commissions fixed by the clerk of superior court, not exceeding 5% of receipts (including personal property when received) and of expenditures made according to law; no commission on distributions to heirs or devisees; realty sale proceeds count only when applied to debts or devises (G.S. 28A-23-3).",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-23-3.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; the clerk may allow counsel fees to an attorney serving as personal representative for professional services beyond routine administration (G.S. 28A-23-4); fees of attorneys hired by the estate are paid as reasonable administration expenses approved by the clerk.",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_28A/GS_28A-23-4.html"
+ },
+ "uncertain": [
+  "ncleg.gov returns 403 to automated clients: G.S. 28A-14-1, 28A-19-3, 28A-21-2, 28A-23-3, 28A-23-4, 28A-25-1, 28A-25-1.1, 28A-25-6 and 7A-307 were read from Internet Archive copies of the official ncleg.gov pages (web.archive.org/web/2026/<url>).",
+  "Attorney fee rule for non-PR attorneys is not stated in a single section read; type 'reasonable' reflects the absence of a statutory schedule."
+ ]
+}

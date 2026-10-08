@@ -1,0 +1,200 @@
+{
+  "slug": "new-hampshire",
+  "name": "New Hampshire",
+  "abbr": "NH",
+  "verified": "2026-10-08",
+  "model": "percent-combined",
+  "modelName": "Percentage of combined net income (sliding by income level), prorated between parents",
+  "incomeBasis": "net",
+  "incomeDefinition": "Gross income = income from any source (wages, salary, commissions, tips, annuities, Social Security, trust income, winnings, interest, dividends, net rental and self-employment income, alimony, business profits, pensions, bonuses, workers' compensation, veterans', unemployment and disability benefits), excluding public assistance programs and occasional/seasonal hourly overtime above 40 hours per week (RSA 458-C:2, IV). Adjusted gross income = gross income minus support paid for others, 50% of self-employment tax, mandatory retirement contributions, state income taxes, and the obligor's actual child care and medical support payments for these children (458-C:2, I). Net income = combined adjusted gross income minus standard deductions published yearly by DHHS for federal income tax and FICA/Medicare (single person, withholding allowance for 2 people) (458-C:2, VI).",
+  "period": "monthly",
+  "maxChildren": 4,
+  "schedule": null,
+  "percent": {
+    "byChildren": null,
+    "tiers": {
+      "basis": "annual combined net income",
+      "levels": [
+        15000,
+        25000,
+        35000,
+        50000,
+        60000,
+        70000,
+        80000,
+        90000,
+        100000,
+        125000
+      ],
+      "pct": {
+        "1": [
+          25.6,
+          25,
+          24,
+          23,
+          22,
+          21.5,
+          21,
+          21,
+          20,
+          19
+        ],
+        "2": [
+          35.5,
+          35,
+          33.5,
+          31.5,
+          30.5,
+          30,
+          29,
+          28.5,
+          27.5,
+          26
+        ],
+        "3": [
+          42.5,
+          42,
+          40.5,
+          38,
+          36.5,
+          36,
+          35,
+          34.5,
+          33,
+          31
+        ],
+        "4+": [
+          45,
+          44.5,
+          43,
+          40.5,
+          39,
+          38.5,
+          37.5,
+          37,
+          35.5,
+          33.5
+        ]
+      },
+      "belowFirst": "$15,000 or less uses the first percentages",
+      "aboveLast": "$125,000 or more uses the last percentages",
+      "interpolation": "DHHS publishes a schedule in $1,000 (or smaller) increments, interpolating the fractional percentage between levels within each column (RSA 458-C:3, I(b)); the 2026 DHHS table uses $10 rows of combined adjusted monthly gross income.",
+      "file": "cs-schedules/new-hampshire.json"
+    },
+    "cap": null,
+    "text": "Total support obligation = combined net income x the percentage for the number of children (RSA 458-C:3, II(a)); it is divided between the parents in proportion to their incomes (458-C:3, II(b)); obligations are rounded to the nearest whole dollar (458-C:3, II(d)). The percentage table is RSA 458-C:3, I(a); the number of children in the same household is the determining factor (458-C:3, III).",
+    "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+  },
+  "formula": {
+    "text": "DHHS 2026 Child Support Guideline Calculation Table (Form DCSS s651), effective April 1, 2026: rows of $10 of combined adjusted monthly gross income from $1,720-$1,729 to $31,110-$31,119 (2,940 rows); for each row DHHS takes the median, deducts federal income tax withholding (IRS Pub. 15-T, monthly, single, allowance for two) and FICA/Medicare to get combined monthly net income, then applies the interpolated percentage for 1, 2, 3, 4+ children. The worksheet then prorates by income share and applies the ability-to-pay test (self-support reserve $1,729.00/month in 2026; minimum $50).",
+    "params": {
+      "selfSupportReserveMonthly2026": 1729.0,
+      "minimumOrderMonthly": 50,
+      "medicalSupportPctOfGross": 4,
+      "tableRowStep": 10,
+      "tableMinGross": 1720,
+      "tableMaxGross": 31119,
+      "calculatorMaxCombinedMonthly": 226009
+    },
+    "url": "https://www.dhhs.nh.gov/sites/g/files/ehbemt476/files/documents2/css-guidelines-book.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "No formula adjustment for parenting time. Since January 1, 2025, when parents each pay 50% of child care, uninsured medical and agreed extracurricular costs: substantially similar incomes (gross within 10%) and an approximately equal schedule (each parent more than 40% of parenting time) -> rebuttable presumption of $0 support; substantially similar incomes and a substantially shared schedule (each more than 35%) -> presumption that a deviation is appropriate; with a shared/equal schedule the order should not leave the obligee with higher adjusted income than the obligor (RSA 458-C:2, VIII-c, X-a; 458-C:5, I(h)).",
+    "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-5.htm"
+  },
+  "addOns": {
+    "childcare": "Not added to the percentage amount; the obligee's allowable child care expenses are deducted from the obligee's adjusted gross income before proration (RSA 458-C:3, II(c)), and the obligor's are deducted from the obligor's adjusted gross income (458-C:2, I(e)).",
+    "healthInsurance": "Each parent has a reasonable medical support obligation, presumptively 4% of that parent's gross income (RSA 458-C:3, V).",
+    "text": "Ongoing extraordinary medical, dental or education expenses are a special circumstance for adjustment (RSA 458-C:5, I(a)).",
+    "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1729.0,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "Self-support reserve = 130% of the federal poverty guideline for one person (RSA 458-C:2, X); DHHS sets it at $1,729.00 per month for 2026 (table effective April 1, 2026). If the obligor's gross income is below the reserve (and not voluntarily unemployed), the order is the $50 minimum; if paying would reduce the obligor's adjusted gross income below the reserve, support = adjusted gross income minus the reserve, but not less than $50 (RSA 458-C:3, IV; 458-C:2, V).",
+    "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+  },
+  "statute": {
+    "cite": "RSA 458-C:1 to 458-C:7",
+    "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+  },
+  "guidelinesUrl": "https://www.dhhs.nh.gov/programs-services/childcare-parenting-childbirth/child-support-services/child-support-guidelines",
+  "officialCalculatorUrl": "https://www.dhhs.nh.gov/programs-services/childcare-parenting-childbirth/child-support-services/child-support-guidelines",
+  "emancipation": {
+    "text": "Support continues until the child marries, joins the armed services, is emancipated by court order or turns 18; if still a full-time elementary/secondary (or home education) student at 18, until graduation or 2 months after turning 19, whichever is first (RSA 461-A:14, IV, as quoted by NH DHHS).",
+    "url": "https://www.dhhs.nh.gov/programs-services/childcare-parenting-childbirth/child-support-services/child-support-guidelines"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 3306.57,
+        "incomeB": 1653.28,
+        "children": 1,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 729.0,
+      "what": "payer A's monthly support: combined net $4,959.85 a month = $59,518.20 a year; one-child percentage interpolated between 23% ($50,000) and 22% ($60,000) = 22.048%; $1,093.55 x 2/3 = $729.03 -> $729",
+      "source": "Computed by hand from RSA 458-C:3, I-II; cross-check: DHHS 2026 table row $6,000-$6,009 (net $4,959.85, 22.050%, $1,093.65) gives $729.10. Inputs restated as each parent's NET monthly income (2/3 and 1/3 of the DHHS row's combined net) since the calculator takes net income."
+    },
+    {
+      "inputs": {
+        "incomeA": 2000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 271.0,
+      "what": "payer's monthly support limited by the self-support reserve: 31.767% of $4,000 = $1,270.67 x 50% = $635.33 would leave $1,364.67 < $1,729, so $2,000 - $1,729 = $271",
+      "source": "Computed by hand from RSA 458-C:3, I-II and IV(b); reserve $1,729.00 a month (DHHS 2026 Guideline Calculation Table)."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 50.0,
+      "what": "payer's monthly support when income is below the self-support reserve: minimum support order",
+      "source": "Computed by hand from RSA 458-C:3, IV(a) and 458-C:2, V ($50 a month)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "New Hampshire applies a sliding percentage to the parents' combined net income: from 25.6% (one child) / 45% (four or more) at $15,000 or less of annual net income down to 19% / 33.5% at $125,000 or more (RSA 458-C:3, I(a)).",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+    },
+    {
+      "text": "DHHS updates the Child Support Guideline Calculation Table every year, effective April 1; the 2026 table sets the self-support reserve at $1,729.00 per month.",
+      "url": "https://www.dhhs.nh.gov/programs-services/childcare-parenting-childbirth/child-support-services/child-support-guidelines"
+    },
+    {
+      "text": "Each parent owes a presumptive reasonable medical support obligation of 4% of his or her gross income (RSA 458-C:3, V).",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-3.htm"
+    },
+    {
+      "text": "Since January 1, 2025, parents with gross incomes within 10% of each other and each with more than 40% of parenting time are presumed to owe $0 support if they split child-related costs 50/50 (RSA 458-C:5, I(h)).",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-5.htm"
+    },
+    {
+      "text": "Hourly overtime earned occasionally or seasonally beyond 40 hours a week in trades that commonly pay overtime is excluded from gross income (RSA 458-C:2, IV).",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458-C/458-C-2.htm"
+    }
+  ],
+  "uncertain": [
+    "The brief expected flat percentages of 25/33/40/45%; the current RSA 458-C:3, I(a) uses income-banded percentages (25.6/35.5/42.5/45% at $15,000 or less, falling to 19/26/31/33.5% at $125,000 or more). Model kept as 'percent-combined' with tiers.",
+    "gencourt.state.nh.us and gc.nh.gov returned 403/timeouts to automated requests; RSA 458-C:2, :3, :4, :5 were read from the Wayback Machine copy (web.archive.org/web/2026/...). The Wayback snapshot date was not recorded.",
+    "The DHHS 2026 Guideline Calculation Table (110-page PDF, 2,940 rows) could only be opened in a browser (dhhs.nh.gov blocks scripted downloads); it was parsed in the browser but could not be exported in full, so schedule = null. Seven verified sample rows are stored in cs-schedules/new-hampshire.json (dhhsTable.sampleRows). A site calculator needs the full table (or the federal withholding computation) to reproduce DHHS figures exactly.",
+    "Applying the statutory interpolation to annual net (net x 12) reproduces the DHHS percentages only approximately (e.g. row 6000: 22.048% computed vs 22.050% printed); DHHS's exact interpolation basis is not stated.",
+    "RSA 461-A:14, IV (duration) was not read directly; text taken from the NH DHHS guidelines page.",
+    "officialCalculatorUrl points to the DHHS page that hosts the calculator link; the calculator's direct URL was not recorded."
+  ]
+}

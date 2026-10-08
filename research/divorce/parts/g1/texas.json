@@ -1,0 +1,21 @@
+{ "slug": "texas", "name": "Texas", "abbr": "TX",
+  "filingFee": 350, "responseFee": null, "feeScope": "county (Harris County)",
+  "feeText": "Harris County District Clerk, fees due at filing of a new divorce suit, effective January 1, 2026: Divorce no children $350.00; Divorce with children $365.00 (includes the $15 domestic relations fee added to all cases involving children). Service fees not included. No separate fee for an answer is listed; a cross-action/counterclaim is $80.00.",
+  "feeUrl": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf",
+  "otherFees": [
+    { "what": "Divorce with children (Harris County)", "amount": 365, "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf" },
+    { "what": "Cross-action/counterclaim (Harris County)", "amount": 80, "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf" },
+    { "what": "Motion for contempt (Harris County)", "amount": 80, "url": "https://www.hcdistrictclerk.com/common/Civil/pdf/Fee_Schedule_Civil_And_Family.pdf" }
+  ],
+  "waiver": { "name": "Statement of Inability to Afford Payment of Court Costs or an Appeal Bond (Tex. R. Civ. P. 145)", "url": "https://www.txcourts.gov/media/1456942/statement-of-inability-to-afford-payment-of-court-costs-or-an-appeal-bond-bilingual.pdf" },
+  "residency": { "text": "Either spouse must have been a domiciliary of Texas for the preceding 6 months and a resident of the filing county for the preceding 90 days (Fam. Code § 6.301).", "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.6.htm#6.301" },
+  "waitingPeriod": { "days": 60, "text": "The court may not grant a divorce before the 60th day after the suit was filed, except in certain family-violence cases (Fam. Code § 6.702).", "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.6.htm#6.702" },
+  "simplified": { "text": "No summary or simplified divorce procedure in the Family Code; agreed divorces follow the ordinary procedure.", "url": null },
+  "parentingClass": { "required": false, "text": "Not required statewide: in a suit affecting the parent-child relationship the court may order a parent education and family stabilization course of 4 to 12 hours (Fam. Code § 105.009); some counties require it by local rule.", "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.105.htm#105.009" },
+  "uncertain": [
+    "No statewide divorce filing fee: amount is the Harris County District Clerk's (most populous county); other counties differ.",
+    "statutes.capitol.texas.gov is a JavaScript app; text of Fam. Code ch. 6 and ch. 105 read from the legislature's static copy at tcss.legis.texas.gov/resources/FA/htm/.",
+    "txcourts.gov blocked the automated download of the waiver form; the form name and URL come from the official site's index, not from the PDF text.",
+    "Response fee: no answer fee appears in the Harris County schedule; set to null.",
+    "Local-rule parenting class requirements in individual counties not verified."
+  ] }

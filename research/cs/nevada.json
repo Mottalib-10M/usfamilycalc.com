@@ -1,0 +1,245 @@
+{
+  "slug": "nevada",
+  "name": "Nevada",
+  "abbr": "NV",
+  "verified": "2026-10-08",
+  "model": "percent-obligor",
+  "modelName": "Tiered percentages of the obligor's gross monthly income (NAC 425.140)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Gross income includes salary and wages (with substantial, consistent overtime), interest and investment income, Social Security disability and old-age benefits, periodic pension/retirement/annuity payments, income-replacing workers' compensation or injury awards, unemployment insurance, income continuation benefits, voluntary deferred-compensation and retirement contributions, military allowances and veterans benefits, compensation for lost wages, certain undistributed business income, child care subsidies received as a provider, alimony, and all other income; it excludes child support received, foster or kinship care payments, SNAP, county cash benefits, SSI, other public assistance, and non-income-replacing injury damages (NAC 425.025). No taxes are deducted.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/nevada.json",
+    "columns": "Low-income schedule only: monthly gross income 'up to', then the monthly obligation for 1..6 children",
+    "minIncome": 998.0,
+    "maxIncome": 1995.0,
+    "step": null,
+    "lookup": "bracket",
+    "lookupRule": "The official calculator applies the row whose bracket ('above $a and up to $b') contains the obligor's monthly gross income; its first bracket runs from $0.00 to $998.00.",
+    "belowMin": {
+      "rule": "If income is below the lowest level of the schedule the court may set an appropriate amount (NAC 425.145(2)); the official calculator applies the first row from $0.00.",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "formula",
+      "pct": null,
+      "text": "Above the schedule the NAC 425.140 tiers apply."
+    },
+    "effective": "2026",
+    "url": "https://nvchildsupportguidelinescalculator.azurewebsites.net/getobligation.aspx"
+  },
+  "percent": {
+    "byChildren": [
+      16,
+      22,
+      26,
+      28
+    ],
+    "tiers": [
+      {
+        "upTo": 6000,
+        "pct": [
+          16,
+          22,
+          26,
+          28
+        ],
+        "additionalChildPct": 2,
+        "text": "first $6,000 of monthly gross income"
+      },
+      {
+        "upTo": 10000,
+        "pct": [
+          8,
+          11,
+          13,
+          14
+        ],
+        "additionalChildPct": 1,
+        "text": "portion greater than $6,000 and equal to or less than $10,000"
+      },
+      {
+        "upTo": null,
+        "pct": [
+          4,
+          6,
+          6,
+          7
+        ],
+        "additionalChildPct": 0.5,
+        "text": "portion greater than $10,000"
+      }
+    ],
+    "cap": null,
+    "text": "Base obligation = sum over income tiers: 1 child 16% / 8% / 4%; 2 children 22% / 11% / 6%; 3 children 26% / 13% / 6%; 4 children 28% / 14% / 7%; each additional child adds 2% / 1% / 0.5%, for the first $6,000, the portion from $6,000 to $10,000, and the portion above $10,000 of the obligor's monthly gross income (NAC 425.140). There is no income cap.",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec140",
+    "byChildrenNote": "byChildren = first-tier rates for 1 to 4 children; each additional child adds additionalChildPct in each tier (NAC 425.140(5))."
+  },
+  "formula": {
+    "text": "Obligation = Σ tier rate x income in tier (NAC 425.140). For 5 children the rates are 30% / 15% / 7.5% (28+2, 14+1, 7+0.5), confirmed by the official calculator. If the obligor's total economic circumstances limit ability to pay, the court uses the low-income schedule based on the federal poverty guidelines, published by the Administrative Office of the Courts by March 31 each year (NAC 425.145). Joint physical custody: each parent's obligation is computed and the two are offset (NAC 425.115(3)).",
+    "params": {
+      "tierBreakpointsMonthly": [
+        6000,
+        10000
+      ],
+      "lowIncomeSchedule": {
+        "publisher": "Administrative Office of the Courts (Nevada Supreme Court), annually by March 31 (NAC 425.145(3))",
+        "basis": "current federal poverty guidelines",
+        "range2026Monthly": {
+          "lowestRowUpTo": 998.0,
+          "highestRowUpTo": 1995.0
+        },
+        "range2026Source": "Official NV Child Support Guidelines Calculator, calculation year 2026; full table in cs-schedules/nevada.json (rebuilt from the calculator). The AOC publication itself was not read.",
+        "belowLowest": "If income is below the lowest schedule level the court may set an appropriate amount balancing self-support and the duty to support (NAC 425.145(2))."
+      },
+      "medicalReasonableCost": "Insurance premium is reasonable in cost if it is not more than 5% of the responsible party's monthly gross income (NAC 425.135(2)(b)).",
+      "jointCustody": {
+        "minDaysEachParent": 146,
+        "text": "NAC 425.115(3) gives no time threshold. NRS 125C.003(1)(a) presumes joint physical custody is not in the child's best interest when a parent cannot care for the child at least 146 days of the year; the calculator treats 146 overnights or more with the paying parent as joint physical custody.",
+        "url": "https://www.leg.state.nv.us/nrs/NRS-125C.html#NRS125CSec003"
+      }
+    },
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec140"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 146,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "With primary physical custody, the other party is the obligor. With joint physical custody of a child, each party's obligation is determined and the obligations are offset, the higher one paying the difference; with split custody of two or more children, each party's obligation is computed for the children in the other's custody and offset (NAC 425.115(2)-(4)). There is no multiplier. NAC 425 sets no time threshold; NRS 125C.003(1)(a) uses 146 days a year as the floor below which joint physical custody is presumed not in the child's interest.",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec115"
+  },
+  "addOns": {
+    "childcare": "The court must consider the reasonable child care costs paid by either or both parties and make an equitable division (NAC 425.130).",
+    "healthInsurance": "Every order must provide for medical support (premium for accessible medical, vision or dental coverage that is reasonable in cost, i.e. not more than 5% of the party's monthly gross income) (NAC 425.135).",
+    "text": "Adjustments are possible for special educational needs, support of others, services contributed, public assistance, visitation transportation, relative household incomes, other necessary expenses and ability to pay, with findings (NAC 425.150).",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec130"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "When the obligor's total economic circumstances limit the ability to pay, the obligation is set with the low-income schedule based on the federal poverty guidelines, published yearly by the Administrative Office of the Courts by March 31 (NAC 425.145). The 2026 schedule applied by the official calculator runs from 'up to $998.00' to 'up to $1,995.00' of monthly gross income, e.g. $105 for one child up to $998.00 and $206 for one child from $1,496.01 to $1,532.00 (full table in cs-schedules/nevada.json).",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec145"
+  },
+  "statute": {
+    "cite": "Nev. Admin. Code ch. 425 (NAC 425.025-425.170), adopted under NRS 425.620 (LCB File R183-18, eff. February 1, 2020)",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html"
+  },
+  "guidelinesUrl": "https://dwss.nv.gov/programs/child-support/child-support-guidelines/",
+  "officialCalculatorUrl": "https://nvchildsupportguidelinescalculator.azurewebsites.net/getobligation.aspx",
+  "emancipation": {
+    "text": "Support for one child ends when the child turns 18 or, if still in high school, at graduation or age 19, whichever comes first (NAC 425.160(1)).",
+    "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec160"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 5000,
+        "children": 1
+      },
+      "expected": 800.0,
+      "what": "obligor's monthly base obligation",
+      "source": "Official NV Child Support Guidelines Calculator (2026): 'Tier 1 ($5,000.00 * 16.00% = $800.00)'. https://nvchildsupportguidelinescalculator.azurewebsites.net/getobligation.aspx (script research/scripts/cs_query_nv_calculator.py)"
+    },
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "children": 2
+      },
+      "expected": 1540.0,
+      "what": "obligor's monthly base obligation",
+      "source": "Official NV calculator (2026): 6,000 x 22% + 2,000 x 11% = 1,320 + 220."
+    },
+    {
+      "inputs": {
+        "incomeA": 12000,
+        "children": 3
+      },
+      "expected": 2200.0,
+      "what": "obligor's monthly base obligation",
+      "source": "Official NV calculator (2026): 1,560 + 520 + 120."
+    },
+    {
+      "inputs": {
+        "incomeA": 15000,
+        "children": 5
+      },
+      "expected": 2775.0,
+      "what": "obligor's monthly base obligation",
+      "source": "Official NV calculator (2026): 6,000 x 30% + 4,000 x 15% + 5,000 x 7.5% = 1,800 + 600 + 375."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "children": 1,
+        "lowIncome": true
+      },
+      "expected": 206.0,
+      "what": "low-income schedule obligation",
+      "source": "Official NV calculator (2026): 'Gross Monthly Income above $1,496.00 and up to $1,532.00 the 2026 Low-Income Payers table Obligation amount is $206.00'."
+    },
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "incomeB": 4000,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 660.0,
+      "what": "monthly support paid by the obligor in joint physical custody (offset)",
+      "source": "Official NV calculator, Joint/Mixed mode, 2026: '($1,540.00 - $880.00) = $660.00' (respondent $8,000, petitioner $4,000, 2 children each way). Script research/scripts/cs_query_nv_calculator.py (joint)."
+    },
+    {
+      "inputs": {
+        "incomeA": 6000,
+        "incomeB": 1500,
+        "children": 1,
+        "overnightsA": 146
+      },
+      "expected": 754.0,
+      "what": "monthly support paid by the obligor in joint custody when the other parent is low income",
+      "source": "Official NV calculator, Joint/Mixed mode, 2026: '($960.00 - $206.00) = $754.00'."
+    },
+    {
+      "inputs": {
+        "incomeA": 1100,
+        "incomeB": 0,
+        "children": 3
+      },
+      "expected": 200.0,
+      "what": "low-income schedule obligation for 3 children",
+      "source": "Official NV calculator (2026): 'above $1,069.00 and up to $1,104.00 the 2026 Low-Income Payers table Obligation amount is $200.00'."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Nevada's current guidelines took effect February 1, 2020 (LCB File R183-18), replacing the former statutory percentages in NRS 125B.070.",
+      "url": "https://www.leg.state.nv.us/NAC/NAC-425.html"
+    },
+    {
+      "text": "The guideline percentages fall as income rises (marginal tiers at $6,000 and $10,000 per month) and there is no income cap.",
+      "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec140"
+    },
+    {
+      "text": "Incarceration or involuntary institutionalization for 180 consecutive days or more is a substantial change in circumstances, and income may not be imputed to an incarcerated obligor (NAC 425.155).",
+      "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec155"
+    },
+    {
+      "text": "A stipulated amount that departs from the guidelines must state each party's gross income, the guideline amount, and certify that the child's basic needs are met (NAC 425.110).",
+      "url": "https://www.leg.state.nv.us/NAC/NAC-425.html#NAC425Sec110"
+    },
+    {
+      "text": "The Division of Welfare and Supportive Services (DWSS) runs the IV-D child support program and links the official guidelines calculator.",
+      "url": "https://dwss.nv.gov/programs/child-support/child-support-guidelines/"
+    }
+  ],
+  "uncertain": [
+    "www.leg.state.nv.us returns 403 (Cloudflare) to automated clients; NAC 425 was read from the Wayback Machine snapshot of 2026-05-12 (https://web.archive.org/web/20260512065148/https://www.leg.state.nv.us/nac/NAC-425.html).",
+    "The 2026 low-income schedule published by the Administrative Office of the Courts (nvcourts.gov, 403 to automated clients) was not read directly; its range and sample amounts come from the official DWSS-linked calculator.",
+    "The official calculator is hosted on azurewebsites.net; it is linked from the DWSS guidelines page, which is why it is treated as official.",
+    "The 146-day joint custody threshold comes from NRS 125C.003(1)(a) (read from the Wayback snapshot of 2026-05-31 of https://www.leg.state.nv.us/nrs/NRS-125C.html); NAC 425.115 itself has no time threshold, so the courts' practice may differ.",
+    "The full 2026 low-income table (cs-schedules/nevada.json) was rebuilt by querying the official calculator bracket by bracket (script research/scripts/cs_scrape_nv_lowincome.py); it was not read from the AOC publication itself."
+  ]
+}

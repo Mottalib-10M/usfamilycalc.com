@@ -1,0 +1,200 @@
+{
+  "slug": "arizona",
+  "name": "Arizona",
+  "abbr": "AZ",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted child support income schedule (2022 Arizona Child Support Guidelines)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Child Support Income is income from any source before deductions or withholdings (salaries, wages, commissions, bonuses, dividends, severance, military pay, pensions, interest, trust income, annuities, capital gains, Social Security, workers' compensation, unemployment, disability, recurring gifts, prizes, spousal maintenance received); self-employment = gross receipts minus ordinary and necessary expenses, including one-half of self-employment tax (Guidelines § II.A.1). Adjusted Child Support Income deducts court-ordered spousal maintenance paid and support for children of other relationships (§ II.B); the parents' adjusted incomes are added (§ II.C).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/arizona.json",
+    "columns": "combined adjusted child support income (monthly), then basic child support obligation for 1, 2, 3, 4, 5, 6 children",
+    "minIncome": 750,
+    "maxIncome": 30000,
+    "step": 50,
+    "lookup": "nearest",
+    "lookupRule": "Locate the income closest to the combined adjusted child support income; if it falls exactly halfway between two entries, round up to the higher entry (Guidelines § III.A.1, e.g. $8,125 uses $8,150).",
+    "belowMin": {
+      "rule": "The schedule starts at $750 of combined income; the guidelines give no separate amount below it. Low incomes are handled by the Self-Support Reserve Test (§ VIII).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "cap",
+      "pct": null,
+      "text": "Above $30,000 combined a month, the $30,000 amount is the basic obligation unless a party asks for more and the court finds a higher amount is in the child's best interests (§ III.A.1.c)."
+    },
+    "effective": "2022-01-01",
+    "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "table",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": [
+      {
+        "daysFrom": 0,
+        "daysTo": 19,
+        "pct": 0
+      },
+      {
+        "daysFrom": 20,
+        "daysTo": 34,
+        "pct": 0.025
+      },
+      {
+        "daysFrom": 35,
+        "daysTo": 49,
+        "pct": 0.05
+      },
+      {
+        "daysFrom": 50,
+        "daysTo": 69,
+        "pct": 0.075
+      },
+      {
+        "daysFrom": 70,
+        "daysTo": 84,
+        "pct": 0.1
+      },
+      {
+        "daysFrom": 85,
+        "daysTo": 99,
+        "pct": 0.15
+      },
+      {
+        "daysFrom": 100,
+        "daysTo": 114,
+        "pct": 0.175
+      },
+      {
+        "daysFrom": 115,
+        "daysTo": 129,
+        "pct": 0.2
+      },
+      {
+        "daysFrom": 130,
+        "daysTo": 142,
+        "pct": 0.25
+      },
+      {
+        "daysFrom": 143,
+        "daysTo": 152,
+        "pct": 0.325
+      },
+      {
+        "daysFrom": 153,
+        "daysTo": 163,
+        "pct": 0.4
+      },
+      {
+        "daysFrom": 164,
+        "daysTo": null,
+        "pct": 0.5
+      }
+    ],
+    "text": "Parenting Time Table (Guidelines § V.D): count the parenting-time days of the parent with less time (24 hours = 1 day; 12+ hours = 1 day; 6-11 hours = 1/2 day; 3-5 hours = 1/4 day, § V.C). Multiply the basic obligation (plus any older-child adjustment) by the table percentage and subtract the result from that parent's proportionate share of the total child support obligation.",
+    "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "added to basic obligation (child's share of the premium) and shared by income",
+    "text": "The basic obligation is raised 10% per child over age 12 (prorated, § III.B.2), then medical, dental and vision insurance for the child (§ III.B.3), childcare for work or job search (§ III.B.4), education expenses (§ III.B.5) and extraordinary child expenses (§ III.B.6) are added, annualized (§ III.B.7), and divided by income shares (§ IV). A parent who pays these costs directly deducts them from his or her share (§ VI).",
+    "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "Self-Support Reserve = 80% of monthly full-time earnings at the state minimum wage for the year of the calculation (§ VIII.B). Subtract it from the paying parent's adjusted income; if the remainder is lower than the presumptive share but above zero, the court may reduce the order to the remainder, after applying the same test to the receiving parent (§ VIII.C-F). The guidelines' own example uses $12.15/hour: $12.15 x 40 x 52 / 12 = $2,106 x 0.80 = $1,685.",
+    "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+  },
+  "statute": {
+    "cite": "A.R.S. § 25-320; Arizona Child Support Guidelines (Ariz. Sup. Ct. AO 2021-56, revised AO 2022-116)",
+    "url": "https://www.azleg.gov/ars/25/00320.htm"
+  },
+  "guidelinesUrl": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines",
+  "officialCalculatorUrl": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/About-the-Child-Support-Calculator",
+  "emancipation": {
+    "text": "Duration is governed by A.R.S. §§ 25-320 and 25-501. The presumptive termination date is the last day of the month of the youngest child's 18th birthday, or, if the child will not finish high school by 18, the last day of the month of expected graduation or age 19, whichever comes first (Guidelines § XV.A-D).",
+    "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 110
+      },
+      "expected": 707.0,
+      "what": "paying parent's monthly child support after the parenting time adjustment (110 parenting-time days)",
+      "source": "Official worked example (Charlie and Drew), Arizona Child Support Guidelines 2022 § V.D: schedule $1,429 for $6,000 and 2 children; 67% share = $957; 110 days -> .175; $1,429 x .175 = $250; $957 - $250 = $707. Guidelines PDF AOCDRS10H-092122 linked from https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    },
+    {
+      "inputs": {
+        "incomeA": 1400,
+        "incomeB": 4000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 237.0,
+      "what": "paying parent's proportionate share of the presumptive obligation before the Self-Support Reserve Test",
+      "source": "Official worked example (Dakota and Alex), Guidelines § VIII: combined $5,400, 1 child = $914; 25.93% share = $237."
+    },
+    {
+      "inputs": {
+        "incomeA": 5000,
+        "incomeB": 3125,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 1103,
+      "what": "basic obligation in the schedule for a combined income exactly halfway between two rows ($8,125)",
+      "source": "Guidelines § III.A.1.a example: $8,125 lies halfway between $8,100 and $8,150 and rounds up to $8,150; schedule 1 child at $8,150 = $1,103 (cs-schedules/arizona.json)."
+    },
+    {
+      "inputs": {
+        "incomeA": 30000,
+        "incomeB": 5000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 3911,
+      "what": "basic obligation in the schedule above $30,000 combined",
+      "source": "Guidelines § III.A.1.c: the $30,000 row applies above the table; schedule 2 children at $30,000 = $3,911. Computed by hand."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The 2022 Arizona Child Support Guidelines apply to all orders entered after January 1, 2022 (revised September 21, 2022 by AO 2022-116), with exceptions when parties agree or the court finds good cause to use the guidelines in effect when the action was filed (§ XVII.A).",
+      "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    },
+    {
+      "text": "Arizona counts parenting time in days and fractions of days (1/4 and 1/2 days), not just overnights, and the adjustment rises to 50% of the basic obligation at 164 days or more (§ V.C-D).",
+      "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    },
+    {
+      "text": "The basic obligation is increased by up to 10% for each child over age 12, prorated across the children (§ III.B.2).",
+      "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    },
+    {
+      "text": "A variance of at least 15% between an existing order and the guideline amount is evidence of a substantial and continuing change of circumstances for modification (§ XVII.B).",
+      "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    },
+    {
+      "text": "The court presumes a parent can work full time at least at the higher of the state or federal adult minimum wage when attributing income (§ II.A.4, citing A.R.S. § 25-320(N)).",
+      "url": "https://www.azcourts.gov/familylaw/Child-Support-Family-Law-Information/Arizona-Child-Support-Guidelines"
+    }
+  ],
+  "uncertain": [
+    "azcourts.gov answers HTTP 403 to scripts; the guidelines PDF (AOCDRS10H-092122.pdf) was downloaded through the SharePoint guest link that the azcourts.gov page uses (see scripts/cs_arizona.py). The page itself was read in Chrome on 2026-10-08 and still says the 2022 guidelines (revised September 21, 2022) are in force; a quadrennial review began in 2024 and new guidelines may follow.",
+    "The 2026 Self-Support Reserve amount depends on the 2026 Arizona minimum wage, which was not read from azica.gov (page reached but the figure was not extracted); selfSupportReserve is null. The guidelines' example ($1,685) uses the 2021 rate of $12.15/hour.",
+    "No rule for combined income below $750 (the first schedule row) was found in the guidelines.",
+    "The brief mentions 'A.R.S. § 25-320 appendix'; in fact the guidelines are adopted by the Arizona Supreme Court under § 25-320 (AO 2021-56 and later). The A.R.S. § 25-320 page itself was not read."
+  ]
+}

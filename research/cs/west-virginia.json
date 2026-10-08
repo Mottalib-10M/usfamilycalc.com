@@ -1,0 +1,171 @@
+{
+  "slug": "west-virginia",
+  "name": "West Virginia",
+  "abbr": "WV",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted gross monthly income schedule",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income = all earned and unearned income (wages, commissions, bonuses, pensions, Social Security, unemployment, workers' compensation, interest, dividends, attributed income, self-employment income minus ordinary business expenses) plus 50% of average overtime over the preceding 36 months unless excluded (W. Va. Code § 48-1-228). Adjusted gross income deducts preexisting child support paid, maintenance paid, an additional-dependent deduction and a student loan payment capped at 25% of gross income (§ 48-13-202(3); Worksheets A and B, §§ 48-13-403, 48-13-502).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/west-virginia.json",
+    "columns": "combined gross (adjusted) monthly income, then basic obligation for 1..6 children",
+    "minIncome": 550,
+    "maxIncome": 35000,
+    "step": 50,
+    "lookup": "floor",
+    "lookupRule": "The statute only says the basic obligation is determined from the table (§ 48-13-301); it does not state a rounding or interpolation rule. 'floor' is an implementation choice, not a statutory rule.",
+    "belowMin": {
+      "rule": "If combined adjusted gross income is below $550 per month, the basic child support obligation is $50 per month or a discretionary amount set by the court based on the parents' resources and living expenses and the number of children (W. Va. Code § 48-13-302).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "percent-of-excess",
+      "pct": [
+        8.8,
+        12.9,
+        15.3,
+        16.9,
+        18.3,
+        19.6
+      ],
+      "text": "Above $35,000 per month the obligation may not be less than at $35,000. The court may compute it as the $35,000 amount plus a percentage of combined adjusted gross income above $35,000: 1 child $2,527 + 0.088; 2 children $3,719 + 0.129; 3 children $4,342 + 0.153; 4 children $4,850 + 0.169; 5 children $5,335 + 0.183; 6 children $5,799 + 0.196 (W. Va. Code § 48-13-303)."
+    },
+    "effective": "2023-08-08",
+    "url": "https://code.wvlegislature.gov/48-13-301/"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Low-income and add-on parameters of the West Virginia guideline used by the calculator (§§ 48-13-302, 48-13-403, 48-13-404).",
+    "params": {
+      "belowTableBasicObligation": 50,
+      "belowTableIncome": 550,
+      "abilityToPayIncomeThreshold": 2600,
+      "abilityToPayIncomeFactor": 0.8,
+      "abilityToPaySelfSupportReserve": 997,
+      "abilityToPayMinimum": 50,
+      "childcareCountedFactor": 0.75
+    },
+    "url": "https://code.wvlegislature.gov/48-13-404/"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 128,
+    "multiplier": 1.6,
+    "reductionTable": null,
+    "text": "Extended shared parenting applies when each parent keeps the child overnight for more than 127 days per year (35 percent) (W. Va. Code §§ 48-1-239(c), 48-13-501). Worksheet B: basic obligation x 1.6, apportioned by income; each parent's share x percentage of overnights with the other parent; the obligations are offset and the parent owing more pays the difference. Additional direct expenses (child care, uninsured health care, extraordinary expenses) are apportioned by income and netted against expenses each parent actually pays (§§ 48-13-501, 48-13-502).",
+    "url": "https://code.wvlegislature.gov/48-13-501/"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income (work-related child care counted at 0.75 x actual cost to reflect the federal tax credit, Worksheets A/B)",
+    "healthInsurance": "Children's portion of health insurance premiums and uninsured extraordinary medical expenses are added and shared by income (§ 48-13-202(1); Worksheet A line 5b).",
+    "text": "The court adds unreimbursed child health care expenses, work-related child care and other agreed or ordered extraordinary expenses to the basic obligation and subtracts agreed or ordered extraordinary credits; the payor's direct payments of these expenses are credited (W. Va. Code §§ 48-13-202, 48-13-403).",
+    "url": "https://code.wvlegislature.gov/48-13-202/"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 997,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "In basic shared parenting cases where the payor's adjusted gross income is below $2,600 per month, the order is the lower of the Worksheet A amount and (80% of the payor's adjusted gross income minus $997), but not less than $50 (W. Va. Code § 48-13-404; Worksheet A Part II, § 48-13-403).",
+    "url": "https://code.wvlegislature.gov/48-13-404/"
+  },
+  "statute": {
+    "cite": "W. Va. Code §§ 48-13-101 to 48-13-804 (table: § 48-13-301)",
+    "url": "https://code.wvlegislature.gov/48-13-301/"
+  },
+  "guidelinesUrl": "https://code.wvlegislature.gov/48-13-301/",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support continues beyond 18 while the child is unmarried, living with a parent, guardian or custodian and enrolled full time in a secondary or vocational program making substantial progress toward a diploma, but not past age 20 (W. Va. Code § 48-11-103(a)).",
+    "url": "https://code.wvlegislature.gov/48-11-103/"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 873.33,
+      "what": "payer A's monthly basic obligation (Worksheet A, before add-ons): table row $6,000, 2 children = $1,310; A's share 66.67% -> $873.33",
+      "source": "Computed by hand from the official table in W. Va. Code § 48-13-301 (row 6000: 869 1310 1568 1752 1927 2095); no official worked example located"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 150
+      },
+      "expected": 535.96,
+      "what": "payer's monthly support, extended shared parenting (Worksheet B): $1,310 x 1.6 = $2,096; payer $1,397.33 x 215/365 = $823.08 minus other $698.67 x 150/365 = $287.12",
+      "source": "Computed by hand from W. Va. Code §§ 48-13-301 (row $6,000), 48-13-501, 48-13-502."
+    },
+    {
+      "inputs": {
+        "incomeA": 30000,
+        "incomeB": 10000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 2225.25,
+      "what": "payer's monthly support above the table: $2,527 + 0.088 x $5,000 = $2,967 x 75%",
+      "source": "Computed by hand from W. Va. Code § 48-13-303."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 500,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 203.0,
+      "what": "payer's monthly support after the ability-to-pay test: share 75% x $342 = $256.50; 80% x $1,500 - $997 = $203 is lower",
+      "source": "Computed by hand from W. Va. Code §§ 48-13-301 (row $2,000), 48-13-403 Part II, 48-13-404."
+    },
+    {
+      "inputs": {
+        "incomeA": 300,
+        "incomeB": 200,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 30.0,
+      "what": "payer's monthly support below the table: basic obligation $50 (combined $500 < $550) x 60%; ability to pay floor $50 is higher, so the lesser, $30, applies",
+      "source": "Computed by hand from W. Va. Code §§ 48-13-302, 48-13-403 line 13, 48-13-404."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The schedule is written into the statute itself (W. Va. Code § 48-13-301); it was last amended by 2023 SB 573 (effective June 9, 2023) and 2023 1st Special Session HB 112 (effective from passage, August 8, 2023).",
+      "url": "https://code.wvlegislature.gov/48-13-301/"
+    },
+    {
+      "text": "50% of the average overtime paid over the preceding 36 months counts as gross income, unless the parent shows the overtime is voluntary and there was no prior overtime pattern (W. Va. Code § 48-1-228(b)(6)).",
+      "url": "https://code.wvlegislature.gov/48-1-228/"
+    },
+    {
+      "text": "A parent's student loan payment may be deducted from income, capped at 25% of the parent's gross income (W. Va. Code § 48-13-202(3)).",
+      "url": "https://code.wvlegislature.gov/48-13-202/"
+    },
+    {
+      "text": "Work-related child care is counted at 75% of its actual cost to reflect the federal child care tax credit (Worksheets A and B, W. Va. Code §§ 48-13-403, 48-13-502).",
+      "url": "https://code.wvlegislature.gov/48-13-403/"
+    },
+    {
+      "text": "Extended shared parenting multiplies the basic obligation by 1.6 before cross-crediting (W. Va. Code § 48-13-501).",
+      "url": "https://code.wvlegislature.gov/48-13-501/"
+    }
+  ],
+  "uncertain": [
+    "The table as published on code.wvlegislature.gov contains a few non-monotone cells (e.g. 5 children: $1,350 -> 541, $1,400 -> 563, $1,450 -> 577; 4 children: $2,700 -> 923 vs $2,650 -> 910 and $2,750 -> 942). They are copied exactly as published.",
+    "The brief says shared parenting at 127 days; the statute says 'more than 127 days per year (35 percent)', so thresholdOvernights is set to 128 (strictly more than 127).",
+    "The statute gives no rounding rule between table rows; 'floor' is an implementation choice.",
+    "Effective date 2023-08-08 is that of 2023 1st Special Session HB 112, which amended § 48-13-301 after SB 573 (June 9, 2023); read on the WV Legislature bill status pages.",
+    "No official online calculator URL was verified.",
+    "schedule.aboveMax.method set to 'percent-of-excess': § 48-13-303 sets the $35,000 amount as a floor and lets the court add the listed percentage of the excess; the calculator applies that computation."
+  ]
+}

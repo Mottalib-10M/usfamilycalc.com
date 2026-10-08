@@ -1,0 +1,193 @@
+{
+  "slug": "kentucky",
+  "name": "Kentucky",
+  "abbr": "KY",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly adjusted parental gross income table (KRS 403.212)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income from any source (salaries, wages, bonuses, pensions, Social Security, workers' compensation, unemployment, SSI, gifts, prizes, maintenance received...), excluding means-tested public assistance such as TANF and food stamps; self-employment income is gross receipts minus ordinary and necessary expenses with straight-line depreciation only (KRS 403.212(3)(b)-(c)). Combined monthly adjusted parental gross income deducts maintenance actually paid under pre-existing orders and in this proceeding, prior-born child support actually paid, and an imputed guideline obligation for prior-born children living with the parent (KRS 403.212(3)(i)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/kentucky.json",
+    "columns": "combined monthly adjusted parental gross income, then total obligation for 1, 2, 3, 4, 5 and 6-or-more children",
+    "minIncome": 0,
+    "maxIncome": 30000,
+    "step": 100,
+    "lookup": "floor",
+    "lookupRule": "KRS 403.212 gives no rule for incomes between two $100 rows; the statute prints rows every $100 from $0 to $30,000. Lookup method is not specified in the statute (floor is an assumption).",
+    "belowMin": {
+      "rule": "The table starts at $0: combined incomes from $0 to $900 show $60 for every number of children (the statutory minimum order, KRS 403.212(6)).",
+      "amounts": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The court may use its judicial discretion when combined adjusted parental gross income exceeds the uppermost level of the table (KRS 403.212(7)); income above the table is also a deviation criterion (KRS 403.211(3)(e))."
+    },
+    "effective": "2025-07-01",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of KRS 403.212(5)(b), (6) used by the calculator: the obligated parent qualifies for the self-support reserve calculation when his or her monthly adjusted gross income is at or below $1,100 (1 child), $1,300 (2), $1,400 (3), $1,500 (4 or 5), $1,600 (6 or more); support is then read in the table at that parent's income alone and the lesser amount applies; minimum $60 a month except under KRS 403.2122(3).",
+    "params": {
+      "ssrIncomeThresholdsByChildren": [
+        1100,
+        1300,
+        1400,
+        1500,
+        1500,
+        1600
+      ],
+      "minimumOrder": 60
+    },
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+  },
+  "shared": {
+    "method": "percent-reduction",
+    "thresholdOvernights": 88,
+    "multiplier": null,
+    "reductionTable": [
+      {
+        "fromDays": 88,
+        "toDays": 115,
+        "pct": 15
+      },
+      {
+        "fromDays": 116,
+        "toDays": 129,
+        "pct": 20.5
+      },
+      {
+        "fromDays": 130,
+        "toDays": 142,
+        "pct": 25
+      },
+      {
+        "fromDays": 143,
+        "toDays": 152,
+        "pct": 30.5
+      },
+      {
+        "fromDays": 153,
+        "toDays": 162,
+        "pct": 36
+      },
+      {
+        "fromDays": 163,
+        "toDays": 172,
+        "pct": 42
+      },
+      {
+        "fromDays": 173,
+        "toDays": 181,
+        "pct": 48.5
+      },
+      {
+        "fromDays": 182,
+        "toDays": 182.5,
+        "pct": 50
+      }
+    ],
+    "text": "A parent with at least 88 days a year of court-ordered or consented parenting time may move for a shared parenting time credit (KRS 403.2122(2)(a)). The obligated parent's adjustment percentage from the chart in KRS 403.2122(4) is multiplied by the total support obligation on the worksheet and the result is subtracted from the obligated parent's monthly obligation (KRS 403.2122(3)(a)3-5). With equal parenting time the parent with the higher gross monthly income is the obligor (KRS 403.2122(3)(a)1.b). A 'day' means more than 12 consecutive hours in a 24-hour period (KRS 403.2122(1)(a)). The credit and the self-support reserve cannot be combined; the obligor pays the lesser amount (KRS 403.2122(3)(c), 403.212(5)(c)).",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55603"
+  },
+  "addOns": {
+    "childcare": "added to the guideline amount and shared in proportion to combined monthly adjusted parental gross income",
+    "healthInsurance": "cost of the child's health care coverage allocated in proportion to combined monthly adjusted parental gross income, in addition to guideline support; coverage is reasonable in cost if it does not exceed 5% of the responsible parent's gross income",
+    "text": "Reasonable and necessary child care costs due to employment, job search or education leading to employment are allocated pro rata (KRS 403.211(6)). Health care coverage costs are allocated pro rata (KRS 403.211(7)(a)); 'reasonable in cost' means not more than 5% of the parent's gross income (KRS 403.211(8)(a)). The parent maintaining insurance pays the first $250 of medical expenses per calendar year; extraordinary medical expenses above $250 are allocated pro rata (KRS 403.211(9)-(10)).",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55604"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 915,
+    "period": "monthly",
+    "minimumOrder": 60,
+    "rule": "Self-support reserve of $915 per month (KRS 403.212(3)(d)). If the obligated parent's monthly adjusted gross income is at or below $1,100 (1 child), $1,300 (2), $1,400 (3), $1,500 (4 or 5) or $1,600 (6 or more), support is calculated from the table using that parent's income alone, and the parent pays the lesser of the pro-rata amount, the amount from his or her own income, and the shared parenting result (KRS 403.212(5)(b)-(c)). Minimum support is $60 per month except as provided in KRS 403.2122(3) (KRS 403.212(6)).",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+  },
+  "statute": {
+    "cite": "KRS 403.211, 403.212, 403.2122, 403.213",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+  },
+  "guidelinesUrl": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support terminates on emancipation; if the child is a high school student at 18, support continues while the child is in high school but not beyond the end of the school year in which the child turns 19 (KRS 403.213(3)).",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=1457"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 800.0,
+      "what": "parent A's monthly share of the basic obligation (no add-ons)",
+      "source": "Computed by hand from the KRS 403.212(9) table: combined $6,000 row, two children = $1,200; parent A share 4,000/6,000 = 2/3 -> $800 (KRS 403.212(5)(a)). A's income is above the SSR thresholds. https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 120
+      },
+      "expected": 554.0,
+      "what": "parent A's monthly obligation after the shared parenting time credit",
+      "source": "Computed by hand under KRS 403.2122(3)(a) and (4): 120 days -> 20.5%; credit = 20.5% x total obligation $1,200 = $246; $800 - $246 = $554. https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55603"
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 85.0,
+      "what": "obligated parent's monthly obligation under the self-support reserve",
+      "source": "Computed by hand: pro rata, combined $4,000 row, one child $621 x 1/4 = $155.25; the obligor's $1,000 is at or below the $1,100 threshold for one child, so the table is read at $1,000 alone = $85, and the lesser applies (KRS 403.212(5)(b)-(c)). https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The guidelines table is written into the statute itself (KRS 403.212(9)); the current table took effect July 1, 2025 (2024 Ky. Acts ch. 219) and runs to $30,000 of combined monthly income.",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+    },
+    {
+      "text": "A recalculation that changes support by 15% or more is rebuttably presumed to be a material change in circumstances justifying modification (KRS 403.213(2)).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=1457"
+    },
+    {
+      "text": "A commission reviews the child support guidelines table at least once every four years and reports to the General Assembly (KRS 403.213(4)-(5)).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=1457"
+    },
+    {
+      "text": "The Office of the Attorney General must promulgate the child support obligation worksheet by regulation and publish a manual with examples on its website (KRS 403.212(2)).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55832"
+    },
+    {
+      "text": "The shared parenting time credit statute (KRS 403.2122, created 2024) replaced KRS 403.2121, which was repealed in 2024.",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55603"
+    },
+    {
+      "text": "Payments a child receives because of a parent's disability are credited against that parent's child support obligation and are not counted as income (KRS 403.211(16)).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55604"
+    }
+  ],
+  "uncertain": [
+    "KRS 403.212 does not say how to use the table when income falls between two $100 rows; 'floor' is an assumption, not a rule. The Attorney General's worksheet regulation and manual (KRS 403.212(2)) were not retrieved.",
+    "KRS 403.2122(3)(a)4 multiplies the percentage by 'the total support obligation found on the child support obligation worksheet'; whether 'total' means the combined table amount or the combined amount including add-ons should be checked against the Attorney General's worksheet before coding.",
+    "No official online calculator located on an official Kentucky site during this session."
+  ]
+}

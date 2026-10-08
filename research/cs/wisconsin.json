@@ -1,0 +1,232 @@
+{
+  "slug": "wisconsin",
+  "name": "Wisconsin",
+  "abbr": "WI",
+  "verified": "2026-10-08",
+  "model": "percent-obligor",
+  "modelName": "Percentage-of-income standard applied to the payer's gross monthly income (Wis. Admin. Code DCF 150.035(2))",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Monthly income available for child support = annual gross income (or income modified for business expenses) + income imputed based on earning capacity + income imputed when little information is known + income imputed from assets, divided by 12 (DCF 150.02(21), 150.03(1)). Gross income includes wages, interest and investment income, Social Security disability and old-age benefits, income-replacing workers' compensation, unemployment insurance, voluntary deferred compensation and employee contributions to benefit or retirement plans, veterans disability and military allowances, certain undistributed business income, and all other income, but excludes child support, foster care and kinship care payments, public assistance, food stamps, SSI and other public assistance (DCF 150.02(13)). No taxes are deducted.",
+  "period": "monthly",
+  "maxChildren": 5,
+  "schedule": {
+    "file": "cs-schedules/wisconsin.json",
+    "columns": "Low-income payer table only (Appendix C): monthly income 'up to', then [percent, monthly support] for 1..5 children",
+    "minIncome": 998.0,
+    "maxIncome": 2031.0,
+    "step": null,
+    "lookup": "bracket",
+    "lookupRule": "Each row gives the support for a monthly income available for child support 'up to' the stated amount (Appendix C heading 'Monthly Income Up To'). Use is discretionary: the court may apply it if the payer's total economic circumstances limit ability to pay (DCF 150.04(4)(a)).",
+    "belowMin": {
+      "rule": "Below the lowest income level the court may set an amount appropriate for the payer's total economic circumstances, possibly lower than the lowest table amount (DCF 150.04(4)(a)).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "formula",
+      "pct": [
+        17,
+        25,
+        29,
+        31,
+        34
+      ],
+      "text": "At or above 150% of the federal poverty guidelines the standard percentages apply (DCF 150.04(4) note)."
+    },
+    "effective": "2026-03-01",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150_c.pdf"
+  },
+  "percent": {
+    "byChildren": [
+      17,
+      25,
+      29,
+      31,
+      34
+    ],
+    "tiers": [
+      {
+        "upTo": 7000,
+        "pct": [
+          17,
+          25,
+          29,
+          31,
+          34
+        ],
+        "rule": "mandatory on monthly income available for child support below $7,000 (DCF 150.04(5)(b))"
+      },
+      {
+        "upTo": 12500,
+        "pct": [
+          14,
+          20,
+          23,
+          25,
+          27
+        ],
+        "rule": "the court may apply to the portion >= $7,000 and <= $12,500 per month (DCF 150.04(5)(c))"
+      },
+      {
+        "upTo": null,
+        "pct": [
+          10,
+          15,
+          17,
+          19,
+          20
+        ],
+        "rule": "the court may apply to the portion > $12,500 per month (DCF 150.04(5)(d))"
+      }
+    ],
+    "cap": null,
+    "text": "Support = 17% (1 child), 25% (2), 29% (3), 31% (4), 34% (5+) of the payer's monthly income available for child support (DCF 150.035(2)). For high-income payers the full income is considered, but the court may apply reduced marginal percentages on income from $7,000 to $12,500/month (14/20/23/25/27%) and above $12,500/month (10/15/17/19/20%) (DCF 150.04(5)). Low-income payers may be ordered under Appendix C.",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+  },
+  "formula": {
+    "text": "Shared placement (DCF 150.035(1)): when both parents have court-ordered placement of at least 25% or 92 days (overnights or equivalent care) and each assumes basic support costs in proportion to placement time: 1) each parent's monthly income x designated percentage; 2) x 150%; 3) x proportion of time the child spends with the other parent; 4) offset; the parent with the greater amount pays the lesser of the offset amount or the amount under the designated percentage. Variable costs (child care, tuition, special needs, costly activities) are assigned in proportion to placement. Split placement (DCF 150.04(3)) uses pro-rata percentages per child (25%/2 = 12.5%, 29%/3 = 9.67%, 31%/4 = 7.75%, 34%/5 = 6.8%) and an offset. Serial families (DCF 150.04(1)) subtract earlier support obligations from income before applying the percentage.",
+    "params": {
+      "sharedThresholdPercent": 25,
+      "sharedThresholdDays": 92,
+      "sharedMultiplier": 1.5,
+      "proRataPerChild": {
+        "2": 12.5,
+        "3": 9.67,
+        "4": 7.75,
+        "5": 6.8
+      },
+      "highIncomeThresholdsMonthly": [
+        7000,
+        12500
+      ],
+      "equivalentCare": "A block of at least 6 hours with a meal = a half-day; two half-days = one overnight (DCF 150.035(1)(ar)3)."
+    },
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 92,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared-placement formula applies when both parents have court-ordered placement of at least 25% or 92 days a year; each parent's percentage amount is multiplied by 150% and by the other parent's share of time, then offset; the payer pays the lesser of the result or the standard percentage amount (DCF 150.035(1)). The rule was renumbered from DCF 150.04(2) to DCF 150.035(1) effective December 1, 2021.",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+  },
+  "addOns": {
+    "childcare": "Child care is a 'variable cost' (DCF 150.02(29)); in shared placement the court assigns variable costs in proportion to each parent's share of physical placement (DCF 150.035(1)(b)6). Otherwise it is covered by the percentage or by deviation.",
+    "healthInsurance": "The court assigns responsibility for the child's health expenses (DCF 150.05, Wis. Stat. § 767.513). Private insurance is reasonable in cost if it does not exceed 10% of the insuring parent's monthly income available for child support; the non-insuring parent may be ordered to contribute up to 10% of his or her income, which may be built into the support amount (DCF 150.05(1)(b)).",
+    "text": "Medical support is ordered in addition to child support (DCF 150.05).",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "For payers with income between 75% and 150% of the federal poverty guidelines the court may use the Appendix C schedule (2026 version effective March 1, 2026: from $998.00 to $2,031.00 monthly income, e.g. 11.22% / $112 for one child at the lowest row); below the lowest level the court sets an amount fitting the payer's total economic circumstances (DCF 150.04(4)). DCF revises Appendix C every year from the federal poverty guidelines.",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150_c.pdf"
+  },
+  "statute": {
+    "cite": "Wis. Admin. Code ch. DCF 150; Wis. Stat. §§ 49.22(9), 767.511",
+    "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150"
+  },
+  "guidelinesUrl": "https://dcf.wisconsin.gov/cs/order/guidelines",
+  "officialCalculatorUrl": "https://dcf.wisconsin.gov/cs/order/tools",
+  "emancipation": {
+    "text": "The duty of support continues until the child turns 18, or 19 if the child is still enrolled in high school or working toward a high school equivalency (DCF, When Child Support Ends).",
+    "url": "https://dcf.wisconsin.gov/cs/age-of-child-eligible-for-support"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 375.0,
+      "what": "monthly shared-placement support paid by parent B (the payer, 146 days = 40%)",
+      "source": "Official example in the note to DCF 150.035(1)(b): A $2,000 x 25% x 150% x 40% = $300; B $3,000 x 25% x 150% x 60% = $675; offset $375. https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf (same example on https://dcf.wisconsin.gov/cs/order/tools). Inputs: incomeA = parent B, the payer."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 2000,
+        "children": 3,
+        "split": "A has 2 children, B has 1"
+      },
+      "expected": 386.8,
+      "what": "monthly split-placement support paid by parent B",
+      "source": "Official example in the note to DCF 150.04(3): 3,000 x 19.34% = 580.20 minus 2,000 x 9.67% = 193.40.",
+      "skipEngine": true,
+      "skipReason": "split placement (children living with different parents) cannot be entered in the calculator inputs"
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "children": 1,
+        "existingOrder": 450,
+        "intactFamilyChildren": 2
+      },
+      "expected": 325.12,
+      "what": "serial-family support for the new child",
+      "source": "Official example in the note to DCF 150.04(1)(b): (3,000 - 450) = 2,550; 2,550 x 25% = 637.50; (2,550 - 637.50) x 17% = 325.12 (as printed; exact product 325.125).",
+      "skipEngine": true,
+      "skipReason": "earlier support obligations (serial families) are not a calculator input"
+    },
+    {
+      "inputs": {
+        "incomeA": 15000,
+        "incomeB": 0,
+        "children": 1
+      },
+      "expected": 2210.0,
+      "what": "monthly support when the high-income percentages are applied",
+      "source": "Computed by hand from DCF 150.04(5): 7,000 x 17% + 5,500 x 14% + 2,500 x 10% = 1,190 + 770 + 250."
+    },
+    {
+      "inputs": {
+        "incomeA": 5000,
+        "incomeB": 0,
+        "children": 2
+      },
+      "expected": 1250.0,
+      "what": "monthly support paid by the payer at the standard percentage",
+      "source": "Computed by hand from DCF 150.035(2): 25% x 5,000."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 0,
+        "children": 1
+      },
+      "expected": 212.0,
+      "what": "monthly support paid by a low-income payer (Appendix C)",
+      "source": "DCF 150 Appendix C (effective March 1, 2026), row 'Monthly Income Up To $1,500.00', one child: 14.11% / $212. https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150_c.pdf"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Wisconsin's guideline uses gross income, not net income: no taxes are deducted (DCF 150.02(13), DCF 150.03(1)).",
+      "url": "https://dcf.wisconsin.gov/cs/order/guidelines"
+    },
+    {
+      "text": "The 150% multiplier in shared placement accounts for household costs duplicated by both parents, such as a bedroom, clothes and personal items (note to DCF 150.035(1)(b)3).",
+      "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+    },
+    {
+      "text": "Since January 1, 2024, daytime 'equivalent care' can count toward placement: two blocks of at least 6 hours with a meal equal one overnight (DCF 150.035(1)(ar)).",
+      "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150.pdf"
+    },
+    {
+      "text": "The low-income table (Appendix C) is revised every year from the federal poverty guidelines; the 2026 table took effect March 1, 2026 and the next one will take effect March 1, 2027.",
+      "url": "https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/150_c.pdf"
+    },
+    {
+      "text": "Past-due support may be enforced up to 20 years after the youngest child turns 18 (DCF).",
+      "url": "https://dcf.wisconsin.gov/cs/age-of-child-eligible-for-support"
+    }
+  ],
+  "uncertain": [
+    "docs.legis.wisconsin.gov refuses connections from this environment; DCF 150 (Register November 2024 No. 827) and Appendix C (Register March 2026 No. 843) were read from Wayback Machine raw copies of the official PDFs (snapshots 2026-08-13 and 2026-08-30).",
+    "The shared-placement rule is now DCF 150.035(1) (the brief's 'DCF 150.04(2)' was renumbered by 2021 Wis. Act 35, eff. 12-1-21).",
+    "Appendix C lookup ('Monthly Income Up To') is interpreted as a bracket on the next higher row; the rule text does not spell out the lookup."
+  ]
+}

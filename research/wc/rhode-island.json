@@ -1,0 +1,37 @@
+{
+  "slug": "rhode-island", "name": "Rhode Island", "abbr": "RI", "verified": "2026-10-08",
+  "agency": { "name": "Rhode Island Department of Labor and Training, Division of Workers' Compensation", "url": "https://dlt.ri.gov/workers-compensation" },
+  "ttd": {
+    "rate": 62, "basis": "gross AWW",
+    "rateText": "For injuries on or after January 1, 2022, total incapacity is paid at 62% of the average weekly base wages, earnings or salary (R.I. Gen. Laws § 28-33-17(a)(1)). For injuries on or before December 31, 2021, it was 75% of average weekly spendable base wages (gross wages minus federal/state income tax and FICA, § 28-33-17(a)(3)). Maximum: 125% of the state average weekly wage since October 1, 2017, rounded up to the next dollar. A dependency allowance of $25.00 per wholly dependent person is added (from January 1, 2025), total capped at 80% of the employee's average weekly wage (§ 28-33-17(c)(1)).",
+    "max": 1691, "min": null,
+    "minText": "R.I. Gen. Laws § 28-33-17 sets no minimum weekly rate for total incapacity.",
+    "effective": "2026-10-01", "periodLabel": "injuries on or after October 1, 2026 (for October 1, 2025 to September 30, 2026: $1,622)",
+    "url": "https://dlt.ri.gov/workers-compensation/insurers-and-adjusters/maximum-compensation-rates", "asOf": "2026-10-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": null,
+    "text": "No indemnity is paid for an injury that does not incapacitate the employee for at least three days; if incapacity extends beyond three days, compensation begins on the fourth day from the date of injury. The statute provides no retroactive payment of the first three days (R.I. Gen. Laws § 28-33-4).",
+    "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-4.htm"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "§ 28-33-17 sets no week limit for total incapacity; total disability is presumed for listed losses (both eyes, both feet, both hands, hand and foot, paralysis, skull injury) and otherwise requires inability to earn wages in any employment (§ 28-33-17(b)).",
+    "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-17.htm"
+  },
+  "ppd": {
+    "text": "Rhode Island pays specific-loss awards for loss or loss of use of body parts and disfigurement under R.I. Gen. Laws § 28-33-19, in addition to wage-loss benefits; partial incapacity is paid under § 28-33-18.",
+    "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-19.htm"
+  },
+  "statute": { "cite": "R.I. Gen. Laws §§ 28-33-4, 28-33-17, 28-33-18, 28-33-19", "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-17.htm" },
+  "facts": [
+    { "text": "Rhode Island switched on January 1, 2022 from 75% of after-tax 'spendable' earnings to 62% of gross average weekly wages (§ 28-33-17(a)(1)).", "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-17.htm" },
+    { "text": "The maximum weekly rate changes every October 1 (it changed on September 1 until 2015) and has been 125% of the state average weekly wage since October 1, 2017.", "url": "https://dlt.ri.gov/workers-compensation/insurers-and-adjusters/maximum-compensation-rates" },
+    { "text": "Dependency allowance: $25.00 a week per wholly dependent person from January 1, 2025 ($40.00 for permanent-total cases under § 28-33-12), capped at 80% of the worker's average weekly wage except in § 28-33-12 cases.", "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-17.htm" },
+    { "text": "For employers insured in the residual market, the first $250 of indemnity and the first $250 of medical expense may be charged back to the employer as a deductible (§ 28-33-4).", "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-33/28-33-4.htm" }
+  ],
+  "uncertain": [
+    "dlt.ri.gov blocks scripts (403). The $1,691 maximum (10/1/26) was read on the DLT Maximum Compensation Rates page in a browser before the coordinator's no-browser instruction; the DLT notice (https://dlt.ri.gov/sites/g/files/xkgbur571/files/2026-09/2026-03 Max Compensation Rate Increase.pdf, signed September 2026, citing § 28-33-17) could not be fetched by curl/WebFetch/Wayback. The Wayback copy of the rates page predates October 2026 (latest row 10/1/25 $1,622).",
+    "Statute text read from Wayback copies of webserver.rilegislature.gov (server refused direct connections). § 28-33-18 and § 28-33-19 not read; PPD description is general."
+  ]
+}

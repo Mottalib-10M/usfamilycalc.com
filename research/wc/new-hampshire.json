@@ -1,0 +1,26 @@
+{
+  "slug": "new-hampshire", "name": "New Hampshire", "abbr": "NH", "verified": "2026-10-08",
+  "agency": { "name": "New Hampshire Department of Labor, Workers' Compensation Division", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+  "ttd": {
+    "rate": 60, "basis": "gross AWW",
+    "rateText": "60% of the employee's gross average weekly wage, or 30% of the state average weekly wage if greater, never more than 150% of the SAWW and never more than 100% of the employee's after-tax weekly earnings (RSA 281-A:28, II); an employee earning 30% of SAWW or less receives full wages, capped at 90% of after-tax earnings (RSA 281-A:28, I).",
+    "max": 2309.00, "min": 461.74, "minText": "Minimum = 30% of SAWW, or the full average weekly wage if lower, never above 90% of after-tax earnings (RSA 281-A:28, I-II).",
+    "effective": "2025-07-01", "periodLabel": "injuries July 1, 2025 - June 30, 2026 (latest period published by NH DOL as of 2026-10-08)",
+    "url": "https://mm.nh.gov/files/uploads/labor/documents/compensation-rate-table.pdf", "asOf": "2025-06-09"
+  },
+  "waiting": { "days": 3, "retroactiveAfterDays": 13, "text": "No compensation for the first 3 days of disability unless the disability continues for 14 days or longer (RSA 281-A:28). The waiting period is also waived if the worker returns to temporary alternative duty within 5 days of the injury (RSA 281-A:23-b, NH DOL).", "url": "https://gc.nh.gov/rsa/html/XXIII/281-A/281-A-28.htm" },
+  "ttdDuration": { "maxWeeks": null, "text": "TTD is paid while the employee is totally disabled and has not reached maximum medical improvement; no fixed week cap in RSA 281-A:28. Temporary partial benefits are limited to 262 weeks for injuries on or after 2/8/94, less weeks of total disability paid (NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+  "ppd": { "text": "Permanent impairment awards (RSA 281-A:32) are a single payment: percentage of loss (AMA Guides 5th edition) x the statutory number of weeks for the body part (e.g. arm 210 weeks; whole person 350 weeks) x the compensation rate. Paid in addition to weekly compensation once the worker is at a medical endpoint (NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+  "statute": { "cite": "RSA 281-A:28, 281-A:31, 281-A:32", "url": "https://gc.nh.gov/rsa/html/XXIII/281-A/281-A-28.htm" },
+  "facts": [
+    { "text": "New Hampshire's maximum (150% of SAWW, $2,309.00 from July 1, 2025) is among the highest in the US, but every rate is also capped at 100% of the worker's after-tax earnings (RSA 281-A:28; NH DOL rate table).", "url": "https://mm.nh.gov/files/uploads/labor/documents/compensation-rate-table.pdf" },
+    { "text": "Average weekly wage uses the 26 weeks before the injury, but the worker may ask to use anywhere from 26 to 52 weeks, whichever is most beneficial (NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+    { "text": "Employers with 5 or more employees must develop temporary alternative work, and must reinstate an injured employee to the former position within 18 months (RSA 281-A:23-b, 281-A:25-a; NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+    { "text": "Carriers have 30 days to pay or deny a medical bill; failure can bring a fine of up to $2,500 (NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" },
+    { "text": "Workers concurrently employed by two or more NH-covered employers receive benefits based on combined earnings (NH DOL).", "url": "https://www.dol.nh.gov/workers-compensation/employer-information/injured-employee-benefits" }
+  ],
+  "uncertain": [
+    "2026 value not published by NH Department of Labor as of 2026-10-08; latest official = July 1, 2025 ($2,309.00 max / $461.74 min) from the rate table revised June 9, 2025. NH resets rates each July 1, so a July 1, 2026 figure probably exists but was not found on dol.nh.gov or mm.nh.gov.",
+    "gc.nh.gov (RSA) blocked direct access; RSA 281-A:28 was read from a Wayback Machine copy of the official URL."
+  ]
+}

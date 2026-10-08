@@ -1,0 +1,24 @@
+---
+/** The official probate rules of a state, generated from its data (data-chrome, RECETTE §6.4). */
+import { pb, pbFeesOf, usd, day, num } from '../../lib/kit';
+import { scheduleFee } from '../../lib/engine/probate';
+import { table } from '../../lib/helpers';
+interface Props { slug: string }
+const d = pb(Astro.props.slug);
+const f = pbFeesOf(d.slug);
+const values = [100000, 250000, 500000, 1000000, 2000000];
+---
+<section data-chrome class="mt-10">
+  <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} probate rules this calculator applies</h2>
+  {f && <Fragment set:html={table(['Estate value', ...f.schedules.map((s) => s.who)], values.map((v) => [usd(v), ...f.schedules.map((s) => usd(scheduleFee(v, s)))]), `${f.base} Read on ${day(d.verified)}.`, ['l', ...f.schedules.map(() => 'r' as const)])} />}
+  <div class="prose prose-slate mt-4 max-w-none text-sm">
+    <p><strong>Creditor claims.</strong> {d.creditorClaims.text} <a href={d.creditorClaims.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
+    {d.earliestClose?.text && <p><strong>Closing the estate.</strong> {d.earliestClose.text} {d.earliestClose.url && <a href={d.earliestClose.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+    <p><strong>Small estates.</strong> {d.smallEstate.text} {d.smallEstate.url && <a href={d.smallEstate.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>
+    {d.simplified?.text && <p><strong>Simplified procedure.</strong> {d.simplified.text} {d.simplified.url && <a href={d.simplified.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+    {d.filingFee?.text && <p><strong>Filing fee.</strong> {d.filingFee.text} {d.filingFee.url && <a href={d.filingFee.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
+    <p><strong>Personal representative.</strong> {d.personalRepFee.text} {d.personalRepFee.url && <a href={d.personalRepFee.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>
+    <p><strong>Attorney.</strong> {d.attorneyFee.text} {d.attorneyFee.url && <a href={d.attorneyFee.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>
+    {f && f.schedules.map((s) => <p><strong>{s.who}.</strong> {s.text} <a href={s.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>)}
+  </div>
+</section>

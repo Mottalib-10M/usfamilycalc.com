@@ -1,0 +1,24 @@
+{
+  "slug": "michigan", "name": "Michigan", "abbr": "MI",
+  "filingFee": 175, "responseFee": 0,
+  "feeScope": "statewide",
+  "feeText": "Circuit court civil filing fee of $150 (MCL 600.2529(1)(a)) plus the $25 electronic filing system fee for civil actions (MCL 600.1986(1)(a)) = $175. When custody or parenting time of a minor child is to be determined, an extra $80 is due at filing (MCL 600.2529(1)(d)(i)), or $40 if only child support is to be determined (MCL 600.2529(1)(d)(ii)). SCAO Circuit Court Fee and Assessments Table, February 2025.",
+  "feeUrl": "https://www.courts.michigan.gov/496345/siteassets/court-administration/resources/cfee.pdf",
+  "feeWithChildren": 255,
+  "otherFees": [
+    { "what": "Custody or parenting-time fee when custody of a minor child is to be determined (MCL 600.2529(1)(d)(i))", "amount": 80, "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-2529" },
+    { "what": "Child support fee when only support of a minor child is to be determined (MCL 600.2529(1)(d)(ii))", "amount": 40, "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-2529" },
+    { "what": "Motion fee (MCL 600.2529(1)(e))", "amount": 20, "url": "https://www.courts.michigan.gov/496345/siteassets/court-administration/resources/cfee.pdf" }
+  ],
+  "waiver": { "name": "Fee Waiver Request (MC 20)", "url": "https://www.courts.michigan.gov/4a2a5e/siteassets/forms/scao-approved/mc20.pdf" },
+  "residency": { "text": "The plaintiff or defendant must have resided in Michigan for 180 days immediately before filing and, with exceptions in subsection (2), in the county of filing for 10 days (MCL 552.9(1)).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-552-9" },
+  "waitingPeriod": { "days": 60, "daysWithChildren": 182, "text": "No proofs or testimony may be taken until 60 days after the complaint is filed; when there are dependent minor children under 18, not until 6 months after filing, which the court may shorten to no less than 60 days for unusual hardship or compelling necessity (MCL 552.9f).", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-552-9f" },
+  "simplified": { "text": "No summary or simplified divorce procedure in the Michigan statutes.", "url": null },
+  "parentingClass": { "required": null, "text": "No statewide statutory parenting class requirement was found; some circuit courts require one by local practice.", "url": null },
+  "uncertain": [
+    "legislature.mi.gov returned 403 to automated clients; MCL 552.9, 552.9f and 600.2529 were read from the Internet Archive 2026 copies of the official URLs.",
+    "responseFee 0: the SCAO circuit court fee table lists no fee for an answer or appearance in a civil action; not stated explicitly for divorce.",
+    "daysWithChildren 182 approximates the statutory '6 months' from filing (MCL 552.9f).",
+    "Parenting class: county-dependent; no statewide rule verified."
+  ]
+}

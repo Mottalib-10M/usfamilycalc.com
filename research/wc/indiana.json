@@ -1,0 +1,38 @@
+{
+  "slug": "indiana", "name": "Indiana", "abbr": "IN", "verified": "2026-10-08",
+  "agency": { "name": "Worker's Compensation Board of Indiana (WCB)", "url": "https://www.in.gov/wcb/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds of the average weekly wage for the past 52 weeks, up to the statutory maximum (Ind. Code § 22-3-3-8, § 22-3-3-22).",
+    "max": 878.00, "min": 50.00,
+    "minText": "The WCB table sets a minimum weekly wage of $75.00 for computing benefits; two-thirds of $75.00 = $50.00 (computed).",
+    "effective": "2026-07-01", "periodLabel": "injuries July 1, 2026 - June 30, 2027 (maximum weekly wage $1,316.00)",
+    "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1", "asOf": "2023-06-27"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 21,
+    "text": "A worker unable to return to work for more than seven days is entitled to weekly income benefits; the first installment should be mailed 15 days after the injury, and the first week of lost time is not paid until the worker has been out 21 days (Ind. Code § 22-3-3-7).",
+    "url": "https://www.in.gov/wcb/employees/who-is-eligible"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Total compensation for temporary total, permanent partial impairment, permanent total disability and death, or any combination, may not exceed $439,000.00 for injuries July 1, 2026 - June 30, 2027 (Ind. Code § 22-3-3-22).",
+    "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1"
+  },
+  "ppd": {
+    "text": "Permanent partial impairment is paid in 'degrees' (e.g. thumb 12, hand 40, arm 50, foot 35, leg 45, whole body 100) multiplied by a dollar value per degree that rises with the rating: $1,970 (1-10 degrees), $2,197 (11-35), $3,585 (36-50), $4,569 (51-100) for injuries July 1, 2026 - June 30, 2027 (Ind. Code § 22-3-3-10).",
+    "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1"
+  },
+  "statute": { "cite": "Ind. Code §§ 22-3-3-7, 22-3-3-8, 22-3-3-10, 22-3-3-22", "url": "https://www.in.gov/wcb/" },
+  "facts": [
+    { "text": "Indiana pays permanent partial impairment by degrees, with a higher dollar value per degree for more severe ratings ($1,970 to $4,569 per degree for 2026-2027 injuries).", "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1" },
+    { "text": "The maximum weekly wage was frozen at $1,170 from July 1, 2016 to June 30, 2023, then raised each July 1 under P.L. 160: $1,205, $1,241, $1,278 and $1,316 for July 2026.", "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1" },
+    { "text": "Indiana caps total combined benefits (TTD, PPI, PTD and death) at $439,000.00 for injuries from July 1, 2026.", "url": "https://www.in.gov/dA/5bdd77d9c6/PPIandTTD-benefits2023_1.3_.pdf?language_id=1" },
+    { "text": "An accident should be reported to the employer immediately; if the worker waits more than 30 days the claim may be denied.", "url": "https://www.in.gov/wcb/employees/who-is-eligible" }
+  ],
+  "uncertain": [
+    "The WCB table (updated June 27, 2023) already lists scheduled values through June 30, 2027; no newer table was found. Values for 7/1/26-6/30/27 read from it.",
+    "min $50.00 is computed (2/3 of the $75.00 minimum wage column); the WCB does not print a minimum benefit.",
+    "Indiana Code (iga.in.gov) not read directly; section numbers are those usually cited for these rules and should be verified. maxWeeks null: a 500-week TTD limit exists in the Code per common references but was not read."
+  ]
+}

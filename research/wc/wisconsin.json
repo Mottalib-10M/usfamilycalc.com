@@ -1,0 +1,37 @@
+{
+  "slug": "wisconsin", "name": "Wisconsin", "abbr": "WI", "verified": "2026-10-08",
+  "agency": { "name": "Wisconsin Department of Workforce Development, Worker's Compensation Division", "url": "https://dwd.wisconsin.gov/wc/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Temporary total disability is based on two-thirds of the employee's wage up to a specified maximum for the year of injury (DWD; Wis. Stat. § 102.43). The 2026 maximum weekly wage for temporary, permanent total and death benefits is $2,062.50, giving a maximum weekly rate of $1,375.00 ($229.17 daily).",
+    "max": 1375.00, "min": null,
+    "minText": "The DWD maximum wage and rate chart lists no minimum weekly TTD rate.",
+    "effective": "2026-01-01", "periodLabel": "injuries on or after January 1, 2026 (unchanged in the April 1, 2026 column of the chart)",
+    "url": "https://dwd.wisconsin.gov/dwd/publications/wc/WKC-9572-P.pdf", "asOf": "2026-04-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 7,
+    "text": "Three-day waiting period: the first 3 days of lost time are not compensable and compensation begins on the 4th day; if disability extends beyond 7 calendar days, the first 3 days are paid retroactively. The waiting period includes Saturday and may include Sunday if the worker normally works Sundays (DWD; Wis. Stat. § 102.43(1)).",
+    "url": "https://dwd.wisconsin.gov/wc/workers/"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Temporary disability is paid during the healing period, as documented by a doctor; DWD states no fixed week limit.",
+    "url": "https://dwd.wisconsin.gov/wc/workers/"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is paid at two-thirds of the wage, subject to a lower PPD maximum: $454.00 a week for injuries from April 1, 2026 ($446.00 from January 1, 2026; maximum PPD wage $681.00). Scheduled injuries are rated as a percentage of loss of use under Wis. Stat. § 102.52 using the minimum ratings of Wis. Admin. Code DWD 80.32; the PPD rate is presumed to be the maximum for workers under 27 at injury.",
+    "url": "https://dwd.wisconsin.gov/dwd/publications/wc/WKC-9572-P.pdf"
+  },
+  "statute": { "cite": "Wis. Stat. §§ 102.11, 102.43, 102.44, 102.52, 102.55; Wis. Admin. Code DWD 80.32", "url": "https://docs.legis.wisconsin.gov/statutes/statutes/102" },
+  "facts": [
+    { "text": "Wisconsin's permanent partial disability maximum ($454.00 a week from April 1, 2026) is far lower than its temporary disability maximum ($1,375.00).", "url": "https://dwd.wisconsin.gov/dwd/publications/wc/WKC-9572-P.pdf" },
+    { "text": "For workers injured before age 27, the PPD rate is initially set at the maximum (rebuttable presumption).", "url": "https://dwd.wisconsin.gov/wc/insurance/training/ppd/" },
+    { "text": "The Uninsured Employers Fund pays benefits to employees of illegally uninsured Wisconsin employers as though the employer had been insured.", "url": "https://dwd.wisconsin.gov/wc/workers/" },
+    { "text": "Burial expenses are covered up to $10,000, and the maximum death benefit for 2026 injuries is $412,500.00 (four times the maximum annual wage of $103,125.00).", "url": "https://dwd.wisconsin.gov/dwd/publications/wc/WKC-9572-P.pdf" }
+  ],
+  "uncertain": [
+    "docs.legis.wisconsin.gov refused/timeout; statute text not read. Rules are taken from DWD pages and the DWD Maximum Wage and Rate Chart WKC-9572-P (R. 04/2026).",
+    "Wisconsin has no published minimum TTD rate in the DWD chart; min set to null."
+  ]
+}

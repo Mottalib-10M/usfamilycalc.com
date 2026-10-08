@@ -1,0 +1,21 @@
+{
+  "slug": "maine", "name": "Maine", "abbr": "ME",
+  "filingFee": 120, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "District Court fee for entry of a Family Matter Action, $120 (Maine Supreme Judicial Court Administrative Order JB-05-26 (A. 3-26), Revised Court Fees Schedule, section I.A, effective March 9, 2026). The FM-038 Family Matter Summons and Preliminary Injunction must be obtained from a clerk's office for $5.",
+  "feeUrl": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf",
+  "otherFees": [
+    { "what": "FM-038 Family Matter Summons and Preliminary Injunction, obtained from the clerk", "amount": 5, "url": "https://www.courts.maine.gov/forms/index.html" },
+    { "what": "Motion for post-judgment relief under M.R. Civ. P. 120 in a Title 19-A action (includes a $20 mediation fee)", "amount": 80, "url": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf" }
+  ],
+  "waiver": { "name": "Application to Proceed Without Payment of Fees (CV-067)", "url": "https://mjbportal.courts.maine.gov/CourtForms/FormsLists/DownloadForm?strFormNumber=CV-067" },
+  "residency": { "text": "A complaint may be filed if the plaintiff has resided in good faith in Maine for 6 months before filing, or the plaintiff is a Maine resident and the parties married in Maine or lived in Maine when the cause arose, or the defendant is a Maine resident (19-A M.R.S. § 901(1)).", "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec901.html" },
+  "waitingPeriod": { "days": 60, "text": "Maine law requires a minimum 60-day waiting period between the filing of all the necessary divorce paperwork and the final hearing (Maine Judicial Branch, Divorce & Family Separation page).", "url": "https://www.courts.maine.gov/courts/family/divorce-separation/index.html" },
+  "simplified": { "text": "No simplified or summary divorce procedure was found; irreconcilable marital differences is a no-fault ground (19-A M.R.S. § 902(1)(H)).", "url": null },
+  "parentingClass": { "required": false, "text": "Four-hour co-parent education classes are offered statewide; the court may require parents to attend in certain cases, but attendance is not automatic.", "url": "https://www.courts.maine.gov/courts/family/divorce-separation/parent-education.html" },
+  "uncertain": [
+    "60-day waiting period: taken from the official Maine Judicial Branch page; the statute or rule that sets it was not identified or read (it is not in 19-A M.R.S. §§ 901-902).",
+    "Response fee: the JB-05-26 schedule lists no fee for an answer in a family matter, but this was not confirmed explicitly; left null.",
+    "Parenting class: whether any district requires it by standing order was not checked."
+  ]
+}

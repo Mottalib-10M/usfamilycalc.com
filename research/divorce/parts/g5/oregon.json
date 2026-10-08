@@ -1,0 +1,19 @@
+{
+  "slug": "oregon", "name": "Oregon", "abbr": "OR",
+  "filingFee": 301, "responseFee": 301,
+  "feeScope": "statewide",
+  "feeText": "Dissolution of marriage, annulment or separation: $301 for the first appearance by petitioner, respondent or other party (ORS 21.155(1)), Oregon circuit court fee schedule effective 2026-01-01.",
+  "feeUrl": "https://www.courts.oregon.gov/Documents/2026_CircuitFeeSchedule_public_eff-2026-01-01.pdf",
+  "otherFees": [],
+  "waiver": { "name": "Fee Deferral and Waiver packet (Oregon Judicial Department Forms Center)", "url": "https://www.courts.oregon.gov/forms/Pages/fee-waiver.aspx" },
+  "residency": { "text": "If the marriage was solemnized in Oregon and the ground is irreconcilable differences, either party must be a resident or domiciliary when the suit is filed; otherwise at least one party must have been a resident or domiciliary for six months before filing (ORS 107.075).", "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html" },
+  "waitingPeriod": { "days": 0, "text": "No statutory waiting period found in ORS chapter 107; the marriage is terminated when the court signs the judgment of dissolution (ORS 107.115(2)).", "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html" },
+  "simplified": { "text": "Summary dissolution (ORS 107.485): no children of the marriage and no pregnancy, marriage of 10 years or less, no real property, unpaid debts since marriage of $15,000 or less, personal property under $30,000 net, petitioner waives spousal support and pendente lite orders, no other pending domestic relations suit.", "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html" },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "ORS chapters 107 and 21 were read from the Internet Archive 2026 copy of oregonlegislature.gov (direct fetch failed on 2026-10-08).",
+    "Parenting education: ORS 3.425 (county parent education programs) could not be fetched (oregonlegislature.gov ors003.html unavailable directly and in the archive); required = null.",
+    "Exact title of the Oregon fee deferral/waiver application form not readable (forms list loads by script); the fees page refers to the 'fee deferral or waiver packet'.",
+    "Waiting period 0 inferred from the absence of any waiting-period provision in ORS chapter 107 text searched; no explicit statement 'no waiting period' exists in statute."
+  ]
+}

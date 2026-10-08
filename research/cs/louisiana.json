@@ -1,0 +1,123 @@
+{
+  "slug": "louisiana",
+  "name": "Louisiana",
+  "abbr": "LA",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted monthly gross income schedule (La. R.S. 9:315.19)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income from any source (salaries, wages, commissions, bonuses, dividends, severance, pensions, interest, trust income, recurring monetary gifts, annuities, capital gains, Social Security, workers' compensation, military housing and subsistence allowances, unemployment, disability insurance, spousal support received under a preexisting order), significant expense reimbursements or in-kind payments, and self-employment receipts minus ordinary and necessary expenses (La. R.S. 9:315(C)(3)). Adjusted gross income deducts preexisting child or spousal support owed to a non-party and, at the court's discretion, amounts paid for a party's other minor child (La. R.S. 9:315(C)(1)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/louisiana.json",
+    "columns": "combined adjusted monthly gross income, then total basic obligation for 1 to 6 children",
+    "minIncome": 1050,
+    "maxIncome": 50000,
+    "step": 50,
+    "lookup": "interpolate",
+    "lookupRule": "If combined adjusted gross income falls between two amounts shown in the schedule, the basic child support obligation is based on an extrapolation between the two amounts (La. R.S. 9:315.13(B)).",
+    "belowMin": {
+      "rule": "Below the lowest level of the schedule ($1,050) the court sets support from actual earnings or income, the R.S. 9:315.11 factors and any other evidence of ability to pay (La. R.S. 9:315.13(A)).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "Above the highest level ($50,000) the court uses its discretion in the child's best interest and the parents' circumstances (Civil Code art. 141), but the basic obligation may never be less than the highest amount in the schedule; part may be placed in a spendthrift trust for educational or medical needs (La. R.S. 9:315.13(C))."
+    },
+    "effective": "2025-01-01",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107384"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Parameters of La. R.S. 9:315.9: shared custody (approximately equal time) basic x 1.5, cross-multiplied by the other parent's time, capped at the sole-custody amount. sharedConventionOvernights (165, about 45% of the year) is the calculator's convention for 'approximately equal amount of time' and is not a figure of the statute.",
+    "params": {
+      "sharedConventionOvernights": 165,
+      "daysPerYear": 365
+    },
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107413"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": null,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Shared custody means each parent has physical custody for an approximately equal amount of time: the basic obligation is multiplied by 1.5, divided by income shares, each parent's theoretical obligation is cross-multiplied by the percentage of time the child spends with the other parent, add-ons and direct payments are adjusted, and the parent owing more pays the difference, never more than he or she would owe as a non-domiciliary parent (La. R.S. 9:315.9(A); Worksheet B). In joint custody that is not shared custody, if the payer has physical custody more than 73 days a year the court may order a credit, considering time, financial burden and the child's best interest (La. R.S. 9:315.8(E); Worksheet A).",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107413"
+  },
+  "addOns": {
+    "childcare": "net child care cost (after the federal Form 2441 credit) added to the basic obligation and shared by income",
+    "healthInsurance": "health insurance premiums for the child added to the basic obligation and shared by income",
+    "text": "Total obligation = basic obligation + net child care costs + health insurance premiums + extraordinary medical expenses + other extraordinary expenses, minus any deduction for the child's income; each party pays his or her income share, less court-ordered direct payments (La. R.S. 9:315.3, 9:315.8(A)-(D)).",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107412"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "The schedule incorporates a self-sufficiency reserve for low-income obligors (La. R.S. 9:315(B)(1)); no separate dollar reserve or minimum order is stated in R.S. 9:315 to 9:315.22. Below $1,050 combined income support is set case by case (La. R.S. 9:315.13(A)). Absent evidence of income, a party is presumed able to earn 32 hours a week at minimum wage (La. R.S. 9:315.11).",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107373"
+  },
+  "statute": {
+    "cite": "La. R.S. 9:315 to 9:315.22",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107384"
+  },
+  "guidelinesUrl": "https://www.legis.la.gov/legis/Law.aspx?d=107373",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support terminates automatically at majority or emancipation, per child if set per child or when the youngest reaches majority if set in globo; it continues for an unmarried major child who is a full-time student in good standing in secondary school, under 19 and dependent on a parent (La. R.S. 9:315.22(A)-(C)); support may continue to 22 for a child with a developmental disability in secondary school (9:315.22(D)).",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=107388"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1072.67,
+      "what": "parent A's monthly share of the basic obligation (no add-ons)",
+      "source": "Computed by hand from La. R.S. 9:315.19: combined $6,000 row, two children = $1,609; A's share 2/3 = $1,072.67 (unrounded). https://www.legis.la.gov/legis/Law.aspx?d=107384"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 405.56,
+      "what": "paying parent's monthly obligation under shared custody (Worksheet B)",
+      "source": "Computed by hand under La. R.S. 9:315.9(A): 1,609 x 1.5 = 2,413.50; paying parent 2,413.50 x 2/3 x 183/365 = 806.71; other parent 2,413.50 x 1/3 x 182/365 = 401.15; difference 405.56, below the sole amount 1,072.67. 182 overnights counted as approximately equal time (calculator convention, 165+). https://www.legis.la.gov/legis/Law.aspx?d=107413"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The schedule is enacted in the statute itself; the current schedule (Acts 2024, No. 86) took effect January 1, 2025 and runs to $50,000 of combined adjusted monthly gross income.",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=107384"
+    },
+    {
+      "text": "Above the schedule, support can never be less than the highest schedule amount, and part of it can be put in a spendthrift trust for the child that ends at age 24 unless the parties agree otherwise (La. R.S. 9:315.13(C)).",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=107378"
+    },
+    {
+      "text": "A non-domiciliary parent paying at least 50% of the total obligation may be allowed to claim the child for tax purposes if no arrears are owed and the domiciliary parent is not significantly harmed (La. R.S. 9:315.18(B)).",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=107383"
+    },
+    {
+      "text": "A judgment modifying final child support is retroactive to the date of judicial demand except for good cause (La. R.S. 9:315.21(C)).",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=107387"
+    },
+    {
+      "text": "The legislature reviews the guidelines at least every four years with the child support review committee (La. R.S. 9:315.16).",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=107381"
+    }
+  ],
+  "uncertain": [
+    "The legislature's page for R.S. 9:315.19 prints the rows $45,850 to $47,650 twice with identical amounts; they were deduplicated (980 rows remain, $1,050 to $50,000 in $50 steps).",
+    "Section page ids (d=...) for R.S. 9:315.x other than 9:315.19 were taken from the official pages reached through the legislature site's previous/next navigation.",
+    "No official Louisiana online calculator was located in this session."
+  ]
+}

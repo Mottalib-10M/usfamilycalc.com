@@ -1,0 +1,25 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const frames = [
+  { slug: 'child-support-calculator', title: 'Child support calculator for every US state', h: 1150, who: 'Mediators, legal aid offices, parenting class providers and family law newsletters' },
+  { slug: 'workers-comp-calculator', title: "Workers' comp weekly benefit calculator, every US state", h: 820, who: 'Unions, safety trainers, HR teams and local newsrooms' },
+];
+const code = (f: (typeof frames)[number]) => `<iframe src="${SITE_URL}/embed/${f.slug}/" title="${f.title}" width="100%" height="${f.h}" style="border:0;max-width:1000px" loading="lazy"></iframe>`;
+---
+<PageLayout title="Embed the child support or workers' comp calculator, free" description="Embed a child support calculator that applies each state's own guideline, or a workers' comp benefit calculator with 2026 state maximums, on your site for free with one iframe line." lang={lang} noindex={true} jsonLd={[breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Embed a calculator', path: route('widget', lang) }])]} breadcrumbs={[{ label: 'Embed a calculator' }]} showAuthor={false}>
+  <header class="mb-6">
+    <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">Embed a calculator</h1>
+    <p class="mt-3 text-lg text-navy-700">Copy one line. When a state adopts a new child support schedule or a new weekly maximum, the embedded calculator follows without anything to change on your side.</p>
+  </header>
+  <div class="prose prose-slate max-w-none">
+    <p>Terms: keep the credit link under the calculator visible, do not alter the frame, and use it as provided, without warranty and without presenting it as legal advice. The frame sets no cookie and sends nothing about your visitors to us. Questions: <a href={route('contact', lang)}>contact page</a>.</p>
+    {frames.map((f) => <><h2>{f.title}</h2><p>Useful for: {f.who}.</p><pre class="overflow-x-auto rounded-lg bg-navy-900 p-4 text-sm text-white"><code>{code(f)}</code></pre></>)}
+  </div>
+  <div class="mt-8 overflow-hidden rounded-xl border border-navy-200">
+    <iframe src="/embed/child-support-calculator/" title="Child support calculator for every US state" width="100%" height="1150" style="border:0" loading="lazy"></iframe>
+  </div>
+</PageLayout>

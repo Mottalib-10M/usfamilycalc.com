@@ -1,0 +1,68 @@
+{
+  "slug": "north-dakota",
+  "name": "North Dakota",
+  "abbr": "ND",
+  "verified": "2026-10-08",
+  "agency": {
+    "name": "North Dakota Workforce Safety & Insurance (WSI)",
+    "url": "https://www.workforcesafety.com/"
+  },
+  "ttd": {
+    "rate": 66.67,
+    "basis": "gross AWW",
+    "rateText": "Weekly benefit equal to 66 2/3% of the gross average weekly wage, subject to a minimum of 60% and a maximum of 125% of the state average weekly wage (N.D.C.C. § 65-05-09(1)); WSI states the weekly benefit also cannot exceed net wages after taxes. A dependency allowance of $15 per week per child is added (§ 65-05-08(10)).",
+    "max": 1614,
+    "min": 775,
+    "minText": "Minimum is 60% of the SAWW unless that exceeds the employee's net wages (gross wages minus federal income tax and social security), in which case net wages are paid (WSI benefit levels notes).",
+    "effective": "2026-07-01",
+    "periodLabel": "disability on or after July 1, 2026 (rates in effect on the date of first disability apply); SAWW $1,291",
+    "url": "https://www.workforcesafety.com/about-wsi/reports/north-dakota-weekly-benefit-levels",
+    "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 4,
+    "retroactiveAfterDays": 4,
+    "text": "Benefits may not be paid for disability lasting less than five consecutive calendar days (N.D.C.C. § 65-05-08). Stored as a 4-day threshold: a disability of five days or more is paid from the first day, since the statute sets no separate unpaid waiting period once the threshold is met.",
+    "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "No fixed week limit on temporary total disability; benefits continue during the disability, but an employee who retires or begins receiving social security retirement benefits is presumed retired from the labor market and disability benefits end (N.D.C.C. § 65-05-09.3). Temporary partial disability is limited to 5 years (WSI).",
+    "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+  },
+  "ppd": {
+    "text": "Permanent partial impairment (PPI) awards are lump sums equal to 35% of the state average weekly wage on the date of the impairment evaluation, rounded to the next highest dollar, multiplied by a statutory multiplier tied to the impairment percentage (N.D.C.C. § 65-05-12.2). The PPI rate is $452 for evaluations from July 1, 2026.",
+    "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+  },
+  "statute": {
+    "cite": "N.D.C.C. §§ 65-05-08, 65-05-09, 65-05-12.2",
+    "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+  },
+  "facts": [
+    {
+      "text": "North Dakota is a monopolistic state fund: WSI describes itself as the sole provider and administrator of the workers' compensation system in North Dakota.",
+      "url": "https://www.workforcesafety.com/about-wsi"
+    },
+    {
+      "text": "Since August 1, 2009, the maximum weekly benefit equals 125% of the state average weekly wage (before that, 110%); rates are reset every July 1.",
+      "url": "https://www.workforcesafety.com/about-wsi/reports/north-dakota-weekly-benefit-levels"
+    },
+    {
+      "text": "Disability benefits are reduced by one-half of any Social Security disability benefit received (N.D.C.C. § 65-05-09.1).",
+      "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+    },
+    {
+      "text": "An employer may not require an injured employee to use sick leave or paid time off before or instead of receiving disability benefits (N.D.C.C. § 65-05-08).",
+      "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+    },
+    {
+      "text": "Benefits are not paid for wage loss related to the use or presence of medical marijuana (N.D.C.C. § 65-05-08(12)).",
+      "url": "https://ndlegis.gov/cencode/t65c05.pdf"
+    }
+  ],
+  "uncertain": [
+    "The net-wage ceiling on the weekly benefit is stated by WSI (wage-loss benefits page and benefit-levels notes); the exact statutory subsection was not located in § 65-05-09 text extracted.",
+    "Temporary partial disability 5-year limit taken from the WSI wage-loss benefits page (https://www.workforcesafety.com/employees/benefits-services/wage-loss-benefits).",
+    "Waiting period encoded as days 4 / retroactiveAfterDays 4 (paid in full once disability reaches 5 days); § 65-05-08 does not say expressly that the first days are paid once the 5-day threshold is met."
+  ]
+}

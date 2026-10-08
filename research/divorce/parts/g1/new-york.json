@@ -1,0 +1,64 @@
+{
+  "slug": "new-york",
+  "name": "New York",
+  "abbr": "NY",
+  "filingFee": 210,
+  "responseFee": 0,
+  "feeScope": "statewide",
+  "feeText": "Supreme Court index number: $210 (CPLR § 8018(a)(1)(i), (3)). The court system states that an uncontested divorce costs at least $335 in court filing fees (index number $210 + request for judicial intervention $95 + note of issue $30, CPLR § 8020(a)). A party who did not start the case pays no filing fee.",
+  "feeUrl": "https://www.nycourts.gov/statewide-forms/filing-fees",
+  "otherFees": [
+    {
+      "what": "Request for judicial intervention (CPLR § 8020(a))",
+      "amount": 95,
+      "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+    },
+    {
+      "what": "Note of issue (CPLR § 8020(a)); $125 where no RJI is required",
+      "amount": 30,
+      "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+    },
+    {
+      "what": "Motion or cross-motion (CPLR § 8020(a))",
+      "amount": 45,
+      "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+    },
+    {
+      "what": "Stipulation of settlement (CPLR § 8020(d))",
+      "amount": 35,
+      "url": "https://www.nycourts.gov/statewide-forms/filing-fees"
+    },
+    {
+      "what": "Minimum total court fees for an uncontested divorce (court system statement)",
+      "amount": 335,
+      "url": "https://www.nycourts.gov/help/family-issues-divorce/filing-uncontested-divorce"
+    }
+  ],
+  "waiver": {
+    "name": "Poor person's relief (CPLR 1101): notice of motion with sworn affidavit; no official statewide form (sample Supreme Court form provided)",
+    "url": "https://www.nycourts.gov/help/representing-yourself-court/fee-waivers-poor-persons-relief"
+  },
+  "residency": {
+    "text": "Residency of 2 continuous years before filing for either spouse, or 1 year if the couple married in New York, lived in New York as spouses, or the grounds arose in New York; or both residents when the grounds arose in New York (Dom. Rel. Law § 230).",
+    "url": "https://www.nysenate.gov/legislation/laws/DOM/230"
+  },
+  "waitingPeriod": {
+    "days": 0,
+    "text": "No statutory waiting period after filing. The no-fault ground requires that the relationship has broken down irretrievably for at least six months, stated under oath (Dom. Rel. Law § 170(7)).",
+    "url": "https://www.nysenate.gov/legislation/laws/DOM/170"
+  },
+  "simplified": {
+    "text": "No summary dissolution statute; the court system publishes an uncontested divorce forms packet for agreed cases.",
+    "url": "https://www.nycourts.gov/forms/uncontested-divorce-forms-packet"
+  },
+  "parentingClass": {
+    "required": null,
+    "text": "No statewide mandatory parenting class was found in the statutes read.",
+    "url": null
+  },
+  "uncertain": [
+    "nycourts.gov and nysenate.gov block automated clients; pages were read in a browser session on the official sites.",
+    "Waiver: the court system states there is no official form for the fee waiver request; sample forms only.",
+    "Parenting class: not verified (no statute located); set to null."
+  ]
+}

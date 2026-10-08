@@ -1,0 +1,40 @@
+{
+  "slug": "washington", "name": "Washington", "abbr": "WA", "verified": "2026-10-08",
+  "agency": { "name": "Washington State Department of Labor & Industries (L&I)", "url": "https://lni.wa.gov/" },
+  "ttd": {
+    "rate": 60, "basis": "gross monthly wages (percentage depends on marital status and number of children)",
+    "rateText": "Time-loss compensation is paid monthly as a percentage of the worker's wages under the RCW 51.32.060 schedule (RCW 51.32.090(1)). For injuries on or after July 1, 2026: unmarried with no children 60%; unmarried with one child or married with no children 65%; unmarried with two children or married with one child 67%; unmarried with three children or married with two 69%; unmarried with four children or married with three 71%; unmarried with five children or married with four 73%; unmarried with six or more or married with five or more 75% (RCW 51.32.060(1)). For injuries before July 1, 2026: married 65%, +2 points per child up to 75% (five children); unmarried 60%, +2 points per child up to 70% (RCW 51.32.060(2)).",
+    "max": null, "min": null,
+    "maxMonthly": 9981.00, "maxDaily": 332.70, "minMonthly": 1247.63,
+    "minText": "Maximum = 120% of the state's average monthly wage (RCW 51.32.060(6)(a)). Minimum = 15% of the state's average monthly wage ($1,247.63) plus $10.00 for a spouse or registered domestic partner and $10.00 per dependent child (up to five children, or six for single workers on claims from July 1, 2026); if that minimum exceeds 100% of the worker's wages, the worker receives the greater of their monthly wages or the June 30, 2008 minimum (RCW 51.32.060(6)(b)).",
+    "effective": "2026-07-01", "periodLabel": "injuries on or after July 1, 2026 (through June 30, 2027); state average wage for 2025 = $99,810 a year",
+    "url": "https://content.govdelivery.com/accounts/WADLI/bulletins/41de9eb", "asOf": "2026-06-26"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 6,
+    "text": "No compensation for the day of injury or the three days following unless the disability continues for seven consecutive calendar days from the date of injury (RCW 51.32.090(7)). L&I notes that for injuries before June 6, 2024 the three days were paid only if the worker was still off work on the 14th day.",
+    "url": "https://lni.wa.gov/claims/for-workers/claim-benefits/wage-replacement"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Payments continue so long as the total disability continues and stop when earning power is restored (RCW 51.32.090(1), (3)); no week cap. Partial restoration of earning power gives loss-of-earning-power benefits of 80% of the wage difference if the loss exceeds 5% (RCW 51.32.090(3)).",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=51.32.090"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is paid as fixed dollar awards from a statutory schedule (amputations and loss of function listed with dollar amounts, e.g. leg above the knee, arm at or above the deltoid insertion) and, for unspecified disabilities, by impairment category, not as weekly payments (RCW 51.32.080). The schedule amounts are adjusted for later injury dates.",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=51.32.080"
+  },
+  "statute": { "cite": "RCW 51.32.060, 51.32.090, 51.32.080, 51.08.018", "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=51.32.090" },
+  "facts": [
+    { "text": "Washington pays time-loss as a monthly benefit whose percentage depends on marital status and number of children, not as a flat two-thirds of weekly wages (RCW 51.32.060); the schedule was revised for injuries on or after July 1, 2026 (2025 c 168).", "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=51.32.060" },
+    { "text": "No taxes are withheld from time-loss compensation; L&I states the IRS treats it as a disability benefit, not earned income.", "url": "https://lni.wa.gov/claims/for-workers/claim-benefits/wage-replacement" },
+    { "text": "Benefits for workers injured before July 1, 2025 rose 4.9% on July 1, 2026, following the 4.9% rise in the state average wage; workers injured on or after July 1, 2011 receive no COLA until the second July after injury (RCW 51.32.075).", "url": "https://lni.wa.gov/news-events/article/26-10" },
+    { "text": "In Washington an injured worker cannot sue the employer or coworkers for a work injury; suits are possible only against third parties.", "url": "https://lni.wa.gov/forms-publications/F242-104-000.pdf" },
+    { "text": "Loss-of-earning-power benefits are capped so that payments plus present wages do not exceed 150% of the state's average monthly wage: $12,476.25 for July 1, 2026 to June 30, 2027.", "url": "https://content.govdelivery.com/accounts/WADLI/bulletins/41de9eb" }
+  ],
+  "uncertain": [
+    "Washington publishes monthly (and daily) amounts only; weekly max/min are not published, so max/min are null and maxMonthly/maxDaily/minMonthly are given as published.",
+    "2026 max/min read in the L&I Self-Insurance bulletin of 06/26/2026 hosted on L&I's GovDelivery account (content.govdelivery.com/accounts/WADLI) and confirmed for the maximum in L&I's chart https://lni.wa.gov/insurance/_docs/maxtlrates.pdf (7-1-26 column: 9,981.00 (332.70)).",
+    "Washington's state fund is the exclusive insurer for employers that do not self-insure; no official page stating this was read, so it is not listed as a fact."
+  ]
+}

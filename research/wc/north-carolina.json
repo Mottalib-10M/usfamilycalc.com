@@ -1,0 +1,25 @@
+{
+  "slug": "north-carolina", "name": "North Carolina", "abbr": "NC", "verified": "2026-10-08",
+  "agency": { "name": "North Carolina Industrial Commission", "url": "https://www.ic.nc.gov/workers-compensation-claims/maximum-weekly-compensation-rates" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Sixty-six and two-thirds percent of average weekly wages, not more than the amount established annually effective January 1 and not less than $30.00 per week (N.C. Gen. Stat. § 97-29(a)).",
+    "max": 1446.00, "min": 30.00, "minText": "Statutory floor of $30.00 per week (G.S. 97-29(a)).",
+    "effective": "2026-01-01", "periodLabel": "injuries in calendar year 2026",
+    "url": "https://www.ic.nc.gov/workers-compensation-claims/maximum-weekly-compensation-rates", "asOf": "2026-01-01"
+  },
+  "waiting": { "days": 7, "retroactiveAfterDays": 21, "text": "No compensation is due for the first seven days of lost time unless the disability exceeds 21 days, in which case days 1-7 are paid (N.C. Gen. Stat. § 97-28; Industrial Commission FAQs).", "url": "https://www.ic.nc.gov/faqs" },
+  "ttdDuration": { "maxWeeks": 500, "text": "TTD may not exceed 500 weeks from the date of first disability unless the employee qualifies for extended compensation, which requires an application after 425 weeks and proof of total loss of wage-earning capacity (G.S. 97-29(b)-(c)).", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_97/GS_97-29.html" },
+  "ppd": { "text": "Scheduled injuries are paid at 66 2/3% of average weekly wages for a fixed number of weeks in addition to the healing period (e.g. thumb 75 weeks, index finger 45 weeks, arm 240 weeks, total loss of use of the back 300 weeks), with partial loss paid proportionally (N.C. Gen. Stat. § 97-31).", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_97/GS_97-31.html" },
+  "statute": { "cite": "N.C. Gen. Stat. §§ 97-28, 97-29, 97-31", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_97/GS_97-29.html" },
+  "facts": [
+    { "text": "North Carolina's maximum is 110% of the average weekly insured wage (G.S. 96-1), rounded to the nearest multiple of $2.00, and applies to injuries on and after the following January 1 (G.S. 97-29(i)).", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_97/GS_97-29.html" },
+    { "text": "The cap that applies for the whole claim is the maximum for the year of injury: $1,446.00 for 2026, up from $1,380.00 in 2025 (Industrial Commission rate table).", "url": "https://www.ic.nc.gov/workers-compensation-claims/maximum-weekly-compensation-rates" },
+    { "text": "A worker whose weekly checks stop can ask the Industrial Commission for an order compelling payment plus a 10% late-payment penalty (G.S. 97-18(e), (g); IC FAQs).", "url": "https://www.ic.nc.gov/faqs" },
+    { "text": "Insurers can terminate TTD without Commission permission after 500 weeks, or when the employee returns to work, subject to the trial return-to-work rules of G.S. 97-32.1 (IC FAQs).", "url": "https://www.ic.nc.gov/faqs" },
+    { "text": "To contest a Form 24 application to stop benefits, the worker must file a response within 17 days of its mailing (G.S. 97-18.1; IC FAQs).", "url": "https://www.ic.nc.gov/faqs" }
+  ],
+  "uncertain": [
+    "ncleg.gov blocked direct access (Cloudflare 403); G.S. 97-29 and 97-31 were read from Wayback Machine copies of the official ncleg.gov URLs (2026 snapshots)."
+  ]
+}

@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+import { csAll, wcAll, alAll } from '../../lib/kit';
+const lang = 'en';
+const nCs = csAll().length, nWc = wcAll().length, nAl = alAll().length;
+---
+<PageLayout title={`${SITE_NAMES[lang]}: who checks the state rules, and how 2026`} description="Who publishes these child support, alimony, divorce, probate and workers comp calculators, where the state rules come from and how to report an error in 2026." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES[lang]}</h1></header>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES[lang]} is published by Radif Partners, a small company that builds free calculators on top of official rules. This site answers money questions that arrive at hard moments: a separation, a death in the family, an injury at work. In each case the answer depends first on the state, and the rules that decide it are public but scattered across codes, court rules, agency bulletins and PDF tables that few people ever read in full.</p>
+    <h2>Why this site does better than the first search result</h2>
+    <p>Many child support calculators online use one national approximation, or ask you to type a percentage yourself. Ours carries the official guideline of each state we cover ({nCs} jurisdictions for child support today): the full schedule where the state uses one, the percentage and its cap where it uses a percentage, and the formula where it has a formula, with the shared-parenting rule that goes with it. The same goes for the {nWc} workers' compensation benefit pages, which use the 2026 maximum and minimum published by each state's board, and for the {nAl} states whose alimony formula or cap we could read in an official text. Every page dates its reading and links the text it comes from.</p>
+    <h2>What we do not do</h2>
+    <p>We are not a law firm and we do not give legal advice. We do not collect your name, your e-mail or the figures you enter, we do not refer visitors to attorneys for a fee, and no law firm, mediator or insurer pays to appear here. When a state leaves an amount to the judge, as most do for alimony, we say so instead of inventing a formula.</p>
+    <h2>How the figures are produced</h2>
+    <p>Each state's rules live in a data file that records the address of the official page every figure was read on. The calculation runs in your browser from those files. Before each release, automated tests replay the worked examples published by the states, or cases computed by hand from the statute when no official example exists, and a failing case blocks publication. The full description, with the limits of each calculator, is on the <a href={route('method', lang)}>method page</a>.</p>
+    <h2>Funding</h2>
+    <p>The site is free and asks for no account. If advertising is added one day, it will never sit above a calculator and will never use what you type, because nothing you type leaves your browser.</p>
+    <h2>Reporting a mistake</h2>
+    <p>If a court worksheet, a child support agency, a probate clerk or an insurer gives a different figure, write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the share link of your calculation and the official document. Confirmed errors are fixed in the data file, turned into a test and dated. See also the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>.</p>
+    <p class="text-sm text-navy-600">Rules last checked on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, 'en-US')}</time>.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,39 @@
+{
+  "slug": "california", "name": "California", "abbr": "CA", "verified": "2026-10-08",
+  "agency": { "name": "Division of Workers' Compensation (DWC), Department of Industrial Relations", "url": "https://www.dir.ca.gov/dwc/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds of gross (pre-tax) wages at the time of injury, including tips, commissions, overtime, bonuses, food and lodging and earnings from other jobs, subject to the statutory minimum and maximum (DWC Fact Sheet C; Labor Code § 4653).",
+    "max": 1764.11, "min": 264.61,
+    "minText": "Minimum $264.61 per week; DWC states that the minimum and maximum are recalculated each January 1 from the change in the state average weekly wage (Labor Code § 4453(a)(10)).",
+    "effective": "2026-01-01", "periodLabel": "injuries on or after January 1, 2026 (TTD rates are also adjusted for later years of disability)",
+    "url": "https://www.dir.ca.gov/DIRNews/2025/2025-116.html", "asOf": "2026-01-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": null,
+    "text": "TD payments begin when the doctor says the worker can't do his or her usual work for more than three days or the worker is hospitalized overnight; payments are due every two weeks and the first payment is due within 14 days after the employer learns of the injury and disability (DWC Fact Sheet C; Guidebook ch. 5; Labor Code § 4650, § 4652).",
+    "url": "https://www.dir.ca.gov/dwc/FactSheets/FactSheet_c.pdf"
+  },
+  "ttdDuration": {
+    "maxWeeks": 104,
+    "text": "For injuries on or after January 1, 2008, TD is limited to 104 weeks of payments within five years from the date of injury; for certain long-term injuries (e.g. severe burns, chronic lung disease) up to 240 weeks within five years (Labor Code § 4656(c)).",
+    "url": "https://www.dir.ca.gov/dwc/FactSheets/FactSheet_c.pdf"
+  },
+  "ppd": {
+    "text": "Permanent disability is rated from the doctor's impairment number using the Permanent Disability Rating Schedule, adjusted for occupation and age and, for injuries on or after January 1, 2013, multiplied by a 1.4 factor; a 1-99% rating is permanent partial disability paid over a fixed number of weeks, starting within 14 days after TD ends (Labor Code §§ 4658, 4660.1).",
+    "url": "https://www.dir.ca.gov/dwc/FactSheets/FactSheet_D.pdf"
+  },
+  "statute": { "cite": "Cal. Labor Code §§ 4453, 4650-4664", "url": "https://www.dir.ca.gov/InjuredWorkerGuidebook/AppendixA.pdf" },
+  "facts": [
+    { "text": "The 2026 maximum ($1,764.11) and minimum ($264.61) TTD rates rose 4.98826% with the state average weekly wage, which increased from $1,704 to $1,789 for the 12 months ending March 31, 2025 (Labor Code § 4453(a)(10)).", "url": "https://www.dir.ca.gov/DIRNews/2025/2025-116.html" },
+    { "text": "If a claim is not accepted or denied within 90 days of giving the claim form to the employer, the injury is presumed work-related, and up to $10,000 of treatment must be provided while the claim is investigated.", "url": "https://www.dir.ca.gov/dwc/FactSheets/FactSheet_c.pdf" },
+    { "text": "A late TD or PD payment is automatically increased by 10 percent on a self-assessed basis by the claims administrator.", "url": "https://www.dir.ca.gov/dwc/WCFaqIW.html" },
+    { "text": "For injuries on or after January 1, 2013, workers not offered return to work receive a Supplemental Job Displacement Benefit voucher of up to $4,000, $6,000, $8,000 or $10,000 depending on the permanent partial disability percentage.", "url": "https://www.dir.ca.gov/dwc/WCFaqIW.html" },
+    { "text": "TD benefits are not subject to federal, state or local income tax, Social Security tax or union dues.", "url": "https://www.dir.ca.gov/dwc/WCFaqIW.html" }
+  ],
+  "uncertain": [
+    "Labor Code text (leginfo.legislature.ca.gov) blocked by Cloudflare (403) for WebFetch/curl; rules taken from DWC fact sheets, FAQ and Injured Worker Guidebook.",
+    "Retroactive payment of the 3-day waiting period (Labor Code § 4652) not stated in the DWC pages read; retroactiveAfterDays left null (commonly 14 days, not verified).",
+    "The brief's example showed min 264.62; DWC's official announcement reads $264.61."
+  ]
+}

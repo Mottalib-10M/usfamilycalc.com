@@ -1,0 +1,46 @@
+{
+ "slug": "ohio",
+ "name": "Ohio",
+ "abbr": "OH",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "All claims must be presented within 6 months after the death of the decedent, whether or not an executor or administrator is appointed; late claims are forever barred, except as provided in R.C. 2117.061 (R.C. 2117.06(B),(C)).",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2117.06"
+ },
+ "earliestClose": {
+  "text": "Every executor or administrator must render a final and distributive account within 6 months after appointment unless an exception applies (e.g. Ohio estate tax return, will contest, spousal election) (R.C. 2109.301(B)); the 6-month-from-death claims bar (R.C. 2117.06) is the practical earliest date.",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2109.301"
+ },
+ "smallEstate": {
+  "limit": 35000,
+  "effective": "2012-01-13",
+  "text": "Release from administration by court order when the estate assets are $35,000 or less, or $100,000 or less when the surviving spouse takes the whole estate under the will or by intestacy (R.C. 2113.03(A)); Ohio has no out-of-court small-estate affidavit. Not indexed.",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2113.03"
+ },
+ "simplified": {
+  "text": "Release from administration for estates up to $35,000, or up to $100,000 where the surviving spouse inherits everything (R.C. 2113.03); summary release from administration where the assets do not exceed funeral and burial expenses (R.C. 2113.031, not read).",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2113.03"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: Franklin",
+  "text": "Ohio has no single statewide probate filing fee: R.C. 2101.16 (effective October 3, 2023) lists itemized probate court fees per filing (e.g. $12.00 per account), and courts may add local costs; the Franklin County Probate Court deposit schedule could not be read.",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2101.16"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Executors and administrators receive 4% of the first $100,000, 3% from $100,000 to $400,000 and 2% above $400,000 of personal property (including income) received and accounted for and proceeds of real property sold, plus 1% of real property not sold and 1% of non-probate property that would have been includable for Ohio estate tax as of December 31, 2012 (except joint and survivorship property) (R.C. 2113.35); extraordinary services may be allowed (R.C. 2113.36).",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2113.35"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Reasonable attorney fees paid by the executor or administrator are allowed as expenses of administration; the court may fix them at any time (R.C. 2113.36).",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-2113.36"
+ },
+ "uncertain": [
+  "codes.ohio.gov refuses connections from this environment and WebFetch: R.C. 2113.35 (snapshot 2026-06-15), 2117.06 (2026-06-13), 2113.03 (2026-04-23), 2109.301 (2025-11-13) 2113.36 (2024-11-03) and 2101.16 (2025-06-17) were read from Internet Archive copies of the official pages.",
+  "Franklin County Probate Court fee schedule (probate.franklincountyohio.gov) returns 403; filingFee.amount = null.",
+  "R.C. 2113.031 summary release not read."
+ ]
+}

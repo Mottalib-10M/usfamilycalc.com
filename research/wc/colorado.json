@@ -1,0 +1,39 @@
+{
+  "slug": "colorado", "name": "Colorado", "abbr": "CO", "verified": "2026-10-08",
+  "agency": { "name": "Division of Workers' Compensation (DOWC), Colorado Department of Labor and Employment", "url": "https://cdle.colorado.gov/dwc" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds of the average weekly wage, paid every two weeks (C.R.S. § 8-42-105); maximum is 91% of the state average weekly wage of $1,608.91 (C.R.S. § 8-47-106).",
+    "max": 1464.12, "min": null,
+    "minText": "No general TTD minimum in the Maximum Benefits Order; a wage of at least $2,196.18 per week is needed to reach the maximum. (Non-scheduled impairment has a $150.00 weekly floor.)",
+    "effective": "2026-07-01", "periodLabel": "injuries on or after July 1, 2026, 12:01 a.m. (2026-2027 Maximum Benefits Order; fiscal year July 1, 2026 - June 30, 2027)",
+    "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g", "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 3, "retroactiveAfterDays": 14,
+    "text": "Lost wage benefits are not paid until the worker has missed three shifts; this waiting period is reimbursed if the worker misses more than two weeks because of the injury (C.R.S. § 8-42-103(1)(a)).",
+    "url": "https://cdle.colorado.gov/dwc/injured-workers/understand-potential-benefits"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "No fixed week cap: temporary benefits end on return to work, release to regular or modified work, or maximum medical improvement; combined TTD + PPD is capped at $202,297.46 (impairment 19% or less) or $328,049.94 (20% or more) (C.R.S. § 8-42-107.5).",
+    "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g"
+  },
+  "ppd": {
+    "text": "At MMI the doctor rates impairment. Scheduled impairments (toes, feet, legs, fingers, hands, arms, eyes, hearing) are paid at a weekly rate of $459.45 for the scheduled weeks (C.R.S. § 8-42-107(2)); non-scheduled whole-person impairments are paid at the TTD rate but not less than $150.00 nor more than $804.46 per week (C.R.S. § 8-42-107(8)).",
+    "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g"
+  },
+  "statute": { "cite": "C.R.S. §§ 8-42-103, 8-42-105, 8-42-107, 8-42-107.5, 8-47-106", "url": "https://cdle.colorado.gov/dwc/injured-workers/understand-potential-benefits" },
+  "facts": [
+    { "text": "Colorado's maximum TTD rate is 91% of the state average weekly wage, reset each July 1 by the DOWC Director's Maximum Benefits Order.", "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g" },
+    { "text": "Combined temporary and permanent partial disability benefits are capped at $202,297.46 for whole-person impairment of 19% or less and $328,049.94 for 20% or more (July 2026 order).", "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g" },
+    { "text": "Non-medical benefits may be reduced by 50% if the worker violated a safety rule or tests positive for unauthorized drugs or alcohol.", "url": "https://cdle.colorado.gov/dwc/injured-workers/understand-potential-benefits" },
+    { "text": "Bodily disfigurement is compensated separately, up to $7,750.99, or $15,499.23 for extensive facial or body scars, burn scars or stumps (C.R.S. § 8-42-108).", "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g" },
+    { "text": "Permanent total disability benefits may be terminated if the worker earns more than $9,474.74 per year.", "url": "https://codwc.box.com/s/9def89oiq7q4z24v2y4axffrgfuehf5g" }
+  ],
+  "uncertain": [
+    "cdle.colorado.gov returns 403 to curl/WebFetch; pages read in the user's Chrome. The Order PDF is hosted on the DOWC's official Box account (codwc.box.com), linked from https://cdle.colorado.gov/dwc/dowc-updates; local copy research/raw/co-max-benefits-2026-2027.pdf.",
+    "Colorado Revised Statutes (leg.colorado.gov) blocked (403); section numbers are those cited in the Order or the commonly cited sections for the rules described by DOWC, not read directly (8-42-103, 8-42-105, 8-42-107(2)/(8)).",
+    "Injuries January 1 - June 30, 2026 fall under the 2025-2026 order (not read)."
+  ]
+}

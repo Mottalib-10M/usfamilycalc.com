@@ -1,0 +1,80 @@
+---
+/**
+ * A state page of a subject: prose of src/content/states/<topic>/<slug>.ts + official data of
+ * src/data/<topic>/. Order: the state's key figures, the folded answer block, the calculator locked on
+ * the state, the prose written for this state, then the official rules generated from the data
+ * (marked data-chrome: identical in form on every state page, so not counted as prose, RECETTE §6.4).
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import MiniSim from './calc/MiniSim';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import CSPanel from './panels/CSPanel.astro';
+import WCPanel from './panels/WCPanel.astro';
+import ALPanel from './panels/ALPanel.astro';
+import DVPanel from './panels/DVPanel.astro';
+import PBPanel from './panels/PBPanel.astro';
+import CSFigures from './panels/CSFigures.astro';
+import WCFigures from './panels/WCFigures.astro';
+import ALFigures from './panels/ALFigures.astro';
+import DVFigures from './panels/DVFigures.astro';
+import PBFigures from './panels/PBFigures.astro';
+import { route, ROUTES } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { t } from '../i18n/ui';
+import { pageById, statePageById } from '../lib/pages';
+import { helpers } from '../lib/helpers';
+import { topicInfo, stateTopicId } from '../lib/topics';
+import { stateRef } from '../data/states';
+import { cs, wc, al, dv, pb, type Src } from '../lib/kit';
+import { day } from '../lib/fmt';
+import { articleSchema, faqSchema, breadcrumbSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { AUTHOR_NAME } from '../data/site-config';
+import type { StateTopicDef } from '../lib/page-types';
+interface Props { def: StateTopicDef }
+const { def } = Astro.props;
+const lang = 'en';
+const ui = t(lang);
+const S = stateRef(def.slug);
+const info = topicInfo(def.topic);
+const id = stateTopicId(def.topic, def.slug);
+const path = route(id, lang);
+const h1 = info.h1(S.name);
+const data = def.topic === 'child-support' ? cs(def.slug) : def.topic === 'workers-comp' ? wc(def.slug) : def.topic === 'alimony' ? al(def.slug) : def.topic === 'divorce-cost' ? dv(def.slug) : pb(def.slug);
+const verified = (data as { verified?: string }).verified ?? '2026-10-08';
+const jsonLd = [articleSchema({ title: h1, description: def.description, path, lang }), webPageSchema({ name: h1, description: def.description, path, lang }), webApplicationSchema({ name: h1, description: def.description, path, lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: info.label, path: route(def.topic, lang) }, { name: S.name, path }])];
+if (def.faqs.length) jsonLd.push(faqSchema(def.faqs, lang));
+const card = (rid: string) => pageById(rid)?.card ?? (statePageById(rid) ? topicInfo(statePageById(rid)!.topic).card(stateRef(statePageById(rid)!.slug).name) : '');
+const related = def.related.filter((r) => ROUTES.some((x) => x.id === r)).map((r) => ({ href: route(r, lang), name: label(r), description: card(r) }));
+const seen = new Set<string>();
+const sources = ((data as { sources?: Src[] }).sources ?? []).filter((s) => s.url && !seen.has(s.url) && seen.add(s.url));
+const parts = def.body(helpers()).split(/<!--mini:([A-Za-z0-9_-]+)(?:\|([A-Za-z0-9+/=]+))?-->/);
+const decode = (b?: string) => (b ? Buffer.from(b, 'base64').toString('utf8') : undefined);
+const methodHref = route('method', lang);
+const pillarHref = route(def.topic, lang);
+---
+<PageLayout title={def.title} description={def.description} lang={lang} jsonLd={jsonLd} faqs={def.faqs} related={related} sources={sources} breadcrumbs={[{ label: info.label, href: pillarHref }, { label: S.name }]}>
+  <article>
+    <header class="mb-5">
+      <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{info.label} · {S.abbr}</p>
+      <h1 class="mt-1 font-serif text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1>
+      <p class="mt-3 text-lg text-navy-700">{def.intro}</p>
+      <p class="mt-3 text-sm text-navy-600">Rules read on official {S.name} pages on <time datetime={verified}>{day(verified)}</time> · {ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={methodHref} class="underline hover:text-navy-900">{label('method')}</a></p>
+    </header>
+    {def.topic === 'child-support' && <CSFigures slug={def.slug} />}
+    {def.topic === 'workers-comp' && <WCFigures slug={def.slug} />}
+    {def.topic === 'alimony' && <ALFigures slug={def.slug} />}
+    {def.topic === 'divorce-cost' && <DVFigures slug={def.slug} />}
+    {def.topic === 'probate' && <PBFigures slug={def.slug} />}
+    <Clamp text={def.resume} lang={lang} id={`clamp-${def.topic}-${def.slug}`} class="mb-5" />
+    <div data-outil class="mb-10"><Tool kind={def.topic} state={def.slug} lock={true} idPrefix={`${S.abbr.toLowerCase()}${def.topic.slice(0, 2)}`} /></div>
+    <div class="prose prose-slate max-w-none prose-headings:font-serif">
+      {parts.map((p, i) => i % 3 === 0 ? <Fragment set:html={p ?? ''} /> : i % 3 === 1 ? <MiniSim client:load kind={p} arg={decode(parts[i + 1])} href={pillarHref} /> : null)}
+    </div>
+    {def.topic === 'child-support' && <CSPanel slug={def.slug} />}
+    {def.topic === 'workers-comp' && <WCPanel slug={def.slug} />}
+    {def.topic === 'alimony' && <ALPanel slug={def.slug} />}
+    {def.topic === 'divorce-cost' && <DVPanel slug={def.slug} />}
+    {def.topic === 'probate' && <PBPanel slug={def.slug} />}
+  </article>
+</PageLayout>

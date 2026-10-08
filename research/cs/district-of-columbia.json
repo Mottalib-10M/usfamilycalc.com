@@ -1,0 +1,89 @@
+{
+  "slug": "district-of-columbia",
+  "name": "District of Columbia",
+  "abbr": "DC",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted gross annual income schedule (D.C. Code § 16-916.01, Appendix I in § 16-916.01a)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Gross income is income from any source, listed in D.C. Code § 16-916.01(d)(1) (wages incl. overtime and tips, self-employment, commissions, bonuses, interest, dividends, business income net of reasonable expenses but not depreciation, Social Security, veterans' and insurance benefits, workers' and unemployment compensation, pensions, regular capital gains, significant perquisites, lottery winnings, net rental income...). Adjusted gross income deducts half of self-employment Social Security and Medicare taxes, alimony paid (alimony received is added), support orders being paid, and 75% of the schedule obligation for each other child living in the parent's home (§ 16-916.01(d)(2)-(5), (e)). Means-tested benefits are excluded (§ 16-916.01(d)(6)).",
+  "period": "annual",
+  "maxChildren": 4,
+  "schedule": {
+    "file": "cs-schedules/district-of-columbia.json",
+    "columns": "combined adjusted gross annual income, then basic obligation for 1, 2, 3 and 4 or more children",
+    "minIncome": 12382,
+    "maxIncome": 240000,
+    "step": 600,
+    "lookup": "ceiling",
+    "lookupRule": "If combined adjusted gross income falls between two amounts in the schedule, the basic child support obligation is rounded up to the next higher amount (§ 16-916.01(f)(1)(B)). The first row is $12,382; from $12,600 the rows go up by $600.",
+    "belowMin": {
+      "rule": "A parent with adjusted gross income below the self-support reserve is treated individually; there is a presumption that the parent can pay $75 per month, rebuttable down to $0 or up (§ 16-916.01(g)(2)-(3)).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "The guideline is not presumptive above $240,000 of combined adjusted gross income per year; support may not be less than what would be ordered at $240,000, and the judge may order more based on the child's reasonable needs (§ 16-916.01(h))."
+    },
+    "effective": "2007-04-01",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 128,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "Where a child spends 35% or more of the time during the year with each parent, shared physical custody is presumed: the basic obligation is multiplied by 1.5, split by income shares, each parent retains his or her share times his or her own percentage of time, the remainders are offset and the parent owing more pays the difference; the result may not exceed the sole-custody amount (§ 16-916.01(q)(1)). Either parent may rebut the presumption (§ 16-916.01(q)(3)-(4)).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+  },
+  "addOns": {
+    "childcare": "Reasonable work- or education-related child care expenses are divided in proportion to adjusted gross incomes and added to each parent's share (§ 16-916.01(k)).",
+    "healthInsurance": "Health insurance premiums paid for the child are divided in proportion to adjusted gross incomes and added to each parent's share; coverage is reasonable if it costs no more than 5% of the parent's gross income (§ 16-916.01(i)). Uninsured medical expenses above $250 per child per year are extraordinary and shared by income (§ 16-916.01(j)).",
+    "text": "Health insurance (i), extraordinary medical expenses (j) and child care (k) are added; SSDI derivative benefits paid to the child are subtracted from the obligation (l).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 15654,
+    "period": "annual",
+    "minimumOrder": 75,
+    "rule": "Self-support reserve = 133% of the HHS poverty guideline for one person, updated by the Mayor every 2 years effective April 1; the code states $15,654 as of April 1, 2015 (§ 16-916.01(g)(1)). Low-income adjustment: the obligation is the lesser of the computed amount and adjusted gross income minus the reserve; if that remainder is negative or under $900 a year, the $75 per month presumption applies (§ 16-916.01(m), (g)(3)). The total obligation with add-ons may not exceed 35% of the payer's adjusted gross income (§ 16-916.01(n)). A $75 minimum order may also be entered when the payer defaults or gives no income information (§ 16-916.01(f-1)).",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+  },
+  "statute": {
+    "cite": "D.C. Code § 16-916.01; Appendices § 16-916.01a",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+  },
+  "guidelinesUrl": "https://oag.dc.gov/child-support-services/services/establishing-child-support",
+  "officialCalculatorUrl": "https://csgc.oag.dc.gov/application/main/intro.aspx",
+  "emancipation": {
+    "text": "The age of majority in D.C. is 18, but D.C. Code § 46-101 states that this does not affect any common-law or statutory right to child support.",
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/46-101"
+  },
+  "testCases": [
+    {
+      "inputs": { "incomeA": 48000, "incomeB": 24000, "children": 2, "overnightsA": 0, "period": "annual" },
+      "expected": 11202.67,
+      "what": "payer's (parent A) annual basic child support obligation (= $933.56 per month)",
+      "source": "Computed by hand from Appendix I (§ 16-916.01a): combined $72,000, two children = $16,804; parent A share 48000/72000 = 2/3; $16,804 x 2/3 = $11,202.67. Checks: 35% cap = $16,800 (not binding); 48,000 - 15,654 = 32,346 > 11,202.67 (no low-income adjustment). https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a"
+    }
+  ],
+  "facts": [
+    { "text": "D.C.'s schedule is annual and runs from $12,382 to $240,000 of combined adjusted gross income, with a single column for four or more children (§ 16-916.01a, Appendix I).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a" },
+    { "text": "Child support including add-ons may not exceed 35% of the paying parent's adjusted gross income (§ 16-916.01(n)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
+    { "text": "A change of 15% or more between the guideline amount and the existing order is presumed to be a substantial and material change that justifies modification (§ 16-916.01(r)(4)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
+    { "text": "Retroactive support in a new case is limited to the 24 months before filing unless the payer acted in bad faith or other extraordinary circumstances exist (§ 16-916.01(v)(1)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
+    { "text": "The OAG guideline calculator states it is based on the D.C. Child Support Guideline revised effective April 1, 2007.", "url": "https://csgc.oag.dc.gov/application/main/intro.aspx" }
+  ],
+  "uncertain": [
+    "Official schedule anomaly kept as published: row $132,000, three children = $20,473 while neighbours are $30,357 and $30,590 (probable typo for $30,473) — https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a. A calculator should decide whether to use the published value.",
+    "Self-support reserve: the code's latest stated value is $15,654 (April 1, 2015). The Mayor must update it every 2 years in the D.C. Register (133% of the HHS guideline); later D.C. Register notices were not found on official pages read for this file. 2026 value not confirmed; latest official in the code = 2015-04-01. The modified self-support reserve (100%) is $11,770 as of April 1, 2015 (§ 16-916.01(g-2)).",
+    "Schedule effective date 2007-04-01 is taken from the OAG calculator page ('revised effective April 1, 2007') and the 2007 reserve figure that opens the table; the appendix page shows no enactment history.",
+    "lookup 'ceiling' is not in the brief's enum: the code says to round up to the next higher schedule amount (§ 16-916.01(f)(1)(B)).",
+    "thresholdOvernights 128 = 35% of 365 (127.75) rounded up; the code speaks of 35% of the time during the year, not overnights.",
+    "Emancipation age: D.C. Code § 46-101 sets majority at 18 but preserves common-law/statutory child support rights; the support-until-21 rule is case law and was not read from an official source.",
+    "Test case computed by hand, not from the OAG calculator."
+  ]
+}

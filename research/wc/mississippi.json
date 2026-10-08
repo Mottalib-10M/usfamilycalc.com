@@ -1,0 +1,27 @@
+{
+  "slug": "mississippi", "name": "Mississippi", "abbr": "MS", "verified": "2026-10-08",
+  "agency": { "name": "Mississippi Workers' Compensation Commission (MWCC)", "url": "https://www.mwcc.ms.gov/#/maximumBenefitMileageRatesChart" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds (2/3) of the claimant's average weekly wage at the time of injury, subject to a maximum calculated annually under Miss. Code Ann. § 71-3-13 (MWCC FAQ).",
+    "max": 654.63, "min": null, "minText": "No minimum weekly rate was found on the MWCC pages read.",
+    "effective": "2026-01-01", "periodLabel": "injuries on or after January 1, 2026 (total disability payable up to a lifetime maximum of $294,583.50 = 450 weeks x $654.63)",
+    "url": "https://www.mwcc.ms.gov/#/maximumBenefitMileageRatesChart", "asOf": "2026-01-01"
+  },
+  "waiting": { "days": null, "retroactiveAfterDays": null, "text": "Waiting-period rule not found on the MWCC pages that could be read; the statute (Miss. Code Ann. § 71-3-11) was not accessible.", "url": "http://www.lexisnexis.com/hottopics/mscode/" },
+  "ttdDuration": { "maxWeeks": 450, "text": "Wage-loss benefits are subject to statutory time limits; the MWCC rate table states a lifetime disability maximum equal to 450 times the weekly maximum ($294,583.50 for 2026 injuries).", "url": "https://www.mwcc.ms.gov/#/maximumBenefitMileageRatesChart" },
+  "ppd": { "text": "Once the doctor finds maximum medical improvement, 'permanent disability' wage-loss payments may be due if the worker has a permanent disability or handicap, at up to two-thirds of the average weekly wage subject to the weekly maximum and statutory time limits (MWCC, Workers' Compensation Facts).", "url": "https://www.mwcc.ms.gov/#/workerCompensationFacts" },
+  "statute": { "cite": "Miss. Code Ann. § 71-3-13 (maximum), Mississippi Workers' Compensation Law, Title 71, Chapter 3", "url": "http://www.lexisnexis.com/hottopics/mscode/" },
+  "facts": [
+    { "text": "Employers with five or more regularly employed workers must carry workers' compensation; coverage is voluntary below five, and domestic and farm labor are excluded unless covered voluntarily (MWCC, Workers' Compensation Facts).", "url": "https://www.mwcc.ms.gov/#/workerCompensationFacts" },
+    { "text": "The injured worker may select one physician or provider of his or her choosing (a chiropractor is allowed), and that provider may make one referral to a specialist without carrier approval (MWCC, Workers' Compensation Facts).", "url": "https://www.mwcc.ms.gov/#/workerCompensationFacts" },
+    { "text": "If no disability benefits are paid, the claim is barred unless filed with the Commission within two years of the injury (MWCC, Workers' Compensation Facts).", "url": "https://www.mwcc.ms.gov/#/workerCompensationFacts" },
+    { "text": "Death benefits can continue for up to 450 weeks; the employer also pays up to $5,000 in funeral expenses and an immediate $1,000 lump sum to the surviving spouse (MWCC, Workers' Compensation Facts).", "url": "https://www.mwcc.ms.gov/#/workerCompensationFacts" },
+    { "text": "Medical mileage reimbursement is $0.725 per mile from January 1, 2026 (MWCC rate page).", "url": "https://www.mwcc.ms.gov/#/maximumBenefitMileageRatesChart" }
+  ],
+  "uncertain": [
+    "mwcc.ms.gov blocks automated access (Cloudflare 403). The rate table was read from the site's own page script (scripts/controllers/maximumBenefitMileageRatesChartController.js) via a Wayback Machine snapshot of 2026-06-04; the table there is a 'fallback' list in a CMS controller, so the live page may differ.",
+    "CONFLICT: a February 2025 snapshot of the same MWCC script listed 2023 $585.82, 2024 $608.58, 2025 $630.73, while the 2026 snapshot lists 2023 $570.00, 2024 $590.00, 2025 $610.00 and 2026 $654.63. The 2026 figure should be confirmed on the live MWCC page or a Commission bulletin before publishing.",
+    "Minimum weekly benefit, waiting period and PPD schedule (Miss. Code Ann. §§ 71-3-11, 71-3-13, 71-3-17) could not be read from an official source; the code is hosted by LexisNexis (linked by MWCC), which was not used."
+  ]
+}

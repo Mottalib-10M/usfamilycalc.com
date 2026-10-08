@@ -1,0 +1,74 @@
+{
+ "slug": "wyoming",
+ "base": "Decedent's probate estate accounted for: inventory value of items chargeable, adjusted for gains or losses on reappraisal or sale, plus accretions such as interest, dividends and profits (W.S. 2-7-803(c)).",
+ "schedules": [
+  {
+   "who": "Personal representative fee (W.S. 2-7-803)",
+   "tiers": [
+    {
+     "upTo": 1000,
+     "pct": 10
+    },
+    {
+     "upTo": 5000,
+     "pct": 5
+    },
+    {
+     "upTo": 20000,
+     "pct": 3
+    },
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "10% of the first $1,000; 5% over $1,000 to $5,000; 3% over $5,000 to $20,000; 2% over $20,000 (W.S. 2-7-803(a)).",
+   "url": "https://wyoleg.gov/statutes/compress/title02.pdf",
+   "capNote": "Court may allow additional fees for unusual circumstances or extraordinary services (W.S. 2-7-803(a),(b))."
+  },
+  {
+   "who": "Attorney fee (W.S. 2-7-804)",
+   "tiers": [
+    {
+     "upTo": 1000,
+     "pct": 10
+    },
+    {
+     "upTo": 5000,
+     "pct": 5
+    },
+    {
+     "upTo": 20000,
+     "pct": 3
+    },
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "10% of the first $1,000; 5% over $1,000 to $5,000; 3% over $5,000 to $20,000; 2% over $20,000 (W.S. 2-7-804(a)); lower fees may be negotiated (W.S. 2-7-804(d)).",
+   "url": "https://wyoleg.gov/statutes/compress/title02.pdf",
+   "capNote": "Extraordinary services extra (W.S. 2-7-804(b))."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 500000,
+   "expected": {
+    "Personal representative fee (W.S. 2-7-803)": 10350,
+    "Attorney fee (W.S. 2-7-804)": 10350
+   },
+   "source": "computed by hand: 100 + 200 + 450 + 2% x 480,000"
+  },
+  {
+   "estate": 10000,
+   "expected": {
+    "Personal representative fee (W.S. 2-7-803)": 450,
+    "Attorney fee (W.S. 2-7-804)": 450
+   },
+   "source": "computed by hand: 100 + 200 + 3% x 5,000"
+  }
+ ]
+}

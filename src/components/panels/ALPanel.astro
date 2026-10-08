@@ -1,0 +1,16 @@
+---
+/** The official alimony rule of a state, generated from its data file (data-chrome, RECETTE §6.4). */
+import { al } from '../../lib/kit';
+interface Props { slug: string }
+const d = al(Astro.props.slug) as ReturnType<typeof al> & { eligibilityText?: string };
+---
+<section data-chrome class="mt-10">
+  <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} rule this calculator applies</h2>
+  <div class="prose prose-slate mt-4 max-w-none text-sm">
+    <p><strong>Scope.</strong> {d.scope}</p>
+    <p><strong>Amount.</strong> {d.formulaText}</p>
+    <p><strong>Duration.</strong> {d.durationText}</p>
+    {d.eligibilityText && <p><strong>Eligibility.</strong> {d.eligibilityText}</p>}
+    {d.facts.length > 0 && <><h3>Worth knowing in {d.name}</h3><ul>{d.facts.map((f) => <li>{f.text} <a href={f.url} target="_blank" rel="nofollow noopener noreferrer">source</a></li>)}</ul></>}
+  </div>
+</section>

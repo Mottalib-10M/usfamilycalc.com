@@ -1,0 +1,174 @@
+{
+  "slug": "illinois",
+  "name": "Illinois",
+  "abbr": "IL",
+  "verified": "2026-10-08",
+  "scope": "Post-dissolution maintenance under 750 ILCS 5/504(b-1); guideline applies only if the court first finds maintenance appropriate. Temporary maintenance (§ 501) may be credited against the guideline duration (§ 504(b-1)(1.5)).",
+  "formula": {
+    "text": "750 ILCS 5/504(b-1)(1)(A): if the parties' combined gross annual income is less than $500,000 and the payor has no child support or maintenance obligation from a prior relationship, guideline maintenance = 33 1/3% of the payor's net annual income minus 25% of the payee's net annual income, but maintenance plus the payee's net income may not exceed 40% of the parties' combined net income. If guideline maintenance plus child support exceeds 50% of the payor's net income, the court may set non-guideline amounts. (A-1): modifications of pre-2019 tax-deductible orders use 30% of payor gross minus 20% of payee gross, capped at 40% of combined gross.",
+    "params": {
+      "combinedGrossAnnualLimit": 500000,
+      "payerNetPct": 33.3333,
+      "payerNetFraction": "1/3",
+      "payeeNetPct": 25,
+      "capPctOfCombinedNet": 40,
+      "combinedSupportReviewPctOfPayerNet": 50,
+      "pre2019Modification": {
+        "payerGrossPct": 30,
+        "payeeGrossPct": 20,
+        "capPctOfCombinedGross": 40
+      }
+    },
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+  },
+  "duration": {
+    "text": "750 ILCS 5/504(b-1)(1)(B): duration = length of the marriage at the time the action was commenced x the factor for that length (0.20 for < 5 years, rising by 0.04 per full year to 0.80 for 19 to < 20 years). For a marriage of 20 years or more, the court in its discretion orders maintenance for a period equal to the length of the marriage or for an indefinite term.",
+    "table": [
+      {
+        "marriageYearsMin": 0,
+        "marriageYearsMax": 5,
+        "factor": 0.2
+      },
+      {
+        "marriageYearsMin": 5,
+        "marriageYearsMax": 6,
+        "factor": 0.24
+      },
+      {
+        "marriageYearsMin": 6,
+        "marriageYearsMax": 7,
+        "factor": 0.28
+      },
+      {
+        "marriageYearsMin": 7,
+        "marriageYearsMax": 8,
+        "factor": 0.32
+      },
+      {
+        "marriageYearsMin": 8,
+        "marriageYearsMax": 9,
+        "factor": 0.36
+      },
+      {
+        "marriageYearsMin": 9,
+        "marriageYearsMax": 10,
+        "factor": 0.4
+      },
+      {
+        "marriageYearsMin": 10,
+        "marriageYearsMax": 11,
+        "factor": 0.44
+      },
+      {
+        "marriageYearsMin": 11,
+        "marriageYearsMax": 12,
+        "factor": 0.48
+      },
+      {
+        "marriageYearsMin": 12,
+        "marriageYearsMax": 13,
+        "factor": 0.52
+      },
+      {
+        "marriageYearsMin": 13,
+        "marriageYearsMax": 14,
+        "factor": 0.56
+      },
+      {
+        "marriageYearsMin": 14,
+        "marriageYearsMax": 15,
+        "factor": 0.6
+      },
+      {
+        "marriageYearsMin": 15,
+        "marriageYearsMax": 16,
+        "factor": 0.64
+      },
+      {
+        "marriageYearsMin": 16,
+        "marriageYearsMax": 17,
+        "factor": 0.68
+      },
+      {
+        "marriageYearsMin": 17,
+        "marriageYearsMax": 18,
+        "factor": 0.72
+      },
+      {
+        "marriageYearsMin": 18,
+        "marriageYearsMax": 19,
+        "factor": 0.76
+      },
+      {
+        "marriageYearsMin": 19,
+        "marriageYearsMax": 20,
+        "factor": 0.8
+      },
+      {
+        "marriageYearsMin": 20,
+        "marriageYearsMax": null,
+        "factor": null,
+        "note": "period equal to the length of the marriage or indefinite"
+      }
+    ],
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+  },
+  "eligibility": {
+    "text": "750 ILCS 5/504(a) factors decide whether maintenance is appropriate; under (b-1) the court bars maintenance unless it finds an award appropriate, and only then applies the guideline (or non-guideline maintenance after considering the (a) factors, with findings under (b-2)).",
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+  },
+  "taxNote": {
+    "text": "Federal: for divorce or separation agreements executed after 2018 (or older ones modified to adopt the new rule), the payer cannot deduct alimony and the recipient does not include it in gross income (IRS Topic No. 452).",
+    "url": "https://www.irs.gov/taxtopics/tc452"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "payer": 10000,
+        "payee": 3333.3333333333335,
+        "years": 12,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 2000.0,
+        "durationMonths": 74.88
+      },
+      "what": "monthly guideline maintenance (annual 120,000/40,000: 40% cap gives 24,000/yr), 12 years x 0.52",
+      "source": "computed by hand from 750 ILCS 5/504(b-1)(1)(A)-(B)"
+    },
+    {
+      "inputs": {
+        "payer": 7500,
+        "payee": 0,
+        "years": 21,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 2500.0
+      },
+      "what": "monthly guideline maintenance (1/3 of 7,500 under the 40% cap)",
+      "source": "computed by hand from 750 ILCS 5/504(b-1)(1)(A)-(B)"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Unpaid maintenance accrues simple interest and each missed installment is a judgment that creates a lien on the obligor's property by operation of law (750 ILCS 5/504(b-5), (b-7)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+    },
+    {
+      "text": "The court must state whether maintenance is fixed-term, indefinite, reviewable or reserved (750 ILCS 5/504(b-2)(3)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+    },
+    {
+      "text": "Maintenance paid in the pending case is excluded from both gross and net income for the guideline (750 ILCS 5/504(b-3), (b-3.5)).",
+      "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504"
+    }
+  ],
+  "uncertain": [
+    "ilga.gov refused connections from this machine on 2026-10-08; text read from the Wayback Machine copy of the official page dated 2025-06-21 (https://web.archive.org/web/20250621210118/https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K504), source line P.A. 103-967, eff. 1-1-25. Amendments after June 2025 not checked.",
+    "The statute says 33 1/3%; params give 1/3 exactly (33.3333 is a display value)."
+  ],
+  "incomeBasis": "net"
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "texas", "name": "Texas", "abbr": "TX", "verified": "2026-10-08",
+  "agency": { "name": "Texas Department of Insurance, Division of Workers' Compensation (TDI-DWC)", "url": "https://www.tdi.texas.gov/wc/" },
+  "ttd": {
+    "rate": 70, "basis": "gross AWW",
+    "rateText": "Temporary income benefits (TIBs) equal 70% of the difference between the average weekly wage and post-injury weekly earnings; 75% for the first 26 weeks if the employee earns less than $10 an hour (Tex. Labor Code § 408.103).",
+    "max": 1314.00, "min": 197.00,
+    "minText": "Minimum weekly income benefit is 15% of the state average weekly wage, rounded to the nearest dollar (§ 408.062); the maximum TIB is 100% of the SAWW, rounded (§ 408.061). The minimum in effect on the date of injury applies for the whole claim.",
+    "effective": "2026-10-01", "periodLabel": "Texas fiscal year 2027: injuries from October 1, 2026 to September 30, 2027 (SAWW $1,314.32). For FY2026 (10/01/25-09/30/26): max $1,271.00, min $191.00.",
+    "url": "https://www.tdi.texas.gov/wc/employee/maxminbens.html", "asOf": "2026-10-01"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 13,
+    "text": "Income benefits are not paid for an injury that does not cause disability for at least one week; benefits accrue on the eighth day of disability, and if disability lasts two weeks or longer, compensation is computed from the date disability begins (Tex. Labor Code § 408.082).",
+    "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.408.htm"
+  },
+  "ttdDuration": {
+    "maxWeeks": 104,
+    "text": "TIBs continue until maximum medical improvement (§ 408.102); MMI is reached at the latest on the expiration of 104 weeks from the date income benefits begin to accrue (§ 401.011(30)), unless extended for spinal surgery under § 408.104.",
+    "url": "https://www.tdi.texas.gov/wc/employee/tempben.html"
+  },
+  "ppd": {
+    "text": "Impairment income benefits (IIBs) start the day after MMI and are paid 3 weeks for each percentage point of impairment (§ 408.121) at 70% of the AWW (§ 408.126), capped at 70% of the SAWW (§ 408.061(b)): $920.00 a week in FY2027. Workers with a 15% or higher impairment rating who have not returned to work at 80% of their AWW may then receive supplemental income benefits (§ 408.142).",
+    "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.408.htm"
+  },
+  "statute": { "cite": "Tex. Labor Code §§ 408.061, 408.062, 408.082, 408.101-408.103, 408.121, 408.126", "url": "https://statutes.capitol.texas.gov/Docs/LA/htm/LA.408.htm" },
+  "facts": [
+    { "text": "Workers' compensation coverage is elective for private employers in Texas: except for public employers, an employer may elect to obtain coverage (Tex. Labor Code § 406.002), so employees of non-subscribers are not covered by the system.", "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.406.htm" },
+    { "text": "Eligibility for temporary, impairment and supplemental income benefits ends 401 weeks after the date of injury (§ 408.083).", "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.408.htm" },
+    { "text": "Texas maximums and minimums change on October 1 each year (state fiscal year), not on January 1; for FY2027 the state average weekly wage is $1,314.32.", "url": "https://www.tdi.texas.gov/wc/employee/maxminbens.html" },
+    { "text": "Low-wage workers earning less than $10 an hour receive 75% instead of 70% of lost wages for the first 26 weeks of TIBs (§ 408.103(a)(2)).", "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.408.htm" }
+  ],
+  "uncertain": [
+    "Statute text read on tcss.legis.texas.gov (Texas Legislative Council mirror); statutes.capitol.texas.gov is a JavaScript application that did not return text to a script."
+  ]
+}

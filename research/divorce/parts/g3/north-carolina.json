@@ -1,0 +1,20 @@
+{
+  "slug": "north-carolina", "name": "North Carolina", "abbr": "NC",
+  "filingFee": 225, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "District court civil costs of $150 ($16 facilities fee under G.S. 7A-305(a)(1), $4 court information technology fee under (a)(1a), $130 General Court of Justice fee under (a)(2)) plus the $75 absolute-divorce cost under G.S. 7A-305(a2), for $225 in total.",
+  "feeUrl": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_7A/GS_7A-305.html",
+  "otherFees": [],
+  "waiver": { "name": "Petition to Proceed as an Indigent (AOC-G-106)", "url": "https://www.nccourts.gov/assets/documents/forms/g106.pdf" },
+  "residency": { "text": "The plaintiff or the defendant must have resided in North Carolina for at least six months before the complaint is filed (G.S. 50-8; also G.S. 50-6).", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-8.html" },
+  "waitingPeriod": { "days": 0, "text": "There is no waiting period after filing, but an absolute divorce requires that the spouses have lived separate and apart for one year before filing (G.S. 50-6).", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-6.html" },
+  "separationRequiredDays": 365,
+  "simplified": { "text": "No separate simplified or summary divorce procedure was found in Chapter 50; the one-year-separation divorce under G.S. 50-6 is the standard no-fault route.", "url": null },
+  "parentingClass": { "required": null, "text": "No statewide statute requiring a parenting class in divorce was found; some judicial districts may require one by local rule.", "url": null },
+  "uncertain": [
+    "ncleg.gov returned 403 to automated clients on 2026-10-08/09; G.S. 50-6, 50-8 and 7A-305 were read from the Internet Archive 2026 copies of the official ncleg.gov URLs.",
+    "Answer fee: G.S. 7A-305 sets no fee for filing an answer; whether a counterclaim incurs costs was not checked, so responseFee is null.",
+    "Fee waiver form AOC-G-106: the URL is the official nccourts.gov form URL listed in the Internet Archive index; the PDF itself could not be downloaded (nccourts.gov blocks bots and the archive copy failed), so the form title is from the court's form number and was not read on the form.",
+    "Parenting class: no statewide requirement verified; local rules not checked."
+  ]
+}

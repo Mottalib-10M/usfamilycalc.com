@@ -1,0 +1,192 @@
+{
+  "slug": "ohio",
+  "name": "Ohio",
+  "abbr": "OH",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined annual gross income schedule (JFS 07767)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Annual gross income of each parent: all earned and unearned income (wages, overtime and bonuses per § 3119.05(D), commissions, self-generated income, rents, dividends, pensions, non-means-tested social security, workers' compensation, unemployment, spousal support received, military pay and allowances, etc.), excluding means-tested benefits, child support received for other children, nonrecurring income and Title IV-E payments (ORC § 3119.01(C)(13)). Adjustments: court-ordered spousal support paid is deducted (§ 3119.05(B)); a credit for other children not in the order (§ 3119.05(C)); the out-of-pocket health insurance premium is credited against the paying parent's income (§ 3119.30(E)).",
+  "period": "annual",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/ohio.json",
+    "columns": "combined annual income, then basic child support obligation for 1..6 children (annual)",
+    "minIncome": 8400,
+    "maxIncome": 336000,
+    "step": 600,
+    "rows": 547,
+    "lookup": "interpolate",
+    "lookupRule": "ORC § 3119.05(G)(2) and JFS 07766: if income falls between two schedule rows, the court or agency may use the higher row, the lower row, or a proportional amount between the two (all three are permitted; interpolation is one allowed option).",
+    "belowMin": {
+      "rule": "ORC § 3119.04: if combined annual income is below the $8,400 floor, the obligation is set case by case; § 3119.06(A): minimum order of $80 per month for all children, or less or zero in appropriate circumstances (e.g. documented disability). The schedule's $8,400 row is $960 per year for every number of children.",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "ORC § 3119.04: above the schedule maximum, support is set case by case considering needs and standard of living, and the basic combined obligation may not be less than the amount at the schedule maximum ($336,000 in JFS 07767 rev. 6/2023) unless the court finds that unjust or inappropriate and journalizes its findings."
+    },
+    "selfSufficiencyReserve": {
+      "shadedAreaMaxIncomeByChildren": [
+        39000,
+        74400,
+        91200,
+        108000,
+        121800,
+        133200
+      ],
+      "text": "Cells in the shaded area of JFS 07767 incorporate the self-sufficiency reserve (116% of the federal poverty level for one person under § 3119.021(B)(2); the reserve update is required by § 3119.021(C)(2)). If a parent's own income is in the shaded area for the number of children, the obligation is the lesser of the amount from combined income and the amount from that parent's own income (§ 3119.05(G)(3)); child care share for such a parent is the lower of the income share or 50% (§ 3119.05(P)(2))."
+    },
+    "effective": "2023-06-01",
+    "edition": "JFS 07767 Basic Child Support Schedule (Rev. 6/2023), listed as current by OAC 5101:12-1-99 effective 4/1/2026",
+    "url": "https://dam.assets.ohio.gov/image/upload/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2023/CSPMTL_186_-_Five_Year_Rule_Review_Child_Support_Guidelines.pdf",
+    "currentFormListUrl": "https://dam.assets.ohio.gov/image/upload/v1774376628/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2026/CSPMTL-206_Ohio_Child_Support_Guideline_Rules_and_Form.pdf",
+    "checkedRows": [
+      165000,
+      228600,
+      333600,
+      25800,
+      294000,
+      161400,
+      40200,
+      104400,
+      120000,
+      8400,
+      336000
+    ]
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "percent-reduction",
+    "thresholdOvernights": 90,
+    "multiplier": null,
+    "reductionPct": 10,
+    "reductionTable": [
+      [
+        90,
+        10
+      ]
+    ],
+    "text": "ORC § 3119.051(A): the annual individual support obligation of a parent with a court-ordered parenting time order of 90 or more overnights per year is reduced by 10%, in addition to other deviations; the court may remove the reduction at the obligee's request if the obligor fails without just cause to exercise parenting time (§ 3119.051(B)). A larger adjustment requires a court deviation (JFS 07766 line 19).",
+    "url": "https://web.archive.org/web/20260515201853/https://codes.ohio.gov/ohio-revised-code/section-3119.051"
+  },
+  "addOns": {
+    "childcare": "shared by income share, capped by statewide maximum per child",
+    "healthInsurance": "premium credited against the payer's income; separate cash medical support",
+    "cashMedicalAnnual": [
+      510.21,
+      1020.42,
+      1530.63,
+      2040.84,
+      2551.05,
+      3061.26
+    ],
+    "childCareMaxAnnual": {
+      "infant0to17months": 16116,
+      "toddler18to35months": 14254,
+      "preschool3to5": 12801,
+      "schoolAge6to12": 8780
+    },
+    "text": "ORC § 3119.05(P): child care for work or training is shared by income share, net of subsidies and tax credits, and capped at the statewide average cost (JFS 07766 Table 2: $16,116 infant, $14,254 toddler, $12,801 pre-school, $8,780 school-age per year). Cash medical support of $510.21 per child per year (JFS 07766 Table 3, MEPS 2021) is split by income share (§ 3119.30(C)); medical expenses above it are extraordinary. The out-of-pocket health insurance premium is a credit against the paying parent's income (§ 3119.30(E)); the obligee is presumed to provide coverage (§ 3119.30(B)).",
+    "url": "https://dam.assets.ohio.gov/image/upload/v1774376628/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2026/CSPMTL-206_Ohio_Child_Support_Guideline_Rules_and_Form.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": 80,
+    "minimumOrderPeriod": "monthly",
+    "rule": "Self-sufficiency reserve built into the shaded area of JFS 07767 (116% of federal poverty level for one person, § 3119.021(B)(2)); sliding scale minimum order below it (§ 3119.021(B)(2)(a)-(d): 5% to 15% multipliers of income above $8,400 plus the minimum order); minimum order $80 per month for all children (§ 3119.06(A)).",
+    "url": "https://web.archive.org/web/20260412234108/https://codes.ohio.gov/ohio-revised-code/section-3119.06"
+  },
+  "statute": {
+    "cite": "ORC §§ 3119.01-3119.06, 3119.021, 3119.051, 3119.30; OAC 5101:12-1-17",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-3119.021"
+  },
+  "guidelinesUrl": "https://dam.assets.ohio.gov/image/upload/v1774376628/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2026/CSPMTL-206_Ohio_Child_Support_Guideline_Rules_and_Form.pdf",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support under a court order continues past 18 only for a disabled child who cannot self-support, by the parents' incorporated agreement, or while the child continuously attends an accredited high school full time; under an administrative order only the high school case applies (ORC § 3119.86, as amended eff. March 20, 2025).",
+    "url": "https://web.archive.org/web/20260512122451/https://codes.ohio.gov/ohio-revised-code/section-3119.86"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 90000,
+        "incomeB": 30000,
+        "children": 2,
+        "overnightsA": 0,
+        "period": "annual gross"
+      },
+      "expected": 16302.0,
+      "what": "paying parent's annual child support obligation before child care, cash medical and deviations ($1,358.50 per month)",
+      "source": "Computed by hand from JFS 07767 (rev. 6/2023): combined $120,000, two children = $21,736; A's income share 75%; 21736 x 0.75 = 16302. A's own income ($90,000) is outside the two-child shaded area (ends $74,400), so no SSR comparison. No official worked example used."
+    },
+    {
+      "inputs": {
+        "incomeA": 90000,
+        "incomeB": 30000,
+        "children": 2,
+        "overnightsA": 90,
+        "period": "annual gross"
+      },
+      "expected": 14671.8,
+      "what": "parent A's annual obligation after the 10% reduction for a 90+ overnight parenting time order (§ 3119.051); $1,222.65 per month",
+      "source": "Computed by hand: 16302 x 0.90 = 14671.80."
+    },
+    {
+      "inputs": {
+        "incomeA": 30000,
+        "incomeB": 90000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 3926,
+      "what": "paying parent's annual obligation when that parent's own income is in the shaded self-sufficiency reserve area (lesser amount, ORC 3119.05(G)(3))",
+      "source": "Computed by hand from JFS 07767: combined $120,000 two children $21,736 x 25% = $5,434; paying parent's own income $30,000 two children = $3,926 (shaded); lesser = $3,926."
+    },
+    {
+      "inputs": {
+        "incomeA": 300000,
+        "incomeB": 100000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 28466.25,
+      "what": "paying parent's annual obligation above the $336,000 top row, floored at the top-row amount (ORC 3119.04)",
+      "source": "Computed by hand: top row two children $37,955 x 75% = $28,466.25 (the court may order more case by case)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The schedule must be updated every four years for CPI-U changes and the federal poverty level (ORC § 3119.021(C)); the current JFS 07767 is revision 6/2023.",
+      "url": "https://web.archive.org/web/20250914192347/https://codes.ohio.gov/ohio-revised-code/section-3119.021"
+    },
+    {
+      "text": "Ohio uses gross, not net, income and lists income in $600 annual steps from $8,400 to $336,000.",
+      "url": "https://dam.assets.ohio.gov/image/upload/v1774376628/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2026/CSPMTL-206_Ohio_Child_Support_Guideline_Rules_and_Form.pdf"
+    },
+    {
+      "text": "Overtime and bonuses count at the lesser of the three-year average or the prior year's total (ORC § 3119.05(D)).",
+      "url": "https://web.archive.org/web/20260510202022/https://codes.ohio.gov/ohio-revised-code/section-3119.05"
+    },
+    {
+      "text": "For more than six children, the three-child amount is multiplied by 1.440 (7 children) up to 2.182 (more than 14) (ORC § 3119.05(C)(4)).",
+      "url": "https://web.archive.org/web/20260510202022/https://codes.ohio.gov/ohio-revised-code/section-3119.05"
+    },
+    {
+      "text": "Every order includes cash medical support of $510.21 per child per year, split by income share (JFS 07766 rev. 4/2026, Table 3; ORC § 3119.30(C)).",
+      "url": "https://dam.assets.ohio.gov/image/upload/v1774376628/jfs.ohio.gov/EBS/Programs%20Rules%20and%20Resources/Child%20Support/CSPMTLs/2026/CSPMTL-206_Ohio_Child_Support_Guideline_Rules_and_Form.pdf"
+    }
+  ],
+  "uncertain": [
+    "codes.ohio.gov, odjfs.state.oh.us and most ohio.gov hosts refused or timed out from our network on 2026-10-08. ORC text was read from Wayback Machine copies of codes.ohio.gov pages (3119.021 captured 2025-09-14, effective 2019-03-28; 3119.051 captured 2026-05-15; 3119.04 captured 2026-05-18; 3119.05 captured 2026-05-10, eff. 2025-03-20; 3119.01 captured 2026-06-02, eff. 2025-09-30; 3119.30 captured 2026-05-20; 3119.06 captured 2026-04-12, eff. 2024-04-03; 3119.86 captured 2026-05-12, eff. 2025-03-20). statute.url points to the official page that we could not open directly.",
+    "The brief said the schedule was 'updated 2024'; the official documents show JFS 07767 is revision 6/2023 (schedule effective with OAC 5101:12-1-99 on 6/1/2023), and OAC 5101:12-1-99 effective 4/1/2026 (CSPMTL No. 206, March 24, 2026) still lists JFS 07767 (rev. 6/2023). No 2024 or 2026 schedule revision was found.",
+    "The schedule rows were parsed from the copy of JFS 07767 (Rev. 6/2023) reproduced in ODJFS CSPMTL No. 186 (May 4, 2023) on dam.assets.ohio.gov, not from the stand-alone form (odjfs.state.oh.us forms server blocked).",
+    "Shaded (self-sufficiency reserve) area was read from the gray cell fills in that PDF: contiguous from $8,400 to $39,000 (1 child), $74,400 (2), $91,200 (3), $108,000 (4), $121,800 (5), $133,200 (6). The dollar amount of the SSR (116% of FPG) is not printed in the documents read; selfSupportReserve is null.",
+    "officialCalculatorUrl null: Ohio's guideline calculator site could not be reached from our network.",
+    "Test cases are hand computations from the schedule; no official worked example was read.",
+    "Rows checked by eye against the PDF text: 165000, 228600, 333600, 25800, 294000, 161400, 40200, 104400 (random), plus 120000, first (8400) and last (336000); all matched."
+  ]
+}

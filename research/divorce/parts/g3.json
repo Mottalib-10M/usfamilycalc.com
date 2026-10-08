@@ -1,0 +1,221 @@
+[
+  {
+    "slug": "north-carolina",
+    "name": "North Carolina",
+    "abbr": "NC",
+    "filingFee": 225,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District court civil costs of $150 ($16 facilities fee under G.S. 7A-305(a)(1), $4 court information technology fee under (a)(1a), $130 General Court of Justice fee under (a)(2)) plus the $75 absolute-divorce cost under G.S. 7A-305(a2), for $225 in total.",
+    "feeUrl": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_7A/GS_7A-305.html",
+    "otherFees": [],
+    "waiver": {
+      "name": "Petition to Proceed as an Indigent (AOC-G-106)",
+      "url": "https://www.nccourts.gov/assets/documents/forms/g106.pdf"
+    },
+    "residency": {
+      "text": "The plaintiff or the defendant must have resided in North Carolina for at least six months before the complaint is filed (G.S. 50-8; also G.S. 50-6).",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-8.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "There is no waiting period after filing, but an absolute divorce requires that the spouses have lived separate and apart for one year before filing (G.S. 50-6).",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50/GS_50-6.html"
+    },
+    "separationRequiredDays": 365,
+    "simplified": {
+      "text": "No separate simplified or summary divorce procedure was found in Chapter 50; the one-year-separation divorce under G.S. 50-6 is the standard no-fault route.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statute requiring a parenting class in divorce was found; some judicial districts may require one by local rule.",
+      "url": null
+    },
+    "uncertain": [
+      "ncleg.gov returned 403 to automated clients on 2026-10-08/09; G.S. 50-6, 50-8 and 7A-305 were read from the Internet Archive 2026 copies of the official ncleg.gov URLs.",
+      "Answer fee: G.S. 7A-305 sets no fee for filing an answer; whether a counterclaim incurs costs was not checked, so responseFee is null.",
+      "Fee waiver form AOC-G-106: the URL is the official nccourts.gov form URL listed in the Internet Archive index; the PDF itself could not be downloaded (nccourts.gov blocks bots and the archive copy failed), so the form title is from the court's form number and was not read on the form.",
+      "Parenting class: no statewide requirement verified; local rules not checked."
+    ]
+  },
+  {
+    "slug": "new-jersey",
+    "name": "New Jersey",
+    "abbr": "NJ",
+    "filingFee": 300,
+    "responseFee": 175,
+    "feeScope": "statewide",
+    "feeText": "Superior Court, Family Division: complaint for divorce $300 (plaintiff); defendant's filing fee $175; an additional $25 parenting workshop fee when there are minor children (NJ Courts self-help page 'Divorce').",
+    "feeUrl": "https://www.njcourts.gov/self-help/divorce",
+    "otherFees": [
+      {
+        "what": "Parenting workshop fee (cases with minor children)",
+        "amount": 25,
+        "url": "https://www.njcourts.gov/self-help/divorce"
+      }
+    ],
+    "waiver": {
+      "name": "Fee Waiver form (Court Rule 1:5-6; Directive #03-17, Fee Waivers Based on Indigence)",
+      "url": "https://www.njcourts.gov/self-help/fee-waiver"
+    },
+    "residency": {
+      "text": "For a no-fault (irreconcilable differences) divorce, the plaintiff or the spouse must have lived in New Jersey for 12 consecutive months before filing (NJ Courts self-help page; N.J.S.A. 2A:34-10).",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period after filing. The irreconcilable-differences ground requires that the differences have existed for at least 6 months; the separation ground requires living apart for at least 18 months (N.J.S.A. 2A:34-2).",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "separationRequiredDays": null,
+    "simplified": {
+      "text": "No simplified or summary divorce procedure; uncontested divorces follow the regular Family Division process.",
+      "url": "https://www.njcourts.gov/self-help/divorce/contested-uncontested"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Parties with minor children must pay the $25 fee and attend a parenting program, unless a temporary or final restraining order exists between them or a signed property settlement agreement is filed with the complaint, answer or other first filing.",
+      "url": "https://www.njcourts.gov/self-help/divorce"
+    },
+    "uncertain": [
+      "njcourts.gov returns 403 to automated clients (curl and WebFetch); all NJ Courts pages were read from Internet Archive copies of the official URLs (divorce page snapshot 2026-10-05).",
+      "The statutes (N.J.S.A. 2A:34-2, 2A:34-10, 22A:2-...) were not read on an official legislature site; residency and grounds are taken from the official NJ Courts self-help page.",
+      "Fee waiver form title is described on the page as the 'Fee Waiver form'; the exact form number was not read.",
+      "separationRequiredDays left null: an 18-month separation is only one of several grounds, not a requirement."
+    ]
+  },
+  {
+    "slug": "virginia",
+    "name": "Virginia",
+    "abbr": "VA",
+    "filingFee": 60,
+    "responseFee": 0,
+    "feeScope": "statewide (base clerk's fee; local add-on fees vary by circuit court)",
+    "feeText": "In all divorce and separate maintenance proceedings the circuit court clerk's fee chargeable to the plaintiff is $60, $10 of which goes to the Courts Technology Fund; no fee is charged for a counterclaim or any other responsive pleading in a divorce (Va. Code § 17.1-275(A)(26)). Other statutory and local add-on fees (e.g. law library, courthouse, service) are not included.",
+    "feeUrl": "https://law.lis.virginia.gov/vacode/title17.1/chapter2/section17.1-275/",
+    "otherFees": [
+      {
+        "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)",
+        "amount": 12,
+        "url": "https://www.vacourts.gov/caseinfo/cccivilfeeshelp.html"
+      }
+    ],
+    "waiver": {
+      "name": "Petition for Proceeding in Civil Case Without Payment of Fees or Costs (Form CC-1414)",
+      "url": "https://www.vacourts.gov/forms/circuit/cc1414.pdf"
+    },
+    "residency": {
+      "text": "One of the parties must have been an actual bona fide resident and domiciliary of Virginia for at least six months before filing (Va. Code § 20-97).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-97/"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period after filing, but a no-fault divorce requires living separate and apart without cohabitation for one year, or six months if there is a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/"
+    },
+    "separationRequiredDays": 365,
+    "simplified": {
+      "text": "No summary procedure; the shortened route is the six-month separation divorce for spouses with a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Where custody, visitation or support of a child is contested, the parties must show they attended within the prior 12 months, or will attend within 45 days, an educational seminar approved by the Office of the Executive Secretary of the Supreme Court of Virginia; in uncontested cases the court may require it only for good cause (Va. Code § 20-103; § 16.1-278.15).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-103/"
+    },
+    "uncertain": [
+      "The total amount collected in Fairfax County (most populous) including local add-ons was not verified: the vacourts.gov per-court fee PDFs and fee calculator could not be retrieved; filingFee is the statewide base clerk's fee only.",
+      "separationRequiredDays = 365 is the general rule; it is 180 days with a separation agreement and no minor children (§ 20-91(A)(9)(a)).",
+      "vacourts.gov circuit civil fee help page read from the Internet Archive 2026 copy."
+    ]
+  },
+  {
+    "slug": "maine",
+    "name": "Maine",
+    "abbr": "ME",
+    "filingFee": 120,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District Court fee for entry of a Family Matter Action, $120 (Maine Supreme Judicial Court Administrative Order JB-05-26 (A. 3-26), Revised Court Fees Schedule, section I.A, effective March 9, 2026). The FM-038 Family Matter Summons and Preliminary Injunction must be obtained from a clerk's office for $5.",
+    "feeUrl": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf",
+    "otherFees": [
+      {
+        "what": "FM-038 Family Matter Summons and Preliminary Injunction, obtained from the clerk",
+        "amount": 5,
+        "url": "https://www.courts.maine.gov/forms/index.html"
+      },
+      {
+        "what": "Motion for post-judgment relief under M.R. Civ. P. 120 in a Title 19-A action (includes a $20 mediation fee)",
+        "amount": 80,
+        "url": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Application to Proceed Without Payment of Fees (CV-067)",
+      "url": "https://mjbportal.courts.maine.gov/CourtForms/FormsLists/DownloadForm?strFormNumber=CV-067"
+    },
+    "residency": {
+      "text": "A complaint may be filed if the plaintiff has resided in good faith in Maine for 6 months before filing, or the plaintiff is a Maine resident and the parties married in Maine or lived in Maine when the cause arose, or the defendant is a Maine resident (19-A M.R.S. § 901(1)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec901.html"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "Maine law requires a minimum 60-day waiting period between the filing of all the necessary divorce paperwork and the final hearing (Maine Judicial Branch, Divorce & Family Separation page).",
+      "url": "https://www.courts.maine.gov/courts/family/divorce-separation/index.html"
+    },
+    "simplified": {
+      "text": "No simplified or summary divorce procedure was found; irreconcilable marital differences is a no-fault ground (19-A M.R.S. § 902(1)(H)).",
+      "url": null
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "Four-hour co-parent education classes are offered statewide; the court may require parents to attend in certain cases, but attendance is not automatic.",
+      "url": "https://www.courts.maine.gov/courts/family/divorce-separation/parent-education.html"
+    },
+    "uncertain": [
+      "60-day waiting period: taken from the official Maine Judicial Branch page; the statute or rule that sets it was not identified or read (it is not in 19-A M.R.S. §§ 901-902).",
+      "Response fee: the JB-05-26 schedule lists no fee for an answer in a family matter, but this was not confirmed explicitly; left null.",
+      "Parenting class: whether any district requires it by standing order was not checked."
+    ]
+  },
+  {
+    "slug": "maryland",
+    "name": "Maryland",
+    "abbr": "MD",
+    "filingFee": 165,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Circuit court fee for a complaint for limited or absolute divorce, $165 (Summary of Charges, Costs, and Fees of the Clerks of the Circuit Court, effective September 2, 2026; Schedule II A 1 (A); Cts. & Jud. Proc. § 7-202(e)).",
+    "feeUrl": "https://mdcourts.gov/sites/default/files/import/circuit/feesummaryschedule.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Request for Waiver of Costs (CC-DC-089), filed with a Notice Regarding Restricted Information (MDJ-008)",
+      "url": "https://mdcourts.gov/legalhelp/filingfeewaivers"
+    },
+    "residency": {
+      "text": "If the grounds for divorce occurred outside Maryland, one of the parties must have resided in Maryland for at least 6 months before filing; no minimum period is set when the grounds occurred in Maryland (Fam. Law § 7-101).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-101&enactments=false"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period after filing. Grounds for absolute divorce are a 6-month separation before filing, irreconcilable differences, or mutual consent with a signed settlement agreement (Fam. Law § 7-103(a)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false"
+    },
+    "separationRequiredDays": null,
+    "simplified": {
+      "text": "Mutual consent divorce: available when the parties sign and submit a written settlement agreement resolving alimony, property and all child issues (with a child support guidelines worksheet if support is paid), neither party moves to set it aside before the hearing, and the court finds the child terms are in the children's best interests (Fam. Law § 7-103(a)(3)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified: Maryland Rule 9-204 (educational seminars in custody cases) could not be read on an official site.",
+      "url": null
+    },
+    "uncertain": [
+      "Response fee: the circuit court fee summary sends appearance fees to 'contact county or see CJ § 7-204'; no statewide answer fee for a self-represented defendant was confirmed, so responseFee is null.",
+      "Parenting class: Md. Rule 9-204 not read (the official Maryland Rules are hosted on Westlaw's government site and were not retrieved).",
+      "separationRequiredDays left null: the 6-month separation is only one of three grounds (§ 7-103(a)(1))."
+    ]
+  }
+]

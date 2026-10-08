@@ -1,0 +1,24 @@
+{
+  "slug": "pennsylvania", "name": "Pennsylvania", "abbr": "PA",
+  "filingFee": 334.73, "responseFee": 144.54,
+  "feeScope": "county (Philadelphia County)",
+  "feeText": "Philadelphia Office of Judicial Records, Family Court, Divorce, Commencement of Action: $334.73 (base fee $189.20 under 42 Pa.C.S. § 1725(c)(2)(iii) plus statutory add-ons); Defendant First Filing: $144.54. Fee schedule effective November 12, 2025.",
+  "feeUrl": "https://www.courts.phila.gov/pdf/prothyfees.pdf",
+  "otherFees": [
+    { "what": "First filing for custody, partial custody or visitation (Philadelphia)", "amount": 108.13, "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf" },
+    { "what": "Motion for appointment of permanent master (Philadelphia)", "amount": 496.98, "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf" },
+    { "what": "Praecipe to transmit record (Philadelphia)", "amount": 66.22, "url": "https://www.courts.phila.gov/pdf/prothyfees.pdf" }
+  ],
+  "waiver": { "name": "Application to Waive Fees and Costs (Pa.R.Civ.P. 240 / Pa.R.J.A. 1990)", "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter200/s240.html" },
+  "residency": { "text": "At least one party must have been a bona fide resident of Pennsylvania for at least six months immediately before the action is commenced (23 Pa.C.S. § 3104(b)).", "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.031.004.000..HTM" },
+  "waitingPeriod": { "days": 90, "text": "Mutual consent divorce: the court may grant the divorce once 90 days have elapsed from commencement of the action and each party has filed an affidavit of consent (23 Pa.C.S. § 3301(c)). Without consent, irretrievable breakdown requires the parties to have lived separate and apart for at least one year (§ 3301(d)).", "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.033.001.000..HTM" },
+  "separationRequiredDays": 365,
+  "simplified": { "text": "No separate summary procedure; the mutual-consent divorce (23 Pa.C.S. § 3301(c)) is the fastest no-fault route.", "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/23/00.033.001.000..HTM" },
+  "parentingClass": { "required": null, "text": "No statewide statutory parenting class for divorce was verified; Pennsylvania courts may order parenting education in custody cases by local rule.", "url": null },
+  "uncertain": [
+    "23 Pa.C.S. §§ 3104 and 3301 were read from the Internet Archive 2026 copies of the official legis.state.pa.us URLs (palegis.us refused connections).",
+    "Each additional count in a divorce complaint (e.g. custody) carries additional per-count statutory fees in Philadelphia (Notice to the Bar, https://www.courts.phila.gov/pdf/notices/2017/Notice-to-Bar-Divorce-Fees.pdf); the $334.73 is the base commencement fee only.",
+    "separationRequiredDays (365) applies only to the no-consent route under § 3301(d).",
+    "Parenting class: not verified."
+  ]
+}

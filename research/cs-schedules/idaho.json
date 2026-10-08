@@ -1,0 +1,351 @@
+{
+ "slug": "idaho",
+ "source": "https://isc.idaho.gov/rules-procedure/print/irfl/120",
+ "edition": "I.R.F.L.P. 120(i)(1), adopted July 1, 2021; amended March 24, 2022, effective July 1, 2022; amended June 3, 2025, effective July 1, 2025",
+ "period": "annual combined Guidelines Income; result divided by 12 for monthly support",
+ "columns": "per number of children: list of brackets {pct, width (annual $), perMonthPrinted, perYearPrinted}",
+ "maxIncome": 440000,
+ "brackets": {
+  "1": [
+   {
+    "pct": 18,
+    "width": 10000,
+    "perMonthPrinted": 150,
+    "perYearPrinted": 1800
+   },
+   {
+    "pct": 17,
+    "width": 10000,
+    "perMonthPrinted": 142,
+    "perYearPrinted": 1700
+   },
+   {
+    "pct": 15,
+    "width": 10000,
+    "perMonthPrinted": 125,
+    "perYearPrinted": 1500
+   },
+   {
+    "pct": 14,
+    "width": 10000,
+    "perMonthPrinted": 117,
+    "perYearPrinted": 1400
+   },
+   {
+    "pct": 13,
+    "width": 10000,
+    "perMonthPrinted": 108,
+    "perYearPrinted": 1300
+   },
+   {
+    "pct": 12,
+    "width": 20000,
+    "perMonthPrinted": 200,
+    "perYearPrinted": 2400
+   },
+   {
+    "pct": 9,
+    "width": 20000,
+    "perMonthPrinted": 150,
+    "perYearPrinted": 1800
+   },
+   {
+    "pct": 6,
+    "width": 20000,
+    "perMonthPrinted": 100,
+    "perYearPrinted": 1200
+   },
+   {
+    "pct": 5,
+    "width": 20000,
+    "perMonthPrinted": 83,
+    "perYearPrinted": 1000
+   },
+   {
+    "pct": 5,
+    "width": 20000,
+    "perMonthPrinted": 83,
+    "perYearPrinted": 1000
+   },
+   {
+    "pct": 5,
+    "width": 290000,
+    "perMonthPrinted": 1258,
+    "perYearPrinted": 15100
+   }
+  ],
+  "2": [
+   {
+    "pct": 26,
+    "width": 10000,
+    "perMonthPrinted": 217,
+    "perYearPrinted": 2600
+   },
+   {
+    "pct": 25,
+    "width": 10000,
+    "perMonthPrinted": 208,
+    "perYearPrinted": 2500
+   },
+   {
+    "pct": 23,
+    "width": 10000,
+    "perMonthPrinted": 192,
+    "perYearPrinted": 2300
+   },
+   {
+    "pct": 22,
+    "width": 10000,
+    "perMonthPrinted": 183,
+    "perYearPrinted": 2200
+   },
+   {
+    "pct": 20,
+    "width": 10000,
+    "perMonthPrinted": 167,
+    "perYearPrinted": 2000
+   },
+   {
+    "pct": 17,
+    "width": 20000,
+    "perMonthPrinted": 283,
+    "perYearPrinted": 3400
+   },
+   {
+    "pct": 13,
+    "width": 20000,
+    "perMonthPrinted": 217,
+    "perYearPrinted": 2600
+   },
+   {
+    "pct": 9,
+    "width": 20000,
+    "perMonthPrinted": 150,
+    "perYearPrinted": 1800
+   },
+   {
+    "pct": 8,
+    "width": 20000,
+    "perMonthPrinted": 133,
+    "perYearPrinted": 1600
+   },
+   {
+    "pct": 8,
+    "width": 20000,
+    "perMonthPrinted": 133,
+    "perYearPrinted": 1600
+   },
+   {
+    "pct": 8,
+    "width": 290000,
+    "perMonthPrinted": 1883,
+    "perYearPrinted": 22600
+   }
+  ],
+  "3": [
+   {
+    "pct": 30,
+    "width": 10000,
+    "perMonthPrinted": 250,
+    "perYearPrinted": 3000
+   },
+   {
+    "pct": 29,
+    "width": 10000,
+    "perMonthPrinted": 242,
+    "perYearPrinted": 2900
+   },
+   {
+    "pct": 27,
+    "width": 10000,
+    "perMonthPrinted": 225,
+    "perYearPrinted": 2700
+   },
+   {
+    "pct": 26,
+    "width": 10000,
+    "perMonthPrinted": 217,
+    "perYearPrinted": 2600
+   },
+   {
+    "pct": 24,
+    "width": 10000,
+    "perMonthPrinted": 200,
+    "perYearPrinted": 2400
+   },
+   {
+    "pct": 20,
+    "width": 20000,
+    "perMonthPrinted": 333,
+    "perYearPrinted": 4000
+   },
+   {
+    "pct": 16,
+    "width": 20000,
+    "perMonthPrinted": 267,
+    "perYearPrinted": 3200
+   },
+   {
+    "pct": 12,
+    "width": 20000,
+    "perMonthPrinted": 200,
+    "perYearPrinted": 2400
+   },
+   {
+    "pct": 11,
+    "width": 20000,
+    "perMonthPrinted": 183,
+    "perYearPrinted": 2200
+   },
+   {
+    "pct": 11,
+    "width": 20000,
+    "perMonthPrinted": 183,
+    "perYearPrinted": 2200
+   },
+   {
+    "pct": 11,
+    "width": 290000,
+    "perMonthPrinted": 2300,
+    "perYearPrinted": 27600
+   }
+  ],
+  "4": [
+   {
+    "pct": 33,
+    "width": 10000,
+    "perMonthPrinted": 275,
+    "perYearPrinted": 3300
+   },
+   {
+    "pct": 32,
+    "width": 10000,
+    "perMonthPrinted": 267,
+    "perYearPrinted": 3200
+   },
+   {
+    "pct": 30,
+    "width": 10000,
+    "perMonthPrinted": 250,
+    "perYearPrinted": 3000
+   },
+   {
+    "pct": 29,
+    "width": 10000,
+    "perMonthPrinted": 242,
+    "perYearPrinted": 2900
+   },
+   {
+    "pct": 27,
+    "width": 10000,
+    "perMonthPrinted": 225,
+    "perYearPrinted": 2700
+   },
+   {
+    "pct": 22,
+    "width": 20000,
+    "perMonthPrinted": 367,
+    "perYearPrinted": 4400
+   },
+   {
+    "pct": 18,
+    "width": 20000,
+    "perMonthPrinted": 300,
+    "perYearPrinted": 3600
+   },
+   {
+    "pct": 14,
+    "width": 20000,
+    "perMonthPrinted": 233,
+    "perYearPrinted": 2800
+   },
+   {
+    "pct": 13,
+    "width": 20000,
+    "perMonthPrinted": 217,
+    "perYearPrinted": 2600
+   },
+   {
+    "pct": 13,
+    "width": 20000,
+    "perMonthPrinted": 217,
+    "perYearPrinted": 2600
+   },
+   {
+    "pct": 13,
+    "width": 20000,
+    "perMonthPrinted": 2592,
+    "perYearPrinted": 31100
+   }
+  ],
+  "5": [
+   {
+    "pct": 36,
+    "width": 10000,
+    "perMonthPrinted": 300,
+    "perYearPrinted": 3600
+   },
+   {
+    "pct": 35,
+    "width": 10000,
+    "perMonthPrinted": 292,
+    "perYearPrinted": 3500
+   },
+   {
+    "pct": 33,
+    "width": 10000,
+    "perMonthPrinted": 275,
+    "perYearPrinted": 3300
+   },
+   {
+    "pct": 32,
+    "width": 10000,
+    "perMonthPrinted": 267,
+    "perYearPrinted": 3200
+   },
+   {
+    "pct": 30,
+    "width": 10000,
+    "perMonthPrinted": 250,
+    "perYearPrinted": 3000
+   },
+   {
+    "pct": 24,
+    "width": 20000,
+    "perMonthPrinted": 400,
+    "perYearPrinted": 4800
+   },
+   {
+    "pct": 20,
+    "width": 20000,
+    "perMonthPrinted": 333,
+    "perYearPrinted": 4000
+   },
+   {
+    "pct": 16,
+    "width": 20000,
+    "perMonthPrinted": 267,
+    "perYearPrinted": 3200
+   },
+   {
+    "pct": 15,
+    "width": 20000,
+    "perMonthPrinted": 250,
+    "perYearPrinted": 3000
+   },
+   {
+    "pct": 15,
+    "width": 20000,
+    "perMonthPrinted": 250,
+    "perYearPrinted": 3000
+   },
+   {
+    "pct": 15,
+    "width": 290000,
+    "perMonthPrinted": 2883,
+    "perYearPrinted": 34600
+   }
+  ]
+ },
+ "note": "The last bracket is printed as 'the next $290,000' for 1, 2, 3 and 5 children and as 'the next $20,000' for 4 children; 5x10,000 + 5x20,000 + 290,000 = 440,000, the ceiling stated in Rule 120(i)(7)."
+}

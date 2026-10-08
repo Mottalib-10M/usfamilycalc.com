@@ -1,0 +1,51 @@
+{
+  "slug": "alabama",
+  "name": "Alabama",
+  "abbr": "AL",
+  "filingFee": 145,
+  "responseFee": null,
+  "feeScope": "statewide (state docket fee only; county local-act fees are added by each circuit clerk)",
+  "feeText": "State docket fee of $145 for cases filed on the domestic relations docket of the circuit court, whether the clerk finds them uncontested or contested at filing (Ala. Code § 12-19-71(a)(5), (6)). Counties add local fees, so the amount paid at the clerk's window is higher.",
+  "feeUrl": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71",
+  "otherFees": [
+    {
+      "what": "Case on the domestic relations docket to modify or enforce an existing domestic relations order (§ 12-19-71(a)(7)a.)",
+      "amount": 248,
+      "url": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71"
+    },
+    {
+      "what": "Jefferson County Domestic Relations Division posted filing fee for a complaint (page headed 'filing fees effective 6/21/2012', archived copy)",
+      "amount": 199,
+      "url": "https://jefferson.alacourt.gov/filing-fees/filing-fees-domestic-relations/"
+    }
+  ],
+  "waiver": {
+    "name": "Affidavit of Substantial Hardship (Form C-10)",
+    "url": "https://dhr.alabama.gov/wp-content/uploads/2019/07/379031ALAUJS-C-10-Affidavit-of-Substantial-Hardship-0295.pdf"
+  },
+  "residency": {
+    "text": "When the defendant is a nonresident, the plaintiff must have been a bona fide resident of Alabama for six months before filing, alleged in the complaint and proved (Ala. Code § 30-2-5).",
+    "url": "https://alison.legislature.state.al.us/code-of-alabama?section=30-2-5"
+  },
+  "waitingPeriod": {
+    "days": 30,
+    "text": "A court shall not enter a final judgment of divorce until 30 days after the filing of the summons and complaint; temporary orders remain possible (Ala. Code § 30-2-8.1).",
+    "url": "https://alison.legislature.state.al.us/code-of-alabama?section=30-2-8.1"
+  },
+  "simplified": {
+    "text": "No summary dissolution statute. A case is treated as uncontested for fee purposes when a complaint, an answer and an agreement of the parties are filed (Ala. Code § 12-19-71(a)(5)).",
+    "url": "https://alison.legislature.state.al.us/code-of-alabama?section=12-19-71"
+  },
+  "parentingClass": {
+    "required": null,
+    "text": "No statewide statute located; some circuits require a parenting course by local rule.",
+    "url": null
+  },
+  "uncertain": [
+    "Jefferson County (most populous) was unreachable live; the Internet Archive copy of its Domestic Relations fee page lists 'Complaint $199.00' under a heading 'effective 6/21/2012', so it may be outdated. Filing fee recorded as the statutory state docket fee ($145) instead; the clerk's total may differ.",
+    "Ala. Code read in a browser on alison.legislature.state.al.us (JavaScript app; not retrievable by plain HTTP client).",
+    "Waiver form: copy of UJS Form C-10A (Rev. 2/95) hosted on dhr.alabama.gov; the court's eforms site was unreachable.",
+    "Ala. Code § 30-2-5 sets the 6-month rule only where the defendant is a nonresident.",
+    "Parenting class: not verified; set to null."
+  ]
+}

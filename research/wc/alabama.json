@@ -1,0 +1,67 @@
+{
+  "slug": "alabama",
+  "name": "Alabama",
+  "abbr": "AL",
+  "verified": "2026-10-08",
+  "agency": {
+    "name": "Workers' Compensation Division, Alabama Department of Workforce",
+    "url": "https://workforce.alabama.gov/employers/workers-compensation/"
+  },
+  "ttd": {
+    "rate": 66.67,
+    "basis": "gross AWW",
+    "rateText": "66 2/3% of the employee's average weekly earnings during the 52 weeks prior to the injury, not exceeding the maximum in effect on the date of injury (Code of Ala. § 25-5-57, § 25-5-68).",
+    "max": 1219.0,
+    "min": 335.0,
+    "minText": "Not less than the minimum in effect at the time of injury, unless the employee's average weekly earnings were below it, in which case benefits equal 100% of average weekly earnings.",
+    "effective": "2026-07-01",
+    "periodLabel": "injuries occurring on and after July 1, 2026 (State's average weekly wage for calendar year 2025 = $1,219.14)",
+    "url": "https://workforce.alabama.gov/documents/states-average-weekly-wage/",
+    "asOf": "2026-05-11"
+  },
+  "waiting": {
+    "days": 3,
+    "retroactiveAfterDays": 21,
+    "text": "No compensation for the first three days after disability; compensation begins on the fourth day. If the disability lasts as much as 21 days, compensation for the first three days is paid with the first installment due after the 21 days (Code of Ala. § 25-5-59).",
+    "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+  },
+  "ttdDuration": {
+    "maxWeeks": null,
+    "text": "Temporary total disability: unlimited duration (temporary partial: 300 weeks), per the Division's claim limitations (Code of Ala. § 25-5-57).",
+    "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+  },
+  "ppd": {
+    "text": "Permanent partial disability is paid as weekly benefits at 66 2/3% of average weekly earnings (within the max/min), limited to 300 weeks for permanent partial body injuries per the Division's claim limitations (Code of Ala. § 25-5-57(a)(3)).",
+    "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+  },
+  "statute": {
+    "cite": "Code of Ala. §§ 25-5-57, 25-5-59, 25-5-68",
+    "url": "https://alison.legislature.state.al.us/code-of-alabama"
+  },
+  "facts": [
+    {
+      "text": "The law generally covers employers of five or more employees; domestic servants, casual employees, farm laborers and certain owner/leased operators of interstate common carriers are excluded.",
+      "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+    },
+    {
+      "text": "Attorney fees cannot exceed 15% of the compensation awarded or paid, and are fixed by the circuit court judge.",
+      "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+    },
+    {
+      "text": "The employer selects the authorized treating physician; a dissatisfied employee may request a panel of four physicians from the employer and choose a second physician from it.",
+      "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+    },
+    {
+      "text": "Claims are resolved in circuit court: a verified complaint must be filed within two years of the accident or of the last compensation payment.",
+      "url": "https://workforce.alabama.gov/employers/workers-compensation/file-a-claim/"
+    },
+    {
+      "text": "The maximum (100% of the state AWW) and minimum change each July 1: $1,172/$322 from July 1, 2025, $1,219/$335 from July 1, 2026.",
+      "url": "https://workforce.alabama.gov/documents/states-average-weekly-wage/"
+    }
+  ],
+  "uncertain": [
+    "SAWW notice is a scanned image PDF (copy in research/raw/al-saww-2026.pdf); figures read visually from the image.",
+    "Code of Alabama text (alison.legislature.state.al.us) is a JavaScript app not readable by WebFetch; rules taken from the Department of Workforce 'Guide to Benefits and Claim Filing'. The scheduled-member weeks of § 25-5-57(a)(3) were not read."
+  ]
+}

@@ -1,0 +1,21 @@
+{ "slug": "california", "name": "California", "abbr": "CA",
+  "filingFee": 435, "responseFee": 435, "feeScope": "statewide",
+  "feeText": "Petition or other first paper for dissolution of marriage or domestic partnership, legal separation, or nullity: $435 (Statewide Civil Fee Schedule row 97: Gov. Code § 70670(b), 70602.5, 70602.6); response: $435 (row 98: Gov. Code § 70670(d), 70602.5, 70602.6). Schedule effective January 1, 2026.",
+  "feeUrl": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf",
+  "otherFees": [
+    { "what": "Joint petition for dissolution or legal separation, covers both petitioners (Fam. Code § 2342.5(h))", "amount": 870, "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf" },
+    { "what": "Joint petition for summary dissolution (Gov. Code § 70670(b))", "amount": 435, "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf" },
+    { "what": "Motion or order to show cause in family law matter (Gov. Code § 70677(a))", "amount": 60, "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf" },
+    { "what": "Additional charge on motion to modify or enforce custody or visitation (Gov. Code § 70678)", "amount": 25, "url": "https://ventura.courts.ca.gov/system/files?file=statewide-civil-fee-schedule.pdf" }
+  ],
+  "waiver": { "name": "Request to Waive Court Fees (FW-001)", "url": "https://selfhelp.courts.ca.gov/jcc-form/FW-001" },
+  "residency": { "text": "One spouse must have been a resident of California for 6 months and of the filing county for 3 months before the petition is filed (Fam. Code § 2320(a)); same-sex marriages entered in California may be dissolved without residency under § 2320(b).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2320" },
+  "waitingPeriod": { "days": 182, "text": "A judgment of dissolution is not final until six months have expired from the date of service of the summons and petition or the respondent's appearance, whichever occurs first (Fam. Code § 2339(a)). 182 days is the brief's day count for 6 months.", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2339" },
+  "simplified": { "text": "Summary dissolution is available when, among other conditions, there are no children, the marriage lasted not more than 5 years, neither party owns real property (except a qualifying lease), unpaid obligations do not exceed $4,000 (excluding car loans), community property is under $25,000 and each spouse's separate property is not over $25,000 (Fam. Code § 2400).", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=2400" },
+  "parentingClass": { "required": null, "text": "No statewide parenting-class requirement was verified. Contested custody is sent to court mediation/child custody recommending counseling under Fam. Code § 3170, which could not be read (archive unavailable).", "url": null },
+  "uncertain": [
+    "courts.ca.gov (Cloudflare) blocks automated clients; the Statewide Civil Fee Schedule effective January 1, 2026 was read from the copy hosted on the Superior Court of Ventura County's official site (ventura.courts.ca.gov).",
+    "Fam. Code §§ 2320, 2339, 2400 read from the Internet Archive copy of leginfo.legislature.ca.gov (leginfo blocks automated clients).",
+    "Fam. Code § 2339 states six months; 182 days is a day approximation of 6 months.",
+    "Parenting class: Fam. Code § 3170 (mandatory custody mediation) not read; required set to null."
+  ] }

@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Editorial policy of ${SITE_NAMES[lang]}: state sources and corrections`} description="Which official texts the child support schedules, alimony formulas, court fees, probate rules and workers' comp rates come from, which sources we refuse and how errors are fixed." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial and corrections policy</h1>
+    <p>People open these calculators before a mediation, a hearing, a call with an adjuster or a meeting with an executor. A wrong percentage or a stale weekly maximum can push someone to accept too little or ask for too much. This page says where every figure comes from and what happens when one is wrong.</p>
+    <h2>Who is responsible</h2><p>Content and calculations: {AUTHOR_NAME}, <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Sources we use</h2>
+    <ul>
+      <li>state codes and court rules on the legislature's or the judiciary's own site, for guideline formulas, alimony caps, waiting periods, creditor deadlines and statutory probate fees;</li>
+      <li>child support schedules as adopted by each state's supreme court, judicial council or child support agency;</li>
+      <li>fee schedules of the state courts, or of the clerk of the most populous county where fees are set locally;</li>
+      <li>bulletins of each state's workers' compensation board or labor department for the weekly maximum and minimum of the benefit year;</li>
+      <li>federal texts (U.S. Code, Code of Federal Regulations, IRS publications) for the rules that apply in every state.</li>
+    </ul>
+    <h2>Sources we refuse for a figure</h2>
+    <p>Law firm blogs, legal directories, news articles and other calculators may point us to a text; they never supply a number. When one disagrees with the official text, the official text wins and the data file keeps its address. When a state has not yet published its 2026 figure, the page says so and uses the latest official one, with its date.</p>
+    <h2>Review cycle</h2><p>Each state is re-read at least every {REVIEW_CYCLE_MONTHS} months, and whenever a scheduled change is known: a new child support table, the January or July workers' comp rate, a statutory index of small-estate limits.</p>
+    <h2>Corrections</h2>
+    <ol><li>We check the report against the official text.</li><li>We fix the data file or the engine and add a test for that case.</li><li>The page shows its new reading date.</li></ol>
+    <h2>Independence</h2><p>No law firm, mediator, insurer or lead-generation company pays to appear on the site, and the calculators never ask for your contact details. If that ever changed, it would be written next to the link.</p>
+    <p>See also the <a href={route('method', lang)}>method page</a>. Policy version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

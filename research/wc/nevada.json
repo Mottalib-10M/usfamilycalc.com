@@ -1,0 +1,26 @@
+{
+  "slug": "nevada", "name": "Nevada", "abbr": "NV", "verified": "2026-10-08",
+  "agency": { "name": "Nevada Division of Industrial Relations (DIR), Workers' Compensation Section", "url": "https://dir.nv.gov/WCS/Important/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "66 2/3 percent of the average monthly wage (NRS 616C.475(1)); the average monthly wage is capped at 150% of the state average weekly wage x 4.33 (NRS 616A.065). Nevada computes benefits monthly; the weekly figure is the DIR daily maximum x 7.",
+    "max": 1308.86, "min": null, "minText": "No minimum TTD rate in NRS 616C.475; if the earned wage is below the cap, compensation is 66 2/3% of the actual wage (DIR FY27 memo).",
+    "effective": "2026-07-01", "periodLabel": "fiscal year 2027, injuries July 1, 2026 - June 30, 2027 (monthly maximum $5,691.79; daily $186.98)",
+    "url": "https://dir.nv.gov/uploadedFiles/dirnvgov/content/WCS/ImportantDocs/Max%20Comp%20FY27.pdf", "asOf": "2026-06-29"
+  },
+  "waiting": { "days": 5, "retroactiveAfterDays": 4, "text": "Temporary compensation is not paid for an injury that does not incapacitate the employee for at least 5 consecutive days, or 5 cumulative days within a 20-day period; once that threshold is met, compensation is computed from the date of injury (NRS 616C.400(1)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec400" },
+  "ttdDuration": { "maxWeeks": null, "text": "No fixed week cap; TTD ceases when a physician finds the employee capable of any gainful employment, when the employer offers light-duty or modified work, or during incarceration (NRS 616C.475(5)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec475" },
+  "ppd": { "text": "Each 1% of whole-person impairment (AMA Guides, rated by a physician from the Administrator's list) is paid as a monthly payment of 0.6% of the average monthly wage for injuries on or after January 1, 2000, for 5 years or until age 70, whichever is later (NRS 616C.490(8)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec490" },
+  "statute": { "cite": "NRS 616A.065, 616C.400, 616C.475, 616C.490", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html" },
+  "facts": [
+    { "text": "Nevada sets benefits on a monthly basis: for FY2027 the certified state average weekly wage is $1,314.50, the maximum average monthly wage $8,537.68 and maximum compensation $5,691.79 per month, $186.98 per day and $2,617.72 per usual 14-day payment (DIR memo, June 29, 2026).", "url": "https://dir.nv.gov/uploadedFiles/dirnvgov/content/WCS/ImportantDocs/Max%20Comp%20FY27.pdf" },
+    { "text": "The first TTD payment must be issued within 14 working days after the insurer receives the initial certification of disability (NRS 616C.475(3)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec475" },
+    { "text": "No TTD accrues while the injured employee is incarcerated; benefits resume on release if a physician certifies temporary total disability (NRS 616C.475(2)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec475" },
+    { "text": "The insurer must schedule a rating evaluation within 30 days of a report that the worker may be permanently disabled and is stable and ratable (NRS 616C.490(2)(a)).", "url": "https://www.leg.state.nv.us/NRS/NRS-616C.html#NRS616CSec490" },
+    { "text": "The FY27 maximum average monthly wage also applies from January 1, 2027 to the maximum amount paid to any one non-governmental employee during a policy year under NRS 616B.222, as amended by Senate Bill 317 of 2025 (effective 10/1/26) (DIR FY27 memo).", "url": "https://dir.nv.gov/uploadedFiles/dirnvgov/content/WCS/ImportantDocs/Max%20Comp%20FY27.pdf" }
+  ],
+  "uncertain": [
+    "dir.nv.gov and leg.state.nv.us block automated access; the DIR FY27 memo and NRS chapter 616C were read from Wayback Machine copies of the official URLs (NRS snapshot of mid-2025, before the 2025 session amendments may have been codified).",
+    "The weekly maximum $1,308.86 is DIR's own conversion ($186.98 x 7) of the monthly maximum; Nevada law states the benefit monthly."
+  ]
+}

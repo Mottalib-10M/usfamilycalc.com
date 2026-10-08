@@ -1,0 +1,138 @@
+{
+ "slug": "arkansas",
+ "name": "Arkansas",
+ "abbr": "AR",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined gross monthly income Family Support Chart (Ark. Sup. Ct. Administrative Order No. 10, required July 1, 2020)",
+ "incomeBasis": "gross",
+ "incomeDefinition": "The gross income of both parents is determined and combined; each parent's share is their percentage of the combined income (official Sample Calculation, Step 1). The detailed income definition is in Administrative Order No. 10, which could not be read from an official server from this environment.",
+ "period": "monthly",
+ "maxChildren": 6,
+ "schedule": {
+  "file": "cs-schedules/arkansas.json",
+  "columns": "combined gross monthly income, then basic obligation for 1..6 children",
+  "minIncome": 1050,
+  "maxIncome": 30000,
+  "step": 50,
+  "lookup": null,
+  "lookupRule": "The chart lists combined gross monthly income in $50 steps from $1,050 (first row covers $1-$1,050) to $30,000. The interpolation/rounding rule between rows is set in Administrative Order No. 10 and was not read (see uncertain).",
+  "belowMin": {
+   "rule": "First row ($1-$1,050): $125 for any number of children; the chart is built with a self-support reserve of $900/month and a minimum order of $125/month (chart heading). In the blue-shaded low-income cells (up to $1,150 for 1 child, $1,350 for 2, $1,500 for 3, $1,600 for 4, $1,700 for 5, $1,800 for 6, detected from the PDF shading) combined gross income does not apply (chart footnote 1).",
+   "amounts": [
+    125,
+    125,
+    125,
+    125,
+    125,
+    125
+   ]
+  },
+  "aboveMax": {
+   "method": null,
+   "pct": null,
+   "text": "Chart ends at $30,000 combined gross monthly income; the rule above it is in Administrative Order No. 10 (not read)."
+  },
+  "effective": "2020-07-01",
+  "url": "https://www.arcourts.gov/sites/default/files/formatted-files/monthly-family-support-chart-req-july-2020.pdf"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Chart heading: self-support reserve $900/month and minimum order $125/month built into the chart; footnote 1: combined gross monthly income does not apply in the blue-shaded cells (read here as: the shaded amount is owed in full, not prorated). Shaded limits by number of children detected from the PDF shading.",
+  "params": {
+   "selfSupportReserve": 900,
+   "minimumOrder": 125,
+   "shadedMaxByChildren": [
+    1150,
+    1350,
+    1500,
+    1600,
+    1700,
+    1800
+   ]
+  },
+  "url": "https://www.arcourts.gov/sites/default/files/formatted-files/monthly-family-support-chart-req-july-2020.pdf"
+ },
+ "shared": null,
+ "addOns": {
+  "childcare": "Allowed child care expenses are added to the basic obligation and shared by each parent's income percentage; the parent paying out of pocket is credited (official Sample Calculation, Steps 3-5).",
+  "healthInsurance": "The child's health insurance premium and extraordinary medical expenses are added and shared by income percentage, with a credit to the parent who pays (official Sample Calculation, Steps 3-5).",
+  "text": "Presumptive obligation = share of basic chart obligation + share of additional child-rearing expenses (health insurance premiums, extraordinary medical, child care) - credit for expenses the payor pays directly; the result is rounded down to the dollar ($412.67 -> $412 in the official example).",
+  "url": "https://www.arcourts.gov/sites/default/files/formatted-files/child-support-sample-language-and-calculation-july-2020.pdf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": 900,
+  "period": "monthly",
+  "minimumOrder": 125,
+  "rule": "Self-Support Reserve = $900/month and Minimum Order = $125 per month are built into the Family Support Chart (chart heading); in the blue-shaded area the combined gross income does not apply (footnote 1).",
+  "url": "https://www.arcourts.gov/sites/default/files/formatted-files/monthly-family-support-chart-req-july-2020.pdf"
+ },
+ "statute": {
+  "cite": "Ark. Code Ann. § 9-12-312; Arkansas Supreme Court Administrative Order No. 10",
+  "url": "https://rules.arcourts.gov/w/ark/administrative-orders"
+ },
+ "guidelinesUrl": "https://www.arcourts.gov/forms-and-publications/arkansas-child-support-guidelines",
+ "officialCalculatorUrl": "https://www.arcourts.gov/child-support-calculator/ChildSupp.html",
+ "emancipation": null,
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 2000,
+    "incomeB": 1000,
+    "children": 1,
+    "overnightsA": 0,
+    "healthInsurancePaidByA": 100,
+    "childCarePaidByB": 200
+   },
+   "expected": 412,
+   "what": "payor A's monthly child support order",
+   "source": "Official Arkansas Judiciary 'Sample Language and Calculation - Child Support (July 2020)': combined $3,000 -> $469 for one child; 66.66% = $312.67 + $200 share of $300 expenses = $512.67 - $100 credit = $412.67, rounded down to $412. skipEngine: the test harness passes the premium as paid by the other parent and cannot express the payor's $100 premium credit plus the payee's $200 child care in one case.",
+   "skipEngine": true
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 785.33,
+   "what": "payor A's share of the basic obligation (no add-ons)",
+   "source": "Computed by hand from the chart: combined $6,000 -> 2 children $1,178; 4000/6000 x 1,178 = 785.33 (method of the official Sample Calculation, Steps 1-2)."
+  },
+  {
+   "inputs": {
+    "incomeA": 800,
+    "incomeB": 300,
+    "children": 1,
+    "overnightsA": 0
+   },
+   "expected": 140,
+   "what": "payer's monthly support in the blue-shaded low-income area",
+   "source": "Computed by hand from the chart: combined $1,100 -> 1 child $140, a blue-shaded cell (shaded up to $1,150 for one child), so the amount is not prorated by income (chart footnote 1)."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Arkansas switched to an income shares chart based on combined gross income for orders from July 1, 2020 (Arkansas Judiciary, Child Support Guidelines page: forms 'required July 1, 2020').",
+   "url": "https://www.arcourts.gov/forms-and-publications/arkansas-child-support-guidelines"
+  },
+  {
+   "text": "The Family Support Chart embeds a $900/month self-support reserve and a $125/month minimum order.",
+   "url": "https://www.arcourts.gov/sites/default/files/formatted-files/monthly-family-support-chart-req-july-2020.pdf"
+  },
+  {
+   "text": "The chart runs from $1,050 to $30,000 of combined gross monthly income in $50 steps for up to six children.",
+   "url": "https://www.arcourts.gov/sites/default/files/formatted-files/monthly-family-support-chart-req-july-2020.pdf"
+  },
+  {
+   "text": "In the official example the final monthly order is rounded down to the whole dollar ($412.67 -> $412).",
+   "url": "https://www.arcourts.gov/sites/default/files/formatted-files/child-support-sample-language-and-calculation-july-2020.pdf"
+  }
+ ],
+ "uncertain": [
+  "arcourts.gov, rules.arcourts.gov and opinions.arcourts.gov did not answer or returned 403 from this environment; the chart (snapshot 2025-09-17) and sample calculation (snapshot 2026-03-02) were read from Internet Archive copies of the official arcourts.gov URLs. The Arkansas Judiciary page (snapshot 2026-06-18) still lists these as the current July 2020 forms.",
+  "Administrative Order No. 10 text (income definition, shared/joint custody rule, rule above $30,000, lookup between rows, deviation factors, duration) could not be read from an official source: shared = null, aboveMax.method = null, lookup = null, emancipation = null. Do not fill these from unofficial sources.",
+  "Low-income shaded limits were detected from the PDF fill colour, not from text."
+ ]
+}

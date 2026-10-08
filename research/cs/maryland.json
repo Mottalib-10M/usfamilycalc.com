@@ -1,0 +1,176 @@
+{
+  "slug": "maryland",
+  "name": "Maryland",
+  "abbr": "MD",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined adjusted actual monthly income schedule (Family Law § 12-204(e))",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Actual income from any source (salaries, wages, commissions, bonuses, dividends, pensions, interest, trust and annuity income, Social Security, workers' compensation, unemployment and disability benefits, alimony received, etc.; self-employment = gross receipts minus ordinary and necessary expenses); means-tested public assistance excluded (§ 12-201(b)). Adjusted actual income = actual income minus preexisting child support actually paid, alimony actually paid, and an allowance for each other child living in the parent's home equal to 75% of the schedule amount computed on that parent's income alone (§ 12-201(c), as amended by 2025 ch. 532, effective October 1, 2025).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/maryland.json",
+    "columns": "combined adjusted actual monthly income, then basic obligation for 1, 2, 3, 4, 5, 6 or more children; first row = 0-1200 (stored as 1200); asterisked cells (self-support reserve adjusted) flagged in selfSupportReserveFlags",
+    "minIncome": 1200,
+    "maxIncome": 30000,
+    "step": 50,
+    "lookup": "bracket",
+    "lookupRule": "If combined adjusted actual income falls between amounts shown in the schedule, the basic child support amount is extrapolated to the next higher amount (§ 12-204(c)).",
+    "belowMin": {
+      "rule": "The first schedule row covers combined income of 0-1200: $50, $55, $57, $58, $59, $60 for 1 to 6+ children, all adjusted by the self-support reserve (§ 12-204(e)).",
+      "amounts": [
+        50,
+        55,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "aboveMax": {
+      "method": "discretion",
+      "pct": null,
+      "text": "If combined adjusted actual income exceeds the highest level in the schedule ($30,000), the court may use its discretion in setting the amount of child support (§ 12-204(d))."
+    },
+    "effective": "2022-07-01",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 92,
+    "multiplier": 1.5,
+    "reductionTable": [
+      {
+        "overnightsFrom": 92,
+        "overnightsTo": 94,
+        "adjustment": 0.1
+      },
+      {
+        "overnightsFrom": 95,
+        "overnightsTo": 98,
+        "adjustment": 0.08
+      },
+      {
+        "overnightsFrom": 99,
+        "overnightsTo": 102,
+        "adjustment": 0.06
+      },
+      {
+        "overnightsFrom": 103,
+        "overnightsTo": 105,
+        "adjustment": 0.04
+      },
+      {
+        "overnightsFrom": 106,
+        "overnightsTo": 109,
+        "adjustment": 0.02
+      }
+    ],
+    "text": "Shared physical custody = each parent keeps the child overnight for more than 25% of the year (at least 92 overnights) and both contribute to expenses (§ 12-201(o)). The basic obligation is multiplied by 1.5 (§ 12-204(f)), divided by income shares, and each share is multiplied by the percentage of time the child spends with the other parent; the parent owing more pays the difference (§ 12-204(m)(1)-(3)). A parent with 92-109 overnights has his or her theoretical obligation increased by the shared physical custody adjustment in reductionTable (§ 12-204(m)(2)(ii)). The result may not exceed the sole-custody amount (§ 12-204(m)(5)).",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "added to basic obligation and shared by income",
+    "text": "Work- or job-search-related child care (§ 12-204(g)), the cost of health insurance for the child and extraordinary medical expenses (uninsured costs above $250 a year, § 12-201(g)) are added to the basic obligation and divided in proportion to adjusted actual incomes (§ 12-204(h)). Special/private school and transportation costs may be divided the same way by agreement or order (§ 12-204(i)).",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "The self-support reserve keeps the obligor's monthly income after child support and federal, state and FICA taxes at least at 110% of the 2019 federal poverty level for an individual (§ 12-201(n)); it is built into the asterisked schedule cells (§ 12-204(e)). Leaving the obligor below 110% of the 2019 poverty level is also a ground for deviation (§ 12-202(a)(2)(iii)3). The court may decline to set an order for certain incarcerated, institutionalized or totally disabled parents with no resources (§ 12-202(c)).",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-201&enactments=false"
+  },
+  "statute": {
+    "cite": "Md. Code, Family Law §§ 12-201 to 12-204",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false"
+  },
+  "guidelinesUrl": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false",
+  "officialCalculatorUrl": "https://dhs.maryland.gov/child-support-services/child-support-resources/estimate-child-support-amount/",
+  "emancipation": {
+    "text": "The age of majority is 18; a person who is 18 and enrolled in secondary school is entitled to support from both parents until the first of death, marriage, emancipation, leaving or graduating from secondary school, or age 19 (Md. Code, General Provisions § 1-401).",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=ggp&section=1-401&enactments=false"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 984.67,
+      "what": "payer's (parent A) monthly share of the basic obligation, before add-ons and rounding",
+      "source": "Computed by hand from the § 12-204(e) schedule: combined $6,000, 2 children = $1,477; parent A share 4000/6000 x 1477 = 984.67. No official worked example in the statute."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 110
+      },
+      "expected": 809.32,
+      "what": "parent A's net shared-custody payment (110 overnights with A, 255 with B), before add-ons",
+      "source": "Computed by hand under § 12-204(f) and (m): 1477 x 1.5 = 2215.50; A's share 1477.00 x 255/365 = 1031.88; B's share 738.50 x 110/365 = 222.56; A owes 1031.88 - 222.56 = 809.32, below the sole-custody cap of 984.67 (§ 12-204(m)(5)). 110 overnights is outside the 92-109 band, so no shared physical custody adjustment applies."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 100
+      },
+      "expected": 934.35,
+      "what": "paying parent A owes with 100 overnights (shared custody adjustment band 99-102 = 6%)",
+      "source": "Computed by hand under § 12-204(m): 2215.50 x 2/3 x 265/365 x 1.06 = 1136.70; minus 2215.50 x 1/3 x 100/365 = 202.35; = 934.35, below the sole amount 984.67."
+    },
+    {
+      "inputs": {
+        "incomeA": 4010,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1480,
+      "what": "basic obligation in the schedule for $6,010 combined (next higher row)",
+      "source": "§ 12-204(c): between two amounts, extrapolate to the next higher amount; $6,050 row, 2 children = $1,480. Computed by hand."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Maryland's schedule was revised by Chapter 383 of 2020 (HB 946) to run up to $30,000 of combined monthly income with a built-in self-support reserve; Chapter 305 of 2021 (HB 1339) delayed its effective date from October 1, 2021 to July 1, 2022.",
+      "url": "https://mgaleg.maryland.gov/2020RS/Chapters_noln/CH_383_hb0946t.pdf"
+    },
+    {
+      "text": "Since Chapter 142 of 2020 (effective October 1, 2020), shared physical custody starts at 92 overnights (more than 25% of the year), with an extra 2%-10% adjustment for a parent who has 92 to 109 overnights (§ 12-204(m)(2)(ii)).",
+      "url": "https://mgaleg.maryland.gov/2020RS/Chapters_noln/CH_142_hb0269t.pdf"
+    },
+    {
+      "text": "Since October 1, 2025 (Chapter 532 of 2025, HB 275), each parent may deduct a multifamily allowance equal to 75% of the schedule amount for other children living in the home more than 92 overnights a year (§ 12-201(c)).",
+      "url": "https://mgaleg.maryland.gov/2025RS/Chapters_noln/CH_532_hb0275t.pdf"
+    },
+    {
+      "text": "Extraordinary medical expenses are uninsured medical costs above $250 in a calendar year, including orthodontia, dental, vision, asthma treatment, physical therapy and counseling (§ 12-201(g)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-201&enactments=false"
+    },
+    {
+      "text": "The Child Support Administration of the Department of Human Services must review the guidelines at least every 4 years and report to the General Assembly (§ 12-202(e)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-202&enactments=false"
+    },
+    {
+      "text": "Incarcerated parents may not be found voluntarily impoverished, and potential income may not be imputed to a parent caring for a child under age 2 (§ 12-204(b)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=12-204&enactments=false"
+    }
+  ],
+  "uncertain": [
+    "The brief expected a 128-overnight (35%) shared-custody threshold; the current statute (since 2020 ch. 142, effective October 1, 2020) uses more than 25% / at least 92 overnights. Recorded as read in § 12-201(o) and § 12-204(m).",
+    "The self-support reserve is defined by reference (110% of the 2019 federal poverty level for one person, § 12-201(n)); no dollar amount is printed in the statute, so selfSupportReserve is null. It is already built into the asterisked schedule cells.",
+    "§ 12-204(m)(2)(ii) says the 92-109 overnight adjustment increases the theoretical obligation of the parent with that many overnights; the exact worksheet mechanics (Supreme Court Worksheet B) were not read.",
+    "The DHS calculator URL answered HTTP 301 (redirect) on 2026-10-08; final address not checked."
+  ]
+}

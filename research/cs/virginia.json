@@ -1,0 +1,154 @@
+{
+  "slug": "virginia",
+  "name": "Virginia",
+  "abbr": "VA",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly gross income schedule",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Gross income means all income from all sources (salaries, wages, commissions, bonuses, dividends, pensions, interest, capital gains, social security benefits, workers' compensation, unemployment, disability, spousal support received, rental income, gifts, prizes); excludes public assistance, SSI, child support received and qualifying secondary-employment income used to pay arrears. Deducted: reasonable business/rental expenses, one-half of self-employment tax, spousal support paid under an order, support actually paid for other children under an order, and the schedule amount for other children living in the household (Va. Code § 20-108.2(C)).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/virginia.json",
+    "columns": "combined monthly gross income, then basic obligation for 1..6 children",
+    "minIncome": 350,
+    "maxIncome": 42500,
+    "step": 50,
+    "lookup": "interpolate",
+    "lookupRule": "For combined monthly gross income amounts falling between amounts shown in the schedule, basic child support obligation amounts shall be extrapolated (Va. Code § 20-108.2(B)). The first row covers 0-350.",
+    "belowMin": {
+      "rule": "The first schedule row is printed '0-350' and applies to any combined income from 0 to $350 ($68 for one child). A presumptive minimum obligation of 'the statutory minimum' per month applies to the payor unless an exemption applies (§ 20-108.2(B)).",
+      "amounts": [
+        68,
+        104,
+        126,
+        141,
+        155,
+        169
+      ]
+    },
+    "aboveMax": {
+      "method": "percent-of-excess",
+      "pct": [
+        2.6,
+        3.4,
+        3.8,
+        4.2,
+        4.6,
+        5.0
+      ],
+      "text": "For gross monthly incomes above $42,500, add the amount of child support for $42,500 to 2.6% (1 child), 3.4% (2), 3.8% (3), 4.2% (4), 4.6% (5) or 5.0% (6) of gross income above $42,500 (§ 20-108.2(B))."
+    },
+    "effective": "2014-07-01",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 91,
+    "multiplier": 1.4,
+    "reductionTable": null,
+    "text": "Shared custody applies where a party has custody or visitation for more than 90 days a year (a day = 24 hours; an overnight of less than 24 hours counts as one-half day). Shared support need = schedule amount x 1.4; each parent's amount = shared support need x the other parent's custody share, plus the other parent's health-care and work-related child-care costs, multiplied by that parent's income share; the two amounts are netted. The shared amount is presumptive unless a party shows the sole custody amount is lower, in which case the lesser applies (Va. Code § 20-108.2(G)(3)).",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "cost of health, vision and dental coverage for the children (per-person cost) added to basic obligation; payer's obligation reduced by premiums he or she pays",
+    "text": "Work-related child-care costs (subsection F) and health/vision/dental coverage costs (subsection E) are added to the basic obligation and divided in proportion to gross incomes; unreimbursed medical and dental expenses are paid in proportion to gross incomes outside the guideline amount (§ 20-108.2(D), (E), (F), (G)(1)).",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "A presumptive minimum obligation of 'the statutory minimum' per month applies when the sole-custody amount is lower, except for parents who are institutionalized, imprisoned for life, totally and permanently disabled (including SSI recipients) or otherwise involuntarily unable to produce income. If the obligor's gross income is at or below 150% of the federal poverty level, the court may go below the minimum on evidence of no ability to pay. In shared custody, if either parent's gross income is at or below 150% of the poverty level, the shared amount is not presumptive (§ 20-108.2(B), (G)(3)(d)).",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+  },
+  "statute": {
+    "cite": "Va. Code § 20-108.2",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+  },
+  "guidelinesUrl": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "Support continues past 18 for a child who is a full-time high school student, not self-supporting and living in the home of the parent seeking support, until the child reaches 19 or graduates, whichever comes first; it may continue for a severely and permanently disabled child (Va. Code § 20-124.2(C)).",
+    "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-124.2/"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 992.67,
+      "what": "payer A's monthly share of the basic obligation (sole custody to B, no add-ons)",
+      "source": "Computed by hand from the § 20-108.2(B) schedule: $6,000 row, 2 children = $1,489; 1,489 x 4,000/6,000 = 992.67. No official worked example published in the statute."
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 100
+      },
+      "expected": 818.61,
+      "what": "net monthly shared-custody support paid by A (A has 100 days; no add-ons)",
+      "source": "Computed by hand per § 20-108.2(G)(3): need 1,489 x 1.4 = 2,084.60; A owes 2,084.60 x 265/365 x 4,000/6,000 = 1,008.98; B owes 2,084.60 x 100/365 x 2,000/6,000 = 190.37; net 818.61. Sole amount (992.67) is higher, so shared amount applies."
+    },
+    {
+      "inputs": {
+        "incomeA": 9000,
+        "incomeB": 1000,
+        "children": 1,
+        "overnightsA": 91
+      },
+      "expected": 1125.9,
+      "what": "monthly support paid by A when the sole custody amount is lower than the shared amount (A has 91 days)",
+      "source": "Computed by hand per § 20-108.2(G)(3)(a): $10,000 row, 1 child = $1,251; sole = 1,251 x 0.9 = 1,125.90; shared = 1,751.40 x 274/365 x 0.9 - 1,751.40 x 91/365 x 0.1 = 1,139.61; the lesser (sole) applies."
+    },
+    {
+      "inputs": {
+        "incomeA": 45000,
+        "incomeB": 5000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 3150.9,
+      "what": "payer A's monthly share above the top of the schedule (combined $50,000, 1 child)",
+      "source": "Computed by hand per § 20-108.2(B): $42,500 row = $3,306 + 2.6% x 7,500 = $3,501; x 45,000/50,000 = 3,150.90."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The schedule runs from $0-350 to $42,500 of combined monthly gross income for 1 to 6 children; above $42,500 a fixed percentage of the excess (2.6% to 5.0%) is added (§ 20-108.2(B)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+    },
+    {
+      "text": "The shared-custody threshold is more than 90 days a year with the parent, and the shared support need is the schedule amount multiplied by 1.4 (§ 20-108.2(G)(3)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+    },
+    {
+      "text": "The guideline must be reviewed every four years by the 15-member Child Support Guidelines Review Panel, which reports to the General Assembly (§ 20-108.2(H)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+    },
+    {
+      "text": "One-half of self-employment tax paid and spousal support paid under an order are deducted from gross income; spousal support received is included (§ 20-108.2(C)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+    },
+    {
+      "text": "The Department of Social Services must set support at the amount produced by the guideline (§ 20-108.2(A)).",
+      "url": "https://law.lis.virginia.gov/vacode/title20/chapter6.1/section20-108.2/"
+    }
+  ],
+  "uncertain": [
+    "The current text of § 20-108.2(B) refers to 'the statutory minimum' without stating a dollar amount; the 2014 amendment (2014 Acts c. 667) replaced '$65' by 'the statutory minimum'. The lowest schedule row (0-350) gives $68 for one child; the exact statutory minimum amount is not stated in the section.",
+    "Schedule effective date: the current schedule (up to $42,500) was enacted by 2014 Acts c. 667 (HB 933, approved April 6, 2014); 2014-07-01 is the default effective date for regular-session acts, not read in an enactment clause. Later amendments (2018, 2020, 2022, 2025) did not change the schedule (2018-06 archived text identical).",
+    "The statute says amounts between rows 'shall be extrapolated' (read as linear interpolation between rows).",
+    "No official state calculator URL verified (Virginia DCSE online calculator not read).",
+    "Calculator: in shared custody, work-related child care is treated as paid by the parent with more days and the premium by the parent named in the input; the 'statutory minimum' order is not applied (no dollar amount in § 20-108.2(B))."
+  ]
+}

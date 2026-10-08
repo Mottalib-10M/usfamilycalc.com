@@ -1,0 +1,128 @@
+{
+  "slug": "new-york",
+  "name": "New York",
+  "abbr": "NY",
+  "verified": "2026-10-08",
+  "scope": "Temporary maintenance (DRL § 236(B)(5-a)) and post-divorce maintenance (DRL § 236(B)(6)); same amount formula for both; advisory duration schedule for post-divorce maintenance only. Actions commenced under Part B.",
+  "formula": {
+    "text": "DRL § 236(B)(5-a)(c) and (6)(c), for payor income up to the income cap: (1) if child support will be paid and the payor is the non-custodial parent: 20% of payor income minus 25% of payee income; (2) otherwise (no child support, or payor is the custodial parent): 30% of payor income minus 20% of payee income. Then 40% of combined income minus payee income. The guideline amount is the lower of the two; zero if <= 0. Maintenance is computed before child support. Above the cap, additional maintenance is discretionary (para. d). If the guideline amount would reduce the payor below the self-support reserve, the amount is the payor's income minus the reserve; payor below the reserve = rebuttable presumption of no maintenance. Income = CSSA income (DRL § 240) without deducting maintenance paid to this spouse.",
+    "params": {
+      "incomeCapPayorAnnual": 241000,
+      "incomeCapEffective": "2026-03-01",
+      "previousIncomeCap": 228000,
+      "statutoryBaseCap": 184000,
+      "withChildSupport": {
+        "payorPct": 20,
+        "payeePct": 25
+      },
+      "withoutChildSupport": {
+        "payorPct": 30,
+        "payeePct": 20
+      },
+      "capPctOfCombined": 40,
+      "selfSupportReserve": 21546,
+      "selfSupportReserveEffective": "2026-03-01",
+      "capAdjustment": "every two years from March 1, 2020 by the CPI-U change, rounded to the nearest $1,000; published by the Office of Court Administration"
+    },
+    "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+  },
+  "duration": {
+    "text": "DRL § 236(B)(6)(f)(1) advisory schedule for post-divorce maintenance (length of marriage = date of marriage to commencement of the action): 0 up to and including 15 years: 15%-30% of the length of the marriage; more than 15 up to and including 20 years: 30%-40%; more than 20 years: 35%-50%. The court may award non-durational maintenance in an appropriate case (f)(2). Temporary maintenance lasts no later than the judgment of divorce (5-a)(g).",
+    "table": [
+      {
+        "marriageYearsMin": 0,
+        "marriageYearsMax": 15,
+        "pctMin": 15,
+        "pctMax": 30,
+        "bounds": "0 up to and including 15"
+      },
+      {
+        "marriageYearsMin": 15,
+        "marriageYearsMax": 20,
+        "pctMin": 30,
+        "pctMax": 40,
+        "bounds": "more than 15 up to and including 20"
+      },
+      {
+        "marriageYearsMin": 20,
+        "marriageYearsMax": null,
+        "pctMin": 35,
+        "pctMax": 50,
+        "bounds": "more than 20"
+      }
+    ],
+    "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+  },
+  "eligibility": {
+    "text": "On application, the court shall order the guideline amount up to the cap unless it finds it unjust or inappropriate under the listed factors (DRL § 236(B)(5-a)(h), (6)(e)), with written reasons. Maintenance ends on the death of either party or the payee's remarriage (§ 236(B)(1)(a), (6)(f)(3)).",
+    "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+  },
+  "taxNote": {
+    "text": "Federal: for divorce or separation agreements executed after 2018 (or older ones modified to adopt the new rule), the payer cannot deduct alimony and the recipient does not include it in gross income (IRS Topic No. 452).",
+    "url": "https://www.irs.gov/taxtopics/tc452"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "payer": 12500,
+        "payee": 3333.3333333333335,
+        "years": 18,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": {
+        "monthly": 3000.0,
+        "durationMonths": 86.4
+      },
+      "what": "monthly guideline maintenance, no child support (annual 36,000), 18 years: 30%-40%",
+      "source": "computed by hand from DRL § 236(B)(6)(c)-(d), (f) and the March 1, 2026 cap"
+    },
+    {
+      "inputs": {
+        "payer": 12500,
+        "payee": 3333.3333333333335,
+        "years": 10,
+        "children": true,
+        "childSupport": 0
+      },
+      "expected": 1666.67,
+      "what": "monthly guideline maintenance, payor pays child support (annual 20,000)",
+      "source": "computed by hand from DRL § 236(B)(6)(c)-(d), (f) and the March 1, 2026 cap"
+    },
+    {
+      "inputs": {
+        "payer": 25000,
+        "payee": 0,
+        "years": 25,
+        "children": false,
+        "childSupport": 0
+      },
+      "expected": 6025.0,
+      "what": "monthly guideline maintenance on income up to the $241,000 cap (30% x 241,000 / 12)",
+      "source": "computed by hand from DRL § 236(B)(6)(c)-(d), (f) and the March 1, 2026 cap"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Since March 1, 2026 the maintenance guideline applies to the payor's income up to $241,000 (previously $228,000), and the self-support reserve is $21,546 (NY Courts notice).",
+      "url": "https://www.nycourts.gov/divorce-resources/important-information-about-matrimonial-matters"
+    },
+    {
+      "text": "When a party is unrepresented, the court may not enter a maintenance order without telling them the guideline amount (DRL § 236(B)(5-a)(h)(3), (6)(g)).",
+      "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+    },
+    {
+      "text": "If the payor defaults or income evidence is insufficient, temporary or post-divorce maintenance is based on the payee's needs or the pre-divorce standard of living, whichever is greater (DRL § 236(B)(5-a)(j), (6)(i)).",
+      "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+    },
+    {
+      "text": "Actual retirement of the payor with a substantial drop in income is a ground to modify post-divorce maintenance (DRL § 236(B)(6)(f)(4)).",
+      "url": "https://www.nysenate.gov/legislation/laws/DOM/236"
+    }
+  ],
+  "uncertain": [
+    "nycourts.gov returns 403 to scripts; the March 1, 2026 figures ($241,000 cap, $21,546 self-support reserve) were read in a browser on the official notice page, not downloaded to raw/.",
+    "DRL § 236 text read in a browser on nysenate.gov (revision dated 2026-01-23); curl gets 403."
+  ],
+  "incomeBasis": "gross"
+}

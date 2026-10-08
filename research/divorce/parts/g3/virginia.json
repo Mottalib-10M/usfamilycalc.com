@@ -1,0 +1,19 @@
+{
+  "slug": "virginia", "name": "Virginia", "abbr": "VA",
+  "filingFee": 60, "responseFee": 0,
+  "feeScope": "statewide (base clerk's fee; local add-on fees vary by circuit court)",
+  "feeText": "In all divorce and separate maintenance proceedings the circuit court clerk's fee chargeable to the plaintiff is $60, $10 of which goes to the Courts Technology Fund; no fee is charged for a counterclaim or any other responsive pleading in a divorce (Va. Code § 17.1-275(A)(26)). Other statutory and local add-on fees (e.g. law library, courthouse, service) are not included.",
+  "feeUrl": "https://law.lis.virginia.gov/vacode/title17.1/chapter2/section17.1-275/",
+  "otherFees": [ { "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)", "amount": 12, "url": "https://www.vacourts.gov/caseinfo/cccivilfeeshelp.html" } ],
+  "waiver": { "name": "Petition for Proceeding in Civil Case Without Payment of Fees or Costs (Form CC-1414)", "url": "https://www.vacourts.gov/forms/circuit/cc1414.pdf" },
+  "residency": { "text": "One of the parties must have been an actual bona fide resident and domiciliary of Virginia for at least six months before filing (Va. Code § 20-97).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-97/" },
+  "waitingPeriod": { "days": 0, "text": "No waiting period after filing, but a no-fault divorce requires living separate and apart without cohabitation for one year, or six months if there is a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/" },
+  "separationRequiredDays": 365,
+  "simplified": { "text": "No summary procedure; the shortened route is the six-month separation divorce for spouses with a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/" },
+  "parentingClass": { "required": true, "text": "Where custody, visitation or support of a child is contested, the parties must show they attended within the prior 12 months, or will attend within 45 days, an educational seminar approved by the Office of the Executive Secretary of the Supreme Court of Virginia; in uncontested cases the court may require it only for good cause (Va. Code § 20-103; § 16.1-278.15).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-103/" },
+  "uncertain": [
+    "The total amount collected in Fairfax County (most populous) including local add-ons was not verified: the vacourts.gov per-court fee PDFs and fee calculator could not be retrieved; filingFee is the statewide base clerk's fee only.",
+    "separationRequiredDays = 365 is the general rule; it is 180 days with a separation agreement and no minor children (§ 20-91(A)(9)(a)).",
+    "vacourts.gov circuit civil fee help page read from the Internet Archive 2026 copy."
+  ]
+}

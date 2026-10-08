@@ -1,0 +1,58 @@
+{
+ "slug": "new-york",
+ "base": "All sums of money received and paid out by the fiduciary, with property received or distributed valued as money, excluding specific legacies and devises (SCPA § 2307(1),(2)).",
+ "schedules": [
+  {
+   "who": "Executor/administrator commission (SCPA § 2307)",
+   "tiers": [
+    {
+     "upTo": 100000,
+     "pct": 5
+    },
+    {
+     "upTo": 300000,
+     "pct": 4
+    },
+    {
+     "upTo": 1000000,
+     "pct": 3
+    },
+    {
+     "upTo": 5000000,
+     "pct": 2.5
+    },
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "5% of the first $100,000, 4% of the next $200,000, 3% of the next $700,000, 2.5% of the next $4,000,000, 2% of all sums above $5,000,000; computed one-half on receiving and one-half on paying out (SCPA § 2307(1)).",
+   "url": "https://www.nysenate.gov/legislation/laws/SCP/2307",
+   "capNote": "The full commission assumes the whole base is both received and paid out; property not distributed earns only the receiving half."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 500000,
+   "expected": {
+    "Executor/administrator commission (SCPA § 2307)": 19000
+   },
+   "source": "computed by hand: 5,000 + 8,000 + 3% x 200,000"
+  },
+  {
+   "estate": 1000000,
+   "expected": {
+    "Executor/administrator commission (SCPA § 2307)": 34000
+   },
+   "source": "computed by hand: 5,000 + 8,000 + 21,000"
+  },
+  {
+   "estate": 6000000,
+   "expected": {
+    "Executor/administrator commission (SCPA § 2307)": 154000
+   },
+   "source": "computed by hand: 34,000 + 100,000 + 20,000"
+  }
+ ]
+}

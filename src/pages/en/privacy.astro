@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL, CLARITY_ID } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Privacy policy of ${SITE_NAMES[lang]}: incomes stay on your device`} description="What the child support, alimony, divorce, probate and workers' comp calculators process: no cookies, no account, no personal data kept by the publisher. Your US and EU rights." lang={lang} noindex={true} breadcrumbs={[{ label: 'Privacy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Privacy policy</h1>
+    <p>This policy covers {SITE_URL}. Family finances are among the most private figures a person can type into a website, so the calculators were built to never need them on a server. The publisher is established in France: the EU General Data Protection Regulation applies to everything the site does, for every visitor. Residents of US states with a consumer privacy law, California among them, keep at least the rights listed here.</p>
+    <h2>1. Who is responsible</h2>
+    <LegalIdentity lang={lang} />
+    <h2>2. What never leaves your browser</h2>
+    <p>Incomes of either parent, overnights, child care costs, a spouse's earnings, the length of a marriage, an estate's value, a weekly wage or the days you were off work: all of it is computed by code running in your own browser. None of it is sent to us, stored by us or tied to your identity. The "copy share link" button writes your inputs into the address of the page so that you can send the calculation to someone; anyone you give that link to can read those inputs, so share it with care.</p>
+    <h2>3. What is processed</h2>
+    <h3>Hosting logs</h3><p>Like every web host, GitHub records the IP address, the time, the page requested and the browser type of each request, to keep the service secure. Legal basis: legitimate interest. Retention follows GitHub's own policy.</p>
+    {CLARITY_ID
+      ? <><h3>Anonymous stability monitoring, without cookies</h3><p>To find broken pages and scripts, the site loads Microsoft Clarity (Microsoft Ireland Operations Limited, One Microsoft Place, Dublin) in its cookie-free mode: errors, loading times, clicks that lead nowhere and scrolling are measured for each page view, without any cookie and without linking visits together, and the page content and everything you type are masked. Microsoft receives the technical data of the request, including the IP address. Recordings are kept 30 days and aggregates up to 13 months. Legal basis: legitimate interest in a working site (Article 6(1)(f) GDPR). You can object by blocking clarity.ms or by writing to us.</p></>
+      : <><h3>No analytics</h3><p>No audience measurement, analytics, advertising or social media tool is loaded on this site today. If a stability monitoring tool is ever added, this page will name it, say what it records and how to refuse it, before it is switched on.</p></>}
+    <h3>E-mails</h3><p>If you write to us, we keep your address and your message to answer you, and delete them three years after the last exchange. Please do not send court documents, pay stubs or medical records: a description of the figure you question is enough.</p>
+    <h2>4. No sale, no sharing</h2><p>We do not sell personal information, we do not share it for cross-context behavioral advertising, and we do not build profiles. There is no advertising on the site.</p>
+    <h2>5. Recipients and transfers</h2><p>The host, GitHub, Inc., is in the United States; request data may be processed there under the EU–US Data Privacy Framework.</p>
+    <h2>6. Your rights</h2><p>You may ask for access, correction, deletion, restriction, portability, or object to processing, by writing to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>; we answer within one month. You may also complain to the {LEGAL.supervisoryAuthority} (<a href={LEGAL.supervisoryAuthorityUrl} rel="nofollow noopener" target="_blank">{LEGAL.supervisoryAuthorityUrl}</a>).</p>
+    <h2>7. Children</h2><p>The site is meant for adults dealing with a separation, an estate or an injury. It is not directed at children under 13 and collects nothing from them.</p>
+    <p>See also the <a href={route('cookies', lang)}>cookies page</a> and the <a href={route('terms', lang)}>legal notice</a>. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

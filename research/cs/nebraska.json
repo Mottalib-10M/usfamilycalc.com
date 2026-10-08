@@ -1,0 +1,169 @@
+{
+  "slug": "nebraska",
+  "name": "Nebraska",
+  "abbr": "NE",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly net income table",
+  "incomeBasis": "net",
+  "incomeDefinition": "Total monthly income from all sources except means-tested public assistance (including any earned income tax credit) and payments received for children of prior marriages; earning capacity may be used; regular overtime may be counted; income is annualized and divided by 12 (Neb. Ct. R. § 4-204). Net income deducts federal and state income taxes (standard deductions), FICA/self-employment tax, mandatory retirement contributions (or voluntary contributions up to 4% of gross), child support previously ordered for other children, a credit for other children supported, and the parent's own health insurance cost up to 5% of gross income (§ 4-205).",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/nebraska.json",
+    "columns": "combined monthly net income, then basic obligation for 1..6 children",
+    "minIncome": 500,
+    "maxIncome": 20000,
+    "step": 50,
+    "lookup": "floor",
+    "lookupRule": "The combined monthly net income from line 4 of worksheet 1 is compared to table 1, reading across to the column for the number of children (Neb. Ct. R. § 4-206). The rule does not state how to treat incomes between two $50 rows; 'floor' is an implementation choice.",
+    "belowMin": {
+      "rule": "Table rows from $500 to $1,300 show $50 for every number of children. Minimum support is $50 per month or 10% of the obligor's net income, whichever is greater, except in cases of disability or incarceration (Neb. Ct. R. § 4-209).",
+      "amounts": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    "aboveMax": {
+      "method": "percent-of-excess",
+      "pct": [
+        10,
+        10,
+        10,
+        12,
+        13,
+        14
+      ],
+      "text": "If total net income exceeds $20,000 monthly, support may be more but not less than at $20,000. As an aid (not a rebuttable presumption) the court may use the $20,000 amount plus 10% of net income above $20,000 for one, two and three children, 12% for four, 13% for five and 14% for six (Neb. Ct. R. § 4-203(C))."
+    },
+    "effective": "2025-01-01",
+    "url": "https://supremecourt.nebraska.gov/sites/default/files/childsup_table.pdf"
+  },
+  "percent": null,
+  "formula": {
+    "text": "Low-income parameters of the Nebraska guidelines used by the calculator (Neb. Ct. R. §§ 4-209, 4-218, 4-212).",
+    "params": {
+      "minimumSupportFloor": 50,
+      "minimumSupportPctOfNet": 10,
+      "basicSubsistenceLimitMonthly": 1330,
+      "jointCustodyPresumptionDaysOver": 142,
+      "jointCustodyDiscretionFromDays": 109
+    },
+    "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-218-basic-subsistence-limitation"
+  },
+  "shared": {
+    "method": "cross-credit",
+    "thresholdOvernights": 143,
+    "multiplier": 1.5,
+    "reductionTable": null,
+    "text": "When joint physical custody is ordered and each parent's parenting time exceeds 142 days per year, support is presumptively calculated with worksheet 3; at 109 to 142 days for one parent, worksheet 3 is discretionary; a 'day' generally includes an overnight (Neb. Ct. R. § 4-212). Worksheet 3: table amount x 1.5, split by each parent's income percentage; each parent's share x the percentage of the year the child is with the other parent; the difference is owed; health insurance premiums are adjusted separately. Outside § 4-212, support may be reduced by up to 80% during parenting-time periods of 28 days or more in any 90-day period (§ 4-210).",
+    "url": "https://supremecourt.nebraska.gov/sites/default/files/worksheet3.pdf"
+  },
+  "addOns": {
+    "childcare": "Not in the table; net child care (actual cost minus the federal child care tax credit) is allocated to the obligor up to the obligor's income percentage and added to the basic obligation; the court may impute the tax credit at 25% (max $62.50/month, one child) or 20% (max $100/month, two or more) above stated income levels (Neb. Ct. R. § 4-214).",
+    "healthInsurance": "The increased cost of health insurance for the children is added to the table amount and prorated; the parent paying the premium gets a credit (§ 4-215(A)).",
+    "text": "Children's health care expenses up to $250 per child per year are included in the table; nonreimbursed reasonable and necessary costs above $250 per child per year are allocated in proportion to income (§ 4-215(B)).",
+    "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1330,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "A parent's support, child care and health care obligation shall not reduce his or her net income below $1,330 net monthly for one person, or the HHS poverty guidelines, except that minimum support may still be ordered (Neb. Ct. R. § 4-218, amended January 28, 2026, effective January 1, 2026). Minimum support is the greater of $50 or 10% of the obligor's net income (§ 4-209).",
+    "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-218-basic-subsistence-limitation"
+  },
+  "statute": {
+    "cite": "Neb. Ct. R. §§ 4-201 to 4-222 (Nebraska Child Support Guidelines); Neb. Rev. Stat. § 42-364.16",
+    "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines"
+  },
+  "guidelinesUrl": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines",
+  "officialCalculatorUrl": "http://www.nebraskachildsupportcalculator.com/ChildSupport/trunk/?_p=subscribeForm",
+  "emancipation": {
+    "text": "Support continues until each child reaches majority under Nebraska law, is emancipated, becomes self-supporting, marries or dies (Neb. Ct. R. § 4-208); the Judicial Branch's termination guidance lists a child reaching 19 years as a ground for terminating support.",
+    "url": "https://supremecourt.nebraska.gov/self-help/families-children/child-support-termination"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 500,
+        "children": 3,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 712.0,
+      "what": "Table 1 basic amount for 3 children at combined net $2,000",
+      "source": "Official worked example, Neb. Ct. R. § 4-206 ($712). The same example's § 4-207 share ($534 for the father, 75%) is not used as an engine case: it ignores the § 4-218 basic subsistence limitation, which in 2026 ($1,330) caps that father's support at $170 (see the next case)."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 500,
+        "children": 3,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 170.0,
+      "what": "payer's monthly support after the basic subsistence limitation: 75% x $712 = $534 would leave $966 < $1,330, so support = $1,500 - $1,330 = $170 (above the minimum, greater of $50 or 10% = $150)",
+      "source": "Computed by hand from Neb. Ct. R. §§ 4-206, 4-207 (official example incomes), 4-209 and 4-218 (amended January 28, 2026, effective January 1, 2026)."
+    },
+    {
+      "inputs": {
+        "incomeA": 25500,
+        "incomeB": 4500,
+        "children": 1,
+        "overnightsA": 0,
+        "incomeBasis": "net"
+      },
+      "expected": 2789.7,
+      "what": "obligor (85%) share at combined net $30,000, one child: $2,282 + 10% of the $10,000 above $20,000 = $3,282 x 0.85",
+      "source": "Rule text of Neb. Ct. R. § 4-203(C) (10 percent of net income above $20,000). The rule's own worked example prints '$2,000 ($20,000 times .10)' and $4,282 / $3,640, which applies 10% to $20,000 instead of to the $10,000 excess its text describes; the earlier version of this case copied that arithmetic and was wrong."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 3000,
+        "children": 2,
+        "overnightsA": 160,
+        "incomeBasis": "net"
+      },
+      "expected": 126.59,
+      "what": "payer's monthly support under joint physical custody (Worksheet 3): $1,369 x 1.5 = $2,053.50; payer 50% = $1,026.75 x 205/365 = $576.67; other parent $1,026.75 x 160/365 = $450.08; difference",
+      "source": "Computed by hand from Neb. Ct. R. § 4-212 and Worksheet 3 (table row $6,000, two children = $1,369)."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Nebraska's guidelines are Supreme Court rules (Neb. Ct. R. § 4-201 et seq.), based on the equal duty of both parents to contribute in proportion to their net incomes.",
+      "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-201-introduction"
+    },
+    {
+      "text": "The basic subsistence limitation is updated every year; it is $1,330 net per month effective January 1, 2026 (Neb. Ct. R. § 4-218).",
+      "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-218-basic-subsistence-limitation"
+    },
+    {
+      "text": "Voluntary retirement contributions are deductible up to 4% of gross employment income when there is no mandatory plan (Neb. Ct. R. § 4-205(C)).",
+      "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-205-deductions"
+    },
+    {
+      "text": "Incarceration may not be treated as voluntary unemployment or underemployment (Neb. Ct. R. § 4-204(F)).",
+      "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-204-total-monthly-income"
+    },
+    {
+      "text": "Final child support is rounded to the nearest whole dollar (Neb. Ct. R. § 4-221).",
+      "url": "https://supremecourt.nebraska.gov/supreme-court-rules/chapter-4-children-and-families/article-2-child-support-guidelines/%C2%A7-4-221-rounding-nearest-whole-dollar"
+    }
+  ],
+  "uncertain": [
+    "The table PDF's form page says 'Form Revised January 2025' (PDF modified 2025-01-30); the exact effective date of this table revision is not stated on the PDF, 2025-01-01 is an estimate. § 4-218's subsistence figure was updated effective January 1, 2026 ($1,330); whether Table 1's low-income rows ($50 up to $1,300, $169 at $1,350 for one child) were recomputed for 2026 could not be confirmed.",
+    "The brief said 142 days; the rule says each parent's time must EXCEED 142 days for the worksheet 3 presumption, so thresholdOvernights = 143; 109-142 days is discretionary.",
+    "The PDF text layer detaches the values of rows $1,100, $1,150 and $1,200 (all $50); the script re-pairs them and asserts the official example row ($2,000: 387 575 712).",
+    "No rounding/interpolation rule between table rows is stated; 'floor' is an implementation choice.",
+    "Neb. Rev. Stat. § 43-2101 (age of majority 19) could not be read: nebraskalegislature.gov refused connections on 2026-10-08. Emancipation text relies on Neb. Ct. R. § 4-208 and the Judicial Branch self-help page.",
+    "officialCalculatorUrl is the calculator linked from the Nebraska Judicial Branch child support page; its domain is not .gov."
+  ]
+}

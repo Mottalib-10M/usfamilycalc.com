@@ -1,0 +1,17 @@
+{
+  "slug": "illinois", "name": "Illinois", "abbr": "IL",
+  "filingFee": null, "responseFee": null,
+  "feeScope": "county (Cook County)",
+  "feeText": "Circuit clerk civil filing fees are set by county board ordinance within statutory caps; for a county of 3,000,000 or more (Cook) Schedule 1 is capped at $366 and Schedule 2 at $357 (705 ILCS 105/27.1b(a)). The Cook County ordinance amount for a dissolution petition was not found on an official page.",
+  "feeUrl": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=070501050K27.1b",
+  "otherFees": [],
+  "waiver": { "name": "Application for Waiver of Court Fees (statewide approved form, approved 08/2025)", "url": "https://www.illinoiscourts.gov/forms/approved-forms/forms-approved-forms-circuit-court/fee-waiver-civil" },
+  "residency": { "text": "One spouse must have resided (or been stationed as a member of the armed services) in Illinois for 90 days before filing or before the findings (750 ILCS 5/401(a)).", "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K401" },
+  "waitingPeriod": { "days": 0, "text": "No statutory waiting period; the only ground is irreconcilable differences. Living separate and apart for a continuous 6 months before judgment creates an irrebuttable presumption that the irreconcilable-differences requirement is met (750 ILCS 5/401(a), (a-5)).", "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K401" },
+  "simplified": { "text": "Joint simplified dissolution (750 ILCS 5/452): no children of the marriage, marriage of 8 years or less, no real property, retirement only in IRAs under $10,000 combined, maintenance waived, net marital property under $50,000, combined gross income under $60,000 and neither spouse over $30,000, written agreement dividing assets over $100 and debts.", "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075000050K452" },
+  "parentingClass": { "required": true, "text": "In cases involving allocation of parental responsibilities, all parties must complete an approved parenting education program of at least four hours, no later than 60 days after the initial case management conference, unless excused for good cause (Ill. S. Ct. Rule 924).", "url": "https://ilcourtsaudio.blob.core.windows.net/antilles-resources/resources/7ae8a196-2a43-4484-9666-43098da60282/S_Ct_Rules_full.pdf" },
+  "uncertain": [
+    "Cook County dissolution filing fee and appearance (response) fee not verified: the Clerk of the Circuit Court of Cook County site (cookcountyclerkofcourt.org) publishes no current fee schedule that could be found; only the statutory caps of 705 ILCS 105/27.1b are cited.",
+    "ilga.gov refused connections (ECONNREFUSED) on 2026-10-08; 750 ILCS 5/401, 5/452 and 705 ILCS 105/27.1b were read from the Internet Archive 2026 copy of the official ilga.gov URLs."
+  ]
+}

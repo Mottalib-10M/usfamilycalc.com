@@ -1,0 +1,39 @@
+{
+  "slug": "georgia", "name": "Georgia", "abbr": "GA", "verified": "2026-10-08",
+  "agency": { "name": "State Board of Workers' Compensation (SBWC)", "url": "https://sbwc.georgia.gov/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Two-thirds of the average weekly wage, but not more than $800.00 per week for an accident on or after July 1, 2023 (O.C.G.A. § 34-9-261).",
+    "max": 800.00, "min": 50.00,
+    "minText": "Not less than $50.00 per week; when the weekly wage is below $50.00 the employer pays the full weekly wage (O.C.G.A. § 34-9-261).",
+    "effective": "2023-07-01", "periodLabel": "accidents on or after July 1, 2023 (still in force in 2026: no change to § 34-9-261 in the 2025 or 2026 sessions)",
+    "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs", "asOf": "2023-07-01"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 21,
+    "text": "Weekly income benefits are due if the worker is unable to work for more than 7 days; the first check should be mailed within 21 days after the first day missed, and if more than 21 consecutive days are missed the first week is paid (O.C.G.A. § 34-9-220).",
+    "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs"
+  },
+  "ttdDuration": {
+    "maxWeeks": 400,
+    "text": "For accidents on or after July 1, 1992, income benefits are payable for up to 400 weeks; catastrophic injuries may receive lifetime benefits (O.C.G.A. § 34-9-261).",
+    "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs"
+  },
+  "ppd": {
+    "text": "Permanent partial disability benefits are based on the extent of loss of use of a body part as determined by the authorized treating physician, paid under the schedule of O.C.G.A. § 34-9-263.",
+    "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs"
+  },
+  "statute": { "cite": "O.C.G.A. §§ 34-9-220, 34-9-261, 34-9-262, 34-9-263", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" },
+  "facts": [
+    { "text": "Employers must post a panel of at least six physicians (including one orthopedist and no more than two industrial clinics); the worker may choose any one and make one change within the panel without permission.", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" },
+    { "text": "Temporary partial disability (reduced-wage) benefits run for a maximum of 350 weeks from the date of injury and cannot exceed $533.00 per week for accidents on or after July 1, 2023 (O.C.G.A. § 34-9-262).", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" },
+    { "text": "For non-catastrophic injuries on or after July 1, 2013, medical treatment is limited to 400 weeks.", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" },
+    { "text": "Attorney fees above $100 must be approved by the Board and cannot exceed 25% of the worker's weekly benefits award or settlement.", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" },
+    { "text": "A surviving spouse with no children is limited to a total of $320,000.00 in death benefits.", "url": "https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs" }
+  ],
+  "uncertain": [
+    "The $50.00 minimum was read in the § 34-9-261 text shown in 2022 bill HB 1409 (https://www.legis.ga.gov/api/legislation/document/20212022/207188); the 2023 increase to $800.00 (HB 480) text was not opened. SBWC FAQ does not state the minimum.",
+    "Several law-firm sites claim a $850 maximum from July 1, 2026; the official 2025 and 2026 Summaries of General Statutes (legis.ga.gov) list no amendment to § 34-9-261, and the SBWC FAQ still states $800.00. Kept $800.00.",
+    "O.C.G.A. text is published via LexisNexis and was not read directly; section numbers 34-9-220 and 34-9-263 are cited for the rules described by SBWC."
+  ]
+}

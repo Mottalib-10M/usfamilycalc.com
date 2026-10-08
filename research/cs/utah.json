@@ -1,0 +1,152 @@
+{
+ "slug": "utah",
+ "name": "Utah",
+ "abbr": "UT",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined monthly adjusted gross income table (Utah Code § 81-6-304) with an obligor-only low income table (§ 81-6-305)",
+ "incomeBasis": "adjusted-gross",
+ "incomeDefinition": "Gross income per Utah Code § 81-6-203 (income may be imputed; the statute refers to minimum wage for a 40-hour work week). Adjusted gross income = gross income minus alimony previously ordered and paid and child support previously ordered, and credits for other children under § 81-6-202(7)-(8); alimony ordered in the pending case is not subtracted (§ 81-6-204(1), (3)).",
+ "period": "monthly",
+ "maxChildren": 6,
+ "schedule": {
+  "file": "cs-schedules/utah.json",
+  "columns": "income bracket from, to, then base combined obligation for 1..6 children (null where the table shows no amount)",
+  "minIncome": 1951,
+  "maxIncome": 100000,
+  "step": null,
+  "lookup": "bracket",
+  "lookupRule": "Find the bracket containing the combined adjusted monthly gross income (§ 81-6-204(1)(d)). Brackets are $100 wide from $2,001 to $20,000 and $2,000 wide from $20,001 to $100,000 (first row $1,951-$2,000). If no amount is listed, the base combined obligation is $0 (§ 81-6-204(4)) and the obligor-only low income table applies (§ 81-6-205(3)). Amounts and incomes are rounded to the nearest dollar (§ 81-6-204(10)).",
+  "belowMin": {
+   "rule": "Where the base table shows no amount, each parent's award comes from the low income table on that parent's own adjusted gross income (§ 81-6-205(3)); a parent whose own income is below the top of the low income table pays the lesser of the two tables (§ 81-6-205(4)). Minimum sole-custody award $30 (§ 81-6-205(5)). Low income table: cs-schedules/utah.json#lowIncomeTable (Utah Code § 81-6-305).",
+   "amounts": null
+  },
+  "aboveMax": {
+   "method": "discretion",
+   "pct": null,
+   "text": "Above $100,000 combined monthly adjusted gross income the court orders an appropriate and just amount case by case, not less than the highest amount in the table for the number of children (§ 81-6-204(8)). More than six children: court may add amounts (§ 81-6-204(7))."
+  },
+  "effective": "2023-01-01",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S304_2024090120240501.html"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Joint physical custody: more than 30% of overnights (Utah Code § 81-9-101); reduction .0027 x base combined obligation per overnight over 110 and under 131 and .0084 per overnight over 130 (§ 81-6-206(4)); equal parent-time: lower-income parent counted as 183 overnights (§ 81-6-206(7)); sole custody minimum $30 (§ 81-6-205(5)); child care and the child's health premium shared equally (§ 81-6-208(3)(d), § 81-6-209(1)).",
+  "params": {
+   "jointMinPctOfYear": 30,
+   "jointBand1From": 110,
+   "jointBand1To": 130,
+   "jointBand1Factor": 0.0027,
+   "jointBand2From": 130,
+   "jointBand2Factor": 0.0084,
+   "equalTimeLowerIncomeOvernights": 183,
+   "soleMinimumAward": 30,
+   "childcareSharePct": 50,
+   "healthSharePct": 50
+  },
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S206_2024090120240501.html"
+ },
+ "shared": {
+  "method": "other",
+  "thresholdOvernights": 111,
+  "multiplier": null,
+  "reductionTable": [
+   {
+    "overnights": "111-130",
+    "perOvernightFactor": 0.0027
+   },
+   {
+    "overnights": "131+",
+    "perOvernightFactor": 0.0084
+   }
+  ],
+  "text": "Joint physical custody = the child stays with each parent overnight for more than 30% of the year and both contribute to expenses (Utah Code § 81-9-101). The lower-overnight parent's award = income share of the base combined obligation minus (overnights over 110 and under 131 x .0027 x base combined obligation) minus (overnights over 130 x .0084 x base combined obligation); a negative result makes the other parent the obligor; equal parent-time counts the lower-income parent as 183 overnights (§ 81-6-206(3)-(7)). Sole custody: extended parent-time of 25 of 30 days reduces support 50%, 12 of 30 days 25% (§ 81-6-211).",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S206_2024090120240501.html"
+ },
+ "addOns": {
+  "childcare": "Parents share equally reasonable work-related child care expenses; a minimal child care award (§ 81-6-306 table) applies to orders entered or modified on or after January 1, 2027 (§ 81-6-209(1), effective 5/6/2026).",
+  "healthInsurance": "Parents share equally the out-of-pocket premium paid for the child's portion of health insurance and all reasonable uninsured medical and dental expenses (§ 81-6-208(3)(d)-(e)).",
+  "text": "Medical and child care expenses are added to the base child support award (Utah Code § 81-6-101 definition of base child support award; §§ 81-6-208, 81-6-209).",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S209_2026050620260506.html"
+ },
+ "lowIncome": {
+  "selfSupportReserve": null,
+  "period": "monthly",
+  "minimumOrder": 30,
+  "rule": "Low income table based on the obligor's own adjusted gross income (Utah Code § 81-6-305), used when the base table shows no amount or when it gives a lower award (§ 81-6-205(3)-(4)); $30 minimum award in sole custody (§ 81-6-205(5)); joint custody award is $0 if the base combined obligation is $0 (§ 81-6-206(2)).",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S305_2024090120240501.html"
+ },
+ "statute": {
+  "cite": "Utah Code §§ 81-6-201 to 81-6-214, 81-6-301 to 81-6-306 (formerly Title 78B, Chapter 12)",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S204_2024090120240501.html"
+ },
+ "guidelinesUrl": "https://le.utah.gov/xcode/Title81/Chapter6/81-6.html",
+ "officialCalculatorUrl": null,
+ "emancipation": {
+  "text": "A child for support purposes is under 18, or 18 or older while enrolled in high school during the normal and expected year of graduation, or of any age if incapacitated from earning a living (Utah Code § 81-6-101).",
+  "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S101_2026050620260506.html"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 860,
+   "what": "payer A's monthly base child support award (sole custody to B)",
+   "source": "Computed by hand from Utah Code § 81-6-304: combined $6,000 -> bracket 5,901-6,000, 2 children = $1,290; A share 4000/6000 x 1,290 = $860 (§ 81-6-205(2))."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 146
+   },
+   "expected": 617,
+   "what": "payer A's monthly base award in joint physical custody with 146 overnights",
+   "source": "Computed by hand under § 81-6-206(4): 20 overnights (111-130) x .0027 x 1,290 = 69.66; 16 overnights over 130 x .0084 x 1,290 = 173.38; 860 - 69.66 - 173.38 = 616.96, rounded $617 (§ 81-6-204(10))."
+  },
+  {
+   "inputs": {
+    "incomeA": 1500,
+    "incomeB": 0,
+    "children": 1,
+    "overnightsA": 0
+   },
+   "expected": 134,
+   "what": "payer A's monthly award from the low income table",
+   "source": "Computed by hand: combined $1,500 is below the first base-table row ($1,951), so the base combined obligation is $0 (§ 81-6-204(4)) and the low income table at A's $1,500 (bracket 1,491-1,500) gives $134 for one child (§ 81-6-205(3), § 81-6-305)."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Utah moved its child support law from Title 78B, Chapter 12 to the new Utah Domestic Relations Code, Title 81, Chapter 6, effective September 1, 2024 (Laws 2024, ch. 366); the old § 78B-12-301 table is now § 81-6-304.",
+   "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S304_2024090120240501.html"
+  },
+  {
+   "text": "Final orders entered before 2023 could be modified under the current tables only from January 1, 2025 (§ 81-6-304(4)).",
+   "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S304_2024090120240501.html"
+  },
+  {
+   "text": "There is no cap: above $100,000 combined monthly income the court sets a just amount, never below the top of the table (§ 81-6-204(8)).",
+   "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S204_2024090120240501.html"
+  },
+  {
+   "text": "From January 1, 2027 Utah orders must include a minimal child care award from a new table (§ 81-6-306, § 81-6-209(1)(a)(ii)).",
+   "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S209_2026050620260506.html"
+  },
+  {
+   "text": "Uninsured medical and dental expenses and the child's health insurance premium are split 50/50, not by income (§ 81-6-208(3)).",
+   "url": "https://le.utah.gov/xcode/Title81/Chapter6/C81-6-S208_2024090120240501.html"
+  }
+ ],
+ "uncertain": [
+  "The brief cites § 78B-12-301 / § 78B-12-208; those sections were renumbered into Title 81 (Utah Code §§ 81-6-304, 81-6-206) effective 9/1/2024. Current versions read on le.utah.gov on 2026-10-08.",
+  "Joint physical custody threshold: 'more than 30% of the year' (§ 81-9-101); the overnight formula reduces support from the 111th overnight (§ 81-6-206(4)). thresholdOvernights = 111 is derived from these two rules.",
+  "No official Utah calculator URL verified (ors.utah.gov returned 403 from this environment); officialCalculatorUrl = null.",
+  "§ 81-6-306 minimal child care award table (orders on or after January 1, 2027) was not parsed."
+ ]
+}

@@ -1,0 +1,207 @@
+{
+  "slug": "pennsylvania",
+  "name": "Pennsylvania",
+  "abbr": "PA",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined monthly net income schedule (Pa.R.Civ.P. 1910.16-3)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Monthly gross income (normally a six-month average) includes all income listed in 23 Pa.C.S. § 4302 and Pa.R.Civ.P. 1910.16-2(a) (wages, business income, interest, rents, pensions, Social Security and disability benefits, workers' compensation, unemployment, lottery winnings, tax refunds, etc.); public assistance and SSI are excluded (1910.16-2(b)(1)). Only these are deducted to reach net income (1910.16-2(c)(1)): federal, state and local income taxes; unemployment compensation taxes and Local Services Taxes; FICA and non-voluntary retirement payments; mandatory union dues; alimony paid to the other party.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": {
+    "file": "cs-schedules/pennsylvania.json",
+    "columns": "combined monthly net income, then basic child support obligation for 1..6 children",
+    "minIncome": 1300,
+    "maxIncome": 30000,
+    "step": 50,
+    "rows": 575,
+    "lookup": "floor",
+    "lookupRule": "Pa.R.Civ.P. 1910.16-4(a)(1) line 20 says only to determine the basic obligation 'from child support schedule ... based on the number of children and line 19'; the rules do not state how to treat incomes between $50 rows, so the lookup method is the calculator's choice.",
+    "belowMin": {
+      "rule": "Self-Support Reserve (SSR) of $1,255 per month (1910.16-2(e)(1)(i)(B)). If the obligor's own monthly net income and number of children fall in the schedule's shaded area, support is the lesser of (A) the schedule amount at the obligor's income alone and (B) the normal income-shares amount (1910.16-2(e)(1)(ii)). At or below the SSR, support may be awarded only after considering the parties' actual resources and living expenses (1910.16-2(e)(1)(ii)(C)). The shaded area ends at obligor income $1,650 (1 child), $2,000 (2), $2,300 (3), $2,550 (4), $2,800 (5), $3,000 (6), read from the shaded cells of the official Bulletin publication.",
+      "shadedAreaMaxIncomeByChildren": [
+        1650,
+        2000,
+        2300,
+        2550,
+        2800,
+        3000
+      ],
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "percent-of-excess",
+      "base": [
+        3749,
+        4981,
+        5803,
+        6482,
+        7130,
+        7750
+      ],
+      "pct": [
+        4.0,
+        4.0,
+        4.7,
+        5.3,
+        5.8,
+        6.3
+      ],
+      "text": "Pa.R.Civ.P. 1910.16-3.1(a)(2)(i): above $30,000 combined monthly net income, the preliminary basic obligation is $3,749 + 4.0% (1 child), $4,981 + 4.0% (2), $5,803 + 4.7% (3), $6,482 + 5.3% (4), $7,130 + 5.8% (5), $7,750 + 6.3% (6) of the income above $30,000; then adjusted for shared custody and for the child's reasonable needs, but never below the amount at $30,000 (1910.16-3.1(a)(1)). The base amounts equal the $30,000 row of the schedule, so the rule is the top row plus a percentage of the excess."
+    },
+    "effective": "2026-01-01",
+    "edition": "Pa.R.Civ.P. 1910.16-3 as amended August 11, 2025, effective January 1, 2026, 55 Pa.B. 5978",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-3.html",
+    "bulletinUrl": "https://www.pacodeandbulletin.gov/Display/pabull?file=/secure/pabulletin/data/vol55/55-34/1131.html",
+    "checkedRows": [
+      17850,
+      9000,
+      21500,
+      3750,
+      5000,
+      28700,
+      6100,
+      20000,
+      1300,
+      4500,
+      5500,
+      5700,
+      6000,
+      7300,
+      30000
+    ]
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "percent-reduction",
+    "thresholdOvernights": 146,
+    "thresholdText": "40% or more of annual overnights with the obligor (1910.16-4(c)(1)); 40% of 365 = 146",
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "Pa.R.Civ.P. 1910.16-4(a)(1) Part D and (c): if the child spends 40% or more of annual overnights with the obligor, subtract (obligor's overnight percentage - 30 points) from the obligor's income percentage and apply the result to the schedule amount; this is a 10-point cut at 40% rising to 20 points at 50%. With equal time, only the higher-income party can be obligor, and the obligation is reduced if needed so the obligee does not end with more than half of the combined net income (1910.16-4(c)(2)). For several children with different schedules, the obligor's time is averaged (1910.16-4(d)(2)).",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-4.html"
+  },
+  "addOns": {
+    "childcare": "added to basic obligation and shared by income",
+    "healthInsurance": "premium shared by income; obligor's share added (or obligee's share deducted if obligor pays)",
+    "text": "Pa.R.Civ.P. 1910.16-6(a): reasonable child care needed for employment or education is allocated in proportion to net incomes, after reducing it by the federal child care tax credit available to the eligible party. 1910.16-6(b): the health insurance premium (including the paying party's own coverage if a duty of support is owed) is allocated by income; if the obligor pays, the obligee's share is deducted, if the obligee pays, the obligor's share is added. Coverage is reasonable in cost if it does not exceed 5% of the obligor's monthly net income and total support plus expenses does not exceed 50% of that income (1910.16-6(b)(3)(i)(A)).",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-6.html"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1255,
+    "period": "monthly",
+    "minimumOrder": null,
+    "rule": "Pa.R.Civ.P. 1910.16-2(e)(1): the SSR is $1,255 per month; in the shaded area support is the lesser of the obligor-income-only schedule amount and the income-shares amount; at or below the SSR the court considers actual resources and living expenses before awarding support.",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-2.html"
+  },
+  "statute": {
+    "cite": "Pa.R.Civ.P. 1910.16-1 to 1910.16-7 (231 Pa. Code, Chapter 1910)",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-3.html"
+  },
+  "guidelinesUrl": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-4.html",
+  "officialCalculatorUrl": null,
+  "emancipation": {
+    "text": "The domestic relations section sends an emancipation inquiry six months before the child turns 18; support continues to age 18 or high school graduation, whichever is last, unless an agreement or special needs justify more (Pa.R.Civ.P. 1910.19(e)).",
+    "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.19.html"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 5000,
+        "incomeB": 2300,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 1333,
+      "what": "obligor's monthly basic child support obligation (68% of $1,960)",
+      "source": "Official example: Pa.R.Civ.P. 1910.16-4, Comment, Subdivision (c) Example 1 (schedule amount $1,960 at $7,300, two children)."
+    },
+    {
+      "inputs": {
+        "incomeA": 5000,
+        "incomeB": 2300,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 1137,
+      "what": "obligor's monthly basic obligation with 40% of overnights (58% of $1,960)",
+      "source": "Official example: Pa.R.Civ.P. 1910.16-4, Comment, Subdivision (c) Example 1 (45% gives $1,039; equal time gives $941)."
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 2500,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 223,
+      "what": "obligor's monthly basic obligation in the SSR shaded area (lesser of $223 obligor-only and $523 income shares)",
+      "source": "Official example: Pa.R.Civ.P. 1910.16-2, Comment, Subdivision (e)(1)(ii) Example, as amended by 55 Pa.B. 5978 (https://www.pacodeandbulletin.gov/Display/pabull?file=/secure/pabulletin/data/vol55/55-34/1131.html)."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 2700,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 150,
+      "what": "obligor's monthly basic obligation with equally shared custody, capped so the obligee does not end with more than half of combined net income",
+      "source": "Official example: Pa.R.Civ.P. 1910.16-4, Comment, Subdivision (c) Example 2 (schedule $1,715; 33% = $566; adjusted to $150). Equal time entered as 182 overnights for the paying parent."
+    },
+    {
+      "inputs": {
+        "incomeA": 3000,
+        "incomeB": 2500,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 250,
+      "what": "obligor's monthly basic obligation with equally shared custody after income equalization",
+      "source": "Official example: Pa.R.Civ.P. 1910.16-4, Comment, Subdivision (c) Example 3 (schedule $1,694; $593 at 35%; adjusted to $250)."
+    },
+    {
+      "inputs": {
+        "incomeA": 30000,
+        "incomeB": 10000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 3111.75,
+      "what": "obligor's monthly preliminary basic obligation above $30,000 combined (1910.16-3.1(a)(2)(i))",
+      "source": "Computed by hand: $3,749 + 4.0% x $10,000 = $4,149; obligor share 75% = $3,111.75 (before the reasonable-needs analysis of 1910.16-3.1(a)(2)(iii))."
+    }
+  ],
+  "facts": [
+    {
+      "text": "The Basic Child Support Schedule was last replaced effective January 1, 2026 (order of August 11, 2025, 55 Pa.B. 5978); the previous schedule had taken effect January 1, 2022.",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-3.html"
+    },
+    {
+      "text": "Since 2022 the schedule no longer builds in an assumption that the children spend 30% of time with the obligor; it reflects intact-family spending with no custody adjustment (1910.16-3, Explanatory Comment 2021).",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-3.html"
+    },
+    {
+      "text": "For more than six children, add the difference between the six-child and five-child amounts once for each extra child (1910.16-4(b)).",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-4.html"
+    },
+    {
+      "text": "With equally shared custody, the party with the lower monthly net income cannot be ordered to pay basic child support to the higher-income party (1910.16-4(c)(2)(ii)).",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-4.html"
+    },
+    {
+      "text": "Spousal support or alimony pendente lite is computed first and moves income between the parties before child support (33%/40% without children, 25%/30% with children, 1910.16-4(a)(1) Part B).",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/231/chapter1910/s1910.16-4.html"
+    }
+  ],
+  "uncertain": [
+    "shared.thresholdOvernights 146 is 40% of 365 computed by us; the rule states the threshold as a percentage (40% of annual overnights).",
+    "The brief described PA shared custody as a '40% reduction'; the rule is different: at 40%+ overnights the obligor's income percentage is reduced by (overnight % - 30) points, i.e. 10 to 20 points (1910.16-4(a)(1) Part D).",
+    "The shaded (SSR) area is not marked in the PA Code HTML; it was read from the filled rectangles drawn on the schedule pages of the official Pennsylvania Bulletin PDF, Vol. 55 No. 34 (Aug. 23 2025), pages 6005-6006 (https://www.pacodeandbulletin.gov/secure/pabulletin/data/vol55/55-34/55-34.pdf), and it matches the text-run breaks in those rows and the official example (obligor $1,500 with two children is in the shaded area; $1,550 with two children too).",
+    "lookup 'floor' is a calculator choice: the rules do not say how to treat incomes between $50 rows.",
+    "officialCalculatorUrl null: the PA Child Support Program site (childsupport.pa.gov) could not be reached from our network on 2026-10-08.",
+    "Rows checked by eye against the PA Code text: 17850, 9000, 21500, 3750, 5000, 28700, 6100, 20000 (random), plus 1300, 4500, 5500, 5700, 6000, 7300, 30000; 9000, 21500 and 28700 also matched the Bulletin PDF text; all official examples in 1910.16-2 and 1910.16-4 comments match the parsed schedule."
+  ]
+}

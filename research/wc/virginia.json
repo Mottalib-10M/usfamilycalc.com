@@ -1,0 +1,37 @@
+{
+  "slug": "virginia", "name": "Virginia", "abbr": "VA", "verified": "2026-10-08",
+  "agency": { "name": "Virginia Workers' Compensation Commission (VWC)", "url": "https://workcomp.virginia.gov/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Weekly compensation equal to 66 2/3 percent of the employee's average weekly wages, with a minimum of not less than 25 percent and a maximum of not more than 100 percent of the average weekly wage of the Commonwealth; benefits may never exceed the employee's own average weekly wage (Va. Code § 65.2-500(A)).",
+    "max": 1507.01, "min": 376.75,
+    "minText": "Income benefits shall not exceed the employee's average weekly wage, so a worker earning less than the minimum receives their actual AWW (§ 65.2-500(A)).",
+    "effective": "2026-07-01", "periodLabel": "injuries from July 1, 2026 to June 30, 2027 (for July 1, 2025 - June 30, 2026: max $1463.10, min $365.78)",
+    "url": "https://workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage", "asOf": "2026-07-01"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 21,
+    "text": "No compensation for the first seven calendar days of incapacity (medical benefits excepted); compensation starts on the eighth day, and if incapacity continues for more than three weeks it is allowed from the first day (Va. Code § 65.2-509).",
+    "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/"
+  },
+  "ttdDuration": {
+    "maxWeeks": 500,
+    "text": "Total compensation under the Act may not exceed 500 weeks, nor 500 times the Commonwealth's average weekly wage for the applicable year, except for permanent and total incapacity and certain other cases (Va. Code § 65.2-518).",
+    "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/"
+  },
+  "ppd": {
+    "text": "Permanent loss is paid at 66 2/3% of the average weekly wage for a scheduled number of weeks (e.g. thumb 60, index finger 35, hand 150, arm 200, foot 125, leg 175, eye 100, hearing of one ear 50), proportionally for partial loss of use (Va. Code § 65.2-503).",
+    "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/"
+  },
+  "statute": { "cite": "Va. Code §§ 65.2-500, 65.2-503, 65.2-509, 65.2-518, 65.2-709", "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/" },
+  "facts": [
+    { "text": "Cost-of-living supplements are paid on total incapacity and death awards: the COLA rate effective October 1, 2026 is 2.65% (Va. Code § 65.2-709).", "url": "https://workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage" },
+    { "text": "Compensation for permanent and total incapacity under § 65.2-503(C) continues for the employee's lifetime without limit as to total amount (§ 65.2-500(D)).", "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/" },
+    { "text": "Mileage for medical travel is reimbursed at $.76 per mile from July 1, 2026 (it follows the IRS standard mileage rate).", "url": "https://workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage" },
+    { "text": "AmeriCorps members are not eligible for weekly compensation for total incapacity (§ 65.2-500(E)).", "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/" }
+  ],
+  "uncertain": [
+    "workcomp.virginia.gov was unreachable (DNS/connection timeout); the VWC rates page was read from the Wayback Machine capture of 2026-08-18 (https://web.archive.org/web/20260818160515/https://workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage), which links the chart Rates-Min-Max-COLA-Mileage-2026-UPDATED-08072026.pdf (not itself read).",
+    "Waiting period: 'more than three weeks' recorded as retroactiveAfterDays 21."
+  ]
+}

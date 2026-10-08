@@ -1,0 +1,36 @@
+{
+  "slug": "south-carolina", "name": "South Carolina", "abbr": "SC", "verified": "2026-10-08",
+  "agency": { "name": "South Carolina Workers' Compensation Commission", "url": "https://wcc.sc.gov/" },
+  "ttd": {
+    "rate": 66.67, "basis": "gross AWW",
+    "rateText": "Sixty-six and two-thirds percent of average weekly wages, not more than the average weekly wage in the State for the preceding fiscal year (S.C. Code § 42-9-10(A)).",
+    "max": 1189.94, "min": 75,
+    "minText": "Not less than $75 a week, unless that exceeds the employee's average weekly salary, in which case the employee receives the full average weekly salary (§ 42-9-10(A)).",
+    "effective": "2026-01-01", "periodLabel": "accidents on or after January 1, 2026 (SAWW certified by the Department of Employment and Workforce for July 1, 2024 - June 30, 2025)",
+    "url": "https://wcc.sc.gov/claims/compensation-rates", "asOf": "2026-08-14"
+  },
+  "waiting": {
+    "days": 7, "retroactiveAfterDays": 14,
+    "text": "No compensation for the first seven calendar days of disability (except medical benefits); if the injury results in disability of more than fourteen days, compensation is allowed from the date of disability (S.C. Code § 42-9-200).",
+    "url": "https://www.scstatehouse.gov/code/t42c009.php"
+  },
+  "ttdDuration": {
+    "maxWeeks": 500,
+    "text": "In no case may the period covered by total disability compensation exceed 500 weeks, except as provided in § 42-9-10(C) for certain permanently and totally disabled workers (S.C. Code § 42-9-10(A)).",
+    "url": "https://www.scstatehouse.gov/code/t42c009.php"
+  },
+  "ppd": {
+    "text": "Scheduled injuries are paid at 66 2/3% of the average weekly wage for a fixed number of weeks (e.g. thumb 65 weeks, index finger 40 weeks) under § 42-9-30; partial loss is paid in proportion. Partial disability not on the schedule is paid at 66 2/3% of the wage difference, up to 340 weeks from the date of injury (§ 42-9-20).",
+    "url": "https://www.scstatehouse.gov/code/t42c009.php"
+  },
+  "statute": { "cite": "S.C. Code §§ 42-9-10, 42-9-20, 42-9-30, 42-9-200", "url": "https://www.scstatehouse.gov/code/t42c009.php" },
+  "facts": [
+    { "text": "The loss of both hands, arms, shoulders, feet, legs, hips, or vision in both eyes, or any two of these, is by statute total and permanent disability (§ 42-9-10(B)).", "url": "https://www.scstatehouse.gov/code/t42c009.php" },
+    { "text": "South Carolina's statutory minimum weekly benefit is a fixed $75, not a percentage of the state average wage (§ 42-9-10(A)).", "url": "https://www.scstatehouse.gov/code/t42c009.php" },
+    { "text": "The maximum changes every January 1; it was $1,134.43 for 2025 and $1,189.94 for 2026.", "url": "https://wcc.sc.gov/claims/compensation-rates" }
+  ],
+  "uncertain": [
+    "wcc.sc.gov blocks direct access (403 / CloudFront geo-block); the rates page was read from the Wayback Machine capture of 2026-08-14 (https://web.archive.org/web/20260814165749/https://wcc.sc.gov/claims/compensation-rates), which also matches the 2026-05-17 capture.",
+    "CONFLICT: the Commission's Advisory Notice of December 19, 2025 (www.wcc.sc.gov/sites/wcc/files/Documents/Update.News/Advisory Notice/Advisory Notice 2026 Maximum Weekly Compensation Rate_2.pdf, read via Wayback) announced $1,178.30 for injuries on and after January 1, 2026 (AWW period April 1, 2024 - March 30, 2025). The later rates page shows $1,189.94 (AWW period July 1, 2024 - June 30, 2025). The later figure is used; the correction notice itself was not found."
+  ]
+}

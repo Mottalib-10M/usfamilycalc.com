@@ -1,0 +1,18 @@
+{
+  "slug": "wyoming", "name": "Wyoming", "abbr": "WY",
+  "filingFee": 160, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "District court clerk original filing fee for each civil action, paid by the plaintiff: $160, of which $40 is for court automation and $10 for indigent civil legal services (W.S. 5-3-206(a)(i)).",
+  "feeUrl": "https://wyoleg.gov/statutes/compress/title05.pdf",
+  "otherFees": [],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "One party must have resided in Wyoming for 60 days immediately before filing, or the marriage was solemnized in Wyoming and one party has resided there since the marriage (W.S. 20-2-107(a)).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
+  "waitingPeriod": { "days": 20, "text": "A divorce decree shall not be entered less than 20 days from the date the complaint is filed (W.S. 20-2-108).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
+  "simplified": { "text": "No summary dissolution procedure found in Wyoming Title 20; the only ground besides insanity is irreconcilable differences (W.S. 20-2-104).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
+  "parentingClass": { "required": false, "text": "No statewide mandate in statute: the court may at any time require parents to attend parenting classes, including classes to lessen the effects of divorce on children (W.S. 20-2-201(f)); individual judicial districts may require them by local rule.", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
+  "uncertain": [
+    "No answer/response fee appears in W.S. 5-3-206(a) (the original filing fee is paid by the plaintiff); responseFee left null.",
+    "Local district court rules on mandatory parenting classes not checked.",
+    "Fee waiver (in forma pauperis) form not verified on wyocourts.gov."
+  ]
+}

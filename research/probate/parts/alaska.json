@@ -1,0 +1,46 @@
+{
+ "slug": "alaska",
+ "name": "Alaska",
+ "abbr": "AK",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Pre-death claims are barred unless presented within 4 months after the first publication of notice to creditors, or within 3 years after death if notice was not published (AS 13.16.460(a)).",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.460"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 6 months after original appointment, stating that notice to creditors was first published more than 6 months earlier (AS 13.16.630).",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.630"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect property by affidavit if the entire estate, less liens and encumbrances, consists only of personal property not exceeding $50,000 plus registered vehicles with a total value not exceeding $100,000, and no personal representative application is pending (AS 13.16.680). Not indexed.",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.680"
+ },
+ "simplified": {
+  "text": "Summary administration: if the estate does not exceed family allowances, exempt property, administration costs, funeral and last-illness expenses, the personal representative may distribute and close at any time by verified statement (AS 13.16.690, 13.16.695).",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.695"
+ },
+ "filingFee": {
+  "amount": 250,
+  "scope": "statewide",
+  "text": "Superior court filing fee of $250.00 upon filing a trust or estate action other than registration or deposit of a will (Alaska Administrative Rule 9(b)(2)(A)).",
+  "url": "https://courts.alaska.gov/rules/docs/adm.pdf"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (AS 13.16.430), reviewable by the court (AS 13.16.440).",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.430"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule: the court may review the reasonableness of compensation of any attorney employed by the personal representative (AS 13.16.440); reasonable attorney fees in good-faith estate litigation are paid from the estate (AS 13.16.435).",
+  "url": "https://www.akleg.gov/basis/statutes.asp#13.16.440"
+ },
+ "uncertain": [
+  "Alaska statutes were read from the official print view https://www.akleg.gov/basis/statutes.asp?media=print&secStart=<sec>&secEnd=<sec>; AS 13.16.690 text itself was not retrieved (summary procedure described from AS 13.16.695).",
+  "Alaska Administrative Rule 9 read from the Internet Archive copy (2026-10-03) of https://courts.alaska.gov/rules/docs/adm.pdf (official server timed out).",
+  "Effective date of the $50,000 / $100,000 vehicle amounts in AS 13.16.680 not shown; smallEstate.effective = null."
+ ]
+}

@@ -1,0 +1,42 @@
+---
+/**
+ * The official guideline of a state, generated from its data file: the rules, an excerpt of the
+ * schedule computed by the engine, the facts. Identical in form on every state page: data-chrome
+ * (RECETTE §6.4); the prose written for the state is above it.
+ */
+import { cs, csCalc, usd, pct, day } from '../../lib/kit';
+import { table } from '../../lib/helpers';
+interface Props { slug: string }
+const d = cs(Astro.props.slug);
+const per = d.period === 'weekly' ? 'week' : d.period === 'annual' ? 'year' : 'month';
+const sh = d.shared;
+const incomes = [2000, 3000, 4000, 5000, 6000, 8000, 10000, 12500, 15000, 20000];
+const kids = Math.min(d.maxChildren, 4);
+const excerpt = incomes.map((c) => [usd(c), ...Array.from({ length: kids }, (_, i) => usd(csCalc(d.slug, c, 0, i + 1).monthly))]);
+const rows: Array<Array<string>> = [
+  ['Model', d.modelName ?? ''],
+  ['Income counted', d.incomeLabel],
+  ...(d.schedule ? [['Official schedule', `${usd(d.schedule.minIncome)} to ${usd(d.schedule.maxIncome)} of combined income a ${per}, ${d.schedule.rows.length} rows`]] : []),
+  ...(d.percent ? [['Percentages', d.percent.byChildren.map((p, i) => `${i + 1} ${i ? 'children' : 'child'}: ${pct(p)}`).join(' · ')]] : []),
+  ...(d.percent?.cap ? [['Income cap', `${usd(d.percent.cap.amount)} a ${d.percent.cap.period === 'annual' ? 'year' : 'month'} (${d.percent.cap.appliesTo === 'combined' ? 'combined income' : 'paying parent'})`]] : []),
+  ['Shared parenting', sh?.method === 'cross-credit' && sh.thresholdOvernights != null ? `Cross-credit formula from ${sh.thresholdOvernights} overnights a year, basic amount × ${sh.multiplier}` : sh?.method === 'percent-reduction' && sh.reductionTable?.length ? `Reduction of ${sh.reductionTable.map(([n, r]) => `${pct(r)} from ${n} nights`).join(', ')}` : 'No overnight formula in the calculator (see the rule below)'],
+  ...(d.effective ? [['In force since', day(d.effective)]] : []),
+];
+---
+<section data-chrome class="mt-10">
+  <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} guideline this calculator applies</h2>
+  <Fragment set:html={table(['Rule', d.name], rows, `Read on official ${d.name} pages on ${day(d.verified)}`, ['l', 'l'])} />
+  <h3 class="mt-6 font-serif text-xl font-bold text-navy-900">Monthly support for one paying parent, the other parent without income</h3>
+  <Fragment set:html={table(['Paying parent’s monthly income', ...Array.from({ length: kids }, (_, i) => `${i + 1} ${i ? 'children' : 'child'}`)], excerpt, `Computed by the engine from the ${d.name} rules, no parenting time, no add-ons. Income as the state defines it.`, ['l', ...Array(kids).fill('r')])} />
+  <div class="prose prose-slate mt-4 max-w-none text-sm">
+    <p><strong>How the amount is set.</strong> {d.modelText} <a href={d.guidelinesUrl} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
+    {d.incomeDefinition && <p><strong>Income.</strong> {d.incomeDefinition}</p>}
+    {d.aboveMaxText && <p><strong>Above the table.</strong> {d.aboveMaxText}</p>}
+    {d.sharedText && <p><strong>Parenting time.</strong> {d.sharedText}</p>}
+    {d.addOnsText && <p><strong>Child care and health care.</strong> {d.addOnsText}</p>}
+    {d.lowIncomeText && <p><strong>Low incomes.</strong> {d.lowIncomeText}</p>}
+    {d.emancipation.text && <p><strong>When support ends.</strong> {d.emancipation.text} <a href={d.emancipation.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>}
+    {d.officialCalculatorUrl && <p>The state also runs its own <a href={d.officialCalculatorUrl} target="_blank" rel="nofollow noopener noreferrer">official child support calculator</a>; use it, or the court's worksheet, for a filing.</p>}
+    {d.facts.length > 0 && <><h3>Worth knowing in {d.name}</h3><ul>{d.facts.map((f) => <li>{f.text} <a href={f.url} target="_blank" rel="nofollow noopener noreferrer">source</a></li>)}</ul></>}
+  </div>
+</section>

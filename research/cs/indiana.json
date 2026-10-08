@@ -1,0 +1,329 @@
+{
+  "slug": "indiana",
+  "name": "Indiana",
+  "abbr": "IN",
+  "verified": "2026-10-08",
+  "model": "income-shares",
+  "modelName": "Income shares, combined weekly adjusted income schedule (Indiana Child Support Rules and Guidelines)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Weekly gross income is actual weekly gross income if employed to full capacity, potential income if unemployed or underemployed, plus in-kind benefits; it includes salaries, wages, bonuses, overtime, dividends, pensions, Social Security, workers' compensation, unemployment, gifts, inheritance, prizes and maintenance received, and excludes means-tested assistance (TANF, SSI, food stamps) (Guideline 3A). Weekly adjusted income deducts an adjustment for subsequent-born children, prior-born child support orders, support actually paid for prior-born children without an order, and maintenance paid (Guideline 3C).",
+  "period": "weekly",
+  "maxChildren": 8,
+  "schedule": {
+    "file": "cs-schedules/indiana.json",
+    "columns": "combined weekly adjusted income, then basic child support obligation for 1 to 8 children",
+    "minIncome": 100,
+    "maxIncome": 9200,
+    "step": 10,
+    "lookup": "nearest",
+    "lookupRule": "For combined weekly adjusted income falling between amounts shown in the schedule, basic child support amounts should be rounded to the nearest amount (Guideline 3D).",
+    "belowMin": {
+      "rule": "Below $100 combined weekly adjusted income the Guidelines provide a case-by-case determination; there is no minimum support obligation and a $0.00 order may be appropriate (Guideline 2 and Commentary).",
+      "amounts": null
+    },
+    "aboveMax": {
+      "method": "formula",
+      "pct": [
+        8.1,
+        11.4,
+        13.1,
+        14.7,
+        16.2,
+        17.6,
+        19.0,
+        20.4
+      ],
+      "text": "The schedule's footer reads 'Percentage of Support if Combined Income Greater than $9,200': 8.1%, 11.4%, 13.1%, 14.7%, 16.2%, 17.6%, 19.0%, 20.4% for 1 to 8 children. The footer does not say whether the percentage applies to total income or to the excess over $9,200 (see uncertain)."
+    },
+    "effective": "2024-01-01",
+    "url": "https://www.in.gov/courts/files/schedule.pdf"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "table",
+    "thresholdOvernights": 52,
+    "multiplier": null,
+    "reductionTable": [
+      {
+        "from": 1,
+        "to": 51,
+        "total": 0.0,
+        "duplicated": 0.0
+      },
+      {
+        "from": 52,
+        "to": 55,
+        "total": 0.063,
+        "duplicated": 0.011
+      },
+      {
+        "from": 56,
+        "to": 60,
+        "total": 0.071,
+        "duplicated": 0.014
+      },
+      {
+        "from": 61,
+        "to": 65,
+        "total": 0.081,
+        "duplicated": 0.02
+      },
+      {
+        "from": 66,
+        "to": 70,
+        "total": 0.094,
+        "duplicated": 0.028
+      },
+      {
+        "from": 71,
+        "to": 75,
+        "total": 0.109,
+        "duplicated": 0.038
+      },
+      {
+        "from": 76,
+        "to": 80,
+        "total": 0.129,
+        "duplicated": 0.053
+      },
+      {
+        "from": 81,
+        "to": 85,
+        "total": 0.152,
+        "duplicated": 0.071
+      },
+      {
+        "from": 86,
+        "to": 90,
+        "total": 0.18,
+        "duplicated": 0.094
+      },
+      {
+        "from": 91,
+        "to": 95,
+        "total": 0.213,
+        "duplicated": 0.123
+      },
+      {
+        "from": 96,
+        "to": 100,
+        "total": 0.253,
+        "duplicated": 0.158
+      },
+      {
+        "from": 101,
+        "to": 105,
+        "total": 0.297,
+        "duplicated": 0.197
+      },
+      {
+        "from": 106,
+        "to": 110,
+        "total": 0.344,
+        "duplicated": 0.239
+      },
+      {
+        "from": 111,
+        "to": 115,
+        "total": 0.392,
+        "duplicated": 0.283
+      },
+      {
+        "from": 116,
+        "to": 120,
+        "total": 0.438,
+        "duplicated": 0.324
+      },
+      {
+        "from": 121,
+        "to": 125,
+        "total": 0.481,
+        "duplicated": 0.362
+      },
+      {
+        "from": 126,
+        "to": 130,
+        "total": 0.518,
+        "duplicated": 0.394
+      },
+      {
+        "from": 131,
+        "to": 135,
+        "total": 0.549,
+        "duplicated": 0.421
+      },
+      {
+        "from": 136,
+        "to": 140,
+        "total": 0.575,
+        "duplicated": 0.442
+      },
+      {
+        "from": 141,
+        "to": 145,
+        "total": 0.597,
+        "duplicated": 0.459
+      },
+      {
+        "from": 146,
+        "to": 150,
+        "total": 0.615,
+        "duplicated": 0.472
+      },
+      {
+        "from": 151,
+        "to": 155,
+        "total": 0.629,
+        "duplicated": 0.481
+      },
+      {
+        "from": 156,
+        "to": 160,
+        "total": 0.641,
+        "duplicated": 0.488
+      },
+      {
+        "from": 161,
+        "to": 165,
+        "total": 0.651,
+        "duplicated": 0.493
+      },
+      {
+        "from": 166,
+        "to": 170,
+        "total": 0.659,
+        "duplicated": 0.496
+      },
+      {
+        "from": 171,
+        "to": 175,
+        "total": 0.667,
+        "duplicated": 0.499
+      },
+      {
+        "from": 176,
+        "to": 180,
+        "total": 0.673,
+        "duplicated": 0.5
+      },
+      {
+        "from": 181,
+        "to": 183,
+        "total": 0.682,
+        "duplicated": 0.505
+      }
+    ],
+    "text": "Parenting Time Table (Table PT, Guideline 6 Commentary) gives TOTAL and DUPLICATED fractions of the Basic Child Support Obligation by annual overnights with the noncustodial parent, starting at 52 overnights. Credit = BCSO x TOTAL - BCSO x DUPLICATED x noncustodial parent's percentage share of combined weekly adjusted income (formula reproduced from the official Guideline 6 example: $850/$600 weekly incomes, 3 children, gives $28.95, $134.94 and $206.95 at 56, 120 and 180 overnights). Equal parenting time is 181 to 183 overnights; the court assigns controlled expenses to one parent and gives the credit to the other. The credit is not automatic (Guideline 6).",
+    "url": "https://rules.incourts.gov/Content/child-support/guideline6/current.htm"
+  },
+  "addOns": {
+    "childcare": "work-related child care added to the basic obligation (Line 4A), shared by income share, payer credited (Guideline 3E, 3G)",
+    "healthInsurance": "weekly cost of the child(ren)'s health insurance premium added (Line 4B), shared by income share, payer credited (Guideline 3E, 3G)",
+    "text": "Work-related child care and the weekly cost of the children's health insurance premiums are added to the Basic Child Support Obligation, prorated by income share, and the parent who pays them receives a credit on Line 7 (Guidelines 3E and 3G).",
+    "url": "https://rules.incourts.gov/Content/child-support/guideline3g/current.htm"
+  },
+  "lowIncome": {
+    "selfSupportReserve": null,
+    "period": "weekly",
+    "minimumOrder": null,
+    "rule": "No numeric self-support reserve or minimum order: for combined weekly adjusted income under $100 support is set case by case, and for very low incomes the court considers the obligor's income and living expenses so as not to deny a means of self-support at a minimum subsistence level; a numeric amount (possibly $0.00) is ordered (Guideline 2 and Commentary).",
+    "url": "https://rules.incourts.gov/Content/child-support/guideline2/current.htm"
+  },
+  "statute": {
+    "cite": "Ind. Code § 31-16-6-1; Indiana Child Support Rules and Guidelines",
+    "url": "https://rules.incourts.gov/Content/child-support/default.htm"
+  },
+  "guidelinesUrl": "https://rules.incourts.gov/Content/child-support/default.htm",
+  "officialCalculatorUrl": "https://www.in.gov/courts/services/child-support-calculator/",
+  "emancipation": {
+    "text": "Guideline 4 Commentary refers to the support duty ending when a child reaches nineteen (19) or is emancipated (Ind. Code § 31-16-6-6); an in-gross order for several children does not drop automatically when the oldest turns 19.",
+    "url": "https://rules.incourts.gov/Content/child-support/guideline4/current.htm"
+  },
+  "testCases": [
+    {
+      "inputs": {
+        "weeklyIncomeCustodial": 850,
+        "weeklyIncomeNoncustodial": 600,
+        "children": 3,
+        "overnightsNoncustodial": 56
+      },
+      "expected": 28.95,
+      "what": "weekly parenting time credit for the noncustodial parent",
+      "source": "Official example in Guideline 6 Commentary ('Calculating Parenting Time Credit When a Parent Spends Different Number of Overnights'): $28.95 at 56 overnights ($134.94 at 120, $206.95 at 180, averaged $123.61). Reproduced with the 2024 schedule: combined $1,450, 3 children = $444; 444 x 0.071 - 444 x 0.014 x 600/1450 = 28.95. https://rules.incourts.gov/Content/child-support/guideline6/current.htm Not an engine output on its own (the engine returns the payer total), hence skipEngine; the same example is checked through the total in the next case.",
+      "skipEngine": true
+    },
+    {
+      "inputs": {
+        "incomeA": 600,
+        "incomeB": 850,
+        "children": 3,
+        "overnightsA": 56
+      },
+      "expected": 154.77,
+      "what": "noncustodial parent's weekly support after the parenting time credit",
+      "source": "Official Guideline 6 example ($850 custodial / $600 noncustodial weekly, 3 children, 56 overnights, credit $28.95), carried to the total: BCSO $444 x 600/1450 = 183.72 - 28.95 = 154.77. https://rules.incourts.gov/Content/child-support/guideline6/current.htm"
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 500,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 240.0,
+      "what": "parent A's weekly share of the basic obligation (no add-ons, no parenting time credit)",
+      "source": "Computed by hand from the 2024 schedule: combined $1,500 weekly row, two children = $360; A's share 2/3 = $240. https://www.in.gov/courts/files/schedule.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 8000,
+        "incomeB": 4000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 912.0,
+      "what": "parent A's weekly share above the top of the schedule",
+      "source": "Computed by hand with the schedule footer read as a percentage of total combined weekly adjusted income (see uncertain): 12,000 x 11.4% = 1,368; A's share 2/3 = 912. https://www.in.gov/courts/files/schedule.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 1000,
+        "incomeB": 500,
+        "children": 2,
+        "overnightsA": 120
+      },
+      "expected": 160.08,
+      "what": "noncustodial parent's weekly support with 120 overnights",
+      "source": "Computed by hand under Guideline 6 Table PT (116-120: TOTAL 0.438, DUPLICATED 0.324): BCSO $360 (combined $1,500, two children); credit 360 x 0.438 - 360 x 0.324 x 2/3 = 79.92; share 240 - 79.92 = 160.08. https://rules.incourts.gov/Content/child-support/guideline6/current.htm"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Indiana's schedule is weekly, not monthly, and runs from $100 to $9,200 of combined weekly adjusted income in $10 steps for up to eight children.",
+      "url": "https://www.in.gov/courts/files/schedule.pdf"
+    },
+    {
+      "text": "The 2024 revision changed the weekly support schedule at all income levels after the 2023 guideline review found intact-family spending on children significantly larger than the old schedule (Guideline 1 Commentary).",
+      "url": "https://rules.incourts.gov/Content/child-support/guideline1/current.htm"
+    },
+    {
+      "text": "A support order may be modified if the amount ordered at least 12 months earlier differs from the current guideline amount by more than 20%, or on a substantial and continuing change of circumstances (Guideline 4).",
+      "url": "https://rules.incourts.gov/Content/child-support/guideline4/current.htm"
+    },
+    {
+      "text": "Temporary maintenance should not exceed 35% of the obligor's weekly adjusted income, and temporary maintenance plus child support should not exceed 50% (Guideline 2).",
+      "url": "https://rules.incourts.gov/Content/child-support/guideline2/current.htm"
+    },
+    {
+      "text": "The guidelines were developed by the Judicial Administration Committee of the Judicial Conference of Indiana and adopted by the Indiana Supreme Court (Support Rule 1; Guideline 1).",
+      "url": "https://rules.incourts.gov/Content/child-support/guideline1/current.htm"
+    }
+  ],
+  "uncertain": [
+    "rules.incourts.gov did not answer from this network; the guideline pages (Guidelines 1, 2, 3A, 3C, 3D, 3E, 3G, 4, 6, Support Rules) were read from Wayback copies captured 2026-08-12. The schedule PDF was downloaded directly from www.in.gov (PDF dated 2024-01-02, modified 2024-05-15).",
+    "The parenting time credit formula (TOTAL minus DUPLICATED x noncustodial share) is reconstructed from the official numeric example in Guideline 6; the official Parenting Time Credit Worksheet form itself was not retrieved.",
+    "Above $9,200 the schedule prints percentages without saying whether they apply to total combined income or to the excess over $9,200. Applied to total income they reproduce the $9,200 row (8.1% x 9,200 = 745.2 vs 745; 11.4% x 9,200 = 1,048.8 vs 1,050), which suggests 'percentage x total combined weekly adjusted income' (method set to 'formula'); this reading must be confirmed in the official worksheet or calculator.",
+    "The printed '50% maximum spouse and child' column shows 2101 for the 4220 row instead of 2110 (typo in the official PDF); that column is not used."
+  ]
+}

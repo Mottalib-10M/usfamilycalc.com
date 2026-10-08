@@ -1,0 +1,70 @@
+---
+/**
+ * A topic page of `src/content/pages/`. Pillar: H1, folded answer block, the full calculator, the list
+ * of state pages of the subject, then the body. Guide: H1, the answer block, its mini-simulator, then
+ * the body. FAQ (shown and marked up from one list), related pages, sources and publisher box: PageLayout.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import MiniSim from './calc/MiniSim';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import { route, ROUTES } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { t } from '../i18n/ui';
+import { pageById, statePageById, statePagesOf } from '../lib/pages';
+import { helpers, SOURCES } from '../lib/helpers';
+import { topicInfo, stateTopicId } from '../lib/topics';
+import { stateRef } from '../data/states';
+import { articleSchema, faqSchema, breadcrumbSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { AUTHOR_NAME } from '../data/site-config';
+import type { PageDef } from '../lib/page-types';
+interface Props { page: PageDef }
+const { page } = Astro.props;
+const lang = 'en';
+const ui = t(lang);
+const path = route(page.id, lang);
+const info = topicInfo(page.topic);
+const parts = page.body(helpers()).split(/<!--mini:([A-Za-z0-9_-]+)(?:\|([A-Za-z0-9+/=]+))?-->/);
+const decode = (b?: string) => (b ? Buffer.from(b, 'base64').toString('utf8') : undefined);
+const jsonLd = [articleSchema({ title: page.h1, description: page.description, path, lang }), webPageSchema({ name: page.h1, description: page.description, path, lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: page.nav, path }])];
+if (page.tool) jsonLd.push(webApplicationSchema({ name: page.h1, description: page.description, path, lang }));
+if (page.faqs.length) jsonLd.push(faqSchema(page.faqs, lang));
+const card = (id: string) => pageById(id)?.card ?? (statePageById(id) ? topicInfo(statePageById(id)!.topic).card(stateRef(statePageById(id)!.slug).name) : '');
+const related = page.related.filter((id) => ROUTES.some((r) => r.id === id)).map((id) => ({ href: route(id, lang), name: label(id), description: card(id) }));
+const sources = [...page.sources.map((k) => ({ name: SOURCES[k].label, url: SOURCES[k].url })), ...(page.extraSources ?? [])];
+const methodHref = route('method', lang);
+const statePages = page.kind === 'pillar' ? statePagesOf(page.topic) : [];
+const miniHref = route(page.topic, lang);
+---
+<PageLayout title={page.title} description={page.description} lang={lang} jsonLd={jsonLd} faqs={page.faqs} related={related} sources={sources} breadcrumbs={[{ label: page.nav }]}>
+  <article>
+    <header class="mb-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{info.label}{page.kind === 'guide' ? ' · guide' : ' · every state'}</p>
+      <h1 class="mt-1 font-serif text-3xl font-bold text-navy-900 md:text-4xl">{page.h1}</h1>
+      <p class="mt-3 text-lg text-navy-700">{page.intro}</p>
+      <p class="mt-3 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">{label('method')}</a></p>
+    </header>
+    {page.tool ? (
+      <>
+        <Clamp text={page.resume} lang={lang} id={`clamp-${page.id}`} class="mb-4" />
+        <div data-outil class="mb-10"><Tool kind={page.tool} state={page.toolProps?.state} lock={page.toolProps?.lockState} idPrefix={page.id.slice(0, 6)} /></div>
+      </>
+    ) : (
+      <>
+        <p class="mb-6 text-navy-800">{page.resume}</p>
+        {page.mini && <MiniSim client:load kind={page.mini} arg={page.miniArg === undefined ? undefined : JSON.stringify(page.miniArg)} href={miniHref} />}
+      </>
+    )}
+    {statePages.length > 0 && (
+      <section data-chrome class="mb-10">
+        <h2 class="font-serif text-2xl font-bold text-navy-900">{info.label} in each state</h2>
+        <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm sm:grid-cols-3 lg:grid-cols-4">
+          {statePages.map((s) => <li><a class="text-accent-700 underline-offset-2 hover:underline" href={route(stateTopicId(s.topic, s.slug), lang)}>{stateRef(s.slug).name}</a></li>)}
+        </ul>
+      </section>
+    )}
+    <div class="prose prose-slate max-w-none prose-headings:font-serif">
+      {parts.map((p, i) => i % 3 === 0 ? <Fragment set:html={p ?? ''} /> : i % 3 === 1 ? <MiniSim client:load kind={p} arg={decode(parts[i + 1])} href={miniHref} /> : null)}
+    </div>
+  </article>
+</PageLayout>

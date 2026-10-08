@@ -1,0 +1,207 @@
+{
+ "slug": "iowa",
+ "name": "Iowa",
+ "abbr": "IA",
+ "verified": "2026-10-08",
+ "model": "income-shares",
+ "modelName": "Income shares, combined adjusted net monthly income schedule (Iowa Ct. R. 9.26)",
+ "incomeBasis": "net",
+ "incomeDefinition": "Gross monthly income = reasonably expected income from all sources (Iowa Ct. R. 9.5(1)). Net monthly income = gross minus federal and state income tax (guidelines method, rule 9.6), Social Security and Medicare tax or mandatory pension, mandatory occupational license fees, union dues, health insurance premiums for other children under order, cash medical support in this matter, prior support actually paid for other children, and qualified additional dependent deductions (rule 9.5(2)). Voluntary savings, pensions, etc. are not deducted (rule 9.5(3)).",
+ "period": "monthly",
+ "maxChildren": 5,
+ "schedule": {
+  "file": "cs-schedules/iowa.json",
+  "columns": "income bracket from, to, then basic support obligation for 1, 2, 3, 4, 5 or more children",
+  "minIncome": 0,
+  "maxIncome": 30000,
+  "step": 50,
+  "lookup": "bracket",
+  "lookupRule": "Find the bracket containing the adjusted net monthly income (combined, or the noncustodial parent's alone in low-income Area A; lower of both in Area B) (Iowa Ct. R. 9.3(2), 9.26 notes 1-2). Brackets are $100 wide up to $800 and $50 wide above.",
+  "belowMin": {
+   "rule": "Low-income Area A ($0-$1,250): only the noncustodial parent's adjusted net income is used; minimum $50 / $75 / $100 / $100 / $100 for 1-5+ children. Area B ($1,251 up to $1,800 for 1 child, $2,200 for 2, $2,550 for 3 and 4, $2,650 for 5+): the lower of the NCP-only and combined-income amounts (Iowa Ct. R. 9.26 note 1, rule 9.3(2)). Joint physical care always uses combined incomes (note 2).",
+   "amounts": [
+    50,
+    75,
+    100,
+    100,
+    100
+   ]
+  },
+  "aboveMax": {
+   "method": "discretion",
+   "pct": null,
+   "text": "Above $30,000 combined net monthly income the basic obligation is within the court's or agency's discretion but not less than the amount at $30,000 (Iowa Ct. R. 9.26 note 3)."
+  },
+  "effective": "2026-01-01",
+  "url": "https://www.iowacourts.gov/collections/953/files/2105/embedDocument"
+ },
+ "percent": null,
+ "formula": {
+  "text": "Extraordinary visitation credit bands and floors (Iowa Ct. R. 9.9); joint (equally shared) physical care grid factors 1.5 and 0.5 (rule 9.14(3)); low-income Area A up to $1,250 and Area B upper limits by number of children (rule 9.26 note 1).",
+  "params": {
+   "visitationBands": [
+    [
+     128,
+     15
+    ],
+    [
+     148,
+     20
+    ],
+    [
+     167,
+     25
+    ]
+   ],
+   "visitationFloorByChildren": [
+    50,
+    75,
+    100,
+    100,
+    100
+   ],
+   "jointMultiplier": 1.5,
+   "jointTimeFactor": 0.5,
+   "jointMinOvernights": 182,
+   "areaATo": 1250,
+   "areaBFrom": 1251,
+   "areaBToByChildren": [
+    1800,
+    2200,
+    2550,
+    2550,
+    2650
+   ]
+  },
+  "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+ },
+ "shared": {
+  "method": "other",
+  "thresholdOvernights": 128,
+  "multiplier": 1.5,
+  "reductionTable": [
+   {
+    "overnights": "128-147",
+    "credit": 15
+   },
+   {
+    "overnights": "148-166",
+    "credit": 20
+   },
+   {
+    "overnights": "167+ (less than equally shared care)",
+    "credit": 25
+   }
+  ],
+  "text": "Extraordinary visitation credit: if the noncustodial parent's court-ordered visitation exceeds 127 overnights a year, the NCP's share of the basic obligation is reduced 15% (128-147), 20% (148-166) or 25% (167 or more but less than equally shared care), not below $50/$75/$100 for 1/2/3+ children (Iowa Ct. R. 9.9). Joint (equally shared) physical care: combined incomes on the schedule, each parent's share x 1.5 x 0.5, then offset; the higher obligation pays the difference (Iowa Ct. R. 9.14(3) grid).",
+  "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+ },
+ "addOns": {
+  "childcare": "Child care expense add-on: the lesser of (1) NCP's share of net child care costs (after an estimated 25% tax credit unless the custodial parent is below the rule 9.11A(1)(b) income thresholds), computed on modified incomes, and (2) 50% of NCP's disposable income minus health insurance, cash medical and support; presumed to end at the child's 13th birthday (Iowa Ct. R. 9.11A).",
+  "healthInsurance": "Reasonable cost and cash medical support are set with the Medical Support Table (Iowa Ct. R. 9.12(2)-(4)); uncovered medical expenses: custodial parent pays the first $250 per child per year (max $800 for all children), the rest by net income shares; in joint physical care all are shared by net income (rule 9.12(5)).",
+  "text": "Child care and health insurance are added to the guideline amount (Iowa Ct. R. 9.11A, 9.12, 9.14(5)).",
+  "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+ },
+ "lowIncome": {
+  "selfSupportReserve": null,
+  "period": "monthly",
+  "minimumOrder": 50,
+  "rule": "Low-income adjustment built into the shaded Areas A and B of the schedule (Iowa Ct. R. 9.3(2), 9.26); support is zero if the NCP's only income is SSI (rule 9.4).",
+  "url": "https://www.iowacourts.gov/collections/953/files/2105/embedDocument"
+ },
+ "statute": {
+  "cite": "Iowa Code § 598.21B; Iowa Ct. R. ch. 9",
+  "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+ },
+ "guidelinesUrl": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf",
+ "officialCalculatorUrl": null,
+ "emancipation": {
+  "text": "Support covers a child between 18 and 19 engaged full-time in completing high school graduation or equivalency requirements expected to finish before 19, and may cover a child of any age dependent because of disability (Iowa Code § 598.1(9)).",
+  "url": "https://www.legis.iowa.gov/docs/code/598.1.pdf"
+ },
+ "testCases": [
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 1185.33,
+   "what": "payer A's monthly basic support (before health insurance / child care)",
+   "source": "Computed by hand from Iowa Ct. R. 9.26 (2026 schedule): combined $6,000 -> bracket 5951-6000, 2 children = $1,778; A share 4000/6000 x 1,778 = $1,185.33 (rule 9.14(2))."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 146
+   },
+   "expected": 1007.53,
+   "what": "payer A's monthly support with extraordinary visitation credit (146 overnights)",
+   "source": "Computed by hand: 1,185.33 x (1 - 15%) = 1,007.53 (Iowa Ct. R. 9.9, 128-147 overnights)."
+  },
+  {
+   "inputs": {
+    "incomeA": 4000,
+    "incomeB": 2000,
+    "children": 2,
+    "overnightsA": 182.5
+   },
+   "expected": 444.5,
+   "what": "net support paid by A in joint (equally shared) physical care",
+   "source": "Computed by hand with the rule 9.14(3) grid: A = 1,185.33 x 1.5 x 0.5 = 889.00; B = 592.67 x 1.5 x 0.5 = 444.50; offset 889.00 - 444.50 = 444.50."
+  },
+  {
+   "inputs": {
+    "incomeA": 1000,
+    "incomeB": 5000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 166,
+   "what": "payer A's monthly support in low-income Area A",
+   "source": "Computed by hand: A's $1,000 is in Area A ($0-$1,250), so only A's income is used: bracket 951-1000, 2 children = $166 (Iowa Ct. R. 9.26 note 1, rule 9.3(2))."
+  },
+  {
+   "inputs": {
+    "incomeA": 2000,
+    "incomeB": 1000,
+    "children": 2,
+    "overnightsA": 0
+   },
+   "expected": 636,
+   "what": "payer A's monthly support in low-income Area B (lesser of two calculations)",
+   "source": "Computed by hand: A's $2,000 is in Area B for 2 children ($1,251-$2,200). Combined $3,000 -> bracket 2951-3000, 2 children $1044 x 2/3 = 696.00; A alone -> bracket 1951-2000 = $636; the lower applies (Iowa Ct. R. 9.26 note 1)."
+  }
+ ],
+ "facts": [
+  {
+   "text": "Iowa's new schedule took effect January 1, 2026 (Iowa Supreme Court order of September 29, 2025, after the April 2025 Guidelines Review Committee report), raising the top of the schedule from $25,000 to $30,000 combined net monthly income.",
+   "url": "https://www.iowacourts.gov/collections/953/files/2104/embedDocument"
+  },
+  {
+   "text": "Iowa counts five columns only: the last column is 'five or more children' (Iowa Ct. R. 9.26).",
+   "url": "https://www.iowacourts.gov/collections/953/files/2105/embedDocument"
+  },
+  {
+   "text": "The extraordinary visitation credit starts above 127 overnights (15%, 20%, 25% tiers) (Iowa Ct. R. 9.9).",
+   "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+  },
+  {
+   "text": "Support is zero when the noncustodial parent's only income is Supplemental Security Income (Iowa Ct. R. 9.4).",
+   "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+  },
+  {
+   "text": "Orders for several children must include a step-down provision that adjusts support automatically as children age out (Iowa Ct. R. 9.14(6)).",
+   "url": "https://www.legis.iowa.gov/docs/ACO/CourtRulesChapter/9.pdf"
+  }
+ ],
+ "uncertain": [
+  "The Legislature's consolidated chapter 9 (legis.iowa.gov, 'July 2026') prints the schedule as scanned images; the rows were parsed from the text of the Supreme Court order attachment (iowacourts.gov, strike-and-replace schedule effective 2026-01-01) and 10 rows were compared by eye with the scans (identical). The iowacourts.gov document-library 'Child Support Guidelines Schedule' file is still the 2022 schedule ($25,000 cap) and was not used.",
+  "The official schedule has no row for $8,801-$8,850 (both the order attachment and the July 2026 consolidated scan go from 8,751-8,800 to 8,851-8,900); copied as published, gap listed in cs-schedules/iowa.json.",
+  "Whether worksheet percentages are rounded is not stated in the text read; test cases use unrounded shares.",
+  "No official online calculator verified (Iowa HHS calculator not checked); officialCalculatorUrl = null."
+ ]
+}

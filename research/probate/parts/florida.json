@@ -1,0 +1,45 @@
+{
+ "slug": "florida",
+ "name": "Florida",
+ "abbr": "FL",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 3,
+  "text": "Claims are barred unless filed by the later of 3 months after the first publication of the notice to creditors or, for creditors who must be served, 30 days after service (Fla. Stat. § 733.702); all claims are barred 2 years after death whether or not letters issued (Fla. Stat. § 733.710).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/733.702"
+ },
+ "earliestClose": {
+  "text": "The estate cannot be closed before the 3-month creditor period after first publication of the notice to creditors has run and timely claims are resolved (Fla. Stat. § 733.702); after administration is completed the personal representative is discharged (Fla. Stat. § 733.901).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/733.901"
+ },
+ "smallEstate": {
+  "limit": 150000,
+  "effective": "2026-07-01",
+  "text": "Florida has no small-estate affidavit; the simplified route is summary administration, available if the estate subject to administration in Florida, less exempt property, does not exceed $150,000 (raised from $75,000 by ch. 2026-57, effective July 1, 2026) or the decedent has been dead more than 2 years, and the will does not direct formal administration (Fla. Stat. § 735.201). The amount is not indexed.",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/735.201"
+ },
+ "simplified": {
+  "text": "Summary administration for estates up to $150,000 net of exempt property or deaths more than 2 years ago (Fla. Stat. § 735.201); disposition without administration by court letter when the estate is only exempt property plus non-exempt personal property not exceeding preferred funeral expenses and last-60-days medical expenses (Fla. Stat. § 735.301).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/735.301"
+ },
+ "filingFee": {
+  "amount": 395,
+  "scope": "statewide",
+  "text": "Clerk fee for formal administration: up to $395; summary administration $340 (estates of $1,000 or more) or $230 (under $1,000); disposition of personal property without administration $230; plus a $4 service charge on petitions for summary or formal administration (Fla. Stat. § 28.2401(1),(3)).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/28.2401"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Commission presumed reasonable in formal administration, on the inventory value of probate assets plus income earned during administration: 3% of the first $1 million, 2.5% from $1 million to $5 million, 2% from $5 million to $10 million, 1.5% above $10 million, plus reasonable compensation for extraordinary services (Fla. Stat. § 733.617).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/733.617"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "Attorneys receive reasonable compensation; a fee is presumed reasonable in formal administration if based on the compensable value: $1,500 up to $40,000, $2,250 up to $70,000, $3,000 up to $100,000, then 3% on the next $900,000, 2.5% from $1 million to $3 million, 2% from $3 million to $5 million, 1.5% from $5 million to $10 million, 1% above $10 million, plus extraordinary services; written disclosures are required to use the schedule (Fla. Stat. § 733.6171).",
+  "url": "https://www.flsenate.gov/Laws/Statutes/2026/733.6171"
+ },
+ "uncertain": [
+  "The deadline for the final accounting and petition for discharge is set by the Florida Probate Rules (not read), so earliestClose only states the statutory claims constraint.",
+  "Florida Statutes 2026 edition on flsenate.gov was used; ch. 2026-57 (effective July 1, 2026) raised the summary administration limit to $150,000 (https://laws.flrules.org/2026/57)."
+ ]
+}
