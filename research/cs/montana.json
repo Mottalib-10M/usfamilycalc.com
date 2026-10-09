@@ -1,0 +1,211 @@
+{
+  "slug": "montana",
+  "name": "Montana",
+  "abbr": "MT",
+  "verified": "2026-10-09",
+  "model": "melson",
+  "modelName": "Melson-type formula: personal allowance, primary child support allowance, supplements and standard of living adjustment (ARM 37.62.101-148)",
+  "incomeBasis": "net",
+  "incomeDefinition": "Income includes actual income from any source (wages, tips, commissions, bonuses, profits, dividends, pensions, retirement distributions, interest, trust income, royalties, alimony, social security, veterans', workers' compensation, unemployment and disability benefits, earned income credit, net capital gains) and imputed income; self-employment income is gross receipts minus reasonable and necessary expenses (ARM 37.62.105). Allowable deductions under ARM 37.62.110 (CSSD Worksheet A lines 2a-2k: ordered support and allowance for other children, alimony, federal and state income tax, FICA and Medicare, mandatory retirement, required employment expense, dependent care for other children) (including support for other children: one-half of the primary allowance for other children without an order) and the personal allowance (ARM 37.62.114) are subtracted to get income available for child support (ARM 37.62.116). Guidelines are computed on an annual basis, paid in equal monthly installments (ARM 37.62.101(3)). The calculator input is income after these deductions (Worksheet A line 3).",
+  "period": "annual",
+  "maxChildren": 8,
+  "schedule": null,
+  "percent": null,
+  "formula": {
+    "text": "For each parent: income available = income - deductions (ARM 37.62.110) - personal allowance (ARM 37.62.116). Parental share = own income available / combined income available (ARM 37.62.118). Each parent owes its share of the primary child support allowance plus supplements (child care net of the federal dependent care credit, children's health insurance, recurring unreimbursed medical costs over $250 per child per year, other needs) (ARM 37.62.121, .123). SOLA = (income available - share of primary allowance and supplements, not below 0) x SOLA factor (ARM 37.62.128). Total support amount = share of primary allowance with supplements + SOLA, or the minimum support obligation if applicable (ARM 37.62.134(1)). Annual transfer payment / 12, rounded to whole dollars per child ($0.50 rounds up) (ARM 37.62.134(2)). Worksheet A (CSSD, rev. 2025-08-12): line 6 = 12% of income after deductions (or the WS-C minimum when income available is 0); line 7 = higher of income available and line 6, used for the parental share; line 16 = lower of share of need and income available; line 22 = higher of (line 16 + SOLA) and line 6; line 24 = line 22 minus expenses paid.",
+    "params": {
+      "personalAllowanceAnnual": 20748,
+      "personalAllowanceRule": "1.3 x HHS poverty guideline for a one-person household (ARM 37.62.114)",
+      "primaryAllowanceAnnual": {
+        "1": 6224,
+        "2": 10374,
+        "3": 14523,
+        "4": 16598,
+        "5": 18673,
+        "6": 20748,
+        "7": 22822,
+        "8": 24897
+      },
+      "primaryAllowanceRule": "0.30 x personal allowance for the first child, +0.20 for each of the 2nd and 3rd, +0.10 for each additional child (ARM 37.62.121)",
+      "otherChildrenAllowanceAnnual": {
+        "1": 3112,
+        "2": 5187,
+        "3": 7262,
+        "4": 8299,
+        "5": 9336,
+        "6": 10374,
+        "7": 11411,
+        "8": 12449
+      },
+      "solaFactor": {
+        "1": 0.14,
+        "2": 0.21,
+        "3": 0.27,
+        "4": 0.31,
+        "5": 0.35,
+        "6": 0.39,
+        "7": 0.43,
+        "8": 0.47
+      },
+      "minimumSupport": {
+        "aboveAllowance": "12% of income after deductions when the calculated obligation is less than that (ARM 37.62.126(1)(b))",
+        "incomeRatioTable": [
+          [
+            0.25,
+            0.0
+          ],
+          [
+            0.31,
+            0.01
+          ],
+          [
+            0.38,
+            0.02
+          ],
+          [
+            0.45,
+            0.03
+          ],
+          [
+            0.52,
+            0.04
+          ],
+          [
+            0.59,
+            0.05
+          ],
+          [
+            0.66,
+            0.06
+          ],
+          [
+            0.73,
+            0.07
+          ],
+          [
+            0.8,
+            0.08
+          ],
+          [
+            0.87,
+            0.09
+          ],
+          [
+            0.94,
+            0.1
+          ],
+          [
+            1.0,
+            0.11
+          ]
+        ],
+        "incomeRatioRule": "If income after deductions <= personal allowance: ratio = income after deductions / personal allowance; minimum = income after deductions x multiplier for the bracket 'over previous, not over listed ratio' (ARM 37.62.126(1)(a), (3))"
+      },
+      "parentingDaysThreshold": 110,
+      "longDistanceMileageRate": 0.725,
+      "longDistanceStandardExpense": 1450,
+      "tablesEffective": "2026-02-01",
+      "solaFactorSource": "ARM 37.62.128(3) and the CSSD Worksheet E (SOLA multipliers .14 .21 .27 .31 .35 .39 .43 .47), https://dphhs.mt.gov/assets/cssd/GuidelineWorksheetsandInstructions.pdf",
+      "minimumPct": 0.12,
+      "minimumPctRule": "WS-A line 6: if income available > 0, minimum = 12% of income after deductions (line 3); line 22 gross annual support = higher of line 21 (share + SOLA) and line 6 (ARM 37.62.126(1)(b))",
+      "standardParentingDays": 110,
+      "creditFactorPerDay": 0.0069,
+      "sharedRule": "WS-B part 2: when a child spends more than 110 days with each parent, each parent's per-child obligation is reduced by 0.0069 x (own days - 110) x obligation (rounded); the parent with the higher reduced obligation pays the difference, not more than his or her unreduced obligation. https://dphhs.mt.gov/assets/cssd/GuidelineWorksheetsandInstructions.pdf",
+      "worksheetsUrl": "https://dphhs.mt.gov/assets/cssd/GuidelineWorksheetsandInstructions.pdf"
+    },
+    "url": "https://dphhs.mt.gov/assets/cssd/PolicyManual/cs404-2.pdf"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 111,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "No adjustment when the child spends no more than 110 days a year with the other parent. When any child spends more than 110 days with both parents (or children live primarily with different parents), each child's need is recalculated, each parent keeps the share for the days the child is with him or her and owes the share for the days with the other parent, and the obligations are offset per child (ARM 37.62.124, 37.62.134(2)(b)). A 'day' is the majority of a 24-hour period (ARM 37.62.124(3)). Worksheet B part 2 applies a credit factor of 0.0069 per day above 110 to each parent's per-child obligation, then offsets (CSSD worksheets, https://dphhs.mt.gov/assets/cssd/GuidelineWorksheetsandInstructions.pdf).",
+    "url": "https://dphhs.mt.gov/assets/cssd/GuidelinesARM.pdf"
+  },
+  "addOns": {
+    "childcare": "Reasonable work-related child care, reduced by the federal dependent care tax credit, supplements the primary allowance and is shared by parental share; each parent is credited for supplements it pays (ARM 37.62.123).",
+    "healthInsurance": "The cost of adding the children to a policy (or a child-only policy) and recurring unreimbursed health costs over $250 per child per year supplement the primary allowance (ARM 37.62.123(1)(b)-(c)).",
+    "text": "Supplements to the primary allowance are divided by parental share (ARM 37.62.123).",
+    "url": "https://dphhs.mt.gov/assets/cssd/GuidelinesARM.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 20748,
+    "period": "annual",
+    "minimumOrder": null,
+    "rule": "Personal allowance of $20,748 per year (2026) is deducted from each parent's income (ARM 37.62.114; CS 404.2). A minimum contribution applies when income after deductions is at or below the personal allowance (income-ratio table, 0% to 11%) or when the calculated obligation is below 12% of income after deductions (ARM 37.62.126).",
+    "url": "https://dphhs.mt.gov/assets/cssd/PolicyManual/cs404-2.pdf"
+  },
+  "statute": {
+    "cite": "MCA 40-5-209; ARM 37.62.101 to 37.62.148",
+    "url": "https://dphhs.mt.gov/assets/cssd/GuidelinesARM.pdf"
+  },
+  "guidelinesUrl": "https://dphhs.mt.gov/CSSD/services/Guidelines",
+  "officialCalculatorUrl": null,
+  "emancipation": null,
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 48000,
+        "incomeB": 24000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 8597.0,
+      "what": "payer's (parent A) annual transfer payment (incomes after deductions, annual)",
+      "source": "Computed by hand with 2026 tables (CS 404.2) and Worksheet A: line 5 A 27,252, B 3,252; line 7 same (12% minimums 5,760 / 2,880 lower); A share 89.34%; line 15/16 = 6,224 x 0.8934 = 5,560; SOLA = (27,252 - 5,560) x 0.14 = 3,037; line 22 = 8,597 a year ($716 a month after per-child rounding). Corrected from the first version, which gave the monthly figure while the table period is annual."
+    },
+    {
+      "inputs": {
+        "incomeA": 18000,
+        "incomeB": 40000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 1620.0,
+      "what": "payer's (parent A) annual minimum contribution, income after deductions below the personal allowance",
+      "source": "Computed by hand, ARM 37.62.126(1)(a), (3) and WS-C: income ratio 18,000 / 20,748 = 0.868 (over 0.80, not over 0.87) -> multiplier 0.09; 18,000 x 0.09 = 1,620 a year."
+    },
+    {
+      "inputs": {
+        "incomeA": 48000,
+        "incomeB": 24000,
+        "children": 1,
+        "overnightsA": 146
+      },
+      "expected": 5747.0,
+      "what": "payer's (parent A) annual transfer payment with 146 days a year (shared parenting, WS-B)",
+      "source": "Computed by hand, Worksheet B part 2: A obligation 8,597, B obligation = higher of 1,026 (664 + SOLA 362) and 12% x 24,000 = 2,880; A reduced by 0.0069 x 36 x 8,597 = 2,136 -> 6,461; B reduced by 0.0069 x 109 x 2,880 = 2,166 -> 714; A pays 6,461 - 714 = 5,747 a year."
+    }
+  ],
+  "facts": [
+    {
+      "text": "CSSD updates the guideline tables every year to follow the federal poverty guidelines and the IRS mileage rate; the 2026 tables took effect February 1, 2026 (CS 404.2).",
+      "url": "https://dphhs.mt.gov/assets/cssd/PolicyManual/cs404-2.pdf"
+    },
+    {
+      "text": "The personal allowance is 1.3 times the federal poverty guideline for one person: $20,748 a year in 2026 (ARM 37.62.114; CS 404.2).",
+      "url": "https://dphhs.mt.gov/assets/cssd/PolicyManual/cs404-2.pdf"
+    },
+    {
+      "text": "Montana guidelines are computed annually and paid in equal monthly installments (ARM 37.62.101(3)).",
+      "url": "https://dphhs.mt.gov/assets/cssd/GuidelinesARM.pdf"
+    },
+    {
+      "text": "The next quadrennial guidelines review is to be completed in December 2028 by the Guidelines Review and Oversight Committee (GROC) (MCA 40-5-209).",
+      "url": "https://dphhs.mt.gov/CSSD/services/Guidelines"
+    },
+    {
+      "text": "A long distance parenting adjustment uses the IRS business mileage rate ($0.725/mile) and a standard expense of $1,450 (ARM 37.62.130; CS 404.2).",
+      "url": "https://dphhs.mt.gov/assets/cssd/PolicyManual/cs404-2.pdf"
+    }
+  ],
+  "uncertain": [
+    "Rule text read from the DPHHS reformatted copy of ARM 37.62 (dated 2023-04-06), which itself states the official version is on rules.mt.gov; rules.mt.gov was not read.",
+    "ARM 37.62.110 deductions and 37.62.130 long distance rule not transcribed in detail.",
+    "Emancipation rule (MCA) not read; null.",
+    "thresholdOvernights 111 = 'more than 110 days' (days, not overnights).",
+    "Test case computed by hand; no official worked example read; the 2026 tables PDF reported a truncated-file warning in pypdf but its text was readable.",
+    "SOLA factor 0.35 for 5 children taken from CSSD Worksheet E (the DPHHS copy of ARM 37.62.128 omits that line)."
+  ]
+}

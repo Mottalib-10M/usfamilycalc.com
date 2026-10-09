@@ -13,7 +13,7 @@ const rows: Array<Array<string>> = [
 <section data-chrome class="mt-10">
   <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} fees and rules this calculator applies</h2>
   <Fragment set:html={table(['Court fee', d.name], rows, `${d.feeScope}; read on ${day(d.verified)}`, ['l', 'r'])} />
-  <div class="prose prose-slate mt-4 max-w-none text-sm">
+  <div class="prose prose-slate mt-4 max-w-none text-sm [overflow-wrap:anywhere]">
     <p><strong>Filing fee.</strong> {d.feeText} <a href={d.feeUrl} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
     {d.waiver?.name && <p><strong>Fee waiver.</strong> {d.waiver.name}. {d.waiver.url && <a href={d.waiver.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}
     {d.residency?.text && <p><strong>Residency.</strong> {d.residency.text} {d.residency.url && <a href={d.residency.url} target="_blank" rel="nofollow noopener noreferrer">source</a>}</p>}

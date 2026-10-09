@@ -22,7 +22,7 @@ const rows: Array<Array<string>> = [
   <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} rules this calculator applies</h2>
   <Fragment set:html={table(['Rule', d.name], rows, `${d.agency.name}, read on ${day(d.verified)}`, ['l', 'l'])} />
   {stale && <p class="text-sm text-navy-700">The {d.agency.name} had not published a 2026 figure when we checked on {day(d.verified)}: the calculator uses the latest official maximum and minimum, effective {day(T.effective)}.</p>}
-  <div class="prose prose-slate mt-4 max-w-none text-sm">
+  <div class="prose prose-slate mt-4 max-w-none text-sm [overflow-wrap:anywhere]">
     <p><strong>Rate.</strong> {T.rateText} <a href={T.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
     <p><strong>Waiting period.</strong> {d.waiting.text} <a href={d.waiting.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
     <p><strong>Duration.</strong> {d.ttdDuration.text} <a href={d.ttdDuration.url} target="_blank" rel="nofollow noopener noreferrer">source</a></p>

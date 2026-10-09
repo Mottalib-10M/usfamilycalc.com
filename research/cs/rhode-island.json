@@ -1,0 +1,67 @@
+{
+  "slug": "rhode-island",
+  "name": "Rhode Island",
+  "abbr": "RI",
+  "verified": "2026-10-09",
+  "model": "income-shares",
+  "modelName": "Income shares, Schedule of Basic Child Support Obligations by combined monthly income (Family Court Administrative Order 2023-02)",
+  "incomeBasis": "adjusted-gross",
+  "incomeDefinition": "Combined adjusted gross monthly income of both parents, per the Child Support Guideline Worksheet instructions of Administrative Order 87-02 (carried forward by AO 2023-02). AO 2023-02 also attaches a Gross to Net Conversion Table (2022 federal and state tax rates). Detailed income definitions were not read for this file.",
+  "period": "monthly",
+  "maxChildren": 6,
+  "schedule": null,
+  "scheduleFacts": {
+    "columns": "combined monthly income, then obligation for 1..6 children",
+    "minIncome": 1350,
+    "maxIncome": 40000,
+    "step": 50,
+    "lookup": "ceiling",
+    "lookupRule": "Because the tables use $50 increments, the combined adjusted gross income is always rounded upward to the next highest $50 increment, whichever increment it is closer to (AO 2023-02 Report, restating AO 87-02 section IV(B)(6)).",
+    "firstRows": [[1350, 50, 50, 50, 50, 50, 50], [1400, 71, 72, 73, 73, 74, 75]],
+    "lastRow": [40000, 3281, 4819, 5614, 6271, 6898, 7498],
+    "note": "Rows read by eye on the scanned official PDF (pages 5 and 19); the full table was not certified (see uncertain).",
+    "effective": "2023-07-01",
+    "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf"
+  },
+  "percent": null,
+  "formula": null,
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": null,
+    "multiplier": null,
+    "reductionTable": null,
+    "text": "The schedule presumes a standard parenting time in which the noncustodial parent has the child at least 20% of overnights; where each parent has at least 49% of the time with one or more children, Administrative Order 2018-01 governs the calculation (AO 2023-02 Report, 'Presumption of Parenting Time'). AO 2018-01 itself was not read.",
+    "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf"
+  },
+  "addOns": {
+    "childcare": "Child care costs are not included in the schedule (AO 2023-02 Report); the worksheet exhibits show child care handled separately.",
+    "healthInsurance": "Most health care costs are not in the schedule, but the schedule includes $250 per child per year for ordinary medical expenses (AO 2023-02 Report).",
+    "text": "Child care and most health care costs are outside the schedule (AO 2023-02 Report).",
+    "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1333,
+    "period": "monthly",
+    "minimumOrder": 50,
+    "rule": "The schedule incorporates a self-support reserve updated to the 2022 federal poverty guideline for one person, $1,333 (AO 2023-02 Report). The first schedule row ($1,350) is $50 for 1 to 6 children (read by eye).",
+    "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf"
+  },
+  "statute": { "cite": "R.I. Gen. Laws § 15-5-16.2; Family Court Administrative Order 2023-02", "url": "https://ocss.ri.gov/attorney-info/child-support-guidelines" },
+  "guidelinesUrl": "https://ocss.ri.gov/attorney-info/child-support-guidelines",
+  "officialCalculatorUrl": null,
+  "emancipation": null,
+  "testCases": [],
+  "facts": [
+    { "text": "The current schedule was adopted by Family Court Administrative Order 2023-02, dated June 22, 2023, effective July 1, 2023, under R.I. Gen. Laws § 15-5-16.2(a).", "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf" },
+    { "text": "The schedule is based on the 2021 Betson-Rothbarth measurements (2013-2019 Consumer Expenditure Survey) at August 2022 price levels; the next quadrennial review must start by May 2027.", "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf" },
+    { "text": "The 2021-2023 review of 15,350 orders found deviations from the guideline in 1.6% of cases and income imputation in 10.20%.", "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf" },
+    { "text": "Combined income is always rounded up to the next $50 schedule line, even when it is closer to the lower line.", "url": "https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf" }
+  ],
+  "uncertain": [
+    "schedule: null. The official AO 2023-02 PDF is a 50-page image scan (no text layer). ocss.ri.gov returns HTTP 403 to scripts; the copy read is the Wayback capture of the official URL (https://web.archive.org/web/20250612233534id_/https://ocss.ri.gov/sites/g/files/xkgbur511/files/2023-07/23-02.pdf). OCR (scripts/cs_rhode_island.py + scripts/ocr_vision.swift) produced misread and missing cells (grey shading of the low-income area, row matching), so the 774-row table (1,350 to 40,000 by 50) was not certified and cs-schedules/rhode-island.json was not written. Finishing it needs a cell-by-cell visual check of pages 5-19.",
+    "Court site (courts.ri.gov) family-court child support PDFs now return 404; examples PDF (2023) was retrieved from Wayback but is also a scan; no official worked example transcribed, so no testCase.",
+    "Shared custody rule (AO 2018-01, 49% threshold) and income definition (AO 87-02) not read directly.",
+    "Emancipation rule not read: R.I. Gen. Laws § 15-5-16.2 on webserver.rilegislature.gov timed out.",
+    "The ocss.ri.gov guidelines page itself was read via Wayback (snapshot 2026-05-12)."
+  ]
+}

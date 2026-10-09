@@ -28,7 +28,7 @@ const rows: Array<Array<string>> = [
   <Fragment set:html={table(['Rule', d.name], rows, `Read on official ${d.name} pages on ${day(d.verified)}`, ['l', 'l'])} />
   <h3 class="mt-6 font-serif text-xl font-bold text-navy-900">Monthly support for one paying parent, the other parent without income</h3>
   <Fragment set:html={table(['Paying parent’s monthly income', ...Array.from({ length: kids }, (_, i) => `${i + 1} ${i ? 'children' : 'child'}`)], excerpt, `Computed by the engine from the ${d.name} rules, no parenting time, no add-ons. Income as the state defines it.`, ['l', ...Array(kids).fill('r')])} />
-  <div class="prose prose-slate mt-4 max-w-none text-sm">
+  <div class="prose prose-slate mt-4 max-w-none text-sm [overflow-wrap:anywhere]">
     <p><strong>How the amount is set.</strong> {d.modelText} <a href={d.guidelinesUrl} target="_blank" rel="nofollow noopener noreferrer">source</a></p>
     {d.incomeDefinition && <p><strong>Income.</strong> {d.incomeDefinition}</p>}
     {d.aboveMaxText && <p><strong>Above the table.</strong> {d.aboveMaxText}</p>}

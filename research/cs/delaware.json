@@ -1,0 +1,205 @@
+{
+  "slug": "delaware",
+  "name": "Delaware",
+  "abbr": "DE",
+  "verified": "2026-10-09",
+  "model": "melson",
+  "modelName": "Delaware Child Support Formula (Melson): self-support allowance, primary support allowance, standard of living adjustment (Family Court Civil Rules 500-510)",
+  "incomeBasis": "gross",
+  "incomeDefinition": "Monthly gross income (wages, secondary income case by case, overtime, other taxable income, self-employment, nontaxable income such as post-2018 alimony, VA benefits and military allowances) plus a 25% surcharge on nontaxable income (Line 2), less 7% of documented self-employment income (Line 3), allowable deductions (mandatory pension, voluntary retirement up to 5% of gross, union dues, disability insurance, medical insurance not covering these children, court-ordered alimony) and the $1,600 self-support allowance; x 70% if the parent supports other dependent children (Lines 1-8). Reasonable earning capacity is used; presumptive minimum income is $2,390 per month (Form 509i, 2026).",
+  "period": "monthly",
+  "maxChildren": null,
+  "schedule": null,
+  "percent": null,
+  "formula": {
+    "text": "Line 6 = gross (+25% of nontaxable) - SE adjustment - deductions - $1,600. Line 8 = Line 6 x (100% or 70% if other dependents). Line 9 share = Line 8 / total Line 8. Line 11 primary support allowance per household by children living there ($800 first child, +$420 each additional; $590 for a half child, +$210 each additional half). Line 13 total primary need = allowances + child care + allowable tuition + children's medical premiums (x75%, or 50% if other dependents). Line 14 = Line 9 x Line 13. Line 15 = Line 8 - Line 14 (>=0). Line 16 high-income offset = 30% x sum of each parent's (Line 15 - $16,000, >=0). Line 18A SOLA = (Line 15 - Line 16B) x SOLA% (12% 1 child, 17% 2, 21% 3, +2% each additional). Line 19 = Line 14 + Line 18A. Line 24 net obligation = Line 19 - retained primary and SOLA (Line 20) - child care/tuition paid (Line 21) - parenting time adjustment (Line 22B), capped at 50% of Line 8 (35% if supporting children in 3+ households) (Line 23). All amounts monthly, rounded to the nearest whole dollar.",
+    "params": {
+      "selfSupportAllowance": 1600,
+      "otherDependentsMultiplier": 0.7,
+      "nontaxableSurcharge": 0.25,
+      "selfEmploymentDeduction": 0.07,
+      "socialSecurityMaxMonthly": 15375,
+      "voluntaryRetirementCapPctGross": 5,
+      "primarySupportAllowance": {
+        "first": 800,
+        "eachAdditional": 420,
+        "half": 590,
+        "eachAdditionalHalf": 210
+      },
+      "medicalPremiumFactor": {
+        "noOtherDependents": 0.75,
+        "otherDependents": 0.5
+      },
+      "highIncomeThreshold": 16000,
+      "highIncomeOffsetPct": 30,
+      "solaPct": {
+        "1": 12,
+        "2": 17,
+        "3": 21,
+        "eachAdditional": 2
+      },
+      "parentingTimeAdjustment": [
+        {
+          "overnights": "79 or less",
+          "pct": 0
+        },
+        {
+          "overnights": "80 to 124",
+          "pct": 10
+        },
+        {
+          "overnights": "125 to 163",
+          "pct": 30
+        },
+        {
+          "overnights": "164 or more",
+          "pct": "shared (0.5 child per household)"
+        }
+      ],
+      "selfSupportProtectionPct": {
+        "default": 50,
+        "threeOrMoreHouseholds": 35
+      },
+      "minimumOrder": {
+        "1": 160,
+        "2+": 240,
+        "arrearsOnly": {
+          "1": 192,
+          "2+": 288
+        },
+        "incarcerated": {
+          "1": 80,
+          "2+": 120
+        },
+        "incarceratedArrearsOnly": {
+          "1": 96,
+          "2+": 144
+        }
+      },
+      "sharedNoObligationBelow": 50,
+      "presumptiveMinimumIncome": 2390,
+      "effective": "2026-02-01",
+      "parentingTimeTable": [
+        [
+          80,
+          10
+        ],
+        [
+          125,
+          30
+        ]
+      ],
+      "parentingTimeTableRule": "[minimum annual overnights of the obligated parent, percentage of the OTHER parent's Line 20 retained] (Form 509i Line 22)",
+      "sharedFromOvernights": 164
+    },
+    "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+  },
+  "shared": {
+    "method": "other",
+    "thresholdOvernights": 164,
+    "multiplier": null,
+    "reductionTable": [
+      {
+        "from": 0,
+        "to": 79,
+        "pct": 0
+      },
+      {
+        "from": 80,
+        "to": 124,
+        "pct": 10
+      },
+      {
+        "from": 125,
+        "to": 163,
+        "pct": 30
+      }
+    ],
+    "text": "A child living more than 163 overnights in each home counts as 1/2 child in each household (Line 10) and each household gets the half-child primary allowance ($590, +$210). For 80-124 overnights the obligated parent retains 10%, for 125-163 overnights 30%, of the other parent's retained primary support and SOLA (Line 22). In shared or split placement no obligation is assessed below $50 per month (Line 24) (Form 509i, 2026).",
+    "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+  },
+  "addOns": {
+    "childcare": "Actual work-related child care is part of total primary need (Line 12A) and shared by Line 9 share; each parent is credited for what it pays (Line 21).",
+    "healthInsurance": "Premiums for policies covering the children enter Line 12C at 75% (50% if the parent supports other children); coverage costing more than 10% of income is presumed unaffordable. Uninsured medical costs are split by Line 9 share rounded to the next 10% toward 50% (Line 25).",
+    "text": "Child care, allowable private school tuition and children's medical premiums are added to primary need (Line 12).",
+    "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+  },
+  "lowIncome": {
+    "selfSupportReserve": 1600,
+    "period": "monthly",
+    "minimumOrder": 160,
+    "rule": "Each parent receives a $1,600 monthly self-support allowance (Line 5). The obligation cannot exceed 50% of Line 8 (35% if the parent supports children in 3 or more households) (Line 23). Unless placement is shared or split or the payer is disabled, the minimum order is $160 for one child and $240 for more than one (Form 509i, 2026).",
+    "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+  },
+  "statute": {
+    "cite": "Del. Fam. Ct. Civ. R. 500-510; 13 Del. C. § 514",
+    "url": "https://courts.delaware.gov/rules/index.aspx#family"
+  },
+  "guidelinesUrl": "https://courts.delaware.gov/forms/download.aspx?id=109568",
+  "officialCalculatorUrl": "https://courts.delaware.gov/family/support/supportcalculator.aspx",
+  "emancipation": null,
+  "testCases": [
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 1,
+        "overnightsA": 0,
+        "note": "gross wages, no deductions, child lives with B, no child care or insurance"
+      },
+      "expected": 892.0,
+      "what": "parent A's net monthly obligation (Line 24)",
+      "source": "Computed by hand from Form 509i (2026): Line 6 A 2,400, B 400; Line 9 A 85.71%; primary need $800; Line 14 A 686 (685.71 rounded), B 114; Line 15 A 1,714, B 286; SOLA 12%: A 206, B 34; Line 19 A 892; retained by A 0; cap 50% x 2,400 = 1,200; obligation $892 (unrounded path gives $891.43). https://courts.delaware.gov/forms/download.aspx?id=109568"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 1,
+        "overnightsA": 100
+      },
+      "expected": 788.0,
+      "what": "parent A's net monthly obligation with 100 overnights a year (Line 22, 10%)",
+      "source": "Computed by hand from Form 509i (2026): as case 1, Line 19 A = 892; B's Line 20 = SOLA per child (206 + 34 = 240) + primary allowance 800 = 1,040; 10% = 104; 892 - 104 = 788."
+    },
+    {
+      "inputs": {
+        "incomeA": 1800,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 160.0,
+      "what": "parent A's net monthly obligation, minimum order for one child",
+      "source": "Computed by hand from Form 509i (2026): Line 6 A 200, B 1,400; A share 12.5%; Line 14 A 100; SOLA A 12; Line 19 112, capped at 50% x 200 = 100; minimum order for one child (not shared, not disabled) = $160."
+    }
+  ],
+  "facts": [
+    {
+      "text": "Delaware revised its formula effective February 1, 2026; monetary allowances are adjusted by February 1 each year with the HHS poverty guidelines and the whole formula is to be reviewed again in 2026 (Form 509i).",
+      "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+    },
+    {
+      "text": "Nontaxable income such as VA benefits is grossed up by 25% to its taxable earned-income equivalent (Line 2).",
+      "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+    },
+    {
+      "text": "In a new support petition, 6 months of retroactive support before filing is presumed, never more than 2 years (Form 509i).",
+      "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+    },
+    {
+      "text": "Within 2 1/2 years of the last order, a modification needs a particularized substantial change and a change of more than 10%; a formula revision alone is not a ground (Form 509i).",
+      "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+    },
+    {
+      "text": "Arrears are presumptively repaid at 20% of current support, at least $20 per month (Form 509i).",
+      "url": "https://courts.delaware.gov/forms/download.aspx?id=109568"
+    }
+  ],
+  "uncertain": [
+    "Read from the Family Court's Form 509i 'Instructions for Child Support Calculation (2026)', Rev 2/26, not from the text of Family Court Civil Rules 500-510.",
+    "No official worked example transcribed; test case computed by hand, rounding each line to whole dollars as the form instructs.",
+    "Emancipation rule not read; null. The statute cite 13 Del. C. § 514 was not read.",
+    "Number of children is open-ended (SOLA +2% and allowance +$420 per additional child); maxChildren null."
+  ]
+}

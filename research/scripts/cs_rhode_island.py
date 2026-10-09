@@ -27,7 +27,9 @@ MANUAL = json.load(open(os.path.join(HERE, "cs_rhode_island_manual.json"))) \
     if os.path.exists(os.path.join(HERE, "cs_rhode_island_manual.json")) else {}
 MANUAL = {(int(k.split(",")[0]), int(k.split(",")[1])): v for k, v in MANUAL.items()}
 
-COL_EDGES = [0.26, 0.37, 0.49, 0.61, 0.72, 0.83]  # boundaries between income,1,...,6 (right-edge x)
+# Column x ranges in pixels of the 2552-px-wide scans (income, 1..6 children); each strip is
+# OCR'd separately, then cells are matched to income rows by vertical position.
+STRIPS = [(185, 552), (588, 796), (802, 1097), (1102, 1434), (1438, 1713), (1718, 2012), (2018, 2262)]
 
 
 def ocr(png):
@@ -37,22 +39,25 @@ def ocr(png):
     for line in out.splitlines():
         b, t = line.split("\t", 1)
         x, y, w, h = map(float, b.split())
-        boxes.append((x + w, y + h / 2, t.strip()))
+        boxes.append((y + h / 2, t.strip()))
     return boxes
 
 
-def table(boxes):
-    incomes = [(y, int(t)) for xr, y, t in boxes if xr < COL_EDGES[0] and re.fullmatch(r"\d{4,5}", t)]
+def table(img, tag):
+    H = img.height
+    cols = []
+    for i, (x0, x1) in enumerate(STRIPS):
+        strip = img.crop((x0, 0, x1, H))
+        png = os.path.join(WORK, f"{tag}_c{i}.png")
+        strip.save(png)
+        cols.append([(1 - y, t) for y, t in ocr(png) if re.fullmatch(r"[\d,]+", t)])
+    incomes = [(y, int(t.replace(",", ""))) for y, t in cols[0] if len(t.replace(",", "")) >= 4]
     rows = {inc: [None] * 6 for _, inc in incomes}
-    for xr, y, t in boxes:
-        if xr < COL_EDGES[0] or not re.fullmatch(r"[\d,]+", t):
-            continue
-        col = sum(xr > e for e in COL_EDGES) - 1
-        if col < 0 or col > 5:
-            continue
-        yy, inc = min(incomes, key=lambda p: abs(p[0] - y))
-        if abs(yy - y) < 0.007:
-            rows[inc][col] = int(t.replace(",", ""))
+    for c in range(1, 7):
+        for y, t in cols[c]:
+            yy, inc = min(incomes, key=lambda p: abs(p[0] - y))
+            if abs(yy - y) < 0.006:
+                rows[inc][c - 1] = int(t.replace(",", ""))
     return rows
 
 
@@ -61,11 +66,8 @@ merged, disagreements = {}, []
 for pno in range(5, 20):
     page = reader.pages[pno - 1]
     img = Image.open(__import__("io").BytesIO(page.images[0].data)).convert("L")
-    raw_png = os.path.join(WORK, f"p{pno:02d}.png")
-    flt_png = os.path.join(WORK, f"p{pno:02d}f.png")
-    img.save(raw_png)
-    img.filter(ImageFilter.MedianFilter(3)).save(flt_png)
-    a, b = table(ocr(raw_png)), table(ocr(flt_png))
+    a = table(img, f"p{pno:02d}")
+    b = table(img.filter(ImageFilter.MedianFilter(3)), f"p{pno:02d}f")
     for inc in sorted(set(a) | set(b)):
         ra, rb = a.get(inc, [None] * 6), b.get(inc, [None] * 6)
         row = []

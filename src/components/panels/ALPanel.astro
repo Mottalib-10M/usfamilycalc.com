@@ -6,7 +6,7 @@ const d = al(Astro.props.slug) as ReturnType<typeof al> & { eligibilityText?: st
 ---
 <section data-chrome class="mt-10">
   <h2 class="font-serif text-2xl font-bold text-navy-900">The {d.name} rule this calculator applies</h2>
-  <div class="prose prose-slate mt-4 max-w-none text-sm">
+  <div class="prose prose-slate mt-4 max-w-none text-sm [overflow-wrap:anywhere]">
     <p><strong>Scope.</strong> {d.scope}</p>
     <p><strong>Amount.</strong> {d.formulaText}</p>
     <p><strong>Duration.</strong> {d.durationText}</p>
