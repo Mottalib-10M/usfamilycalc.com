@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://us-family-law-calculators.example/sitemap-index.xml
+Sitemap: https://usfamilycalc.com/sitemap-index.xml

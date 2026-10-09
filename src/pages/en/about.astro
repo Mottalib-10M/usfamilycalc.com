@@ -8,7 +8,7 @@ import { csAll, wcAll, alAll } from '../../lib/kit';
 const lang = 'en';
 const nCs = csAll().length, nWc = wcAll().length, nAl = alAll().length;
 ---
-<PageLayout title={`${SITE_NAMES[lang]}: who checks the state rules, and how 2026`} description="Who publishes these child support, alimony, divorce, probate and workers comp calculators, where the state rules come from and how to report an error in 2026." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+<PageLayout title={`Family law calculator sources and checks: ${SITE_NAMES[lang]}`} description="Who publishes these child support, alimony, divorce, probate and workers comp calculators, where the state rules come from and how to report an error in 2026." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
   <header class="mb-6"><h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES[lang]}</h1></header>
   <div class="prose prose-slate max-w-none prose-headings:font-serif">
     <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>

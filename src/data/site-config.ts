@@ -1,6 +1,6 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://us-family-law-calculators.example";
-export const SITE_NAMES: Record<string, string> = {"en": "Family Law Calc"};
+export const SITE_URL = "https://usfamilycalc.com";
+export const SITE_NAMES: Record<string, string> = {"en": "US Family Calc"};
 export const LANG_TAGS: Record<string, string> = {"en": "en-US"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_US"};
 export const LOCALE_TAG = 'en-US';
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners publis
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Child support guidelines", "Spousal support and alimony", "Divorce court filing fees", "Probate fees and timelines", "Workers' compensation benefits"]};
-export const CONTACT_EMAIL = "contact@us-family-law-calculators.example";
+export const CONTACT_EMAIL = "contact@usfamilycalc.com";
 export const THEME_COLOR = '#B22234';
 export const LOGO_SYMBOL = '§';
 export const BING_VERIFY_CODE = '';
