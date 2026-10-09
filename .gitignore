@@ -3,4 +3,5 @@ dist/
 .astro/
 .DS_Store
 scripts/__pycache__/
-research/raw/
+research/_archives/
+research/raw

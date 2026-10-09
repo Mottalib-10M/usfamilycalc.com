@@ -1,0 +1,46 @@
+{
+ "slug": "nebraska",
+ "name": "Nebraska",
+ "abbr": "NE",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 2,
+  "text": "Pre-death claims are barred unless presented within 2 months after the first publication of notice to creditors (with a possible court extension of up to 30 days on application within 60 days), or within 3 years after death if notice was not given (Neb. Rev. Stat. § 30-2485(a)).",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-2485"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 5 months after original appointment, with notice to creditors first published more than 4 months earlier (Neb. Rev. Stat. § 30-24,117).",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-24%2C117"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if all personal property in the estate, less liens and encumbrances, does not exceed $100,000 (Neb. Rev. Stat. § 30-24,125). Not indexed.",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-24%2C125"
+ },
+ "simplified": {
+  "text": "Informal probate and closing by sworn statement after 5 months (Neb. Rev. Stat. § 30-24,117); affidavit collection of personal property up to $100,000 (§ 30-24,125).",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-24%2C117"
+ },
+ "filingFee": {
+  "amount": 22,
+  "scope": "statewide",
+  "text": "County court fee of $22 for probate proceedings commenced and closed informally (Neb. Rev. Stat. § 33-125(1)(a)(i)); other fees apply to formal proceedings and subsequent petitions.",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=33-125"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Compensation of the personal representative and of persons it employs is reviewable for reasonableness using listed factors such as time, skill, customary local fees and the amount involved (Neb. Rev. Stat. § 30-2482).",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-2482"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney compensation is reviewed for reasonableness under the factors of Neb. Rev. Stat. § 30-2482.",
+  "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-2482"
+ },
+ "uncertain": [
+  "nebraskalegislature.gov refuses connections from this environment: §§ 30-2485 (snapshot 2026-04-22), 30-24,125 (2026-07-30), 30-2482 (2026-01-14), 30-24,117 (2026-05-31) and 33-125 (2026-06-15) were read from Internet Archive copies of the official pages.",
+  "Neb. Rev. Stat. § 30-2480 (PR compensation) not read; type 'reasonable' based on § 30-2482.",
+  "Effective date of the $100,000 affidavit limit not shown (smallEstate.effective = null)."
+ ]
+}

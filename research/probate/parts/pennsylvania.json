@@ -1,0 +1,46 @@
+{
+ "slug": "pennsylvania",
+ "name": "Pennsylvania",
+ "abbr": "PA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Pennsylvania has no short non-claim bar date: death does not stop limitation periods, but a claim that would expire within 1 year after death is extended to 1 year after death (20 Pa.C.S. § 3383); written notice of a claim to the personal representative tolls limitations (§ 3384); claims become unenforceable after 1 year from death against bona fide purchasers of the decedent's real estate in the cases of § 3385. The one-year protection for distribution after advertisement of letters (§ 3532) could not be read.",
+  "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=20&div=0&chapter=33"
+ },
+ "earliestClose": {
+  "text": "Not verified: the rule protecting a personal representative who distributes more than 1 year after first advertisement of letters (20 Pa.C.S. § 3532) could not be read from an official source.",
+  "url": null
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": "2013-08-31",
+  "text": "Settlement of small estates on petition to the orphans' court division when the decedent's property (excluding real estate and payments under § 3101, including the family exemption) has a gross value not exceeding $50,000 (20 Pa.C.S. § 3102, as amended by Act 35 of July 2, 2013, effective 60 days later, for decedents dying on or after that date). Not indexed.",
+  "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=20&div=0&chapter=31&section=2&subsctn=0"
+ },
+ "simplified": {
+  "text": "Small estate petition for estates up to $50,000 (20 Pa.C.S. § 3102); payments to family and funeral directors of certain wages, deposits and benefits without administration (20 Pa.C.S. § 3101).",
+  "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=20&div=0&chapter=31&section=2&subsctn=0"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: Philadelphia",
+  "text": "Philadelphia Register of Wills probate fees depend on estate value (base fee + 20% tax + $176.25 filing fees, schedule effective September 26, 2022, published 11/18/2024): total $190.25 for $0-$250; $386.25 for $10,000.01-$50,000; $491.25 for $50,000.01-$200,000; $596.25 for $200,000.01-$300,000; rising by $105 per $100,000 bracket to $1,331.25 for the first $1,000,000; plus $75 base ($15 tax) per additional $100,000 and $750 base ($150 tax) per additional $1,000,000.",
+  "url": "https://www.phila.gov/media/20260804102325/ROW-Fee-Schedule-11.18.2024.pdf"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "No statutory percentage schedule in Title 20; personal representative compensation is allowed by the orphans' court as reasonable (20 Pa.C.S. § 3537, not read).",
+  "url": null
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney fees are allowed by the orphans' court as reasonable (20 Pa.C.S. § 3537, not read).",
+  "url": null
+ },
+ "uncertain": [
+  "palegis.us and legis.state.pa.us refuse connections from this environment and WebFetch. 20 Pa.C.S. Chapter 31 (§ 3102) was read from the Internet Archive copy (2025-08-13) of https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/20/00.031..HTM and Chapter 33 (§§ 3383-3385) from the copy of 00.033..HTM (2024-11-10); later amendments not checked.",
+  "20 Pa.C.S. Chapter 35 (§ 3532 distribution after 1 year, § 3537 compensation) could not be read: no archive copy. earliestClose, personalRepFee and attorneyFee are therefore not verified.",
+  "Philadelphia fee table read from a PDF whose columns were extracted out of order; bracket-to-total mapping follows the order of the 21 value bands (verify against the PDF)."
+ ]
+}

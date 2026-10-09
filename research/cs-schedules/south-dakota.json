@@ -13,7 +13,15 @@
 "5",
 "6"
 ],
-"note": "Each row is an income bracket (inclusive bounds). Emboldened (self-support reserve) areas of the official table are not marked in the HTML text.",
+"note": "Each row is an income bracket (inclusive bounds). emboldenedTo[n-1] = upper bound of the last bracket whose cell for n children is emboldened in the official HTML (a span class with font-weight: bold), i.e. the area that includes the $871 self-support reserve (SDCL 25-7-6.2).",
+"emboldenedTo": [
+1200,
+1350,
+1550,
+1700,
+1850,
+2000
+],
 "rows": [
 [
 0,

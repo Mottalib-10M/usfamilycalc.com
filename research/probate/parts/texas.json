@@ -39,7 +39,7 @@
   "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.352.htm#352.051"
  },
  "uncertain": [
-  "statutes.capitol.texas.gov is a JavaScript application: Estates Code chapters 205, 257, 308, 352, 355 and 401 were read from the official Texas Legislative Council file server behind it (https://tcss.legis.texas.gov/resources/ES/htm/ES.<chapter>.htm); no 2025 (89th Legislature) amendment appears in these sections.",
+  "statutes.capitol.texas.gov is a JavaScript application: Estates Code chapters 205, 257, 308, 352, 355 and 401 were read from the official Texas Legislative Council file server behind it (the chapter pages of the Estates Code on tcss.legis.texas.gov); no 2025 (89th Legislature) amendment appears in these sections.",
   "Filing fee is the Harris County Clerk's published 'associated court filing fee' as read on 2026-10-08 (no effective date shown on the page)."
  ]
 }

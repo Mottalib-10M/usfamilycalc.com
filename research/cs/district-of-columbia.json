@@ -30,7 +30,19 @@
     "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a"
   },
   "percent": null,
-  "formula": null,
+  "formula": {
+    "text": "Parameters of the D.C. guideline read in § 16-916.01: between two schedule rows the obligation is rounded up to the next higher amount ((f)(1)(B)); low-income adjustment: if adjusted gross income minus the self-support reserve is negative or under $900 a year, subsection (g) applies ($75 a month presumption), otherwise the lesser of that remainder and the obligation ((m)(2)-(3)); total obligation with add-ons capped at 35% of the payer's adjusted gross income ((n)); shared physical custody presumed at 35% or more of the time with each parent, basic obligation × 1.5, each parent keeps his or her share × own time, offset, not more than the sole-custody amount ((q)(1)(A)-(G)).",
+    "params": {
+      "lookupRoundUp": true,
+      "lowIncomeMinAbilityAnnual": 900,
+      "presumedMinimumMonthly": 75,
+      "capPctOfAdjustedGross": 35,
+      "sharedPctOfYear": 35,
+      "sharedMultiplier": 1.5,
+      "sharedCappedAtSole": true
+    },
+    "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+  },
   "shared": {
     "method": "cross-credit",
     "thresholdOvernights": 128,
@@ -64,26 +76,91 @@
   },
   "testCases": [
     {
-      "inputs": { "incomeA": 48000, "incomeB": 24000, "children": 2, "overnightsA": 0, "period": "annual" },
+      "inputs": {
+        "incomeA": 48000,
+        "incomeB": 24000,
+        "children": 2,
+        "overnightsA": 0,
+        "period": "annual"
+      },
       "expected": 11202.67,
       "what": "payer's (parent A) annual basic child support obligation (= $933.56 per month)",
       "source": "Computed by hand from Appendix I (§ 16-916.01a): combined $72,000, two children = $16,804; parent A share 48000/72000 = 2/3; $16,804 x 2/3 = $11,202.67. Checks: 35% cap = $16,800 (not binding); 48,000 - 15,654 = 32,346 > 11,202.67 (no low-income adjustment). https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a"
+    },
+    {
+      "inputs": {
+        "incomeA": 48100,
+        "incomeB": 24000,
+        "children": 2,
+        "overnightsA": 0
+      },
+      "expected": 11281.82,
+      "what": "payer's annual obligation when combined income falls between two schedule rows (rounded up to the next row)",
+      "source": "Computed by hand under § 16-916.01(f)(1)(B): combined $72,100 lies between $72,000 and $72,600, so the $72,600 row applies: two children = $16,911; 48,100/72,100 x $16,911 = $11,281.82. https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "inputs": {
+        "incomeA": 48000,
+        "incomeB": 24000,
+        "children": 2,
+        "overnightsA": 146
+      },
+      "expected": 6721.6,
+      "what": "payer's annual obligation under shared physical custody (146 nights = 40% of the year)",
+      "source": "Computed by hand under § 16-916.01(q)(1): $16,804 x 1.5 = $25,206; shares $16,804 (A) and $8,402 (B); A keeps 40% ($6,721.60) and owes $10,082.40; B keeps 60% ($5,041.20) and owes $3,360.80; difference $6,721.60, below the sole-custody amount $11,202.67 ((q)(1)(G)). https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "inputs": {
+        "incomeA": 30000,
+        "incomeB": 0,
+        "children": 4,
+        "overnightsA": 0
+      },
+      "expected": 10500.0,
+      "what": "payer's annual obligation capped at 35% of adjusted gross income",
+      "source": "Computed by hand: $30,000 row, four or more children = $11,588; payer share 100%; cap 35% x $30,000 = $10,500 (§ 16-916.01(n)); ability to pay $30,000 - $15,654 = $14,346 is higher, so the cap governs. https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "inputs": {
+        "incomeA": 16000,
+        "incomeB": 30000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 900.0,
+      "what": "payer's annual obligation under the low-income adjustment ($75 a month presumption)",
+      "source": "Computed by hand: $16,000 - $15,654 = $346 a year, under $900, so subsection (g) applies and the payer is presumed able to pay $75 a month = $900 a year (§ 16-916.01(m)(2), (g)(3)); the schedule share would be $46,200 row $8,715 x 16/46 = $3,031.30. https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
     }
   ],
   "facts": [
-    { "text": "D.C.'s schedule is annual and runs from $12,382 to $240,000 of combined adjusted gross income, with a single column for four or more children (§ 16-916.01a, Appendix I).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a" },
-    { "text": "Child support including add-ons may not exceed 35% of the paying parent's adjusted gross income (§ 16-916.01(n)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
-    { "text": "A change of 15% or more between the guideline amount and the existing order is presumed to be a substantial and material change that justifies modification (§ 16-916.01(r)(4)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
-    { "text": "Retroactive support in a new case is limited to the 24 months before filing unless the payer acted in bad faith or other extraordinary circumstances exist (§ 16-916.01(v)(1)).", "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01" },
-    { "text": "The OAG guideline calculator states it is based on the D.C. Child Support Guideline revised effective April 1, 2007.", "url": "https://csgc.oag.dc.gov/application/main/intro.aspx" }
+    {
+      "text": "D.C.'s schedule is annual and runs from $12,382 to $240,000 of combined adjusted gross income, with a single column for four or more children (§ 16-916.01a, Appendix I).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a"
+    },
+    {
+      "text": "Child support including add-ons may not exceed 35% of the paying parent's adjusted gross income (§ 16-916.01(n)).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "text": "A change of 15% or more between the guideline amount and the existing order is presumed to be a substantial and material change that justifies modification (§ 16-916.01(r)(4)).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "text": "Retroactive support in a new case is limited to the 24 months before filing unless the payer acted in bad faith or other extraordinary circumstances exist (§ 16-916.01(v)(1)).",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01"
+    },
+    {
+      "text": "The OAG guideline calculator states it is based on the D.C. Child Support Guideline revised effective April 1, 2007.",
+      "url": "https://csgc.oag.dc.gov/application/main/intro.aspx"
+    }
   ],
   "uncertain": [
     "Official schedule anomaly kept as published: row $132,000, three children = $20,473 while neighbours are $30,357 and $30,590 (probable typo for $30,473) — https://code.dccouncil.gov/us/dc/council/code/sections/16-916.01a. A calculator should decide whether to use the published value.",
     "Self-support reserve: the code's latest stated value is $15,654 (April 1, 2015). The Mayor must update it every 2 years in the D.C. Register (133% of the HHS guideline); later D.C. Register notices were not found on official pages read for this file. 2026 value not confirmed; latest official in the code = 2015-04-01. The modified self-support reserve (100%) is $11,770 as of April 1, 2015 (§ 16-916.01(g-2)).",
     "Schedule effective date 2007-04-01 is taken from the OAG calculator page ('revised effective April 1, 2007') and the 2007 reserve figure that opens the table; the appendix page shows no enactment history.",
-    "lookup 'ceiling' is not in the brief's enum: the code says to round up to the next higher schedule amount (§ 16-916.01(f)(1)(B)).",
     "thresholdOvernights 128 = 35% of 365 (127.75) rounded up; the code speaks of 35% of the time during the year, not overnights.",
     "Emancipation age: D.C. Code § 46-101 sets majority at 18 but preserves common-law/statutory child support rights; the support-until-21 rule is case law and was not read from an official source.",
-    "Test case computed by hand, not from the OAG calculator."
+    "Test case computed by hand, not from the OAG calculator.",
+    "lookup 'ceiling' is not in the build enum (it becomes 'floor' in src/data); the D.C. model file reads formula.params.lookupRoundUp and takes the next higher row (§ 16-916.01(f)(1)(B))."
   ]
 }

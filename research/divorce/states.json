@@ -101,6 +101,55 @@
     ]
   },
   {
+    "slug": "arizona",
+    "name": "Arizona",
+    "abbr": "AZ",
+    "filingFee": 376,
+    "responseFee": 287,
+    "feeScope": "county (Maricopa County)",
+    "feeText": "Maricopa County Clerk of Superior Court: Petition for Dissolution of Marriage with or without children $376.00; Response/Answer to Dissolution $287.00.",
+    "feeUrl": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees",
+    "otherFees": [
+      {
+        "what": "Summary Consent Decree (with or without children), Maricopa County",
+        "amount": 331.5,
+        "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+      },
+      {
+        "what": "Petition for Legal Separation, Maricopa County",
+        "amount": 376,
+        "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+      }
+    ],
+    "waiver": {
+      "name": "Apply for Deferral or Waiver (Maricopa County Clerk electronic application; deferral or waiver of court fees under A.R.S. 12-302)",
+      "url": "https://www.clerkofcourt.maricopa.gov/services/deferral-and-waiver-of-court-fees"
+    },
+    "residency": {
+      "text": "One spouse must have been domiciled in Arizona, or stationed there as a member of the armed services, for 90 days before filing (A.R.S. 25-312(A)(1)).",
+      "url": "https://www.azleg.gov/ars/25/00312.htm"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "No trial, hearing or affidavit-based decree on a petition for dissolution or legal separation until 60 days after service or acceptance of process (A.R.S. 25-329).",
+      "url": "https://www.azleg.gov/ars/25/00329.htm"
+    },
+    "simplified": {
+      "text": "Summary consent decree: spouses who agree on all issues can file jointly; Maricopa County charges $331.50 for a Summary Consent Decree (fee schedule). The 60-day wait of A.R.S. 25-329 still applies.",
+      "url": "https://www.clerkofcourt.maricopa.gov/services/filings/filing-fees"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In a dissolution, legal separation or annulment involving a common minor child, the court shall order the parties to complete a domestic relations education program, unless the court finds it not in the best interests of the parties or child or a comparable program is completed (A.R.S. 25-352(A); programs under 25-351).",
+      "url": "https://www.azleg.gov/ars/25/00352.htm"
+    },
+    "uncertain": [
+      "Maricopa fee page was read from the Internet Archive copy (2026-08-13) of the official URL; the clerk's site returns 403 to automated clients.",
+      "Eligibility conditions for a summary consent decree (Ariz. R. Fam. Law P.) were not read from the official rule text; only the fee and its existence are verified.",
+      "Maricopa waiver page read from the Internet Archive copy (2026-09-23) of the official URL; it notes that full waivers are rarely granted at the start of a case (deferral is the usual outcome)."
+    ]
+  },
+  {
     "slug": "arkansas",
     "name": "Arkansas",
     "abbr": "AR",
@@ -206,6 +255,56 @@
       "Fam. Code §§ 2320, 2339, 2400 read from the Internet Archive copy of leginfo.legislature.ca.gov (leginfo blocks automated clients).",
       "Fam. Code § 2339 states six months; 182 days is a day approximation of 6 months.",
       "Parenting class: Fam. Code § 3170 (mandatory custody mediation) not read; required set to null."
+    ]
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "abbr": "CO",
+    "filingFee": 230,
+    "responseFee": 116,
+    "feeScope": "statewide",
+    "feeText": "Docket fee paid by the petitioner in a proceeding for dissolution of marriage, legal separation or declaration of invalidity: $230; by the respondent: $116 (C.R.S. 13-32-101(1)(a) and (b)).",
+    "feeUrl": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-13.pdf",
+    "otherFees": [
+      {
+        "what": "Motion to modify, amend or alter a decree or order more than 60 days after the decree (C.R.S. 13-32-101(2), per JDF 1 fee chart)",
+        "amount": 105,
+        "url": "https://www.coloradojudicial.gov/sites/default/files/2023-08/FeesChart%20-%20JDF1%20R2%2014%20%28FINAL%29.pdf"
+      },
+      {
+        "what": "Petition for allocation of parental responsibilities (per JDF 1 fee chart)",
+        "amount": 222,
+        "url": "https://www.coloradojudicial.gov/sites/default/files/2023-08/FeesChart%20-%20JDF1%20R2%2014%20%28FINAL%29.pdf"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "One party must have been domiciled in Colorado for 91 days before the proceeding is commenced (C.R.S. 14-10-106(1)(a)(I)).",
+      "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    "waitingPeriod": {
+      "days": 91,
+      "text": "The decree may be entered only when 91 days or more have elapsed since the court acquired jurisdiction over the respondent (service, joining as co-petitioner, or appearance) (C.R.S. 14-10-106(1)(a)(III)).",
+      "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    "simplified": {
+      "text": "Decree upon affidavit without a hearing when there are no minor children (or both parties are represented and have a separation agreement on children), the respondent is served, there is no genuine issue of material fact, and there is no marital property or the parties agree on its division (C.R.S. 14-10-120.3).",
+      "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "No statewide mandate in statute: a court may order a parent of a child under 18 to attend a parental education program on the impact of separation and divorce (C.R.S. 14-10-123.7(2)); judicial districts may require it by local practice.",
+      "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf"
+    },
+    "uncertain": [
+      "C.R.S. Titles 13 and 14 read from the Internet Archive copies (2026-09) of the 2024 uncertified printouts at content.leg.colorado.gov (direct access returned HTTP 403); the 2025 printout was not archived.",
+      "The JDF 1 fee chart (revision R2/14, posted 2023-08) matches the statutory $230 / $116; other amounts listed in otherFees are from that chart and may be outdated.",
+      "Fee waiver form (Colorado Judicial JDF form) not verified; coloradojudicial.gov fee page returned 404.",
+      "Whether each judicial district (e.g. Denver, El Paso) makes the parenting class mandatory by local rule not checked."
     ]
   },
   {
@@ -466,6 +565,99 @@
     ]
   },
   {
+    "slug": "hawaii",
+    "name": "Hawaii",
+    "abbr": "HI",
+    "filingFee": 215,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Family Court divorce filing fee: initial filing fee $100 (HRS § 607-5(b)(15)) + surcharge $65 + computer system surcharge $50 = $215; a $50 parent education surcharge is added (total $265) if either party has minor children (Judiciary family court fee sheet, effective 6/17/22).",
+    "feeUrl": "https://www.courts.state.hi.us/docs/courts_docs/Family_Court_Fees.pdf",
+    "otherFees": [
+      {
+        "what": "Total filing fee with minor children (includes $50 parent education surcharge)",
+        "amount": 265,
+        "url": "https://www.courts.state.hi.us/docs/courts_docs/Family_Court_Fees.pdf"
+      },
+      {
+        "what": "Motions in a divorce case",
+        "amount": 0,
+        "url": "https://www.courts.state.hi.us/docs/courts_docs/Family_Court_Fees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Ex Parte Motion and Affidavit to Waive Filing Fees (as named in the Judiciary divorce packet)",
+      "url": "https://www.courts.state.hi.us/docs/docs4/Divorce-With-Children-Packet.pdf"
+    },
+    "residency": {
+      "text": "The applicant must be domiciled in the circuit at the time the complaint is filed; there is a military exception and an exception for marriages solemnized in Hawaii when the parties' home jurisdiction will not grant a divorce (HRS § 580-1(a), (b)).",
+      "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0580/HRS_0580-0001.htm"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period; an uncontested divorce may be granted on affidavit without a hearing. If one spouse denies the marriage is irretrievably broken, the court may continue the matter 30 to 60 days (HRS § 580-42).",
+      "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0580/HRS_0580-0042.htm"
+    },
+    "simplified": {
+      "text": "Uncontested divorces may proceed on affidavit; the court may waive the hearing and admit proof by affidavit (HRS § 580-42(a)).",
+      "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0580/HRS_0580-0042.htm"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In divorces with minor children the clerk issues a Notice to Attend Kids First for both parents (and the children) and a $50 parent education surcharge is charged at filing (Judiciary divorce packet and fee sheet).",
+      "url": "https://www.courts.state.hi.us/docs/docs4/Divorce-With-Children-Packet.pdf"
+    },
+    "uncertain": [
+      "capitol.hawaii.gov returned 403 to automated clients on 2026-10-08; HRS § 580-1 and § 580-42 were read from Internet Archive copies (2023-02-01 and 2023-12-08) of the official URLs. The 2023 text of § 580-1 (as amended by L 2021, c 69) requires only domicile at filing, with no minimum duration; any later amendment was not checked.",
+      "Response/answer fee not stated on the Judiciary fee sheet (it lists motions as no fee); left null.",
+      "The divorce packet read is the Fifth Circuit (Kauai) version; Kids First attendance in other circuits was not verified separately."
+    ]
+  },
+  {
+    "slug": "idaho",
+    "name": "Idaho",
+    "abbr": "ID",
+    "filingFee": 207,
+    "responseFee": 136,
+    "feeScope": "statewide",
+    "feeText": "Category B.1 Divorce, with or without minor children: $207 (I.R.C.P. Appendix A filing fee schedule, effective July 12, 2024; I.C. § 31-3201A).",
+    "feeUrl": "https://web.archive.org/web/20251006192658/https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf",
+    "otherFees": [
+      {
+        "what": "Initial appearance by a party other than the petitioner (Category I.1)",
+        "amount": 136,
+        "url": "https://web.archive.org/web/20251006192658/https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit of indigency / fee waiver request under Idaho Code § 31-3220",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title31/T31CH32/SECT31-3220/"
+    },
+    "residency": {
+      "text": "The plaintiff must have been a resident of Idaho for six full weeks before filing (I.C. § 32-701).",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title32/T32CH7/SECT32-701/"
+    },
+    "waitingPeriod": {
+      "days": 21,
+      "text": "No hearing on the merits and no final decree until at least 21 days after commencement of the action and service of process (I.C. § 32-716).",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title32/T32CH7/SECT32-716/"
+    },
+    "simplified": {
+      "text": "No summary or simplified dissolution procedure was found in Idaho Code title 32, chapter 7.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "Not mandatory statewide: the court may order parent education and parenting classes (I.R.F.L.P. 1001(c)); local district practice varies.",
+      "url": "https://isc.idaho.gov/irflp"
+    },
+    "uncertain": [
+      "legislature.idaho.gov sections 32-701, 32-716, 31-3201A and 31-3220 and the Appendix A PDF were read from Internet Archive 2026 copies of the official URLs (direct requests failed).",
+      "Exact title of the Idaho fee-waiver form not verified (courtselfhelp.idaho.gov unreachable); the statute is cited instead.",
+      "Whether a given judicial district requires a parenting class by local order was not checked."
+    ]
+  },
+  {
     "slug": "illinois",
     "name": "Illinois",
     "abbr": "IL",
@@ -500,6 +692,386 @@
     "uncertain": [
       "Cook County dissolution filing fee and appearance (response) fee not verified: the Clerk of the Circuit Court of Cook County site (cookcountyclerkofcourt.org) publishes no current fee schedule that could be found; only the statutory caps of 705 ILCS 105/27.1b are cited.",
       "ilga.gov refused connections (ECONNREFUSED) on 2026-10-08; 750 ILCS 5/401, 5/452 and 705 ILCS 105/27.1b were read from the Internet Archive 2026 copy of the official ilga.gov URLs."
+    ]
+  },
+  {
+    "slug": "indiana",
+    "name": "Indiana",
+    "abbr": "IN",
+    "filingFee": 157,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Total civil filing fees $157: civil filing fee $100 (IC 33-37-4-4(a)) + document storage $5 + automated record keeping $20 + public defense administration $5 + judicial insurance adjustment $1 + judicial salaries $20 + court administration $5 + pro bono services $1 (Indiana Trial Court Fee Manual, current through the 2026 legislative session). $185 where the clerk also collects the $28 sheriff's service fee.",
+    "feeUrl": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf",
+    "otherFees": [
+      {
+        "what": "Alternative dispute resolution fee on a petition for dissolution, in counties with an approved ADR plan (IC 33-23-6-1)",
+        "amount": 20,
+        "url": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf"
+      },
+      {
+        "what": "Sheriff's service of process fee, where collected by the clerk",
+        "amount": 28,
+        "url": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "At least one party must have been an Indiana resident (or stationed at a US military installation in Indiana) for six months, and a resident of the county of filing for three months, immediately before filing (IC 31-15-2-6).",
+      "url": "https://iga.in.gov/ic/2025/Title_31.html"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "The final hearing may not be held earlier than 60 days after the petition is filed (IC 31-15-2-10); a summary decree also requires at least 60 days (IC 31-15-2-13).",
+      "url": "https://iga.in.gov/ic/2025/Title_31.html"
+    },
+    "simplified": {
+      "text": "Summary dissolution decree without a final hearing at least 60 days after filing, on verified pleadings signed by both parties with a written waiver of final hearing and either a statement of no contested issues or a written settlement agreement (IC 31-15-2-13).",
+      "url": "https://iga.in.gov/ic/2025/Title_31.html"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide parenting-class requirement found in IC Title 31 (2025 edition); requirements are set by county local rules.",
+      "url": null
+    },
+    "uncertain": [
+      "IC Title 31 (2025 edition) read from the Internet Archive copy (2025-11-13) of https://iga.in.gov/ic/2025/Title_31.html; iga.in.gov serves a script-only page to automated clients.",
+      "No answer/response fee is listed in the Indiana Trial Court Fee Manual civil table; responseFee left null.",
+      "Fee waiver (indigency) form not verified on in.gov/courts.",
+      "County local rules requiring parenting classes (e.g. Marion County) not checked."
+    ]
+  },
+  {
+    "slug": "iowa",
+    "name": "Iowa",
+    "abbr": "IA",
+    "filingFee": 285,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Divorce - dissolution of marriage, including docketing of the decree: $285 (Iowa Judicial Branch civil court fees page, citing Iowa Code § 602.8105(1)(b)).",
+    "feeUrl": "https://www.iowacourts.gov/for-the-public/representing-yourself/civil-court-fees/",
+    "otherFees": [],
+    "waiver": {
+      "name": "Application to Defer Costs",
+      "url": "https://www.iowacourts.gov/for-the-public/representing-yourself/civil-court-fees/"
+    },
+    "residency": {
+      "text": "Unless the respondent is an Iowa resident personally served, the petition must state that the petitioner has been an Iowa resident for the last year (Iowa Code § 598.5(1)(k)).",
+      "url": "https://www.legis.iowa.gov/docs/code/598.5.pdf"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "No decree before 90 days have elapsed from service of the original notice (or last publication, or filing of waiver/acceptance of service), unless the court waives it for emergency or necessity (Iowa Code § 598.19).",
+      "url": "https://www.legis.iowa.gov/docs/code/598.19.pdf"
+    },
+    "simplified": {
+      "text": "No statutory summary dissolution procedure was found in Iowa Code chapter 598.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Parties to any action involving child custody or visitation must attend a court-approved course within 45 days of service of the petition, unless waived for good cause (Iowa Code § 598.15).",
+      "url": "https://www.legis.iowa.gov/docs/code/598.15.pdf"
+    },
+    "uncertain": [
+      "Conflict between official sources: Iowa Code 2026 § 602.8105(1)(b) (legis.iowa.gov PDF generated Dec 12, 2025) states $265, while the Iowa Judicial Branch fees page read on 2026-10-08 states $285 for the same subsection. The court page is used as the amount currently collected (presumably a 2026 amendment); not confirmed against a 2026 session law.",
+      "Response/answer fee: none listed on the Judicial Branch fee page; left null."
+    ]
+  },
+  {
+    "slug": "kansas",
+    "name": "Kansas",
+    "abbr": "KS",
+    "filingFee": 173,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Statutory docket fee of $173 for any case filed in district court (K.S.A. 60-2001(a)); the Judicial Branch chart lists Domestic as $173 + $22 surcharge = $195, but that chart is labelled 'Effective July 1, 2020, through June 30, 2025'.",
+    "feeUrl": "https://www.ksrevisor.gov/statutes/chapters/ch60/060_020_0001.html",
+    "otherFees": [
+      {
+        "what": "Supreme Court surcharge (authorized by K.S.A. 60-2001(a) through June 30, 2025)",
+        "amount": 22,
+        "url": "https://kscourts.gov/KSCourts/media/30_JD/DocketFees.pdf"
+      },
+      {
+        "what": "Post-decree motion (K.S.A. 28-179) docket fee + surcharge per FY2021-2025 chart",
+        "amount": 62,
+        "url": "https://kscourts.gov/KSCourts/media/30_JD/DocketFees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Poverty affidavit in lieu of docket fee (K.S.A. 60-2001(b))",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch60/060_020_0001.html"
+    },
+    "residency": {
+      "text": "The petitioner or respondent must have been an actual resident of Kansas for 60 days immediately before filing (K.S.A. 23-2703(a)).",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch23/023_027_0003.html"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "A divorce action shall not be heard until 60 days after the petition is filed, unless the judge declares an emergency (K.S.A. 23-2708).",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch23/023_027_0008.html"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure was found in K.S.A. chapter 23, article 27.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified.",
+      "url": null
+    },
+    "uncertain": [
+      "The $22 surcharge is authorized by K.S.A. 60-2001(a) only 'through June 30, 2025' in the text read on ksrevisor.gov (history ends L. 2019); no official FY2026 docket fee chart was found, so whether the total is still $195 is unverified. filingFee is the statutory $173 only.",
+      "Response fee: Kansas charges a docket fee only on filing a case; no answer fee found; left null.",
+      "Parenting education requirement not checked (local rules vary by judicial district)."
+    ]
+  },
+  {
+    "slug": "kentucky",
+    "name": "Kentucky",
+    "abbr": "KY",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Circuit Court civil filing fees are set by Supreme Court rule (KRS 23A.200(1)); the current schedule was not found on an official page.",
+    "feeUrl": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=20629",
+    "otherFees": [
+      {
+        "what": "Service of process by sheriff, per process (KRS 23A.200(2))",
+        "amount": 20,
+        "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=20629"
+      }
+    ],
+    "waiver": {
+      "name": "Application to proceed as a poor person (in forma pauperis) under KRS 453.190",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46760"
+    },
+    "residency": {
+      "text": "One party must have resided in Kentucky (or been stationed there in the armed services) for 180 days before filing the petition (KRS 403.140(1)(a)).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=1447"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "No decree until the parties have lived apart for 60 days, which can include living under the same roof without sexual cohabitation (KRS 403.170(1)); where there are minor children no testimony except on temporary motions until 60 days after service of summons, warning order appointment or the defendant's appearance (KRS 403.044).",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=1450"
+    },
+    "separationRequiredDays": 60,
+    "simplified": {
+      "text": "No summary dissolution procedure was found in KRS chapter 403.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified; parent education is set by local family court rules.",
+      "url": null
+    },
+    "uncertain": [
+      "Filing fee not verified: KRS 23A.200 delegates civil fees to a Supreme Court rule, and the fee schedule was not found on kycourts.gov (the Clerk's Manual read via the Internet Archive does not list it).",
+      "Exact KY fee-waiver form name/number not verified (kycourts.gov forms blocked; archive copy unavailable).",
+      "Parenting class: Jefferson Family Court rules (C30FAMILYRULES) could not be retrieved."
+    ]
+  },
+  {
+    "slug": "louisiana",
+    "name": "Louisiana",
+    "abbr": "LA",
+    "filingFee": 150,
+    "responseFee": null,
+    "feeScope": "county (East Baton Rouge Parish)",
+    "feeText": "East Baton Rouge Parish Clerk of Court advance cost deposit for a new family suit: $150 without service of process, $240 with one service of process (Advance Cost Fee Schedule, Form #17 rev. 7/3/24). Deposits are estimates; further costs are billed against them (R.S. 13:842).",
+    "feeUrl": "https://www.ebrclerk.com/s/17_Advance-Cost-Fee-Schedule-lhzs.pdf",
+    "otherFees": [
+      {
+        "what": "New family suit with one service of process (deposit)",
+        "amount": 240,
+        "url": "https://www.ebrclerk.com/s/17_Advance-Cost-Fee-Schedule-lhzs.pdf"
+      },
+      {
+        "what": "Rule to show cause under C.C. art. 102 (one rule)",
+        "amount": 145,
+        "url": "https://www.ebrclerk.com/s/17_Advance-Cost-Fee-Schedule-lhzs.pdf"
+      },
+      {
+        "what": "Judgment of divorce",
+        "amount": 125,
+        "url": "https://www.ebrclerk.com/s/17_Advance-Cost-Fee-Schedule-lhzs.pdf"
+      },
+      {
+        "what": "Reconvention / third-party demand / cross claim, initial page",
+        "amount": 41,
+        "url": "https://www.ebrclerk.com/s/17_Advance-Cost-Fee-Schedule-lhzs.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Proceeding in forma pauperis (pauper affidavit; La. C.C.P. art. 5181 et seq.), handled by the clerk's Suit Accounting Department",
+      "url": "https://www.ebrclerk.com/suit-accounting"
+    },
+    "residency": {
+      "text": "A divorce may be brought if one or both spouses are domiciled in Louisiana; a spouse who has established and maintained a residence in a parish for six months is rebuttably presumed domiciled there (La. C.C.P. art. 10(A)(7), (B)).",
+      "url": "https://legis.la.gov/Legis/Law.aspx?d=111104"
+    },
+    "waitingPeriod": {
+      "days": 180,
+      "text": "Under C.C. art. 102 the divorce is granted on a rule filed after 180 days (365 days if there are minor children) have elapsed from service of the petition and the spouses have lived separate and apart for that period (C.C. arts. 102, 103.1).",
+      "url": "https://legis.la.gov/Legis/Law.aspx?d=108532"
+    },
+    "separationRequiredDays": 180,
+    "simplified": {
+      "text": "Alternatively, a divorce is granted on petition if the spouses have already lived separate and apart for 180 days (365 days with minor children) when the petition is filed (C.C. arts. 103(1), 103.1). Covenant marriages follow separate rules.",
+      "url": "https://legis.la.gov/Legis/Law.aspx?d=108533"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified.",
+      "url": null
+    },
+    "uncertain": [
+      "Waiting period is 365 days instead of 180 when there are minor children of the marriage (C.C. art. 103.1(2)); the days field holds the no-children figure.",
+      "Fee is an advance deposit, not a fixed fee; the cost actually charged depends on pleadings and services. Schedule is dated rev. 7/3/24 (latest found).",
+      "Response/answer fee not stated as a fixed amount; left null.",
+      "La. R.S. 9:306 (divorcing-parent seminar) could not be reached on legis.la.gov (postback navigation); parenting class left null."
+    ]
+  },
+  {
+    "slug": "maine",
+    "name": "Maine",
+    "abbr": "ME",
+    "filingFee": 120,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District Court fee for entry of a Family Matter Action, $120 (Maine Supreme Judicial Court Administrative Order JB-05-26 (A. 3-26), Revised Court Fees Schedule, section I.A, effective March 9, 2026). The FM-038 Family Matter Summons and Preliminary Injunction must be obtained from a clerk's office for $5.",
+    "feeUrl": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf",
+    "otherFees": [
+      {
+        "what": "FM-038 Family Matter Summons and Preliminary Injunction, obtained from the clerk",
+        "amount": 5,
+        "url": "https://www.courts.maine.gov/forms/index.html"
+      },
+      {
+        "what": "Motion for post-judgment relief under M.R. Civ. P. 120 in a Title 19-A action (includes a $20 mediation fee)",
+        "amount": 80,
+        "url": "https://www.courts.maine.gov/adminorders/jb-05-26.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Application to Proceed Without Payment of Fees (CV-067)",
+      "url": "https://mjbportal.courts.maine.gov/CourtForms/FormsLists/DownloadForm?strFormNumber=CV-067"
+    },
+    "residency": {
+      "text": "A complaint may be filed if the plaintiff has resided in good faith in Maine for 6 months before filing, or the plaintiff is a Maine resident and the parties married in Maine or lived in Maine when the cause arose, or the defendant is a Maine resident (19-A M.R.S. § 901(1)).",
+      "url": "https://legislature.maine.gov/statutes/19-A/title19-Asec901.html"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "Maine law requires a minimum 60-day waiting period between the filing of all the necessary divorce paperwork and the final hearing (Maine Judicial Branch, Divorce & Family Separation page).",
+      "url": "https://www.courts.maine.gov/courts/family/divorce-separation/index.html"
+    },
+    "simplified": {
+      "text": "No simplified or summary divorce procedure was found; irreconcilable marital differences is a no-fault ground (19-A M.R.S. § 902(1)(H)).",
+      "url": null
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "Four-hour co-parent education classes are offered statewide; the court may require parents to attend in certain cases, but attendance is not automatic.",
+      "url": "https://www.courts.maine.gov/courts/family/divorce-separation/parent-education.html"
+    },
+    "uncertain": [
+      "60-day waiting period: taken from the official Maine Judicial Branch page; the statute or rule that sets it was not identified or read (it is not in 19-A M.R.S. §§ 901-902).",
+      "Response fee: the JB-05-26 schedule lists no fee for an answer in a family matter, but this was not confirmed explicitly; left null.",
+      "Parenting class: whether any district requires it by standing order was not checked."
+    ]
+  },
+  {
+    "slug": "maryland",
+    "name": "Maryland",
+    "abbr": "MD",
+    "filingFee": 165,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Circuit court fee for a complaint for limited or absolute divorce, $165 (Summary of Charges, Costs, and Fees of the Clerks of the Circuit Court, effective September 2, 2026; Schedule II A 1 (A); Cts. & Jud. Proc. § 7-202(e)).",
+    "feeUrl": "https://mdcourts.gov/sites/default/files/import/circuit/feesummaryschedule.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Request for Waiver of Costs (CC-DC-089), filed with a Notice Regarding Restricted Information (MDJ-008)",
+      "url": "https://mdcourts.gov/legalhelp/filingfeewaivers"
+    },
+    "residency": {
+      "text": "If the grounds for divorce occurred outside Maryland, one of the parties must have resided in Maryland for at least 6 months before filing; no minimum period is set when the grounds occurred in Maryland (Fam. Law § 7-101).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-101&enactments=false"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No waiting period after filing. Grounds for absolute divorce are a 6-month separation before filing, irreconcilable differences, or mutual consent with a signed settlement agreement (Fam. Law § 7-103(a)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false"
+    },
+    "separationRequiredDays": null,
+    "simplified": {
+      "text": "Mutual consent divorce: available when the parties sign and submit a written settlement agreement resolving alimony, property and all child issues (with a child support guidelines worksheet if support is paid), neither party moves to set it aside before the hearing, and the court finds the child terms are in the children's best interests (Fam. Law § 7-103(a)(3)).",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gfl&section=7-103&enactments=false"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified: Maryland Rule 9-204 (educational seminars in custody cases) could not be read on an official site.",
+      "url": null
+    },
+    "uncertain": [
+      "Response fee: the circuit court fee summary sends appearance fees to 'contact county or see CJ § 7-204'; no statewide answer fee for a self-represented defendant was confirmed, so responseFee is null.",
+      "Parenting class: Md. Rule 9-204 not read (the official Maryland Rules are hosted on Westlaw's government site and were not retrieved).",
+      "separationRequiredDays left null: the 6-month separation is only one of three grounds (§ 7-103(a)(1))."
+    ]
+  },
+  {
+    "slug": "massachusetts",
+    "name": "Massachusetts",
+    "abbr": "MA",
+    "filingFee": 215,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Probate and Family Court: Divorce complaint (or joint petition) filing fee $200 plus $15 surcharge = $215.",
+    "feeUrl": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees",
+    "otherFees": [
+      {
+        "what": "Motion in divorce actions during the nisi period",
+        "amount": 100,
+        "url": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees"
+      },
+      {
+        "what": "Complaint for modification of child support, custody or parenting time",
+        "amount": 50,
+        "url": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit of Indigency (G.L. c. 261, §§ 27A-27G)",
+      "url": null
+    },
+    "residency": {
+      "text": "If the cause occurred outside Massachusetts, the plaintiff must have lived in the Commonwealth for one year before filing; if the cause occurred in Massachusetts, the plaintiff need only be domiciled there at filing, unless the plaintiff moved there to obtain a divorce (G.L. c. 208, § 5; see also § 4).",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section5"
+    },
+    "waitingPeriod": {
+      "days": 120,
+      "text": "Joint petition (§ 1A): judgment nisi enters 30 days after the court approves the agreement, and becomes absolute 90 days later (§ 21), i.e. 120 days after approval. Contested no-fault complaint (§ 1B): no hearing earlier than six months after filing, then the 90-day nisi period.",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section21"
+    },
+    "simplified": {
+      "text": "Joint petition for divorce on irretrievable breakdown with a notarized separation agreement, no summons or answer required (G.L. c. 208, § 1A).",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter208/Section1A"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified on an official page (Probate and Family Court parent education requirement).",
+      "url": null
+    },
+    "uncertain": [
+      "malegislature.gov refused connections on 2026-10-08; G.L. c. 208 §§ 1A, 1B, 4, 5 and 21 were read from Internet Archive copies (May-July 2026, § 4 Sept. 2025) of the official URLs.",
+      "mass.gov fee page read from the Internet Archive 2026 copy of the official URL (mass.gov returns 403/refuses automated clients). Fee for an answer not listed; responseFee null.",
+      "waitingPeriod.days = 120 counts from court approval of a § 1A agreement, not from filing; § 1B cases take at least 6 months + 90 days.",
+      "Affidavit of Indigency official page URL and the Probate and Family Court parent education requirement could not be read (mass.gov blocked, archive unavailable at the time)."
     ]
   },
   {
@@ -560,6 +1132,314 @@
     ]
   },
   {
+    "slug": "minnesota",
+    "name": "Minnesota",
+    "abbr": "MN",
+    "filingFee": 340,
+    "responseFee": 340,
+    "feeScope": "statewide (plus a county law library fee under chapter 134A)",
+    "feeText": "In marriage dissolution actions the petitioner pays $340 when the first paper is filed, and each respondent appearing separately pays $340 when its first paper is filed (Minn. Stat. § 357.021, subd. 2(1)); county law library fees under chapter 134A are added separately (subd. 4).",
+    "feeUrl": "https://www.revisor.mn.gov/statutes/cite/357.021",
+    "otherFees": [
+      {
+        "what": "Jury trial request (Minn. Stat. § 357.021, subd. 2(1))",
+        "amount": 100,
+        "url": "https://www.revisor.mn.gov/statutes/cite/357.021"
+      }
+    ],
+    "waiver": {
+      "name": "In forma pauperis affidavit (Minn. Stat. § 563.01, subd. 3)",
+      "url": "https://www.revisor.mn.gov/statutes/cite/563.01"
+    },
+    "residency": {
+      "text": "One party must have resided in Minnesota (or been stationed there in the armed services), or been domiciled there, for at least 180 days before the proceeding began (Minn. Stat. § 518.07, subd. 1).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518.07"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No general statutory waiting period for a regular dissolution. In the summary procedure the court administrator enters the decree 30 days after the joint declaration is filed (Minn. Stat. § 518.195, subd. 2).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518.195"
+    },
+    "simplified": {
+      "text": "Summary dissolution by sworn joint declaration (Minn. Stat. § 518.195): no minor children of the parties, wife not pregnant, married fewer than 8 years, no real estate, unpaid marital debts not over $8,000 (excluding car loans), marital assets not over $25,000, neither party's nonmarital assets over $25,000, no domestic abuse; decree entered 30 days after filing.",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518.195"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "When the parties have not agreed on custody or a parenting time schedule, the court must order the parents of a minor child to attend at least eight hours of an approved orientation and education program; in other proceedings involving custody, support or parenting time the court may order it (Minn. Stat. § 518.157, subd. 3).",
+      "url": "https://www.revisor.mn.gov/statutes/cite/518.157"
+    },
+    "uncertain": [
+      "County law library fee (chapter 134A) not included; the Hennepin County amount (most populous county) was not verified because mncourts.gov returns 403 to automated clients and its fee page is not archived.",
+      "Statutes read from the 2025 Minnesota Statutes on revisor.mn.gov (current edition as of 2026-10-08).",
+      "Waiver form: Minnesota Judicial Branch IFP form number and title not read (mncourts.gov blocked); the statute is cited instead.",
+      "Parenting class is mandatory only when custody or parenting time is not agreed (§ 518.157, subd. 3(a))."
+    ]
+  },
+  {
+    "slug": "mississippi",
+    "name": "Mississippi",
+    "abbr": "MS",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "county (Hinds County)",
+    "feeText": "The chancery clerk's filing fee depends on the county; the Administrative Office of Courts guide says to call the Chancery Clerk for the amount and that it should be less than $100.00. The Hinds County figure was not found on an official page.",
+    "feeUrl": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Motion to Proceed In Forma Pauperis (AOC sample form)",
+      "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/Motion-to-Proceed-In-Forma-Pauperis.pdf"
+    },
+    "residency": {
+      "text": null,
+      "url": null
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "In an irreconcilable differences divorce the parties must wait 60 days before the divorce can be set for hearing, and the 60 days do not start on the day of filing; either spouse may withdraw consent during the waiting period (Mississippi Administrative Office of Courts guide 'How to File an Irreconcilable Differences Divorce Case in Mississippi').",
+      "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf"
+    },
+    "simplified": {
+      "text": "Irreconcilable differences divorce on a joint complaint signed by both spouses before a notary, with a property settlement agreement (Mississippi AOC guide).",
+      "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Mississippi publishes its code only through LexisNexis, which could not be read; the residency requirement (Miss. Code Ann. § 93-5-5) and the statutory basis of the 60-day wait (§ 93-5-2) were not read on an official page. Residency is left null.",
+      "Hinds County chancery clerk divorce filing fee: not found (hindscountyms.com lists no chancery fee schedule in the archived pages checked); filingFee is null.",
+      "The AOC guide was read from the Internet Archive 2026 copy of the official courts.ms.gov PDF. The 'Motion to Proceed In Forma Pauperis' URL is from the archive index; the PDF itself could not be downloaded, so its exact title was not read.",
+      "Parenting class: not researched or verified."
+    ]
+  },
+  {
+    "slug": "missouri",
+    "name": "Missouri",
+    "abbr": "MO",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "county (St. Louis County, 21st Judicial Circuit)",
+    "feeText": "Statewide consolidated court costs for a circuit civil case are $83.50 (Missouri courts Schedule of Consolidated Amount, effective November 1, 2023); local surcharges are added by each circuit, and the total charged for a dissolution petition in St. Louis County was not found on an official page.",
+    "feeUrl": "https://www.courts.mo.gov/courts/ClerkHandbooksP2RulesOnly.nsf/e2aa3309ef5c449186256be20060c329/31f6aa3e2a2d1de986256c240071225b/$FILE/COR%2021.03a%20-%20Schedule%20of%20Cost%20(Trial%20Cost).pdf",
+    "otherFees": [
+      {
+        "what": "Statewide consolidated amount, circuit civil case (excluding local surcharges), effective 2023-11-01",
+        "amount": 83.5,
+        "url": "https://www.courts.mo.gov/courts/ClerkHandbooksP2RulesOnly.nsf/e2aa3309ef5c449186256be20060c329/31f6aa3e2a2d1de986256c240071225b/$FILE/COR%2021.03a%20-%20Schedule%20of%20Cost%20(Trial%20Cost).pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Request to proceed as a poor person (RSMo § 514.040)",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=514.040"
+    },
+    "residency": {
+      "text": "One party must have been a resident of Missouri, or stationed there in the armed services, for 90 days immediately before the proceeding began (RSMo § 452.305.1(1)).",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.305"
+    },
+    "waitingPeriod": {
+      "days": 30,
+      "text": "The court may enter a judgment of dissolution only if thirty days have elapsed since the petition was filed (RSMo § 452.305.1(1)).",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.305"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure was found in chapter 452.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Circuit courts must establish, by local rule, a program of educational sessions for parties to dissolution actions or post-judgment proceedings involving custody or support (RSMo § 452.600); whether attendance is mandatory depends on the circuit's local rule.",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.600"
+    },
+    "uncertain": [
+      "St. Louis County (most populous) dissolution filing fee and any answer fee: not found on an official page (stlcountycourts.com archived pages list only administrative orders); filingFee and responseFee are null.",
+      "The $83.50 consolidated amount was read from the Internet Archive 2026 copy of the official courts.mo.gov PDF; it may have been updated after November 1, 2023.",
+      "Waiver: no statewide form title was read; the statute is cited instead.",
+      "Parenting class: the 21st Circuit local rule was not read."
+    ]
+  },
+  {
+    "slug": "montana",
+    "name": "Montana",
+    "abbr": "MT",
+    "filingFee": 170,
+    "responseFee": 60,
+    "feeScope": "statewide",
+    "feeText": "Clerk of district court fee for filing a petition for dissolution of marriage, $170; each defendant or respondent pays $60 on appearance (Mont. Code Ann. § 25-1-201(1)(a)-(b), 2025 MCA).",
+    "feeUrl": "https://archive.legmt.gov/bills/mca/title_0250/chapter_0010/part_0020/section_0010/0250-0010-0020-0010.html",
+    "otherFees": [
+      {
+        "what": "Entry of judgment, from the prevailing party (§ 25-1-201(1)(c))",
+        "amount": 50,
+        "url": "https://archive.legmt.gov/bills/mca/title_0250/chapter_0010/part_0020/section_0010/0250-0010-0020-0010.html"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit and financial statement requesting a waiver of fees (Mont. Code Ann. § 25-10-404)",
+      "url": "https://archive.legmt.gov/bills/mca/title_0250/chapter_0100/part_0040/section_0040/0250-0100-0040-0040.html"
+    },
+    "residency": {
+      "text": "One party must have been domiciled in Montana, or stationed there in the armed services, for 90 days before filing (Mont. Code Ann. § 40-4-104(1)(a)).",
+      "url": "https://archive.legmt.gov/bills/mca/title_0400/chapter_0040/part_0010/section_0040/0400-0040-0010-0040.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period for a regular dissolution was found. Irretrievable breakdown is shown by living separate and apart for more than 180 days before filing or by serious marital discord (§ 40-4-104(1)(b)). In a summary dissolution the hearing is held after 20 days from the filing of the joint petition (§ 40-4-133).",
+      "url": "https://archive.legmt.gov/bills/mca/title_0400/chapter_0040/part_0010/section_0330/0400-0040-0010-0330.html"
+    },
+    "separationRequiredDays": null,
+    "simplified": {
+      "text": "Summary dissolution on a joint petition (Mont. Code Ann. §§ 40-4-130 to 40-4-136): irreconcilable differences, wife not pregnant, no children or an agreed parenting plan with support already ordered, no real property (short residential leases excepted), unsecured marital debts not over $20,000, assets under $50,000, signed division agreement, maintenance waived; hearing after 20 days.",
+      "url": "https://archive.legmt.gov/bills/mca/title_0400/chapter_0040/part_0010/section_0300/0400-0040-0010-0300.html"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Montana Code read on archive.legmt.gov (the Legislature's official MCA archive site, 2025 MCA).",
+      "Other statutory surcharges collected with a dissolution filing outside § 25-1-201 were not checked; filingFee is the § 25-1-201(1)(a) amount only.",
+      "Parenting class: no statewide statute read; a Montana Judicial Branch court-sanctioned education program for dissolution exists per an archived courts.mt.gov policy file, but it was not read.",
+      "Waiver form title on courts.mt.gov not read; the statute is cited instead.",
+      "separationRequiredDays null: the 180-day separation is one of two ways to prove irretrievable breakdown."
+    ]
+  },
+  {
+    "slug": "nebraska",
+    "name": "Nebraska",
+    "abbr": "NE",
+    "filingFee": 200,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District court Dissolution fee total $200.00 (mediation fee $50 and child abuse prevention fee $25 under § 33-106.03, docket fee § 33-106, plus the statutory add-on fees), schedule effective 07-01-2026.",
+    "feeUrl": "https://nebraskajudicial.gov/rules/administrative-policies-schedules/filing-fees-and-court-costs",
+    "otherFees": [
+      {
+        "what": "Proceeding to modify a decree of dissolution (legal services + mediation fees)",
+        "amount": 65,
+        "url": "https://nebraskajudicial.gov/rules/administrative-policies-schedules/filing-fees-and-court-costs"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit and Application to Proceed Without Payment of Fees (In Forma Pauperis) DC 6:7.1, and Order to Proceed In Forma Pauperis DC 6:7.2",
+      "url": "https://nebraskajudicial.gov/forms?title=&field_form_number_value=dc+6:7.&field_form_type_target_id=All&field_language_target_id=155&field_form_category_target_id[]=106"
+    },
+    "residency": {
+      "text": "At least one spouse must have actually resided in Nebraska with intent to make it a permanent home for at least one year before filing, unless the marriage was solemnized in Nebraska and a spouse has lived there since (Neb. Rev. Stat. § 42-349).",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=42-349"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "No divorce suit may be heard or tried until sixty days after perfection of service of process (Neb. Rev. Stat. § 42-363).",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=42-363"
+    },
+    "simplified": {
+      "text": "No summary procedure in statute; the Supreme Court publishes self-help divorce packets (no children; children without disputes).",
+      "url": "https://supremecourt.nebraska.gov/administration/self-represented-litigant-resources/divorce-no-children"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "The court shall order all parties to a proceeding under the Parenting Act to attend a basic level parenting education course, which may be delayed or waived for good cause (Neb. Rev. Stat. § 43-2928(1)).",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=43-2928"
+    },
+    "uncertain": [
+      "nebraskalegislature.gov statutes (42-349, 42-363, 43-2928) were read from Internet Archive copies (Nov. 2025) of the official URLs.",
+      "No answer/response fee appears in the district court schedule; responseFee null.",
+      "The Supreme Court's no-children self-help guide still says to bring $163, older than the 07-01-2026 schedule total of $200."
+    ]
+  },
+  {
+    "slug": "nevada",
+    "name": "Nevada",
+    "abbr": "NV",
+    "filingFee": 299,
+    "responseFee": 217,
+    "feeScope": "county (Clark County, Eighth Judicial District Court)",
+    "feeText": "Eighth Judicial District Court official fees (effective October 1, 2019, still the schedule linked by the court's Family Law Self-Help Center): Divorce Complaint or Joint Petition for Divorce $299.00; Answer or First Appearance in Divorce, Annulment or Separate Maintenance Action $217.00 (components under NRS 19.013, 19.020, 19.030, 19.0302, 19.0303, 19.031, 19.0312, 19.0313, 19.0315, 19.033 and 440.605 plus Clark County Code).",
+    "feeUrl": "http://www.clarkcountycourts.us/res/clerk/civil-criminal-library/legal-forms/Filing-Fee-List.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Application to Waive Filing Fee and Order to Waive Filing Fee (Standard, or Joint Petition for Divorce version; each spouse completes an application)",
+      "url": "https://www.familylawselfhelpcenter.org/self-help/getting-started/court-basics/filing-fees-and-waivers"
+    },
+    "residency": {
+      "text": "Unless the cause accrued in the county while both spouses were domiciled there, the plaintiff or defendant must have resided in Nevada for at least 6 weeks before filing (NRS 125.020); residence must be corroborated by affidavit (NRS 125.123, referenced in NRS 125.182).",
+      "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period between filing and decree appears in NRS chapter 125.",
+      "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+    },
+    "simplified": {
+      "text": "Summary proceeding for divorce by joint petition (NRS 125.181-125.184): jurisdiction met, separated 1 year or incompatible, no minor children or an agreement on custody and support, no community property or an executed division agreement, spousal support waived or agreed, and waiver of notice of entry, appeal, findings and new trial.",
+      "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "Clark County Family Court may require separating parents to attend a seminar for separating parents (\"COPE\" class); it is ordered case by case, not required by statute.",
+      "url": "https://www.familylawselfhelpcenter.org/self-help/divorce/for-parents-mandatory-mediation-and-mandatory-co-parenting-cope-class"
+    },
+    "uncertain": [
+      "NRS chapter 125 read from the Internet Archive 2026 copy of the official leg.state.nv.us URL.",
+      "Clark County fee list is dated effective October 1, 2019; no later schedule was found, but 2026 amounts were not confirmed by the clerk.",
+      "waitingPeriod 0 is based on the absence of a waiting-period provision in NRS chapter 125, not on an explicit statement."
+    ]
+  },
+  {
+    "slug": "new-hampshire",
+    "name": "New Hampshire",
+    "abbr": "NH",
+    "filingFee": 280,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Circuit Court Family Division (schedule dated 07/01/2025): Original Entry of All Divorce Matters without Minor Children, including cross-petitions, $280.00; with Minor Children or Parenting Matters $282.00.",
+    "feeUrl": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf",
+    "otherFees": [
+      {
+        "what": "Original entry of divorce with minor children",
+        "amount": 282,
+        "url": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf"
+      },
+      {
+        "what": "Petition to change court order without full agreement, or petition for contempt",
+        "amount": 225,
+        "url": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Motion to Reduce or Eliminate Filing Fees and/or Costs, with Financial Affidavit (Circuit Court - Family Division, paper filing)",
+      "url": "https://www.courts.nh.gov/resources/forms-and-fees/how-request-pay-lower-fee-or-file-free"
+    },
+    "residency": {
+      "text": "Jurisdiction exists if both spouses were domiciled in New Hampshire when the action began, or the petitioner was domiciled there and the respondent was served in the state, or the petitioner was domiciled there for one year before filing (RSA 458:5).",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458/458-5.htm"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period found; after a joint petition is filed or the individual petition is served, the court schedules a First Appearance session.",
+      "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+    },
+    "simplified": {
+      "text": "Spouses may file a joint petition for divorce in the Circuit Court Family Division (no service needed); irreconcilable differences is a no-fault ground (RSA 458:7-a).",
+      "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "To complete a divorce with minor children, the parties must file a certificate of completion of the Child Impact Program (NH Judicial Branch, divorce with minor children).",
+      "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+    },
+    "uncertain": [
+      "RSA 458:5 and 458:7-a read from Internet Archive copies (Nov.-Dec. 2022) of the official gencourt.state.nh.us URLs; the legislature's current host (gc.nh.gov) did not respond. Current text not confirmed.",
+      "courts.nh.gov pages and the fee PDF read from Internet Archive copies (2025-2026) of the official URLs; courts.nh.gov returns 403 to automated clients.",
+      "No separate answer/appearance fee found in the Family Division schedule (cross-petitions pay the original entry fee); responseFee null.",
+      "waitingPeriod 0 is based on the absence of a statutory waiting period, not on an explicit statement."
+    ]
+  },
+  {
     "slug": "new-jersey",
     "name": "New Jersey",
     "abbr": "NJ",
@@ -603,6 +1483,45 @@
       "The statutes (N.J.S.A. 2A:34-2, 2A:34-10, 22A:2-...) were not read on an official legislature site; residency and grounds are taken from the official NJ Courts self-help page.",
       "Fee waiver form title is described on the page as the 'Fee Waiver form'; the exact form number was not read.",
       "separationRequiredDays left null: an 18-month separation is only one of several grounds, not a requirement."
+    ]
+  },
+  {
+    "slug": "new-mexico",
+    "name": "New Mexico",
+    "abbr": "NM",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "county (Bernalillo County, Second Judicial District)",
+    "feeText": "Filing fee for a divorce case in the Second Judicial District Court not verified; the statewide instructions say a filing fee is paid to the clerk when the case is opened (Form 4A-100 NMRA).",
+    "feeUrl": null,
+    "otherFees": [],
+    "waiver": {
+      "name": "Application for free process (Form 4-222 NMRA)",
+      "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-100.pdf"
+    },
+    "residency": {
+      "text": "At least one party must have resided in New Mexico for at least six months immediately before filing and have a New Mexico domicile (NMSA 1978, § 40-4-5, as stated in the Supreme Court-approved petition Form 4A-102 NMRA).",
+      "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-102.pdf"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period was found; the respondent has 30 days after service to respond (Form 4A-100 NMRA).",
+      "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-100.pdf"
+    },
+    "simplified": {
+      "text": "No summary dissolution statute; Supreme Court-approved Domestic Relations Forms (4A series) can be used for uncontested divorces.",
+      "url": "https://nmcourts.gov/forms-files/divorce/"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Not verified.",
+      "url": null
+    },
+    "uncertain": [
+      "Second Judicial District (Bernalillo) fee schedule page redirects automated clients away and its archived copy has no content; filing fee left null.",
+      "NMSA 40-4-5 is published officially only on nmonesource.com (JavaScript app, not readable); residency taken from the Supreme Court-approved petition form 4A-102 NMRA that cites it.",
+      "Parenting class requirement (Second Judicial District local programs) not verified.",
+      "waitingPeriod 0 is based on the absence of a waiting period in the official instructions, not on an explicit statement."
     ]
   },
   {
@@ -710,6 +1629,49 @@
     ]
   },
   {
+    "slug": "north-dakota",
+    "name": "North Dakota",
+    "abbr": "ND",
+    "filingFee": 160,
+    "responseFee": 100,
+    "feeScope": "statewide",
+    "feeText": "For filing a petition for dissolution of marriage, annulment, or separation, $160 (N.D.C.C. § 27-05.2-03(1)(b)); answering a summons and complaint in district court $100 (§ 27-05.2-03(1)(c)).",
+    "feeUrl": "https://ndlegis.gov/cencode/t27c05-2.pdf",
+    "otherFees": [
+      {
+        "what": "Motion to modify spousal support, property division, child support, parental rights, residential responsibility or parenting time",
+        "amount": 160,
+        "url": "https://ndlegis.gov/cencode/t27c05-2.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Filing Fee Waiver Request forms (N.D. Legal Self Help Center, \"All Filing Fee Waiver Instructions and Forms\")",
+      "url": "https://www.ndcourts.gov/legal-self-help/fee-waiver"
+    },
+    "residency": {
+      "text": "The plaintiff must have been a good-faith resident of North Dakota for six months before starting the action, or for the six months immediately before the decree is entered (N.D.C.C. § 14-05-17).",
+      "url": "https://ndlegis.gov/cencode/t14c05.pdf"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period; an uncontested divorce filed with complete agreement paperwork is generally granted quickly and without a hearing (N.D. Legal Self Help Center). Rule 8.3 case management deadlines apply to contested cases (informational statement due 37 days after service).",
+      "url": "https://www.ndcourts.gov/legal-self-help/divorce"
+    },
+    "simplified": {
+      "text": "Uncontested divorce: spouses who agree in writing on everything file the complete settlement paperwork together (N.D. Legal Self Help Center).",
+      "url": "https://www.ndcourts.gov/legal-self-help/divorce"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "Under N.D.R.Ct. 8.3 the scheduling order may set dates for the spouses to complete parent education or divorce education; no statewide requirement was verified.",
+      "url": "https://www.ndcourts.gov/legal-self-help/divorce/steps-you-must-take-before-the-court-can-grant-a-divorce"
+    },
+    "uncertain": [
+      "ndcourts.gov self-help pages read from Internet Archive copies (March-October 2026) of the official URLs.",
+      "waitingPeriod 0 is based on the absence of a waiting period in chapter 14-05 and the self-help guidance, not on an explicit statement."
+    ]
+  },
+  {
     "slug": "ohio",
     "name": "Ohio",
     "abbr": "OH",
@@ -762,6 +1724,89 @@
       "Franklin County amounts are deposits (security for costs) under Local Rule 2, not final costs; final court costs may differ.",
       "codes.ohio.gov and supremecourt.ohio.gov refused connections on 2026-10-08; R.C. 3105.03, 3105.64 and Civ.R. 75(K) were read from Internet Archive 2026 copies of the official URLs. The Franklin County rules were read with WebFetch on drj.fccourts.org.",
       "responseFee 43 is the deposit for a counterclaim; a plain answer has no deposit listed in Local Rule 2."
+    ]
+  },
+  {
+    "slug": "oklahoma",
+    "name": "Oklahoma",
+    "abbr": "OK",
+    "filingFee": 236,
+    "responseFee": null,
+    "feeScope": "statewide (statutory components; county may add up to $10)",
+    "feeText": "Flat fee for actions for divorce $183.00 (28 O.S. § 152(A)(1)) plus statutory add-ons in the same section: $6 Law Library Fund (B), $25 Court Information System (C), $10 OCASA (D), $2 judicial complaints/interpreters (E) and $10 records preservation until Nov. 1, 2027 (G) = $236; a county may add up to $10 for courthouse security (F).",
+    "feeUrl": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf",
+    "otherFees": [
+      {
+        "what": "Ancillary proceeding to modify or vacate a divorce decree providing for custody or support (base fee, 28 O.S. § 152(A)(2))",
+        "amount": 43,
+        "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf"
+      }
+    ],
+    "waiver": {
+      "name": "Affidavit in forma pauperis (28 O.S. § 152(H))",
+      "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf"
+    },
+    "residency": {
+      "text": "The petitioner or respondent must have been an actual resident, in good faith, of Oklahoma (or of a military post in Oklahoma) for six months immediately before filing (43 O.S. § 102).",
+      "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "Where minor children are involved, no final divorce order for at least 90 days from filing, waivable for good cause without objection (43 O.S. § 107.1(A)); no statutory wait applies when there are no minor children.",
+      "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure in Title 43.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In incompatibility divorces filed on or after November 1, 2014 involving a child under 18, the adult parties shall attend an educational program on the impact of divorce on children (43 O.S. § 107.2(B)); in other cases the court may require it (§ 107.2(A)).",
+      "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+    },
+    "uncertain": [
+      "Total of $236 is computed from the components of 28 O.S. § 152 (read from the legislature's complete-title RTF); it was not confirmed against an Oklahoma County Court Clerk fee schedule (oscn.net refused connections). Other statutes may add fees.",
+      "No answer/response fee appears in 28 O.S. § 152; responseFee null.",
+      "waitingPeriod.days = 90 applies only when minor children are involved."
+    ]
+  },
+  {
+    "slug": "oregon",
+    "name": "Oregon",
+    "abbr": "OR",
+    "filingFee": 301,
+    "responseFee": 301,
+    "feeScope": "statewide",
+    "feeText": "Dissolution of marriage, annulment or separation: $301 for the first appearance by petitioner, respondent or other party (ORS 21.155(1)), Oregon circuit court fee schedule effective 2026-01-01.",
+    "feeUrl": "https://www.courts.oregon.gov/Documents/2026_CircuitFeeSchedule_public_eff-2026-01-01.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": "Fee Deferral and Waiver packet (Oregon Judicial Department Forms Center)",
+      "url": "https://www.courts.oregon.gov/forms/Pages/fee-waiver.aspx"
+    },
+    "residency": {
+      "text": "If the marriage was solemnized in Oregon and the ground is irreconcilable differences, either party must be a resident or domiciliary when the suit is filed; otherwise at least one party must have been a resident or domiciliary for six months before filing (ORS 107.075).",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "waitingPeriod": {
+      "days": 0,
+      "text": "No statutory waiting period found in ORS chapter 107; the marriage is terminated when the court signs the judgment of dissolution (ORS 107.115(2)).",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "simplified": {
+      "text": "Summary dissolution (ORS 107.485): no children of the marriage and no pregnancy, marriage of 10 years or less, no real property, unpaid debts since marriage of $15,000 or less, personal property under $30,000 net, petitioner waives spousal support and pendente lite orders, no other pending domestic relations suit.",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors107.html"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "ORS chapters 107 and 21 were read from the Internet Archive 2026 copy of oregonlegislature.gov (direct fetch failed on 2026-10-08).",
+      "Parenting education: ORS 3.425 (county parent education programs) could not be fetched (oregonlegislature.gov ors003.html unavailable directly and in the archive); required = null.",
+      "Exact title of the Oregon fee deferral/waiver application form not readable (forms list loads by script); the fees page refers to the 'fee deferral or waiver packet'.",
+      "Waiting period 0 inferred from the absence of any waiting-period provision in ORS chapter 107 text searched; no explicit statement 'no waiting period' exists in statute."
     ]
   },
   {
@@ -821,6 +1866,183 @@
     ]
   },
   {
+    "slug": "rhode-island",
+    "name": "Rhode Island",
+    "abbr": "RI",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": null,
+    "feeUrl": null,
+    "otherFees": [
+      {
+        "what": "eFileRI one-time civil case processing fee to Tyler Technologies, in addition to the court filing fee (revised March 2026)",
+        "amount": 17.5,
+        "url": "https://www.courts.ri.gov/Public-Resources/Documents/Electronic%20Filing/eFileRIFees.pdf"
+      },
+      {
+        "what": "eFileRI technology surcharge (revised March 2026)",
+        "amount": 3.25,
+        "url": "https://www.courts.ri.gov/Public-Resources/Documents/Electronic%20Filing/eFileRIFees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "The plaintiff must have been domiciled in and resided in Rhode Island for one year before filing; satisfied instead if the defendant has been so domiciled for one year and is actually served (R.I. Gen. Laws § 15-5-12(a)).",
+      "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-12.htm"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "No divorce judgment becomes final until three months after the trial and decision; the final decree may then be entered ex parte within 180 days (R.I. Gen. Laws § 15-5-23(a)).",
+      "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-23.htm"
+    },
+    "simplified": {
+      "text": "No summary procedure found; a three-year separation ground leads to a decision pending entry of final judgment, which may be entered 20 days after the decision (R.I. Gen. Laws § 15-5-3).",
+      "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-3.htm"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Family Court divorce filing fee not found: the courts.ri.gov fee documents found (Superior Court fees $160, eFileRI fees) do not cover the Family Court; filingFee null.",
+      "R.I. Gen. Laws §§ 15-5-12, 15-5-23 and 15-5-3 read from Internet Archive 2026 copies (webserver.rilegislature.gov refused connections on 2026-10-08).",
+      "waitingPeriod.days 90 stands for 'three months' after the decision (not after filing).",
+      "Irreconcilable differences ground (§ 15-5-3.1), fee waiver form and Family Court parent education requirement not verified."
+    ]
+  },
+  {
+    "slug": "south-carolina",
+    "name": "South Carolina",
+    "abbr": "SC",
+    "filingFee": 150,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Uniform fee of $100 for filing a first complaint or petition in a civil action (S.C. Code § 8-21-310(C)(1)) plus an additional $50 fee (S.C. Code § 14-1-204(B)(1)) = $150.",
+    "feeUrl": "https://www.scstatehouse.gov/code/t08c021.php",
+    "otherFees": [],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "The plaintiff must have resided in South Carolina for one year before filing (or, if the plaintiff is a nonresident, the defendant for one year); if both parties are residents when the action is filed, three months is enough (S.C. Code § 20-3-30).",
+      "url": "https://www.scstatehouse.gov/code/t20c003.php"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "No reference before two months after filing and no final decree before three months after filing; on the grounds of desertion or one-year separation the hearing and decree may follow the responsive pleadings or default (S.C. Code § 20-3-80).",
+      "url": "https://www.scstatehouse.gov/code/t20c003.php"
+    },
+    "separationRequiredDays": 365,
+    "separationText": "No-fault ground: the spouses have lived separate and apart without cohabitation for one year (S.C. Code § 20-3-10(5)); fault grounds (adultery, desertion for one year, physical cruelty, habitual drunkenness) need no separation.",
+    "simplified": {
+      "text": "No summary dissolution procedure in Title 20, Chapter 3.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "waitingPeriod.days 90 stands for the statutory 'three months' after filing (§ 20-3-80); it does not apply to one-year-separation or desertion cases.",
+      "Answer/response fee: § 8-21-310(C)(1) says there is no further fee for other papers in the same action, but no explicit statement about the defendant's answer was read; responseFee left null.",
+      "Fee waiver (in forma pauperis) form and any Family Court parenting-class requirement not verified on sccourts.org."
+    ]
+  },
+  {
+    "slug": "south-dakota",
+    "name": "South Dakota",
+    "abbr": "SD",
+    "filingFee": 65,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Clerk of courts fee of $25 for civil cases filed for jury or court trial (SDCL 16-2-29(3)(a)) plus the $40 unified judicial system court automation surcharge in each civil action (SDCL 16-2-39) = $65.",
+    "feeUrl": "https://sdlegislature.gov/api/Statutes/16-2-29.html",
+    "otherFees": [
+      {
+        "what": "Court automation surcharge included above (SDCL 16-2-39)",
+        "amount": 40,
+        "url": "https://sdlegislature.gov/api/Statutes/16-2-39.html"
+      },
+      {
+        "what": "Petition or motion to modify final child support, custody, visitation or spousal support orders (SDCL 16-2-29(4))",
+        "amount": 50,
+        "url": "https://sdlegislature.gov/api/Statutes/16-2-29.html"
+      }
+    ],
+    "waiver": {
+      "name": "Motion to waive filing fees and service costs with affidavit of inability to pay (SDCL 16-2-29.2, 16-2-29.3)",
+      "url": "https://sdlegislature.gov/api/Statutes/16-2-29.2.html"
+    },
+    "residency": {
+      "text": "The plaintiff must be a resident of South Dakota (or stationed there in the armed services) when the action is commenced; no minimum duration, and residence need not be maintained afterwards (SDCL 25-4-30).",
+      "url": "https://sdlegislature.gov/api/Statutes/25-4-30.html"
+    },
+    "waitingPeriod": {
+      "days": 60,
+      "text": "A divorce may not be heard, tried or determined until at least 60 days after completed service of the summons and complaint (SDCL 25-4-34).",
+      "url": "https://sdlegislature.gov/api/Statutes/25-4-34.html"
+    },
+    "simplified": {
+      "text": null,
+      "url": null
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Filing fee $65 is the sum of two statutes (SDCL 16-2-29(3) and 16-2-39) as read; whether divorce falls under 16-2-29(3)(a) or (k) is not stated, both are $25. The Unified Judicial System's own fee schedule could not be found to confirm the total actually collected.",
+      "No answer fee found in SDCL 16-2-29; responseFee left null.",
+      "Simplified procedure and parenting-class requirement not verified (SDCL ch. 25-4A standard guidelines and mediation under 25-4-56 read; no class mandate found in the sections read)."
+    ]
+  },
+  {
+    "slug": "tennessee",
+    "name": "Tennessee",
+    "abbr": "TN",
+    "filingFee": null,
+    "responseFee": null,
+    "feeScope": "county (Shelby County)",
+    "feeText": "Shelby County Circuit/Chancery Court clerk divorce filing fee not verified.",
+    "feeUrl": null,
+    "otherFees": [],
+    "waiver": {
+      "name": "Request to Postpone Filing Fees and Order (Uniform Civil Affidavit of Indigency), Form 3 of the Supreme Court-approved divorce forms (Tenn. Sup. Ct. R. 29)",
+      "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+    },
+    "residency": {
+      "text": "The Supreme Court-approved agreed-divorce packet requires that one or both spouses lived in Tennessee for at least the past 6 months, or both lived in Tennessee when they decided to divorce (Tenn. Code Ann. § 36-4-104).",
+      "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "With minor children the soonest an irreconcilable-differences divorce can be granted is 90 days after filing (Supreme Court-approved forms instructions; Tenn. Code Ann. § 36-4-101). Without minor children the period is 60 days.",
+      "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+    },
+    "simplified": {
+      "text": "Supreme Court-approved agreed divorce forms for spouses who agree on everything and own no real property (with or without children).",
+      "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "All divorcing spouses with minor children must attend a parent education class unless the court excuses them (Supreme Court-approved forms instructions; Tenn. Code Ann. § 36-6-408).",
+      "url": "https://www.tncourts.gov/help-center/court-approved-divorce-forms"
+    },
+    "uncertain": [
+      "Shelby County filing fee not verified: shelbycountytn.gov court clerk sites return 403 and the Internet Archive was unavailable when tried.",
+      "Tennessee Code Annotated is published only through LexisNexis; statute sections are cited from the Supreme Court-approved forms instructions (read from the Internet Archive copy of tncourts.gov dated 2026-04-20, since tncourts.gov serves a browser-validation page to automated clients). The 60-day period without children was not read on an official page (the no-children packet PDF could not be downloaded).",
+      "waitingPeriod.days = 90 applies to cases with minor children."
+    ]
+  },
+  {
     "slug": "texas",
     "name": "Texas",
     "abbr": "TX",
@@ -877,6 +2099,113 @@
     ]
   },
   {
+    "slug": "utah",
+    "name": "Utah",
+    "abbr": "UT",
+    "filingFee": 350,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "$350 for a petition for an action under Title 81, Chapter 4, Dissolution of Marriage (Utah Code § 78A-2-301(1)(b)(iv), version effective 2026-05-06).",
+    "feeUrl": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html",
+    "otherFees": [
+      {
+        "what": "Counterclaim when the original petition is a dissolution of marriage action (§ 78A-2-301(1)(d)(iv))",
+        "amount": 130,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      },
+      {
+        "what": "Petition for temporary separation, credited toward the divorce fee (§ 78A-2-301(1)(b)(v))",
+        "amount": 35,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      },
+      {
+        "what": "Petition or counter-petition to modify a domestic relations order (§ 78A-2-301(1)(q))",
+        "amount": 100,
+        "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S301_2026050620260506.html"
+      }
+    ],
+    "waiver": {
+      "name": "Waiver of fees for indigent litigants on affidavit (Utah Code § 78A-2-302)",
+      "url": "https://le.utah.gov/xcode/Title78A/Chapter2/C78A-2-S302_2024100120240501.html"
+    },
+    "residency": {
+      "text": "The petitioner or the petitioner's spouse must have been an actual and bona fide resident of the county of filing for at least 90 days before filing, or the petitioner stationed in Utah under military orders for at least 90 days (Utah Code § 81-4-402(1)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "waitingPeriod": {
+      "days": 30,
+      "text": "The court may not enter a decree of divorce until 30 days after the petition is filed, unless it finds extraordinary circumstances (Utah Code § 81-4-402(3)(a)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure found in Utah Code Title 81, Chapter 4.",
+      "url": null
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "Parties with a minor child must attend the mandatory divorce orientation course (§ 81-4-105, at least one hour) and the mandatory parenting course (§ 81-9-103): the petitioner within 60 days of filing and the respondent within 30 days of service; no decree until certificates are filed, unless waived by the court (§ 81-4-402(4)).",
+      "url": "https://le.utah.gov/xcode/Title81/Chapter4/C81-4_2024090120240501.pdf"
+    },
+    "uncertain": [
+      "Utah recodified its domestic relations law into Title 81 (effective 2024-09-01); former Title 30 sections are empty. Title 81 Chapter 4 was read from the chapter PDF version C81-4_2024090120240501, which includes amendments through the 2026 General Session.",
+      "Answer/response fee: § 78A-2-301 lists no fee for an answer as such; only a counterclaim fee ($130 when the original petition is a dissolution). responseFee left null.",
+      "§ 78A-2-301 has a version superseding it on 2027-01-01; the 2026-05-06 version was used.",
+      "Exact title of the Utah court fee-waiver form not verified (utcourts.gov pages returned 404/406); only the statute is cited."
+    ]
+  },
+  {
+    "slug": "vermont",
+    "name": "Vermont",
+    "abbr": "VT",
+    "filingFee": 295,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "$295 before the entry of any divorce or annulment proceeding in the Superior Court; $90 if filed with a stipulation for a final order and one or both parties are residents ($180 if neither is a resident) (32 V.S.A. § 1431(b)(2)).",
+    "feeUrl": "https://legislature.vermont.gov/statutes/section/32/017/01431",
+    "otherFees": [
+      {
+        "what": "Divorce complaint filed with a stipulation for a final order, at least one party resident (32 V.S.A. § 1431(b)(2))",
+        "amount": 90,
+        "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+      },
+      {
+        "what": "Motion or petition to vacate or modify a child support order (32 V.S.A. § 1431(b)(5))",
+        "amount": 45,
+        "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "A complaint may be brought if either party has resided in Vermont for six months or more, but no divorce may be decreed unless the plaintiff or defendant has resided in the State one year before the final hearing (15 V.S.A. § 592(a)).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00592"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "A divorce decree is first a decree nisi and becomes absolute 90 days after entry, unless the court fixes an earlier date (15 V.S.A. § 554(a)).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00554"
+    },
+    "separationRequiredDays": 182,
+    "separationText": "No-fault ground: the spouses have lived apart for six consecutive months and resumption of marital relations is not reasonably probable (15 V.S.A. § 551(7)); fault grounds need no separation.",
+    "simplified": {
+      "text": "No separate summary procedure in statute; an uncontested complaint filed with a stipulation for a final order pays a reduced $90 fee (32 V.S.A. § 1431(b)(2)).",
+      "url": "https://legislature.vermont.gov/statutes/section/32/017/01431"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": null,
+      "url": null
+    },
+    "uncertain": [
+      "Fee waiver form name/URL not verified: vermontjudiciary.org returned HTTP 403 to automated clients on 2026-10-08.",
+      "Parenting class requirement not verified (court rule / vermontjudiciary.org not readable).",
+      "No answer fee appears in 32 V.S.A. § 1431(b)(2); responseFee left null rather than 0 because the Vermont Judiciary fee schedule could not be read.",
+      "separationRequiredDays 182 is the day equivalent of 'six consecutive months' in § 551(7) and applies only to the no-fault ground."
+    ]
+  },
+  {
     "slug": "virginia",
     "name": "Virginia",
     "abbr": "VA",
@@ -889,7 +2218,7 @@
       {
         "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)",
         "amount": 12,
-        "url": "https://www.vacourts.gov/caseinfo/cccivilfeeshelp.html"
+        "url": ""
       }
     ],
     "waiver": {
@@ -919,6 +2248,202 @@
       "The total amount collected in Fairfax County (most populous) including local add-ons was not verified: the vacourts.gov per-court fee PDFs and fee calculator could not be retrieved; filingFee is the statewide base clerk's fee only.",
       "separationRequiredDays = 365 is the general rule; it is 180 days with a separation agreement and no minor children (§ 20-91(A)(9)(a)).",
       "vacourts.gov circuit civil fee help page read from the Internet Archive 2026 copy."
+    ]
+  },
+  {
+    "slug": "washington",
+    "name": "Washington",
+    "abbr": "WA",
+    "filingFee": 364,
+    "responseFee": null,
+    "feeScope": "county (King County)",
+    "feeText": "King County Superior Court Clerk: Dissolution of Marriage $364.00 (RCW 36.18.020(2),(5),(6); RCW 36.18.016(2)(b); RCW 36.18.016(15)). The statewide statutory part is $200 (RCW 36.18.020(2)(a)) + $40 surcharge (36.18.020(5)(c)) + $50 surcharge (36.18.020(6)) + $54 dissolution fee (36.18.016(2)(b)) = $344; counties may add up to $20 for a courthouse facilitator program (RCW 26.12.240).",
+    "feeUrl": "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-financial/fees-payments",
+    "otherFees": [
+      {
+        "what": "Counter Petition in a Domestic Relations Action (King County)",
+        "amount": 310,
+        "url": "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-financial/fees-payments"
+      },
+      {
+        "what": "Statewide statutory base for a dissolution petition before county surcharges (RCW 36.18.020 + 36.18.016(2)(b))",
+        "amount": 344,
+        "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=36.18.016"
+      }
+    ],
+    "waiver": {
+      "name": "Motion and Declaration for Waiver of Civil Fees and Surcharges (WPF GR 34.0100) with Order Re Waiver (WPF GR 34.0500)",
+      "url": "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=87"
+    },
+    "residency": {
+      "text": "No minimum residence period: the petitioner must be a resident of Washington, a member of the armed forces stationed in Washington, or married to such a person (RCW 26.09.030).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.09.030"
+    },
+    "waitingPeriod": {
+      "days": 90,
+      "text": "The court may enter a decree only when ninety days have elapsed since the petition was filed and since service of the summons (or its first publication) on the respondent (RCW 26.09.030).",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=26.09.030"
+    },
+    "simplified": {
+      "text": "No separate summary dissolution procedure in chapter 26.09 RCW; agreed cases use the standard statewide divorce forms and the same 90-day wait.",
+      "url": "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=13"
+    },
+    "parentingClass": {
+      "required": null,
+      "text": "No statewide statute requires a parenting class; some superior courts require a parenting seminar by local family law rule.",
+      "url": null
+    },
+    "uncertain": [
+      "Response fee: King County lists a $310 fee for a counter petition but no fee for a simple response; RCW 36.18.020(2)(a) charges only the first filer and parties filing a counterclaim, so responseFee is left null.",
+      "Parenting seminar: King County local family law rules (LFLR) were not read; requirement left null.",
+      "King County fee page carries no effective date; read on 2026-10-08."
+    ]
+  },
+  {
+    "slug": "west-virginia",
+    "name": "West Virginia",
+    "abbr": "WV",
+    "filingFee": 135,
+    "responseFee": 0,
+    "feeScope": "statewide",
+    "feeText": "Clerk of the circuit court fee for instituting an action for divorce, separate maintenance or annulment: $135 (W. Va. Code § 59-1-11(a)(3)).",
+    "feeUrl": "https://code.wvlegislature.gov/59-1-11/",
+    "otherFees": [
+      {
+        "what": "Petition to modify an order on custody, visitation, child support or spousal support (§ 59-1-11(a)(4))",
+        "amount": 85,
+        "url": "https://code.wvlegislature.gov/59-1-11/"
+      },
+      {
+        "what": "Expedited modification of a child support order (§ 59-1-11(a)(5))",
+        "amount": 35,
+        "url": "https://code.wvlegislature.gov/59-1-11/"
+      },
+      {
+        "what": "Parent education class fee, waived if indigent (§ 48-9-104(c)), maximum",
+        "amount": 25,
+        "url": "https://code.wvlegislature.gov/48-9-104/"
+      }
+    ],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "If married in West Virginia, one party must be a bona fide resident when the action is filed (no minimum duration); if married elsewhere, one party must have been a resident for the one year before filing (W. Va. Code § 48-5-105(a)).",
+      "url": "https://code.wvlegislature.gov/48-5-105/"
+    },
+    "waitingPeriod": {
+      "days": null,
+      "text": null,
+      "url": null
+    },
+    "simplified": {
+      "text": "Irreconcilable differences: divorce may be ordered when the complaint alleges irreconcilable differences and an answer admits it, without corroboration (W. Va. Code § 48-5-201). Alternatively, one year of living separate and apart is a ground (§ 48-5-202).",
+      "url": "https://code.wvlegislature.gov/48-5-201/"
+    },
+    "parentingClass": {
+      "required": true,
+      "text": "In a divorce involving a minor child the family court shall order the parties to attend parent education classes unless it finds attendance not appropriate or necessary; fee up to $25, waived for indigent parties (W. Va. Code § 48-9-104(b)-(c)).",
+      "url": "https://code.wvlegislature.gov/48-9-104/"
+    },
+    "uncertain": [
+      "responseFee 0: § 59-1-11(a)(6) imposes a $200 fee on pleadings with a counterclaim but states it does not apply in family court cases; no answer fee is listed.",
+      "Waiting period not found in W. Va. Code ch. 48 art. 5 sections read (48-5-104 to 106, 201 to 203, 301); any minimum time is set by the Rules of Practice and Procedure for Family Court, not verified. days = null.",
+      "Fee waiver form (courtswv.gov) not verified."
+    ]
+  },
+  {
+    "slug": "wisconsin",
+    "name": "Wisconsin",
+    "abbr": "WI",
+    "filingFee": 184.5,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "Commencing a family action (divorce, annulment, legal separation) with no request for support or maintenance: $184.50 ($75 filing fee, $68 CSS, $21.50 JINFO, $20 family court counseling services fee) (Wis. Stat. § 814.61(1)(a)-(b)); $194.50 with a request for support or maintenance (extra $10 under § 814.61(13)). Wisconsin Circuit Court Fee Tables updated November 14, 2024.",
+    "feeUrl": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf",
+    "otherFees": [
+      {
+        "what": "Family action with a request for support or maintenance (§ 814.61(1)(b), (13))",
+        "amount": 194.5,
+        "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf"
+      },
+      {
+        "what": "E-filing fee per party when the case is electronically filed (§ 758.19(4m), 801.18(7))",
+        "amount": 35,
+        "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf"
+      },
+      {
+        "what": "Post-judgment motion in a family action (§ 814.61(7)(a))",
+        "amount": 30,
+        "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf"
+      }
+    ],
+    "waiver": {
+      "name": "Petition for waiver of fees and costs (Wis. Stat. § 814.29(1))",
+      "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf"
+    },
+    "residency": {
+      "text": "One party must have been a bona fide resident of Wisconsin for at least 6 months and of the county of filing for at least 30 days before commencing a divorce (Wis. Stat. § 767.301).",
+      "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/301"
+    },
+    "waitingPeriod": {
+      "days": 120,
+      "text": "A divorce may not be brought to final hearing or trial until 120 days after service of the summons and petition on the respondent, or 120 days after filing a joint petition, unless the court orders an immediate hearing for an emergency (Wis. Stat. § 767.335).",
+      "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/335"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure; spouses may file a joint petition, which starts the 120-day waiting period on the filing date (Wis. Stat. § 767.335(1)).",
+      "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/335"
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "No statewide mandate in statute: in an action affecting the family with a minor child, the court may order the parties to attend a program (up to 4 hours) on the effects of dissolution on children (Wis. Stat. § 767.401(1)); counties may require it by local rule.",
+      "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/v/401"
+    },
+    "uncertain": [
+      "docs.legis.wisconsin.gov refused connections on 2026-10-08; §§ 767.301 and 767.335 were read from the Internet Archive copy (2023-10-02) of /statutes/statutes/767/iv and § 767.401 from the 2026-06-11 copy of /767/v. Most populous county (Milwaukee) local rules not checked.",
+      "Fee table read from the Internet Archive copy (2026-07-01) of wicourts.gov/courts/circuit/docs/fees.pdf (direct access HTTP 403); table dated November 14, 2024 — a 2026 update was not found.",
+      "No answer/response fee appears in the family section of the fee table; responseFee left null.",
+      "Exact Wisconsin fee-waiver form number not verified; the statute (§ 814.29(1)) is cited."
+    ]
+  },
+  {
+    "slug": "wyoming",
+    "name": "Wyoming",
+    "abbr": "WY",
+    "filingFee": 160,
+    "responseFee": null,
+    "feeScope": "statewide",
+    "feeText": "District court clerk original filing fee for each civil action, paid by the plaintiff: $160, of which $40 is for court automation and $10 for indigent civil legal services (W.S. 5-3-206(a)(i)).",
+    "feeUrl": "https://wyoleg.gov/statutes/compress/title05.pdf",
+    "otherFees": [],
+    "waiver": {
+      "name": null,
+      "url": null
+    },
+    "residency": {
+      "text": "One party must have resided in Wyoming for 60 days immediately before filing, or the marriage was solemnized in Wyoming and one party has resided there since the marriage (W.S. 20-2-107(a)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "waitingPeriod": {
+      "days": 20,
+      "text": "A divorce decree shall not be entered less than 20 days from the date the complaint is filed (W.S. 20-2-108).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "simplified": {
+      "text": "No summary dissolution procedure found in Wyoming Title 20; the only ground besides insanity is irreconcilable differences (W.S. 20-2-104).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "parentingClass": {
+      "required": false,
+      "text": "No statewide mandate in statute: the court may at any time require parents to attend parenting classes, including classes to lessen the effects of divorce on children (W.S. 20-2-201(f)); individual judicial districts may require them by local rule.",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    "uncertain": [
+      "No answer/response fee appears in W.S. 5-3-206(a) (the original filing fee is paid by the plaintiff); responseFee left null.",
+      "Local district court rules on mandatory parenting classes not checked.",
+      "Fee waiver (in forma pauperis) form not verified on wyocourts.gov."
     ]
   }
 ]

@@ -1,0 +1,45 @@
+{
+ "slug": "maine",
+ "name": "Maine",
+ "abbr": "ME",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "The published notice requires claims within 4 months after first publication (18-C M.R.S. § 3-801(1)); pre-death claims are barred at the earlier of 9 months after death or the notice periods of § 3-801 (18-C M.R.S. § 3-803(1)).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-803.html"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, the personal representative may close the estate by verified statement no earlier than 6 months after original appointment, after the claims period has expired (18-C M.R.S. § 3-1003(1)).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-1003.html"
+ },
+ "smallEstate": {
+  "limit": 52500,
+  "effective": "2026-01-01",
+  "text": "Collection by affidavit 30 days after death when the entire estate, less liens and encumbrances, does not exceed $40,000 adjusted for inflation (18-C M.R.S. § 3-1201(1)(A), as amended by PL 2025, c. 76). Under § 1-108 the $40,000 is increased by the change in the annual CPI-U from 2017 to the year before death, rounded down to $100: for deaths in 2026, 40,000 x (321.943 / 245.120 - 1) = 12,536.39, rounded down to 12,500, giving $52,500 (computed from the statute and BLS annual averages).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-1201.html"
+ },
+ "simplified": {
+  "text": "Summary administration when the estate does not exceed homestead allowance, exempt property, family allowance, administration costs, funeral and last-illness expenses (18-C M.R.S. § 3-1203); affidavit collection (§ 3-1201).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-1203.html"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate court filing fees were not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (18-C M.R.S. § 3-719), reviewable by the court (§ 3-721).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-719.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; the court may review the reasonableness of compensation of any attorney employed by the personal representative (18-C M.R.S. § 3-721).",
+  "url": "https://legislature.maine.gov/statutes/18-C/title18-Csec3-721.html"
+ },
+ "uncertain": [
+  "smallEstate.limit 52500 is computed, not published: 18-C M.R.S. § 1-108 formula applied to BLS CPI-U U.S. city average annual averages (2017 = 245.120, 2025 = 321.943, read from the BLS public API, series CUUR0000SA0); verify against any table issued by the Maine Probate Courts.",
+  "Maine probate filing fees not read; filingFee.amount = null."
+ ]
+}

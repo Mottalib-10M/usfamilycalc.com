@@ -1,0 +1,28 @@
+{
+ "slug": "wisconsin",
+ "base": "Inventory value of property for which the personal representative is accountable, less mortgages or liens, plus net principal gains (Wis. Stat. § 857.05(2)).",
+ "schedules": [
+  {
+   "who": "Personal representative commission (Wis. Stat. § 857.05(2)) (default rate; court approval)",
+   "tiers": [
+    {
+     "upTo": null,
+     "pct": 2
+    }
+   ],
+   "fixed": null,
+   "text": "2% (or a rate agreed in writing with the decedent or majority beneficiaries), subject to court approval, plus extraordinary services (Wis. Stat. § 857.05(2)).",
+   "url": "https://docs.legis.wisconsin.gov/statutes/statutes/857/05",
+   "capNote": "Default statutory rate; may be reduced for dereliction."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 400000,
+   "expected": {
+    "Personal representative commission (Wis. Stat. § 857.05(2)) (default rate; court approval)": 8000
+   },
+   "source": "computed by hand: 2% x 400,000"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "kentucky",
+ "base": "Value of the decedent's personal estate, plus separately the income collected by the personal representative (KRS 395.150(1)); real estate is not in the base.",
+ "schedules": [
+  {
+   "who": "Personal representative compensation (KRS 395.150(1)) (maximum)",
+   "tiers": [
+    {
+     "upTo": null,
+     "pct": 5
+    }
+   ],
+   "fixed": null,
+   "text": "Not more than 5% of the value of the personal estate plus 5% of income collected (KRS 395.150(1)).",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=36328",
+   "capNote": "Maximum; extra fair and reasonable compensation may be allowed for extraordinary services (KRS 395.150(2))."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 300000,
+   "expected": {
+    "Personal representative compensation (KRS 395.150(1)) (maximum)": 15000
+   },
+   "source": "computed by hand: 5% x 300,000 personal estate (income would add 5% of income)"
+  }
+ ]
+}

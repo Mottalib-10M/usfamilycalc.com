@@ -1,0 +1,19 @@
+{
+  "slug": "minnesota", "name": "Minnesota", "abbr": "MN",
+  "filingFee": 340, "responseFee": 340,
+  "feeScope": "statewide (plus a county law library fee under chapter 134A)",
+  "feeText": "In marriage dissolution actions the petitioner pays $340 when the first paper is filed, and each respondent appearing separately pays $340 when its first paper is filed (Minn. Stat. § 357.021, subd. 2(1)); county law library fees under chapter 134A are added separately (subd. 4).",
+  "feeUrl": "https://www.revisor.mn.gov/statutes/cite/357.021",
+  "otherFees": [ { "what": "Jury trial request (Minn. Stat. § 357.021, subd. 2(1))", "amount": 100, "url": "https://www.revisor.mn.gov/statutes/cite/357.021" } ],
+  "waiver": { "name": "In forma pauperis affidavit (Minn. Stat. § 563.01, subd. 3)", "url": "https://www.revisor.mn.gov/statutes/cite/563.01" },
+  "residency": { "text": "One party must have resided in Minnesota (or been stationed there in the armed services), or been domiciled there, for at least 180 days before the proceeding began (Minn. Stat. § 518.07, subd. 1).", "url": "https://www.revisor.mn.gov/statutes/cite/518.07" },
+  "waitingPeriod": { "days": 0, "text": "No general statutory waiting period for a regular dissolution. In the summary procedure the court administrator enters the decree 30 days after the joint declaration is filed (Minn. Stat. § 518.195, subd. 2).", "url": "https://www.revisor.mn.gov/statutes/cite/518.195" },
+  "simplified": { "text": "Summary dissolution by sworn joint declaration (Minn. Stat. § 518.195): no minor children of the parties, wife not pregnant, married fewer than 8 years, no real estate, unpaid marital debts not over $8,000 (excluding car loans), marital assets not over $25,000, neither party's nonmarital assets over $25,000, no domestic abuse; decree entered 30 days after filing.", "url": "https://www.revisor.mn.gov/statutes/cite/518.195" },
+  "parentingClass": { "required": true, "text": "When the parties have not agreed on custody or a parenting time schedule, the court must order the parents of a minor child to attend at least eight hours of an approved orientation and education program; in other proceedings involving custody, support or parenting time the court may order it (Minn. Stat. § 518.157, subd. 3).", "url": "https://www.revisor.mn.gov/statutes/cite/518.157" },
+  "uncertain": [
+    "County law library fee (chapter 134A) not included; the Hennepin County amount (most populous county) was not verified because mncourts.gov returns 403 to automated clients and its fee page is not archived.",
+    "Statutes read from the 2025 Minnesota Statutes on revisor.mn.gov (current edition as of 2026-10-08).",
+    "Waiver form: Minnesota Judicial Branch IFP form number and title not read (mncourts.gov blocked); the statute is cited instead.",
+    "Parenting class is mandatory only when custody or parenting time is not agreed (§ 518.157, subd. 3(a))."
+  ]
+}

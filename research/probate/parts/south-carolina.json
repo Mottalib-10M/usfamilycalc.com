@@ -1,0 +1,45 @@
+{
+ "slug": "south-carolina",
+ "name": "South Carolina",
+ "abbr": "SC",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 8,
+  "text": "The personal representative publishes notice for 3 weeks requiring claims within 8 months after first publication (S.C. Code § 62-3-801(a)); pre-death claims are barred at the earlier of 1 year after death or the notice periods (S.C. Code § 62-3-803(a)).",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "earliestClose": {
+  "text": "The final accounting and closing filings are due after claim-contest periods and pending claim proceedings end (and 90 days after any estate tax closing letter) (S.C. Code § 62-3-1001(a)); in practice after the 8-month claims period of § 62-3-801.",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "smallEstate": {
+  "limit": 45000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if the entire probate estate (property passing by will or intestacy), less liens and encumbrances, does not exceed $45,000 (S.C. Code § 62-3-1201(a)(1), last amended by 2025 Act No. 26, effective May 8, 2025). Not indexed.",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "simplified": {
+  "text": "Summary administration when the probate estate does not exceed $45,000 plus exempt property, administration costs, funeral and last-illness expenses (S.C. Code § 62-3-1203); affidavit collection (§ 62-3-1201).",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate Court fee on the gross probate estate in the inventory: $25 under $5,000; $45 under $20,000; $67.50 under $60,000; $95 under $100,000; $95 plus 0.15% of value between $100,000 and $600,000; that amount plus 0.25% above $600,000; the same scale applies to a small estate affidavit (S.C. Code § 8-21-770(B),(C)(12)). The amount is value-based and is computed from the court-fee schedule in fees/south-carolina.json (filingFee.amount left null to avoid double counting).",
+  "url": "https://www.scstatehouse.gov/code/t08c021.php"
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Unless the court approves more for extraordinary services, not more than 5% of the appraised value of probate personal property plus proceeds of authorized real property sales, minimum $50, plus up to 5% of estate income (S.C. Code § 62-3-719).",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney schedule; the court may review the reasonableness of compensation of any attorney employed by the personal representative (S.C. Code § 62-3-721).",
+  "url": "https://www.scstatehouse.gov/code/t62c003.php"
+ },
+ "uncertain": [
+  "Official South Carolina Code read on scstatehouse.gov (not scstatutes.gov).",
+  "§ 62-3-1201 was last amended by 2025 Act No. 26 (eff. May 8, 2025); whether that act set the $45,000 figure was not checked (smallEstate.effective = null)."
+ ]
+}

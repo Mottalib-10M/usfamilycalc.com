@@ -1,0 +1,22 @@
+{
+  "slug": "rhode-island", "name": "Rhode Island", "abbr": "RI",
+  "filingFee": null, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": null,
+  "feeUrl": null,
+  "otherFees": [
+    { "what": "eFileRI one-time civil case processing fee to Tyler Technologies, in addition to the court filing fee (revised March 2026)", "amount": 17.50, "url": "https://www.courts.ri.gov/Public-Resources/Documents/Electronic%20Filing/eFileRIFees.pdf" },
+    { "what": "eFileRI technology surcharge (revised March 2026)", "amount": 3.25, "url": "https://www.courts.ri.gov/Public-Resources/Documents/Electronic%20Filing/eFileRIFees.pdf" }
+  ],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "The plaintiff must have been domiciled in and resided in Rhode Island for one year before filing; satisfied instead if the defendant has been so domiciled for one year and is actually served (R.I. Gen. Laws § 15-5-12(a)).", "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-12.htm" },
+  "waitingPeriod": { "days": 90, "text": "No divorce judgment becomes final until three months after the trial and decision; the final decree may then be entered ex parte within 180 days (R.I. Gen. Laws § 15-5-23(a)).", "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-23.htm" },
+  "simplified": { "text": "No summary procedure found; a three-year separation ground leads to a decision pending entry of final judgment, which may be entered 20 days after the decision (R.I. Gen. Laws § 15-5-3).", "url": "https://webserver.rilegislature.gov/Statutes/TITLE15/15-5/15-5-3.htm" },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "Family Court divorce filing fee not found: the courts.ri.gov fee documents found (Superior Court fees $160, eFileRI fees) do not cover the Family Court; filingFee null.",
+    "R.I. Gen. Laws §§ 15-5-12, 15-5-23 and 15-5-3 read from Internet Archive 2026 copies (webserver.rilegislature.gov refused connections on 2026-10-08).",
+    "waitingPeriod.days 90 stands for 'three months' after the decision (not after filing).",
+    "Irreconcilable differences ground (§ 15-5-3.1), fee waiver form and Family Court parent education requirement not verified."
+  ]
+}

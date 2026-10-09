@@ -1,0 +1,45 @@
+{
+ "slug": "massachusetts",
+ "name": "Massachusetts",
+ "abbr": "MA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Not verified: M.G.L. c. 190B § 3-803 (limitations on presentation of claims) could not be read from an official source.",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter190B/Section3-803"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 6 months after original appointment, after the time for presenting claims has expired (M.G.L. c. 190B § 3-1003(a)).",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter190B/Section3-1003"
+ },
+ "smallEstate": {
+  "limit": 25000,
+  "effective": null,
+  "text": "Voluntary administration by verified statement filed with the Probate and Family Court, 30 days after death, when the estate consists entirely of personal property not exceeding $25,000 in value plus a motor vehicle (M.G.L. c. 190B § 3-1201). Not indexed.",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter190B/Section3-1201"
+ },
+ "simplified": {
+  "text": "Voluntary administration for personal property up to $25,000 plus a car (§ 3-1201); summary administration when the estate does not exceed allowances, administration and funeral and last-illness expenses (M.G.L. c. 190B § 3-1203).",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter190B/Section3-1203"
+ },
+ "filingFee": {
+  "amount": 375,
+  "scope": "statewide",
+  "text": "Probate and Family Court: petition for formal or informal probate of a will and/or appointment of a personal representative $375 plus $15 surcharge; general probate petition $150 plus $15; subsequent letter $25.",
+  "url": "https://www.mass.gov/info-details/probate-and-family-court-filing-fees"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Not verified: M.G.L. c. 190B § 3-719 could not be read; no statutory percentage schedule is known from the sections read.",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter190B/Section3-719"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Not verified: no statutory attorney fee schedule was found in the sections read.",
+  "url": null
+ },
+ "uncertain": [
+  "malegislature.gov refuses connections from this environment: c. 190B §§ 3-1201 (snapshot 2026-09-28), 3-1203 (2026-06-03) and 3-1003 (2026-06-08) were read from Internet Archive copies; §§ 3-801, 3-803 and 3-719 had no archived copy, so creditorClaims and compensation rules are unverified.",
+  "Filing fee read from the Internet Archive copy (2026-10-05) of the mass.gov Probate and Family Court filing fees page (mass.gov returns 403)."
+ ]
+}

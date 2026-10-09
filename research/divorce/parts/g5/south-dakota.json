@@ -1,0 +1,21 @@
+{
+  "slug": "south-dakota", "name": "South Dakota", "abbr": "SD",
+  "filingFee": 65, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Clerk of courts fee of $25 for civil cases filed for jury or court trial (SDCL 16-2-29(3)(a)) plus the $40 unified judicial system court automation surcharge in each civil action (SDCL 16-2-39) = $65.",
+  "feeUrl": "https://sdlegislature.gov/api/Statutes/16-2-29.html",
+  "otherFees": [
+    { "what": "Court automation surcharge included above (SDCL 16-2-39)", "amount": 40, "url": "https://sdlegislature.gov/api/Statutes/16-2-39.html" },
+    { "what": "Petition or motion to modify final child support, custody, visitation or spousal support orders (SDCL 16-2-29(4))", "amount": 50, "url": "https://sdlegislature.gov/api/Statutes/16-2-29.html" }
+  ],
+  "waiver": { "name": "Motion to waive filing fees and service costs with affidavit of inability to pay (SDCL 16-2-29.2, 16-2-29.3)", "url": "https://sdlegislature.gov/api/Statutes/16-2-29.2.html" },
+  "residency": { "text": "The plaintiff must be a resident of South Dakota (or stationed there in the armed services) when the action is commenced; no minimum duration, and residence need not be maintained afterwards (SDCL 25-4-30).", "url": "https://sdlegislature.gov/api/Statutes/25-4-30.html" },
+  "waitingPeriod": { "days": 60, "text": "A divorce may not be heard, tried or determined until at least 60 days after completed service of the summons and complaint (SDCL 25-4-34).", "url": "https://sdlegislature.gov/api/Statutes/25-4-34.html" },
+  "simplified": { "text": null, "url": null },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "Filing fee $65 is the sum of two statutes (SDCL 16-2-29(3) and 16-2-39) as read; whether divorce falls under 16-2-29(3)(a) or (k) is not stated, both are $25. The Unified Judicial System's own fee schedule could not be found to confirm the total actually collected.",
+    "No answer fee found in SDCL 16-2-29; responseFee left null.",
+    "Simplified procedure and parenting-class requirement not verified (SDCL ch. 25-4A standard guidelines and mediation under 25-4-56 read; no class mandate found in the sections read)."
+  ]
+}

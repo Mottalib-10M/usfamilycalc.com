@@ -4,7 +4,7 @@
   "feeScope": "statewide (base clerk's fee; local add-on fees vary by circuit court)",
   "feeText": "In all divorce and separate maintenance proceedings the circuit court clerk's fee chargeable to the plaintiff is $60, $10 of which goes to the Courts Technology Fund; no fee is charged for a counterclaim or any other responsive pleading in a divorce (Va. Code § 17.1-275(A)(26)). Other statutory and local add-on fees (e.g. law library, courthouse, service) are not included.",
   "feeUrl": "https://law.lis.virginia.gov/vacode/title17.1/chapter2/section17.1-275/",
-  "otherFees": [ { "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)", "amount": 12, "url": "https://www.vacourts.gov/caseinfo/cccivilfeeshelp.html" } ],
+  "otherFees": [ { "what": "Service by Virginia sheriff, per person served (Va. Code § 17.1-272)", "amount": 12, "url": "" } ],
   "waiver": { "name": "Petition for Proceeding in Civil Case Without Payment of Fees or Costs (Form CC-1414)", "url": "https://www.vacourts.gov/forms/circuit/cc1414.pdf" },
   "residency": { "text": "One of the parties must have been an actual bona fide resident and domiciliary of Virginia for at least six months before filing (Va. Code § 20-97).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-97/" },
   "waitingPeriod": { "days": 0, "text": "No waiting period after filing, but a no-fault divorce requires living separate and apart without cohabitation for one year, or six months if there is a separation agreement and no minor children (Va. Code § 20-91(A)(9)(a)).", "url": "https://law.lis.virginia.gov/vacode/title20/chapter6/section20-91/" },

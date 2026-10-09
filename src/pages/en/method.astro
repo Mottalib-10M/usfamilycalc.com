@@ -1,0 +1,47 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+import { csAll, wcAll, alAll, dvAll, pbAll, pbFeesOf, usdx, day, listOf } from '../../lib/kit';
+import { customModel } from '../../lib/engine/cs-custom';
+import { table, ext } from '../../lib/helpers';
+const lang = 'en';
+const title = 'Family Law Calculators Method 2026: Rules, Sources and Tests';
+const description = "How the 2026 child support, alimony, divorce cost, probate and workers comp calculators apply each state's official rules, and what they still leave out.";
+const path = route('method', lang);
+const CS = csAll(), WC = wcAll(), AL = alAll(), DV = dvAll(), PB = pbAll();
+const nCases = CS.reduce((a, d) => a + ((d as { testCases?: unknown[] }).testCases?.length ?? 0), 0) + AL.reduce((a, d) => a + ((d as { testCases?: unknown[] }).testCases?.length ?? 0), 0);
+const csRows = CS.map((d) => [d.name, d.modelName ?? d.model, d.period, customModel(d.slug) ? 'state model' : 'generic engine', d.guidelinesUrl ? ext(d.guidelinesUrl, new URL(d.guidelinesUrl).hostname.replace(/^www\./, '')) : '', day(d.verified)]);
+const wcRows = WC.map((d) => [d.name, d.ttd.max != null ? usdx(d.ttd.max) : 'none', d.ttd.effective ? day(d.ttd.effective) : '', d.ttd.url ? ext(d.ttd.url, new URL(d.ttd.url).hostname.replace(/^www\./, '')) : '']);
+const statutory = PB.filter((d) => pbFeesOf(d.slug)).map((d) => d.name);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How we calculate', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How we calculate', path }])]} breadcrumbs={[{ label: 'How we calculate' }]}>
+  <header class="mb-6"><h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">How the calculators work</h1>
+  <p class="mt-3 text-lg text-navy-700">Each state's rule lives in a data file with the official address it was read on; small functions apply it in your browser; tests replay the states' own examples before every release.</p></header>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h2>Child support</h2>
+    <p>The calculator covers {CS.length} jurisdictions. For each one, the data file holds the model (income shares, percentage of income, or a formula), the income definition, the official table or percentages, the shared-parenting rule, the add-ons and the low-income rules, with the URL of the statute, court rule or agency page. Tables are parsed from the official documents by scripts kept with the site, and sample rows are checked by eye against the source. Where a state's guideline needs more than a table lookup (a parenting-time formula, a low-income table, per-child or age columns, a band formula), the state has its own model file; the others use a shared engine that reads the table, shares it by income, applies the shared-parenting threshold and multiplier, and adds child care and health insurance.</p>
+    <p>Inputs are monthly and in the income basis of the state; the engine converts them to the period of the official table (weekly, monthly or yearly) and back. What the inputs cannot express is left out and said on the state page: income imputed by a court, children from other relationships, deviations, and, in a few states, rules whose dollar figure was not published.</p>
+    <h2>Alimony</h2>
+    <p>Only states that publish a formula, a cap or a duration rule are modeled: {listOf(AL.map((d) => d.name))}. Each has a model file reading its percentages, caps, income limits and duration table from its data file. Where the rule only limits the amount (Texas) or only the duration (Maine, Utah), the calculator says so instead of inventing an amount; where the state's amount comes from a court calculator we cannot reproduce (Arizona), the result points to it.</p>
+    <h2>Divorce cost</h2>
+    <p>Court fees for a divorce petition and a response are read in each state's fee statute or, where fees are set locally, in the fee schedule of the clerk of the most populous county, named on the page. Attorney time, mediation and service of papers are not official figures: the calculator asks you for them and labels them as your figures. We never publish an “average cost of divorce”.</p>
+    <h2>Probate</h2>
+    <p>The creditor claim period, the small-estate limit, the filing fee and the rules on executor and attorney compensation are read in each state's probate code. {statutory.length} states set a statutory schedule or a statutory maximum ({listOf(statutory)}); the calculator applies it to the estate value you enter, as a marginal or bracket schedule exactly as written, and labels maximums as such. Bond, publication, appraisal and extraordinary services are not included.</p>
+    <h2>Workers' compensation</h2>
+    <p>The weekly temporary total disability benefit is the state's rate applied to the wage you enter, bounded by the weekly maximum and minimum in force for 2026 injuries (or the latest official figure when 2026 had not been published, as each page states), with the state's rule for workers earning less than the minimum. Waiting days are left unpaid unless the time off passes the state's retroactive threshold, and states that cap the number of weeks are capped. States that publish monthly limits are converted to weekly equivalents (× 12 ÷ 52). Partial and permanent disability and settlements are explained on the pages, not computed.</p>
+    <h2>Tests</h2>
+    <p>The engines are pure functions tested on every build: {nCases} reference cases recorded with the data, official worked examples where the state publishes one and hand computations from the statute otherwise, each with its source; a schedule check on every table; a grid of incomes, children and overnights on every state that must never return an invalid number; the bounds of every workers' comp maximum and minimum; every statutory probate schedule. A case off by more than 1% blocks publication.</p>
+    <h2>Child support guidelines we apply</h2>
+    <Fragment set:html={table(['State', 'Model', 'Table period', 'Engine', 'Official text', 'Read on'], csRows, undefined, ['l', 'l', 'l', 'l', 'l', 'l'])} />
+    <h2>Workers' comp maximums we apply</h2>
+    <Fragment set:html={table(['State', 'Weekly maximum', 'In force from', 'Official source'], wcRows, undefined, ['l', 'r', 'l', 'l'])} />
+    <h2>What the calculators do not do</h2>
+    <ul>
+      <li>They do not decide which income a court will count, nor apply deviations from a guideline.</li>
+      <li>They do not cover states whose official figures we could not read: these states simply have no page for that subject{DV.some((d) => d.filingFee == null) ? ', and divorce fees set by county are shown as such' : ''}.</li>
+      <li>They are not legal advice and file nothing.</li>
+    </ul>
+    <p>Questions or corrections: <a href={route('contact', lang)}>contact page</a>. See also the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+  </div>
+</PageLayout>

@@ -58,7 +58,7 @@ export default function DivorceCostCalculator({ states, state = 'california', lo
           {r.lines.map((l) => <tr key={l.label}><td className="py-1.5 pr-3 text-navy-700">{l.label}{l.official ? '' : ' (your figure)'}</td><td className="tabular-nums py-1.5 text-right text-navy-900">{exact(l.value)}</td></tr>)}
           {S.filingFee == null && <tr><td className="py-1.5 pr-3 text-navy-700">Court filing fee</td><td className="py-1.5 text-right text-navy-900">set by each county</td></tr>}
         </tbody></table>
-        {S.waiver && <p className="mt-2 text-xs text-navy-700">Low income? Court fees can be waived in {S.name}: <a className="underline" href={S.waiver.url} target="_blank" rel="nofollow noopener noreferrer">{S.waiver.name}</a>.</p>}
+        {S.waiver?.name && S.waiver?.url && <p className="mt-2 text-xs text-navy-700">Low income? Court fees can be waived in {S.name}: <a className="underline" href={S.waiver.url} target="_blank" rel="nofollow noopener noreferrer">{S.waiver.name}</a>.</p>}
         <p className="mt-3 text-xs text-navy-600">Court fees are the official {S.name} amounts; attorney, mediation and service costs are the figures you enter. <a className="underline" href={methodHref}>How this is calculated</a>.</p>
         <div className="mt-3 flex flex-wrap gap-2 text-sm">
           <button type="button" onClick={copy} className="rounded-lg border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50">{copied ? 'Link copied' : 'Copy share link'}</button>

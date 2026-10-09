@@ -1,0 +1,45 @@
+{
+ "slug": "west-virginia",
+ "name": "West Virginia",
+ "abbr": "WV",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "The fiduciary supervisor publishes a monthly notice; claims must be exhibited to the fiduciary or the fiduciary supervisor within 60 days of the first publication of the notice, otherwise they may be excluded from the estate (W. Va. Code § 44-3A-4). The period is 60 days, not a whole number of months.",
+  "url": "https://code.wvlegislature.gov/44-3A-4/"
+ },
+ "earliestClose": {
+  "text": "Once more than 60 days have elapsed since the notice under § 44-3A-4, the estate may be closed by short form settlement with a fiduciary affidavit and beneficiary waivers (W. Va. Code § 44-3A-4a).",
+  "url": "https://code.wvlegislature.gov/44-3A-4a/"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Estates whose appraised assets subject to administration (excluding real estate unless the will requires its administration) total $100,000 or less are not referred to a fiduciary commissioner and are settled under the fiduciary supervisor (W. Va. Code § 44-3A-5). West Virginia has no small-estate affidavit in the sections read. Not indexed.",
+  "url": "https://code.wvlegislature.gov/44-3A-5/"
+ },
+ "simplified": {
+  "text": "Supervision by the county fiduciary supervisor without reference to a commissioner for estates of $100,000 or less (W. Va. Code § 44-3A-5) and short form settlement after 60 days (§ 44-3A-4a).",
+  "url": "https://code.wvlegislature.gov/44-3A-4a/"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "County clerk probate fees were not identified in the text read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Commissions on personal estate subject to administration (with its income) received and accounted for and on proceeds of real estate sold: 5% of the first $100,000, 4% from $100,000 to $400,000, 3% from $400,000 to $800,000, 2% above $800,000; plus 1% of unsold real estate and of non-probate property includable for federal estate tax (not joint and survivorship property); full compensation for ordinary services, adjustable by the county commission; a will may deviate (W. Va. Code § 44-4-12a).",
+  "url": "https://code.wvlegislature.gov/44-4-12a/"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney schedule; a lawyer serving as personal representative may not receive professional fees in addition to the commission (W. Va. Code § 44-4-12a(e)); other attorney fees are reasonable expenses allowed by the fiduciary commissioner (W. Va. Code § 44-4-12).",
+  "url": "https://code.wvlegislature.gov/44-4-12/"
+ },
+ "uncertain": [
+  "creditorClaims.months = null because the period is 60 days (W. Va. Code § 44-3A-4).",
+  "No small-estate affidavit or probate filing fee section was read; smallEstate.limit reflects the $100,000 supervision threshold of § 44-3A-5."
+ ]
+}

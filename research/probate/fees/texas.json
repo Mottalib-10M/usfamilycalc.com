@@ -3,7 +3,7 @@
  "base": "Amounts the executor or administrator actually receives or pays out in cash during administration, excluding cash on hand or in financial institution/brokerage accounts at death, life insurance proceeds and cash paid to heirs or legatees (Tex. Est. Code § 352.002).",
  "schedules": [
   {
-   "who": "Executor/administrator commission (Tex. Est. Code § 352.002)",
+   "who": "Executor/administrator commission (Tex. Est. Code § 352.002) (maximum)",
    "tiers": [
     {
      "upTo": null,
@@ -20,14 +20,14 @@
   {
    "estate": 100000,
    "expected": {
-    "Executor/administrator commission (Tex. Est. Code § 352.002)": 5000
+    "Executor/administrator commission (Tex. Est. Code § 352.002) (maximum)": 5000
    },
    "source": "computed by hand: 5% x 100,000 of eligible cash receipts and payments"
   },
   {
    "estate": 250000,
    "expected": {
-    "Executor/administrator commission (Tex. Est. Code § 352.002)": 12500
+    "Executor/administrator commission (Tex. Est. Code § 352.002) (maximum)": 12500
    },
    "source": "computed by hand"
   }

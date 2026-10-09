@@ -41,6 +41,6 @@
  "uncertain": [
   "Alabama sections were read through the official ALISON GraphQL endpoint behind alison.legislature.state.al.us (script research/scripts/probate_alabama.py).",
   "The current small estate dollar amount (CPI-adjusted by the State Treasurer under Ala. Code § 43-8-116) was not found on an official page; smallEstate.limit = null.",
-  "Alabama's 2.5% + 2.5% is a cap on reasonable compensation, not a fixed schedule, so no fee file was written."
+  "Alabama 2.5% + 2.5% is a cap on reasonable compensation; the fee file encodes the two maximums."
  ]
 }

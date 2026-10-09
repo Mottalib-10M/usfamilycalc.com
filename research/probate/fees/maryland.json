@@ -1,0 +1,94 @@
+{
+ "slug": "maryland",
+ "base": "Property subject to administration (commission, Est. & Trusts § 7-601(b)); value of the probate estate per administration accounts: inventories plus principal and income receipts plus realized gains less realized losses (Register of Wills fee, § 2-206(b)(3)).",
+ "schedules": [
+  {
+   "who": "Personal representative commission, maximum (Md. Code, Est. & Trusts § 7-601(b))",
+   "tiers": null,
+   "fixed": [
+    {
+     "upTo": 20000,
+     "fee": 0,
+     "pct": 9,
+     "pctOf": "total"
+    },
+    {
+     "upTo": null,
+     "fee": 1800,
+     "pct": 3.6,
+     "pctOf": "excess",
+     "over": 20000
+    }
+   ],
+   "text": "Not over $20,000: 9%; over $20,000: $1,800 plus 3.6% of the excess over $20,000 (Est. & Trusts § 7-601(b)(2)).",
+   "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=7-601&enactments=false",
+   "capNote": "Maximum commission; the court allows what it considers appropriate."
+  },
+  {
+   "who": "Register of Wills probate fee (Md. Code, Est. & Trusts § 2-206(b)(2))",
+   "tiers": null,
+   "fixed": [
+    {
+     "upTo": 49999.99,
+     "fee": 0
+    },
+    {
+     "upTo": 99999.99,
+     "fee": 100
+    },
+    {
+     "upTo": 499999.99,
+     "fee": 200
+    },
+    {
+     "upTo": 999999.99,
+     "fee": 1000
+    },
+    {
+     "upTo": 2499999.99,
+     "fee": 2000
+    },
+    {
+     "upTo": 4999999.99,
+     "fee": 5000
+    },
+    {
+     "upTo": 7499999.99,
+     "fee": 7500
+    },
+    {
+     "upTo": 9999999.99,
+     "fee": 10000
+    },
+    {
+     "upTo": null,
+     "fee": 10000,
+     "pct": 0.02,
+     "pctOf": "excess",
+     "over": 10000000
+    }
+   ],
+   "text": "Court (Register of Wills) fee, not a fiduciary fee: $0 under $50,000; $100 from $50,000; $200 from $100,000; $1,000 from $500,000; $2,000 from $1,000,000; $5,000 from $2,500,000; $7,500 from $5,000,000; $10,000 from $7,500,000; $10,000 plus 0.02% of the excess over $10,000,000 (Est. & Trusts § 2-206(b)(2)).",
+   "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=2-206&enactments=false",
+   "capNote": "Bracket upper bounds encoded as x.99 because the statute uses 'at least / but less than'."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 300000,
+   "expected": {
+    "Personal representative commission, maximum (Md. Code, Est. & Trusts § 7-601(b))": 11880,
+    "Register of Wills probate fee (Md. Code, Est. & Trusts § 2-206(b)(2))": 200
+   },
+   "source": "computed by hand: 1,800 + 3.6% x 280,000; fee bracket $100,000-$500,000"
+  },
+  {
+   "estate": 15000,
+   "expected": {
+    "Personal representative commission, maximum (Md. Code, Est. & Trusts § 7-601(b))": 1350,
+    "Register of Wills probate fee (Md. Code, Est. & Trusts § 2-206(b)(2))": 0
+   },
+   "source": "computed by hand: 9% x 15,000"
+  }
+ ]
+}

@@ -3,7 +3,7 @@
  "base": "Receipts (including personal property at value when received) plus expenditures made according to law, excluding distributions to heirs or devisees; realty sale proceeds only when applied to debts or devises (G.S. 28A-23-3(a),(b),(d)).",
  "schedules": [
   {
-   "who": "Personal representative commission, maximum (G.S. 28A-23-3)",
+   "who": "Personal representative commission (G.S. 28A-23-3) (maximum)",
    "tiers": [
     {
      "upTo": null,
@@ -20,7 +20,7 @@
   {
    "estate": 200000,
    "expected": {
-    "Personal representative commission, maximum (G.S. 28A-23-3)": 10000
+    "Personal representative commission (G.S. 28A-23-3) (maximum)": 10000
    },
    "source": "computed by hand: 5% x 200,000 of qualifying receipts and expenditures"
   }

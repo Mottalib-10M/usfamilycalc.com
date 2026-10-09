@@ -15,6 +15,7 @@ import { readParams, num, str, updateURL } from '../../lib/url-state';
 interface Meta { slug: string; name: string; abbr: string }
 interface Props { states: Meta[]; initial: CSData; lockState?: boolean; methodHref?: string; idPrefix?: string; payer?: number; other?: number }
 const usd = (n: number) => formatMoney(n, 0);
+const MODEL_LABEL: Record<string, string> = { 'income-shares': 'Income shares schedule', 'percent-obligor': 'Percentage of the payer’s income', 'percent-combined': 'Percentage of combined income', 'ca-formula': 'Statewide formula', melson: 'Melson formula', 'bands-combined': 'Income bands formula', other: 'State formula' };
 const loaders = import.meta.glob<{ default: CSData }>('../../data/cs/*.json');
 async function load(slug: string): Promise<CSData | null> {
   const f = loaders[`../../data/cs/${slug}.json`];
@@ -78,7 +79,7 @@ export default function ChildSupportCalculator({ states, initial, lockState = fa
       <form className="grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
         {lockState
           ? <div className="grid grid-rows-subgrid row-span-3 content-start gap-y-0"><span className="mb-1 block text-sm font-medium text-navy-700">State</span><p className="flex h-12 items-center rounded-lg border border-navy-200 bg-navy-50 px-4 font-semibold text-navy-900">{data.name}</p><span className="mt-1 text-xs text-navy-500">{data.modelName}</span></div>
-          : <SelectField id={`${p}-state`} label="State" value={slug} onChange={pick} options={states.map((x) => ({ value: x.slug, label: x.name }))} help={ready ? data.modelName : 'Loading the state’s guideline…'} />}
+          : <SelectField id={`${p}-state`} label="State" value={slug} onChange={pick} options={states.map((x) => ({ value: x.slug, label: x.name }))} help={ready ? (MODEL_LABEL[data.model] ?? 'State guideline') : 'Loading the state’s guideline…'} />}
         <SelectField id={`${p}-kids`} label="Children of this relationship" value={String(Math.min(children, maxKids))} onChange={(v) => setChildren(Number(v))} options={Array.from({ length: maxKids }, (_, i) => ({ value: String(i + 1), label: String(i + 1) }))} />
         <NumberField id={`${p}-payer`} label="Paying parent, monthly income" value={payer} onChange={setPayer} unit="$" max={1_000_000} help={data.incomeLabel} />
         <NumberField id={`${p}-other`} label="Other parent, monthly income" value={other} onChange={setOther} unit="$" max={1_000_000} help="Same definition of income, for the parent the children live with most." />

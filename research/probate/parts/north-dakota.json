@@ -1,0 +1,46 @@
+{
+ "slug": "north-dakota",
+ "name": "North Dakota",
+ "abbr": "ND",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 3,
+  "text": "Pre-death claims are barred unless presented within 3 months after the first publication and mailing of notice to creditors, or within 3 years after death if notice was not published and mailed (N.D.C.C. § 30.1-19-03(1)).",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c19.pdf"
+ },
+ "earliestClose": {
+  "text": "A personal representative may close an unsupervised estate by verified statement, but not until 3 months after the first publication and mailing of notice to creditors (N.D.C.C. § 30.1-21-03).",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c21.pdf"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if the entire estate subject to succession, less liens and encumbrances, does not exceed $100,000 and no personal representative is pending or appointed (N.D.C.C. § 30.1-23-01). Not indexed.",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c23.pdf"
+ },
+ "simplified": {
+  "text": "Affidavit collection up to $100,000 (N.D.C.C. § 30.1-23-01) and summary administration for estates not exceeding allowances and expenses (N.D.C.C. ch. 30.1-23).",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c23.pdf"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "The clerk of district court charges $160 for filing a civil case for decision (N.D.C.C. § 27-05.2-03(1)(a)); a probate-specific fee was not identified in the text read.",
+  "url": "https://www.ndlegis.gov/cencode/t27c05-2.pdf"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (N.D.C.C. § 30.1-18-19).",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c18.pdf"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; the court may review the reasonableness of compensation of persons employed by the personal representative, including attorneys (N.D.C.C. ch. 30.1-18, UPC § 3-721 equivalent).",
+  "url": "https://www.ndlegis.gov/cencode/t30-1c18.pdf"
+ },
+ "uncertain": [
+  "North Dakota probate filing fee not confirmed (filingFee.amount = null).",
+  "Effective date of the $100,000 affidavit limit not shown (smallEstate.effective = null).",
+  "attorneyFee: the UPC 3-721 equivalent section number in ch. 30.1-18 was not quoted."
+ ]
+}

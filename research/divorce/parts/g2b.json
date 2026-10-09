@@ -56,12 +56,12 @@
     "responseFee": 136,
     "feeScope": "statewide",
     "feeText": "Category B.1 Divorce, with or without minor children: $207 (I.R.C.P. Appendix A filing fee schedule, effective July 12, 2024; I.C. § 31-3201A).",
-    "feeUrl": "https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf",
+    "feeUrl": "https://web.archive.org/web/20251006192658/https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf",
     "otherFees": [
       {
         "what": "Initial appearance by a party other than the petitioner (Category I.1)",
         "amount": 136,
-        "url": "https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf"
+        "url": "https://web.archive.org/web/20251006192658/https://isc.idaho.gov/rules/Appendix-A-Civil-Case-Filing-Fees-071224.pdf"
       }
     ],
     "waiver": {

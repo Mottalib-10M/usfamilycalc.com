@@ -1,0 +1,22 @@
+{
+  "slug": "colorado", "name": "Colorado", "abbr": "CO",
+  "filingFee": 230, "responseFee": 116,
+  "feeScope": "statewide",
+  "feeText": "Docket fee paid by the petitioner in a proceeding for dissolution of marriage, legal separation or declaration of invalidity: $230; by the respondent: $116 (C.R.S. 13-32-101(1)(a) and (b)).",
+  "feeUrl": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-13.pdf",
+  "otherFees": [
+    { "what": "Motion to modify, amend or alter a decree or order more than 60 days after the decree (C.R.S. 13-32-101(2), per JDF 1 fee chart)", "amount": 105, "url": "https://www.coloradojudicial.gov/sites/default/files/2023-08/FeesChart%20-%20JDF1%20R2%2014%20%28FINAL%29.pdf" },
+    { "what": "Petition for allocation of parental responsibilities (per JDF 1 fee chart)", "amount": 222, "url": "https://www.coloradojudicial.gov/sites/default/files/2023-08/FeesChart%20-%20JDF1%20R2%2014%20%28FINAL%29.pdf" }
+  ],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "One party must have been domiciled in Colorado for 91 days before the proceeding is commenced (C.R.S. 14-10-106(1)(a)(I)).", "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf" },
+  "waitingPeriod": { "days": 91, "text": "The decree may be entered only when 91 days or more have elapsed since the court acquired jurisdiction over the respondent (service, joining as co-petitioner, or appearance) (C.R.S. 14-10-106(1)(a)(III)).", "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf" },
+  "simplified": { "text": "Decree upon affidavit without a hearing when there are no minor children (or both parties are represented and have a separation agreement on children), the respondent is served, there is no genuine issue of material fact, and there is no marital property or the parties agree on its division (C.R.S. 14-10-120.3).", "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf" },
+  "parentingClass": { "required": false, "text": "No statewide mandate in statute: a court may order a parent of a child under 18 to attend a parental education program on the impact of separation and divorce (C.R.S. 14-10-123.7(2)); judicial districts may require it by local practice.", "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-14.pdf" },
+  "uncertain": [
+    "C.R.S. Titles 13 and 14 read from the Internet Archive copies (2026-09) of the 2024 uncertified printouts at content.leg.colorado.gov (direct access returned HTTP 403); the 2025 printout was not archived.",
+    "The JDF 1 fee chart (revision R2/14, posted 2023-08) matches the statutory $230 / $116; other amounts listed in otherFees are from that chart and may be outdated.",
+    "Fee waiver form (Colorado Judicial JDF form) not verified; coloradojudicial.gov fee page returned 404.",
+    "Whether each judicial district (e.g. Denver, El Paso) makes the parenting class mandatory by local rule not checked."
+  ]
+}

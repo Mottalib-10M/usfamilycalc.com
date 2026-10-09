@@ -1,0 +1,45 @@
+{
+ "slug": "louisiana",
+ "name": "Louisiana",
+ "abbr": "LA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Louisiana has no general non-claim bar date for successions: creditors may present claims to the succession representative, and a formal sworn proof of claim suspends prescription for up to 10 years (La. C.C.P. art. 3245); payment of estate debts is authorized after a published notice with a 7-day opposition period (La. C.C.P. art. 3304).",
+  "url": "https://legis.la.gov/legis/Law.aspx?d=111668"
+ },
+ "earliestClose": {
+  "text": "No statutory minimum period; a petition to pay estate debts can be homologated 7 days after publication (La. C.C.P. art. 3304) and the representative's compensation is due on homologation of the final account (La. C.C.P. art. 3351).",
+  "url": "https://legis.la.gov/legis/Law.aspx?d=111707"
+ },
+ "smallEstate": {
+  "limit": 200000,
+  "effective": null,
+  "text": "A small succession is that of a Louisiana domiciliary leaving property with a gross value of $200,000 or less at death ($125,000 for ancillary successions of non-domiciliaries), or of any value if death occurred at least 20 years before the affidavit (La. C.C.P. art. 3421, last amended by Acts 2026, No. 293); it may be settled by small succession affidavit without judicial opening for intestate decedents and in the cases of art. 3431 (La. C.C.P. arts. 3431, 3432). Not indexed.",
+  "url": "https://legis.la.gov/legis/Law.aspx?d=111765"
+ },
+ "simplified": {
+  "text": "Small succession affidavit without court proceedings (La. C.C.P. arts. 3431-3432); heirs who accept may also be sent into possession without administration (not read).",
+  "url": "https://legis.la.gov/legis/Law.aspx?d=111767"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: East Baton Rouge Parish",
+  "text": "Succession filing costs are set by each parish clerk of court; the fee schedule was not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Absent a provision in the testament or an agreement with the surviving spouse and heirs, the executor or administrator receives 2.5% of the amount of the inventory; the court may increase it if inadequate; due on homologation of the final account (La. C.C.P. art. 3351).",
+  "url": "https://legis.la.gov/legis/Law.aspx?d=111725"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule for the succession attorney in the articles read; fees are reviewed by the court as reasonable.",
+  "url": null
+ },
+ "uncertain": [
+  "legis.la.gov states laws are updated through the 2025 First Extraordinary Session, but art. 3421 history already lists Acts 2026, No. 293; the effective date of the $200,000 limit is not shown (smallEstate.effective = null).",
+  "Parish filing fees and the attorney fee rule were not read."
+ ]
+}

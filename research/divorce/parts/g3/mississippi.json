@@ -1,0 +1,19 @@
+{
+  "slug": "mississippi", "name": "Mississippi", "abbr": "MS",
+  "filingFee": null, "responseFee": null,
+  "feeScope": "county (Hinds County)",
+  "feeText": "The chancery clerk's filing fee depends on the county; the Administrative Office of Courts guide says to call the Chancery Clerk for the amount and that it should be less than $100.00. The Hinds County figure was not found on an official page.",
+  "feeUrl": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf",
+  "otherFees": [],
+  "waiver": { "name": "Motion to Proceed In Forma Pauperis (AOC sample form)", "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/Motion-to-Proceed-In-Forma-Pauperis.pdf" },
+  "residency": { "text": null, "url": null },
+  "waitingPeriod": { "days": 60, "text": "In an irreconcilable differences divorce the parties must wait 60 days before the divorce can be set for hearing, and the 60 days do not start on the day of filing; either spouse may withdraw consent during the waiting period (Mississippi Administrative Office of Courts guide 'How to File an Irreconcilable Differences Divorce Case in Mississippi').", "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf" },
+  "simplified": { "text": "Irreconcilable differences divorce on a joint complaint signed by both spouses before a notary, with a property settlement agreement (Mississippi AOC guide).", "url": "https://courts.ms.gov/aoc/courtinterpreter/Translated%20Forms/How-to-File-An-Irreconcilable-Differences-Divorce-Case-in-Mississippi.pdf" },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "Mississippi publishes its code only through LexisNexis, which could not be read; the residency requirement (Miss. Code Ann. § 93-5-5) and the statutory basis of the 60-day wait (§ 93-5-2) were not read on an official page. Residency is left null.",
+    "Hinds County chancery clerk divorce filing fee: not found (hindscountyms.com lists no chancery fee schedule in the archived pages checked); filingFee is null.",
+    "The AOC guide was read from the Internet Archive 2026 copy of the official courts.ms.gov PDF. The 'Motion to Proceed In Forma Pauperis' URL is from the archive index; the PDF itself could not be downloaded, so its exact title was not read.",
+    "Parenting class: not researched or verified."
+  ]
+}

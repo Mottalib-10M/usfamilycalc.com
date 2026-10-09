@@ -1,0 +1,45 @@
+{
+ "slug": "minnesota",
+ "name": "Minnesota",
+ "abbr": "MN",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Creditors notified by publication must present claims within 4 months after the date of the court administrator's published notice; known creditors must be served within 3 months after first publication and have the later of 4 months after publication or 1 month after service (Minn. Stat. §§ 524.3-801, 524.3-803).",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-803"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by statement no earlier than 4 months after original appointment, once notice to creditors was first published more than 4 months before (Minn. Stat. § 524.3-1003(a)).",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-1003"
+ },
+ "smallEstate": {
+  "limit": 75000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit with a certified death record if the entire probate estate, less liens and encumbrances, does not exceed $75,000 (Minn. Stat. § 524.3-1201(a)). Not indexed.",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-1201"
+ },
+ "simplified": {
+  "text": "Informal probate and closing by sworn statement 4 months after appointment (Minn. Stat. § 524.3-1003); collection by affidavit up to $75,000 (§ 524.3-1201).",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-1003"
+ },
+ "filingFee": {
+  "amount": 310,
+  "scope": "statewide",
+  "text": "District court first-paper fee of $310 in every civil action or proceeding (Minn. Stat. § 357.021, subd. 2(1)); its application to probate petitions is assumed, not stated.",
+  "url": "https://www.revisor.mn.gov/statutes/cite/357.021"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services, determined by the court considering listed factors (Minn. Stat. § 524.3-719).",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-719"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; the court may review the reasonableness of compensation of attorneys employed by the personal representative (Minn. Stat. § 524.3-721).",
+  "url": "https://www.revisor.mn.gov/statutes/cite/524.3-721"
+ },
+ "uncertain": [
+  "filingFee 310: Minn. Stat. § 357.021 subd. 2(1) sets $310 for 'every civil action or proceeding'; the Minnesota Judicial Branch probate fee chart was not read to confirm it applies to probate filings.",
+  "Effective date of the $75,000 affidavit limit not shown (smallEstate.effective = null)."
+ ]
+}

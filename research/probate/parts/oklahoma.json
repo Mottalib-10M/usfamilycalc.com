@@ -1,0 +1,45 @@
+{
+ "slug": "oklahoma",
+ "name": "Oklahoma",
+ "abbr": "OK",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 2,
+  "text": "Within 2 months after letters, the personal representative files a notice to creditors with a presentment date at least 2 months after filing, published twice and mailed to known creditors (58 O.S. § 331); contract claims not presented by that date are barred forever, with a narrow exception for out-of-state creditors who were not mailed notice (58 O.S. § 333).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os58.rtf"
+ },
+ "earliestClose": {
+  "text": "No fixed minimum read beyond the 2-month presentment period of 58 O.S. § 331; distribution is ordered on final settlement of accounts (58 O.S. § 631). In estates up to $150,000 regular proceedings can be dispensed with (58 O.S. § 241).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os58.rtf"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Ten days after death, successors may collect property by affidavit if the fair market value of the decedent's Oklahoma property passing by will or intestacy, less liens and encumbrances, does not exceed $50,000, no personal representative is pending or appointed, and taxes and debts are paid or barred (58 O.S. § 393). Not indexed.",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os58.rtf"
+ },
+ "simplified": {
+  "text": "Summary administration for estates of $200,000 or less, decedents dead more than 5 years, or non-residents (58 O.S. § 245); dispensing with regular proceedings for estates up to $150,000 (58 O.S. § 241).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os58.rtf"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate filing fees were not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Absent a will provision, commissions on the whole estate accounted for: 5% of the first $1,000, 4% of the next $5,000, 2.5% above $6,000; extraordinary-service allowances may not exceed the commission amount (58 O.S. § 527).",
+  "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os58.rtf"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney schedule was read; attorney fees are allowed by the district court as reasonable.",
+  "url": null
+ },
+ "uncertain": [
+  "Oklahoma Title 58 read from the official complete-title RTF file published by the Oklahoma Legislature (oscn.net unreachable).",
+  "Attorney fee rule and probate filing fee not read."
+ ]
+}

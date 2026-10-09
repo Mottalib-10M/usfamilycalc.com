@@ -1,0 +1,46 @@
+{
+ "slug": "vermont",
+ "name": "Vermont",
+ "abbr": "VT",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Pre-death claims are barred unless presented within 4 months after first publication of notice to creditors under the Rules of Probate Procedure, or within 1 year after death if no notice was published or given (14 V.S.A. § 1203(a)).",
+  "url": "https://legislature.vermont.gov/statutes/section/14/066/01203"
+ },
+ "earliestClose": {
+  "text": "No specific minimum period read; distribution follows the 4-month claims period (14 V.S.A. § 1203); small estate letters are effective for 1 year (14 V.S.A. § 1902(c)).",
+  "url": "https://legislature.vermont.gov/statutes/section/14/066/01203"
+ },
+ "smallEstate": {
+  "limit": 45000,
+  "effective": null,
+  "text": "Small estate proceeding (court petition with inventory, affidavit of debts and bond without surety) when the estate has a fair market value of not more than $45,000 and consists entirely of personal property (a time-share may be included) (14 V.S.A. § 1901); objections within 14 days, otherwise approved without hearing. Vermont has no out-of-court affidavit. Not indexed.",
+  "url": "https://legislature.vermont.gov/statutes/section/14/081/01901"
+ },
+ "simplified": {
+  "text": "Small estate proceeding for personal-property estates up to $45,000 (14 V.S.A. §§ 1901-1902); waiver of administration (14 V.S.A. ch. 80, not read).",
+  "url": "https://legislature.vermont.gov/statutes/section/14/081/01902"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate filing fees are set by 32 V.S.A. § 1434 (Probate cases); the section text could not be extracted from the official page.",
+  "url": "https://legislature.vermont.gov/statutes/section/32/017/01434"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "An executor or administrator is allowed necessary expenses and reasonable fees for services, unless the will provides other compensation (14 V.S.A. § 1065).",
+  "url": "https://legislature.vermont.gov/statutes/section/14/063/01065"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney fees are allowed as reasonable expenses of administration by the Probate Division.",
+  "url": "https://legislature.vermont.gov/statutes/section/14/063/01065"
+ },
+ "uncertain": [
+  "32 V.S.A. § 1434 (probate fees) page loaded but its body text could not be extracted; filingFee.amount = null.",
+  "Effective date of the $45,000 small estate threshold not shown (smallEstate.effective = null).",
+  "attorneyFee: no section expressly addressing estate attorney fees was read."
+ ]
+}

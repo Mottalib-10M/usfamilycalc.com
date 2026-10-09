@@ -1,0 +1,20 @@
+{
+  "slug": "south-carolina", "name": "South Carolina", "abbr": "SC",
+  "filingFee": 150, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Uniform fee of $100 for filing a first complaint or petition in a civil action (S.C. Code § 8-21-310(C)(1)) plus an additional $50 fee (S.C. Code § 14-1-204(B)(1)) = $150.",
+  "feeUrl": "https://www.scstatehouse.gov/code/t08c021.php",
+  "otherFees": [],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "The plaintiff must have resided in South Carolina for one year before filing (or, if the plaintiff is a nonresident, the defendant for one year); if both parties are residents when the action is filed, three months is enough (S.C. Code § 20-3-30).", "url": "https://www.scstatehouse.gov/code/t20c003.php" },
+  "waitingPeriod": { "days": 90, "text": "No reference before two months after filing and no final decree before three months after filing; on the grounds of desertion or one-year separation the hearing and decree may follow the responsive pleadings or default (S.C. Code § 20-3-80).", "url": "https://www.scstatehouse.gov/code/t20c003.php" },
+  "separationRequiredDays": 365,
+  "separationText": "No-fault ground: the spouses have lived separate and apart without cohabitation for one year (S.C. Code § 20-3-10(5)); fault grounds (adultery, desertion for one year, physical cruelty, habitual drunkenness) need no separation.",
+  "simplified": { "text": "No summary dissolution procedure in Title 20, Chapter 3.", "url": null },
+  "parentingClass": { "required": null, "text": null, "url": null },
+  "uncertain": [
+    "waitingPeriod.days 90 stands for the statutory 'three months' after filing (§ 20-3-80); it does not apply to one-year-separation or desertion cases.",
+    "Answer/response fee: § 8-21-310(C)(1) says there is no further fee for other papers in the same action, but no explicit statement about the defendant's answer was read; responseFee left null.",
+    "Fee waiver (in forma pauperis) form and any Family Court parenting-class requirement not verified on sccourts.org."
+  ]
+}

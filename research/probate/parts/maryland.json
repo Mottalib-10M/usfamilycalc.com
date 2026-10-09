@@ -1,0 +1,44 @@
+{
+ "slug": "maryland",
+ "name": "Maryland",
+ "abbr": "MD",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Claims are forever barred unless presented by the earlier of 6 months after the decedent's death or 2 months after the personal representative mails or delivers a notice to the creditor (Md. Code, Est. & Trusts § 8-103(a)).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=8-103&enactments=false"
+ },
+ "earliestClose": {
+  "text": "The first account is due within 9 months after appointment and further accounts every 6 months until the final account (Md. Code, Est. & Trusts § 7-305(a)); claims are barred 6 months after death (§ 8-103).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=7-305&enactments=false"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Small estate administration when the Maryland property subject to administration is worth $50,000 or less at death (fair market value less secured debts), or $100,000 or less when the surviving spouse is the sole legatee or heir (Md. Code, Est. & Trusts § 5-601). Not indexed. Maryland uses a simplified court procedure, not an out-of-court affidavit.",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=5-601&enactments=false"
+ },
+ "simplified": {
+  "text": "Small estate proceedings under Est. & Trusts §§ 5-602 to 5-607 for estates up to $50,000 ($100,000 if the spouse takes all) (§ 5-601).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=5-601&enactments=false"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Register of Wills probate fee by value of the probate estate: under $50,000 $0; $50,000 to under $100,000 $100; to under $500,000 $200; to under $1,000,000 $1,000; to under $2,500,000 $2,000; to under $5,000,000 $5,000; to under $7,500,000 $7,500; to under $10,000,000 $10,000; $10,000,000 and over $10,000 plus 0.02% of the excess (Md. Code, Est. & Trusts § 2-206(b)(2)). The amount is value-based and is computed from the court-fee schedule in fees/maryland.json (filingFee.amount left null to avoid double counting).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=2-206&enactments=false"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Reasonable compensation; commissions allowed by the court may not exceed 9% of property subject to administration up to $20,000, or $1,800 plus 3.6% of the excess over $20,000, unless the will provides more (Md. Code, Est. & Trusts § 7-601).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=7-601&enactments=false"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Attorneys receive fair and reasonable compensation allowed by the court, and the court may not allow aggregate compensation (commissions plus counsel fees) above a fair and reasonable total charge for administering the estate (Md. Code, Est. & Trusts § 7-602).",
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=get&section=7-602&enactments=false"
+ },
+ "uncertain": [
+  "Effective date of the $50,000 / $100,000 thresholds in § 5-601 not shown (smallEstate.effective = null)."
+ ]
+}

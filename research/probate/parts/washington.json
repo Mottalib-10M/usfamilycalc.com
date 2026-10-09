@@ -1,0 +1,44 @@
+{
+ "slug": "washington",
+ "name": "Washington",
+ "abbr": "WA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "If notice is published, claims are barred unless presented within 4 months after first publication (or, for creditors given actual notice, the later of 30 days after notice or 4 months after publication); reasonably ascertainable creditors not given actual notice, and all creditors if no notice was given, have 24 months after death (RCW 11.40.051).",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.40.051"
+ },
+ "earliestClose": {
+  "text": "A personal representative with nonintervention powers closes the estate by filing a declaration of completion once claims are paid or disposed of and administration is complete (RCW 11.68.110); this follows the 4-month claims period of RCW 11.40.051.",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.110"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Forty days after death, a successor may collect personal property by affidavit if the decedent's entire probate estate (excluding the surviving spouse's or domestic partner's community share), less liens and encumbrances, does not exceed $100,000 and no personal representative application is pending (RCW 11.62.010). Not indexed.",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.62.010"
+ },
+ "simplified": {
+  "text": "Affidavit procedure up to $100,000 (RCW 11.62.010); nonintervention probate closed by declaration of completion without court approval (RCW 11.68.110).",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.110"
+ },
+ "filingFee": {
+  "amount": 200,
+  "scope": "statewide",
+  "text": "In probate proceedings the party instituting them pays $200 when filing the first document (RCW 36.18.020(2)(f)); counties may add local surcharges.",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=36.18.020"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Absent a will provision, the personal representative receives compensation the court deems just and reasonable (RCW 11.48.210).",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.48.210"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "An attorney performing services for the estate receives compensation the court deems just and reasonable (RCW 11.48.210); fees paid must be disclosed in the declaration of completion (RCW 11.68.110).",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=11.48.210"
+ },
+ "uncertain": [
+  "Effective date of the $100,000 affidavit limit not shown (smallEstate.effective = null)."
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "missouri", "name": "Missouri", "abbr": "MO",
+  "filingFee": null, "responseFee": null,
+  "feeScope": "county (St. Louis County, 21st Judicial Circuit)",
+  "feeText": "Statewide consolidated court costs for a circuit civil case are $83.50 (Missouri courts Schedule of Consolidated Amount, effective November 1, 2023); local surcharges are added by each circuit, and the total charged for a dissolution petition in St. Louis County was not found on an official page.",
+  "feeUrl": "https://www.courts.mo.gov/courts/ClerkHandbooksP2RulesOnly.nsf/e2aa3309ef5c449186256be20060c329/31f6aa3e2a2d1de986256c240071225b/$FILE/COR%2021.03a%20-%20Schedule%20of%20Cost%20(Trial%20Cost).pdf",
+  "otherFees": [ { "what": "Statewide consolidated amount, circuit civil case (excluding local surcharges), effective 2023-11-01", "amount": 83.50, "url": "https://www.courts.mo.gov/courts/ClerkHandbooksP2RulesOnly.nsf/e2aa3309ef5c449186256be20060c329/31f6aa3e2a2d1de986256c240071225b/$FILE/COR%2021.03a%20-%20Schedule%20of%20Cost%20(Trial%20Cost).pdf" } ],
+  "waiver": { "name": "Request to proceed as a poor person (RSMo § 514.040)", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=514.040" },
+  "residency": { "text": "One party must have been a resident of Missouri, or stationed there in the armed services, for 90 days immediately before the proceeding began (RSMo § 452.305.1(1)).", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.305" },
+  "waitingPeriod": { "days": 30, "text": "The court may enter a judgment of dissolution only if thirty days have elapsed since the petition was filed (RSMo § 452.305.1(1)).", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.305" },
+  "simplified": { "text": "No summary dissolution procedure was found in chapter 452.", "url": null },
+  "parentingClass": { "required": null, "text": "Circuit courts must establish, by local rule, a program of educational sessions for parties to dissolution actions or post-judgment proceedings involving custody or support (RSMo § 452.600); whether attendance is mandatory depends on the circuit's local rule.", "url": "https://revisor.mo.gov/main/OneSection.aspx?section=452.600" },
+  "uncertain": [
+    "St. Louis County (most populous) dissolution filing fee and any answer fee: not found on an official page (stlcountycourts.com archived pages list only administrative orders); filingFee and responseFee are null.",
+    "The $83.50 consolidated amount was read from the Internet Archive 2026 copy of the official courts.mo.gov PDF; it may have been updated after November 1, 2023.",
+    "Waiver: no statewide form title was read; the statute is cited instead.",
+    "Parenting class: the 21st Circuit local rule was not read."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+ "slug": "new-hampshire",
+ "name": "New Hampshire",
+ "abbr": "NH",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "No action may be sustained against an administrator unless the demand was exhibited within 6 months after the original grant of administration (RSA 556:3), and no action may be begun within those first 6 months (RSA 556:1); suits on claims against the deceased must be brought within 1 year (RSA 556:5).",
+  "url": "https://gc.nh.gov/rsa/html/LVI/556/556-mrg.htm"
+ },
+ "earliestClose": {
+  "text": "An administrator may move for summary administration to close the estate not less than 6 months after appointment, stating under oath that no debts or claims remain (RSA 553:33).",
+  "url": "https://gc.nh.gov/rsa/html/LVI/553/553-mrg.htm"
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": "New Hampshire has no small-estate affidavit (the former voluntary administration statute, RSA 553:31, was repealed effective January 1, 2006); smaller estates get relief within administration, e.g. personal bond without sureties up to $25,000 gross and no publication of notice up to $10,000 gross (RSA ch. 553).",
+  "url": "https://gc.nh.gov/rsa/html/LVI/553/553-mrg.htm"
+ },
+ "simplified": {
+  "text": "Waiver of administration (no inventory, bond or accounting) when the sole beneficiary or all beneficiaries/heirs serve as administrators (RSA 553:32); summary administration to close after 6 months (RSA 553:33).",
+  "url": "https://gc.nh.gov/rsa/html/LVI/553/553-mrg.htm"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Circuit Court probate filing fees were not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Not verified: no statutory percentage schedule was found in RSA chapters 553, 554 and 556 as read.",
+  "url": null
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Not verified: no statutory attorney fee schedule was found in the chapters read.",
+  "url": null
+ },
+ "uncertain": [
+  "gc.nh.gov refuses connections from this environment: RSA chapters 553, 554 and 556 were read from Internet Archive copies of the official merged-chapter pages (snapshot dates not captured).",
+  "Probate filing fee and the PR/attorney compensation rule were not read; types 'reasonable' reflect only the absence of a schedule in the chapters read."
+ ]
+}

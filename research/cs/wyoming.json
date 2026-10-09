@@ -23,7 +23,13 @@
     },
     "aboveMax": {
       "method": "formula",
-      "pct": [10.3, 15.3, 18.1, 20.2, 22.2],
+      "pct": [
+        10.3,
+        15.3,
+        18.1,
+        20.2,
+        22.2
+      ],
       "text": "Above $15,000.00 the tables continue: base at $15,000 ($2,157 / $3,171 / $3,698 / $4,130 / $4,543 for 1 / 2 / 3 / 4 / 5+ children) plus 10.3% / 15.3% / 18.1% / 20.2% / 22.2% of anything over $15,000 (W.S. 20-2-304(a)); there is no cap."
     },
     "effective": null,
@@ -33,27 +39,155 @@
   "formula": {
     "text": "Total obligation = base + marginal% x (combined net monthly income - band start), from the table for the number of children (W.S. 20-2-304(a)). The obligor's share is the total times obligor net income / combined net income. If obligor net income minus the self-support reserve (current HHS poverty guideline for one person) is less than that share, support is set at that difference (W.S. 20-2-304(f)).",
     "params": {
-      "bandStarts": [1000, 2000, 3200, 4000, 4500, 8000, 15000],
+      "bandStarts": [
+        1000,
+        2000,
+        3200,
+        4000,
+        4500,
+        8000,
+        15000
+      ],
       "base": {
-        "1": [230.00, 461.00, 737.00, 898.00, 965.00, 1379.00, 2157.00],
-        "2": [351.00, 702.00, 1108.00, 1356.00, 1454.00, 2048.00, 3171.00],
-        "3": [424.00, 848.00, 1334.00, 1626.00, 1740.00, 2412.00, 3698.00],
-        "4": [474.00, 948.00, 1490.00, 1816.00, 1943.00, 2694.00, 4130.00],
-        "5": [521.00, 1042.00, 1639.00, 1997.00, 2137.00, 2964.00, 4543.00]
+        "1": [
+          230.0,
+          461.0,
+          737.0,
+          898.0,
+          965.0,
+          1379.0,
+          2157.0
+        ],
+        "2": [
+          351.0,
+          702.0,
+          1108.0,
+          1356.0,
+          1454.0,
+          2048.0,
+          3171.0
+        ],
+        "3": [
+          424.0,
+          848.0,
+          1334.0,
+          1626.0,
+          1740.0,
+          2412.0,
+          3698.0
+        ],
+        "4": [
+          474.0,
+          948.0,
+          1490.0,
+          1816.0,
+          1943.0,
+          2694.0,
+          4130.0
+        ],
+        "5": [
+          521.0,
+          1042.0,
+          1639.0,
+          1997.0,
+          2137.0,
+          2964.0,
+          4543.0
+        ]
       },
       "marginalPct": {
-        "1": [23.0, 23.0, 20.1, 13.4, 11.8, 11.1, 10.3],
-        "2": [35.1, 33.9, 31.0, 19.6, 17.0, 16.0, 15.3],
-        "3": [42.4, 40.4, 36.5, 22.8, 19.2, 18.4, 18.1],
-        "4": [47.4, 45.2, 40.8, 25.5, 21.5, 20.5, 20.2],
-        "5": [52.1, 49.7, 44.8, 28.0, 23.6, 22.6, 22.2]
+        "1": [
+          23.0,
+          23.0,
+          20.1,
+          13.4,
+          11.8,
+          11.1,
+          10.3
+        ],
+        "2": [
+          35.1,
+          33.9,
+          31.0,
+          19.6,
+          17.0,
+          16.0,
+          15.3
+        ],
+        "3": [
+          42.4,
+          40.4,
+          36.5,
+          22.8,
+          19.2,
+          18.4,
+          18.1
+        ],
+        "4": [
+          47.4,
+          45.2,
+          40.8,
+          25.5,
+          21.5,
+          20.5,
+          20.2
+        ],
+        "5": [
+          52.1,
+          49.7,
+          44.8,
+          28.0,
+          23.6,
+          22.6,
+          22.2
+        ]
       },
       "pctOfIncomeAtBandStart": {
-        "1": [23.0, 23.0, 23.0, 22.5, 21.4, 17.2, 14.4],
-        "2": [35.1, 35.1, 34.6, 33.9, 32.3, 25.6, 21.1],
-        "3": [42.4, 42.4, 41.7, 40.6, 38.7, 30.2, 24.7],
-        "4": [47.4, 47.4, 46.6, 45.4, 43.2, 33.7, 27.5],
-        "5": [52.1, 52.1, 51.2, 49.9, 47.5, 37.0, 30.3]
+        "1": [
+          23.0,
+          23.0,
+          23.0,
+          22.5,
+          21.4,
+          17.2,
+          14.4
+        ],
+        "2": [
+          35.1,
+          35.1,
+          34.6,
+          33.9,
+          32.3,
+          25.6,
+          21.1
+        ],
+        "3": [
+          42.4,
+          42.4,
+          41.7,
+          40.6,
+          38.7,
+          30.2,
+          24.7
+        ],
+        "4": [
+          47.4,
+          47.4,
+          46.6,
+          45.4,
+          43.2,
+          33.7,
+          27.5
+        ],
+        "5": [
+          52.1,
+          52.1,
+          51.2,
+          49.9,
+          47.5,
+          37.0,
+          30.3
+        ]
       },
       "selfSupportReserve": {
         "definition": "current poverty line for one person, HHS poverty guidelines (42 U.S.C. 9902(2)) (W.S. 20-2-304(f))",
@@ -99,24 +233,79 @@
   },
   "testCases": [
     {
-      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 0 },
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
       "expected": 1139.33,
       "what": "payer's (parent A) monthly presumptive support",
       "source": "Computed by hand from W.S. 20-2-304(a)(ii): combined $6,000, band $4,500: $1,454.00 + 17.0% x $1,500 = $1,709.00; parent A share 4000/6000 = 2/3; $1,709.00 x 2/3 = $1,139.33. SSR check: 4,000 - 1,330 = 2,670 > 1,139.33, no adjustment. https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 120
+      },
+      "expected": 866.21,
+      "what": "payer's monthly net obligation under shared responsibility (120 overnights, more than 25% of the year)",
+      "source": "Computed by hand under W.S. 20-2-304(c): $1,709.00 x 150% = $2,563.50; A: 2/3 x $2,563.50 x 245/365 = $1,147.12; B: 1/3 x $2,563.50 x 120/365 = $280.93; difference $866.21 (rounded to the cent). https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 1500,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 170.0,
+      "what": "payer's monthly support set by the self-support reserve",
+      "source": "Computed by hand: combined $4,500: $965.00 for one child; payer share 1/3 = $321.67; $1,500 - $1,330 (2026 HHS poverty line for one person, monthly) = $170 is less, so support is $170 (W.S. 20-2-304(f)). https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 12000,
+        "incomeB": 8000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 1603.2,
+      "what": "payer's monthly support above $15,000 of combined income",
+      "source": "Computed by hand under W.S. 20-2-304(a)(i): $2,157.00 + 10.3% x ($20,000 - $15,000) = $2,672.00; payer share 60% = $1,603.20. https://wyoleg.gov/statutes/compress/title20.pdf"
     }
   ],
   "facts": [
-    { "text": "Wyoming's tables are written in the statute as a base amount plus a marginal percentage per income band, with no income cap: above $15,000 a month a fixed percentage of the excess keeps applying (W.S. 20-2-304(a)).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
-    { "text": "The self-support reserve is indexed: it is the current federal poverty guideline for one person (W.S. 20-2-304(f)).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
-    { "text": "If part of the obligor's social security or veteran's benefit is paid directly to the child's custodian, the whole benefit counts as the obligor's income and the amount paid to the custodian is subtracted from the obligor's share, down to zero (W.S. 20-2-304(e)).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" },
-    { "text": "The Department of Family Services must review the presumptive child support at least every four years (W.S. 20-2-306); the 2021 review noted the current tables are based on 2012 price levels.", "url": "https://childsupport.wyo.gov/wp-content/uploads/2022/02/Wyoming-Child-Support-Guidelines-Study-2021.pdf" },
-    { "text": "A party who refuses the presumptive amount and loses can be ordered to pay the other party's reasonable attorney fees and costs (W.S. 20-2-307(c)).", "url": "https://wyoleg.gov/statutes/compress/title20.pdf" }
+    {
+      "text": "Wyoming's tables are written in the statute as a base amount plus a marginal percentage per income band, with no income cap: above $15,000 a month a fixed percentage of the excess keeps applying (W.S. 20-2-304(a)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "text": "The self-support reserve is indexed: it is the current federal poverty guideline for one person (W.S. 20-2-304(f)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "text": "If part of the obligor's social security or veteran's benefit is paid directly to the child's custodian, the whole benefit counts as the obligor's income and the amount paid to the custodian is subtracted from the obligor's share, down to zero (W.S. 20-2-304(e)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    },
+    {
+      "text": "The Department of Family Services must review the presumptive child support at least every four years (W.S. 20-2-306); the 2021 review noted the current tables are based on 2012 price levels.",
+      "url": "https://childsupport.wyo.gov/wp-content/uploads/2022/02/Wyoming-Child-Support-Guidelines-Study-2021.pdf"
+    },
+    {
+      "text": "A party who refuses the presumptive amount and loses can be ordered to pay the other party's reasonable attorney fees and costs (W.S. 20-2-307(c)).",
+      "url": "https://wyoleg.gov/statutes/compress/title20.pdf"
+    }
   ],
   "uncertain": [
     "Effective date of the current tables not found in the compiled statute PDF (no history notes); the 2021 review says the tables are based on 2012 price levels and were not updated in 2016. effective set to null.",
     "Self-support reserve value $1,330/month is derived from the 2026 HHS poverty guideline ($15,960/yr, aspe.hhs.gov) as W.S. 20-2-304(f) directs; the date from which DFS/courts apply each new guideline was not found.",
     "The brief mentioned 40% / 146 nights for shared custody; the statute's threshold is more than 25% of the year for each parent (thresholdOvernights 92 = 25% of 365 rounded up, as 'more than 25%' means at least 92 nights).",
     "No rule in the statute for combined net income below $1,000; no statutory minimum order.",
-    "Test case computed by hand from the statute, not from the DFS calculator (calculation is server-side)."
+    "Test case computed by hand from the statute, not from the DFS calculator (calculation is server-side).",
+    "The calculator's request mentioned a 40% / 146-night threshold for Wyoming; the statute read on 2026-10-08 (W.S. 20-2-304(c)) says 'more than twenty-five percent (25%) of the year' for each parent, so 92 nights is used.",
+    "Below $1,000 of combined net income the statute gives no line; the model applies the first line's 23.0% / 35.1% / 42.4% / 47.4% / 52.1% (the percentage of income allocated at $1,000) and flags it."
   ]
 }

@@ -1,0 +1,45 @@
+{
+ "slug": "south-dakota",
+ "name": "South Dakota",
+ "abbr": "SD",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "The published notice gives creditors 4 months after first publication; known creditors must be notified and have the later of 4 months after appointment or 60 days after the written notice (SDCL 29A-3-801); all pre-death claims are barred 3 years after death (SDCL 29A-3-803).",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-803"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 4 months after original appointment of a general personal representative (SDCL 29A-3-1003).",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-1003"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect personal property by affidavit if the entire estate, less liens and encumbrances, does not exceed $100,000, no personal representative is pending or appointed, and the decedent owes no Medicaid institutional-care debt to the Department of Social Services (SDCL 29A-3-1201). Not indexed.",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-1201"
+ },
+ "simplified": {
+  "text": "Affidavit collection up to $100,000 (SDCL 29A-3-1201); summary administration proceedings ($25 clerk fee, SDCL 16-2-29(3)(i)); closing by sworn statement 4 months after appointment (SDCL 29A-3-1003).",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-1201"
+ },
+ "filingFee": {
+  "amount": 75,
+  "scope": "statewide",
+  "text": "Clerk of courts fee of $75 for the probate of an estate; $25 for summary or special administration proceedings (SDCL 16-2-29).",
+  "url": "https://sdlegislature.gov/Statutes/16-2-29"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Personal representatives are entitled to reasonable compensation determined from seven listed factors, including time, difficulty, customary local fees and the nature and value of the assets (SDCL 29A-3-719(a)).",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-719"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Attorneys, accountants and other agents of the personal representative are entitled to reasonable compensation under the same factors (SDCL 29A-3-719(a)); reviewable by the court (SDCL 29A-3-721).",
+  "url": "https://sdlegislature.gov/Statutes/29A-3-719"
+ },
+ "uncertain": [
+  "South Dakota statutes read from the official JSON endpoint behind the site (https://sdlegislature.gov/api/Statutes/Statute/<section>).",
+  "Effective date of the $100,000 affidavit limit not extracted (smallEstate.effective = null)."
+ ]
+}

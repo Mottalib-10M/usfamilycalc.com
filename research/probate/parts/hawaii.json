@@ -1,0 +1,46 @@
+{
+ "slug": "hawaii",
+ "name": "Hawaii",
+ "abbr": "HI",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Pre-death claims are barred unless presented by the later of 4 months after first publication of notice to creditors or 60 days after written notice, or within 18 months after death if no notice was published or served (HRS § 560:3-803(a)).",
+  "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0560/HRS_0560-0003-0803.htm"
+ },
+ "earliestClose": {
+  "text": "Not verified: closing by sworn statement under HRS § 560:3-1003 was not read.",
+  "url": null
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "When a decedent leaves property in Hawaii worth no more than $100,000 and no personal representative has been appointed, the circuit court clerk may be authorized to administer the estate as personal representative (HRS § 560:3-1205, as amended by L 2000, c 48). The small-estate affidavit of HRS § 560:3-1201 could not be read.",
+  "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0560/HRS_0560-0003-1205.htm"
+ },
+ "simplified": {
+  "text": "Clerk administration of estates of $100,000 or less (HRS § 560:3-1205); collection by affidavit (HRS § 560:3-1201, not read).",
+  "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0560/HRS_0560-0003-1205.htm"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate filing fees not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services; no percentage schedule (HRS § 560:3-719).",
+  "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0560/HRS_0560-0003-0719.htm"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney schedule in the sections read; attorney compensation is reviewable for reasonableness (HRS § 560:3-721, not read).",
+  "url": null
+ },
+ "uncertain": [
+  "capitol.hawaii.gov returns 403: HRS §§ 560:3-719 (snapshot 2026-01-08), 560:3-803 (2024-03-05) and 560:3-1205 (2025-04-18) were read from Internet Archive copies of the official pages; § 560:3-1201 and § 560:3-1203 had no readable copy.",
+  "smallEstate.limit is the $100,000 clerk-administration threshold of § 560:3-1205; the affidavit limit of § 560:3-1201 is unverified.",
+  "No statutory fee schedule exists in HRS § 560:3-719, so no fee file was written."
+ ]
+}

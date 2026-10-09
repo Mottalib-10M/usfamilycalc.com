@@ -1,0 +1,45 @@
+{
+ "slug": "rhode-island",
+ "name": "Rhode Island",
+ "abbr": "RI",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Claims must be presented (filed with the probate court clerk and copied to the personal representative) within 6 months from the first publication or be forever barred, subject to leave for late claims before distribution for accident, mistake, excusable neglect or lack of adequate notice (R.I. Gen. Laws §§ 33-11-4, 33-11-5).",
+  "url": "https://webserver.rilegislature.gov/Statutes/TITLE33/33-11/33-11-5.htm"
+ },
+ "earliestClose": {
+  "text": "Not verified: distribution follows the 6-month claims period of R.I. Gen. Laws § 33-11-5.",
+  "url": "https://webserver.rilegislature.gov/Statutes/TITLE33/33-11/33-11-5.htm"
+ },
+ "smallEstate": {
+  "limit": 15000,
+  "effective": null,
+  "text": "Voluntary informal administration by verified statement filed with the probate court, 30 days after death, when the estate consists entirely of personal property worth no more than $15,000 excluding tangible personal property (R.I. Gen. Laws § 33-24-1). Not indexed.",
+  "url": "https://webserver.rilegislature.gov/Statutes/TITLE33/33-24/33-24-1.htm"
+ },
+ "simplified": {
+  "text": "Voluntary informal administration of small estates up to $15,000 of personal property (R.I. Gen. Laws § 33-24-1).",
+  "url": "https://webserver.rilegislature.gov/Statutes/TITLE33/33-24/33-24-1.htm"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: Providence (city probate court)",
+  "text": "Rhode Island probate courts are municipal; the Providence probate fee schedule was not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Not verified: no statutory percentage schedule was read for Rhode Island executors.",
+  "url": null
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Not verified: no statutory attorney schedule was read.",
+  "url": null
+ },
+ "uncertain": [
+  "webserver.rilegislature.gov refuses connections from this environment: R.I. Gen. Laws §§ 33-11-4, 33-11-5 and 33-24-1 were read from Internet Archive copies of the official pages (snapshot dates not captured).",
+  "Compensation rules, earliest closing and probate fees were not read."
+ ]
+}

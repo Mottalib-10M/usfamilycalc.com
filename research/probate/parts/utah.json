@@ -1,0 +1,45 @@
+{
+ "slug": "utah",
+ "name": "Utah",
+ "abbr": "UT",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 3,
+  "text": "A published notice requires claims within 3 months after first publication; creditors given written notice have the later of 90 days from publication or 60 days from mailing (Utah Code § 75-3-801); pre-death claims are barred at the earlier of 1 year after death or those notice periods (Utah Code § 75-3-803, effective May 7, 2025).",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S803.html"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 4 months after original appointment of a general personal representative, after the claims period has expired (Utah Code § 75-3-1003).",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S1003.html"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": "2025-05-07",
+  "text": "Thirty days after death, successors may collect personal property by affidavit if the entire estate subject to administration, less liens and encumbrances, does not exceed $100,000 and no personal representative is pending or appointed (Utah Code § 75-3-1201, version effective May 7, 2025); vehicles and water shares have separate rules. Not indexed.",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S1201.html"
+ },
+ "simplified": {
+  "text": "Affidavit collection up to $100,000 (Utah Code § 75-3-1201); informal probate and closing by sworn statement 4 months after appointment (§ 75-3-1003).",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S1201.html"
+ },
+ "filingFee": {
+  "amount": 375,
+  "scope": "statewide",
+  "text": "$375 for filing any civil complaint or petition invoking the jurisdiction of a court of record not governed by another subsection (Utah Code § 78A-2-301(1)(a), version effective May 6, 2026, superseded January 1, 2027); a separate fee for filing an estate accounting runs from $15 (estate up to $50,000) to $175 (over $168,000) (§ 78A-2-301(1)(r)).",
+  "url": "https://le.utah.gov/xcode/Title78A/Chapter2/78A-2-S301.html"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation; if a petition seeks approval and no interested person objects, the compensation sought is deemed reasonable; on objection the court decides based on the quality, quantity and value of services (Utah Code § 75-3-718).",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S718.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Attorneys are entitled to reasonable compensation, determined by the court if an interested person objects (Utah Code § 75-3-718); reviewable under § 75-3-720.",
+  "url": "https://le.utah.gov/xcode/Title75/Chapter3/75-3-S718.html"
+ },
+ "uncertain": [
+  "Utah texts read from the current version files referenced by le.utah.gov section pages (script research/scripts/probate_utah.py).",
+  "filingFee 375: probate petitions are assumed to fall under the general petition fee of § 78A-2-301(1)(a) (no probate-specific petition fee found); the version read is superseded on January 1, 2027."
+ ]
+}

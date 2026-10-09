@@ -52,6 +52,7 @@ export default function ProbateCalculator({ states, state = 'california', lockSt
           <tr><td className="py-1.5 pr-3 text-navy-700">Small-estate limit</td><td className="tabular-nums py-1.5 text-right text-navy-900">{S.smallEstate.limit != null ? exact(S.smallEstate.limit) : 'no fixed limit'}</td></tr>
         </tbody></table>
         {r.belowSmallEstate && <p className="mt-2 text-xs font-medium text-navy-800">This value is within the {S.name} small-estate limit: the heirs may be able to collect assets by affidavit or a summary procedure, without full probate.</p>}
+        {(S.fees?.schedules ?? []).filter((x) => x.otherBase).map((x) => <p key={x.who} className="mt-2 text-xs text-navy-700">{x.who}: charged on other assets than the probate estate, not included above.</p>)}
         {!statutory && <p className="mt-2 text-xs text-navy-700">{S.name} does not set a percentage schedule: the personal representative and the attorney are paid a reasonable fee approved by the court, often hourly.</p>}
         <p className="mt-3 text-xs text-navy-600">Estimate under the {S.name} probate statutes. Publication, bond, appraisal, extraordinary services and the estate's own taxes are extra. <a className="underline" href={methodHref}>How this is calculated</a>.</p>
         <div className="mt-3 flex flex-wrap gap-2 text-sm">

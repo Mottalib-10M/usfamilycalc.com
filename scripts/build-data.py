@@ -404,8 +404,15 @@ def build_probate():
     jdump(out, os.path.join(D, 'probate.json'))
     fo = os.path.join(D, 'probate-fees')
     os.makedirs(fo, exist_ok=True)
+    # Schedules that apply to other assets than the probate estate (Ohio: real property not sold;
+    # Oregon: non-probate property): shown, never added to the estate's total.
+    OTHER_BASE = {'ohio': ['R.C. 2113.35(B)'], 'oregon': ['116.173(3)(b)']}
     for f in glob.glob(os.path.join(R, 'probate', 'fees', '*.json')):
-        jdump(jload(f), os.path.join(fo, os.path.basename(f)))
+        x = jload(f)
+        for sc in x.get('schedules', []):
+            if any(k in sc.get('who', '') for k in OTHER_BASE.get(x['slug'], [])):
+                sc['otherBase'] = True
+        jdump(x, os.path.join(fo, os.path.basename(f)))
     print('probate:', len(out), 'states,', len(glob.glob(os.path.join(fo, '*.json'))), 'fee schedules')
 
 

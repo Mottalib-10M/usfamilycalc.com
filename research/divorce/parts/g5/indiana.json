@@ -1,0 +1,22 @@
+{
+  "slug": "indiana", "name": "Indiana", "abbr": "IN",
+  "filingFee": 157, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Total civil filing fees $157: civil filing fee $100 (IC 33-37-4-4(a)) + document storage $5 + automated record keeping $20 + public defense administration $5 + judicial insurance adjustment $1 + judicial salaries $20 + court administration $5 + pro bono services $1 (Indiana Trial Court Fee Manual, current through the 2026 legislative session). $185 where the clerk also collects the $28 sheriff's service fee.",
+  "feeUrl": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf",
+  "otherFees": [
+    { "what": "Alternative dispute resolution fee on a petition for dissolution, in counties with an approved ADR plan (IC 33-23-6-1)", "amount": 20, "url": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf" },
+    { "what": "Sheriff's service of process fee, where collected by the clerk", "amount": 28, "url": "https://www.in.gov/courts/iocs/files/courtmgmt-pubs-trial-court-fee-manual.pdf" }
+  ],
+  "waiver": { "name": null, "url": null },
+  "residency": { "text": "At least one party must have been an Indiana resident (or stationed at a US military installation in Indiana) for six months, and a resident of the county of filing for three months, immediately before filing (IC 31-15-2-6).", "url": "https://iga.in.gov/ic/2025/Title_31.html" },
+  "waitingPeriod": { "days": 60, "text": "The final hearing may not be held earlier than 60 days after the petition is filed (IC 31-15-2-10); a summary decree also requires at least 60 days (IC 31-15-2-13).", "url": "https://iga.in.gov/ic/2025/Title_31.html" },
+  "simplified": { "text": "Summary dissolution decree without a final hearing at least 60 days after filing, on verified pleadings signed by both parties with a written waiver of final hearing and either a statement of no contested issues or a written settlement agreement (IC 31-15-2-13).", "url": "https://iga.in.gov/ic/2025/Title_31.html" },
+  "parentingClass": { "required": null, "text": "No statewide parenting-class requirement found in IC Title 31 (2025 edition); requirements are set by county local rules.", "url": null },
+  "uncertain": [
+    "IC Title 31 (2025 edition) read from the Internet Archive copy (2025-11-13) of https://iga.in.gov/ic/2025/Title_31.html; iga.in.gov serves a script-only page to automated clients.",
+    "No answer/response fee is listed in the Indiana Trial Court Fee Manual civil table; responseFee left null.",
+    "Fee waiver (indigency) form not verified on in.gov/courts.",
+    "County local rules requiring parenting classes (e.g. Marion County) not checked."
+  ]
+}

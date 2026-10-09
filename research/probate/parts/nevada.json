@@ -1,0 +1,46 @@
+{
+ "slug": "nevada",
+ "name": "Nevada",
+ "abbr": "NV",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Claims must be filed with the clerk within 90 days after the first publication of notice to creditors (or after mailing, for creditors who must be mailed); mailed creditors have the later of 30 days after mailing or 90 days after publication; the period is 60 days in summary administration (NRS 147.040).",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-147.html#NRS147Sec040"
+ },
+ "earliestClose": {
+  "text": "Not read: the final account follows the 90-day claims period (NRS 147.040); attorney compensation may be allowed after the creditor period (NRS 150.065).",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-150.html#NRS150Sec065"
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": "Nevada small estate affidavit and set-aside procedures are in NRS chapter 146 and summary administration in NRS chapter 145; neither could be read.",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-146.html"
+ },
+ "simplified": {
+  "text": "Summary administration (NRS chapter 145) shortens the claims period to 60 days (NRS 147.040(4)); thresholds not read.",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-147.html#NRS147Sec040"
+ },
+ "filingFee": {
+  "amount": 72,
+  "scope": "statewide",
+  "text": "County clerk fee of $72 on filing a petition for letters testamentary, letters of administration or setting aside an estate without administration when the stated estate value exceeds $2,500 (no fee at $2,500 or less) (NRS 19.013); additional court fees under NRS 19.0302 and local fees may apply (not read).",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-019.html#NRS019Sec013"
+ },
+ "personalRepFee": {
+  "type": "statutory-schedule",
+  "text": "Absent a will provision, fees on the whole estate accounted for, less liens and encumbrances: 4% of the first $15,000, 3% of the next $85,000, 2% above $100,000; the court may allow more if insufficient (NRS 150.020).",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-150.html#NRS150Sec020"
+ },
+ "attorneyFee": {
+  "type": "statutory-schedule",
+  "text": "Attorneys receive reasonable compensation based on hourly rate, estate value, agreement or a court-approved method; if based on estate value, the court allows 4% of the first $100,000, 3% of the next $100,000, 2% of the next $800,000, 1% of the next $9,000,000, 0.5% of the next $15,000,000 and a reasonable amount above $25,000,000, with a signed written agreement required (NRS 150.060).",
+  "url": "https://www.leg.state.nv.us/NRS/NRS-150.html#NRS150Sec060"
+ },
+ "uncertain": [
+  "leg.state.nv.us returns 403: NRS chapters 150, 147 and 19 were read from Internet Archive copies of the official pages; chapters 145 and 146 (summary administration, small estate affidavit) had no readable copy, so smallEstate.limit = null.",
+  "earliestClose not verified.",
+  "creditorClaims.months = null because the period is 90 days (NRS 147.040)."
+ ]
+}

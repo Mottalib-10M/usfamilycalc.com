@@ -30,7 +30,18 @@
     "url": "https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf"
   },
   "percent": null,
-  "formula": null,
+  "formula": {
+    "text": "Parameters of 15 V.S.A. §§ 656-657 and the OCS shared custody worksheet: shared custody when each parent keeps the children overnight 30% or more of a calendar year, total support obligation increased by 50%, each parent's obligation = income share x total minus the time credit, offset (§ 657(a)); 25% to under 30%: shared costs table adopted by rule (§ 657(b)); never more than the sole-custody guideline amount (§ 657(c)); the payer keeps the self-support reserve (§ 656(c)); if the shared result is negative, the parent with more time pays the absolute value or $50.00, whichever is greater (OCS Shared Custody Worksheet Instructions, Line 18).",
+    "params": {
+      "sharedPctOfYear": 30,
+      "partialSharedPctOfYear": 25,
+      "sharedMultiplier": 1.5,
+      "sharedCappedAtSole": true,
+      "reverseMinimum": 50.0,
+      "reverseMinimumUrl": "https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/CS-Shared-Custody.pdf"
+    },
+    "url": "https://legislature.vermont.gov/statutes/section/15/011/00657"
+  },
   "shared": {
     "method": "cross-credit",
     "thresholdOvernights": 110,
@@ -64,18 +75,71 @@
   },
   "testCases": [
     {
-      "inputs": { "incomeA": 4000, "incomeB": 2000, "children": 2, "overnightsA": 0 },
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 0
+      },
       "expected": 1178.0,
       "what": "payer's (parent A) monthly share of the guideline amount; incomes are monthly available (after-tax) incomes",
       "source": "Computed by hand from the Intact Family Expenditures Table (R 1/2/2024): bracket 5,975.00-6,024.99, two children = $1,767; parent A share 4000/6000; $1,767 x 2/3 = $1,178.00; self-support check 4,000 - 1,178 = 2,822 > 1,596. https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf"
+    },
+    {
+      "inputs": {
+        "incomeA": 4000,
+        "incomeB": 2000,
+        "children": 2,
+        "overnightsA": 120
+      },
+      "expected": 895.6,
+      "what": "payer's monthly obligation in shared custody (120 overnights, over 30% of the year)",
+      "source": "Computed by hand under 15 V.S.A. § 657(a) and the OCS shared worksheet (Lines 8, 11, 13): $1,767 x 1.5 = $2,650.50; payer's share 2/3 = $1,767.00 minus the time credit 120/365 x $2,650.50 = $871.40; $895.60, under the sole-custody amount $1,178 (§ 657(c)). https://legislature.vermont.gov/statutes/section/15/011/00657"
+    },
+    {
+      "inputs": {
+        "incomeA": 2000,
+        "incomeB": 3000,
+        "children": 1,
+        "overnightsA": 0
+      },
+      "expected": 404.0,
+      "what": "payer's monthly obligation limited by the self-support reserve",
+      "source": "Computed by hand: combined $5,000, bracket 4,975.00-5,024.99, one child = $1,071; payer share 40% = $428.40; paying it would leave less than the $1,596 reserve, so the share is presumed to be $2,000 - $1,596 = $404 (15 V.S.A. § 656(c)). https://legislature.vermont.gov/statutes/section/15/011/00656"
+    },
+    {
+      "inputs": {
+        "incomeA": 2900,
+        "incomeB": 3100,
+        "children": 2,
+        "overnightsA": 182
+      },
+      "expected": 50.0,
+      "what": "amount owed the other way when the shared result is negative ($50 minimum)",
+      "source": "Computed by hand: $1,767 x 1.5 = $2,650.50; parent A's share 2,900/6,000 x $2,650.50 = $1,281.08 minus 182/365 x $2,650.50 = $1,321.62 gives -$40.54, so parent B pays the greater of $40.54 and $50.00 (OCS Shared Custody Worksheet Instructions, Line 18). https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/CS-Shared-Custody.pdf"
     }
   ],
   "facts": [
-    { "text": "Vermont's guideline must reflect what parents living together in Vermont ordinarily spend on their children, so that children keep the same share of parental income after separation (15 V.S.A. § 654).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00654" },
-    { "text": "The guideline tables were updated on January 2, 2024; the next review is scheduled for completion by January 2, 2028 (Office of Child Support).", "url": "https://dcf.vermont.gov/ocs/parents/calculator" },
-    { "text": "The self-support reserve is indexed at 120% of the federal poverty guideline for one person: $1,596 per month from February 2, 2026 (15 V.S.A. § 653(7); OCS).", "url": "https://dcf.vermont.gov/ocs/parents/calculator" },
-    { "text": "Vermont computes taxes differently for each parent: head of household with the children's exemptions for the custodial parent, single with one exemption for the noncustodial parent (15 V.S.A. § 653(1)(D)).", "url": "https://legislature.vermont.gov/statutes/section/15/011/00653" },
-    { "text": "Effective July 1, 2026, OCS sets the Presumed Income at $99,513.00 a year.", "url": "https://dcf.vermont.gov/ocs/parents/calculator" }
+    {
+      "text": "Vermont's guideline must reflect what parents living together in Vermont ordinarily spend on their children, so that children keep the same share of parental income after separation (15 V.S.A. § 654).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00654"
+    },
+    {
+      "text": "The guideline tables were updated on January 2, 2024; the next review is scheduled for completion by January 2, 2028 (Office of Child Support).",
+      "url": "https://dcf.vermont.gov/ocs/parents/calculator"
+    },
+    {
+      "text": "The self-support reserve is indexed at 120% of the federal poverty guideline for one person: $1,596 per month from February 2, 2026 (15 V.S.A. § 653(7); OCS).",
+      "url": "https://dcf.vermont.gov/ocs/parents/calculator"
+    },
+    {
+      "text": "Vermont computes taxes differently for each parent: head of household with the children's exemptions for the custodial parent, single with one exemption for the noncustodial parent (15 V.S.A. § 653(1)(D)).",
+      "url": "https://legislature.vermont.gov/statutes/section/15/011/00653"
+    },
+    {
+      "text": "Effective July 1, 2026, OCS sets the Presumed Income at $99,513.00 a year.",
+      "url": "https://dcf.vermont.gov/ocs/parents/calculator"
+    }
   ],
   "uncertain": [
     "The official PDF server (outside.vermont.gov) returns HTTP 403 to scripts and to WebFetch; the table was read from the Wayback Machine copy of the official URL dated 2025-10-31 (https://web.archive.org/web/20251031191954id_/https://outside.vermont.gov/dept/DCF/Shared%20Documents/OCS/Calculator/Intact.pdf). Its revision label (R 1/2/2024) matches the OCS page (read 2026-10-08) stating the tables were updated January 2, 2024 and next due by January 2, 2028.",
@@ -83,6 +147,8 @@
     "thresholdOvernights 110 = 30% of 365 (109.5) rounded up, as the brief states; the statute speaks of 30% of a calendar year.",
     "Schedule incomes are available (after-tax) incomes; a calculator needs the OCS gross-to-after-tax conversion tables (Sole-Split.pdf, Shared.pdf, R 1/2/2024), which were downloaded to research/raw/ but not parsed.",
     "The meaning of 'Presumed Income' ($99,513.00) is not defined on the OCS page; the statutory basis was not checked.",
-    "Test case computed by hand from the table, not from the OCS calculator."
+    "Test case computed by hand from the table, not from the OCS calculator.",
+    "The $50.00 minimum when the shared result is negative comes from the OCS Shared Custody Worksheet Instructions (R 03/01/96, Line 18), linked from the OCS calculator page; read from research/raw/vt-CS-Shared-Custody.txt (the outside.vermont.gov server blocks scripts).",
+    "The partial shared costs table for 25% to under 30% (§ 657(b)) is not in the 2024 Shared.pdf either (it ends at page 16 with the tax conversion table): between 92 and 109 overnights the calculator keeps the sole-custody amount and says so."
   ]
 }

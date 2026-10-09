@@ -1,0 +1,46 @@
+{
+ "slug": "kentucky",
+ "name": "Kentucky",
+ "abbr": "KY",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "Pre-death claims are barred unless presented within 6 months after appointment of the personal representative, or within 2 years after death if no personal representative is appointed (KRS 396.011(1), effective June 29, 2021).",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=51057"
+ },
+ "earliestClose": {
+  "text": "A personal representative may distribute the estate 6 months after qualification (KRS 395.190); an informal final settlement may be filed any time after 6 months from appointment (KRS 395.605(3)).",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=36333"
+ },
+ "smallEstate": {
+  "limit": 30000,
+  "effective": "2026-07-15",
+  "text": "No affidavit procedure: the District Court may dispense with administration and transfer the assets when the surviving spouse's (or children's) $30,000 exemption under KRS 391.030, alone or with preferred claims paid by them, equals or exceeds the distributable assets (KRS 395.455, as amended effective July 15, 2026; KRS 391.030(1)(c)).",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=57684"
+ },
+ "simplified": {
+  "text": "Order dispensing with administration (KRS 395.455); informal final settlement without hearing when the fiduciary is sole beneficiary or all beneficiaries sign verified waivers, after 6 months (KRS 395.605).",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=57686"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate court costs are fixed by statute and Supreme Court rule; the amount was not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Compensation of an executor or administrator may not exceed 5% of the value of the decedent's personal estate plus 5% of the income collected; the court may allow fair and reasonable extra compensation for extraordinary services, real estate or death-tax work on non-probate property (KRS 395.150).",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=36328"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney fee schedule; the attorney's fee must be disclosed in settlements (KRS 395.605(1)(e)) and is allowed by the court as reasonable.",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=57686"
+ },
+ "uncertain": [
+  "Kentucky has no general small-estate affidavit; smallEstate.limit = 30000 is the spouse/children exemption that triggers dispensing with administration (KRS 391.030, 395.455), not a general cap.",
+  "Kentucky probate filing fee not read; filingFee.amount = null.",
+  "attorneyFee: no section expressly stating 'reasonable' was read."
+ ]
+}

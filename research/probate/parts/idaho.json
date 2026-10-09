@@ -1,0 +1,45 @@
+{
+ "slug": "idaho",
+ "name": "Idaho",
+ "abbr": "ID",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "A published notice requires claims within 4 months after first publication; creditors given written notice have the later of that period or 60 days after mailing (Idaho Code § 15-3-801); pre-death claims are barred at the earlier of 3 years after death or those periods (Idaho Code § 15-3-803).",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title15/T15CH3/SECT15-3-801/"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 6 months after original appointment, after the claims period has expired (Idaho Code § 15-3-1003).",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title15/T15CH3/SECT15-3-1003/"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": null,
+  "text": "Thirty days after death, successors may collect property by affidavit if the fair market value of the probate estate, less liens and encumbrances, does not exceed $100,000 and no personal representative or summary administration is pending or granted (Idaho Code § 15-3-1201). Not indexed.",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title15/T15CH3/SECT15-3-1201/"
+ },
+ "simplified": {
+  "text": "Affidavit collection up to $100,000 (Idaho Code § 15-3-1201); summary administration and informal probate under Idaho Code title 15, chapter 3.",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title15/T15CH3/SECT15-3-1201/"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "District court probate filing fees are set in Idaho Code title 31, chapter 32; the probate-specific amount was not located in § 31-3201 as read.",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title31/T31CH32/SECT31-3201/"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation for services (Idaho Code § 15-3-719).",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/Title15/T15CH3/SECT15-3-719/"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney compensation is reviewable for reasonableness (Idaho Code § 15-3-721, UPC equivalent, not read).",
+  "url": null
+ },
+ "uncertain": [
+  "legislature.idaho.gov refuses connections from this environment: Idaho Code §§ 15-3-801 (snapshot 2026-02-19), 15-3-803 (2026-06-09), 15-3-1201 (2026-09-28), 15-3-719 (2026-05-15), 15-3-1003 (2026-05-13) and 31-3201 (2026-05-21) were read from Internet Archive copies of the official pages.",
+  "Probate filing fee not found (filingFee.amount = null); effective date of the $100,000 affidavit limit not shown."
+ ]
+}

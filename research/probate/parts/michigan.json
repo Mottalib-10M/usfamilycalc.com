@@ -1,0 +1,46 @@
+{
+ "slug": "michigan",
+ "name": "Michigan",
+ "abbr": "MI",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Pre-death claims are barred unless presented within 4 months after publication of notice to creditors; known creditors have the later of 1 month after notice is sent or 4 months after publication; if notice requirements were not met, 3 years after death (MCL 700.3801, 700.3803(1)).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3803"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, the personal representative may close the estate by sworn closing statement no earlier than 5 months after original appointment, after the claims period has expired (MCL 700.3954).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3954"
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": "2024-02-21",
+  "text": "Twenty-eight days after death, successors may collect property by sworn statement if the estate has no real property and its value, net of liens, does not exceed $50,000 adjusted annually for the cost of living (MCL 700.3983, as amended by 2024 PA 1, effective February 21, 2024); from January 1, 2024 the $50,000 is multiplied by the 2023 cost-of-living factor published by the Department of Treasury for the year of death and rounded to the nearest $1,000 (MCL 700.1210(2),(3)).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3983"
+ },
+ "simplified": {
+  "text": "Court-ordered small estate assignment after payment of funeral and burial expenses when the remaining gross estate is $50,000 or less (as adjusted), filing fee $25 (MCL 700.3982, 600.880(2)); closing by sworn statement 5 months after appointment (MCL 700.3954).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3982"
+ },
+ "filingFee": {
+  "amount": 150,
+  "scope": "statewide",
+  "text": "$150.00 filing fee to commence a probate proceeding (MCL 600.880(1)), plus an inventory fee on the date-of-death value of estate assets due before closing: e.g. $25 for $1,000 to under $3,000, $68.75 + 0.5% over $10,000 up to $25,000, $237.50 + 0.25% over $50,000 up to $100,000, $362.50 + 0.125% over $100,000 up to $500,000, then $62.50 per additional $100,000 (or larger fraction) above $500,000 and $31.25 per $100,000 above $1,000,000 (MCL 600.871).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-871"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A personal representative is entitled to reasonable compensation and may pay it periodically as earned without prior court approval; attorneys serving as personal representative must keep time records (MCL 700.3719).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3719"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney fees are a reasonable administration expense and must be disclosed in the closing account (MCL 700.3954(1)(d)).",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-700-3954"
+ },
+ "uncertain": [
+  "legislature.mi.gov returns 403: MCL 700.3801 (snapshot 2025-09-06), 700.3803 (2025-12-31), 700.3983 (2025-12-22), 700.3982 (2025-07-13), 700.3719 (2025-07-10), 700.1210 (2025-11-22), 700.3954 (2025-09-08), 600.871 (2025-11-06) and 600.880 (2025-07-20) were read from Internet Archive copies of the official pages.",
+  "The 2026 cost-of-living-adjusted small estate amount (Department of Treasury, MCL 700.1210) could not be read (michigan.gov returns 403); smallEstate.limit = null (statutory base $50,000).",
+  "Attorney fee rule: Michigan Court Rule MCR 5.313 not read."
+ ]
+}

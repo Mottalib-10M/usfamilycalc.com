@@ -1,0 +1,45 @@
+{
+ "slug": "indiana",
+ "name": "Indiana",
+ "abbr": "IN",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": null,
+  "url": null
+ },
+ "earliestClose": {
+  "text": null,
+  "url": null
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": null,
+  "url": null
+ },
+ "simplified": {
+  "text": null,
+  "url": null
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": null,
+  "text": null,
+  "url": null
+ },
+ "personalRepFee": {
+  "type": null,
+  "text": null,
+  "url": null
+ },
+ "attorneyFee": {
+  "type": null,
+  "text": null,
+  "url": null
+ },
+ "uncertain": [
+  "iga.in.gov is a JavaScript application whose content endpoints were not reachable from this environment and no static archive copy exists; Indiana Code §§ 29-1-14-1 (claims), 29-1-8-1 (small estate affidavit), 29-1-10-13 (compensation) and probate fees are unverified.",
+  "All fields left null rather than filled from unofficial sources; to be completed from the official code text."
+ ]
+}

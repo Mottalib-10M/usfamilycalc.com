@@ -17,9 +17,9 @@ export interface PBState {
 export interface Tier { upTo: number | null; pct: number }
 /** A dollar schedule: flat fee for a base up to `upTo`, then (optionally) a percentage of the base. */
 export interface FixedBracket { upTo: number | null; fee?: number | null; pct?: number | null; pctOf?: 'total' | 'excess'; over?: number | null }
-export interface FeeSchedule { who: string; tiers?: Tier[] | null; fixed?: FixedBracket[] | null; text: string; url: string; capNote?: string | null }
+export interface FeeSchedule { who: string; /** Applies to other assets than the probate estate: shown, not added to the total. */ otherBase?: boolean; tiers?: Tier[] | null; fixed?: FixedBracket[] | null; text: string; url: string; capNote?: string | null }
 export interface PBFees { slug: string; base: string; schedules: FeeSchedule[]; testCases?: unknown[] }
-export interface PBLine { label: string; value: number; who: string }
+export interface PBLine { label: string; value: number; who: string; otherBase?: boolean }
 export interface PBResult { total: number; lines: PBLine[]; filingFee: number | null; claimMonths: number | null; belowSmallEstate: boolean }
 
 export function tiered(base: number, tiers: Tier[]): number {
@@ -49,7 +49,7 @@ export function scheduleFee(base: number, s: FeeSchedule): number {
   return 0;
 }
 export function probateFees(d: PBState, f: PBFees | null, estate: number): PBResult {
-  const lines: PBLine[] = (f?.schedules ?? []).map((s) => ({ label: s.who, value: scheduleFee(Math.max(0, estate), s), who: s.who }));
+  const lines: PBLine[] = (f?.schedules ?? []).filter((s) => !s.otherBase).map((s) => ({ label: s.who, value: scheduleFee(Math.max(0, estate), s), who: s.who }));
   const filing = d.filingFee?.amount ?? null;
   const total = lines.reduce((a, l) => a + l.value, 0) + (filing ?? 0);
   return { total, lines, filingFee: filing, claimMonths: d.creditorClaims.months, belowSmallEstate: d.smallEstate.limit != null && estate <= d.smallEstate.limit };

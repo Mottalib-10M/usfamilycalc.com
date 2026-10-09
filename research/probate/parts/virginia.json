@@ -1,0 +1,45 @@
+{
+ "slug": "virginia",
+ "name": "Virginia",
+ "abbr": "VA",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "Virginia has no short non-claim bar for creditors; debts are proven before the commissioner of accounts (Va. Code § 64.2-550), and after 6 months from qualification the court may order creditors to show cause against distribution, after which distributees may be protected (Va. Code § 64.2-556).",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter5/section64.2-556/"
+ },
+ "earliestClose": {
+  "text": "A show-cause order against distribution can be sought only after 6 months from the personal representative's qualification (Va. Code § 64.2-556(A)).",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter5/section64.2-556/"
+ },
+ "smallEstate": {
+  "limit": 75000,
+  "effective": null,
+  "text": "Small asset affidavit by all known successors at least 60 days after death when the decedent's entire personal probate estate does not exceed $75,000, no personal representative application is pending or granted, and any will was probated (Va. Code § 64.2-601, as shown on 10/8/2026). Not indexed.",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter6/section64.2-601/"
+ },
+ "simplified": {
+  "text": "Virginia Small Estate Act: affidavit transfers of small assets (Va. Code § 64.2-601) and other transfers without qualification (Va. Code ch. 6).",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter6/section64.2-601/"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Clerk's fee for qualifying a personal representative: no fee for estates of $5,000 or less, $20 up to $50,000, $25 up to $100,000, $30 above $100,000, plus recording fees (Va. Code § 17.1-275(A)(3)); probate tax on larger estates is separate (not read).",
+  "url": "https://law.lis.virginia.gov/vacode/title17.1/chapter2/section17.1-275/"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "The commissioner of accounts allows the fiduciary reasonable expenses and reasonable compensation in the form of a commission on receipts or otherwise (Va. Code § 64.2-1208(A)); no statutory percentage.",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter12/section64.2-1208/"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory schedule; attorney fees are allowed as reasonable expenses by the commissioner of accounts (Va. Code § 64.2-1208).",
+  "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter12/section64.2-1208/"
+ },
+ "uncertain": [
+  "Virginia probate tax (Va. Code § 58.1-1711 et seq.) was not read and is not included in filingFee.",
+  "Effective date of the $75,000 small asset limit not shown (smallEstate.effective = null)."
+ ]
+}

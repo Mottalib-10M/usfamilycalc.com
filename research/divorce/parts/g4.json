@@ -70,7 +70,7 @@
    }
   ],
   "waiver": {
-   "name": "Application for deferral or waiver of court fees and costs (A.R.S. 12-302; forms adopted by the Supreme Court)",
+   "name": "Apply for Deferral or Waiver (Maricopa County Clerk electronic application; deferral or waiver of court fees under A.R.S. 12-302)",
    "url": "https://www.clerkofcourt.maricopa.gov/services/deferral-and-waiver-of-court-fees"
   },
   "residency": {
@@ -94,7 +94,7 @@
   "uncertain": [
    "Maricopa fee page was read from the Internet Archive copy (2026-08-13) of the official URL; the clerk's site returns 403 to automated clients.",
    "Eligibility conditions for a summary consent decree (Ariz. R. Fam. Law P.) were not read from the official rule text; only the fee and its existence are verified.",
-   "Exact title of the Supreme Court's fee deferral/waiver form not read (Maricopa waiver page blocked and not reachable in the archive at the time)."
+   "Maricopa waiver page read from the Internet Archive copy (2026-09-23) of the official URL; it notes that full waivers are rarely granted at the start of a case (deferral is the usual outcome)."
   ]
  },
  {
@@ -227,6 +227,220 @@
    "nebraskalegislature.gov statutes (42-349, 42-363, 43-2928) were read from Internet Archive copies (Nov. 2025) of the official URLs.",
    "No answer/response fee appears in the district court schedule; responseFee null.",
    "The Supreme Court's no-children self-help guide still says to bring $163, older than the 07-01-2026 schedule total of $200."
+  ]
+ },
+ {
+  "slug": "nevada",
+  "name": "Nevada",
+  "abbr": "NV",
+  "filingFee": 299,
+  "responseFee": 217,
+  "feeScope": "county (Clark County, Eighth Judicial District Court)",
+  "feeText": "Eighth Judicial District Court official fees (effective October 1, 2019, still the schedule linked by the court's Family Law Self-Help Center): Divorce Complaint or Joint Petition for Divorce $299.00; Answer or First Appearance in Divorce, Annulment or Separate Maintenance Action $217.00 (components under NRS 19.013, 19.020, 19.030, 19.0302, 19.0303, 19.031, 19.0312, 19.0313, 19.0315, 19.033 and 440.605 plus Clark County Code).",
+  "feeUrl": "http://www.clarkcountycourts.us/res/clerk/civil-criminal-library/legal-forms/Filing-Fee-List.pdf",
+  "otherFees": [],
+  "waiver": {
+   "name": "Application to Waive Filing Fee and Order to Waive Filing Fee (Standard, or Joint Petition for Divorce version; each spouse completes an application)",
+   "url": "https://www.familylawselfhelpcenter.org/self-help/getting-started/court-basics/filing-fees-and-waivers"
+  },
+  "residency": {
+   "text": "Unless the cause accrued in the county while both spouses were domiciled there, the plaintiff or defendant must have resided in Nevada for at least 6 weeks before filing (NRS 125.020); residence must be corroborated by affidavit (NRS 125.123, referenced in NRS 125.182).",
+   "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+  },
+  "waitingPeriod": {
+   "days": 0,
+   "text": "No statutory waiting period between filing and decree appears in NRS chapter 125.",
+   "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+  },
+  "simplified": {
+   "text": "Summary proceeding for divorce by joint petition (NRS 125.181-125.184): jurisdiction met, separated 1 year or incompatible, no minor children or an agreement on custody and support, no community property or an executed division agreement, spousal support waived or agreed, and waiver of notice of entry, appeal, findings and new trial.",
+   "url": "https://www.leg.state.nv.us/NRS/NRS-125.html"
+  },
+  "parentingClass": {
+   "required": false,
+   "text": "Clark County Family Court may require separating parents to attend a seminar for separating parents (\"COPE\" class); it is ordered case by case, not required by statute.",
+   "url": "https://www.familylawselfhelpcenter.org/self-help/divorce/for-parents-mandatory-mediation-and-mandatory-co-parenting-cope-class"
+  },
+  "uncertain": [
+   "NRS chapter 125 read from the Internet Archive 2026 copy of the official leg.state.nv.us URL.",
+   "Clark County fee list is dated effective October 1, 2019; no later schedule was found, but 2026 amounts were not confirmed by the clerk.",
+   "waitingPeriod 0 is based on the absence of a waiting-period provision in NRS chapter 125, not on an explicit statement."
+  ]
+ },
+ {
+  "slug": "new-hampshire",
+  "name": "New Hampshire",
+  "abbr": "NH",
+  "filingFee": 280,
+  "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Circuit Court Family Division (schedule dated 07/01/2025): Original Entry of All Divorce Matters without Minor Children, including cross-petitions, $280.00; with Minor Children or Parenting Matters $282.00.",
+  "feeUrl": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf",
+  "otherFees": [
+   {
+    "what": "Original entry of divorce with minor children",
+    "amount": 282,
+    "url": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf"
+   },
+   {
+    "what": "Petition to change court order without full agreement, or petition for contempt",
+    "amount": 225,
+    "url": "https://www.courts.nh.gov/sites/g/files/ehbemt471/files/documents/2021-06/filing_fees.pdf"
+   }
+  ],
+  "waiver": {
+   "name": "Motion to Reduce or Eliminate Filing Fees and/or Costs, with Financial Affidavit (Circuit Court - Family Division, paper filing)",
+   "url": "https://www.courts.nh.gov/resources/forms-and-fees/how-request-pay-lower-fee-or-file-free"
+  },
+  "residency": {
+   "text": "Jurisdiction exists if both spouses were domiciled in New Hampshire when the action began, or the petitioner was domiciled there and the respondent was served in the state, or the petitioner was domiciled there for one year before filing (RSA 458:5).",
+   "url": "https://www.gencourt.state.nh.us/rsa/html/XLIII/458/458-5.htm"
+  },
+  "waitingPeriod": {
+   "days": 0,
+   "text": "No statutory waiting period found; after a joint petition is filed or the individual petition is served, the court schedules a First Appearance session.",
+   "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+  },
+  "simplified": {
+   "text": "Spouses may file a joint petition for divorce in the Circuit Court Family Division (no service needed); irreconcilable differences is a no-fault ground (RSA 458:7-a).",
+   "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+  },
+  "parentingClass": {
+   "required": true,
+   "text": "To complete a divorce with minor children, the parties must file a certificate of completion of the Child Impact Program (NH Judicial Branch, divorce with minor children).",
+   "url": "https://www.courts.nh.gov/our-courts/circuit-court/family-division/divorceparenting/divorce-minor-children"
+  },
+  "uncertain": [
+   "RSA 458:5 and 458:7-a read from Internet Archive copies (Nov.-Dec. 2022) of the official gencourt.state.nh.us URLs; the legislature's current host (gc.nh.gov) did not respond. Current text not confirmed.",
+   "courts.nh.gov pages and the fee PDF read from Internet Archive copies (2025-2026) of the official URLs; courts.nh.gov returns 403 to automated clients.",
+   "No separate answer/appearance fee found in the Family Division schedule (cross-petitions pay the original entry fee); responseFee null.",
+   "waitingPeriod 0 is based on the absence of a statutory waiting period, not on an explicit statement."
+  ]
+ },
+ {
+  "slug": "new-mexico",
+  "name": "New Mexico",
+  "abbr": "NM",
+  "filingFee": null,
+  "responseFee": null,
+  "feeScope": "county (Bernalillo County, Second Judicial District)",
+  "feeText": "Filing fee for a divorce case in the Second Judicial District Court not verified; the statewide instructions say a filing fee is paid to the clerk when the case is opened (Form 4A-100 NMRA).",
+  "feeUrl": null,
+  "otherFees": [],
+  "waiver": {
+   "name": "Application for free process (Form 4-222 NMRA)",
+   "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-100.pdf"
+  },
+  "residency": {
+   "text": "At least one party must have resided in New Mexico for at least six months immediately before filing and have a New Mexico domicile (NMSA 1978, § 40-4-5, as stated in the Supreme Court-approved petition Form 4A-102 NMRA).",
+   "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-102.pdf"
+  },
+  "waitingPeriod": {
+   "days": 0,
+   "text": "No statutory waiting period was found; the respondent has 30 days after service to respond (Form 4A-100 NMRA).",
+   "url": "https://nmcourts.gov/wp-content/uploads/sites/62/2023/11/4A-100.pdf"
+  },
+  "simplified": {
+   "text": "No summary dissolution statute; Supreme Court-approved Domestic Relations Forms (4A series) can be used for uncontested divorces.",
+   "url": "https://nmcourts.gov/forms-files/divorce/"
+  },
+  "parentingClass": {
+   "required": null,
+   "text": "Not verified.",
+   "url": null
+  },
+  "uncertain": [
+   "Second Judicial District (Bernalillo) fee schedule page redirects automated clients away and its archived copy has no content; filing fee left null.",
+   "NMSA 40-4-5 is published officially only on nmonesource.com (JavaScript app, not readable); residency taken from the Supreme Court-approved petition form 4A-102 NMRA that cites it.",
+   "Parenting class requirement (Second Judicial District local programs) not verified.",
+   "waitingPeriod 0 is based on the absence of a waiting period in the official instructions, not on an explicit statement."
+  ]
+ },
+ {
+  "slug": "north-dakota",
+  "name": "North Dakota",
+  "abbr": "ND",
+  "filingFee": 160,
+  "responseFee": 100,
+  "feeScope": "statewide",
+  "feeText": "For filing a petition for dissolution of marriage, annulment, or separation, $160 (N.D.C.C. § 27-05.2-03(1)(b)); answering a summons and complaint in district court $100 (§ 27-05.2-03(1)(c)).",
+  "feeUrl": "https://ndlegis.gov/cencode/t27c05-2.pdf",
+  "otherFees": [
+   {
+    "what": "Motion to modify spousal support, property division, child support, parental rights, residential responsibility or parenting time",
+    "amount": 160,
+    "url": "https://ndlegis.gov/cencode/t27c05-2.pdf"
+   }
+  ],
+  "waiver": {
+   "name": "Filing Fee Waiver Request forms (N.D. Legal Self Help Center, \"All Filing Fee Waiver Instructions and Forms\")",
+   "url": "https://www.ndcourts.gov/legal-self-help/fee-waiver"
+  },
+  "residency": {
+   "text": "The plaintiff must have been a good-faith resident of North Dakota for six months before starting the action, or for the six months immediately before the decree is entered (N.D.C.C. § 14-05-17).",
+   "url": "https://ndlegis.gov/cencode/t14c05.pdf"
+  },
+  "waitingPeriod": {
+   "days": 0,
+   "text": "No statutory waiting period; an uncontested divorce filed with complete agreement paperwork is generally granted quickly and without a hearing (N.D. Legal Self Help Center). Rule 8.3 case management deadlines apply to contested cases (informational statement due 37 days after service).",
+   "url": "https://www.ndcourts.gov/legal-self-help/divorce"
+  },
+  "simplified": {
+   "text": "Uncontested divorce: spouses who agree in writing on everything file the complete settlement paperwork together (N.D. Legal Self Help Center).",
+   "url": "https://www.ndcourts.gov/legal-self-help/divorce"
+  },
+  "parentingClass": {
+   "required": null,
+   "text": "Under N.D.R.Ct. 8.3 the scheduling order may set dates for the spouses to complete parent education or divorce education; no statewide requirement was verified.",
+   "url": "https://www.ndcourts.gov/legal-self-help/divorce/steps-you-must-take-before-the-court-can-grant-a-divorce"
+  },
+  "uncertain": [
+   "ndcourts.gov self-help pages read from Internet Archive copies (March-October 2026) of the official URLs.",
+   "waitingPeriod 0 is based on the absence of a waiting period in chapter 14-05 and the self-help guidance, not on an explicit statement."
+  ]
+ },
+ {
+  "slug": "oklahoma",
+  "name": "Oklahoma",
+  "abbr": "OK",
+  "filingFee": 236,
+  "responseFee": null,
+  "feeScope": "statewide (statutory components; county may add up to $10)",
+  "feeText": "Flat fee for actions for divorce $183.00 (28 O.S. § 152(A)(1)) plus statutory add-ons in the same section: $6 Law Library Fund (B), $25 Court Information System (C), $10 OCASA (D), $2 judicial complaints/interpreters (E) and $10 records preservation until Nov. 1, 2027 (G) = $236; a county may add up to $10 for courthouse security (F).",
+  "feeUrl": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf",
+  "otherFees": [
+   {
+    "what": "Ancillary proceeding to modify or vacate a divorce decree providing for custody or support (base fee, 28 O.S. § 152(A)(2))",
+    "amount": 43,
+    "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf"
+   }
+  ],
+  "waiver": {
+   "name": "Affidavit in forma pauperis (28 O.S. § 152(H))",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os28.rtf"
+  },
+  "residency": {
+   "text": "The petitioner or respondent must have been an actual resident, in good faith, of Oklahoma (or of a military post in Oklahoma) for six months immediately before filing (43 O.S. § 102).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  "waitingPeriod": {
+   "days": 90,
+   "text": "Where minor children are involved, no final divorce order for at least 90 days from filing, waivable for good cause without objection (43 O.S. § 107.1(A)); no statutory wait applies when there are no minor children.",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  "simplified": {
+   "text": "No summary dissolution procedure in Title 43.",
+   "url": null
+  },
+  "parentingClass": {
+   "required": true,
+   "text": "In incompatibility divorces filed on or after November 1, 2014 involving a child under 18, the adult parties shall attend an educational program on the impact of divorce on children (43 O.S. § 107.2(B)); in other cases the court may require it (§ 107.2(A)).",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os43.rtf"
+  },
+  "uncertain": [
+   "Total of $236 is computed from the components of 28 O.S. § 152 (read from the legislature's complete-title RTF); it was not confirmed against an Oklahoma County Court Clerk fee schedule (oscn.net refused connections). Other statutes may add fees.",
+   "No answer/response fee appears in 28 O.S. § 152; responseFee null.",
+   "waitingPeriod.days = 90 applies only when minor children are involved."
   ]
  }
 ]

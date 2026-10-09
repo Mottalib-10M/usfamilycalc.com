@@ -1,0 +1,45 @@
+{
+ "slug": "illinois",
+ "name": "Illinois",
+ "abbr": "IL",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 6,
+  "text": "The representative publishes notice once a week for 3 weeks and mails it to known creditors; the claim date must be at least 6 months after first publication or 3 months after mailing, whichever is later (755 ILCS 5/18-3); claims not filed by that date are barred, and all claims are barred 2 years after death in any event (755 ILCS 5/18-12).",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K18-3"
+ },
+ "earliestClose": {
+  "text": "An independent representative may seek discharge by verified report stating that the 755 ILCS 5/18-3 notice was published and every claim is allowed, disallowed or barred (755 ILCS 5/28-11), so closing comes after the 6-month claims date.",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K28-11"
+ },
+ "smallEstate": {
+  "limit": 100000,
+  "effective": "2015-01-01",
+  "text": "Small estate affidavit (no court filing) when the gross value of the decedent's entire personal estate, including property passing by will or intestacy, does not exceed $100,000 (755 ILCS 5/25-1, as amended by P.A. 98-836, eff. January 1, 2015). Not indexed.",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K25-1"
+ },
+ "simplified": {
+  "text": "Small estate affidavit for personal estates up to $100,000 (755 ILCS 5/25-1); independent administration without court supervision, closed by verified report (755 ILCS 5/28-11).",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K28-11"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "county: Cook",
+  "text": "Probate filing fees are set by each circuit clerk under the Clerks of Courts Act; the Cook County Clerk of the Circuit Court probate fee schedule was not found on its website.",
+  "url": "https://www.cookcountyclerkofcourt.org/divisions/probate-division"
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A representative is entitled to reasonable compensation for services (755 ILCS 5/27-1).",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K27-1"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "The attorney for a representative is entitled to reasonable compensation for services (755 ILCS 5/27-2(a)).",
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=075500050K27-2"
+ },
+ "uncertain": [
+  "ilga.gov refuses connections from this environment and WebFetch: 755 ILCS 5/18-3 (snapshot 2025-03-12), 18-12 (2025-05-02), 27-1 (2025-05-06), 27-2 (2025-05-08), 28-11 (2025-04-03) and the full Probate Act (2025-06-21, used for 25-1) were read from Internet Archive copies of the official ilga.gov pages; any amendment after mid-2025 (in particular to the $100,000 small estate affidavit limit of 5/25-1) could not be checked and must be verified.",
+  "Cook County probate filing fee not found; filingFee.amount = null."
+ ]
+}

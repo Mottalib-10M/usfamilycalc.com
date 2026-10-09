@@ -1,0 +1,46 @@
+{
+ "slug": "wisconsin",
+ "name": "Wisconsin",
+ "abbr": "WI",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": "When administration is applied for, the court or probate registrar sets a claims deadline not less than 3 nor more than 4 months from the date of the order (Wis. Stat. § 859.01); claims not filed by that date are barred (Wis. Stat. § 859.02).",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/859/01"
+ },
+ "earliestClose": {
+  "text": "Not verified: informal estates close by sworn statement (Wis. Stat. § 865.16, not read) after the 3-4 month claims deadline of § 859.01.",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/859/01"
+ },
+ "smallEstate": {
+  "limit": 50000,
+  "effective": null,
+  "text": "Transfer by affidavit when the decedent's property subject to administration in Wisconsin does not exceed $50,000 in gross value, by an heir, trustee of the decedent's revocable trust, named personal representative or former guardian (Wis. Stat. § 867.03(1g)). Not indexed.",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/867/03"
+ },
+ "simplified": {
+  "text": "Summary settlement when the estate does not exceed allowances and preferred claims, or $50,000 with a surviving spouse/domestic partner or minor children (Wis. Stat. § 867.01); summary assignment up to $50,000 subject to creditors (Wis. Stat. § 867.02); informal administration (ch. 865).",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/867/02"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate fees are set by Wis. Stat. § 814.66 (not read).",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/814/IV/66"
+ },
+ "personalRepFee": {
+  "type": "percent",
+  "text": "Subject to court approval, commissions of 2% of the inventory value of property accounted for, less mortgages or liens, plus net principal gains, or another rate agreed in writing with the decedent or majority beneficiaries, plus reasonable sums for unusual difficulty or extraordinary services (Wis. Stat. § 857.05(2)).",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/857/05"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "No statutory attorney schedule; a personal representative who also serves as estate attorney receives either executor commissions or attorney fees as the court allows (Wis. Stat. § 857.05(3)).",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/857/05"
+ },
+ "uncertain": [
+  "docs.legis.wisconsin.gov refuses connections from this environment: Wis. Stat. ch. 859 (snapshot 2025-12-14), ch. 857 (2025-08-07), ch. 865 (2026-02-18), ch. 867 (2026-10-05) and § 867.03 (2026-06-02) were read from Internet Archive copies of the official pages.",
+  "creditorClaims.months = null because the court sets a deadline of 3 to 4 months (§ 859.01).",
+  "Wis. Stat. § 814.66 (probate fees) not read."
+ ]
+}

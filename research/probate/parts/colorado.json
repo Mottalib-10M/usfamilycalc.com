@@ -1,0 +1,46 @@
+{
+ "slug": "colorado",
+ "name": "Colorado",
+ "abbr": "CO",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "The published notice sets a claims date not earlier than 4 months after first publication (or 1 year after death if earlier) (C.R.S. 15-12-801); claims are barred after that date, after the date in a written notice, and in all cases 1 year after death (C.R.S. 15-12-803(1)).",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "earliestClose": {
+  "text": "Outside supervised administration, an estate may be closed by verified statement no earlier than 6 months after original appointment or 1 year after death, whichever occurs first (C.R.S. 15-12-1003(1)).",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "smallEstate": {
+  "limit": 88000,
+  "effective": "2026-01-01",
+  "text": "Ten days after death, successors may collect property by affidavit if the decedent's property subject to will or intestacy, less liens and encumbrances, does not exceed twice the exempt-property amount of C.R.S. 15-11-403 as adjusted by C.R.S. 15-10-112 (C.R.S. 15-12-1201(1)(a)). The $30,000 exempt amount is increased by the CPI-U change since 2010, rounded down to $1,000: for deaths in 2026, 30,000 x (321.943 / 218.056 - 1) = 14,292.70, rounded down to 14,000, so $44,000 exempt property and an affidavit limit of $88,000 (computed).",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "simplified": {
+  "text": "Affidavit collection (C.R.S. 15-12-1201); summary administration when the estate does not exceed fiduciary property, allowances, administration, funeral and last-illness expenses (C.R.S. 15-12-1203); closing by sworn statement (C.R.S. 15-12-1003).",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate filing fees are set in C.R.S. Title 13 (not read).",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "A fiduciary and its lawyer are entitled to reasonable compensation (C.R.S. 15-10-602(1)), judged under the factors of C.R.S. 15-10-603; the former UPC § 3-719 (C.R.S. 15-12-719) was repealed in 2011.",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "The fiduciary's lawyer is entitled to reasonable compensation (C.R.S. 15-10-602(1)); no method of charging is presumed unreasonable (C.R.S. 15-10-603(2)).",
+  "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf"
+ },
+ "uncertain": [
+  "Colorado Revised Statutes 2024 Title 15 PDF read from the Internet Archive copy (2026-07-15) of the official content.leg.colorado.gov file (official server unreachable; 2025 edition not archived); 2025-2026 amendments not checked.",
+  "smallEstate.limit 88000 is computed from C.R.S. 15-10-112 and BLS CPI-U annual averages (2010 = 218.056, 2025 = 321.943, BLS API series CUUR0000SA0); verify against the amount printed on Colorado Judicial form JDF 999.",
+  "Probate filing fee not read (filingFee.amount = null)."
+ ]
+}

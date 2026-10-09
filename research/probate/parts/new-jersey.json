@@ -1,0 +1,45 @@
+{
+ "slug": "new-jersey",
+ "name": "New Jersey",
+ "abbr": "NJ",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": null,
+  "url": null
+ },
+ "earliestClose": {
+  "text": null,
+  "url": null
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": null,
+  "url": null
+ },
+ "simplified": {
+  "text": "County Surrogates issue surviving-spouse and next-of-kin small estate affidavits (Essex County Surrogate: starting rate $65.00 each); statutory limits (N.J.S.A. 3B:10-3, 3B:10-4) not verified.",
+  "url": "https://essexsurrogate.com/wills-estates/"
+ },
+ "filingFee": {
+  "amount": 100,
+  "scope": "county: Essex",
+  "text": "Essex County Surrogate's Court: probate of a will of 2 pages or less $100.00, each additional page $5.00; first short certificate free, each additional $5.00; administration application $125.00. (Bergen, the most populous county, publishes no fee list on its website.)",
+  "url": "https://essexsurrogate.com/wills-estates/"
+ },
+ "personalRepFee": {
+  "type": null,
+  "text": "Not verified: New Jersey sets statutory corpus and income commissions (N.J.S.A. 3B:18-13, 3B:18-14), but the official statute text could not be read, so no schedule or fee file is given.",
+  "url": null
+ },
+ "attorneyFee": {
+  "type": null,
+  "text": null,
+  "url": null
+ },
+ "uncertain": [
+  "The New Jersey Legislature statute servers (lis.njleg.state.nj.us, pub.njleg.gov) refuse connections from this environment and WebFetch, njcourts.gov returns 403, and no Internet Archive copy of the relevant sections could be located; creditor period (N.J.S.A. 3B:22-4), small estate affidavit limits (N.J.S.A. 3B:10-3/3B:10-4), commissions (N.J.S.A. 3B:18-13/14) and surrogate fees (N.J.S.A. 22A:2-51) are unverified.",
+  "Filing fee taken from the Essex County Surrogate's own website (essexsurrogate.com, a county court office site, not a .gov domain); Bergen County's surrogate page lists no fees."
+ ]
+}

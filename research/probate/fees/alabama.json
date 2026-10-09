@@ -1,0 +1,42 @@
+{
+ "slug": "alabama",
+ "base": "Two separate bases: value of all property received and under the personal representative's possession and control, and all disbursements (Ala. Code § 43-2-848(a)).",
+ "schedules": [
+  {
+   "who": "Personal representative on property received (Ala. Code § 43-2-848(a)) (maximum)",
+   "tiers": [
+    {
+     "upTo": null,
+     "pct": 2.5
+    }
+   ],
+   "fixed": null,
+   "text": "Reasonable compensation not exceeding 2.5% of the value of all property received and under the personal representative's control (Ala. Code § 43-2-848(a)).",
+   "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-848",
+   "capNote": "Cap on reasonable compensation; extraordinary services extra (§ 43-2-848(b))."
+  },
+  {
+   "who": "Personal representative on disbursements (Ala. Code § 43-2-848(a)) (maximum)",
+   "tiers": [
+    {
+     "upTo": null,
+     "pct": 2.5
+    }
+   ],
+   "fixed": null,
+   "text": "Plus not exceeding 2.5% of all disbursements (Ala. Code § 43-2-848(a)).",
+   "url": "https://alison.legislature.state.al.us/code-of-alabama?section=43-2-848",
+   "capNote": "Applied to disbursements, a separate base."
+  }
+ ],
+ "testCases": [
+  {
+   "estate": 200000,
+   "expected": {
+    "Personal representative on property received (Ala. Code § 43-2-848(a)) (maximum)": 5000,
+    "Personal representative on disbursements (Ala. Code § 43-2-848(a)) (maximum)": 5000
+   },
+   "source": "computed by hand: 2.5% of 200,000 received and 2.5% of 200,000 disbursed"
+  }
+ ]
+}

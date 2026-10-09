@@ -1,0 +1,23 @@
+{
+  "slug": "wisconsin", "name": "Wisconsin", "abbr": "WI",
+  "filingFee": 184.50, "responseFee": null,
+  "feeScope": "statewide",
+  "feeText": "Commencing a family action (divorce, annulment, legal separation) with no request for support or maintenance: $184.50 ($75 filing fee, $68 CSS, $21.50 JINFO, $20 family court counseling services fee) (Wis. Stat. § 814.61(1)(a)-(b)); $194.50 with a request for support or maintenance (extra $10 under § 814.61(13)). Wisconsin Circuit Court Fee Tables updated November 14, 2024.",
+  "feeUrl": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf",
+  "otherFees": [
+    { "what": "Family action with a request for support or maintenance (§ 814.61(1)(b), (13))", "amount": 194.50, "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf" },
+    { "what": "E-filing fee per party when the case is electronically filed (§ 758.19(4m), 801.18(7))", "amount": 35, "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf" },
+    { "what": "Post-judgment motion in a family action (§ 814.61(7)(a))", "amount": 30, "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf" }
+  ],
+  "waiver": { "name": "Petition for waiver of fees and costs (Wis. Stat. § 814.29(1))", "url": "https://www.wicourts.gov/courts/circuit/docs/fees.pdf" },
+  "residency": { "text": "One party must have been a bona fide resident of Wisconsin for at least 6 months and of the county of filing for at least 30 days before commencing a divorce (Wis. Stat. § 767.301).", "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/301" },
+  "waitingPeriod": { "days": 120, "text": "A divorce may not be brought to final hearing or trial until 120 days after service of the summons and petition on the respondent, or 120 days after filing a joint petition, unless the court orders an immediate hearing for an emergency (Wis. Stat. § 767.335).", "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/335" },
+  "simplified": { "text": "No summary dissolution procedure; spouses may file a joint petition, which starts the 120-day waiting period on the filing date (Wis. Stat. § 767.335(1)).", "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/iv/335" },
+  "parentingClass": { "required": false, "text": "No statewide mandate in statute: in an action affecting the family with a minor child, the court may order the parties to attend a program (up to 4 hours) on the effects of dissolution on children (Wis. Stat. § 767.401(1)); counties may require it by local rule.", "url": "https://docs.legis.wisconsin.gov/statutes/statutes/767/v/401" },
+  "uncertain": [
+    "docs.legis.wisconsin.gov refused connections on 2026-10-08; §§ 767.301 and 767.335 were read from the Internet Archive copy (2023-10-02) of /statutes/statutes/767/iv and § 767.401 from the 2026-06-11 copy of /767/v. Most populous county (Milwaukee) local rules not checked.",
+    "Fee table read from the Internet Archive copy (2026-07-01) of wicourts.gov/courts/circuit/docs/fees.pdf (direct access HTTP 403); table dated November 14, 2024 — a 2026 update was not found.",
+    "No answer/response fee appears in the family section of the fee table; responseFee left null.",
+    "Exact Wisconsin fee-waiver form number not verified; the statute (§ 814.29(1)) is cited."
+  ]
+}

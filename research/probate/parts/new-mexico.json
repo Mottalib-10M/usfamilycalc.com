@@ -1,0 +1,45 @@
+{
+ "slug": "new-mexico",
+ "name": "New Mexico",
+ "abbr": "NM",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": null,
+  "text": null,
+  "url": null
+ },
+ "earliestClose": {
+  "text": null,
+  "url": null
+ },
+ "smallEstate": {
+  "limit": null,
+  "effective": null,
+  "text": null,
+  "url": null
+ },
+ "simplified": {
+  "text": null,
+  "url": null
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": null,
+  "text": null,
+  "url": null
+ },
+ "personalRepFee": {
+  "type": null,
+  "text": null,
+  "url": null
+ },
+ "attorneyFee": {
+  "type": null,
+  "text": null,
+  "url": null
+ },
+ "uncertain": [
+  "nmonesource.com (official NMSA) returns 403 and its section pages could not be located in the Internet Archive; NMSA 1978 §§ 45-3-801/803 (claims), 45-3-1201 (affidavit), 45-3-719 (compensation) are unverified.",
+  "All fields left null rather than filled from unofficial sources; to be completed from the official code text."
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "slug": "kansas",
+ "name": "Kansas",
+ "abbr": "KS",
+ "verified": "2026-10-08",
+ "creditorClaims": {
+  "months": 4,
+  "text": "Demands are forever barred unless presented within the later of 4 months from first publication of notice to creditors or, for known or reasonably ascertainable creditors, 30 days after actual notice; creditors have no claim unless a probate or administration petition is filed within 6 months after death (K.S.A. 59-2239(1)).",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_022_0039.html"
+ },
+ "earliestClose": {
+  "text": "No fixed minimum period read; the estate is closed by final settlement hearing and decree assigning the estate (K.S.A. 59-2249) after the 4-month claims period of K.S.A. 59-2239.",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_022_0049.html"
+ },
+ "smallEstate": {
+  "limit": 75000,
+  "effective": null,
+  "text": "Personal property transferable to the estate may be delivered to a successor on affidavit, without letters, if the total probate assets do not exceed $75,000 (K.S.A. 59-1507b(a)). Not indexed.",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_015_0007b.html"
+ },
+ "simplified": {
+  "text": "Administration under the Kansas simplified estates act, with the court choosing simplified or supervised administration based on estate size, kinship, solvency and cost (K.S.A. 59-3202); Kansas informal administration act (K.S.A. 59-3301 et seq.).",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_032_0002.html"
+ },
+ "filingFee": {
+  "amount": null,
+  "scope": "statewide",
+  "text": "Probate docket fees are set by statute (K.S.A. 60-2001 and related sections); the amount was not read.",
+  "url": null
+ },
+ "personalRepFee": {
+  "type": "reasonable",
+  "text": "Every fiduciary is allowed necessary expenses and compensation for services, and for its attorneys, that is just and reasonable; allowances may be requested during administration (K.S.A. 59-1717).",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_017_0017.html"
+ },
+ "attorneyFee": {
+  "type": "reasonable",
+  "text": "Attorneys' compensation must be just and reasonable and is allowed by the court (K.S.A. 59-1717).",
+  "url": "https://www.ksrevisor.gov/statutes/chapters/ch59/059_017_0017.html"
+ },
+ "uncertain": [
+  "K.S.A. 59-1507b was last amended by L. 2024, ch. 35 (July 1); the date the $75,000 figure took effect is not shown, smallEstate.effective = null.",
+  "Kansas probate docket fee not read; filingFee.amount = null."
+ ]
+}
