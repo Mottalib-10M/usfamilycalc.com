@@ -13,8 +13,10 @@ const { text, lang, id, sentences = 1, class: cls = '' } = Astro.props;
 const parts = text.split(/(?<=[.!?])\s+(?=\p{Lu})/u);
 const head = parts.slice(0, sentences).join(' ').trim();
 const rest = parts.slice(sentences).join(' ').trim();
+// A visible sentence longer than three desktop lines is held to three lines on every screen (first screen, 2026-10-11).
+const long = rest && head.length > 450;
 ---
-<div class={`clamp ${cls}`}>
+<div class={`clamp${long ? ' clamp-long' : ''} ${cls}`}>
   {rest && <input type="checkbox" id={id} class="clamp-toggle" />}
   <p class="text-navy-800">{head}{rest && <span class="clamp-rest"> {rest}</span>}</p>
   {rest && <label for={id} class="clamp-more">{t(lang).readMore}</label>}

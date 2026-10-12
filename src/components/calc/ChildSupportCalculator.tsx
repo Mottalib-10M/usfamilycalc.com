@@ -4,7 +4,8 @@
  * the other states' files are loaded on demand when picked (one small chunk each), so the page does not
  * ship 51 schedules. First render = build defaults (RECETTE §17.5); the shared link is applied in useEffect.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { StickyKey, useBelow } from './StickyKey';
 import NumberField from '../ui/NumberField';
 import SelectField from '../ui/SelectField';
 import Toggle from '../ui/Toggle';
@@ -74,8 +75,10 @@ export default function ChildSupportCalculator({ states, initial, lockState = fa
     ? `${data.name}: shared-parenting formula from ${shared.thresholdOvernights} overnights a year.`
     : shared?.method === 'percent-reduction' && shared.reductionTable?.length ? `${data.name}: reduction from ${shared.reductionTable[0][0]} overnights a year.` : 'Overnights the children spend with the paying parent.';
   const notes = r.notes.map((c) => noteText(data, c)).filter(Boolean) as string[];
+  const card = useRef<HTMLDivElement>(null);
+  const below = useBelow(card);
   return (
-    <div className="rechner rounded-xl border border-navy-200 bg-white p-4 sm:p-6">
+    <div className="rechner grid gap-6 rounded-xl border border-navy-200 bg-white p-4 sm:p-6 lg:grid-cols-2 lg:items-start">
       <form className="grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
         {lockState
           ? <div className="grid grid-rows-subgrid row-span-3 content-start gap-y-0"><span className="mb-1 block text-sm font-medium text-navy-700">State</span><p className="flex h-12 items-center rounded-lg border border-navy-200 bg-navy-50 px-4 font-semibold text-navy-900">{data.name}</p><span className="mt-1 text-xs text-navy-500">{data.modelName}</span></div>
@@ -85,10 +88,10 @@ export default function ChildSupportCalculator({ states, initial, lockState = fa
         <NumberField id={`${p}-other`} label="Other parent, monthly income" value={other} onChange={setOther} unit="$" max={1_000_000} help="Same definition of income, for the parent the children live with most." />
         <NumberField id={`${p}-nights`} label="Overnights a year with the paying parent" value={nights} onChange={setNights} unit="nights" max={365} help={nightsHelp} />
         <NumberField id={`${p}-care`} label="Work-related child care, monthly" value={childcare} onChange={setChildcare} unit="$" max={50_000} help={data.addOns.childcare ? 'Added to the obligation and shared by income.' : `${data.name}: handled outside the basic formula.`} />
-        <NumberField id={`${p}-health`} label="Children’s health insurance, monthly" value={health} onChange={setHealth} unit="$" max={20_000} help={data.addOns.health ? 'The children’s part of the premium only.' : `${data.name}: ordered separately from the basic amount.`} />
+        <NumberField id={`${p}-health`} label="Children’s health insurance, monthly" value={health} onChange={setHealth} unit="$" max={20_000} help={data.addOns.health ? 'The children’s part of the premium only.' : `${data.name}: ordered separately from the basic amount.`} className="sm:col-span-2" />
         <Toggle id={`${p}-hb`} label="Premium paid by" value={healthBy} onChange={(v) => setHealthBy(v as 'payer' | 'other')} options={[{ value: 'other', label: 'Other parent' }, { value: 'payer', label: 'Payer' }]} />
       </form>
-      <div aria-live="polite" className="mt-6 rounded-xl bg-accent-50 p-4 sm:p-5">
+      <div ref={card} aria-live="polite" data-resultat className="rounded-xl bg-accent-50 p-4 sm:p-5">
         <p className="text-sm font-medium text-navy-700">{r.reverse > 0 ? 'Other parent pays, per month' : `Guideline child support in ${data.name}, per month`}</p>
         <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{usd(r.reverse > 0 ? r.reverse : r.monthly)}</p>
         <p className="mt-1 text-sm text-navy-700">{usd((r.reverse > 0 ? r.reverse : r.monthly) * 12)} a year{data.period === 'weekly' ? ` · ${usd(((r.reverse > 0 ? r.reverse : r.monthly) * 12) / 52)} a week, the period of the ${data.abbr} table` : ''}</p>
@@ -101,6 +104,7 @@ export default function ChildSupportCalculator({ states, initial, lockState = fa
           <button type="button" onClick={copy} className="rounded-lg border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50">{copied ? 'Link copied' : 'Copy share link'}</button>
           <button type="button" onClick={() => window.print()} className="rounded-lg border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50">Print</button>
         </div>
+        <StickyKey show={below} card={card} label={r.reverse > 0 ? 'Other parent pays, per month' : `Guideline child support in ${data.name}, per month`} value={usd(r.reverse > 0 ? r.reverse : r.monthly)} />
       </div>
     </div>
   );

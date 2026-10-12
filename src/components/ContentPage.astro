@@ -38,21 +38,22 @@ const miniHref = route(page.topic, lang);
 ---
 <PageLayout title={page.title} description={page.description} lang={lang} jsonLd={jsonLd} faqs={page.faqs} related={related} sources={sources} breadcrumbs={[{ label: page.nav }]}>
   <article>
-    <header class="mb-6">
-      <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{info.label}{page.kind === 'guide' ? ' · guide' : ' · every state'}</p>
-      <h1 class="mt-1 font-serif text-3xl font-bold text-navy-900 md:text-4xl">{page.h1}</h1>
-      <p class="mt-3 text-lg text-navy-700">{page.intro}</p>
-      <p class="mt-3 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">{label('method')}</a></p>
+    <header class="mb-4">
+      <p class="text-xs font-semibold uppercase tracking-wide text-accent-700 sm:text-sm">{info.label}{page.kind === 'guide' ? ' · guide' : ' · every state'}</p>
+      <h1 class="mt-1 font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{page.h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{page.intro}</p>
     </header>
     {page.tool ? (
       <>
-        <Clamp text={page.resume} lang={lang} id={`clamp-${page.id}`} class="mb-4" />
-        <div data-outil class="mb-10"><Tool kind={page.tool} state={page.toolProps?.state} lock={page.toolProps?.lockState} idPrefix={page.id.slice(0, 6)} /></div>
+        <Clamp text={page.resume} lang={lang} id={`clamp-${page.id}`} class="mb-3" />
+        <div data-outil class="mb-4"><Tool kind={page.tool} state={page.toolProps?.state} lock={page.toolProps?.lockState} idPrefix={page.id.slice(0, 6)} /></div>
+        <p class="mb-10 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">{label('method')}</a></p>
       </>
     ) : (
       <>
-        <p class="mb-6 text-navy-800">{page.resume}</p>
-        {page.mini && <MiniSim client:load kind={page.mini} arg={page.miniArg === undefined ? undefined : JSON.stringify(page.miniArg)} href={miniHref} />}
+        <Clamp text={page.resume} lang={lang} id={`clamp-${page.id}`} class="mb-3" />
+        {page.mini && <MiniSim client:load spacing="mb-4 mt-3" kind={page.mini} arg={page.miniArg === undefined ? undefined : JSON.stringify(page.miniArg)} href={miniHref} />}
+        <p class="mb-8 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">{label('method')}</a></p>
       </>
     )}
     {statePages.length > 0 && (
@@ -64,7 +65,7 @@ const miniHref = route(page.topic, lang);
       </section>
     )}
     <div class="prose prose-slate max-w-none prose-headings:font-serif">
-      {parts.map((p, i) => i % 3 === 0 ? <Fragment set:html={p ?? ''} /> : i % 3 === 1 ? <MiniSim client:load kind={p} arg={decode(parts[i + 1])} href={miniHref} /> : null)}
+      {parts.map((p, i) => i % 3 === 0 ? <Fragment set:html={p ?? ''} /> : i % 3 === 1 ? <MiniSim client:load secondary={!!(page.tool || page.mini)} kind={p} arg={decode(parts[i + 1])} href={miniHref} /> : null)}
     </div>
   </article>
 </PageLayout>
