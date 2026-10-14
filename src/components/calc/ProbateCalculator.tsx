@@ -37,7 +37,7 @@ export default function ProbateCalculator({ states, state = 'california', lockSt
   const below = useBelow(card);
   return (
     <div className="rechner grid gap-6 rounded-xl border border-navy-200 bg-white p-4 sm:p-6 lg:grid-cols-2 lg:items-start">
-      <form className="grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
+      <form className="grid content-start gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
         {lockState
           ? <div className="grid grid-rows-subgrid row-span-3 content-start gap-y-0"><span className="mb-1 block text-sm font-medium text-navy-700">State</span><p className="flex h-12 items-center rounded-lg border border-navy-200 bg-navy-50 px-4 font-semibold text-navy-900">{S.name}</p><span className="mt-1 text-xs text-navy-500">{statutory ? 'Fees set by statute' : 'Fees: “reasonable”, set by the court'}</span></div>
           : <SelectField id={`${p}-state`} label="State of the probate" value={slug} onChange={setSlug} options={states.map((x) => ({ value: x.slug, label: x.name }))} help="Where the person lived at death (real estate elsewhere may need its own case)." />}
