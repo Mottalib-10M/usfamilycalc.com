@@ -42,7 +42,7 @@ const pillars = TOPICS.map((t) => pageById(t.id)).filter(Boolean);
   <header class="mb-4">
     <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">{x.h1}</h1>
     <p class="mt-3 text-lg text-navy-700">{x.intro}</p>
-    <p class="mt-2 text-sm text-navy-600">Guidelines, statutes and benefit rates of the 50 states and DC, read on official pages, updated <time datetime={LAST_UPDATED}>{day(LAST_UPDATED)}</time> · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">About this site</a></p>
+    <p class="mt-2 text-sm text-navy-600">Guidelines, statutes and benefit rates of the 50 states and DC, read on official pages · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">About this site</a></p>
   </header>
   <div data-outil><Tool kind="child-support" state="california" idPrefix="home" /></div>
   <Clamp text={x.resume} lang={lang} id="clamp-home" sentences={2} class="my-8" />
