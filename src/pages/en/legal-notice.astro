@@ -1,7 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import LegalIdentity from '../../components/LegalIdentity.astro';
-import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL } from '../../data/site-config';
+import { AUTHOR_NAME, CLARITY_ID, CONTACT_EMAIL, GA4_ID, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL } from '../../data/site-config';
 import { route } from '../../i18n/routes';
 const lang = 'en';
 ---
@@ -19,7 +19,10 @@ const lang = 'en';
     <h2>Liability</h2><p>Every figure is read on an official page and every engine is tested before each release, yet no error can be ruled out and rules change. The publisher is not liable for a decision taken on an estimate alone. Please report any error through the <a href={route('contact', lang)}>contact page</a>.</p>
     <h2>Intellectual property</h2><p>Texts, design and code belong to the publisher; short quotations with a link back are welcome. Statutes, court rules and guideline tables are public records of the states that issued them.</p>
     <h2>Embedding</h2><p>The child support and workers' comp calculators may be embedded for free with their credit link visible: see the <a href={route('widget', lang)}>embed page</a>.</p>
-    <h2>Personal data</h2><p>The site sets no cookie and the publisher keeps no personal data from the calculators. Details: <a href={route('privacy', lang)}>privacy policy</a> and <a href={route('cookies', lang)}>cookies page</a>.</p>
+    {/* gen-legal-pages:terms */}
+    <h2>Personal data and cookies</h2>
+    {GA4_ID ? (<p>What you type in the calculators stays in your browser. The site sets Google Analytics audience measurement cookies (<code>_ga</code>, <code>_ga_{GA4_ID.replace('G-', '')}</code>, 13 months at most), with no advertising{CLARITY_ID && '; page stability is monitored with Microsoft Clarity, cookie-free'}. Details, legal basis and how to object: <a href={route('privacy', lang)}>privacy policy</a> and <a href={route('cookies', lang)}>cookies</a> page.</p>) : (<p>What you type in the calculators stays in your browser and the site sets no cookies{CLARITY_ID && '; page stability is monitored anonymously with Microsoft Clarity, cookie-free'}. See the <a href={route('privacy', lang)}>privacy policy</a> and the <a href={route('cookies', lang)}>cookies</a> page.</p>)}
+    {/* /gen-legal-pages:terms */}
     <h2>Reporting unlawful content</h2><p>Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the address of the page.</p>
     <h2>Governing law</h2><p>French law applies; failing an amicable settlement, the courts of {LEGAL.jurisdiction} have jurisdiction. Updated: {LAST_UPDATED}.</p>
   </div>
